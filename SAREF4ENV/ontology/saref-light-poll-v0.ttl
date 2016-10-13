@@ -1,0 +1,586 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix ci: <http://www.smartdeveloperhub.org/vocabulary/ci#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix org: <http://www.smartdeveloperhub.org/vocabulary/organization#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix scm: <http://www.smartdeveloperhub.org/vocabulary/scm#> .
+@prefix sdh: <http://www.smartdeveloperhub.org/vocabulary/sdh#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oslc: <http://open-services.net/ns/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rddl: <http://www.rddl.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix metrics: <http://www.smartdeveloperhub.org/vocabulary/metrics#> .
+@prefix platform: <http://www.smartdeveloperhub.org/vocabulary/platform#> .
+@prefix oslc_auto: <http://open-services.net/ns/auto#> .
+@prefix oslc_asset: <http://open-services.net/ns/asset#> .
+@prefix oslc_config: <http://open-services.net/ns/config#> .
+@base <http://saref.linkeddata.es/def/env> .
+
+<http://saref.linkeddata.es/def/env> rdf:type owl:Ontology ;
+                                     
+                                     dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0"^^xsd:anyURI ;
+                                     
+                                     dc:title "SAREF extension for light pollution"@en ;
+                                     
+                                     <http://purl.org/vocab/vann/preferredNamespacePrefix> "saref-env" ;
+                                     
+                                     rdfs:comment "This ontology extends the SAREF ontology for the light pollution domain, including concepts like photometers, light, etc."@en ;
+                                     
+                                     <http://purl.org/vocab/vann/preferredNamespaceUri> "http://saref.linkeddata.es/def/env" ;
+                                     
+                                     dcterms:creator <http://delicias.dia.fi.upm.es/~rgarcia/foaf.rdf> ;
+                                     
+                                     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                     
+                                     dcterms:creator <http://purl.org/net/mpoveda> ;
+                                     
+                                     owl:versionIRI <http://saref.linkeddata.es/def/v1/env> ;
+                                     
+                                     dc:publisher <http://www.oeg-upm.net/> ;
+                                     
+                                     owl:imports <https://w3id.org/saref> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://purl.org/dc/terms/creator
+
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/terms/dateCopyrighted
+
+dcterms:dateCopyrighted rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/terms/rightsHolder
+
+dcterms:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Datatypes
+#
+#################################################################
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+
+xsd:duration rdf:type rdfs:Datatype .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://saref.linkeddata.es/def/env#containsDevie
+
+<http://saref.linkeddata.es/def/env#containsDevie> rdf:type owl:ObjectProperty ;
+                                                   
+                                                   rdfs:label "containsDevie"@en ;
+                                                   
+                                                   rdfs:domain <http://saref.linkeddata.es/def/env#PhysicalObject> ;
+                                                   
+                                                   rdfs:range <https://w3id.org/saref#Device> .
+
+
+
+###  http://saref.linkeddata.es/def/env#encapsulatesObject
+
+<http://saref.linkeddata.es/def/env#encapsulatesObject> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:label "encapsulatesObject"@en ;
+                                                        
+                                                        rdfs:domain <http://saref.linkeddata.es/def/env#DigitalRepresentation> ;
+                                                        
+                                                        rdfs:range <http://saref.linkeddata.es/def/env#PhysicalObject> .
+
+
+
+###  http://saref.linkeddata.es/def/env#exposesFunctionality
+
+<http://saref.linkeddata.es/def/env#exposesFunctionality> rdf:type owl:ObjectProperty ;
+                                                          
+                                                          rdfs:label "exposesFunctionality"@en ;
+                                                          
+                                                          rdfs:domain <http://saref.linkeddata.es/def/env#DigitalRepresentation> ;
+                                                          
+                                                          rdfs:range <https://w3id.org/saref#ActuatingFunction> .
+
+
+
+###  http://saref.linkeddata.es/def/env#hasComponent
+
+<http://saref.linkeddata.es/def/env#hasComponent> rdf:type owl:ObjectProperty ;
+                                                  
+                                                  rdfs:label "hasComponent"@en ;
+                                                  
+                                                  rdfs:range <http://saref.linkeddata.es/def/env#System> ;
+                                                  
+                                                  rdfs:domain <http://saref.linkeddata.es/def/env#System> ;
+                                                  
+                                                  owl:inverseOf <http://saref.linkeddata.es/def/env#isComponentOf> .
+
+
+
+###  http://saref.linkeddata.es/def/env#hasDigitalRepresentation
+
+<http://saref.linkeddata.es/def/env#hasDigitalRepresentation> rdf:type owl:InverseFunctionalProperty ,
+                                                                       owl:ObjectProperty ;
+                                                              
+                                                              rdfs:label "has digital representation"@en ;
+                                                              
+                                                              rdfs:range <http://saref.linkeddata.es/def/env#DigitalRepresentation> ;
+                                                              
+                                                              rdfs:domain <http://saref.linkeddata.es/def/env#PhysicalObject> ;
+                                                              
+                                                              owl:inverseOf <http://saref.linkeddata.es/def/env#encapsulatesObject> .
+
+
+
+###  http://saref.linkeddata.es/def/env#isAccesibleThroughService
+
+<http://saref.linkeddata.es/def/env#isAccesibleThroughService> rdf:type owl:FunctionalProperty ,
+                                                                        owl:ObjectProperty ;
+                                                               
+                                                               rdfs:label "is accesible through service"@en ;
+                                                               
+                                                               rdfs:domain <http://saref.linkeddata.es/def/env#DigitalRepresentation> ;
+                                                               
+                                                               rdfs:range <http://saref.linkeddata.es/def/env#Service> .
+
+
+
+###  http://saref.linkeddata.es/def/env#isComponentOf
+
+<http://saref.linkeddata.es/def/env#isComponentOf> rdf:type owl:ObjectProperty ;
+                                                   
+                                                   rdfs:label "isComponentOF"@en ;
+                                                   
+                                                   rdfs:domain <http://saref.linkeddata.es/def/env#System> ;
+                                                   
+                                                   rdfs:range <http://saref.linkeddata.es/def/env#System> .
+
+
+
+###  http://saref.linkeddata.es/def/env#isConnectedToSystem
+
+<http://saref.linkeddata.es/def/env#isConnectedToSystem> rdf:type owl:ObjectProperty ,
+                                                                  owl:SymmetricProperty ;
+                                                         
+                                                         rdfs:label "isConnectedToSystem"@en ;
+                                                         
+                                                         rdfs:range <http://saref.linkeddata.es/def/env#System> ;
+                                                         
+                                                         rdfs:domain <http://saref.linkeddata.es/def/env#System> .
+
+
+
+###  http://saref.linkeddata.es/def/env#usesCommunicationProtocol
+
+<http://saref.linkeddata.es/def/env#usesCommunicationProtocol> rdf:type owl:ObjectProperty ;
+                                                               
+                                                               rdfs:label "usesCommunicationProtocol"@en ;
+                                                               
+                                                               rdfs:range <http://saref.linkeddata.es/def/env#CommunicationProtocol> ;
+                                                               
+                                                               rdfs:domain <http://saref.linkeddata.es/def/env#System> .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://saref.linkeddata.es/def/env#creationDate
+
+<http://saref.linkeddata.es/def/env#creationDate> rdf:type owl:DatatypeProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  
+                                                  rdfs:label "creationDate"@en ;
+                                                  
+                                                  rdfs:range xsd:dateTime ;
+                                                  
+                                                  rdfs:domain owl:Thing .
+
+
+
+###  http://saref.linkeddata.es/def/env#hasId
+
+<http://saref.linkeddata.es/def/env#hasId> rdf:type owl:DatatypeProperty ;
+                                           
+                                           rdfs:label "has id"@en ,
+                                                      "has identifier"@en ;
+                                           
+                                           rdfs:comment "A relationship providing the identifier of an entity (e.g., digital representation)"@en ;
+                                           
+                                           rdfs:range xsd:string ;
+                                           
+                                           rdfs:domain owl:Thing .
+
+
+
+###  http://saref.linkeddata.es/def/env#tag
+
+<http://saref.linkeddata.es/def/env#tag> rdf:type owl:DatatypeProperty ;
+                                         
+                                         rdfs:label "tag"@en ;
+                                         
+                                         rdfs:range xsd:string ;
+                                         
+                                         rdfs:domain owl:Thing .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://saref.linkeddata.es/def/env#Actuator
+
+<http://saref.linkeddata.es/def/env#Actuator> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "Actuator"@en ;
+                                              
+                                              rdfs:subClassOf <https://w3id.org/saref#Device> .
+
+
+
+###  http://saref.linkeddata.es/def/env#ChangeLog
+
+<http://saref.linkeddata.es/def/env#ChangeLog> rdf:type owl:Class ;
+                                               
+                                               rdfs:label "ChangeLog"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#ChangeLogEntry
+
+<http://saref.linkeddata.es/def/env#ChangeLogEntry> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:label "ChangeLogEntry"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#ChangeLogItem
+
+<http://saref.linkeddata.es/def/env#ChangeLogItem> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:label "Change log item"@en ;
+                                                   
+                                                   owl:equivalentClass [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <http://saref.linkeddata.es/def/env#ChangeLogItemAddValue>
+                                                                                       <http://saref.linkeddata.es/def/env#ChangeLogItemDeleteValue>
+                                                                                       <http://saref.linkeddata.es/def/env#ChangeLogItemUpdate>
+                                                                                     )
+                                                                       ] .
+
+
+
+###  http://saref.linkeddata.es/def/env#ChangeLogItemAddValue
+
+<http://saref.linkeddata.es/def/env#ChangeLogItemAddValue> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:label "Change log item add value"@en ;
+                                                           
+                                                           rdfs:subClassOf <http://saref.linkeddata.es/def/env#ChangeLogItem> .
+
+
+
+###  http://saref.linkeddata.es/def/env#ChangeLogItemDeleteValue
+
+<http://saref.linkeddata.es/def/env#ChangeLogItemDeleteValue> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:label "ChangeLogItemDeleteValue"@en ;
+                                                              
+                                                              rdfs:subClassOf <http://saref.linkeddata.es/def/env#ChangeLogItem> .
+
+
+
+###  http://saref.linkeddata.es/def/env#ChangeLogItemUpdate
+
+<http://saref.linkeddata.es/def/env#ChangeLogItemUpdate> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Change log item update"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://saref.linkeddata.es/def/env#ChangeLogItem> .
+
+
+
+###  http://saref.linkeddata.es/def/env#CommunicationInterface
+
+<http://saref.linkeddata.es/def/env#CommunicationInterface> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:label "CommunicationInterface"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#CommunicationProtocol
+
+<http://saref.linkeddata.es/def/env#CommunicationProtocol> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:label "CommunicationProtocol"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#CompassDirection
+
+<http://saref.linkeddata.es/def/env#CompassDirection> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:label "CompassDirection"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#DigitalRepresentation
+
+<http://saref.linkeddata.es/def/env#DigitalRepresentation> rdf:type owl:Class ;
+                                                           
+                                                           rdfs:label "Digital representation"@en ;
+                                                           
+                                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://saref.linkeddata.es/def/env#creationDate> ;
+                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onDataRange xsd:dateTime
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/saref#hasName> ;
+                                                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onDataRange xsd:string
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://saref.linkeddata.es/def/env#hasId> ;
+                                                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onDataRange xsd:string
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onDataRange xsd:string
+                                                                           ] .
+
+
+
+###  http://saref.linkeddata.es/def/env#Frequency
+
+<http://saref.linkeddata.es/def/env#Frequency> rdf:type owl:Class ;
+                                               
+                                               rdfs:label "Frequency"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#FrequencyUnit
+
+<http://saref.linkeddata.es/def/env#FrequencyUnit> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:label "FrequencyUnit"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#Geometry
+
+<http://saref.linkeddata.es/def/env#Geometry> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "Geometry"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#Lampost
+
+<http://saref.linkeddata.es/def/env#Lampost> rdf:type owl:Class ;
+                                             
+                                             rdfs:label "Lampost"@en ;
+                                             
+                                             rdfs:subClassOf <https://w3id.org/saref#Device> .
+
+
+
+###  http://saref.linkeddata.es/def/env#LengthUnit
+
+<http://saref.linkeddata.es/def/env#LengthUnit> rdf:type owl:Class ;
+                                                
+                                                rdfs:label "LengthUnit"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#Light
+
+<http://saref.linkeddata.es/def/env#Light> rdf:type owl:Class ;
+                                           
+                                           rdfs:label "Light"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#LightColor
+
+<http://saref.linkeddata.es/def/env#LightColor> rdf:type owl:Class ;
+                                                
+                                                rdfs:label "LightColor"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#LightHeight
+
+<http://saref.linkeddata.es/def/env#LightHeight> rdf:type owl:Class ;
+                                                 
+                                                 rdfs:label "LightHeight"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#LightPoint
+
+<http://saref.linkeddata.es/def/env#LightPoint> rdf:type owl:Class ;
+                                                
+                                                rdfs:label "LightPoint"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#LightProperty
+
+<http://saref.linkeddata.es/def/env#LightProperty> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:label "LightProperty"@en ;
+                                                   
+                                                   rdfs:subClassOf <https://w3id.org/saref#Property> .
+
+
+
+###  http://saref.linkeddata.es/def/env#Log
+
+<http://saref.linkeddata.es/def/env#Log> rdf:type owl:Class ;
+                                         
+                                         rdfs:label "Log"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#LogEntry
+
+<http://saref.linkeddata.es/def/env#LogEntry> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "LogEntry"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#Observation
+
+<http://saref.linkeddata.es/def/env#Observation> rdf:type owl:Class ;
+                                                 
+                                                 rdfs:label "Observation"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#Period
+
+<http://saref.linkeddata.es/def/env#Period> rdf:type owl:Class ;
+                                            
+                                            rdfs:label "Period"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#Photometer
+
+<http://saref.linkeddata.es/def/env#Photometer> rdf:type owl:Class ;
+                                                
+                                                rdfs:label "Photometer"@en ;
+                                                
+                                                rdfs:subClassOf <http://saref.linkeddata.es/def/env#SensingDevice> .
+
+
+
+###  http://saref.linkeddata.es/def/env#PhysicalObject
+
+<http://saref.linkeddata.es/def/env#PhysicalObject> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:label "Physical object"@en ;
+                                                    
+                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                      owl:onDataRange xsd:string
+                                                                    ] .
+
+
+
+###  http://saref.linkeddata.es/def/env#SensingDevice
+
+<http://saref.linkeddata.es/def/env#SensingDevice> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:label "SensingDevice"@en ;
+                                                   
+                                                   rdfs:subClassOf <https://w3id.org/saref#Sensor> .
+
+
+
+###  http://saref.linkeddata.es/def/env#Service
+
+<http://saref.linkeddata.es/def/env#Service> rdf:type owl:Class ;
+                                             
+                                             rdfs:label "Service"@en .
+
+
+
+###  http://saref.linkeddata.es/def/env#System
+
+<http://saref.linkeddata.es/def/env#System> rdf:type owl:Class ;
+                                            
+                                            rdfs:label "System"@en ;
+                                            
+                                            rdfs:subClassOf <http://saref.linkeddata.es/def/env#PhysicalObject> .
+
+
+
+###  https://w3id.org/saref#Device
+
+<https://w3id.org/saref#Device> rdfs:subClassOf <http://saref.linkeddata.es/def/env#System> .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
