@@ -1,0 +1,1049 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rddl "http://www.rddl.org/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY wot "http://xmlns.com/wot/0.1/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY doap "http://usefulinc.com/ns/doap#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY oslc "http://open-services.net/ns/core#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY oslc_auto "http://open-services.net/ns/auto#" >
+    <!ENTITY oslc_asset "http://open-services.net/ns/asset#" >
+    <!ENTITY oslc_config "http://open-services.net/ns/config#" >
+    <!ENTITY bldg "http://saref.linkeddata.es/def/bldg#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY ci "http://www.smartdeveloperhub.org/vocabulary/ci#" >
+    <!ENTITY sdh "http://www.smartdeveloperhub.org/vocabulary/sdh#" >
+    <!ENTITY scm "http://www.smartdeveloperhub.org/vocabulary/scm#" >
+    <!ENTITY metrics "http://www.smartdeveloperhub.org/vocabulary/metrics#" >
+    <!ENTITY platform "http://www.smartdeveloperhub.org/vocabulary/platform#" >
+    <!ENTITY org "http://www.smartdeveloperhub.org/vocabulary/organization#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
+     xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:org="http://www.smartdeveloperhub.org/vocabulary/organization#"
+     xmlns:oslc_asset="http://open-services.net/ns/asset#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rddl="http://www.rddl.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:metrics="http://www.smartdeveloperhub.org/vocabulary/metrics#"
+     xmlns:sdh="http://www.smartdeveloperhub.org/vocabulary/sdh#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:platform="http://www.smartdeveloperhub.org/vocabulary/platform#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:oslc="http://open-services.net/ns/core#"
+     xmlns:oslc_config="http://open-services.net/ns/config#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ci="http://www.smartdeveloperhub.org/vocabulary/ci#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:scm="http://www.smartdeveloperhub.org/vocabulary/scm#"
+     xmlns:oslc_auto="http://open-services.net/ns/auto#"
+     xmlns:bldg="http://saref.linkeddata.es/def/bldg#">
+    <owl:Ontology rdf:about="http://saref.linkeddata.es/def/bldg">
+        <dcterms:license rdf:datatype="&xsd;anyURI">http://purl.org/NET/rdflicense/cc-by4.0</dcterms:license>
+        <vann:preferredNamespaceUri>http://saref.linkeddata.es/def/bldg</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">This ontology extends the SAREF ontology for the building devices domain. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries.</rdfs:comment>
+        <vann:preferredNamespacePrefix>saref4bldg</vann:preferredNamespacePrefix>
+        <dc:title xml:lang="en">SAREF extension for light pollution</dc:title>
+        <dcterms:creator rdf:resource="http://delicias.dia.fi.upm.es/~rgarcia/foaf.rdf"/>
+        <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>
+        <owl:versionIRI rdf:resource="http://saref.linkeddata.es/def/v1/bldg"/>
+        <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateCopyrighted -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;dateCopyrighted"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rightsHolder -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;rightsHolder"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespaceUri"/>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#hasFlash -->
+
+    <owl:AnnotationProperty rdf:about="&bldg;hasFlash">
+        <rdfs:domain rdf:resource="https://w3id.org/saref#Light"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#projectionAngle -->
+
+    <owl:AnnotationProperty rdf:about="&bldg;projectionAngle">
+        <rdfs:domain rdf:resource="https://w3id.org/saref#Light"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="&xsd;duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Actuator -->
+
+    <owl:Class rdf:about="&bldg;Actuator">
+        <rdfs:label xml:lang="en">actuator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:comment xml:lang="en">An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcActuator</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#AirToAirHeatRecovery -->
+
+    <owl:Class rdf:about="&bldg;AirToAirHeatRecovery">
+        <rdfs:label xml:lang="en">Air to air heat recovery</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">An air-to-air heat recovery device employs a counter-flow heat exchanger between inbound and outbound air flow. It is typically used to transfer heat from warmer air in one chamber to cooler air in the second chamber (i.e., typically used to recover heat from the conditioned air being exhausted and the outside air being supplied to a building), resulting in energy savings from reduced heating (or cooling) requirements.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAirToAirHeatRecovery</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Alarm -->
+
+    <owl:Class rdf:about="&bldg;Alarm">
+        <rdfs:label xml:lang="en">alarm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:comment xml:lang="en">An alarm is a device that signals the existence of a condition or situation that is outside the boundaries of normal expectation or that activates such a device.
+
+Alarms include the provision of break glass buttons and manual pull boxes that are used to activate alarms.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAlarm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#AudioVisualApplicance -->
+
+    <owl:Class rdf:about="&bldg;AudioVisualApplicance">
+        <rdfs:label xml:lang="en">audio visual applicance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:comment xml:lang="en">An audio-visual appliance is a device that displays, captures, transmits, or receives audio or video.
+
+Audio-visual appliances may be fixed in place or may be able to be moved from one space to another. They may require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source. Audio-visual appliances may be connected to data circuits including specialist circuits for audio visual purposes only.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAudioVisualApplicance</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Awning -->
+
+    <owl:Class rdf:about="&bldg;Awning">
+        <rdfs:label xml:lang="en">Awning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;ShadingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Boiler -->
+
+    <owl:Class rdf:about="&bldg;Boiler">
+        <rdfs:label xml:lang="en">Boiler</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">&quot;A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications.
+
+IfcBoiler is a vessel solely used for heating of water or other fluids. Storage vessels, such as for drinking water storage are considered as tanks and use the IfcTank entity.&quot;</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcBoiler</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Building -->
+
+    <owl:Class rdf:about="&bldg;Building">
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#BuildingDevice -->
+
+    <owl:Class rdf:about="&bldg;BuildingDevice">
+        <rdfs:label xml:lang="en">BuildingDevice</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#BuildingSpace -->
+
+    <owl:Class rdf:about="&bldg;BuildingSpace">
+        <rdfs:label xml:lang="en">BuildingSpace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Burner -->
+
+    <owl:Class rdf:about="&bldg;Burner">
+        <rdfs:label xml:lang="en">Burner</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">A burner is a device that converts fuel into heat through combustion. It includes gas, oil, and wood burners.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcBurner</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Chiller -->
+
+    <owl:Class rdf:about="&bldg;Chiller">
+        <rdfs:label xml:lang="en">Chiller</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcChiller</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A chiller is a device used to remove heat from a liquid via a vapor-compression or absorption refrigeration cycle to cool a fluid, typically water or a mixture of water and glycol. The chilled fluid is then used to cool and dehumidify air in a building.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Coil -->
+
+    <owl:Class rdf:about="&bldg;Coil">
+        <rdfs:label xml:lang="en">Coil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCoil</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A coil is a device used to provide heat transfer between non-mixing media. A common example is a cooling coil, which utilizes a finned coil in which circulates chilled water, antifreeze, or refrigerant that is used to remove heat from air moving across the surface of the coil. A coil may be used either for heating or cooling purposes by placing a series of tubes (the coil) carrying a heating or cooling fluid into an airstream. The coil may be constructed from tubes bundled in a serpentine form or from finned tubes that give a extended heat transfer surface.
+
+Coils may also be used for non-airflow cases such as embedded in a floor slab.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#CommunicationAppliance -->
+
+    <owl:Class rdf:about="&bldg;CommunicationAppliance">
+        <rdfs:label xml:lang="en">communication appliance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:comment xml:lang="en">A communications appliance transmits and receives electronic or digital information as data or sound.
+
+Communication appliances may be fixed in place or may be able to be moved from one space to another. Communication appliances require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCommunicationAppliance</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Compressor -->
+
+    <owl:Class rdf:about="&bldg;Compressor">
+        <rdfs:label xml:lang="en">Compressor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowMovingDevice"/>
+        <rdfs:comment xml:lang="en">A compressor is a device that compresses a fluid typically used in a refrigeration circuit.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCompressor</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Condenser -->
+
+    <owl:Class rdf:about="&bldg;Condenser">
+        <rdfs:label xml:lang="en">Condenser</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCondenser</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A condenser is a device that is used to dissipate heat, typically by condensing a substance such as a refrigerant from its gaseous to its liquid state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Controller -->
+
+    <owl:Class rdf:about="&bldg;Controller">
+        <rdfs:label xml:lang="en">controller</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:comment xml:lang="en">A controller is a device that monitors inputs and controls outputs within a building automation system.
+
+A controller may be physical (having placement within a spatial structure) or logical (a software interface or aggregated within a programmable physical controller).</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcController</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#CooledBeam -->
+
+    <owl:Class rdf:about="&bldg;CooledBeam">
+        <rdfs:label xml:lang="en">Cooled beam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">A cooled beam (or chilled beam) is a device typically used to cool air by circulating a fluid such as chilled water through exposed finned tubes above a space. Typically mounted overhead near or within a ceiling, the cooled beam uses convection to cool the space below it by acting as a heat sink for the naturally rising warm air of the space. Once cooled, the air naturally drops back to the floor where the cycle begins again.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCooledBeam</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#CoolingTower -->
+
+    <owl:Class rdf:about="&bldg;CoolingTower">
+        <rdfs:label xml:lang="en">Cooling tower</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">A cooling tower is a device which rejects heat to ambient air by circulating a fluid such as water through it to reduce its temperature by partial evaporation.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCoolingTower</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Damper -->
+
+    <owl:Class rdf:about="&bldg;Damper">
+        <rdfs:label xml:lang="en">Damper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowController"/>
+        <rdfs:comment xml:lang="en">A damper typically participates in an HVAC duct distribution system and is used to control or modulate the flow of air.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcDamper</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Device -->
+
+    <owl:Class rdf:about="&bldg;Device">
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#DistributionControlDevice -->
+
+    <owl:Class rdf:about="&bldg;DistributionControlDevice">
+        <rdfs:label xml:lang="en">Distribution control device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#DistributionDevice -->
+
+    <owl:Class rdf:about="&bldg;DistributionDevice">
+        <rdfs:label xml:lang="en">DistributionDevice</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;BuildingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#DistributionFlowDevice -->
+
+    <owl:Class rdf:about="&bldg;DistributionFlowDevice">
+        <rdfs:label xml:lang="en">DistributionFlowDevice</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#DuctSilencer -->
+
+    <owl:Class rdf:about="&bldg;DuctSilencer">
+        <rdfs:label xml:lang="en">Duct silencer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTreatmentDevice"/>
+        <rdfs:comment xml:lang="en">A duct silencer is a device that is typically installed inside a duct distribution system for the purpose of reducing the noise levels from air movement, fan noise, etc. in the adjacent space or downstream of the duct silencer device.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcDuctSilencer</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ElectricAppliance -->
+
+    <owl:Class rdf:about="&bldg;ElectricAppliance">
+        <rdfs:label xml:lang="en">electric appliance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricAppliance</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An electric appliance is a device intended for consumer usage that is powered by electricity.
+
+Electric appliances may be fixed in place or may be able to be moved from one space to another. Electric appliances require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ElectricFlowStorageDevice -->
+
+    <owl:Class rdf:about="&bldg;ElectricFlowStorageDevice">
+        <rdfs:label xml:lang="en">Electric flow storage device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowStorageDevice"/>
+        <rdfs:comment xml:lang="en">An electric flow storage device is a device in which electrical energy is stored and from which energy may be progressively released.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricFlowStorageDevice</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ElectricGenerator -->
+
+    <owl:Class rdf:about="&bldg;ElectricGenerator">
+        <rdfs:label xml:lang="en">Electric generator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">An electric generator is an engine that is a machine for converting mechanical energy into electrical energy.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricGenerator</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ElectricMotor -->
+
+    <owl:Class rdf:about="&bldg;ElectricMotor">
+        <rdfs:label xml:lang="en">Electric motor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricMotor</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An electric motor is an engine that is a machine for converting electrical energy into mechanical energy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ElectricTimeControl -->
+
+    <owl:Class rdf:about="&bldg;ElectricTimeControl">
+        <rdfs:label xml:lang="en">Electric time control</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowController"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricTimeControl</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An electric time control is a device that applies control to the provision or flow of electrical energy over time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#EnergyConversionDevice -->
+
+    <owl:Class rdf:about="&bldg;EnergyConversionDevice">
+        <rdfs:label xml:lang="en">Energy conversion device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionFlowDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEnergyConversionDevice</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The distribution flow element IfcEnergyConversionDevice defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system. Its type is defined by IfcEnergyConversionDeviceType or its subtypes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Engine -->
+
+    <owl:Class rdf:about="&bldg;Engine">
+        <rdfs:label xml:lang="en">Engine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEngine</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An engine is a device that converts fuel into mechanical energy through combustion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#EvaporativeCooler -->
+
+    <owl:Class rdf:about="&bldg;EvaporativeCooler">
+        <rdfs:label xml:lang="en">Evaporative cooler</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">An evaporative cooler is a device that cools air by saturating it with water vapor.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEvaporativeCooler</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Evaporator -->
+
+    <owl:Class rdf:about="&bldg;Evaporator">
+        <rdfs:label xml:lang="en">Evaporator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEvaporator</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An evaporator is a device in which a liquid refrigerent is vaporized and absorbs heat from the surrounding fluid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Fan -->
+
+    <owl:Class rdf:about="&bldg;Fan">
+        <rdfs:label xml:lang="en">Fan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowMovingDevice"/>
+        <rdfs:comment xml:lang="en">A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFan</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Filter -->
+
+    <owl:Class rdf:about="&bldg;Filter">
+        <rdfs:label xml:lang="en">Filter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTreatmentDevice"/>
+        <rdfs:comment xml:lang="en">A filter is an apparatus used to remove particulate or gaseous matter from fluids and gases.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFilter</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FireSuppressionTerminal -->
+
+    <owl:Class rdf:about="&bldg;FireSuppressionTerminal">
+        <rdfs:label xml:lang="en">Fire suppression terminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:comment xml:lang="en">A fire suppression terminal has the purpose of delivering a fluid (gas or liquid) that will suppress a fire.
+
+A fire suppression terminal provides for all forms of sprinkler, spreader and other form of terminal that is connected to a pipework system and intended to act in the role of suppressing a fire.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFireSuppressionTerminal</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FlowController -->
+
+    <owl:Class rdf:about="&bldg;FlowController">
+        <rdfs:label xml:lang="en">Flow controller</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionFlowDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowController</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The distribution flow element IfcFlowController defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays. Its type is defined by IfcFlowControllerType or subtypes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FlowInstrument -->
+
+    <owl:Class rdf:about="&bldg;FlowInstrument">
+        <rdfs:label xml:lang="en">flow instrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:comment xml:lang="en">A flow instrument reads and displays the value of a particular property of a system at a point, or displays the difference in the value of a property between two points.
+
+Instrumentation is typically for the purpose of determining the value of the property at a point in time. It is not the purpose of an instrument to record or integrate the values over time (although they may be connected to recording devices that do perform such a function). This entity provides for all forms of mechanical flow instrument (thermometers, pressure gauges etc.) and electrical flow instruments (ammeters, voltmeters etc.)</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowInstrument</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FlowMeter -->
+
+    <owl:Class rdf:about="&bldg;FlowMeter">
+        <rdfs:label xml:lang="en">Flow meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowController"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowMeter</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A flow meter is a device that is used to measure the flow rate in a system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FlowMovingDevice -->
+
+    <owl:Class rdf:about="&bldg;FlowMovingDevice">
+        <rdfs:label xml:lang="en">Flow moving device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionFlowDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowMovingDevice</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The distribution flow element IfcFlowMovingDevice defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system. Its type is defined by IfcFlowMovingDeviceType or its subtypes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FlowStorageDevice -->
+
+    <owl:Class rdf:about="&bldg;FlowStorageDevice">
+        <rdfs:label xml:lang="en">Flow storage device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionFlowDevice"/>
+        <rdfs:comment xml:lang="en">The distribution flow element IfcFlowStorageDevice defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank). Its type is defined by IfcFlowStorageDeviceType or its subtypes.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowStorageDevice</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FlowTerminal -->
+
+    <owl:Class rdf:about="&bldg;FlowTerminal">
+        <rdfs:label xml:lang="en">Flow terminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionFlowDevice"/>
+        <rdfs:comment xml:lang="en">The distribution flow element IfcFlowTerminal defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment. Its type is defined by IfcFlowTerminalType or its subtypes.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowTerminal</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#FlowTreatmentDevice -->
+
+    <owl:Class rdf:about="&bldg;FlowTreatmentDevice">
+        <rdfs:label xml:lang="en">Flow treatment device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionFlowDevice"/>
+        <rdfs:comment xml:lang="en">The distribution flow element IfcFlowTreatmentDevice defines the occurrence of a device typically used to remove unwanted matter from a fluid, either liquid or gas, and typically participates in a flow distribution system. Its type is defined by IfcFlowTreatmentDeviceType or its subtypes.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowTreatmentDevice</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#HeatExchanger -->
+
+    <owl:Class rdf:about="&bldg;HeatExchanger">
+        <rdfs:label xml:lang="en">Heat exchanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcHeatExchanger</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers.
+
+IfcHeatExchanger is commonly used on water-side distribution systems to recover energy from a liquid to another liquid (typically water-based), whereas IfcAirToAirHeatRecovery is commonly used on air-side distribution systems to recover energy from a gas to a gas (usually air).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Humidifier -->
+
+    <owl:Class rdf:about="&bldg;Humidifier">
+        <rdfs:label xml:lang="en">Humidifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">A humidifier is a device that adds moisture into the air.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcHumidifier</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Interceptor -->
+
+    <owl:Class rdf:about="&bldg;Interceptor">
+        <rdfs:label xml:lang="en">Interceptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTreatmentDevice"/>
+        <rdfs:comment xml:lang="en">An interceptor is a device designed and installed in order to separate and retain deleterious, hazardous or undesirable matter while permitting normal sewage or liquids to discharge into a collection system by gravity.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcInterceptor</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Jalousie -->
+
+    <owl:Class rdf:about="&bldg;Jalousie">
+        <rdfs:label xml:lang="en">Jalousie</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:comment xml:lang="en">A blind with adjustable horizontal slats for admitting light and air while excluding direct sun and rain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Lamp -->
+
+    <owl:Class rdf:about="&bldg;Lamp">
+        <rdfs:label xml:lang="en">Lamp</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcLamp</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A lamp is an artificial light source such as a light bulb or tube.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#MedicalDevice -->
+
+    <owl:Class rdf:about="&bldg;MedicalDevice">
+        <rdfs:label xml:lang="en">Medical device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcMedicalDevice</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A medical device is attached to a medical piping system and operates upon medical gases to perform a specific function. Medical gases include medical air, medical vacuum, oxygen, carbon dioxide, nitrogen, and nitrous oxide.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Outlet -->
+
+    <owl:Class rdf:about="&bldg;Outlet">
+        <rdfs:label xml:lang="en">Outlet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcOutlet</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications.
+
+Power outlets are commonly connected within a junction box; data outlets may be directly connected to a wall. For power outlets sharing the same circuit within a junction box, the ports should indicate the logical wiring relationship to the enclosing junction box, even though they may be physically connected to a cable going to another outlet, switch, or fixture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ProtectiveDevice -->
+
+    <owl:Class rdf:about="&bldg;ProtectiveDevice">
+        <rdfs:label xml:lang="en">Protective device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowController"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDevice</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A protective device breaks an electrical circuit when a stated electric current that passes through it is exceeded.
+
+A protective device provides protection against electrical current only (not as a general protective device). It may be used to represent the complete set of elements including both the tripping unit and the breaking unit that provide the protection. This may be particularly useful at earlier stages of design where the approach to breaking the electrical supply may be determined but the method of tripping may not. Alternatively, this entity may be used to specifically represent the breaking unit alone (in which case the tripping unit will also be specifically identified). This entity is specific to dedicated protective devices and excludes electrical outlets that may have circuit protection.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Pump -->
+
+    <owl:Class rdf:about="&bldg;Pump">
+        <rdfs:label xml:lang="en">Pump</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowMovingDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcPump</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#SanitaryTerminal -->
+
+    <owl:Class rdf:about="&bldg;SanitaryTerminal">
+        <rdfs:label xml:lang="en">Sanitary terminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSanitaryTerminal</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A sanitary terminal is a fixed appliance or terminal usually supplied with water and used for drinking, cleaning or foul water disposal or that is an item of equipment directly used with such an appliance or terminal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Sensor -->
+
+    <owl:Class rdf:about="&bldg;Sensor">
+        <rdfs:label xml:lang="en">sensor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:comment xml:lang="en">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSensor</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ShadingDevice -->
+
+    <owl:Class rdf:about="&bldg;ShadingDevice">
+        <rdfs:label xml:lang="en">Shading device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;BuildingDevice"/>
+        <rdfs:comment xml:lang="en">Shading devices are purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcShadingDevice</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Shutter -->
+
+    <owl:Class rdf:about="&bldg;Shutter">
+        <rdfs:label xml:lang="en">Shutter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;ShadingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#SolarDevice -->
+
+    <owl:Class rdf:about="&bldg;SolarDevice">
+        <rdfs:label xml:lang="en">solar device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">A solar device converts solar radiation into other energy such as electric current or thermal energy.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSolarDevice</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#SpaceHeater -->
+
+    <owl:Class rdf:about="&bldg;SpaceHeater">
+        <rdfs:label xml:lang="en">Space heater</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSpaceHeater</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters.
+
+IfcUnitaryEquipment should be used for packaged units supporting a combination of heating, cooling, and/or dehumidification; IfcCoil should be used for coil-based floor heating.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#SwitchingDevice -->
+
+    <owl:Class rdf:about="&bldg;SwitchingDevice">
+        <rdfs:label xml:lang="en">Switching device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowController"/>
+        <rdfs:comment xml:lang="en">A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity.
+
+Switches include those used for electrical power, communications, audio-visual, or other distribution system types as determined by the available ports.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSwitchingDevice</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Tank -->
+
+    <owl:Class rdf:about="&bldg;Tank">
+        <rdfs:label xml:lang="en">Tank</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowStorageDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTank</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A tank is a vessel or container in which a fluid or gas is stored for later use.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Transformer -->
+
+    <owl:Class rdf:about="&bldg;Transformer">
+        <rdfs:label xml:lang="en">Transformer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTransformer</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A transformer is an inductive stationary device that transfers electrical energy from one circuit to another.
+
+IfcTransformer is used to transform electric power; conversion of electric signals for other purposes is handled at other entities: IfcController converts arbitrary signals, IfcAudioVisualAppliance converts signals for audio or video streams, and IfcCommunicationsAppliance converts signals for data or other communications usage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#TransportElement -->
+
+    <owl:Class rdf:about="&bldg;TransportElement">
+        <rdfs:label xml:lang="en">Transport element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;Device"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTransportElement</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A transport element is a generalization of all transport related objects that move people, animals or goods within a building or building complex. The IfcTransportElement defines the occurrence of a transport element, that (if given), is expressed by the IfcTransportElementType. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#TubeBundle -->
+
+    <owl:Class rdf:about="&bldg;TubeBundle">
+        <rdfs:label xml:lang="en">Tube bundle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;EnergyConversionDevice"/>
+        <rdfs:comment xml:lang="en">A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTubeBundle</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#UnitaryControlElement -->
+
+    <owl:Class rdf:about="&bldg;UnitaryControlElement">
+        <rdfs:label xml:lang="en">Unitary control element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:comment xml:lang="en">A unitary control element combines a number of control components into a single product, such as a thermostat or humidistat.
+
+A unitary control element provides a housing for an aggregation of control or electrical distribution elements that, in combination, perform a singular (unitary) purpose. Each item in the aggregation may have its own geometric representation and location.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcUnitaryControlElement</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#Valve -->
+
+    <owl:Class rdf:about="&bldg;Valve">
+        <rdfs:label xml:lang="en">Valve</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;FlowController"/>
+        <rdfs:comment xml:lang="en">A valve is used in a building services piping distribution system to control or modulate the flow of the fluid.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcValve</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#VibrationIsolator -->
+
+    <owl:Class rdf:about="&bldg;VibrationIsolator">
+        <rdfs:label xml:lang="en">Vibration isolator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;Device"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcVibrationIsolator</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">A vibration isolator is a device used to minimize the effects of vibration transmissibility in a building.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fluorescence -->
+
+    <owl:NamedIndividual rdf:about="&bldg;fluorescence">
+        <rdfs:label xml:lang="en">fluorescence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#illuminance -->
+
+    <owl:NamedIndividual rdf:about="&bldg;illuminance">
+        <rdfs:label xml:lang="en">illuminance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#irradiance -->
+
+    <owl:NamedIndividual rdf:about="&bldg;irradiance">
+        <rdfs:label xml:lang="en">irradiance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lightAbsorption -->
+
+    <owl:NamedIndividual rdf:about="&bldg;lightAbsorption">
+        <rdfs:label xml:lang="en">lightAbsorption</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#luminiscence -->
+
+    <owl:NamedIndividual rdf:about="&bldg;luminiscence">
+        <rdfs:label xml:lang="en">luminiscence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#phosphorescence -->
+
+    <owl:NamedIndividual rdf:about="&bldg;phosphorescence">
+        <rdfs:label xml:lang="en">phosphorescence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#reflectionOfLight -->
+
+    <owl:NamedIndividual rdf:about="&bldg;reflectionOfLight">
+        <rdfs:label xml:lang="en">reflectionOfLight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#scatteringOfLight -->
+
+    <owl:NamedIndividual rdf:about="&bldg;scatteringOfLight">
+        <rdfs:label xml:lang="en">scatteringOfLight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/centimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/centimetre"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/decametre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/decametre"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/decimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/decimetre"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/hectometre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hectometre"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/hertz -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hertz"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/kilometre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/kilometre"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/metre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/millimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/millimetre"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
