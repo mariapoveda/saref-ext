@@ -292,7 +292,7 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty .
 ###  http://saref.linkeddata.es/def/envi#isActionable
 :isActionable rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
-              rdfs:domain saref:Device ;
+              rdfs:domain :Device ;
               rdfs:range xsd:boolean ;
               rdfs:label "isActionable"@en .
 
@@ -330,6 +330,11 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/saref#hasDescription
 saref:hasDescription rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/saref#hasManufacturer
+saref:hasManufacturer rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  https://w3id.org/saref#hasName
@@ -370,12 +375,38 @@ saref:hasValue rdf:type owl:DatatypeProperty .
         rdfs:subClassOf :System ,
                         saref:Device ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasObservationFrequency ;
+                          owl:allValuesFrom :Frequency
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasTransmissionPeriod ;
+                          owl:allValuesFrom :Period
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :hasRevisionNumber ;
-                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          owl:allValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasVersion ;
-                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isActionable ;
+                          owl:allValuesFrom xsd:boolean
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty saref:hasManufacturer ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRevisionNumber ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasVersion ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
                         ] ;
         rdfs:label "Device"@en .
 
@@ -529,6 +560,10 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty saref:hasDescription ;
+                                  owl:allValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty saref:hasDescription ;
                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
                                 ] ;
@@ -549,7 +584,27 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 
 ###  http://saref.linkeddata.es/def/envi#System
 :System rdf:type owl:Class ;
-        rdfs:subClassOf :PhysicalObject ;
+        rdfs:subClassOf :PhysicalObject ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasComponent ;
+                          owl:allValuesFrom :System
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isComponentOf ;
+                          owl:allValuesFrom :System
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isConnectedToSystem ;
+                          owl:allValuesFrom :System
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :usesCommunicationInterface ;
+                          owl:allValuesFrom :CommunicationInterface
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :usesCommunicationProtocol ;
+                          owl:allValuesFrom :CommunicationProtocol
+                        ] ;
         rdfs:label "System"@en .
 
 
