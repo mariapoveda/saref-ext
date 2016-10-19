@@ -1,41 +1,32 @@
-@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
-@prefix ci: <http://www.smartdeveloperhub.org/vocabulary/ci#> .
+@prefix : <http://saref.linkeddata.es/def/envi#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix org: <http://www.smartdeveloperhub.org/vocabulary/organization#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix scm: <http://www.smartdeveloperhub.org/vocabulary/scm#> .
-@prefix sdh: <http://www.smartdeveloperhub.org/vocabulary/sdh#> .
 @prefix wot: <http://xmlns.com/wot/0.1/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix oslc: <http://open-services.net/ns/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rddl: <http://www.rddl.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://w3id.org/saref#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix metrics: <http://www.smartdeveloperhub.org/vocabulary/metrics#> .
-@prefix platform: <http://www.smartdeveloperhub.org/vocabulary/platform#> .
-@prefix oslc_auto: <http://open-services.net/ns/auto#> .
-@prefix oslc_asset: <http://open-services.net/ns/asset#> .
-@prefix oslc_config: <http://open-services.net/ns/config#> .
 @base <http://saref.linkeddata.es/def/envi> .
 
 <http://saref.linkeddata.es/def/envi> rdf:type owl:Ontology ;
-                                      owl:versionIRI <http://saref.linkeddata.es/def/v1/envi> ;
-                                      dcterms:creator <http://purl.org/net/mpoveda> ;
-                                      rdfs:comment "This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, light, etc."@en ;
-                                      dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0"^^xsd:anyURI ;
-                                      dc:title "SAREF extension for environment"@en ;
-                                      dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                      vann:preferredNamespaceUri "http://saref.linkeddata.es/def/envi/" ;
-                                      vann:preferredNamespacePrefix "saref4envi" ;
-                                      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                      dc:publisher <http://www.oeg-upm.net/> .
+                                       owl:versionIRI <http://saref.linkeddata.es/def/v1/envi> ;
+                                       dcterms:creator <http://purl.org/net/mpoveda> ;
+                                       rdfs:comment "This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, light, etc."@en ;
+                                       vann:preferredNamespaceUri "http://saref.linkeddata.es/def/envi/" ;
+                                       dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0"^^xsd:anyURI ;
+                                       dc:title "SAREF extension for environment"@en ;
+                                       dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                       dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                       vann:preferredNamespacePrefix "saref4envi" ;
+                                       dc:publisher <http://www.oeg-upm.net/> .
 
 #################################################################
 #    Annotation properties
@@ -91,7 +82,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#exposesFunctionality
 :exposesFunctionality rdf:type owl:ObjectProperty ;
                       rdfs:domain :DigitalRepresentation ;
-                      rdfs:range <https://w3id.org/saref#ActuatingFunction> ;
+                      rdfs:range saref:ActuatingFunction ;
                       rdfs:label "exposesFunctionality"@en .
 
 
@@ -193,14 +184,14 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#observedProperty
 :observedProperty rdf:type owl:ObjectProperty ;
                   rdfs:domain :Observation ;
-                  rdfs:range <https://w3id.org/saref#Property> ;
+                  rdfs:range saref:Property ;
                   rdfs:label "observedProperty"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#observesProperty
 :observesProperty rdf:type owl:ObjectProperty ;
                   rdfs:domain :Sensor ;
-                  rdfs:range <https://w3id.org/saref#Property> ;
+                  rdfs:range saref:Property ;
                   rdfs:label "observesProperty"@en .
 
 
@@ -230,7 +221,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/saref#isMeasuredIn
-<https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty .
+saref:isMeasuredIn rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -255,7 +246,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#hasFlash
 :hasFlash rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
-          rdfs:domain <https://w3id.org/saref#Light> ;
+          rdfs:domain saref:Light ;
           rdfs:range xsd:boolean ;
           rdfs:label "hasFlash"@en .
 
@@ -295,7 +286,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#isActionable
 :isActionable rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
-              rdfs:domain <https://w3id.org/saref#Device> ;
+              rdfs:domain saref:Device ;
               rdfs:range xsd:boolean ;
               rdfs:label "isActionable"@en .
 
@@ -319,7 +310,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#projectionAngle
 :projectionAngle rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
-                 rdfs:domain <https://w3id.org/saref#Light> ;
+                 rdfs:domain saref:Light ;
                  rdfs:range xsd:float ;
                  rdfs:label "projectionAngle"@en .
 
@@ -332,15 +323,15 @@ xsd:duration rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/saref#hasDescription
-<https://w3id.org/saref#hasDescription> rdf:type owl:DatatypeProperty .
+saref:hasDescription rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/saref#hasName
-<https://w3id.org/saref#hasName> rdf:type owl:DatatypeProperty .
+saref:hasName rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/saref#hasValue
-<https://w3id.org/saref#hasValue> rdf:type owl:DatatypeProperty .
+saref:hasValue rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -371,7 +362,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#Device
 :Device rdf:type owl:Class ;
         rdfs:subClassOf :System ,
-                        <https://w3id.org/saref#Device> ,
+                        saref:Device ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasRevisionNumber ;
                           owl:minCardinality "1"^^xsd:nonNegativeInteger
@@ -391,12 +382,12 @@ xsd:duration rdf:type rdfs:Datatype .
                                          owl:onDataRange xsd:string
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                         owl:onProperty saref:hasDescription ;
                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                          owl:onDataRange xsd:string
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty <https://w3id.org/saref#hasName> ;
+                                         owl:onProperty saref:hasName ;
                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                          owl:onDataRange xsd:string
                                        ] ,
@@ -411,7 +402,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#Frequency
 :Frequency rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                             owl:onProperty saref:isMeasuredIn ;
                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onClass :FrequencyUnit
                            ] ;
@@ -420,7 +411,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://saref.linkeddata.es/def/envi#FrequencyUnit
 :FrequencyUnit rdf:type owl:Class ;
-               rdfs:subClassOf <https://w3id.org/saref#UnitOfMeasure> ;
+               rdfs:subClassOf saref:UnitOfMeasure ;
                rdfs:label "FrequencyUnit"@en .
 
 
@@ -437,7 +428,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://saref.linkeddata.es/def/envi#LengthUnit
 :LengthUnit rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/saref#UnitOfMeasure> ;
+            rdfs:subClassOf saref:UnitOfMeasure ;
             rdfs:label "LengthUnit"@en .
 
 
@@ -454,7 +445,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#LightHeight
 :LightHeight rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                               owl:onProperty saref:isMeasuredIn ;
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onClass :LengthUnit
                              ] ;
@@ -468,7 +459,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://saref.linkeddata.es/def/envi#LightProperty
 :LightProperty rdf:type owl:Class ;
-               rdfs:subClassOf <https://w3id.org/saref#Property> ;
+               rdfs:subClassOf saref:Property ;
                rdfs:label "LightProperty"@en .
 
 
@@ -477,12 +468,12 @@ xsd:duration rdf:type rdfs:Datatype .
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty :observedProperty ;
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onClass <https://w3id.org/saref#Property>
+                               owl:onClass saref:Property
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                               owl:onProperty saref:isMeasuredIn ;
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onClass <https://w3id.org/saref#UnitOfMeasure>
+                               owl:onClass saref:UnitOfMeasure
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :observationTimeStamp ;
@@ -490,7 +481,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                owl:onDataRange xsd:dateTime
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://w3id.org/saref#hasValue> ;
+                               owl:onProperty saref:hasValue ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ;
              rdfs:label "Observation"@en .
@@ -499,7 +490,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#Period
 :Period rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                          owl:onProperty saref:isMeasuredIn ;
                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onClass <http://www.w3.org/2006/time#TemporalUnit>
                         ] ;
@@ -519,7 +510,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#PhysicalObject
 :PhysicalObject rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                  owl:onProperty saref:hasDescription ;
                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
                                 ] ;
@@ -529,7 +520,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://saref.linkeddata.es/def/envi#Sensor
 :Sensor rdf:type owl:Class ;
         rdfs:subClassOf :Device ,
-                        <https://w3id.org/saref#Sensor> ;
+                        saref:Sensor ;
         rdfs:label "Sensor"@en .
 
 
@@ -555,27 +546,27 @@ xsd:duration rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/saref#ActuatingFunction
-<https://w3id.org/saref#ActuatingFunction> rdf:type owl:Class .
+saref:ActuatingFunction rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Device
-<https://w3id.org/saref#Device> rdf:type owl:Class .
+saref:Device rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Light
-<https://w3id.org/saref#Light> rdf:type owl:Class .
+saref:Light rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Property
-<https://w3id.org/saref#Property> rdf:type owl:Class .
+saref:Property rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Sensor
-<https://w3id.org/saref#Sensor> rdf:type owl:Class .
+saref:Sensor rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#UnitOfMeasure
-<https://w3id.org/saref#UnitOfMeasure> rdf:type owl:Class .
+saref:UnitOfMeasure rdf:type owl:Class .
 
 
 #################################################################
