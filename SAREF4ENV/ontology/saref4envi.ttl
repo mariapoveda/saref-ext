@@ -1,6 +1,7 @@
 @prefix : <http://saref.linkeddata.es/def/envi#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix wot: <http://xmlns.com/wot/0.1/> .
@@ -219,6 +220,10 @@ xsd:duration rdf:type rdfs:Datatype .
                            rdfs:domain :System ;
                            rdfs:range :CommunicationProtocol ;
                            rdfs:label "usesCommunicationProtocol"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+geo:location rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/saref#isMeasuredIn
@@ -511,6 +516,18 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 ###  http://saref.linkeddata.es/def/envi#PhysicalObject
 :PhysicalObject rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :containsDevice ;
+                                  owl:allValuesFrom :Device
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasDigitalRepresentation ;
+                                  owl:allValuesFrom :DigitalRepresentation
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty geo:location ;
+                                  owl:allValuesFrom geo:SpatialThing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty saref:hasDescription ;
                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
@@ -540,6 +557,10 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 :TESS rdf:type owl:Class ;
       rdfs:subClassOf :Photometer ;
       rdfs:label "TESS (Telescope Encoder and Sky Sensor)"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+geo:SpatialThing rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2006/time#TemporalUnit
