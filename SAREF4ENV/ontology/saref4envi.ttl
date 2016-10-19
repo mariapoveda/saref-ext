@@ -11,6 +11,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rddl: <http://www.rddl.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -492,7 +493,7 @@ saref:hasValue rdf:type owl:DatatypeProperty .
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty saref:isMeasuredIn ;
                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onClass <http://www.w3.org/2006/time#TemporalUnit>
+                          owl:onClass time:TemporalUnit
                         ] ;
         rdfs:label "Period"@en .
 
@@ -542,7 +543,7 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.w3.org/2006/time#TemporalUnit
-<http://www.w3.org/2006/time#TemporalUnit> rdf:type owl:Class .
+time:TemporalUnit rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#ActuatingFunction
