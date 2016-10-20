@@ -60,6 +60,7 @@
 ###  http://saref.linkeddata.es/def/envi#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               owl:inverseOf :isComponentOf ;
+              rdf:type owl:TransitiveProperty ;
               rdfs:domain :System ;
               rdfs:range :System ;
               rdfs:label "has component"@en .
@@ -108,27 +109,28 @@
                        rdfs:label "has transmission period"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#isAccesibleThroughService
-:isAccesibleThroughService rdf:type owl:ObjectProperty ,
-                                    owl:FunctionalProperty ;
-                           rdfs:domain :DigitalRepresentation ;
-                           rdfs:range saref:Service ;
-                           rdfs:label "is accesible through service"@en .
+###  http://saref.linkeddata.es/def/envi#isAccesibleThrough
+:isAccesibleThrough rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :DigitalRepresentation ;
+                    rdfs:range saref:Service ;
+                    rdfs:label "is accesible through service"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isComponentOf
-:isComponentOf rdf:type owl:ObjectProperty ;
+:isComponentOf rdf:type owl:ObjectProperty ,
+                        owl:TransitiveProperty ;
                rdfs:domain :System ;
                rdfs:range :System ;
                rdfs:label "is component of"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#isConnectedToSystem
-:isConnectedToSystem rdf:type owl:ObjectProperty ,
-                              owl:SymmetricProperty ;
-                     rdfs:domain :System ;
-                     rdfs:range :System ;
-                     rdfs:label "is connected to system"@en .
+###  http://saref.linkeddata.es/def/envi#isConnectedTo
+:isConnectedTo rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               rdfs:domain :System ;
+               rdfs:range :System ;
+               rdfs:label "is connected to system"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isProjectedFromHeight
@@ -273,14 +275,6 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty .
             rdfs:label "has version"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#isActionable
-:isActionable rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:domain :Device ;
-              rdfs:range xsd:boolean ;
-              rdfs:label "is actionable"@en .
-
-
 ###  https://w3id.org/saref#hasDescription
 saref:hasDescription rdf:type owl:DatatypeProperty .
 
@@ -356,10 +350,6 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                           owl:allValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :isActionable ;
-                          owl:allValuesFrom xsd:boolean
-                        ] ,
-                        [ rdf:type owl:Restriction ;
                           owl:onProperty saref:hasManufacturer ;
                           owl:allValuesFrom xsd:string
                         ] ,
@@ -383,7 +373,7 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                          owl:allValuesFrom :PhysicalObject
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :isAccesibleThroughService ;
+                                         owl:onProperty :isAccesibleThrough ;
                                          owl:allValuesFrom saref:Service
                                        ] ,
                                        [ rdf:type owl:Restriction ;
@@ -661,7 +651,7 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                           owl:allValuesFrom :System
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :isConnectedToSystem ;
+                          owl:onProperty :isConnectedTo ;
                           owl:allValuesFrom :System
                         ] ,
                         [ rdf:type owl:Restriction ;
