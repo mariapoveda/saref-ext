@@ -87,13 +87,6 @@ xsd:duration rdf:type rdfs:Datatype .
                     rdfs:label "encapsulatesObject"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#exposesFunctionality
-:exposesFunctionality rdf:type owl:ObjectProperty ;
-                      rdfs:domain :DigitalRepresentation ;
-                      rdfs:range saref:ActuatingFunction ;
-                      rdfs:label "exposesFunctionality"@en .
-
-
 ###  http://saref.linkeddata.es/def/envi#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               owl:inverseOf :isComponentOf ;
@@ -149,7 +142,7 @@ xsd:duration rdf:type rdfs:Datatype .
 :isAccesibleThroughService rdf:type owl:ObjectProperty ,
                                     owl:FunctionalProperty ;
                            rdfs:domain :DigitalRepresentation ;
-                           rdfs:range :Service ;
+                           rdfs:range saref:Service ;
                            rdfs:label "is accesible through service"@en .
 
 
@@ -417,12 +410,8 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                          owl:allValuesFrom :PhysicalObject
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :exposesFunctionality ;
-                                         owl:allValuesFrom saref:ActuatingFunction
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty :isAccesibleThroughService ;
-                                         owl:allValuesFrom :Service
+                                         owl:allValuesFrom saref:Service
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :creationDate ;
@@ -690,11 +679,6 @@ saref:hasValue rdf:type owl:DatatypeProperty .
         rdfs:label "Sensor"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#Service
-:Service rdf:type owl:Class ;
-         rdfs:label "Service"@en .
-
-
 ###  http://saref.linkeddata.es/def/envi#System
 :System rdf:type owl:Class ;
         rdfs:subClassOf :PhysicalObject ,
@@ -735,16 +719,16 @@ geo:SpatialThing rdf:type owl:Class .
 time:TemporalUnit rdf:type owl:Class .
 
 
-###  https://w3id.org/saref#ActuatingFunction
-saref:ActuatingFunction rdf:type owl:Class .
-
-
 ###  https://w3id.org/saref#Device
 saref:Device rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Sensor
 saref:Sensor rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Service
+saref:Service rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#UnitOfMeasure
