@@ -251,7 +251,7 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty .
 ###  http://saref.linkeddata.es/def/envi#hasFlash
 :hasFlash rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
-          rdfs:domain saref:Light ;
+          rdfs:domain :Light ;
           rdfs:range xsd:boolean ;
           rdfs:label "hasFlash"@en .
 
@@ -268,7 +268,7 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty .
 ###  http://saref.linkeddata.es/def/envi#hasProjectionAngle
 :hasProjectionAngle rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
-                    rdfs:domain saref:Light ;
+                    rdfs:domain :Light ;
                     rdfs:range xsd:float ;
                     rdfs:label "hasProjectionAngle"@en .
 
@@ -741,10 +741,6 @@ saref:ActuatingFunction rdf:type owl:Class .
 
 ###  https://w3id.org/saref#Device
 saref:Device rdf:type owl:Class .
-
-
-###  https://w3id.org/saref#Light
-saref:Light rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Sensor
