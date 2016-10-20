@@ -498,7 +498,8 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 
 ###  http://saref.linkeddata.es/def/envi#LightPoint
 :LightPoint rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
+            rdfs:subClassOf geo:Point ,
+                            [ rdf:type owl:Restriction ;
                               owl:onProperty :projectsLight ;
                               owl:allValuesFrom :Light
                             ] ,
@@ -583,7 +584,8 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 
 ###  http://saref.linkeddata.es/def/envi#PhysicalObject
 :PhysicalObject rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                rdfs:subClassOf geo:SpatialThing ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :contains ;
                                   owl:allValuesFrom :Device
                                 ] ,
@@ -657,6 +659,10 @@ saref:hasValue rdf:type owl:DatatypeProperty .
       rdfs:subClassOf :Photometer ;
       rdfs:comment ""@en ;
       rdfs:label "TESS (Telescope Encoder and Sky Sensor)"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
+geo:Point rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
