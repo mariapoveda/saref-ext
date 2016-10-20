@@ -39,16 +39,16 @@
                  rdfs:label "affects property"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#containsDevice
-:containsDevice rdf:type owl:ObjectProperty ;
-                rdfs:label "contains device"@en .
+###  http://saref.linkeddata.es/def/envi#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:label "contains device"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#encapsulatesObject
-:encapsulatesObject rdf:type owl:ObjectProperty ;
-                    owl:inverseOf :hasDigitalRepresentation ;
-                    rdf:type owl:FunctionalProperty ;
-                    rdfs:label "encapsulates object"@en .
+###  http://saref.linkeddata.es/def/envi#encapsulates
+:encapsulates rdf:type owl:ObjectProperty ;
+              owl:inverseOf :hasDigitalRepresentation ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:label "encapsulates object"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasColor
@@ -260,6 +260,11 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                         rdfs:subClassOf [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasVersion ;
                                           owl:allValuesFrom xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasVersion ;
+                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
                                         ] ;
                         rdfs:label "Communication interface"@en .
 
@@ -300,12 +305,12 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasRevisionNumber ;
-                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onDataRange xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasVersion ;
-                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onDataRange xsd:string
                         ] ;
         rdfs:label "Device"@en .
@@ -314,7 +319,7 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 ###  http://saref.linkeddata.es/def/envi#DigitalRepresentation
 :DigitalRepresentation rdf:type owl:Class ;
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty :encapsulatesObject ;
+                                         owl:onProperty :encapsulates ;
                                          owl:allValuesFrom :PhysicalObject
                                        ] ,
                                        [ rdf:type owl:Restriction ;
@@ -342,24 +347,14 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                          owl:allValuesFrom xsd:string
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasIdentifier ;
-                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty saref:hasDescription ;
-                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty saref:hasName ;
-                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty :hasCreationDate ;
-                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                          owl:onDataRange xsd:dateTime
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasIdentifier ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
                                        ] ;
                        rdfs:label "Digital representation"@en .
 
@@ -541,7 +536,7 @@ saref:hasValue rdf:type owl:DatatypeProperty .
 ###  http://saref.linkeddata.es/def/envi#PhysicalObject
 :PhysicalObject rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty :containsDevice ;
+                                  owl:onProperty :contains ;
                                   owl:allValuesFrom :Device
                                 ] ,
                                 [ rdf:type owl:Restriction ;
@@ -555,11 +550,6 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty saref:hasDescription ;
                                   owl:allValuesFrom xsd:string
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty saref:hasDescription ;
-                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange xsd:string
                                 ] ;
                 rdfs:label "Physical object"@en .
 
