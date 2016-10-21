@@ -4,33 +4,25 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY rddl "http://www.rddl.org/" >
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
-    <!ENTITY wot "http://xmlns.com/wot/0.1/" >
     <!ENTITY prov "http://www.w3.org/ns/prov#" >
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY doap "http://usefulinc.com/ns/doap#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY oslc "http://open-services.net/ns/core#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY oslc_auto "http://open-services.net/ns/auto#" >
     <!ENTITY oslc_asset "http://open-services.net/ns/asset#" >
-    <!ENTITY oslc_config "http://open-services.net/ns/config#" >
     <!ENTITY bldg "http://saref.linkeddata.es/def/bldg#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
-    <!ENTITY ci "http://www.smartdeveloperhub.org/vocabulary/ci#" >
-    <!ENTITY sdh "http://www.smartdeveloperhub.org/vocabulary/sdh#" >
-    <!ENTITY scm "http://www.smartdeveloperhub.org/vocabulary/scm#" >
-    <!ENTITY metrics "http://www.smartdeveloperhub.org/vocabulary/metrics#" >
-    <!ENTITY platform "http://www.smartdeveloperhub.org/vocabulary/platform#" >
     <!ENTITY org "http://www.smartdeveloperhub.org/vocabulary/organization#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
      xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:org="http://www.smartdeveloperhub.org/vocabulary/organization#"
@@ -38,33 +30,20 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rddl="http://www.rddl.org/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:wot="http://xmlns.com/wot/0.1/"
-     xmlns:metrics="http://www.smartdeveloperhub.org/vocabulary/metrics#"
-     xmlns:sdh="http://www.smartdeveloperhub.org/vocabulary/sdh#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:platform="http://www.smartdeveloperhub.org/vocabulary/platform#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:oslc="http://open-services.net/ns/core#"
-     xmlns:oslc_config="http://open-services.net/ns/config#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:ci="http://www.smartdeveloperhub.org/vocabulary/ci#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:doap="http://usefulinc.com/ns/doap#"
-     xmlns:scm="http://www.smartdeveloperhub.org/vocabulary/scm#"
-     xmlns:oslc_auto="http://open-services.net/ns/auto#"
      xmlns:bldg="http://saref.linkeddata.es/def/bldg#">
     <owl:Ontology rdf:about="http://saref.linkeddata.es/def/bldg">
-        <dcterms:license rdf:datatype="&xsd;anyURI">http://purl.org/NET/rdflicense/cc-by4.0</dcterms:license>
+        <dc:title xml:lang="en">SAREF extension for building devices</dc:title>
         <vann:preferredNamespaceUri>http://saref.linkeddata.es/def/bldg</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology extends the SAREF ontology for the building devices domain. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries.</rdfs:comment>
         <vann:preferredNamespacePrefix>saref4bldg</vann:preferredNamespacePrefix>
-        <dc:title xml:lang="en">SAREF extension for light pollution</dc:title>
-        <dcterms:creator rdf:resource="http://delicias.dia.fi.upm.es/~rgarcia/foaf.rdf"/>
         <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>
         <owl:versionIRI rdf:resource="http://saref.linkeddata.es/def/v1/bldg"/>
+        <dcterms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
     </owl:Ontology>
     
@@ -111,22 +90,6 @@
     
 
 
-    <!-- http://saref.linkeddata.es/def/bldg#hasFlash -->
-
-    <owl:AnnotationProperty rdf:about="&bldg;hasFlash">
-        <rdfs:domain rdf:resource="https://w3id.org/saref#Light"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#projectionAngle -->
-
-    <owl:AnnotationProperty rdf:about="&bldg;projectionAngle">
-        <rdfs:domain rdf:resource="https://w3id.org/saref#Light"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -147,6 +110,3364 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="&bldg;isComponentOf">
+        <rdfs:label xml:lang="en">isComponentOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#isComposedBy -->
+
+    <owl:ObjectProperty rdf:about="&bldg;isComposedBy">
+        <rdfs:label xml:lang="en">isComposedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#switchingDeviceSetPoint -->
+
+    <owl:ObjectProperty rdf:about="&bldg;switchingDeviceSetPoint">
+        <rdfs:label xml:lang="en">set point</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indicates the setpoint and label. For toggle switches, there are two positions, 0 for off and 1 for on. For dimmer switches, the values may indicate the fully-off and full-on positions, where missing integer values in between are interpolated. For selector switches, the range indicates the available positions. An IfcTable may be attached (using IfcMetric and IfcPropertyConstraintRelationship) containing columns of the specified header names and types: &apos;Position&apos; (IfcInteger): The discrete setpoint level. &apos;Sink&apos; (IfcLabel): The Name of the switched input port (IfcDistributionPort with FlowDirection=SINK). &apos;Source&apos; (IfcLabel): The Name of the switched output port (IfcDistributionPort with FlowDirection=SOURCE). &apos;Ratio&apos; (IfcNormalizedRatioMeasure): The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#actuatorFailPosition -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;actuatorFailPosition">
+        <rdfs:label xml:lang="en">fail position</rdfs:label>
+        <rdfs:comment xml:lang="en"> Specifies the required fail-safe position of the actuator.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Actuator"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#actuatorManualOverride -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;actuatorManualOverride">
+        <rdfs:label xml:lang="en">manual override</rdfs:label>
+        <rdfs:comment xml:lang="en"> Identifies whether hand-operated operation is provided as an override (= TRUE) or not (= FALSE). Note that this value should be set to FALSE by default in the case of a Hand Operated Actuator.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Actuator"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoveryHasDefrost -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoveryHasDefrost">
+        <rdfs:label xml:lang="en">has defrost</rdfs:label>
+        <rdfs:comment xml:lang="en"> has the heat exchanger has defrost function or not.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoveryHeatTransferTypeEnum -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoveryHeatTransferTypeEnum">
+        <rdfs:label xml:lang="en">heat transfer type enum</rdfs:label>
+        <rdfs:comment xml:lang="en">Type of heat transfer between the two air streams.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoveryOperationalTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoveryOperationalTemperatureRangeMax">
+        <rdfs:label xml:lang="en">operational temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoveryOperationalTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoveryOperationalTemperatureRangeMin">
+        <rdfs:label xml:lang="en">operational temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoveryPrimaryAirFlowRateRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoveryPrimaryAirFlowRateRangeMax">
+        <rdfs:label xml:lang="en">primary air flow rate range max</rdfs:label>
+        <rdfs:comment xml:lang="en">possible range of primary airflow that can be delivered. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoveryPrimaryAirFlowRateRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoveryPrimaryAirFlowRateRangeMin">
+        <rdfs:label xml:lang="en">primary air flow rate range min</rdfs:label>
+        <rdfs:comment xml:lang="en">possible range of primary airflow that can be delivered. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoverySecondaryAirFlowRateRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoverySecondaryAirFlowRateRangeMax">
+        <rdfs:label xml:lang="en">secondary air flow rate range max</rdfs:label>
+        <rdfs:comment xml:lang="en">possible range of secondary airflow that can be delivered. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#airToAirHeatRecoverySecondaryAirFlowRateRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;airToAirHeatRecoverySecondaryAirFlowRateRangeMin">
+        <rdfs:label xml:lang="en">secondary air flow rate range min</rdfs:label>
+        <rdfs:comment xml:lang="en">possible range of secondary airflow that can be delivered. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AirToAirHeatRecovery"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#audioVisualApplianceAudioVolume -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;audioVisualApplianceAudioVolume">
+        <rdfs:label xml:lang="en">audio volume</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indicates discrete audio volume levels and corresponding sound power offsets, if applicable. Missing values may be interpolated. Measured in watts.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AudioVisualAppliance"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#audioVisualApplianceMediaSource -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;audioVisualApplianceMediaSource">
+        <rdfs:label xml:lang="en">media source</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indicates media sources and corresponding names of ports (IfcDistributionPort with FlowDirection=SINK and PredefinedType=AUDIOVISUAL) or aggregated audio/video components (IfcAudioVisualAppliance).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;AudioVisualAppliance"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerEnergySource -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerEnergySource">
+        <rdfs:label xml:lang="en">energy source</rdfs:label>
+        <rdfs:comment xml:lang="en">Enumeration defining the energy source or fuel cumbusted to generate heat.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerHeatTransferSurfaceArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerHeatTransferSurfaceArea">
+        <rdfs:label xml:lang="en">heat transfer surface area</rdfs:label>
+        <rdfs:comment xml:lang="en"> Total heat transfer area of the vessel. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerIsWaterStorageHeater -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerIsWaterStorageHeater">
+        <rdfs:label xml:lang="en">is water storage heater</rdfs:label>
+        <rdfs:comment xml:lang="en"> This is used to identify if the boiler has storage capacity (TRUE). If FALSE, then there is no storage capacity built into the boiler, such as an instantaneous hot water heater.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerNominalEnergyConsumption -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerNominalEnergyConsumption">
+        <rdfs:label xml:lang="en">nominal energy consumption</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal fuel consumption rate required to produce the total boiler heat output. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerNominalPartLoadRatioMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerNominalPartLoadRatioMax">
+        <rdfs:label xml:lang="en">nominal part load ratio max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable part load ratio range.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerNominalPartLoadRatioMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerNominalPartLoadRatioMin">
+        <rdfs:label xml:lang="en">nominal part load ratio min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable part load ratio range.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerOperatingMode -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerOperatingMode">
+        <rdfs:label xml:lang="en">operating mode</rdfs:label>
+        <rdfs:comment xml:lang="en"> Identifies the operating mode of the boiler.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerOutletTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerOutletTemperatureRangeMax">
+        <rdfs:label xml:lang="en">outlet temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable outlet temperature of either the water or the steam. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerOutletTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerOutletTemperatureRangeMin">
+        <rdfs:label xml:lang="en">outlet temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable outlet temperature of either the water or the steam. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerPressureRating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerPressureRating">
+        <rdfs:label xml:lang="en">pressure rating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal pressure rating of the boiler as rated by the agency having jurisdiction. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerWaterInletTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerWaterInletTemperatureRangeMax">
+        <rdfs:label xml:lang="en">water inlet temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable water inlet temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerWaterInletTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerWaterInletTemperatureRangeMin">
+        <rdfs:label xml:lang="en">water inlet temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable water inlet temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#boilerWaterStorageCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;boilerWaterStorageCapacity">
+        <rdfs:label xml:lang="en">water storage capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Water storage capacity. Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Boiler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#burnerEnergySource -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;burnerEnergySource">
+        <rdfs:label xml:lang="en">energy source</rdfs:label>
+        <rdfs:comment xml:lang="en">Enumeration defining the energy source or fuel cumbusted to generate heat.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Burner"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#chillerNominalCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;chillerNominalCapacity">
+        <rdfs:label xml:lang="en">nominal capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal cooling capacity of chiller at standardized conditions as defined by the agency having jurisdiction. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Chiller"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#chillerNominalCondensingTemperature -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;chillerNominalCondensingTemperature">
+        <rdfs:label xml:lang="en">nominal condensing temperature</rdfs:label>
+        <rdfs:comment xml:lang="en"> Chiller condensing temperature. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Chiller"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#chillerNominalEfficiency -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;chillerNominalEfficiency">
+        <rdfs:label xml:lang="en">nominal efficiency</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal chiller efficiency under nominal conditions. </rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Chiller"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#chillerNominalEvaporatingTemmperature -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;chillerNominalEvaporatingTemmperature">
+        <rdfs:label xml:lang="en">nominal evaporating temmperature</rdfs:label>
+        <rdfs:comment xml:lang="en"> Chiller evaporating temperature.Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Chiller"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#chillerNominalHeatRejectionRate -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;chillerNominalHeatRejectionRate">
+        <rdfs:label xml:lang="en">nominal heat rejection rate</rdfs:label>
+        <rdfs:comment xml:lang="en"> Sum of the refrigeration effect and the heat equivalent of the power input to the compressor. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Chiller"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#chillerNominalPowerConsumption -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;chillerNominalPowerConsumption">
+        <rdfs:label xml:lang="en">nominal power consumption</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal total power consumption. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Chiller"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilAirFlowRateRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilAirFlowRateRangeMax">
+        <rdfs:label xml:lang="en">air flow rate range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Possible range of airflow that can be delivered. For cases where there is no airflow across the coil (e.g. electric coil in a floor slab), then the value is zero. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilAirFlowRateRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilAirFlowRateRangeMin">
+        <rdfs:label xml:lang="en">air flow rate range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Possible range of airflow that can be delivered. For cases where there is no airflow across the coil (e.g. electric coil in a floor slab), then the value is zero. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilNominalLatentCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilNominalLatentCapacity">
+        <rdfs:label xml:lang="en">nominal latent capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal latent capacity. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilNominalSensibleCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilNominalSensibleCapacity">
+        <rdfs:label xml:lang="en">nominal sensible capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal sensible capacity. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilNominalUa -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilNominalUa">
+        <rdfs:label xml:lang="en">nominal ua</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal UA value.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilOperationalTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilOperationalTemperatureRangeMax">
+        <rdfs:label xml:lang="en">operational temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operational air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilOperationalTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilOperationalTemperatureRangeMin">
+        <rdfs:label xml:lang="en">operational temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operational air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coilPlacementType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coilPlacementType">
+        <rdfs:label xml:lang="en">placement type</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indicates the placement of the coil. FLOOR indicates an under floor heater (if coil type is WATERHEATINGCOIL or ELECTRICHEATINGCOIL), CEILING indicates a cooling ceiling (if coil type is WATERCOOLINGCOIL), UNIT indicates that the coil is part of a cooling or heating unit, like cooled beam, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Coil"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorCompressorSpeed -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorCompressorSpeed">
+        <rdfs:label xml:lang="en">compressor speed</rdfs:label>
+        <rdfs:comment xml:lang="en"> Compressor speed. Usually measured in cycles/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorHasHotGasBypass -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorHasHotGasBypass">
+        <rdfs:label xml:lang="en">has hot gas bypass</rdfs:label>
+        <rdfs:comment xml:lang="en"> Whether or not hot gas bypass is provided for the compressor. TRUE = Yes, FALSE = No.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorIdealCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorIdealCapacity">
+        <rdfs:label xml:lang="en">ideal capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Compressor capacity under ideal conditions. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorIdealShaftPower -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorIdealShaftPower">
+        <rdfs:label xml:lang="en">ideal shaft power</rdfs:label>
+        <rdfs:comment xml:lang="en"> Compressor shaft power under ideal conditions. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorImpellerDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorImpellerDiameter">
+        <rdfs:label xml:lang="en">impeller diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> Diameter of compressor impeller - used to scale performance of geometrically similar compressors. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorMaximumPartLoadRatio -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorMaximumPartLoadRatio">
+        <rdfs:label xml:lang="en">maximum part load ratio</rdfs:label>
+        <rdfs:comment xml:lang="en"> Maximum part load ratio as a fraction of nominal capacity.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorMinimunPartLoadRatio -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorMinimunPartLoadRatio">
+        <rdfs:label xml:lang="en">minimun part load ratio</rdfs:label>
+        <rdfs:comment xml:lang="en"> Minimum part load ratio as a fraction of nominal capacity.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorNominalCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorNominalCapacity">
+        <rdfs:label xml:lang="en">nominal capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Compressor nameplate capacity. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorPowerSource -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorPowerSource">
+        <rdfs:label xml:lang="en">power source</rdfs:label>
+        <rdfs:comment xml:lang="en"> Type of power driving the compressor.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#compressorRefrigerantClass -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;compressorRefrigerantClass">
+        <rdfs:label xml:lang="en">refrigerant class</rdfs:label>
+        <rdfs:comment xml:lang="en">Refrigerant class used by the compressor. CFC: Chlorofluorocarbons. HCFC: Hydrochlorofluorocarbons. HFC: Hydrofluorocarbons.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Compressor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#condenserExternalSurfaceArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;condenserExternalSurfaceArea">
+        <rdfs:label xml:lang="en">external surface area</rdfs:label>
+        <rdfs:comment xml:lang="en"> External surface area (both primary and secondary area). Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Condenser"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#condenserInternalRefrigerantVolume -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;condenserInternalRefrigerantVolume">
+        <rdfs:label xml:lang="en">internal refrigerant volume</rdfs:label>
+        <rdfs:comment xml:lang="en"> Internal volume of condenser (refrigerant side). Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Condenser"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#condenserInternalSurfaceArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;condenserInternalSurfaceArea">
+        <rdfs:label xml:lang="en">internal surface area</rdfs:label>
+        <rdfs:comment xml:lang="en"> Internal surface area. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Condenser"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#condenserInternalWaterVolume -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;condenserInternalWaterVolume">
+        <rdfs:label xml:lang="en">internal water volume</rdfs:label>
+        <rdfs:comment xml:lang="en"> Internal volume of condenser (water side). Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Condenser"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#condenserNominalHeatTransferArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;condenserNominalHeatTransferArea">
+        <rdfs:label xml:lang="en">nominal heat transfer area</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal heat transfer surface area associated with nominal overall heat transfer coefficient. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Condenser"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#condenserNominalHeatTransferCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;condenserNominalHeatTransferCoefficient">
+        <rdfs:label xml:lang="en">nominal heat transfer coefficient</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal overall heat transfer coefficient associated with nominal heat transfer area. Usually measured in Watts/m2 Kelvin.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Condenser"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#condenserRefrigerantClass -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;condenserRefrigerantClass">
+        <rdfs:label xml:lang="en">refrigerant class</rdfs:label>
+        <rdfs:comment xml:lang="en">Refrigerant class used by the condenser. CFC: Chlorofluorocarbons. HCFC: Hydrochlorofluorocarbons. HFC: Hydrofluorocarbons.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Condenser"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamCoilLength -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamCoilLength">
+        <rdfs:label xml:lang="en">coil length</rdfs:label>
+        <rdfs:comment xml:lang="en"> Length of coil. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamCoilWidth -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamCoilWidth">
+        <rdfs:label xml:lang="en">coil width</rdfs:label>
+        <rdfs:comment xml:lang="en"> Width of coil. Usually measured in millimeters (mm</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamFinishColor -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamFinishColor">
+        <rdfs:label xml:lang="en">finish color</rdfs:label>
+        <rdfs:comment xml:lang="en"> Finish color for cooled beam.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamIntegratedLightingType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamIntegratedLightingType">
+        <rdfs:label xml:lang="en">integrated lighting type</rdfs:label>
+        <rdfs:comment xml:lang="en">Integrated lighting in cooled beam.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamIsFreeHanging -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamIsFreeHanging">
+        <rdfs:label xml:lang="en">is free hanging</rdfs:label>
+        <rdfs:comment xml:lang="en"> Is it free hanging type (not mounted in a false ceiling)?</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalCoolingCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalCoolingCapacity">
+        <rdfs:label xml:lang="en">nominal cooling capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal cooling capacity. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalHeatingCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalHeatingCapacity">
+        <rdfs:label xml:lang="en">nominal heating capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal heating capacity. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalReturnWaterTemperatureCooling -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalReturnWaterTemperatureCooling">
+        <rdfs:label xml:lang="en">nominal return water temperature cooling</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal return water temperature (refers to nominal cooling capacity). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalReturnWaterTemperatureHeating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalReturnWaterTemperatureHeating">
+        <rdfs:label xml:lang="en">nominal return water temperature heating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal return water temperature (refers to nominal heating capacity). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalSorroundingHumidityCooling -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalSorroundingHumidityCooling">
+        <rdfs:label xml:lang="en">nominal sorrounding humidity cooling</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal surrounding humidity (refers to nominal cooling capacity). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalSorroundingTemperatureCooling -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalSorroundingTemperatureCooling">
+        <rdfs:label xml:lang="en">nominal sorrounding temperature cooling</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal surrounding temperature (refers to nominal cooling capacity). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalSorroundingTemperatureHeating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalSorroundingTemperatureHeating">
+        <rdfs:label xml:lang="en">nominal sorrounding temperature heating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal surrounding temperature (refers to nominal heating capacity). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalSupplyWaterTemperatureCooling -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalSupplyWaterTemperatureCooling">
+        <rdfs:label xml:lang="en">nominal supply water temperature cooling</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal supply water temperature (refers to nominal cooling capacity). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalSupplyWaterTemperatureHeating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalSupplyWaterTemperatureHeating">
+        <rdfs:label xml:lang="en">nominal supply water temperature heating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal supply water temperature (refers to nominal heating capacity). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalWaterFlowCooling -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalWaterFlowCooling">
+        <rdfs:label xml:lang="en">nominal water flow cooling</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal water flow (refers to nominal cooling capacity). Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamNominalWaterFlowHeating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamNominalWaterFlowHeating">
+        <rdfs:label xml:lang="en">nominal water flow heating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal water flow (refers to nominal heating capacity). Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamPipeConnectionEnum -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamPipeConnectionEnum">
+        <rdfs:label xml:lang="en">pipe connection enum</rdfs:label>
+        <rdfs:comment xml:lang="en">The manner in which the pipe connection is made to the cooled beam.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamWaterFlowControlSystemType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamWaterFlowControlSystemType">
+        <rdfs:label xml:lang="en">water flow control system type</rdfs:label>
+        <rdfs:comment xml:lang="en"> Factory fitted waterflow control system.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamWaterPressureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamWaterPressureRangeMax">
+        <rdfs:label xml:lang="en">water pressure range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable water circuit working pressure range. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#cooledBeamWaterPressureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;cooledBeamWaterPressureRangeMin">
+        <rdfs:label xml:lang="en">water pressure range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable water circuit working pressure range. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CooledBeam"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerAmbientDesignDryBulbTemperature -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerAmbientDesignDryBulbTemperature">
+        <rdfs:label xml:lang="en">ambient design dry bulb temperature</rdfs:label>
+        <rdfs:comment xml:lang="en"> Ambient design dry bulb temperature used for selecting the cooling tower. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerAmbientDesignWetBulbTemperature -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerAmbientDesignWetBulbTemperature">
+        <rdfs:label xml:lang="en">ambient design wet bulb temperature</rdfs:label>
+        <rdfs:comment xml:lang="en"> Ambient design wet bulb temperature used for selecting the cooling tower. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerBasinReserveVolume -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerBasinReserveVolume">
+        <rdfs:label xml:lang="en">basin reserve volume</rdfs:label>
+        <rdfs:comment xml:lang="en"> Volume between operating and overflow levels in cooling tower basin. Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerCapacityControl -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerCapacityControl">
+        <rdfs:label xml:lang="en">capacity control</rdfs:label>
+        <rdfs:comment xml:lang="en">FanCycling: Fan is cycled on and off to control duty. TwoSpeedFan: Fan is switched between low and high speed to control duty. VariableSpeedFan: Fan speed is varied to control duty. DampersControl: Dampers modulate the air flow to control duty. BypassValveControl: Bypass valve modulates the water flow to control duty. MultipleSeriesPumps: Turn on/off multiple series pump to control duty. TwoSpeedPump: Switch between high/low pump speed to control duty. VariableSpeedPump: vary pump speed to control duty.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerCircuitType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerCircuitType">
+        <rdfs:label xml:lang="en">circuit type</rdfs:label>
+        <rdfs:comment xml:lang="en">OpenCircuit: Exposes water directly to the cooling atmosphere. CloseCircuit: The fluid is separated from the atmosphere by a heat exchanger. Wet: The air stream or the heat exchange surface is evaporatively cooled. Dry: No evaporation into the air stream. DryWet: A combination of a dry tower and a wet tower.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerControlStrategy -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerControlStrategy">
+        <rdfs:label xml:lang="en">control strategy</rdfs:label>
+        <rdfs:comment xml:lang="en">FixedExitingWaterTemp: The capacity is controlled to maintain a fixed exiting water temperature. WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerFlowArrangement -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerFlowArrangement">
+        <rdfs:label xml:lang="en">flow arrangement</rdfs:label>
+        <rdfs:comment xml:lang="en"> CounterFlow: Air and water flow enter in different directions. CrossFlow: Air and water flow are perpendicular. ParallelFlow: air and water flow enter in same directions.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerLiftElevationDifference -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerLiftElevationDifference">
+        <rdfs:label xml:lang="en">lift elevation difference</rdfs:label>
+        <rdfs:comment xml:lang="en"> Elevation difference between cooling tower sump and the top of the tower. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerNominalCapcity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerNominalCapcity">
+        <rdfs:label xml:lang="en">nominal capcity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerNumberOfCells -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerNumberOfCells">
+        <rdfs:label xml:lang="en">number of cells</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of cells in one cooling tower unit.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerOperationTemperatureRange -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerOperationTemperatureRange">
+        <rdfs:label xml:lang="en">operation temperature range</rdfs:label>
+        <rdfs:comment xml:lang="en"> Allowable operation ambient air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerSprayType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerSprayType">
+        <rdfs:label xml:lang="en">spray type</rdfs:label>
+        <rdfs:comment xml:lang="en"> SprayFilled: Water is sprayed into airflow. SplashTypeFill: water cascades over successive rows of splash bars. FilmTypeFill: water flows in a thin layer over closely spaced sheets.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#coolingTowerWaterRequirement -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;coolingTowerWaterRequirement">
+        <rdfs:label xml:lang="en">water requirement</rdfs:label>
+        <rdfs:comment xml:lang="en"> Make-up water requirements. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;CoolingTower"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperBladeAction -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperBladeAction">
+        <rdfs:label xml:lang="en">blade action</rdfs:label>
+        <rdfs:comment xml:lang="en">Blade action.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperBladeEdge -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperBladeEdge">
+        <rdfs:label xml:lang="en">blade edge</rdfs:label>
+        <rdfs:comment xml:lang="en">Blade edge.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperBladeShape -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperBladeShape">
+        <rdfs:label xml:lang="en">blade shape</rdfs:label>
+        <rdfs:comment xml:lang="en">Blade shape. Flat means triple V-groove.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperBladeThickness -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperBladeThickness">
+        <rdfs:label xml:lang="en">blade thickness</rdfs:label>
+        <rdfs:comment xml:lang="en"> The thickness of the damper blade. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperCloseOffRating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperCloseOffRating">
+        <rdfs:label xml:lang="en">close off rating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Close off rating. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperFaceArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperFaceArea">
+        <rdfs:label xml:lang="en">face area</rdfs:label>
+        <rdfs:comment xml:lang="en"> Face area open to the airstream. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperFrameDepth -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperFrameDepth">
+        <rdfs:label xml:lang="en">frame depth</rdfs:label>
+        <rdfs:comment xml:lang="en"> The length (or depth) of the damper frame. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperFrameThickness -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperFrameThickness">
+        <rdfs:label xml:lang="en">frame thickness</rdfs:label>
+        <rdfs:comment xml:lang="en"> The thickness of the damper frame material. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperFrameType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperFrameType">
+        <rdfs:label xml:lang="en">frame type</rdfs:label>
+        <rdfs:comment xml:lang="en"> The type of frame used by the damper (e.g., Standard, Single Flange, Single Reversed Flange, Double Flange, etc.).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperLeakageFullyClosed -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperLeakageFullyClosed">
+        <rdfs:label xml:lang="en">leakage fully closed</rdfs:label>
+        <rdfs:comment xml:lang="en"> Leakage when fully closed. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperMaximumAirFlowRate -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperMaximumAirFlowRate">
+        <rdfs:label xml:lang="en">maximum air flow rate</rdfs:label>
+        <rdfs:comment xml:lang="en"> Maximum allowable air flow rate. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperMaximumWorkingPressure -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperMaximumWorkingPressure">
+        <rdfs:label xml:lang="en">maximum working pressure</rdfs:label>
+        <rdfs:comment xml:lang="en"> Maximum working pressure. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperNominalAirFlowRate -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperNominalAirFlowRate">
+        <rdfs:label xml:lang="en">nominal air flow rate</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal air flow rate. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperNumberOfBlades -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperNumberOfBlades">
+        <rdfs:label xml:lang="en">number of blades</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of blades.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperOpenPressureDrop -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperOpenPressureDrop">
+        <rdfs:label xml:lang="en">open pressure drop</rdfs:label>
+        <rdfs:comment xml:lang="en"> Total pressure drop across damper. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperOperation -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperOperation">
+        <rdfs:label xml:lang="en">operation</rdfs:label>
+        <rdfs:comment xml:lang="en">The operational mechanism for the damper operation.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperOrientation -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperOrientation">
+        <rdfs:label xml:lang="en">orientation</rdfs:label>
+        <rdfs:comment xml:lang="en">The intended orientation for the damper as specified by the manufacturer.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperTemperatureRangeMax">
+        <rdfs:label xml:lang="en">temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperTemperatureRangeMin">
+        <rdfs:label xml:lang="en">temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#damperTemperatureRating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;damperTemperatureRating">
+        <rdfs:label xml:lang="en">temperature rating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Temperature rating. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Damper"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerAirFlowRateRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerAirFlowRateRangeMax">
+        <rdfs:label xml:lang="en">air flow rate range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Possible range of airflow that can be delivered. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerAirFlowRateRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerAirFlowRateRangeMin">
+        <rdfs:label xml:lang="en">air flow rate range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Possible range of airflow that can be delivered. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerHasExteriorInsulation -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerHasExteriorInsulation">
+        <rdfs:label xml:lang="en">has exterior insulation</rdfs:label>
+        <rdfs:comment xml:lang="en"> TRUE if the silencer has exterior insulation. FALSE if it does not.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerHydraulicDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerHydraulicDiameter">
+        <rdfs:label xml:lang="en">hydraulic diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> Hydraulic diameter. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerLength -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerLength">
+        <rdfs:label xml:lang="en">length</rdfs:label>
+        <rdfs:comment xml:lang="en"> The finished length of the silencer. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerTemperatureRangeMax">
+        <rdfs:label xml:lang="en">temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable minimum and maximum temperature. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerTemperatureRangeMin">
+        <rdfs:label xml:lang="en">temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable minimum and maximum temperature. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerWeight -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerWeight">
+        <rdfs:label xml:lang="en">weight</rdfs:label>
+        <rdfs:comment xml:lang="en"> The weight of the silencer. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerWorkingPressureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerWorkingPressureRangeMax">
+        <rdfs:label xml:lang="en">working pressure range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable minimum and maximum working pressure (relative to ambient pressure). Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#ductSilencerWorkingPressureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;ductSilencerWorkingPressureRangeMin">
+        <rdfs:label xml:lang="en">working pressure range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable minimum and maximum working pressure (relative to ambient pressure). Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;DuctSilencer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricFlowStorageDeviceNominalFrequency -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricFlowStorageDeviceNominalFrequency">
+        <rdfs:label xml:lang="en">nominal frequency</rdfs:label>
+        <rdfs:comment xml:lang="en"> The nominal frequency of the supply. Usually measured in cycles/s or Hertz (Hz).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricFlowStorageDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricFlowStorageDeviceNominalSupplyVoltage -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricFlowStorageDeviceNominalSupplyVoltage">
+        <rdfs:label xml:lang="en">nominal supply voltage</rdfs:label>
+        <rdfs:comment xml:lang="en"> The nominal voltage of the supply. Usually measured in Volts (V, W/A).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricFlowStorageDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricFlowStorageDeviceNominalSupplyVoltageOffsetMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricFlowStorageDeviceNominalSupplyVoltageOffsetMax">
+        <rdfs:label xml:lang="en">nominal supply voltage offset max</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum and minimum allowed voltage of the supply e.g. boundaries of 380V/440V may be applied for a nominal voltage of 400V.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricFlowStorageDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricFlowStorageDeviceNominalSupplyVoltageOffsetMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricFlowStorageDeviceNominalSupplyVoltageOffsetMin">
+        <rdfs:label xml:lang="en">nominal supply voltage offset min</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum and minimum allowed voltage of the supply e.g. boundaries of 380V/440V may be applied for a nominal voltage of 400V.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricFlowStorageDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricGeneratorElectricGeneratorEfficiency -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricGeneratorElectricGeneratorEfficiency">
+        <rdfs:label xml:lang="en">electric generator efficiency</rdfs:label>
+        <rdfs:comment xml:lang="en"> the ratio of output capacity to intake capacity.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricGenerator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricGeneratorMaximumPowerOutput -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricGeneratorMaximumPowerOutput">
+        <rdfs:label xml:lang="en">maximum power output</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum output power rating of the engine. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricGenerator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricGeneratorStartCurrentFactor -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricGeneratorStartCurrentFactor">
+        <rdfs:label xml:lang="en">start current factor</rdfs:label>
+        <rdfs:comment xml:lang="en"> IEC. Start current factor defines how large the peek starting current will become on the engine. StartCurrentFactor is multiplied to NominalCurrent and we get the start current.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricGenerator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorElectricMotorEfficiency -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorElectricMotorEfficiency">
+        <rdfs:label xml:lang="en">electric motor efficiency</rdfs:label>
+        <rdfs:comment xml:lang="en"> The ratio of output capacity to intake capacity.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorFrameSize -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorFrameSize">
+        <rdfs:label xml:lang="en">frame size</rdfs:label>
+        <rdfs:comment xml:lang="en"> Designation of the frame size according to the named range of frame sizes designated at the place of use or according to a given standard.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorHasPartWinding -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorHasPartWinding">
+        <rdfs:label xml:lang="en">has part winding</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indication of whether the motor is single speed, i.e. has a single winding (= FALSE) or multi-speed i.e.has part winding (= TRUE) .</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorIsGuarded -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorIsGuarded">
+        <rdfs:label xml:lang="en">is guarded</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indication of whether the motor enclosure is guarded (= TRUE) or not (= FALSE).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorLockedRotorCurrent -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorLockedRotorCurrent">
+        <rdfs:label xml:lang="en">locked rotor current</rdfs:label>
+        <rdfs:comment xml:lang="en"> Input current when a motor armature is energized but not rotating. Usually measured in Ampere (A).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorMaximumPowerOutput -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorMaximumPowerOutput">
+        <rdfs:label xml:lang="en">maximum power output</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum output power rating of the engine. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorMotorEnclosureType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorMotorEnclosureType">
+        <rdfs:label xml:lang="en">motor enclosure type</rdfs:label>
+        <rdfs:comment xml:lang="en"> A list of the available types of motor enclosure from which that required may be selected.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorStartCurrentFactor -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorStartCurrentFactor">
+        <rdfs:label xml:lang="en">start current factor</rdfs:label>
+        <rdfs:comment xml:lang="en"> IEC. Start current factor defines how large the peek starting current will become on the engine. StartCurrentFactor is multiplied to NominalCurrent and we get the start current.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorStartingTime -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorStartingTime">
+        <rdfs:label xml:lang="en">starting time</rdfs:label>
+        <rdfs:comment xml:lang="en"> The time (in s) needed for the motor to reach its rated speed with its driven equipment attached, starting from standstill and at the nominal voltage applied at its terminals.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#electricMotorTeTime -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;electricMotorTeTime">
+        <rdfs:label xml:lang="en">te time</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum time (in s) at which the motor could run with locked rotor when the motor is used in an EX-environment. The time indicates that a protective device should trip before this time when the starting current of the motor is slowing through the device.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ElectricMotor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#engineEnergySource -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;engineEnergySource">
+        <rdfs:label xml:lang="en">energy source</rdfs:label>
+        <rdfs:comment xml:lang="en">The source of energy.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Engine"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporativeCoolerFlowArrangement -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporativeCoolerFlowArrangement">
+        <rdfs:label xml:lang="en">flow arrangement</rdfs:label>
+        <rdfs:comment xml:lang="en">CounterFlow: Air and water flow enter in different directions. CrossFlow: Air and water flow are perpendicular. ParallelFlow: Air and water flow enter in same directions.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;EvaporativeCooler"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporativeCoolerHeatExchangeArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporativeCoolerHeatExchangeArea">
+        <rdfs:label xml:lang="en">heat exchange area</rdfs:label>
+        <rdfs:comment xml:lang="en"> Heat exchange area. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;EvaporativeCooler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporativeCoolerOperationalTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporativeCoolerOperationalTemperatureRangeMax">
+        <rdfs:label xml:lang="en">operational temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;EvaporativeCooler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporativeCoolerOperationalTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporativeCoolerOperationalTemperatureRangeMin">
+        <rdfs:label xml:lang="en">operational temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;EvaporativeCooler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporativeCoolerWaterRequirement -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporativeCoolerWaterRequirement">
+        <rdfs:label xml:lang="en">water requirement</rdfs:label>
+        <rdfs:comment xml:lang="en"> Make-up water requirement. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;EvaporativeCooler"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorEvaporationCoolant -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorEvaporationCoolant">
+        <rdfs:label xml:lang="en">evaporation coolant</rdfs:label>
+        <rdfs:comment xml:lang="en">The fluid used for the coolant in the evaporator.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorEvaporationMediumType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorEvaporationMediumType">
+        <rdfs:label xml:lang="en">evaporation medium type</rdfs:label>
+        <rdfs:comment xml:lang="en">ColdLiquid: Evaporator is using liquid type of fluid to exchange heat with refrigerant. ColdAir: Evaporator is using air to exchange heat with refrigerant.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorExternalSurfaceArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorExternalSurfaceArea">
+        <rdfs:label xml:lang="en">external surface area</rdfs:label>
+        <rdfs:comment xml:lang="en"> External surface area (both primary and secondary area). Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorInternalRefrigerantVolume -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorInternalRefrigerantVolume">
+        <rdfs:label xml:lang="en">internal refrigerant volume</rdfs:label>
+        <rdfs:comment xml:lang="en"> Internal volume of evaporator (refrigerant side). Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorInternalSurfaceArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorInternalSurfaceArea">
+        <rdfs:label xml:lang="en">internal surface area</rdfs:label>
+        <rdfs:comment xml:lang="en"> Internal surface area. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorInternalWaterVolume -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorInternalWaterVolume">
+        <rdfs:label xml:lang="en">internal water volume</rdfs:label>
+        <rdfs:comment xml:lang="en"> Internal volume of evaporator (water side). Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorNominalHeatTransferArea -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorNominalHeatTransferArea">
+        <rdfs:label xml:lang="en">nominal heat transfer area</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal heat transfer surface area associated with nominal overall heat transfer coefficient. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorNominalHeatTransferCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorNominalHeatTransferCoefficient">
+        <rdfs:label xml:lang="en">nominal heat transfer coefficient</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal overall heat transfer coefficient associated with nominal heat transfer area. Usually measured in Watts/m2 Kelvin.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#evaporatorRefrigerantClass -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;evaporatorRefrigerantClass">
+        <rdfs:label xml:lang="en">refrigerant class</rdfs:label>
+        <rdfs:comment xml:lang="en"> Refrigerant class used by the compressor. CFC: Chlorofluorocarbons. HCFC: Hydrochlorofluorocarbons. HFC: Hydrofluorocarbons.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Evaporator"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanCapacityControlType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanCapacityControlType">
+        <rdfs:label xml:lang="en">capacity control type</rdfs:label>
+        <rdfs:comment xml:lang="en">InletVane: Control by adjusting inlet vane. VariableSpeedDrive: Control by variable speed drive. BladePitchAngle: Control by adjusting blade pitch angle. TwoSpeed: Control by switch between high and low speed. DischargeDamper: Control by modulating discharge damper.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanMotorDriveType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanMotorDriveType">
+        <rdfs:label xml:lang="en">motor drive type</rdfs:label>
+        <rdfs:comment xml:lang="en">Motor drive type: DIRECTDRIVE: Direct drive. BELTDRIVE: Belt drive. COUPLING: Coupling. OTHER: Other type of motor drive. UNKNOWN: Unknown motor drive type. </rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanNominalAirFlowRate -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanNominalAirFlowRate">
+        <rdfs:label xml:lang="en">nominal air flow rate</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal air flow rate. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanNominalPowerRate -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanNominalPowerRate">
+        <rdfs:label xml:lang="en">nominal power rate</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal fan power rate.Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanNominalRotationSpeed -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanNominalRotationSpeed">
+        <rdfs:label xml:lang="en">nominal rotation speed</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal fan wheel speed. Usually measured in cycles/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanNominalStaticPressure -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanNominalStaticPressure">
+        <rdfs:label xml:lang="en">nominal static pressure</rdfs:label>
+        <rdfs:comment xml:lang="en"> The static pressure within the air stream that the fan must overcome to insure designed circulation of air. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanNominalTotalPressure -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanNominalTotalPressure">
+        <rdfs:label xml:lang="en">nominal total pressure</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal total pressure rise across the fan. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanOperationTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanOperationTemperatureRangeMax">
+        <rdfs:label xml:lang="en">operation temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanOperationTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanOperationTemperatureRangeMin">
+        <rdfs:label xml:lang="en">operation temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient air temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#fanOperationalRiterial -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;fanOperationalRiterial">
+        <rdfs:label xml:lang="en">operational riterial</rdfs:label>
+        <rdfs:comment xml:lang="en"> Time of operation at maximum operational ambient air temperature. Measured in seconds (s) or days (d) or other units of time.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Fan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterFinalResistance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterFinalResistance">
+        <rdfs:label xml:lang="en">final resistance</rdfs:label>
+        <rdfs:comment xml:lang="en"> Filter fluid resistance when replacement is required (i.e., Pressure drop at the maximum air flowrate across the filter when the filter needs replacement per ASHRAE Standard 52.1). Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterFlowRateRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterFlowRateRangeMax">
+        <rdfs:label xml:lang="en">flow rate range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Possible range of fluid flowrate that can be delivered. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterFlowRateRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterFlowRateRangeMin">
+        <rdfs:label xml:lang="en">flow rate range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Possible range of fluid flowrate that can be delivered. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterInitialResistance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterInitialResistance">
+        <rdfs:label xml:lang="en">initial resistance</rdfs:label>
+        <rdfs:comment xml:lang="en"> Initial new filter fluid resistance (i.e., pressure drop at the maximum air flowrate across the filter when the filter is new per ASHRAE Standard 52.1). Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterNominalFilterFaceVelocity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterNominalFilterFaceVelocity">
+        <rdfs:label xml:lang="en">nominal filter face velocity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Filter face velocity. Usually measured in m/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterNominalFlowRate -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterNominalFlowRate">
+        <rdfs:label xml:lang="en">nominal flow rate</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal fluid flow rate through the filter. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterNominalMediaSurfaceVelocity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterNominalMediaSurfaceVelocity">
+        <rdfs:label xml:lang="en">nominal media surface velocity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Average fluid velocity at the media surface. Usually measured in m/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterNominalParticleGeometricMeanDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterNominalParticleGeometricMeanDiameter">
+        <rdfs:label xml:lang="en">nominal particle geometric mean diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> Particle geometric mean diameter associated with nominal efficiency. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterNominalParticleGeometricStandardDeviation -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterNominalParticleGeometricStandardDeviation">
+        <rdfs:label xml:lang="en">nominal particle geometric standard deviation</rdfs:label>
+        <rdfs:comment xml:lang="en"> Particle geometric standard deviation associated with nominal efficiency. </rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterNominalPressureDrop -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterNominalPressureDrop">
+        <rdfs:label xml:lang="en">nominal pressure drop</rdfs:label>
+        <rdfs:comment xml:lang="en"> Total pressure drop across the filter. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterOperationTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterOperationTemperatureRangeMax">
+        <rdfs:label xml:lang="en">operation temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient fluid temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterOperationTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterOperationTemperatureRangeMin">
+        <rdfs:label xml:lang="en">operation temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operation ambient fluid temperature range. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#filterWeight -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;filterWeight">
+        <rdfs:label xml:lang="en">weight</rdfs:label>
+        <rdfs:comment xml:lang="en"> Weight of filter. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Filter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#flowMeterReadOutType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;flowMeterReadOutType">
+        <rdfs:label xml:lang="en">read out type</rdfs:label>
+        <rdfs:comment xml:lang="en">Indication of the form that readout from the meter takes. In the case of a dial read out, this may comprise multiple dials that give a cumulative reading and/or a mechanical odometer.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;FlowMeter"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#flowMeterRemoteReading -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;flowMeterRemoteReading">
+        <rdfs:label xml:lang="en">remote reading</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indicates whether the meter has a connection for remote reading through connection of a communication device (set TRUE) or not (set FALSE).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;FlowMeter"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#heatExchangerArrangement -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;heatExchangerArrangement">
+        <rdfs:label xml:lang="en">arrangement</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines the basic flow arrangements for the heat exchanger: COUNTERFLOW: Counterflow heat exchanger arrangement. CROSSFLOW: Crossflow heat exchanger arrangement. PARALLELFLOW: Parallel flow heat exchanger arrangement. MULTIPASS: Multipass flow heat exchanger arrangement. OTHER: Other type of heat exchanger flow arrangement not defined above.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;HeatExchanger"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#humidifierApplication -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;humidifierApplication">
+        <rdfs:label xml:lang="en">application</rdfs:label>
+        <rdfs:comment xml:lang="en">Humidifier application. Fixed: Humidifier installed in a ducted flow distribution system. Portable: Humidifier is not installed in a ducted flow distribution system.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Humidifier"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#humidifierInternalControl -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;humidifierInternalControl">
+        <rdfs:label xml:lang="en">internal control</rdfs:label>
+        <rdfs:comment xml:lang="en">Internal modulation control.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Humidifier"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#humidifierNominalAirFlowRate -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;humidifierNominalAirFlowRate">
+        <rdfs:label xml:lang="en">nominal air flow rate</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal rate of air flow into which water vapor is added. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Humidifier"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#humidifierNominalMoistureGain -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;humidifierNominalMoistureGain">
+        <rdfs:label xml:lang="en">nominal moisture gain</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal rate of water vapor added into the airstream. Usually measured in kg/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Humidifier"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#humidifierWaterRequirement -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;humidifierWaterRequirement">
+        <rdfs:label xml:lang="en">water requirement</rdfs:label>
+        <rdfs:comment xml:lang="en"> Make-up water requirement. Usually measured in m3/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Humidifier"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#humidifierWeight -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;humidifierWeight">
+        <rdfs:label xml:lang="en">weight</rdfs:label>
+        <rdfs:comment xml:lang="en"> The weight of the humidifier. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Humidifier"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorCoverLength -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorCoverLength">
+        <rdfs:label xml:lang="en">cover length</rdfs:label>
+        <rdfs:comment xml:lang="en"> The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the oil interceptor. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorCoverWidth -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorCoverWidth">
+        <rdfs:label xml:lang="en">cover width</rdfs:label>
+        <rdfs:comment xml:lang="en"> The length measured along the x-axis in the local coordinate system of the cover of the oil interceptor. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorInletConnectionSize -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorInletConnectionSize">
+        <rdfs:label xml:lang="en">inlet connection size</rdfs:label>
+        <rdfs:comment xml:lang="en"> Size of the inlet connection. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorNominalBodyDepth -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorNominalBodyDepth">
+        <rdfs:label xml:lang="en">nominal body depth</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal or quoted =length, measured along the z-axis of the local coordinate system of the object, of the body of the object. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorNominalBodyLength -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorNominalBodyLength">
+        <rdfs:label xml:lang="en">nominal body length</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal or quoted length, measured along the x-axis of the local coordinate system of the object, of the body of the object. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorNominalBodyWidth -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorNominalBodyWidth">
+        <rdfs:label xml:lang="en">nominal body width</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal or quoted length, measured along the y-axis of the local coordinate system of the object, of the body of the object. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorOutletConnectionSize -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorOutletConnectionSize">
+        <rdfs:label xml:lang="en">outlet connection size</rdfs:label>
+        <rdfs:comment xml:lang="en"> Size of the outlet connection. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#interceptorVentilatingPipeSize -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;interceptorVentilatingPipeSize">
+        <rdfs:label xml:lang="en">ventilating pipe size</rdfs:label>
+        <rdfs:comment xml:lang="en"> Size of the ventilating pipe(s). Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Interceptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampColorAppearance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampColorAppearance">
+        <rdfs:label xml:lang="en">color appearance</rdfs:label>
+        <rdfs:comment xml:lang="en"> In both the DIN and CIE standards, artificial light sources are classified in terms of their color appearance. To the human eye they all appear to be white the difference can only be detected by direct comparison. Visual performance is not directly affected by differences in color appearance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampColorRenderingIndex -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampColorRenderingIndex">
+        <rdfs:label xml:lang="en">color rendering index</rdfs:label>
+        <rdfs:comment xml:lang="en"> The CRI indicates how well a light source renders eight standard colors compared to perfect reference lamp with the same color temperature. The CRI scale ranges from 1 to 100, with 100 representing perfect rendering properties.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampColorTempeature -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampColorTempeature">
+        <rdfs:label xml:lang="en">color tempeature</rdfs:label>
+        <rdfs:comment xml:lang="en"> The color temperature of any source of radiation is defined as the temperature (in Kelvin) of a black-body or Planckian radiator whose radiation has the same chromaticity as the source of radiation. Often the values are only approximate color temperatures as the black-body radiator cannot emit radiation of every chromaticity value. The color temperatures of the commonest artificial light sources range from less than 3000K (warm white) to 4000K (intermediate) and over 5000K (daylight). Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampContributedLuminousFlux -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampContributedLuminousFlux">
+        <rdfs:label xml:lang="en">contributed luminous flux</rdfs:label>
+        <rdfs:comment xml:lang="en"> Luminous flux is a photometric measure of radiant flux, i.e. the volume of light emitted from a light source. Luminous flux is measured either for the interior as a whole or for a part of the interior (partial luminous flux for a solid angle). All other photometric parameters are derivatives of luminous flux. Luminous flux is measured in lumens (lm). The luminous flux is given as a nominal value for each lamp. Usually measured in Lumen (lm, Candela Steradian).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampLampBallastType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampLampBallastType">
+        <rdfs:label xml:lang="en">lamp ballast type</rdfs:label>
+        <rdfs:comment xml:lang="en"> The type of ballast used to stabilise gas discharge by limiting the current during operation and to deliver the necessary striking voltage for starting. Ballasts are needed to operate Discharge Lamps such as Fluorescent, Compact Fluorescent, High-pressure Mercury, Metal Halide and High-pressure Sodium Lamps. Magnetic ballasts are chokes which limit the current passing through a lamp connected in series on the principle of self-induction. The resultant current and power are decisive for the efficient operation of the lamp. A specially designed ballast is required for every type of lamp to comply with lamp rating in terms of Luminous Flux, Color Appearance and service life. The two types of magnetic ballasts for fluorescent lamps are KVG Conventional (EC-A series) and VVG Low-loss ballasts (EC-B series). Low-loss ballasts have a higher efficiency, which means reduced ballast losses and a lower thermal load. Electronic ballasts are used to run fluorescent lamps at high frequencies (approx. 35 - 40 kHz).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampLampCompensationType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampLampCompensationType">
+        <rdfs:label xml:lang="en">lamp compensation type</rdfs:label>
+        <rdfs:comment xml:lang="en"> Identifies the form of compensation used for power factor correction and radio suppression.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampLampMaintenanceFactor -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampLampMaintenanceFactor">
+        <rdfs:label xml:lang="en">lamp maintenance factor</rdfs:label>
+        <rdfs:comment xml:lang="en"> Non recoverable losses of luminous flux of a lamp due to lamp depreciation i.e. the decreasing of light output of a luminaire due to aging and dirt.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampLightEmitterNominalPower -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampLightEmitterNominalPower">
+        <rdfs:label xml:lang="en">light emitter nominal power</rdfs:label>
+        <rdfs:comment xml:lang="en"> Light emitter nominal power. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampSpectrumMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampSpectrumMax">
+        <rdfs:label xml:lang="en">spectrum max</rdfs:label>
+        <rdfs:comment xml:lang="en">The spectrum of radiation describes its composition with regard to wavelength. Light, for example, as the portion of electromagnetic radiation that is visible to the human eye, is radiation with wavelengths in the range of approx. 380 to 780 nm (1 nm = 10 m). The corresponding range of colours varies from violet to indigo, blue, green, yellow, orange, and red. These colours form a continuous spectrum, in which the various spectral sectors merge into each other.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#lampSpectrumMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;lampSpectrumMin">
+        <rdfs:label xml:lang="en">spectrum min</rdfs:label>
+        <rdfs:comment xml:lang="en">The spectrum of radiation describes its composition with regard to wavelength. Light, for example, as the portion of electromagnetic radiation that is visible to the human eye, is radiation with wavelengths in the range of approx. 380 to 780 nm (1 nm = 10 m). The corresponding range of colours varies from violet to indigo, blue, green, yellow, orange, and red. These colours form a continuous spectrum, in which the various spectral sectors merge into each other.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Lamp"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#outletIsPluggableOutlet -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;outletIsPluggableOutlet">
+        <rdfs:label xml:lang="en">is pluggable outlet</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indication of whether the outlet accepts a loose plug connection (= TRUE) or whether it is directly connected (= FALSE) or whether the form of connection has not yet been determined (= UNKNOWN).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Outlet"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#outletNumberOsSockets -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;outletNumberOsSockets">
+        <rdfs:label xml:lang="en">number os sockets</rdfs:label>
+        <rdfs:comment xml:lang="en"> The number of sockets that may be connected. In case of inconsistency, sockets defined on ports take precedence.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Outlet"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#protectiveDeviceTrippingUnitLimitingTerminalSize -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;protectiveDeviceTrippingUnitLimitingTerminalSize">
+        <rdfs:label xml:lang="en">limiting terminal size</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum terminal size capacity of the device. Usually measured in square metre (m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ProtectiveDeviceTrippingUnit"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#protectiveDeviceTrippingUnitStandard -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;protectiveDeviceTrippingUnitStandard">
+        <rdfs:label xml:lang="en">standard</rdfs:label>
+        <rdfs:comment xml:lang="en"> the designation of the Standard applicable for the definition of the characteristics of the tripping_unit.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ProtectiveDeviceTrippingUnit"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpConnectionSize -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpConnectionSize">
+        <rdfs:label xml:lang="en">connection size</rdfs:label>
+        <rdfs:comment xml:lang="en"> The connection size of the to and from the pump. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpFlowRateRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpFlowRateRangeMax">
+        <rdfs:label xml:lang="en">flow rate range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable range of volume of fluid being pumped against the resistance specified. Usually measured in kg/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpFlowRateRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpFlowRateRangeMin">
+        <rdfs:label xml:lang="en">flow rate range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable range of volume of fluid being pumped against the resistance specified. Usually measured in kg/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpFlowResistanceRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpFlowResistanceRangeMax">
+        <rdfs:label xml:lang="en">flow resistance range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable range of frictional resistance against which the fluid is being pumped. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpFlowResistanceRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpFlowResistanceRangeMin">
+        <rdfs:label xml:lang="en">flow resistance range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable range of frictional resistance against which the fluid is being pumped. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpNetPositiveSuctionHead -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpNetPositiveSuctionHead">
+        <rdfs:label xml:lang="en">net positive suction head</rdfs:label>
+        <rdfs:comment xml:lang="en"> Minimum liquid pressure at the pump inlet to prevent cavitation. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpNomminalRotationSpeed -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpNomminalRotationSpeed">
+        <rdfs:label xml:lang="en">nomminal rotation speed</rdfs:label>
+        <rdfs:comment xml:lang="en"> Pump rotational speed under nominal conditions. Usually measured in cycles/s.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpTemperatureRangeMax">
+        <rdfs:label xml:lang="en">temperature range max</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operational range of the fluid temperature. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#pumpTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;pumpTemperatureRangeMin">
+        <rdfs:label xml:lang="en">temperature range min</rdfs:label>
+        <rdfs:comment xml:lang="en">Allowable operational range of the fluid temperature. Usually measured in degrees Kelvin (K).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Pump"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceIsExternal -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceIsExternal">
+        <rdfs:label xml:lang="en">is external</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceMechanicalOperated -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceMechanicalOperated">
+        <rdfs:label xml:lang="en">mechanical operated</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indication whether the element is operated machanically (TRUE) or not, i.e. manually (FALSE).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceRoughness -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceRoughness">
+        <rdfs:label xml:lang="en">roughness</rdfs:label>
+        <rdfs:comment xml:lang="en"> A measure of the vertical deviations of the surface.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceShadingDeviceType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceShadingDeviceType">
+        <rdfs:label xml:lang="en">shading device type</rdfs:label>
+        <rdfs:comment xml:lang="en"> Specifies the type of shading device.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceSolarReflectance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceSolarReflectance">
+        <rdfs:label xml:lang="en">solar reflectance</rdfs:label>
+        <rdfs:comment xml:lang="en"> (Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named _e). Note the following equation Asol + Rsol + Tsol = 1</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceSolarTransmittance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceSolarTransmittance">
+        <rdfs:label xml:lang="en">solar transmittance</rdfs:label>
+        <rdfs:comment xml:lang="en"> (Tsol) The ratio of incident solar radiation that directly passes through a shading system (also named _e). Note the following equation Asol + Rsol + Tsol = 1</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceThermalTransmittance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceThermalTransmittance">
+        <rdfs:label xml:lang="en">thermal transmittance</rdfs:label>
+        <rdfs:comment xml:lang="en"> IfcThermalTransmittanceMeasure is a measure of the rate at which energy is transmitted through a body. Usually measured in Watts/m2 Kelvin.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceVisibleLightReflectance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceVisibleLightReflectance">
+        <rdfs:label xml:lang="en">visible light reflectance</rdfs:label>
+        <rdfs:comment xml:lang="en"> Fraction of the visible light that is reflected by the glazing at normal incidence. It is a value without unit.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#shadingDeviceVisibleLightTransmittance -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;shadingDeviceVisibleLightTransmittance">
+        <rdfs:label xml:lang="en">visible light transmittance</rdfs:label>
+        <rdfs:comment xml:lang="en"> Fraction of the visible light that passes the shading system at normal incidence. It is a value without unit.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;ShadingDevice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterBodyMass -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterBodyMass">
+        <rdfs:label xml:lang="en">body mass</rdfs:label>
+        <rdfs:comment xml:lang="en"> Overall body mass of the heater. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterEnergySource -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterEnergySource">
+        <rdfs:label xml:lang="en">energy source</rdfs:label>
+        <rdfs:comment xml:lang="en">Enumeration defining the energy source or fuel combusted to generate heat if applicable. Note: hydronic heaters shall use UNSET, dual-use hydronic/electric heaters shall use ELECTRICITY.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterHeatTransferDimension -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterHeatTransferDimension">
+        <rdfs:label xml:lang="en">heat transfer dimension</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates how heat is transmitted according to the shape of the space heater.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterHeatTransferMedium -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterHeatTransferMedium">
+        <rdfs:label xml:lang="en">heat transfer medium</rdfs:label>
+        <rdfs:comment xml:lang="en">Enumeration defining the heat transfer medium if applicable.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterNumberOfPanels -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterNumberOfPanels">
+        <rdfs:label xml:lang="en">number of panels</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of panels.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterNumberOfSections -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterNumberOfSections">
+        <rdfs:label xml:lang="en">number of sections</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of vertical sections, measured in the direction of flow.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterOutputCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterOutputCapacity">
+        <rdfs:label xml:lang="en">output capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Total nominal heat output as listed by the manufacturer. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterPlacementType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterPlacementType">
+        <rdfs:label xml:lang="en">placement type</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates how the space heater is designed to be placed. </rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterTemperatureClassification -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterTemperatureClassification">
+        <rdfs:label xml:lang="en">temperature classification</rdfs:label>
+        <rdfs:comment xml:lang="en">Enumeration defining the temperature classification of the space heater surface temperature. low temperature - surface temperature is relatively low, usually heated by hot water or electricity. high temperature - surface temperature is relatively high, usually heated by gas or steam.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterThermalEfficiency -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterThermalEfficiency">
+        <rdfs:label xml:lang="en">thermal efficiency</rdfs:label>
+        <rdfs:comment xml:lang="en"> Overall Thermal Efficiency is defined as gross energy output of the heat transfer device divided by the energy input.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#spaceHeaterThermalMassHeatCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;spaceHeaterThermalMassHeatCapacity">
+        <rdfs:label xml:lang="en">thermal mass heat capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Product of component mass and specific heat.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SpaceHeater"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#switchingDeviceHasLock -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;switchingDeviceHasLock">
+        <rdfs:label xml:lang="en">has lock</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indication of whether a switching device has a key operated lock (=TRUE) or not (= FALSE).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SwitchingDevice"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#switchingDeviceIsIlluminated -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;switchingDeviceIsIlluminated">
+        <rdfs:label xml:lang="en">is illuminated</rdfs:label>
+        <rdfs:comment xml:lang="en"> An indication of whether there is an illuminated indicator to show that the switch is on (=TRUE) or not (= FALSE).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SwitchingDevice"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#switchingDeviceLegend -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;switchingDeviceLegend">
+        <rdfs:label xml:lang="en">legend</rdfs:label>
+        <rdfs:comment xml:lang="en"> A text inscribed or applied to the switch as a legend to indicate purpose or function.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SwitchingDevice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#switchingDeviceNumberOfGangs -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;switchingDeviceNumberOfGangs">
+        <rdfs:label xml:lang="en">number of gangs</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of gangs/buttons on this switch.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SwitchingDevice"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#switchingDeviceSetPoint -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;switchingDeviceSetPoint">
+        <rdfs:label xml:lang="en">set point</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indicates the setpoint and label. For toggle switches, there are two positions, 0 for off and 1 for on. For dimmer switches, the values may indicate the fully-off and full-on positions, where missing integer values in between are interpolated. For selector switches, the range indicates the available positions. An IfcTable may be attached (using IfcMetric and IfcPropertyConstraintRelationship) containing columns of the specified header names and types: &apos;Position&apos; (IfcInteger): The discrete setpoint level. &apos;Sink&apos; (IfcLabel): The Name of the switched input port (IfcDistributionPort with FlowDirection=SINK). &apos;Source&apos; (IfcLabel): The Name of the switched output port (IfcDistributionPort with FlowDirection=SOURCE). &apos;Ratio&apos; (IfcNormalizedRatioMeasure): The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SwitchingDevice"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#switchingDeviceSwitchFunction -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;switchingDeviceSwitchFunction">
+        <rdfs:label xml:lang="en">switch function</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates types of switches which differs in functionality.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;SwitchingDevice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankAccessType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankAccessType">
+        <rdfs:label xml:lang="en">access type</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines the types of access (or cover) to a tank that may be specified. Note that covers are generally specified for rectangular tanks. For cylindrical tanks, access will normally be via a manhole.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankEffectiveCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankEffectiveCapacity">
+        <rdfs:label xml:lang="en">effective capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> The total effective or actual volumetric capacity of the tank. Usually measured in cubic metre (m3).B3</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankEndShapeType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankEndShapeType">
+        <rdfs:label xml:lang="en">end shape type</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines the types of end shapes that can be used for preformed tanks. The convention for reading these enumerated values is that for a vertical cylinder, the first value is the base and the second is the top for a horizontal cylinder, the order of reading should be left to right. For a speherical tank, the value UNSET should be used.B5</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankFirstCurvatureRadius -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankFirstCurvatureRadius">
+        <rdfs:label xml:lang="en">first curvature radius</rdfs:label>
+        <rdfs:comment xml:lang="en"> FirstCurvatureRadius should be defined as the base or left side radius of curvature value. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankNominalCapacity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankNominalCapacity">
+        <rdfs:label xml:lang="en">nominal capacity</rdfs:label>
+        <rdfs:comment xml:lang="en"> The total nominal or design volumetric capacity of the tank. Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankNominalDepth -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankNominalDepth">
+        <rdfs:label xml:lang="en">nominal depth</rdfs:label>
+        <rdfs:comment xml:lang="en"> The nominal depth of the tank. Note: Not required for a horizontal cylindrical tank. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankNominalLengthOrDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankNominalLengthOrDiameter">
+        <rdfs:label xml:lang="en">nominal length or diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> The nominal length or, in the case of a vertical cylindrical tank, the nominal diameter of the tank. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankNominalWidthOrDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankNominalWidthOrDiameter">
+        <rdfs:label xml:lang="en">nominal width or diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> The nominal width or, in the case of a horizontal cylindrical tank, the nominal diameter of the tank. Note: Not required for a vertical cylindrical tank. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankNumberOfSections -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankNumberOfSections">
+        <rdfs:label xml:lang="en">number of sections</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of sections used in the construction of the tank. Default is 1. Note: All sections assumed to be the same size.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankOperatingWight -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankOperatingWight">
+        <rdfs:label xml:lang="en">operating wight</rdfs:label>
+        <rdfs:comment xml:lang="en"> Operating weight of the tank including all of its contents. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankPatternType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankPatternType">
+        <rdfs:label xml:lang="en">pattern type</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines the types of pattern (or shape of a tank that may be specified.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankSecondCurvatureRadius -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankSecondCurvatureRadius">
+        <rdfs:label xml:lang="en">second curvature radius</rdfs:label>
+        <rdfs:comment xml:lang="en"> SecondCurvatureRadius should be defined as the top or right side radius of curvature value. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tankStorageType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tankStorageType">
+        <rdfs:label xml:lang="en">storage type</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines the general material category intended to be stored.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Tank"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerImaginaryImpedanceRatio -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerImaginaryImpedanceRatio">
+        <rdfs:label xml:lang="en">imaginary impedance ratio</rdfs:label>
+        <rdfs:comment xml:lang="en"> The ratio between the imaginary part of the zero sequence impedance and the imaginary part of the positive impedance (i.e. imaginary part of the short-circuit voltage) of the transformer. Used for three-phase transformer which includes a N-conductor.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerIsNeutralPrimaryTerminalAvailable -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerIsNeutralPrimaryTerminalAvailable">
+        <rdfs:label xml:lang="en">is neutral primary terminal available</rdfs:label>
+        <rdfs:comment xml:lang="en"> An indication of whether the neutral point of the primary winding is available as a terminal (=TRUE) or not (= FALSE).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerIsNeutralSecondaryTerminalAvailable -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerIsNeutralSecondaryTerminalAvailable">
+        <rdfs:label xml:lang="en">is neutral secondary terminal available</rdfs:label>
+        <rdfs:comment xml:lang="en"> An indication of whether the neutral point of the secondary winding is available as a terminal (=TRUE) or not (= FALSE).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerMaximumApparentPower -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerMaximumApparentPower">
+        <rdfs:label xml:lang="en">maximum apparent power</rdfs:label>
+        <rdfs:comment xml:lang="en"> Maximum apparent power/capacity in VA (volt ampere). Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerPrimaryApparentPower -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerPrimaryApparentPower">
+        <rdfs:label xml:lang="en">primary apparent power</rdfs:label>
+        <rdfs:comment xml:lang="en"> The power in VA (volt ampere) that has been transformed and that runs into the transformer on the primary side. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerPrimaryCurrent -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerPrimaryCurrent">
+        <rdfs:label xml:lang="en">primary current</rdfs:label>
+        <rdfs:comment xml:lang="en"> The current that is going to be transformed and that runs into the transformer on the primary side. Usually measured in Ampere (A).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerPrimaryFrequency -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerPrimaryFrequency">
+        <rdfs:label xml:lang="en">primary frequency</rdfs:label>
+        <rdfs:comment xml:lang="en"> The frequency that is going to be transformed and that runs into the transformer on the primary side. Usually measured in cycles/s or Hertz (Hz).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerPrimaryVoltage -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerPrimaryVoltage">
+        <rdfs:label xml:lang="en">primary voltage</rdfs:label>
+        <rdfs:comment xml:lang="en"> The voltage that is going to be transformed and that runs into the transformer on the primary side. Usually measured in Volts (V, W/A).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerRealImpedanceRatio -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerRealImpedanceRatio">
+        <rdfs:label xml:lang="en">real impedance ratio</rdfs:label>
+        <rdfs:comment xml:lang="en"> The ratio between the real part of the zero sequence impedance and the real part of the positive impedance (i.e. real part of the short-circuit voltage) of the transformer. Used for three-phase transformer which includes a N-conductor.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerSecondaryApparentPower -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerSecondaryApparentPower">
+        <rdfs:label xml:lang="en">secondary apparent power</rdfs:label>
+        <rdfs:comment xml:lang="en"> The power in VA (volt ampere) that has been transformed and is running out of the transformer on the secondary side. Usually measured in Watts (W, J/s).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerSecondaryCurrent -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerSecondaryCurrent">
+        <rdfs:label xml:lang="en">secondary current</rdfs:label>
+        <rdfs:comment xml:lang="en"> The current that has been transformed and is running out of the transformer on the secondary side. Usually measured in Ampere (A).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerSecondaryCurrentType -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerSecondaryCurrentType">
+        <rdfs:label xml:lang="en">secondary current type</rdfs:label>
+        <rdfs:comment xml:lang="en"> A list of the secondary current types that can result from transformer output.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerSecondaryFrequency -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerSecondaryFrequency">
+        <rdfs:label xml:lang="en">secondary frequency</rdfs:label>
+        <rdfs:comment xml:lang="en"> The frequency that has been transformed and is running out of the transformer on the secondary side. Usually measured in cycles/s or Hertz (Hz).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerSecondaryVoltage -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerSecondaryVoltage">
+        <rdfs:label xml:lang="en">secondary voltage</rdfs:label>
+        <rdfs:comment xml:lang="en"> The voltage that has been transformed and is running out of the transformer on the secondary side. Usually measured in Volts (V, W/A).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerShortCircuitVoltageImaginaryPart -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerShortCircuitVoltageImaginaryPart">
+        <rdfs:label xml:lang="en">short circuit voltage imaginary part</rdfs:label>
+        <rdfs:comment xml:lang="en"> A complex number that specifies the real and imaginary parts of the short-circuit voltage at rated current of a transformer given in %.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerShortCircuitVoltageRealPart -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerShortCircuitVoltageRealPart">
+        <rdfs:label xml:lang="en">short circuit voltage real part</rdfs:label>
+        <rdfs:comment xml:lang="en"> A complex number that specifies the real and imaginary parts of the short-circuit voltage at rated current of a transformer given in %.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transformerTransformerVectorGroup -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transformerTransformerVectorGroup">
+        <rdfs:label xml:lang="en">transformer vector group</rdfs:label>
+        <rdfs:comment xml:lang="en">List of the possible vector groups for the transformer from which that required may be set. Values in the enumeration list follow a standard international code where the first letter describes how the primary windings are connected, the second letter describes how the secondary windings are connected, and the numbers describe the rotation of voltages and currents from the primary to the secondary side in multiples of 30 degrees. D: means that the windings are delta-connected. Y: means that the windings are star-connected. Z: means that the windings are zig-zag connected (a special start-connected providing low reactance of the transformer). The connectivity is only relevant for three-phase transformers.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Transformer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transportElementCapacityPeople -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transportElementCapacityPeople">
+        <rdfs:label xml:lang="en">capacity people</rdfs:label>
+        <rdfs:comment xml:lang="en"> capacity of the transportation element measured in numbers of person.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TransportElement"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transportElementCapacityWeight -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transportElementCapacityWeight">
+        <rdfs:label xml:lang="en">capacity weight</rdfs:label>
+        <rdfs:comment xml:lang="en"> Capacity of the transport element measured by weight. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TransportElement"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#transportElementFireExit -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;transportElementFireExit">
+        <rdfs:label xml:lang="en">fire exit</rdfs:label>
+        <rdfs:comment xml:lang="en"> Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE). Here whether the transport element (in case of e.g., a lift) is designed to serve as a fire exit, e.g., for fire escape purposes.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TransportElement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleFoulingFactor -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleFoulingFactor">
+        <rdfs:label xml:lang="en">fouling factor</rdfs:label>
+        <rdfs:comment xml:lang="en"> Fouling factor of the tubes in the tube bundle. Usually measured in m2 Kelvin/Watt.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleHasTurbulator -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleHasTurbulator">
+        <rdfs:label xml:lang="en">has turbulator</rdfs:label>
+        <rdfs:comment xml:lang="en"> TRUE if the tube has a turbulator, FALSE if it does not.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleHorizontalSpacing -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleHorizontalSpacing">
+        <rdfs:label xml:lang="en">horizontal spacing</rdfs:label>
+        <rdfs:comment xml:lang="en"> Horizontal spacing between tubes in the tube bundle. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleInLineRowSpacing -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleInLineRowSpacing">
+        <rdfs:label xml:lang="en">in line row spacing</rdfs:label>
+        <rdfs:comment xml:lang="en"> In-line tube row spacing. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleInsideDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleInsideDiameter">
+        <rdfs:label xml:lang="en">inside diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> Actual inner diameter of the tube in the tube bundle. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleLength -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleLength">
+        <rdfs:label xml:lang="en">length</rdfs:label>
+        <rdfs:comment xml:lang="en"> Length of the tubes in the tube bundle. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleNominalDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleNominalDiameter">
+        <rdfs:label xml:lang="en">nominal diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> Nominal diameter or width of the tubes in the tube bundle. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleNumberOfCircuits -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleNumberOfCircuits">
+        <rdfs:label xml:lang="en">number of circuits</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of parallel fluid tube circuits.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleNumberOfRows -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleNumberOfRows">
+        <rdfs:label xml:lang="en">number of rows</rdfs:label>
+        <rdfs:comment xml:lang="en"> Number of tube rows in the tube bundle assembly.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleOutsideDiameter -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleOutsideDiameter">
+        <rdfs:label xml:lang="en">outside diameter</rdfs:label>
+        <rdfs:comment xml:lang="en"> Actual outside diameter of the tube in the tube bundle. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleStaggeredRowSpacing -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleStaggeredRowSpacing">
+        <rdfs:label xml:lang="en">staggered row spacing</rdfs:label>
+        <rdfs:comment xml:lang="en"> Staggered tube row spacing. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleThermalConductivity -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleThermalConductivity">
+        <rdfs:label xml:lang="en">thermal conductivity</rdfs:label>
+        <rdfs:comment xml:lang="en"> Fouling factor of the tubes in the tube bundle. Usually measured in m2 Kelvin/Watt.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleVerticalSpacing -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleVerticalSpacing">
+        <rdfs:label xml:lang="en">vertical spacing</rdfs:label>
+        <rdfs:comment xml:lang="en"> Vertical spacing between tubes in the tube bundle.Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#tubeBundleVolumen -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;tubeBundleVolumen">
+        <rdfs:label xml:lang="en">volumen</rdfs:label>
+        <rdfs:comment xml:lang="en"> Total volume of fluid in the tubes and their headers. Usually measured in cubic metre (m3).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;TubeBundle"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveCloseOffRating -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveCloseOffRating">
+        <rdfs:label xml:lang="en">close off rating</rdfs:label>
+        <rdfs:comment xml:lang="en"> Close off rating. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveFlowCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveFlowCoefficient">
+        <rdfs:label xml:lang="en">flow coefficient</rdfs:label>
+        <rdfs:comment xml:lang="en"> Flow coefficient (the quantity of fluid that passes through a fully open valve at unit pressure drop), typically expressed as the Kv or Cv value for the valve.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveSize -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveSize">
+        <rdfs:label xml:lang="en">size</rdfs:label>
+        <rdfs:comment xml:lang="en"> The size of the connection to the valve (or to each connection for faucets, mixing valves, etc.). Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveTestPressure -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveTestPressure">
+        <rdfs:label xml:lang="en">test pressure</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum pressure to which the valve has been subjected under test. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveValveMechanism -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveValveMechanism">
+        <rdfs:label xml:lang="en">valve mechanism</rdfs:label>
+        <rdfs:comment xml:lang="en">The mechanism by which the valve function is achieved where: BALL: Valve that has a ported ball that can be turned relative to the body seat ports. BUTTERFLY: Valve in which a streamlined disc pivots about a diametric axis. CONFIGUREDGATE: Screwdown valve in which the closing gate is shaped in a configured manner to have a more precise control of pressure and flow change across the valve. GLAND: Valve with a tapered seating, in which a rotatable plug is retained by means of a gland and gland packing. GLOBE: Screwdown valve that has a spherical body. LUBRICATEDPLUG: Plug valve in which a lubricant is injected under pressure between the plug face and the body. NEEDLE: Valve for regulating the flow in or from a pipe, in which a slender cone moves along the axis of flow to close against a fixed conical seat. PARALLELSLIDE: Screwdown valve that has a machined plate that slides in formed grooves to form a seal. PLUG: Valve that has a ported plug that can be turned relative to the body seat ports. WEDGEGATE: Screwdown valve that has a wedge shaped plate fitting into tapered guides to form a seal.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveValveOperation -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveValveOperation">
+        <rdfs:label xml:lang="en">valve operation</rdfs:label>
+        <rdfs:comment xml:lang="en">The method of valve operation where: DROPWEIGHT: A valve that is closed by the action of a weighted lever being released, the weight normally being prevented from dropping by being held by a wire, the closure normally being made by the action of heat on a fusible link in the wire FLOAT: A valve that is opened and closed by the action of a float that rises and falls with water level. The float may be a ball attached to a lever or other mechanism HYDRAULIC: A valve that is opened and closed by hydraulic actuation LEVER: A valve that is opened and closed by the action of a lever rotating the gate within the valve. LOCKSHIELD: A valve that requires the use of a special lockshield key for opening and closing, the operating mechanism being protected by a shroud during normal operation. MOTORIZED: A valve that is opened and closed by the action of an electric motor on an actuator PNEUMATIC: A valve that is opened and closed by pneumatic actuation SOLENOID: A valve that is normally held open by a magnetic field in a coil acting on the gate but that is closed immediately if the electrical current generating the magnetic field is removed. SPRING: A valve that is normally held in position by the pressure of a spring on a plate but that may be caused to open if the pressure of the fluid is sufficient to overcome the spring pressure. THERMOSTATIC: A valve in which the ports are opened or closed to maintain a required predetermined temperature. WHEEL: A valve that is opened and closed by the action of a wheel moving the gate within the valve.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveValvePattern -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveValvePattern">
+        <rdfs:label xml:lang="en">valve pattern</rdfs:label>
+        <rdfs:comment xml:lang="en">The configuration of the ports of a valve according to either the linear route taken by a fluid flowing through the valve or by the number of ports where: SINGLEPORT: Valve that has a single entry port from the system that it serves, the exit port being to the surrounding environment. ANGLED_2_PORT: Valve in which the direction of flow is changed through 90 degrees. STRAIGHT_2_PORT: Valve in which the flow is straight through. STRAIGHT_3_PORT: Valve with three separate ports. CROSSOVER_4_PORT: Valve with 4 separate ports.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#valveWorkingPressure -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;valveWorkingPressure">
+        <rdfs:label xml:lang="en">working pressure</rdfs:label>
+        <rdfs:comment xml:lang="en"> The normally expected maximum working pressure of the valve. Usually measured in Pascals (Pa, N/m2).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;Valve"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#vibrationIsolatorHeight -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;vibrationIsolatorHeight">
+        <rdfs:label xml:lang="en">height</rdfs:label>
+        <rdfs:comment xml:lang="en"> Height of the vibration isolator before tha application of load. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;VibrationIsolator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#vibrationIsolatorIsolatorCompressibility -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;vibrationIsolatorIsolatorCompressibility">
+        <rdfs:label xml:lang="en">isolator compressibility</rdfs:label>
+        <rdfs:comment xml:lang="en"> The compressibility of the vibration isolator.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;VibrationIsolator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#vibrationIsolatorIsolatorStaticDeflection -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;vibrationIsolatorIsolatorStaticDeflection">
+        <rdfs:label xml:lang="en">isolator static deflection</rdfs:label>
+        <rdfs:comment xml:lang="en"> Static deflection of the vibration isolator. Usually measured in millimeters (mm).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;VibrationIsolator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#vibrationIsolatorMaximumSupportedWeight -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;vibrationIsolatorMaximumSupportedWeight">
+        <rdfs:label xml:lang="en">maximum supported weight</rdfs:label>
+        <rdfs:comment xml:lang="en"> The maximum weight that can be carried by the vibration isolator. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;VibrationIsolator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#vibrationIsolatorVibrationTransmissibility -->
+
+    <owl:DatatypeProperty rdf:about="&bldg;vibrationIsolatorVibrationTransmissibility">
+        <rdfs:label xml:lang="en">vibration transmissibility</rdfs:label>
+        <rdfs:comment xml:lang="en"> the vibration transmissibility percentage.</rdfs:comment>
+        <rdfs:domain rdf:resource="&bldg;VibrationIsolator"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -158,7 +3479,7 @@
     <!-- http://saref.linkeddata.es/def/bldg#Actuator -->
 
     <owl:Class rdf:about="&bldg;Actuator">
-        <rdfs:label xml:lang="en">actuator</rdfs:label>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
         <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
         <rdfs:comment xml:lang="en">An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion.</rdfs:comment>
         <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcActuator</rdfs:seeAlso>
@@ -180,7 +3501,7 @@
     <!-- http://saref.linkeddata.es/def/bldg#Alarm -->
 
     <owl:Class rdf:about="&bldg;Alarm">
-        <rdfs:label xml:lang="en">alarm</rdfs:label>
+        <rdfs:label xml:lang="en">Alarm</rdfs:label>
         <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
         <rdfs:comment xml:lang="en">An alarm is a device that signals the existence of a condition or situation that is outside the boundaries of normal expectation or that activates such a device.
 
@@ -190,24 +3511,15 @@ Alarms include the provision of break glass buttons and manual pull boxes that a
     
 
 
-    <!-- http://saref.linkeddata.es/def/bldg#AudioVisualApplicance -->
+    <!-- http://saref.linkeddata.es/def/bldg#AudioVisualAppliance -->
 
-    <owl:Class rdf:about="&bldg;AudioVisualApplicance">
-        <rdfs:label xml:lang="en">audio visual applicance</rdfs:label>
+    <owl:Class rdf:about="&bldg;AudioVisualAppliance">
+        <rdfs:label xml:lang="en">audio visual appliance</rdfs:label>
         <rdfs:subClassOf rdf:resource="&bldg;FlowTerminal"/>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAudioVisualApplicance</rdfs:seeAlso>
         <rdfs:comment xml:lang="en">An audio-visual appliance is a device that displays, captures, transmits, or receives audio or video.
 
 Audio-visual appliances may be fixed in place or may be able to be moved from one space to another. They may require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source. Audio-visual appliances may be connected to data circuits including specialist circuits for audio visual purposes only.</rdfs:comment>
-        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAudioVisualApplicance</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#Awning -->
-
-    <owl:Class rdf:about="&bldg;Awning">
-        <rdfs:label xml:lang="en">Awning</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&bldg;ShadingDevice"/>
     </owl:Class>
     
 
@@ -229,6 +3541,12 @@ IfcBoiler is a vessel solely used for heating of water or other fluids. Storage 
 
     <owl:Class rdf:about="&bldg;Building">
         <rdfs:label xml:lang="en">Building</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bldg;isComposedBy"/>
+                <owl:allValuesFrom rdf:resource="&bldg;BuildingSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -236,8 +3554,17 @@ IfcBoiler is a vessel solely used for heating of water or other fluids. Storage 
     <!-- http://saref.linkeddata.es/def/bldg#BuildingDevice -->
 
     <owl:Class rdf:about="&bldg;BuildingDevice">
-        <rdfs:label xml:lang="en">BuildingDevice</rdfs:label>
+        <rdfs:label xml:lang="en">Building device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;BuildingObject"/>
         <rdfs:subClassOf rdf:resource="&bldg;Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://saref.linkeddata.es/def/bldg#BuildingObject -->
+
+    <owl:Class rdf:about="&bldg;BuildingObject">
+        <rdfs:label xml:lang="en">BuildingObject</rdfs:label>
     </owl:Class>
     
 
@@ -246,6 +3573,12 @@ IfcBoiler is a vessel solely used for heating of water or other fluids. Storage 
 
     <owl:Class rdf:about="&bldg;BuildingSpace">
         <rdfs:label xml:lang="en">BuildingSpace</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bldg;isComponentOf"/>
+                <owl:allValuesFrom rdf:resource="&bldg;Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -370,6 +3703,7 @@ A controller may be physical (having placement within a spatial structure) or lo
 
     <owl:Class rdf:about="&bldg;Device">
         <rdfs:label xml:lang="en">Device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
     </owl:Class>
     
 
@@ -662,16 +3996,6 @@ IfcHeatExchanger is commonly used on water-side distribution systems to recover 
     
 
 
-    <!-- http://saref.linkeddata.es/def/bldg#Jalousie -->
-
-    <owl:Class rdf:about="&bldg;Jalousie">
-        <rdfs:label xml:lang="en">Jalousie</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&bldg;ShadingDevice"/>
-        <rdfs:comment xml:lang="en">A blind with adjustable horizontal slats for admitting light and air while excluding direct sun and rain.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://saref.linkeddata.es/def/bldg#Lamp -->
 
     <owl:Class rdf:about="&bldg;Lamp">
@@ -720,6 +4044,17 @@ A protective device provides protection against electrical current only (not as 
     
 
 
+    <!-- http://saref.linkeddata.es/def/bldg#ProtectiveDeviceTrippingUnit -->
+
+    <owl:Class rdf:about="&bldg;ProtectiveDeviceTrippingUnit">
+        <rdfs:label xml:lang="en">Protective device tripping unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:comment xml:lang="en">A protective device tripping unit breaks an electrical circuit at a separate breaking unit when a stated electric current that passes through the unit is exceeded.</rdfs:comment>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDeviceTrippingUnit</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://saref.linkeddata.es/def/bldg#Pump -->
 
     <owl:Class rdf:about="&bldg;Pump">
@@ -747,6 +4082,7 @@ A protective device provides protection against electrical current only (not as 
     <owl:Class rdf:about="&bldg;Sensor">
         <rdfs:label xml:lang="en">sensor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&bldg;DistributionControlDevice"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
         <rdfs:comment xml:lang="en">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</rdfs:comment>
         <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSensor</rdfs:seeAlso>
     </owl:Class>
@@ -760,15 +4096,6 @@ A protective device provides protection against electrical current only (not as 
         <rdfs:subClassOf rdf:resource="&bldg;BuildingDevice"/>
         <rdfs:comment xml:lang="en">Shading devices are purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable.</rdfs:comment>
         <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcShadingDevice</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#Shutter -->
-
-    <owl:Class rdf:about="&bldg;Shutter">
-        <rdfs:label xml:lang="en">Shutter</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&bldg;ShadingDevice"/>
     </owl:Class>
     
 
@@ -891,156 +4218,21 @@ A unitary control element provides a housing for an aggregation of control or el
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
+    <owl:Class rdf:about="&rdfs;Resource"/>
     
 
 
-    <!-- http://saref.linkeddata.es/def/bldg#fluorescence -->
+    <!-- https://w3id.org/saref#Device -->
 
-    <owl:NamedIndividual rdf:about="&bldg;fluorescence">
-        <rdfs:label xml:lang="en">fluorescence</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:Class rdf:about="https://w3id.org/saref#Device"/>
     
 
 
-    <!-- http://saref.linkeddata.es/def/bldg#illuminance -->
+    <!-- https://w3id.org/saref#Sensor -->
 
-    <owl:NamedIndividual rdf:about="&bldg;illuminance">
-        <rdfs:label xml:lang="en">illuminance</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#irradiance -->
-
-    <owl:NamedIndividual rdf:about="&bldg;irradiance">
-        <rdfs:label xml:lang="en">irradiance</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#lightAbsorption -->
-
-    <owl:NamedIndividual rdf:about="&bldg;lightAbsorption">
-        <rdfs:label xml:lang="en">lightAbsorption</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#luminiscence -->
-
-    <owl:NamedIndividual rdf:about="&bldg;luminiscence">
-        <rdfs:label xml:lang="en">luminiscence</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#phosphorescence -->
-
-    <owl:NamedIndividual rdf:about="&bldg;phosphorescence">
-        <rdfs:label xml:lang="en">phosphorescence</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#reflectionOfLight -->
-
-    <owl:NamedIndividual rdf:about="&bldg;reflectionOfLight">
-        <rdfs:label xml:lang="en">reflectionOfLight</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://saref.linkeddata.es/def/bldg#scatteringOfLight -->
-
-    <owl:NamedIndividual rdf:about="&bldg;scatteringOfLight">
-        <rdfs:label xml:lang="en">scatteringOfLight</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/centimetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/centimetre"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/decametre -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/decametre"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/decimetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/decimetre"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/hectometre -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hectometre"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/hertz -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hertz"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/kilometre -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/kilometre"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/metre -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/millimetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/millimetre"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time"/>
-    
-
-
-    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year -->
-
-    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year"/>
+    <owl:Class rdf:about="https://w3id.org/saref#Sensor"/>
 </rdf:RDF>
 
 
