@@ -1,30 +1,25 @@
 @prefix : <http://saref.linkeddata.es/def/bldg#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix org: <http://www.smartdeveloperhub.org/vocabulary/organization#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bldg: <http://saref.linkeddata.es/def/bldg#> .
-@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rddl: <http://www.rddl.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix oslc_asset: <http://open-services.net/ns/asset#> .
 @base <http://saref.linkeddata.es/def/bldg> .
 
 <http://saref.linkeddata.es/def/bldg> rdf:type owl:Ontology ;
                                        owl:versionIRI <http://saref.linkeddata.es/def/v1/bldg> ;
+                                       owl:versionInfo "1.0" ;
                                        dcterms:creator <http://purl.org/net/mpoveda> ,
                                                        <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        vann:preferredNamespacePrefix "saref4bldg" ;
                                        dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        dc:title "SAREF extension for building devices"@en ;
-                                       vann:preferredNamespaceUri "http://saref.linkeddata.es/def/bldg" ;
-                                       rdfs:comment "This ontology extends the SAREF ontology for the building devices domain. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries."@en ;
+                                       vann:preferredNamespaceUri "http://saref.linkeddata.es/def/bldg#" ;
+                                       rdfs:comment "This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) standard for data sharing in the construction and facility management industries."@en ;
                                        dc:publisher <http://www.oeg-upm.net/> .
 
 #################################################################
