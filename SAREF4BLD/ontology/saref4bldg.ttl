@@ -60,14 +60,34 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://saref.linkeddata.es/def/bldg#isComponentOf
-bldg:isComponentOf rdf:type owl:ObjectProperty ;
-                   rdfs:label "isComponentOf"@en .
+###  http://saref.linkeddata.es/def/bldg#contains
+bldg:contains rdf:type owl:ObjectProperty ;
+              owl:inverseOf bldg:isContainedIn ;
+              rdf:type owl:TransitiveProperty ;
+              rdfs:label "contains"@en .
 
 
-###  http://saref.linkeddata.es/def/bldg#isComposedBy
-bldg:isComposedBy rdf:type owl:ObjectProperty ;
-                  rdfs:label "isComposedBy"@en .
+###  http://saref.linkeddata.es/def/bldg#hasSpace
+bldg:hasSpace rdf:type owl:ObjectProperty ;
+              owl:inverseOf bldg:isSpaceOf ;
+              rdf:type owl:TransitiveProperty ;
+              rdfs:label "isComposedBy"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#isContainedIn
+bldg:isContainedIn rdf:type owl:ObjectProperty ,
+                            owl:TransitiveProperty ;
+                   rdfs:label "is contained in"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#isSpaceOf
+bldg:isSpaceOf rdf:type owl:ObjectProperty ,
+                        owl:TransitiveProperty ;
+               rdfs:label "isComponentOf"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -2480,7 +2500,8 @@ bldg:vibrationIsolatorVibrationTransmissibility rdf:type owl:DatatypeProperty ;
 
 ###  http://saref.linkeddata.es/def/bldg#Actuator
 bldg:Actuator rdf:type owl:Class ;
-              rdfs:subClassOf bldg:DistributionControlDevice ;
+              rdfs:subClassOf bldg:DistributionControlDevice ,
+                              saref:Actuator ;
               rdfs:comment "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en ;
               rdfs:label "Actuator"@en ;
               rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcActuator" .
@@ -2526,9 +2547,14 @@ IfcBoiler is a vessel solely used for heating of water or other fluids. Storage 
 
 ###  http://saref.linkeddata.es/def/bldg#Building
 bldg:Building rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty bldg:isComposedBy ;
+              rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty bldg:hasSpace ;
                                 owl:allValuesFrom bldg:BuildingSpace
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
+                                owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
                               ] ;
               rdfs:label "Building"@en .
 
@@ -2536,20 +2562,34 @@ bldg:Building rdf:type owl:Class ;
 ###  http://saref.linkeddata.es/def/bldg#BuildingDevice
 bldg:BuildingDevice rdf:type owl:Class ;
                     rdfs:subClassOf bldg:BuildingObject ,
-                                    bldg:Device ;
+                                    saref:Device ;
                     rdfs:label "Building device"@en .
 
 
 ###  http://saref.linkeddata.es/def/bldg#BuildingObject
 bldg:BuildingObject rdf:type owl:Class ;
+                    rdfs:subClassOf bldg:PhysicalObject ;
                     rdfs:label "BuildingObject"@en .
 
 
 ###  http://saref.linkeddata.es/def/bldg#BuildingSpace
 bldg:BuildingSpace rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty bldg:isComponentOf ;
-                                     owl:allValuesFrom bldg:Building
+                   rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty bldg:contains ;
+                                     owl:allValuesFrom bldg:PhysicalObject
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty bldg:hasSpace ;
+                                     owl:allValuesFrom bldg:BuildingSpace
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty bldg:isSpaceOf ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( bldg:Building
+                                                                       bldg:BuildingSpace
+                                                                     )
+                                                       ]
                                    ] ;
                    rdfs:label "BuildingSpace"@en .
 
@@ -2638,12 +2678,6 @@ bldg:Damper rdf:type owl:Class ;
             rdfs:comment "A damper typically participates in an HVAC duct distribution system and is used to control or modulate the flow of air."@en ;
             rdfs:label "Damper"@en ;
             rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcDamper" .
-
-
-###  http://saref.linkeddata.es/def/bldg#Device
-bldg:Device rdf:type owl:Class ;
-            rdfs:subClassOf saref:Device ;
-            rdfs:label "Device"@en .
 
 
 ###  http://saref.linkeddata.es/def/bldg#DistributionControlDevice
@@ -2882,6 +2916,28 @@ Power outlets are commonly connected within a junction box; data outlets may be 
             rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcOutlet" .
 
 
+###  http://saref.linkeddata.es/def/bldg#PhysicalObject
+bldg:PhysicalObject rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty bldg:contains ;
+                                      owl:allValuesFrom bldg:PhysicalObject
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty bldg:isContainedIn ;
+                                      owl:allValuesFrom [ rdf:type owl:Class ;
+                                                          owl:unionOf ( bldg:BuildingSpace
+                                                                        bldg:PhysicalObject
+                                                                      )
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
+                                      owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
+                                    ] ;
+                    rdfs:label "Physical object"@en .
+
+
 ###  http://saref.linkeddata.es/def/bldg#ProtectiveDevice
 bldg:ProtectiveDevice rdf:type owl:Class ;
                       rdfs:subClassOf bldg:FlowController ;
@@ -2981,7 +3037,7 @@ IfcTransformer is used to transform electric power; conversion of electric signa
 
 ###  http://saref.linkeddata.es/def/bldg#TransportElement
 bldg:TransportElement rdf:type owl:Class ;
-                      rdfs:subClassOf bldg:Device ;
+                      rdfs:subClassOf saref:Device ;
                       rdfs:comment "A transport element is a generalization of all transport related objects that move people, animals or goods within a building or building complex. The IfcTransportElement defines the occurrence of a transport element, that (if given), is expressed by the IfcTransportElementType. "@en ;
                       rdfs:label "Transport element"@en ;
                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTransportElement" .
@@ -3015,14 +3071,23 @@ bldg:Valve rdf:type owl:Class ;
 
 ###  http://saref.linkeddata.es/def/bldg#VibrationIsolator
 bldg:VibrationIsolator rdf:type owl:Class ;
-                       rdfs:subClassOf bldg:Device ;
+                       rdfs:subClassOf saref:Device ;
                        rdfs:comment "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a building."@en ;
                        rdfs:label "Vibration isolator"@en ;
                        rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcVibrationIsolator" .
 
 
+###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Actuator
+saref:Actuator rdf:type owl:Class .
+
+
 ###  https://w3id.org/saref#Device
-saref:Device rdf:type owl:Class .
+saref:Device rdf:type owl:Class ;
+             rdfs:subClassOf bldg:PhysicalObject .
 
 
 ###  https://w3id.org/saref#Sensor
