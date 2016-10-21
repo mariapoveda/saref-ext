@@ -64,7 +64,9 @@
           
           rdfs:label "contains"@en ;
           
-          rdfs:comment ""@en .
+          rdfs:comment ""@en ;
+          
+          owl:inverseOf :isContainedIn .
 
 
 
@@ -185,6 +187,14 @@
                rdfs:label "is connected to"@en ;
                
                rdfs:comment ""@en .
+
+
+
+###  http://saref.linkeddata.es/def/envi#isContainedIn
+
+:isContainedIn rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "isContainedIn"@en .
 
 
 
@@ -511,16 +521,7 @@ saref:hasValue rdf:type owl:DatatypeProperty .
         rdfs:subClassOf :System ,
                         saref:Device ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasVersion ;
-                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onDataRange xsd:string
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasVersion ;
-                          owl:allValuesFrom xsd:string
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasRevisionNumber ;
+                          owl:onProperty saref:hasManufacturer ;
                           owl:allValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
@@ -533,12 +534,25 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                           owl:allValuesFrom :PeriodMeasurement
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty saref:hasManufacturer ;
+                          owl:onProperty :hasMeasurementFrequency ;
+                          owl:allValuesFrom :FrequencyMeasurement
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRevisionNumber ;
                           owl:allValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasMeasurementFrequency ;
-                          owl:allValuesFrom :FrequencyMeasurement
+                          owl:onProperty :isContainedIn ;
+                          owl:allValuesFrom :PhysicalObject
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasVersion ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasVersion ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
                         ] ;
         
         rdfs:comment ""@en .
@@ -552,13 +566,8 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                        rdfs:label "Digital representation"@en ;
                        
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasIdentifier ;
-                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty saref:hasDescription ;
-                                         owl:allValuesFrom xsd:string
+                                         owl:onProperty :isAccesibleThrough ;
+                                         owl:allValuesFrom saref:Service
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :hasCreationDate ;
@@ -566,19 +575,16 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                          owl:onDataRange xsd:dateTime
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :encapsulates ;
-                                         owl:allValuesFrom :PhysicalObject
+                                         owl:onProperty :hasIdentifier ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :isAccesibleThrough ;
-                                         owl:allValuesFrom saref:Service
+                                         owl:onProperty :hasTag ;
+                                         owl:allValuesFrom xsd:string
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasCreationDate ;
-                                         owl:allValuesFrom xsd:dateTime
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty saref:hasName ;
+                                         owl:onProperty saref:hasDescription ;
                                          owl:allValuesFrom xsd:string
                                        ] ,
                                        [ rdf:type owl:Restriction ;
@@ -586,7 +592,15 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                          owl:allValuesFrom xsd:string
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasTag ;
+                                         owl:onProperty :encapsulates ;
+                                         owl:allValuesFrom :PhysicalObject
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasCreationDate ;
+                                         owl:allValuesFrom xsd:dateTime
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty saref:hasName ;
                                          owl:allValuesFrom xsd:string
                                        ] ;
                        
@@ -670,12 +684,12 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                             owl:allValuesFrom :LightPoint
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasShield ;
-                            owl:allValuesFrom xsd:boolean
-                          ] ,
-                          [ rdf:type owl:Restriction ;
                             owl:onProperty :projectsLight ;
                             owl:allValuesFrom :Light
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasShield ;
+                            owl:allValuesFrom xsd:boolean
                           ] ;
           
           rdfs:comment ""@en .
@@ -701,6 +715,10 @@ saref:hasValue rdf:type owl:DatatypeProperty .
        rdfs:label "Light"@en ;
        
        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :isProjectedFromHeight ;
+                         owl:allValuesFrom :HeightMeasurement
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :hasFlash ;
                          owl:allValuesFrom xsd:boolean
                        ] ,
@@ -709,8 +727,8 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                          owl:allValuesFrom :CompassDirection
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :isProjectedFromHeight ;
-                         owl:allValuesFrom :HeightMeasurement
+                         owl:onProperty :hasColor ;
+                         owl:allValuesFrom :Color
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasGeometry ;
@@ -719,10 +737,6 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasProjectionAngle ;
                          owl:allValuesFrom xsd:float
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasColor ;
-                         owl:allValuesFrom :Color
                        ] ;
        
        rdfs:comment ""@en .
@@ -737,12 +751,12 @@ saref:hasValue rdf:type owl:DatatypeProperty .
             
             rdfs:subClassOf geo:Point ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :projectsLight ;
-                              owl:allValuesFrom :Light
-                            ] ,
-                            [ rdf:type owl:Restriction ;
                               owl:onProperty geo:location ;
                               owl:allValuesFrom geo:SpatialThing
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :projectsLight ;
+                              owl:allValuesFrom :Light
                             ] ;
             
             rdfs:comment ""@en .
@@ -769,16 +783,15 @@ saref:hasValue rdf:type owl:DatatypeProperty .
              
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty saref:isMeasuredIn ;
-                               owl:onClass saref:UnitOfMeasure ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                               owl:allValuesFrom saref:UnitOfMeasure
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty saref:hasValue ;
                                owl:allValuesFrom xsd:float
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :relatesToProperty ;
-                               owl:onClass :Property ;
+                               owl:onProperty saref:isMeasuredIn ;
+                               owl:onClass saref:UnitOfMeasure ;
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
@@ -791,12 +804,13 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                owl:onDataRange xsd:float
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:isMeasuredIn ;
-                               owl:allValuesFrom saref:UnitOfMeasure
+                               owl:onProperty :relatesToProperty ;
+                               owl:allValuesFrom :Property
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :relatesToProperty ;
-                               owl:allValuesFrom :Property
+                               owl:onClass :Property ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                              ] ;
              
              rdfs:comment ""@en .
@@ -852,16 +866,16 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                   owl:allValuesFrom xsd:string
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty :contains ;
-                                  owl:allValuesFrom :Device
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty geo:location ;
                                   owl:allValuesFrom geo:SpatialThing
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasDigitalRepresentation ;
                                   owl:allValuesFrom :DigitalRepresentation
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :contains ;
+                                  owl:allValuesFrom :Device
                                 ] ;
                 
                 rdfs:comment ""@en .
@@ -887,12 +901,12 @@ saref:hasValue rdf:type owl:DatatypeProperty .
         rdfs:subClassOf :Device ,
                         saref:Sensor ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :makesMeasurement ;
-                          owl:allValuesFrom :Measurement
-                        ] ,
-                        [ rdf:type owl:Restriction ;
                           owl:onProperty :measuresProperty ;
                           owl:allValuesFrom :Property
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :makesMeasurement ;
+                          owl:allValuesFrom :Measurement
                         ] ;
         
         rdfs:comment ""@en .
@@ -911,20 +925,20 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                           owl:allValuesFrom :System
                         ] ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty :isConnectedTo ;
+                          owl:allValuesFrom :System
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :usesCommunicationProtocol ;
                           owl:allValuesFrom :CommunicationProtocol
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :isConnectedTo ;
+                          owl:onProperty :hasComponent ;
                           owl:allValuesFrom :System
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :usesCommunicationInterface ;
                           owl:allValuesFrom :CommunicationInterface
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasComponent ;
-                          owl:allValuesFrom :System
                         ] ;
         
         rdfs:comment ""@en .
