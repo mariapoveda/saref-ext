@@ -2,24 +2,26 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix bldg: <http://saref.linkeddata.es/def/bldg#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://w3id.org/saref#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://saref.linkeddata.es/def/bldg> .
 
 <http://saref.linkeddata.es/def/bldg> rdf:type owl:Ontology ;
                                        owl:versionIRI <http://saref.linkeddata.es/def/v1/bldg> ;
-                                       owl:versionInfo "1.0" ;
-                                       dcterms:creator <http://purl.org/net/mpoveda> ,
-                                                       <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                       dcterms:creator <http://purl.org/net/mpoveda> ;
+                                       rdfs:comment "This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) standard for data sharing in the construction and facility management industries."@en ;
+                                       vann:preferredNamespaceUri "http://saref.linkeddata.es/def/bldg#" ;
+                                       dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        vann:preferredNamespacePrefix "saref4bldg" ;
                                        dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                       owl:versionInfo "1.0" ;
                                        dc:title "SAREF extension for building devices"@en ;
-                                       vann:preferredNamespaceUri "http://saref.linkeddata.es/def/bldg#" ;
-                                       rdfs:comment "This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) standard for data sharing in the construction and facility management industries."@en ;
                                        dc:publisher <http://www.oeg-upm.net/> .
 
 #################################################################
@@ -66,14 +68,6 @@ bldg:isComponentOf rdf:type owl:ObjectProperty ;
 ###  http://saref.linkeddata.es/def/bldg#isComposedBy
 bldg:isComposedBy rdf:type owl:ObjectProperty ;
                   rdfs:label "isComposedBy"@en .
-
-
-###  http://saref.linkeddata.es/def/bldg#switchingDeviceSetPoint
-bldg:switchingDeviceSetPoint rdf:type owl:ObjectProperty ;
-                             rdfs:domain bldg:SwitchingDevice ;
-                             rdfs:range rdfs:Resource ;
-                             rdfs:comment " Indicates the setpoint and label. For toggle switches, there are two positions, 0 for off and 1 for on. For dimmer switches, the values may indicate the fully-off and full-on positions, where missing integer values in between are interpolated. For selector switches, the range indicates the available positions. An IfcTable may be attached (using IfcMetric and IfcPropertyConstraintRelationship) containing columns of the specified header names and types: 'Position' (IfcInteger): The discrete setpoint level. 'Sink' (IfcLabel): The Name of the switched input port (IfcDistributionPort with FlowDirection=SINK). 'Source' (IfcLabel): The Name of the switched output port (IfcDistributionPort with FlowDirection=SOURCE). 'Ratio' (IfcNormalizedRatioMeasure): The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on."@en ;
-                             rdfs:label "set point"@en .
 
 
 #################################################################
@@ -2648,7 +2642,7 @@ bldg:Damper rdf:type owl:Class ;
 
 ###  http://saref.linkeddata.es/def/bldg#Device
 bldg:Device rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/saref#Device> ;
+            rdfs:subClassOf saref:Device ;
             rdfs:label "Device"@en .
 
 
@@ -2925,7 +2919,7 @@ bldg:SanitaryTerminal rdf:type owl:Class ;
 ###  http://saref.linkeddata.es/def/bldg#Sensor
 bldg:Sensor rdf:type owl:Class ;
             rdfs:subClassOf bldg:DistributionControlDevice ,
-                            <https://w3id.org/saref#Sensor> ;
+                            saref:Sensor ;
             rdfs:comment "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en ;
             rdfs:label "sensor"@en ;
             rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSensor" .
@@ -3027,16 +3021,12 @@ bldg:VibrationIsolator rdf:type owl:Class ;
                        rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcVibrationIsolator" .
 
 
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
-
-
 ###  https://w3id.org/saref#Device
-<https://w3id.org/saref#Device> rdf:type owl:Class .
+saref:Device rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Sensor
-<https://w3id.org/saref#Sensor> rdf:type owl:Class .
+saref:Sensor rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
