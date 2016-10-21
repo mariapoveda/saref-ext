@@ -16,1214 +16,918 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://saref.linkeddata.es/def/envi> .
 
-<http://saref.linkeddata.es/def/envi> rdf:type owl:Ontology ;
-                                      
-                                      vann:preferredNamespacePrefix "saref4envi" ;
-                                      
-                                      dc:title "SAREF extension for environment"@en ;
-                                      
-                                      rdfs:comment "This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, light, etc."@en ;
-                                      
-                                      vann:preferredNamespaceUri "http://saref.linkeddata.es/def/envi#" ;
-                                      
-                                      owl:versionInfo "1.0" ;
-                                      
-                                      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                      
-                                      dcterms:creator <http://purl.org/net/mpoveda> ;
-                                      
-                                      owl:versionIRI <http://saref.linkeddata.es/def/v1/envi> ;
-                                      
-                                      dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                      
-                                      dc:publisher <http://www.oeg-upm.net/> .
-
-
-#################################################################
-#
-#    Object Properties
-#
-#################################################################
-
-
-###  http://saref.linkeddata.es/def/envi#affectsProperty
-
-:affectsProperty rdf:type owl:ObjectProperty ;
-                 
-                 rdfs:label "affects property"@en ;
-                 
-                 rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#contains
-
-:contains rdf:type owl:ObjectProperty ;
-          
-          rdfs:label "contains"@en ;
-          
-          rdfs:comment ""@en ;
-          
-          owl:inverseOf :isContainedIn .
-
-
-
-###  http://saref.linkeddata.es/def/envi#encapsulates
-
-:encapsulates rdf:type owl:FunctionalProperty ,
-                       owl:ObjectProperty ;
-              
-              rdfs:label "encapsulates"@en ;
-              
-              rdfs:comment ""@en ;
-              
-              owl:inverseOf :hasDigitalRepresentation .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasColor
-
-:hasColor rdf:type owl:ObjectProperty ;
-          
-          rdfs:label "has color"@en ;
-          
-          rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasComponent
-
-:hasComponent rdf:type owl:ObjectProperty ,
-                       owl:TransitiveProperty ;
-              
-              rdfs:label "has component"@en ;
-              
-              rdfs:comment ""@en ;
-              
-              owl:inverseOf :isComponentOf .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasDigitalRepresentation
-
-:hasDigitalRepresentation rdf:type owl:InverseFunctionalProperty ,
-                                   owl:ObjectProperty ;
-                          
-                          rdfs:label "has digital representation"@en ;
-                          
-                          rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasGeometry
-
-:hasGeometry rdf:type owl:ObjectProperty ;
-             
-             rdfs:label "has geometry"@en ;
-             
-             rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasLightPoint
-
-:hasLightPoint rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "has light point"@en ;
-               
-               rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasMeasurementFrequency
-
-:hasMeasurementFrequency rdf:type owl:ObjectProperty ;
-                         
-                         rdfs:label "has measurement frequency"@en ;
-                         
-                         rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasTransmissionPeriod
-
-:hasTransmissionPeriod rdf:type owl:ObjectProperty ;
-                       
-                       rdfs:label "has transmission period"@en ;
-                       
-                       rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#isAccesibleThrough
-
-:isAccesibleThrough rdf:type owl:FunctionalProperty ,
-                             owl:ObjectProperty ;
-                    
-                    rdfs:label "is accesible through"@en ;
-                    
-                    rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#isComponentOf
-
-:isComponentOf rdf:type owl:ObjectProperty ,
-                        owl:TransitiveProperty ;
-               
-               rdfs:label "is component of"@en ;
-               
-               rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#isConnectedTo
-
-:isConnectedTo rdf:type owl:ObjectProperty ,
-                        owl:SymmetricProperty ;
-               
-               rdfs:label "is connected to"@en ;
-               
-               rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#isContainedIn
-
-:isContainedIn rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "isContainedIn"@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#isProjectedFromHeight
-
-:isProjectedFromHeight rdf:type owl:ObjectProperty ;
-                       
-                       rdfs:label "is projected from height"@en ;
-                       
-                       rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#isProjectedInDirection
-
-:isProjectedInDirection rdf:type owl:ObjectProperty ;
-                        
-                        rdfs:label "is projected in direction"@en ;
-                        
-                        rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#makesMeasurement
-
-:makesMeasurement rdf:type owl:ObjectProperty ;
-                  
-                  rdfs:label "makes measurement"@en ;
-                  
-                  rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#measuresProperty
-
-:measuresProperty rdf:type owl:ObjectProperty ;
-                  
-                  rdfs:label "measures property"@en ;
-                  
-                  rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#projectsLight
-
-:projectsLight rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "projects light"@en ;
-               
-               rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#relatesToProperty
-
-:relatesToProperty rdf:type owl:ObjectProperty ;
-                   
-                   rdfs:label "relates to property"@en ;
-                   
-                   rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#usesCommunicationInterface
-
-:usesCommunicationInterface rdf:type owl:ObjectProperty ;
-                            
-                            rdfs:label "uses communication interface"@en ;
-                            
-                            rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#usesCommunicationProtocol
-
-:usesCommunicationProtocol rdf:type owl:ObjectProperty ;
-                           
-                           rdfs:label "uses communication protocol"@en ;
-                           
-                           rdfs:comment ""@en .
-
-
-
-###  http://www.w3.org/2003/01/geo/wgs84_pos#location
-
-geo:location rdf:type owl:ObjectProperty .
-
-
-
-###  https://w3id.org/saref#isMeasuredIn
-
-saref:isMeasuredIn rdf:type owl:ObjectProperty .
-
-
-
-
-
-#################################################################
-#
-#    Data properties
-#
-#################################################################
-
-
-###  http://saref.linkeddata.es/def/envi#hasCreationDate
-
-:hasCreationDate rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 
-                 rdfs:label "has creation date"@en ;
-                 
-                 rdfs:comment ""@en ;
-                 
-                 rdfs:range xsd:dateTime .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasFlash
-
-:hasFlash rdf:type owl:DatatypeProperty ,
-                   owl:FunctionalProperty ;
-          
-          rdfs:label "has flash"@en ;
-          
-          rdfs:comment ""@en ;
-          
-          rdfs:range xsd:boolean .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasIdentifier
-
-:hasIdentifier rdf:type owl:DatatypeProperty ;
-               
-               rdfs:label "has identifier"@en ;
-               
-               rdfs:comment "A relationship providing the identifier of an entity (e.g., digital representation)"@en ;
-               
-               rdfs:range xsd:string .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasProjectionAngle
-
-:hasProjectionAngle rdf:type owl:DatatypeProperty ,
-                             owl:FunctionalProperty ;
-                    
-                    rdfs:label "has projection angle"@en ;
-                    
-                    rdfs:comment ""@en ;
-                    
-                    rdfs:range xsd:float .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasRevisionNumber
-
-:hasRevisionNumber rdf:type owl:DatatypeProperty ;
-                   
-                   rdfs:label "has revision number"@en ;
-                   
-                   rdfs:comment ""@en ;
-                   
-                   rdfs:range xsd:string .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasShield
-
-:hasShield rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           
-           rdfs:label "has shield"@en ;
-           
-           rdfs:comment ""@en ;
-           
-           rdfs:range xsd:boolean .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasTag
-
-:hasTag rdf:type owl:DatatypeProperty ;
-        
-        rdfs:label "has tag"@en ;
-        
-        rdfs:comment ""@en ;
-        
-        rdfs:range xsd:string .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasTimestamp
-
-:hasTimestamp rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              
-              rdfs:label "has timestamp"@en ;
-              
-              rdfs:comment ""@en ;
-              
-              rdfs:range xsd:dateTime .
-
-
-
-###  http://saref.linkeddata.es/def/envi#hasVersion
-
-:hasVersion rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            
-            rdfs:label "has version"@en ;
-            
-            rdfs:comment ""@en ;
-            
-            rdfs:range xsd:string .
-
-
-
-###  https://w3id.org/saref#hasDescription
-
-saref:hasDescription rdf:type owl:DatatypeProperty .
-
-
-
-###  https://w3id.org/saref#hasManufacturer
-
-saref:hasManufacturer rdf:type owl:DatatypeProperty .
-
-
-
-###  https://w3id.org/saref#hasName
-
-saref:hasName rdf:type owl:DatatypeProperty .
-
-
-
-###  https://w3id.org/saref#hasValue
-
-saref:hasValue rdf:type owl:DatatypeProperty .
-
-
-
-
-
-#################################################################
-#
-#    Classes
-#
-#################################################################
-
-
-###  http://saref.linkeddata.es/def/envi#Actuator
-
-:Actuator rdf:type owl:Class ;
-          
-          rdfs:label "Actuator"@en ;
-          
-          rdfs:subClassOf :Device ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :affectsProperty ;
-                            owl:allValuesFrom :Property
-                          ] ;
-          
-          rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Color
-
-:Color rdf:type owl:Class ;
-       
-       rdfs:label "Color"@en ;
-       
-       rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#CommunicationInterface
-
-:CommunicationInterface rdf:type owl:Class ;
-                        
-                        rdfs:label "Communication interface"@en ;
-                        
-                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                          owl:onProperty :hasVersion ;
-                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onDataRange xsd:string
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty :hasVersion ;
-                                          owl:allValuesFrom xsd:string
-                                        ] ;
-                        
-                        rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#CommunicationProtocol
-
-:CommunicationProtocol rdf:type owl:Class ;
-                       
-                       rdfs:label "Communication protocol"@en ;
-                       
-                       rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#CompassDirection
-
-:CompassDirection rdf:type owl:Class ;
-                  
-                  rdfs:label "Compass direction"@en ;
-                  
-                  rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Device
-
-:Device rdf:type owl:Class ;
-        
-        rdfs:label "Device"@en ;
-        
-        rdfs:subClassOf :System ,
-                        saref:Device ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty saref:hasManufacturer ;
-                          owl:allValuesFrom xsd:string
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasRevisionNumber ;
-                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onDataRange xsd:string
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasTransmissionPeriod ;
-                          owl:allValuesFrom :PeriodMeasurement
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasMeasurementFrequency ;
-                          owl:allValuesFrom :FrequencyMeasurement
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasRevisionNumber ;
-                          owl:allValuesFrom xsd:string
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :isContainedIn ;
-                          owl:allValuesFrom :PhysicalObject
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasVersion ;
-                          owl:allValuesFrom xsd:string
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasVersion ;
-                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onDataRange xsd:string
-                        ] ;
-        
-        rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#DigitalRepresentation
-
-:DigitalRepresentation rdf:type owl:Class ;
-                       
-                       rdfs:label "Digital representation"@en ;
-                       
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty :isAccesibleThrough ;
-                                         owl:allValuesFrom saref:Service
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasCreationDate ;
-                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange xsd:dateTime
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasIdentifier ;
-                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasTag ;
-                                         owl:allValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty saref:hasDescription ;
-                                         owl:allValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasIdentifier ;
-                                         owl:allValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :encapsulates ;
-                                         owl:allValuesFrom :PhysicalObject
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasCreationDate ;
-                                         owl:allValuesFrom xsd:dateTime
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty saref:hasName ;
-                                         owl:allValuesFrom xsd:string
-                                       ] ;
-                       
-                       rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#FrequencyMeasurement
-
-:FrequencyMeasurement rdf:type owl:Class ;
-                      
-                      rdfs:label "Frequency measurement"@en ;
-                      
-                      rdfs:subClassOf :Measurement ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty saref:isMeasuredIn ;
-                                        owl:onClass :FrequencyUnit ;
-                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :relatesToProperty ;
-                                        owl:hasValue :Frequency
-                                      ] ;
-                      
-                      rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#FrequencyUnit
-
-:FrequencyUnit rdf:type owl:Class ;
-               
-               rdfs:label "Frequency unit"@en ;
-               
-               rdfs:subClassOf saref:UnitOfMeasure ;
-               
-               rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Geometry
-
-:Geometry rdf:type owl:Class ;
-          
-          rdfs:label "Geometry"@en ;
-          
-          rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#HeightMeasurement
-
-:HeightMeasurement rdf:type owl:Class ;
-                   
-                   rdfs:label "Height measurement"@en ;
-                   
-                   rdfs:subClassOf :Measurement ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :relatesToProperty ;
-                                     owl:hasValue :Height
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty saref:isMeasuredIn ;
-                                     owl:onClass :LengthUnit ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                   ] ;
-                   
-                   rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Lamppost
-
-:Lamppost rdf:type owl:Class ;
-          
-          rdfs:label "Lamppost"@en ;
-          
-          rdfs:subClassOf :Device ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasLightPoint ;
-                            owl:allValuesFrom :LightPoint
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :projectsLight ;
-                            owl:allValuesFrom :Light
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasShield ;
-                            owl:allValuesFrom xsd:boolean
-                          ] ;
-          
-          rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#LengthUnit
-
-:LengthUnit rdf:type owl:Class ;
-            
-            rdfs:label "Length unit"@en ;
-            
-            rdfs:subClassOf saref:UnitOfMeasure ;
-            
-            rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Light
-
-:Light rdf:type owl:Class ;
-       
-       rdfs:label "Light"@en ;
-       
-       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :isProjectedFromHeight ;
-                         owl:allValuesFrom :HeightMeasurement
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasFlash ;
-                         owl:allValuesFrom xsd:boolean
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :isProjectedInDirection ;
-                         owl:allValuesFrom :CompassDirection
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasColor ;
-                         owl:allValuesFrom :Color
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasGeometry ;
-                         owl:allValuesFrom :Geometry
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasProjectionAngle ;
-                         owl:allValuesFrom xsd:float
-                       ] ;
-       
-       rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#LightPoint
-
-:LightPoint rdf:type owl:Class ;
-            
-            rdfs:label "Light point"@en ;
-            
-            rdfs:subClassOf geo:Point ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty geo:location ;
-                              owl:allValuesFrom geo:SpatialThing
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :projectsLight ;
-                              owl:allValuesFrom :Light
-                            ] ;
-            
-            rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#LightProperty
-
-:LightProperty rdf:type owl:Class ;
-               
-               rdfs:label "Light property"@en ;
-               
-               rdfs:subClassOf :Property ;
-               
-               rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Measurement
-
-:Measurement rdf:type owl:Class ;
-             
-             rdfs:label "Measurement"@en ;
-             
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:isMeasuredIn ;
-                               owl:allValuesFrom saref:UnitOfMeasure
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:hasValue ;
-                               owl:allValuesFrom xsd:float
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:isMeasuredIn ;
-                               owl:onClass saref:UnitOfMeasure ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasTimestamp ;
-                               owl:allValuesFrom xsd:dateTime
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:hasValue ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onDataRange xsd:float
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :relatesToProperty ;
-                               owl:allValuesFrom :Property
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :relatesToProperty ;
-                               owl:onClass :Property ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                             ] ;
-             
-             rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#PeriodMeasurement
-
-:PeriodMeasurement rdf:type owl:Class ;
-                   
-                   rdfs:label "Period measurement"@en ;
-                   
-                   rdfs:subClassOf :Measurement ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :relatesToProperty ;
-                                     owl:hasValue :Period
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty saref:isMeasuredIn ;
-                                     owl:onClass time:TemporalUnit ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                   ] ;
-                   
-                   rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Photometer
-
-:Photometer rdf:type owl:Class ;
-            
-            rdfs:label "Photometer"@en ;
-            
-            rdfs:subClassOf :Sensor ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :measuresProperty ;
-                              owl:someValuesFrom :LightProperty
-                            ] ;
-            
-            rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#PhysicalObject
-
-:PhysicalObject rdf:type owl:Class ;
-                
-                rdfs:label "Physical object"@en ;
-                
-                rdfs:subClassOf geo:SpatialThing ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty saref:hasDescription ;
-                                  owl:allValuesFrom xsd:string
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty geo:location ;
-                                  owl:allValuesFrom geo:SpatialThing
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasDigitalRepresentation ;
-                                  owl:allValuesFrom :DigitalRepresentation
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :contains ;
-                                  owl:allValuesFrom :Device
-                                ] ;
-                
-                rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Property
-
-:Property rdf:type owl:Class ;
-          
-          rdfs:label "Property"@en ;
-          
-          rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Sensor
-
-:Sensor rdf:type owl:Class ;
-        
-        rdfs:label "Sensor"@en ;
-        
-        rdfs:subClassOf :Device ,
-                        saref:Sensor ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :measuresProperty ;
-                          owl:allValuesFrom :Property
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :makesMeasurement ;
-                          owl:allValuesFrom :Measurement
-                        ] ;
-        
-        rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#System
-
-:System rdf:type owl:Class ;
-        
-        rdfs:label "System"@en ;
-        
-        rdfs:subClassOf :PhysicalObject ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :isComponentOf ;
-                          owl:allValuesFrom :System
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :isConnectedTo ;
-                          owl:allValuesFrom :System
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :usesCommunicationProtocol ;
-                          owl:allValuesFrom :CommunicationProtocol
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasComponent ;
-                          owl:allValuesFrom :System
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :usesCommunicationInterface ;
-                          owl:allValuesFrom :CommunicationInterface
-                        ] ;
-        
-        rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#TESS
-
-:TESS rdf:type owl:Class ;
-      
-      rdfs:label "TESS (Telescope Encoder and Sky Sensor)"@en ;
-      
-      rdfs:subClassOf :Photometer ;
-      
-      rdfs:comment ""@en .
-
-
-
-###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
-
-geo:Point rdf:type owl:Class .
-
-
-
-###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
-
-geo:SpatialThing rdf:type owl:Class .
-
-
-
-###  http://www.w3.org/2006/time#TemporalUnit
-
-time:TemporalUnit rdf:type owl:Class .
-
-
-
-###  https://w3id.org/saref#Device
-
-saref:Device rdf:type owl:Class .
-
-
-
-###  https://w3id.org/saref#Sensor
-
-saref:Sensor rdf:type owl:Class .
-
-
-
-###  https://w3id.org/saref#Service
-
-saref:Service rdf:type owl:Class .
-
-
-
-###  https://w3id.org/saref#UnitOfMeasure
-
-saref:UnitOfMeasure rdf:type owl:Class .
-
-
-
-
-
-#################################################################
-#
-#    Individuals
-#
-#################################################################
-
-
-###  http://saref.linkeddata.es/def/envi#Fluorescence
-
-:Fluorescence rdf:type :LightProperty ,
-                       owl:NamedIndividual ;
-              
-              rdfs:label "Fluorescence"@en ;
-              
-              rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Frequency
-
-:Frequency rdf:type :Property ,
-                    owl:NamedIndividual ;
-           
-           rdfs:label "Frequency"@en ;
-           
-           rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Height
-
-:Height rdf:type :Property ,
-                 owl:NamedIndividual ;
-        
-        rdfs:label "Height"@en ;
-        
-        rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Illuminance
-
-:Illuminance rdf:type :LightProperty ,
-                      owl:NamedIndividual ;
-             
-             rdfs:label "Illuminance"@en ;
-             
-             rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Irradiance
-
-:Irradiance rdf:type :LightProperty ,
-                     owl:NamedIndividual ;
-            
-            rdfs:label "Irradiance"@en ;
-            
-            rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#LightAbsorption
-
-:LightAbsorption rdf:type :LightProperty ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "Light absorption"@en ;
-                 
-                 rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#LightMagnitude
-
-:LightMagnitude rdf:type :LightProperty ,
-                         owl:NamedIndividual ;
-                
-                rdfs:label "Light magnitude"@en ;
-                
-                rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Luminiscence
-
-:Luminiscence rdf:type :LightProperty ,
-                       owl:NamedIndividual ;
-              
-              rdfs:label "Luminiscence"@en ;
-              
-              rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Period
-
-:Period rdf:type :Property ,
-                 owl:NamedIndividual ;
-        
-        rdfs:label "Period"@en ;
-        
-        rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#Phosphorescence
-
-:Phosphorescence rdf:type :LightProperty ,
-                          owl:NamedIndividual ;
-                 
-                 rdfs:label "Phosphorescence"@en ;
-                 
-                 rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#ReflectionOfLight
-
-:ReflectionOfLight rdf:type :LightProperty ,
-                            owl:NamedIndividual ;
-                   
-                   rdfs:label "Reflection of light"@en ;
-                   
-                   rdfs:comment ""@en .
-
-
-
-###  http://saref.linkeddata.es/def/envi#ScatteringOfLight
-
-:ScatteringOfLight rdf:type :LightProperty ,
-                            owl:NamedIndividual ;
-                   
-                   rdfs:label "Scattering of light"@en ;
-                   
-                   rdfs:comment ""@en .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/centimetre
-
-<http://www.wurvoc.org/vocabularies/om-1.8/centimetre> rdf:type :LengthUnit ,
-                                                                owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/decametre
-
-<http://www.wurvoc.org/vocabularies/om-1.8/decametre> rdf:type :LengthUnit ,
-                                                               owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/decimetre
-
-<http://www.wurvoc.org/vocabularies/om-1.8/decimetre> rdf:type :LengthUnit ,
-                                                               owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/hectometre
-
-<http://www.wurvoc.org/vocabularies/om-1.8/hectometre> rdf:type :LengthUnit ,
-                                                                owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/hertz
-
-<http://www.wurvoc.org/vocabularies/om-1.8/hertz> rdf:type :FrequencyUnit ,
-                                                           owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/kilometre
-
-<http://www.wurvoc.org/vocabularies/om-1.8/kilometre> rdf:type :LengthUnit ,
-                                                               owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/metre
-
-<http://www.wurvoc.org/vocabularies/om-1.8/metre> rdf:type :LengthUnit ,
-                                                           owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/millimetre
-
-<http://www.wurvoc.org/vocabularies/om-1.8/millimetre> rdf:type :LengthUnit ,
-                                                                owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day
-
-<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day> rdf:type :FrequencyUnit ,
-                                                                    owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour
-
-<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour> rdf:type :FrequencyUnit ,
-                                                                     owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time
-
-<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> rdf:type :FrequencyUnit ,
-                                                                            owl:NamedIndividual .
-
-
-
-###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year
-
-<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year> rdf:type :FrequencyUnit ,
-                                                                     owl:NamedIndividual .
-
-
-
-
-###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
-
+<http://saref.linkeddata.es/def/envi> a owl:Ontology ;
+	owl:versionIRI <http://saref.linkeddata.es/def/v1/envi> ;
+	dcterms:creator <http://purl.org/net/mpoveda> ;
+	rdfs:comment "This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, light, etc."@en ;
+	dc:title "SAREF extension for environment"@en ;
+	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+	vann:preferredNamespacePrefix "s4envi" ;
+	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+	owl:versionInfo "1.0" ;
+	dc:publisher <http://www.oeg-upm.net/> ;
+	vann:preferredNamespaceUri "http://saref.linkeddata.es/def/envi#" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://saref.linkeddata.es/def/envi#affectsProperty
+
+:affectsProperty a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "affects property"@en .
+# 
+# http://saref.linkeddata.es/def/envi#contains
+
+:contains a owl:ObjectProperty ;
+	owl:inverseOf :isContainedIn ;
+	rdfs:comment ""@en ;
+	rdfs:label "contains"@en .
+# 
+# http://saref.linkeddata.es/def/envi#encapsulates
+
+:encapsulates a owl:ObjectProperty ;
+	owl:inverseOf :hasDigitalRepresentation ;
+	a owl:FunctionalProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "encapsulates"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasColor
+
+:hasColor a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "has color"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasComponent
+
+:hasComponent a owl:ObjectProperty ;
+	owl:inverseOf :isComponentOf ;
+	a owl:TransitiveProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "has component"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasDigitalRepresentation
+
+:hasDigitalRepresentation a owl:ObjectProperty , owl:InverseFunctionalProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "has digital representation"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasGeometry
+
+:hasGeometry a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "has geometry"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasLightPoint
+
+:hasLightPoint a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "has light point"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasMeasurementFrequency
+
+:hasMeasurementFrequency a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "has measurement frequency"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasTransmissionPeriod
+
+:hasTransmissionPeriod a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "has transmission period"@en .
+# 
+# http://saref.linkeddata.es/def/envi#isAccesibleThrough
+
+:isAccesibleThrough a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "is accesible through"@en .
+# 
+# http://saref.linkeddata.es/def/envi#isComponentOf
+
+:isComponentOf a owl:ObjectProperty , owl:TransitiveProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "is component of"@en .
+# 
+# http://saref.linkeddata.es/def/envi#isConnectedTo
+
+:isConnectedTo a owl:ObjectProperty , owl:SymmetricProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "is connected to"@en .
+# 
+# http://saref.linkeddata.es/def/envi#isContainedIn
+
+:isContainedIn a owl:ObjectProperty ;
+	rdfs:label "isContainedIn"@en .
+# 
+# http://saref.linkeddata.es/def/envi#isProjectedFromHeight
+
+:isProjectedFromHeight a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "is projected from height"@en .
+# 
+# http://saref.linkeddata.es/def/envi#isProjectedInDirection
+
+:isProjectedInDirection a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "is projected in direction"@en .
+# 
+# http://saref.linkeddata.es/def/envi#makesMeasurement
+
+:makesMeasurement a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "makes measurement"@en .
+# 
+# http://saref.linkeddata.es/def/envi#measuresProperty
+
+:measuresProperty a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "measures property"@en .
+# 
+# http://saref.linkeddata.es/def/envi#projectsLight
+
+:projectsLight a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "projects light"@en .
+# 
+# http://saref.linkeddata.es/def/envi#relatesToProperty
+
+:relatesToProperty a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "relates to property"@en .
+# 
+# http://saref.linkeddata.es/def/envi#usesCommunicationInterface
+
+:usesCommunicationInterface a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "uses communication interface"@en .
+# 
+# http://saref.linkeddata.es/def/envi#usesCommunicationProtocol
+
+:usesCommunicationProtocol a owl:ObjectProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "uses communication protocol"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+
+geo:location a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#isMeasuredIn
+
+saref:isMeasuredIn a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://saref.linkeddata.es/def/envi#hasCreationDate
+
+:hasCreationDate a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:range xsd:dateTime ;
+	rdfs:comment ""@en ;
+	rdfs:label "has creation date"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasFlash
+
+:hasFlash a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:range xsd:boolean ;
+	rdfs:comment ""@en ;
+	rdfs:label "has flash"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasIdentifier
+
+:hasIdentifier a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:comment "A relationship providing the identifier of an entity (e.g., digital representation)"@en ;
+	rdfs:label "has identifier"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasProjectionAngle
+
+:hasProjectionAngle a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:range xsd:float ;
+	rdfs:comment ""@en ;
+	rdfs:label "has projection angle"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasRevisionNumber
+
+:hasRevisionNumber a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:comment ""@en ;
+	rdfs:label "has revision number"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasShield
+
+:hasShield a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:range xsd:boolean ;
+	rdfs:comment ""@en ;
+	rdfs:label "has shield"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasTag
+
+:hasTag a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:comment ""@en ;
+	rdfs:label "has tag"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasTimestamp
+
+:hasTimestamp a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:range xsd:dateTime ;
+	rdfs:comment ""@en ;
+	rdfs:label "has timestamp"@en .
+# 
+# http://saref.linkeddata.es/def/envi#hasVersion
+
+:hasVersion a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:range xsd:string ;
+	rdfs:comment ""@en ;
+	rdfs:label "has version"@en .
+# 
+# https://w3id.org/saref#hasDescription
+
+saref:hasDescription a owl:DatatypeProperty .
+# 
+# https://w3id.org/saref#hasManufacturer
+
+saref:hasManufacturer a owl:DatatypeProperty .
+# 
+# https://w3id.org/saref#hasName
+
+saref:hasName a owl:DatatypeProperty .
+# 
+# https://w3id.org/saref#hasValue
+
+saref:hasValue a owl:DatatypeProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://saref.linkeddata.es/def/envi#Actuator
+
+:Actuator a owl:Class ;
+	rdfs:subClassOf :Device , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty :affectsProperty ;
+	owl:allValuesFrom :Property .
+
+:Actuator rdfs:comment ""@en ;
+	rdfs:label "Actuator"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Color
+
+:Color a owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Color"@en .
+# 
+# http://saref.linkeddata.es/def/envi#CommunicationInterface
+
+:CommunicationInterface a owl:Class ;
+	rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty :hasVersion ;
+	owl:allValuesFrom xsd:string .
+
+:CommunicationInterface rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty :hasVersion ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:string .
+
+:CommunicationInterface rdfs:comment ""@en ;
+	rdfs:label "Communication interface"@en .
+# 
+# http://saref.linkeddata.es/def/envi#CommunicationProtocol
+
+:CommunicationProtocol a owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Communication protocol"@en .
+# 
+# http://saref.linkeddata.es/def/envi#CompassDirection
+
+:CompassDirection a owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Compass direction"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Device
+
+:Device a owl:Class ;
+	rdfs:subClassOf :System , saref:Device , _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty :hasMeasurementFrequency ;
+	owl:allValuesFrom :FrequencyMeasurement .
+
+:Device rdfs:subClassOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty :hasTransmissionPeriod ;
+	owl:allValuesFrom :PeriodMeasurement .
+
+:Device rdfs:subClassOf _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty :isContainedIn ;
+	owl:allValuesFrom :PhysicalObject .
+
+:Device rdfs:subClassOf _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty :hasRevisionNumber ;
+	owl:allValuesFrom xsd:string .
+
+:Device rdfs:subClassOf _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty :hasVersion ;
+	owl:allValuesFrom xsd:string .
+
+:Device rdfs:subClassOf _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty saref:hasManufacturer ;
+	owl:allValuesFrom xsd:string .
+
+:Device rdfs:subClassOf _:genid10 .
+
+_:genid10 a owl:Restriction ;
+	owl:onProperty :hasRevisionNumber ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:string .
+
+:Device rdfs:subClassOf _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty :hasVersion ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:string .
+
+:Device rdfs:comment ""@en ;
+	rdfs:label "Device"@en .
+# 
+# http://saref.linkeddata.es/def/envi#DigitalRepresentation
+
+:DigitalRepresentation a owl:Class ;
+	rdfs:subClassOf _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty :encapsulates ;
+	owl:allValuesFrom :PhysicalObject .
+
+:DigitalRepresentation rdfs:subClassOf _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty :isAccesibleThrough ;
+	owl:allValuesFrom saref:Service .
+
+:DigitalRepresentation rdfs:subClassOf _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty :hasCreationDate ;
+	owl:allValuesFrom xsd:dateTime .
+
+:DigitalRepresentation rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction ;
+	owl:onProperty :hasIdentifier ;
+	owl:allValuesFrom xsd:string .
+
+:DigitalRepresentation rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty :hasTag ;
+	owl:allValuesFrom xsd:string .
+
+:DigitalRepresentation rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty saref:hasDescription ;
+	owl:allValuesFrom xsd:string .
+
+:DigitalRepresentation rdfs:subClassOf _:genid18 .
+
+_:genid18 a owl:Restriction ;
+	owl:onProperty saref:hasName ;
+	owl:allValuesFrom xsd:string .
+
+:DigitalRepresentation rdfs:subClassOf _:genid19 .
+
+_:genid19 a owl:Restriction ;
+	owl:onProperty :hasCreationDate ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:dateTime .
+
+:DigitalRepresentation rdfs:subClassOf _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty :hasIdentifier ;
+	owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:string .
+
+:DigitalRepresentation rdfs:comment ""@en ;
+	rdfs:label "Digital representation"@en .
+# 
+# http://saref.linkeddata.es/def/envi#FrequencyMeasurement
+
+:FrequencyMeasurement a owl:Class ;
+	rdfs:subClassOf :Measurement , _:genid21 .
+
+_:genid21 a owl:Restriction ;
+	owl:onProperty :relatesToProperty ;
+	owl:hasValue :Frequency .
+
+:FrequencyMeasurement rdfs:subClassOf _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass :FrequencyUnit .
+
+:FrequencyMeasurement rdfs:comment ""@en ;
+	rdfs:label "Frequency measurement"@en .
+# 
+# http://saref.linkeddata.es/def/envi#FrequencyUnit
+
+:FrequencyUnit a owl:Class ;
+	rdfs:subClassOf saref:UnitOfMeasure ;
+	rdfs:comment ""@en ;
+	rdfs:label "Frequency unit"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Geometry
+
+:Geometry a owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Geometry"@en .
+# 
+# http://saref.linkeddata.es/def/envi#HeightMeasurement
+
+:HeightMeasurement a owl:Class ;
+	rdfs:subClassOf :Measurement , _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty :relatesToProperty ;
+	owl:hasValue :Height .
+
+:HeightMeasurement rdfs:subClassOf _:genid24 .
+
+_:genid24 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass :LengthUnit .
+
+:HeightMeasurement rdfs:comment ""@en ;
+	rdfs:label "Height measurement"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Lamppost
+
+:Lamppost a owl:Class ;
+	rdfs:subClassOf :Device , _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty :hasLightPoint ;
+	owl:allValuesFrom :LightPoint .
+
+:Lamppost rdfs:subClassOf _:genid26 .
+
+_:genid26 a owl:Restriction ;
+	owl:onProperty :projectsLight ;
+	owl:allValuesFrom :Light .
+
+:Lamppost rdfs:subClassOf _:genid27 .
+
+_:genid27 a owl:Restriction ;
+	owl:onProperty :hasShield ;
+	owl:allValuesFrom xsd:boolean .
+
+:Lamppost rdfs:comment ""@en ;
+	rdfs:label "Lamppost"@en .
+# 
+# http://saref.linkeddata.es/def/envi#LengthUnit
+
+:LengthUnit a owl:Class ;
+	rdfs:subClassOf saref:UnitOfMeasure ;
+	rdfs:comment ""@en ;
+	rdfs:label "Length unit"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Light
+
+:Light a owl:Class ;
+	rdfs:subClassOf _:genid28 .
+
+_:genid28 a owl:Restriction ;
+	owl:onProperty :hasColor ;
+	owl:allValuesFrom :Color .
+
+:Light rdfs:subClassOf _:genid29 .
+
+_:genid29 a owl:Restriction ;
+	owl:onProperty :hasGeometry ;
+	owl:allValuesFrom :Geometry .
+
+:Light rdfs:subClassOf _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty :isProjectedFromHeight ;
+	owl:allValuesFrom :HeightMeasurement .
+
+:Light rdfs:subClassOf _:genid31 .
+
+_:genid31 a owl:Restriction ;
+	owl:onProperty :isProjectedInDirection ;
+	owl:allValuesFrom :CompassDirection .
+
+:Light rdfs:subClassOf _:genid32 .
+
+_:genid32 a owl:Restriction ;
+	owl:onProperty :hasFlash ;
+	owl:allValuesFrom xsd:boolean .
+
+:Light rdfs:subClassOf _:genid33 .
+
+_:genid33 a owl:Restriction ;
+	owl:onProperty :hasProjectionAngle ;
+	owl:allValuesFrom xsd:float .
+
+:Light rdfs:comment ""@en ;
+	rdfs:label "Light"@en .
+# 
+# http://saref.linkeddata.es/def/envi#LightPoint
+
+:LightPoint a owl:Class ;
+	rdfs:subClassOf geo:Point , _:genid34 .
+
+_:genid34 a owl:Restriction ;
+	owl:onProperty :projectsLight ;
+	owl:allValuesFrom :Light .
+
+:LightPoint rdfs:subClassOf _:genid35 .
+
+_:genid35 a owl:Restriction ;
+	owl:onProperty geo:location ;
+	owl:allValuesFrom geo:SpatialThing .
+
+:LightPoint rdfs:comment ""@en ;
+	rdfs:label "Light point"@en .
+# 
+# http://saref.linkeddata.es/def/envi#LightProperty
+
+:LightProperty a owl:Class ;
+	rdfs:subClassOf :Property ;
+	rdfs:comment ""@en ;
+	rdfs:label "Light property"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Measurement
+
+:Measurement a owl:Class ;
+	rdfs:subClassOf _:genid36 .
+
+_:genid36 a owl:Restriction ;
+	owl:onProperty :relatesToProperty ;
+	owl:allValuesFrom :Property .
+
+:Measurement rdfs:subClassOf _:genid37 .
+
+_:genid37 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:allValuesFrom saref:UnitOfMeasure .
+
+:Measurement rdfs:subClassOf _:genid38 .
+
+_:genid38 a owl:Restriction ;
+	owl:onProperty :relatesToProperty ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass :Property .
+
+:Measurement rdfs:subClassOf _:genid39 .
+
+_:genid39 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:UnitOfMeasure .
+
+:Measurement rdfs:subClassOf _:genid40 .
+
+_:genid40 a owl:Restriction ;
+	owl:onProperty :hasTimestamp ;
+	owl:allValuesFrom xsd:dateTime .
+
+:Measurement rdfs:subClassOf _:genid41 .
+
+_:genid41 a owl:Restriction ;
+	owl:onProperty saref:hasValue ;
+	owl:allValuesFrom xsd:float .
+
+:Measurement rdfs:subClassOf _:genid42 .
+
+_:genid42 a owl:Restriction ;
+	owl:onProperty saref:hasValue ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:float .
+
+:Measurement rdfs:comment ""@en ;
+	rdfs:label "Measurement"@en .
+# 
+# http://saref.linkeddata.es/def/envi#PeriodMeasurement
+
+:PeriodMeasurement a owl:Class ;
+	rdfs:subClassOf :Measurement , _:genid43 .
+
+_:genid43 a owl:Restriction ;
+	owl:onProperty :relatesToProperty ;
+	owl:hasValue :Period .
+
+:PeriodMeasurement rdfs:subClassOf _:genid44 .
+
+_:genid44 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass time:TemporalUnit .
+
+:PeriodMeasurement rdfs:comment ""@en ;
+	rdfs:label "Period measurement"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Photometer
+
+:Photometer a owl:Class ;
+	rdfs:subClassOf :Sensor , _:genid45 .
+
+_:genid45 a owl:Restriction ;
+	owl:onProperty :measuresProperty ;
+	owl:someValuesFrom :LightProperty .
+
+:Photometer rdfs:comment ""@en ;
+	rdfs:label "Photometer"@en .
+# 
+# http://saref.linkeddata.es/def/envi#PhysicalObject
+
+:PhysicalObject a owl:Class ;
+	rdfs:subClassOf geo:SpatialThing , _:genid46 .
+
+_:genid46 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:allValuesFrom :PhysicalObject .
+
+:PhysicalObject rdfs:subClassOf _:genid47 .
+
+_:genid47 a owl:Restriction ;
+	owl:onProperty :hasDigitalRepresentation ;
+	owl:allValuesFrom :DigitalRepresentation .
+
+:PhysicalObject rdfs:subClassOf _:genid48 .
+
+_:genid48 a owl:Restriction ;
+	owl:onProperty geo:location ;
+	owl:allValuesFrom geo:SpatialThing .
+
+:PhysicalObject rdfs:subClassOf _:genid49 .
+
+_:genid49 a owl:Restriction ;
+	owl:onProperty saref:hasDescription ;
+	owl:allValuesFrom xsd:string .
+
+:PhysicalObject rdfs:comment ""@en ;
+	rdfs:label "Physical object"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Property
+
+:Property a owl:Class ;
+	rdfs:comment ""@en ;
+	rdfs:label "Property"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Sensor
+
+:Sensor a owl:Class ;
+	rdfs:subClassOf :Device , saref:Sensor , _:genid50 .
+
+_:genid50 a owl:Restriction ;
+	owl:onProperty :makesMeasurement ;
+	owl:allValuesFrom :Measurement .
+
+:Sensor rdfs:subClassOf _:genid51 .
+
+_:genid51 a owl:Restriction ;
+	owl:onProperty :measuresProperty ;
+	owl:allValuesFrom :Property .
+
+:Sensor rdfs:comment ""@en ;
+	rdfs:label "Sensor"@en .
+# 
+# http://saref.linkeddata.es/def/envi#System
+
+:System a owl:Class ;
+	rdfs:subClassOf :PhysicalObject , _:genid52 .
+
+_:genid52 a owl:Restriction ;
+	owl:onProperty :hasComponent ;
+	owl:allValuesFrom :System .
+
+:System rdfs:subClassOf _:genid53 .
+
+_:genid53 a owl:Restriction ;
+	owl:onProperty :isComponentOf ;
+	owl:allValuesFrom :System .
+
+:System rdfs:subClassOf _:genid54 .
+
+_:genid54 a owl:Restriction ;
+	owl:onProperty :isConnectedTo ;
+	owl:allValuesFrom :System .
+
+:System rdfs:subClassOf _:genid55 .
+
+_:genid55 a owl:Restriction ;
+	owl:onProperty :usesCommunicationInterface ;
+	owl:allValuesFrom :CommunicationInterface .
+
+:System rdfs:subClassOf _:genid56 .
+
+_:genid56 a owl:Restriction ;
+	owl:onProperty :usesCommunicationProtocol ;
+	owl:allValuesFrom :CommunicationProtocol .
+
+:System rdfs:comment ""@en ;
+	rdfs:label "System"@en .
+# 
+# http://saref.linkeddata.es/def/envi#TESS
+
+:TESS a owl:Class ;
+	rdfs:subClassOf :Photometer ;
+	rdfs:comment ""@en ;
+	rdfs:label "TESS (Telescope Encoder and Sky Sensor)"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+
+geo:Point a owl:Class .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+
+geo:SpatialThing a owl:Class .
+# 
+# http://www.w3.org/2006/time#TemporalUnit
+
+time:TemporalUnit a owl:Class .
+# 
+# https://w3id.org/saref#Device
+
+saref:Device a owl:Class .
+# 
+# https://w3id.org/saref#Sensor
+
+saref:Sensor a owl:Class .
+# 
+# https://w3id.org/saref#Service
+
+saref:Service a owl:Class .
+# 
+# https://w3id.org/saref#UnitOfMeasure
+
+saref:UnitOfMeasure a owl:Class .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://saref.linkeddata.es/def/envi#Fluorescence
+
+:Fluorescence a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Fluorescence"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Frequency
+
+:Frequency a owl:NamedIndividual , :Property ;
+	rdfs:comment ""@en ;
+	rdfs:label "Frequency"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Height
+
+:Height a owl:NamedIndividual , :Property ;
+	rdfs:comment ""@en ;
+	rdfs:label "Height"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Illuminance
+
+:Illuminance a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Illuminance"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Irradiance
+
+:Irradiance a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Irradiance"@en .
+# 
+# http://saref.linkeddata.es/def/envi#LightAbsorption
+
+:LightAbsorption a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Light absorption"@en .
+# 
+# http://saref.linkeddata.es/def/envi#LightMagnitude
+
+:LightMagnitude a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Light magnitude"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Luminiscence
+
+:Luminiscence a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Luminiscence"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Period
+
+:Period a owl:NamedIndividual , :Property ;
+	rdfs:comment ""@en ;
+	rdfs:label "Period"@en .
+# 
+# http://saref.linkeddata.es/def/envi#Phosphorescence
+
+:Phosphorescence a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Phosphorescence"@en .
+# 
+# http://saref.linkeddata.es/def/envi#ReflectionOfLight
+
+:ReflectionOfLight a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Reflection of light"@en .
+# 
+# http://saref.linkeddata.es/def/envi#ScatteringOfLight
+
+:ScatteringOfLight a owl:NamedIndividual , :LightProperty ;
+	rdfs:comment ""@en ;
+	rdfs:label "Scattering of light"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/centimetre
+
+<http://www.wurvoc.org/vocabularies/om-1.8/centimetre> a owl:NamedIndividual , :LengthUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/decametre
+
+<http://www.wurvoc.org/vocabularies/om-1.8/decametre> a owl:NamedIndividual , :LengthUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/decimetre
+
+<http://www.wurvoc.org/vocabularies/om-1.8/decimetre> a owl:NamedIndividual , :LengthUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/hectometre
+
+<http://www.wurvoc.org/vocabularies/om-1.8/hectometre> a owl:NamedIndividual , :LengthUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/hertz
+
+<http://www.wurvoc.org/vocabularies/om-1.8/hertz> a owl:NamedIndividual , :FrequencyUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/kilometre
+
+<http://www.wurvoc.org/vocabularies/om-1.8/kilometre> a owl:NamedIndividual , :LengthUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/metre
+
+<http://www.wurvoc.org/vocabularies/om-1.8/metre> a owl:NamedIndividual , :LengthUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/millimetre
+
+<http://www.wurvoc.org/vocabularies/om-1.8/millimetre> a owl:NamedIndividual , :LengthUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day
+
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day> a owl:NamedIndividual , :FrequencyUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour
+
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour> a owl:NamedIndividual , :FrequencyUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time
+
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> a owl:NamedIndividual , :FrequencyUnit .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year
+
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year> a owl:NamedIndividual , :FrequencyUnit .
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
