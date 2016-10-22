@@ -14,8 +14,8 @@
 
 <http://saref.linkeddata.es/def/bldg> rdf:type owl:Ontology ;
                                        owl:versionIRI <http://saref.linkeddata.es/def/v1/bldg> ;
-                                       dcterms:creator <http://purl.org/net/mpoveda> ;
                                        rdfs:comment "This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) standard for data sharing in the construction and facility management industries. The descriptions of the classes and properties extracted from IFC have been taken from the IFC documentation."@en ;
+                                       dcterms:creator <http://purl.org/net/mpoveda> ;
                                        vann:preferredNamespaceUri "http://saref.linkeddata.es/def/bldg#" ;
                                        dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
@@ -929,6 +929,12 @@ bldg:secondaryVoltage rdf:type owl:ObjectProperty ;
                       rdfs:label "secondary voltage"@en .
 
 
+###  http://saref.linkeddata.es/def/bldg#shortCircuitVoltage
+bldg:shortCircuitVoltage rdf:type owl:ObjectProperty ;
+                         rdfs:comment "A complex number that specifies the real and imaginary parts of the short-circuit voltage at rated current of a transformer given in %."@en ;
+                         rdfs:label "short circuit voltage"@en .
+
+
 ###  http://saref.linkeddata.es/def/bldg#size
 bldg:size rdf:type owl:ObjectProperty ;
           rdfs:comment "The size of the connection to the valve (or to each connection for faucets, mixing valves, etc.). Usually measured in millimeters (mm)."@en ;
@@ -1636,12 +1642,6 @@ bldg:shadingDeviceType rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:string ;
                        rdfs:comment "Specifies the type of shading device."@en ;
                        rdfs:label "shading device type"@en .
-
-
-###  http://saref.linkeddata.es/def/bldg#shortCircuitVoltage
-bldg:shortCircuitVoltage rdf:type owl:ObjectProperty ;
-                         rdfs:comment "A complex number that specifies the real and imaginary parts of the short-circuit voltage at rated current of a transformer given in %."@en ;
-                         rdfs:label "short circuit voltage"@en .
 
 
 ###  http://saref.linkeddata.es/def/bldg#sprayType
@@ -3020,10 +3020,6 @@ bldg:Measurement rdf:type owl:Class ;
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty saref:hasValue ;
-                                   owl:allValuesFrom xsd:float
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty saref:hasValue ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange xsd:float
                                  ] ;
@@ -3450,10 +3446,6 @@ bldg:Transformer rdf:type owl:Class ;
                                    owl:allValuesFrom xsd:string
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty bldg:shortCircuitVoltage ;
-                                   owl:allValuesFrom xsd:float
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty bldg:transformerVectorGroup ;
                                    owl:allValuesFrom xsd:string
                                  ] ;
@@ -3564,12 +3556,6 @@ A unitary control element provides a housing for an aggregation of control or el
                            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcUnitaryControlElement" ;
                            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcunitarycontrolelement.htm> ,
                                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_unitarycontrolelementtypecommon.htm> .
-
-
-###  http://saref.linkeddata.es/def/bldg#UnitaryEquipment
-bldg:UnitaryEquipment rdf:type owl:Class ;
-                      prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcunitaryequipment.htm> ,
-                                            <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_unitaryequipmenttypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Valve
