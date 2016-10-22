@@ -604,6 +604,10 @@ saref:hasValue rdf:type owl:DatatypeProperty .
                                   owl:allValuesFrom :DigitalRepresentation
                                 ] ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty :isContainedIn ;
+                                  owl:allValuesFrom :PhysicalObject
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty geo:location ;
                                   owl:allValuesFrom geo:SpatialThing
                                 ] ,
