@@ -48,6 +48,10 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/ns/prov#hadPrimarySource
+prov:hadPrimarySource rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -1733,7 +1737,9 @@ bldg:Actuator rdf:type owl:Class ;
                               ] ;
               rdfs:comment "An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion."@en ;
               rdfs:label "Actuator"@en ;
-              rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcActuator" .
+              rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcActuator" ;
+              prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcactuator.htm> ,
+                                    <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_actuatortypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#AirToAirHeatRecovery
@@ -1773,7 +1779,9 @@ bldg:AirToAirHeatRecovery rdf:type owl:Class ;
                                           ] ;
                           rdfs:comment "An air-to-air heat recovery device employs a counter-flow heat exchanger between inbound and outbound air flow. It is typically used to transfer heat from warmer air in one chamber to cooler air in the second chamber (i.e., typically used to recover heat from the conditioned air being exhausted and the outside air being supplied to a building), resulting in energy savings from reduced heating (or cooling) requirements."@en ;
                           rdfs:label "Air to air heat recovery"@en ;
-                          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcAirToAirHeatRecovery" .
+                          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcAirToAirHeatRecovery" ;
+                          prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcairtoairheatrecovery.htm> ,
+                                                <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_airtoairheatrecoverytypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Alarm
@@ -1783,7 +1791,9 @@ bldg:Alarm rdf:type owl:Class ;
 
 Alarms include the provision of break glass buttons and manual pull boxes that are used to activate alarms."""@en ;
            rdfs:label "Alarm"@en ;
-           rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcAlarm" .
+           rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcAlarm" ;
+           prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcalarm.htm> ,
+                                 <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_alarmtypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#AudioVisualAppliance
@@ -1801,7 +1811,9 @@ bldg:AudioVisualAppliance rdf:type owl:Class ;
 
 Audio-visual appliances may be fixed in place or may be able to be moved from one space to another. They may require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source. Audio-visual appliances may be connected to data circuits including specialist circuits for audio visual purposes only."""@en ;
                           rdfs:label "audio visual appliance"@en ;
-                          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcAudioVisualApplicance" .
+                          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcAudioVisualApplicance" ;
+                          prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcaudiovisualappliance.htm> ,
+                                                <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_audiovisualappliancetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Boiler
@@ -1859,7 +1871,9 @@ bldg:Boiler rdf:type owl:Class ;
 
 IfcBoiler is a vessel solely used for heating of water or other fluids. Storage vessels, such as for drinking water storage are considered as tanks and use the IfcTank entity.\""""@en ;
             rdfs:label "Boiler"@en ;
-            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcBoiler" .
+            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcBoiler" ;
+            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcboiler.htm> ,
+                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_boilertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Building
@@ -1920,7 +1934,9 @@ bldg:Burner rdf:type owl:Class ;
                             ] ;
             rdfs:comment "A burner is a device that converts fuel into heat through combustion. It includes gas, oil, and wood burners."@en ;
             rdfs:label "Burner"@en ;
-            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcBurner" .
+            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcBurner" ;
+            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcburner.htm> ,
+                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_burnertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Chiller
@@ -1952,7 +1968,9 @@ bldg:Chiller rdf:type owl:Class ;
                              ] ;
              rdfs:comment "A chiller is a device used to remove heat from a liquid via a vapor-compression or absorption refrigeration cycle to cool a fluid, typically water or a mixture of water and glycol. The chilled fluid is then used to cool and dehumidify air in a building."@en ;
              rdfs:label "Chiller"@en ;
-             rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcChiller" .
+             rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcChiller" ;
+             prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcchiller.htm> ,
+                                   <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_chillertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Coil
@@ -1994,7 +2012,9 @@ bldg:Coil rdf:type owl:Class ;
 
 Coils may also be used for non-airflow cases such as embedded in a floor slab."""@en ;
           rdfs:label "Coil"@en ;
-          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCoil" .
+          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCoil" ;
+          prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccoil.htm> ,
+                                <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_coiltypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#CommunicationAppliance
@@ -2004,7 +2024,9 @@ bldg:CommunicationAppliance rdf:type owl:Class ;
 
 Communication appliances may be fixed in place or may be able to be moved from one space to another. Communication appliances require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source."""@en ;
                             rdfs:label "communication appliance"@en ;
-                            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCommunicationAppliance" .
+                            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCommunicationAppliance" ;
+                            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifccommunicationsappliance.htm> ,
+                                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_communicationsappliancetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Compressor
@@ -2052,7 +2074,9 @@ bldg:Compressor rdf:type owl:Class ;
                                 ] ;
                 rdfs:comment "A compressor is a device that compresses a fluid typically used in a refrigeration circuit."@en ;
                 rdfs:label "Compressor"@en ;
-                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCompressor" .
+                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCompressor" ;
+                prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccompressor.htm> ,
+                                      <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_compressortypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Condenser
@@ -2088,7 +2112,9 @@ bldg:Condenser rdf:type owl:Class ;
                                ] ;
                rdfs:comment "A condenser is a device that is used to dissipate heat, typically by condensing a substance such as a refrigerant from its gaseous to its liquid state."@en ;
                rdfs:label "Condenser"@en ;
-               rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCondenser" .
+               rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCondenser" ;
+               prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccondenser.htm> ,
+                                     <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_condensertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Controller
@@ -2098,7 +2124,9 @@ bldg:Controller rdf:type owl:Class ;
 
 A controller may be physical (having placement within a spatial structure) or logical (a software interface or aggregated within a programmable physical controller)."""@en ;
                 rdfs:label "controller"@en ;
-                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcController" .
+                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcController" ;
+                prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifccontroller.htm> ,
+                                      <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_controllertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#CooledBeam
@@ -2186,7 +2214,9 @@ bldg:CooledBeam rdf:type owl:Class ;
                                 ] ;
                 rdfs:comment "A cooled beam (or chilled beam) is a device typically used to cool air by circulating a fluid such as chilled water through exposed finned tubes above a space. Typically mounted overhead near or within a ceiling, the cooled beam uses convection to cool the space below it by acting as a heat sink for the naturally rising warm air of the space. Once cooled, the air naturally drops back to the floor where the cycle begins again."@en ;
                 rdfs:label "Cooled beam"@en ;
-                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCooledBeam" .
+                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCooledBeam" ;
+                prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccooledbeam.htm> ,
+                                      <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_cooledbeamtypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#CoolingTower
@@ -2250,7 +2280,9 @@ bldg:CoolingTower rdf:type owl:Class ;
                                   ] ;
                   rdfs:comment "A cooling tower is a device which rejects heat to ambient air by circulating a fluid such as water through it to reduce its temperature by partial evaporation."@en ;
                   rdfs:label "Cooling tower"@en ;
-                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCoolingTower" .
+                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCoolingTower" ;
+                  prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccoolingtower.htm> ,
+                                        <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_coolingtowertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Damper
@@ -2338,7 +2370,9 @@ bldg:Damper rdf:type owl:Class ;
                             ] ;
             rdfs:comment "A damper typically participates in an HVAC duct distribution system and is used to control or modulate the flow of air."@en ;
             rdfs:label "Damper"@en ;
-            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcDamper" .
+            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcDamper" ;
+            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcdamper.htm> ,
+                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_dampertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#DistributionControlDevice
@@ -2404,7 +2438,9 @@ bldg:DuctSilencer rdf:type owl:Class ;
                                   ] ;
                   rdfs:comment "A duct silencer is a device that is typically installed inside a duct distribution system for the purpose of reducing the noise levels from air movement, fan noise, etc. in the adjacent space or downstream of the duct silencer device."@en ;
                   rdfs:label "Duct silencer"@en ;
-                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcDuctSilencer" .
+                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcDuctSilencer" ;
+                  prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcductsilencer.htm> ,
+                                        <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_ductsilencertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#ElectricAppliance
@@ -2414,7 +2450,9 @@ bldg:ElectricAppliance rdf:type owl:Class ;
 
 Electric appliances may be fixed in place or may be able to be moved from one space to another. Electric appliances require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source."""@en ;
                        rdfs:label "electric appliance"@en ;
-                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricAppliance" .
+                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricAppliance" ;
+                       prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricappliance.htm> ,
+                                             <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricappliancetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#ElectricFlowStorageDevice
@@ -2434,7 +2472,9 @@ bldg:ElectricFlowStorageDevice rdf:type owl:Class ;
                                                ] ;
                                rdfs:comment "An electric flow storage device is a device in which electrical energy is stored and from which energy may be progressively released."@en ;
                                rdfs:label "Electric flow storage device"@en ;
-                               rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricFlowStorageDevice" .
+                               rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricFlowStorageDevice" ;
+                               prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricflowstoragedevice.htm> ,
+                                                     <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricflowstoragedevicetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#ElectricGenerator
@@ -2454,7 +2494,9 @@ bldg:ElectricGenerator rdf:type owl:Class ;
                                        ] ;
                        rdfs:comment "An electric generator is an engine that is a machine for converting mechanical energy into electrical energy."@en ;
                        rdfs:label "Electric generator"@en ;
-                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricGenerator" .
+                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricGenerator" ;
+                       prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricgenerator.htm> ,
+                                             <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricgeneratortypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#ElectricMotor
@@ -2502,7 +2544,9 @@ bldg:ElectricMotor rdf:type owl:Class ;
                                    ] ;
                    rdfs:comment "An electric motor is an engine that is a machine for converting electrical energy into mechanical energy."@en ;
                    rdfs:label "Electric motor"@en ;
-                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricMotor" .
+                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricMotor" ;
+                   prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricmotor.htm> ,
+                                         <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricmotortypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#ElectricTimeControl
@@ -2510,7 +2554,9 @@ bldg:ElectricTimeControl rdf:type owl:Class ;
                          rdfs:subClassOf bldg:FlowController ;
                          rdfs:comment "An electric time control is a device that applies control to the provision or flow of electrical energy over time."@en ;
                          rdfs:label "Electric time control"@en ;
-                         rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricTimeControl" .
+                         rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcElectricTimeControl" ;
+                         prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectrictimecontrol.htm> ,
+                                               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electrictimecontroltypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#EnergyConversionDevice
@@ -2518,7 +2564,8 @@ bldg:EnergyConversionDevice rdf:type owl:Class ;
                             rdfs:subClassOf bldg:DistributionFlowDevice ;
                             rdfs:comment "The distribution flow element IfcEnergyConversionDevice defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system. Its type is defined by IfcEnergyConversionDeviceType or its subtypes."@en ;
                             rdfs:label "Energy conversion device"@en ;
-                            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEnergyConversionDevice" .
+                            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEnergyConversionDevice" ;
+                            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcenergyconversiondevice.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Engine
@@ -2530,7 +2577,9 @@ bldg:Engine rdf:type owl:Class ;
                             ] ;
             rdfs:comment "An engine is a device that converts fuel into mechanical energy through combustion."@en ;
             rdfs:label "Engine"@en ;
-            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEngine" .
+            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEngine" ;
+            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcengine.htm> ,
+                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_enginetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#EvaporativeCooler
@@ -2558,7 +2607,9 @@ bldg:EvaporativeCooler rdf:type owl:Class ;
                                        ] ;
                        rdfs:comment "An evaporative cooler is a device that cools air by saturating it with water vapor."@en ;
                        rdfs:label "Evaporative cooler"@en ;
-                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEvaporativeCooler" .
+                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEvaporativeCooler" ;
+                       prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcevaporativecooler.htm> ,
+                                             <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_evaporativecoolertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Evaporator
@@ -2602,7 +2653,9 @@ bldg:Evaporator rdf:type owl:Class ;
                                 ] ;
                 rdfs:comment "An evaporator is a device in which a liquid refrigerent is vaporized and absorbs heat from the surrounding fluid."@en ;
                 rdfs:label "Evaporator"@en ;
-                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEvaporator" .
+                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEvaporator" ;
+                prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcevaporator.htm> ,
+                                      <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_evaporatortypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Fan
@@ -2650,7 +2703,9 @@ bldg:Fan rdf:type owl:Class ;
                          ] ;
          rdfs:comment "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."@en ;
          rdfs:label "Fan"@en ;
-         rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFan" .
+         rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFan" ;
+         prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcfan.htm> ,
+                               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_fantypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Filter
@@ -2710,7 +2765,9 @@ bldg:Filter rdf:type owl:Class ;
                             ] ;
             rdfs:comment "A filter is an apparatus used to remove particulate or gaseous matter from fluids and gases."@en ;
             rdfs:label "Filter"@en ;
-            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFilter" .
+            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFilter" ;
+            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcfilter.htm> ,
+                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_filtertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FireSuppressionTerminal
@@ -2720,7 +2777,9 @@ bldg:FireSuppressionTerminal rdf:type owl:Class ;
 
 A fire suppression terminal provides for all forms of sprinkler, spreader and other form of terminal that is connected to a pipework system and intended to act in the role of suppressing a fire."""@en ;
                              rdfs:label "Fire suppression terminal"@en ;
-                             rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFireSuppressionTerminal" .
+                             rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFireSuppressionTerminal" ;
+                             prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/lexical/ifcfiresuppressionterminal.htm> ,
+                                                   <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/pset/pset_firesuppressionterminaltypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FlowController
@@ -2728,7 +2787,8 @@ bldg:FlowController rdf:type owl:Class ;
                     rdfs:subClassOf bldg:DistributionFlowDevice ;
                     rdfs:comment "The distribution flow element IfcFlowController defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays. Its type is defined by IfcFlowControllerType or subtypes."@en ;
                     rdfs:label "Flow controller"@en ;
-                    rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowController" .
+                    rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowController" ;
+                    prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FlowInstrument
@@ -2738,7 +2798,9 @@ bldg:FlowInstrument rdf:type owl:Class ;
 
 Instrumentation is typically for the purpose of determining the value of the property at a point in time. It is not the purpose of an instrument to record or integrate the values over time (although they may be connected to recording devices that do perform such a function). This entity provides for all forms of mechanical flow instrument (thermometers, pressure gauges etc.) and electrical flow instruments (ammeters, voltmeters etc.)"""@en ;
                     rdfs:label "flow instrument"@en ;
-                    rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowInstrument" .
+                    rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowInstrument" ;
+                    prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcflowinstrument.htm> ,
+                                          <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_flowinstrumenttypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FlowMeter
@@ -2754,7 +2816,9 @@ bldg:FlowMeter rdf:type owl:Class ;
                                ] ;
                rdfs:comment "A flow meter is a device that is used to measure the flow rate in a system."@en ;
                rdfs:label "Flow meter"@en ;
-               rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowMeter" .
+               rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowMeter" ;
+               prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcflowmeter.htm> ,
+                                     <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_flowmetertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FlowMovingDevice
@@ -2762,7 +2826,8 @@ bldg:FlowMovingDevice rdf:type owl:Class ;
                       rdfs:subClassOf bldg:DistributionFlowDevice ;
                       rdfs:comment "The distribution flow element IfcFlowMovingDevice defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system. Its type is defined by IfcFlowMovingDeviceType or its subtypes."@en ;
                       rdfs:label "Flow moving device"@en ;
-                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowMovingDevice" .
+                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowMovingDevice" ;
+                      prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowmovingdevice.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FlowStorageDevice
@@ -2770,7 +2835,8 @@ bldg:FlowStorageDevice rdf:type owl:Class ;
                        rdfs:subClassOf bldg:DistributionFlowDevice ;
                        rdfs:comment "The distribution flow element IfcFlowStorageDevice defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank). Its type is defined by IfcFlowStorageDeviceType or its subtypes."@en ;
                        rdfs:label "Flow storage device"@en ;
-                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowStorageDevice" .
+                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowStorageDevice" ;
+                       prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowstoragedevice.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FlowTerminal
@@ -2778,7 +2844,8 @@ bldg:FlowTerminal rdf:type owl:Class ;
                   rdfs:subClassOf bldg:DistributionFlowDevice ;
                   rdfs:comment "The distribution flow element IfcFlowTerminal defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment. Its type is defined by IfcFlowTerminalType or its subtypes."@en ;
                   rdfs:label "Flow terminal"@en ;
-                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowTerminal" .
+                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowTerminal" ;
+                  prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowterminal.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#FlowTreatmentDevice
@@ -2786,7 +2853,8 @@ bldg:FlowTreatmentDevice rdf:type owl:Class ;
                          rdfs:subClassOf bldg:DistributionFlowDevice ;
                          rdfs:comment "The distribution flow element IfcFlowTreatmentDevice defines the occurrence of a device typically used to remove unwanted matter from a fluid, either liquid or gas, and typically participates in a flow distribution system. Its type is defined by IfcFlowTreatmentDeviceType or its subtypes."@en ;
                          rdfs:label "Flow treatment device"@en ;
-                         rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowTreatmentDevice" .
+                         rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcFlowTreatmentDevice" ;
+                         prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowtreatmentdevice.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#HeatExchanger
@@ -2800,7 +2868,9 @@ bldg:HeatExchanger rdf:type owl:Class ;
 
 IfcHeatExchanger is commonly used on water-side distribution systems to recover energy from a liquid to another liquid (typically water-based), whereas IfcAirToAirHeatRecovery is commonly used on air-side distribution systems to recover energy from a gas to a gas (usually air)."""@en ;
                    rdfs:label "Heat exchanger"@en ;
-                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcHeatExchanger" .
+                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcHeatExchanger" ;
+                   prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcheatexchanger.htm> ,
+                                         <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_heatexchangertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Humidifier
@@ -2832,7 +2902,9 @@ bldg:Humidifier rdf:type owl:Class ;
                                 ] ;
                 rdfs:comment "A humidifier is a device that adds moisture into the air."@en ;
                 rdfs:label "Humidifier"@en ;
-                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcHumidifier" .
+                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcHumidifier" ;
+                prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifchumidifier.htm> ,
+                                      <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_humidifiertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Interceptor
@@ -2872,7 +2944,9 @@ bldg:Interceptor rdf:type owl:Class ;
                                  ] ;
                  rdfs:comment "An interceptor is a device designed and installed in order to separate and retain deleterious, hazardous or undesirable matter while permitting normal sewage or liquids to discharge into a collection system by gravity."@en ;
                  rdfs:label "Interceptor"@en ;
-                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcInterceptor" .
+                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcInterceptor" ;
+                 prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/lexical/ifcinterceptor.htm> ,
+                                       <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/pset/pset_interceptortypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Lamp
@@ -2920,7 +2994,9 @@ bldg:Lamp rdf:type owl:Class ;
                           ] ;
           rdfs:comment "A lamp is an artificial light source such as a light bulb or tube."@en ;
           rdfs:label "Lamp"@en ;
-          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcLamp" .
+          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcLamp" ;
+          prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifclamp.htm> ,
+                                <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_lamptypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Measurement
@@ -2964,7 +3040,9 @@ bldg:MedicalDevice rdf:type owl:Class ;
                    rdfs:subClassOf bldg:FlowTerminal ;
                    rdfs:comment "A medical device is attached to a medical piping system and operates upon medical gases to perform a specific function. Medical gases include medical air, medical vacuum, oxygen, carbon dioxide, nitrogen, and nitrous oxide."@en ;
                    rdfs:label "Medical device"@en ;
-                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcMedicalDevice" .
+                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcMedicalDevice" ;
+                   prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcmedicaldevice.htm> ,
+                                         <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_medicaldevicetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Outlet
@@ -2982,7 +3060,9 @@ bldg:Outlet rdf:type owl:Class ;
 
 Power outlets are commonly connected within a junction box; data outlets may be directly connected to a wall. For power outlets sharing the same circuit within a junction box, the ports should indicate the logical wiring relationship to the enclosing junction box, even though they may be physically connected to a cable going to another outlet, switch, or fixture."""@en ;
             rdfs:label "Outlet"@en ;
-            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcOutlet" .
+            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcOutlet" ;
+            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcoutlet.htm> ,
+                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_outlettypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#PhysicalObject
@@ -3019,7 +3099,9 @@ bldg:ProtectiveDevice rdf:type owl:Class ;
 
 A protective device provides protection against electrical current only (not as a general protective device). It may be used to represent the complete set of elements including both the tripping unit and the breaking unit that provide the protection. This may be particularly useful at earlier stages of design where the approach to breaking the electrical supply may be determined but the method of tripping may not. Alternatively, this entity may be used to specifically represent the breaking unit alone (in which case the tripping unit will also be specifically identified). This entity is specific to dedicated protective devices and excludes electrical outlets that may have circuit protection."""@en ;
                       rdfs:label "Protective device"@en ;
-                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDevice" .
+                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDevice" ;
+                      prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcprotectivedevice.htm> ,
+                                            <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_protectivedevicetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#ProtectiveDeviceTrippingUnit
@@ -3035,7 +3117,9 @@ bldg:ProtectiveDeviceTrippingUnit rdf:type owl:Class ;
                                                   ] ;
                                   rdfs:comment "A protective device tripping unit breaks an electrical circuit at a separate breaking unit when a stated electric current that passes through the unit is exceeded."@en ;
                                   rdfs:label "Protective device tripping unit"@en ;
-                                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDeviceTrippingUnit" .
+                                  rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDeviceTrippingUnit" ;
+                                  prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcprotectivedevicetrippingunit.htm> ,
+                                                        <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_protectivedevicetrippingunittypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Pump
@@ -3079,7 +3163,9 @@ bldg:Pump rdf:type owl:Class ;
                           ] ;
           rdfs:comment "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en ;
           rdfs:label "Pump"@en ;
-          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcPump" .
+          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcPump" ;
+          prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcpump.htm> ,
+                                <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_pumptypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#SanitaryTerminal
@@ -3087,7 +3173,9 @@ bldg:SanitaryTerminal rdf:type owl:Class ;
                       rdfs:subClassOf bldg:FlowTerminal ;
                       rdfs:comment "A sanitary terminal is a fixed appliance or terminal usually supplied with water and used for drinking, cleaning or foul water disposal or that is an item of equipment directly used with such an appliance or terminal."@en ;
                       rdfs:label "Sanitary terminal"@en ;
-                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSanitaryTerminal" .
+                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSanitaryTerminal" ;
+                      prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/lexical/ifcsanitaryterminal.htm> ,
+                                            <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/pset/pset_sanitaryterminaltypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Sensor
@@ -3096,7 +3184,9 @@ bldg:Sensor rdf:type owl:Class ;
                             saref:Sensor ;
             rdfs:comment "A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument."@en ;
             rdfs:label "sensor"@en ;
-            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSensor" .
+            rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSensor" ;
+            prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcsensor.htm> ,
+                                  <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_sensortypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#ShadingDevice
@@ -3140,7 +3230,9 @@ bldg:ShadingDevice rdf:type owl:Class ;
                                    ] ;
                    rdfs:comment "Shading devices are purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable."@en ;
                    rdfs:label "Shading device"@en ;
-                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcShadingDevice" .
+                   rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcShadingDevice" ;
+                   prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgelements/lexical/ifcshadingdevice.htm> ,
+                                         <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgelements/pset/pset_shadingdevicecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#SolarDevice
@@ -3148,7 +3240,9 @@ bldg:SolarDevice rdf:type owl:Class ;
                  rdfs:subClassOf bldg:EnergyConversionDevice ;
                  rdfs:comment "A solar device converts solar radiation into other energy such as electric current or thermal energy."@en ;
                  rdfs:label "solar device"@en ;
-                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSolarDevice" .
+                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSolarDevice" ;
+                 prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcsolardevicetypeenum.htm> ,
+                                       <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_solardevicetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#SpaceHeater
@@ -3202,7 +3296,9 @@ bldg:SpaceHeater rdf:type owl:Class ;
 
 IfcUnitaryEquipment should be used for packaged units supporting a combination of heating, cooling, and/or dehumidification; IfcCoil should be used for coil-based floor heating."""@en ;
                  rdfs:label "Space heater"@en ;
-                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSpaceHeater" .
+                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSpaceHeater" ;
+                 prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcspaceheater.htm> ,
+                                       <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_spaceheatertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#SwitchingDevice
@@ -3232,7 +3328,9 @@ bldg:SwitchingDevice rdf:type owl:Class ;
 
 Switches include those used for electrical power, communications, audio-visual, or other distribution system types as determined by the available ports."""@en ;
                      rdfs:label "Switching device"@en ;
-                     rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSwitchingDevice" .
+                     rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcSwitchingDevice" ;
+                     prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcswitchingdevice.htm> ,
+                                           <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_switchingdevicetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Tank
@@ -3292,7 +3390,9 @@ bldg:Tank rdf:type owl:Class ;
                           ] ;
           rdfs:comment "A tank is a vessel or container in which a fluid or gas is stored for later use."@en ;
           rdfs:label "Tank"@en ;
-          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTank" .
+          rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTank" ;
+          prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifctank.htm> ,
+                                <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_tanktypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Transformer
@@ -3366,7 +3466,9 @@ bldg:Transformer rdf:type owl:Class ;
 
 IfcTransformer is used to transform electric power; conversion of electric signals for other purposes is handled at other entities: IfcController converts arbitrary signals, IfcAudioVisualAppliance converts signals for audio or video streams, and IfcCommunicationsAppliance converts signals for data or other communications usage."""@en ;
                  rdfs:label "Transformer"@en ;
-                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTransformer" .
+                 rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTransformer" ;
+                 prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifctransformer.htm> ,
+                                       <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_transformertypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#TransportElement
@@ -3386,7 +3488,9 @@ bldg:TransportElement rdf:type owl:Class ;
                                       ] ;
                       rdfs:comment "A transport element is a generalization of all transport related objects that move people, animals or goods within a building or building complex. The IfcTransportElement defines the occurrence of a transport element, that (if given), is expressed by the IfcTransportElementType. "@en ;
                       rdfs:label "Transport element"@en ;
-                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTransportElement" .
+                      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTransportElement" ;
+                      prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifctransportelement.htm> ,
+                                            <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/pset/pset_transportelementcommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#TubeBundle
@@ -3450,7 +3554,9 @@ bldg:TubeBundle rdf:type owl:Class ;
                                 ] ;
                 rdfs:comment "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."@en ;
                 rdfs:label "Tube bundle"@en ;
-                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTubeBundle" .
+                rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcTubeBundle" ;
+                prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifctubebundle.htm> ,
+                                      <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_tubebundletypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#UnitaryControlElement
@@ -3460,7 +3566,15 @@ bldg:UnitaryControlElement rdf:type owl:Class ;
 
 A unitary control element provides a housing for an aggregation of control or electrical distribution elements that, in combination, perform a singular (unitary) purpose. Each item in the aggregation may have its own geometric representation and location."""@en ;
                            rdfs:label "Unitary control element"@en ;
-                           rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcUnitaryControlElement" .
+                           rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcUnitaryControlElement" ;
+                           prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcunitarycontrolelement.htm> ,
+                                                 <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_unitarycontrolelementtypecommon.htm> .
+
+
+###  http://saref.linkeddata.es/def/bldg#UnitaryEquipment
+bldg:UnitaryEquipment rdf:type owl:Class ;
+                      prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcunitaryequipment.htm> ,
+                                            <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_unitaryequipmenttypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#Valve
@@ -3500,7 +3614,9 @@ bldg:Valve rdf:type owl:Class ;
                            ] ;
            rdfs:comment "A valve is used in a building services piping distribution system to control or modulate the flow of the fluid."@en ;
            rdfs:label "Valve"@en ;
-           rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcValve" .
+           rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcValve" ;
+           prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcvalve.htm> ,
+                                 <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_valvetypecommon.htm> .
 
 
 ###  http://saref.linkeddata.es/def/bldg#VibrationIsolator
@@ -3528,7 +3644,9 @@ bldg:VibrationIsolator rdf:type owl:Class ;
                                        ] ;
                        rdfs:comment "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a building."@en ;
                        rdfs:label "Vibration isolator"@en ;
-                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcVibrationIsolator" .
+                       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcVibrationIsolator" ;
+                       prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcvibrationisolator.htm> ,
+                                             <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_vibrationisolatortypecommon.htm> .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
