@@ -36,14 +36,14 @@
 
 ###  http://saref.linkeddata.es/def/envi#affectsProperty
 :affectsProperty rdf:type owl:ObjectProperty ;
-                 rdfs:comment ""@en ;
+                 rdfs:comment "A relation between an actuator with the property or properties it can act on"@en ;
                  rdfs:label "affects property"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#contains
 :contains rdf:type owl:ObjectProperty ;
           owl:inverseOf :isContainedIn ;
-          rdfs:comment ""@en ;
+          rdfs:comment "A relation between a physical object and the physical objects that can be contained in it."@en ;
           rdfs:label "contains"@en .
 
 
@@ -51,13 +51,13 @@
 :encapsulates rdf:type owl:ObjectProperty ;
               owl:inverseOf :hasDigitalRepresentation ;
               rdf:type owl:FunctionalProperty ;
-              rdfs:comment ""@en ;
+              rdfs:comment "A relation between a digital representation and the physical objects it represents."@en ;
               rdfs:label "encapsulates"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasColor
 :hasColor rdf:type owl:ObjectProperty ;
-          rdfs:comment ""@en ;
+          rdfs:comment "A relation between a light emitted and its color."@en ;
           rdfs:label "has color"@en .
 
 
@@ -65,112 +65,113 @@
 :hasComponent rdf:type owl:ObjectProperty ;
               owl:inverseOf :isComponentOf ;
               rdf:type owl:TransitiveProperty ;
-              rdfs:comment ""@en ;
+              rdfs:comment "A relation between a system and the system in which it might be decomposed."@en ;
               rdfs:label "has component"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasDigitalRepresentation
 :hasDigitalRepresentation rdf:type owl:ObjectProperty ,
                                    owl:InverseFunctionalProperty ;
-                          rdfs:comment ""@en ;
+                          rdfs:comment "A relation between a physical object and the digital representation in which it is encapsulated."@en ;
                           rdfs:label "has digital representation"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasGeometry
 :hasGeometry rdf:type owl:ObjectProperty ;
-             rdfs:comment ""@en ;
+             rdfs:comment "A relation between a light emitted and the shape it is projected in."@en ;
              rdfs:label "has geometry"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasLightPoint
 :hasLightPoint rdf:type owl:ObjectProperty ;
-               rdfs:comment ""@en ;
+               rdfs:comment "A relation between a lamppost and its light points"@en ;
                rdfs:label "has light point"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasMeasurementFrequency
 :hasMeasurementFrequency rdf:type owl:ObjectProperty ;
-                         rdfs:comment ""@en ;
+                         rdfs:comment "The relation between a device and the frequency in which it makes measurements."@en ;
                          rdfs:label "has measurement frequency"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasTransmissionPeriod
 :hasTransmissionPeriod rdf:type owl:ObjectProperty ;
-                       rdfs:comment ""@en ;
+                       rdfs:comment "The relation between a device and the period in which it transmit information."@en ;
                        rdfs:label "has transmission period"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isAccesibleThrough
 :isAccesibleThrough rdf:type owl:ObjectProperty ,
                              owl:FunctionalProperty ;
-                    rdfs:comment ""@en ;
+                    rdfs:comment "The relation between a digital representation and the service which it is accesible through."@en ;
                     rdfs:label "is accesible through"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isComponentOf
 :isComponentOf rdf:type owl:ObjectProperty ,
                         owl:TransitiveProperty ;
-               rdfs:comment ""@en ;
+               rdfs:comment "A relation between a system and the system it belongs to as a component."@en ;
                rdfs:label "is component of"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isConnectedTo
 :isConnectedTo rdf:type owl:ObjectProperty ,
                         owl:SymmetricProperty ;
-               rdfs:comment ""@en ;
+               rdfs:comment "A relation between a system and the system to which it is connected."@en ;
                rdfs:label "is connected to"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isContainedIn
 :isContainedIn rdf:type owl:ObjectProperty ;
+               rdfs:comment "A relation between a physical object and the physical object in which it might be contained."@en ;
                rdfs:label "is contained in"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isProjectedFromHeight
 :isProjectedFromHeight rdf:type owl:ObjectProperty ;
-                       rdfs:comment ""@en ;
+                       rdfs:comment "A relation between a light and the height measurement from which it is projected."@en ;
                        rdfs:label "is projected from height"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#isProjectedInDirection
 :isProjectedInDirection rdf:type owl:ObjectProperty ;
-                        rdfs:comment ""@en ;
+                        rdfs:comment "A relation between a light and the direction in which it is projected."@en ;
                         rdfs:label "is projected in direction"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#makesMeasurement
 :makesMeasurement rdf:type owl:ObjectProperty ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "A relation between a sensor and the measurements it makes. Such measurement will link together the valur of the measurement, its unit of measure and the property to which it relates."@en ;
                   rdfs:label "makes measurement"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#measuresProperty
 :measuresProperty rdf:type owl:ObjectProperty ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "A relation between a sensor and the property o properties it can take measurement about."@en ;
                   rdfs:label "measures property"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#projectsLight
 :projectsLight rdf:type owl:ObjectProperty ;
-               rdfs:comment ""@en ;
+               rdfs:comment "A relation between a lamppost or a light point and the light (or lights) they might project."@en ;
                rdfs:label "projects light"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#relatesToProperty
 :relatesToProperty rdf:type owl:ObjectProperty ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "A relation between a measurement and the property such measurement is about."@en ;
                    rdfs:label "relates to property"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#usesCommunicationInterface
 :usesCommunicationInterface rdf:type owl:ObjectProperty ;
-                            rdfs:comment ""@en ;
+                            rdfs:comment "A relation between a system and the communication interface it uses."@en ;
                             rdfs:label "uses communication interface"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#usesCommunicationProtocol
 :usesCommunicationProtocol rdf:type owl:ObjectProperty ;
-                           rdfs:comment ""@en ;
+                           rdfs:comment "A relation between a system and the communication protocol it uses."@en ;
                            rdfs:label "uses communication protocol"@en .
 
 
@@ -183,7 +184,8 @@ geo:location rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/saref#isMeasuredIn
 saref:isMeasuredIn rdf:type owl:ObjectProperty ;
-                   rdfs:comment "is measured in"@en .
+                   rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en ,
+                                "is measured in"@en .
 
 
 #################################################################
@@ -194,7 +196,7 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
 :hasCreationDate rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:range xsd:dateTime ;
-                 rdfs:comment ""@en ;
+                 rdfs:comment "A relationship defining the creation date of an entity (e.g., a digital representation)."@en ;
                  rdfs:label "has creation date"@en .
 
 
@@ -202,7 +204,7 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
 :hasFlash rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
           rdfs:range xsd:boolean ;
-          rdfs:comment ""@en ;
+          rdfs:comment "A relationship stating whether a light has flash."@en ;
           rdfs:label "has flash"@en .
 
 
@@ -217,14 +219,14 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
 :hasProjectionAngle rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
                     rdfs:range xsd:float ;
-                    rdfs:comment ""@en ;
+                    rdfs:comment "A relationship defining the projection angle of an entity (e.g., a light)."@en ;
                     rdfs:label "has projection angle"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasRevisionNumber
 :hasRevisionNumber rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:string ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "A relationship defining the revision number of a certain entity (e.g., a device)"@en ;
                    rdfs:label "has revision number"@en .
 
 
@@ -232,14 +234,14 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
 :hasShield rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:range xsd:boolean ;
-           rdfs:comment ""@en ;
+           rdfs:comment "A relationship stating whether a lamppost has a shield."@en ;
            rdfs:label "has shield"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasTag
 :hasTag rdf:type owl:DatatypeProperty ;
         rdfs:range xsd:string ;
-        rdfs:comment ""@en ;
+        rdfs:comment "A relationship stating the tags that can be assigned to an entity (e.g., a digital representation)."@en ;
         rdfs:label "has tag"@en .
 
 
@@ -247,7 +249,7 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
 :hasTimestamp rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
               rdfs:range xsd:dateTime ;
-              rdfs:comment ""@en ;
+              rdfs:comment "A relationship stating the timestamp of an entity (e.g. a measurement)."@en ;
               rdfs:label "has timestamp"@en .
 
 
@@ -255,27 +257,35 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
 :hasVersion rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
             rdfs:range xsd:string ;
-            rdfs:comment ""@en ;
+            rdfs:comment "A relationship defining the version  of a certain entity (e.g., a device)"@en ;
             rdfs:label "has version"@en .
 
 
 ###  https://w3id.org/saref#hasDescription
 saref:hasDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "A relationship providing a description of an entity (e.g., device)"@en ;
+                     rdfs:isDefinedBy saref: ;
                      rdfs:label "has description"@en .
 
 
 ###  https://w3id.org/saref#hasManufacturer
 saref:hasManufacturer rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "A relationship identifying the manufacturer of an entity (e.g., device)"@en ;
+                      rdfs:isDefinedBy saref: ;
                       rdfs:label "has manufacturer"@en .
 
 
 ###  https://w3id.org/saref#hasName
 saref:hasName rdf:type owl:DatatypeProperty ;
+              rdfs:comment "A relationship providing the name of an entity (e.g., device)"@en ;
+              rdfs:isDefinedBy saref: ;
               rdfs:label "has name"@en .
 
 
 ###  https://w3id.org/saref#hasValue
 saref:hasValue rdf:type owl:DatatypeProperty ;
+               rdfs:comment "A relationship defining the value of a certain property, e.g., energy or power"@en ;
+               rdfs:isDefinedBy saref: ;
                rdfs:label "has value"@en .
 
 
@@ -740,145 +750,157 @@ saref:UnitOfMeasure rdf:type owl:Class ;
 ###  http://saref.linkeddata.es/def/envi#Fluorescence
 :Fluorescence rdf:type owl:NamedIndividual ,
                        :LightProperty ;
-              rdfs:comment ""@en ;
+              rdfs:comment "An individual representing the light property fluorescence."@en ;
               rdfs:label "Fluorescence"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#Frequency
 :Frequency rdf:type owl:NamedIndividual ,
                     :Property ;
-           rdfs:comment ""@en ;
+           rdfs:comment "An individual representing the property frequency."@en ;
            rdfs:label "Frequency"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#Height
 :Height rdf:type owl:NamedIndividual ,
                  :Property ;
-        rdfs:comment ""@en ;
+        rdfs:comment "An individual representing the property height."@en ;
         rdfs:label "Height"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#Illuminance
 :Illuminance rdf:type owl:NamedIndividual ,
                       :LightProperty ;
-             rdfs:comment ""@en ;
+             rdfs:comment "An individual representing the light property illuminance."@en ;
              rdfs:label "Illuminance"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#Irradiance
 :Irradiance rdf:type owl:NamedIndividual ,
                      :LightProperty ;
-            rdfs:comment ""@en ;
+            rdfs:comment "An individual representing the light property irradiance."@en ;
             rdfs:label "Irradiance"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#LightAbsorption
 :LightAbsorption rdf:type owl:NamedIndividual ,
                           :LightProperty ;
-                 rdfs:comment ""@en ;
+                 rdfs:comment "An individual representing the light property light absorption."@en ;
                  rdfs:label "Light absorption"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#LightMagnitude
 :LightMagnitude rdf:type owl:NamedIndividual ,
                          :LightProperty ;
-                rdfs:comment ""@en ;
+                rdfs:comment "An individual representing the light property light magnitude."@en ;
                 rdfs:label "Light magnitude"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#Luminiscence
 :Luminiscence rdf:type owl:NamedIndividual ,
                        :LightProperty ;
-              rdfs:comment ""@en ;
+              rdfs:comment "An individual representing the light property luminiscence."@en ;
               rdfs:label "Luminiscence"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#Period
 :Period rdf:type owl:NamedIndividual ,
                  :Property ;
-        rdfs:comment ""@en ;
+        rdfs:comment "An individual representing the property period."@en ;
         rdfs:label "Period"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#Phosphorescence
 :Phosphorescence rdf:type owl:NamedIndividual ,
                           :LightProperty ;
-                 rdfs:comment ""@en ;
+                 rdfs:comment "An individual representing the light property phosphorescence."@en ;
                  rdfs:label "Phosphorescence"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#ReflectionOfLight
 :ReflectionOfLight rdf:type owl:NamedIndividual ,
                             :LightProperty ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "An individual representing the light property reflection of light."@en ;
                    rdfs:label "Reflection of light"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#ScatteringOfLight
 :ScatteringOfLight rdf:type owl:NamedIndividual ,
                             :LightProperty ;
-                   rdfs:comment ""@en ;
+                   rdfs:comment "An individual representing the light property scattering of light."@en ;
                    rdfs:label "Scattering of light"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/centimetre
 <http://www.wurvoc.org/vocabularies/om-1.8/centimetre> rdf:type owl:NamedIndividual ,
-                                                                :LengthUnit .
+                                                                :LengthUnit ;
+                                                       rdfs:label "Centimetre"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/decametre
 <http://www.wurvoc.org/vocabularies/om-1.8/decametre> rdf:type owl:NamedIndividual ,
-                                                               :LengthUnit .
+                                                               :LengthUnit ;
+                                                      rdfs:label "Decametre"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/decimetre
 <http://www.wurvoc.org/vocabularies/om-1.8/decimetre> rdf:type owl:NamedIndividual ,
-                                                               :LengthUnit .
+                                                               :LengthUnit ;
+                                                      rdfs:label "Decimetre"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/hectometre
 <http://www.wurvoc.org/vocabularies/om-1.8/hectometre> rdf:type owl:NamedIndividual ,
-                                                                :LengthUnit .
+                                                                :LengthUnit ;
+                                                       rdfs:label "Hectometre"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/hertz
 <http://www.wurvoc.org/vocabularies/om-1.8/hertz> rdf:type owl:NamedIndividual ,
-                                                           :FrequencyUnit .
+                                                           :FrequencyUnit ;
+                                                  rdfs:label "Hertz"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/kilometre
 <http://www.wurvoc.org/vocabularies/om-1.8/kilometre> rdf:type owl:NamedIndividual ,
-                                                               :LengthUnit .
+                                                               :LengthUnit ;
+                                                      rdfs:label "Kilometre"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/metre
 <http://www.wurvoc.org/vocabularies/om-1.8/metre> rdf:type owl:NamedIndividual ,
-                                                           :LengthUnit .
+                                                           :LengthUnit ;
+                                                  rdfs:label "Metre"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/millimetre
 <http://www.wurvoc.org/vocabularies/om-1.8/millimetre> rdf:type owl:NamedIndividual ,
-                                                                :LengthUnit .
+                                                                :LengthUnit ;
+                                                       rdfs:label "Milimetre"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day
 <http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day> rdf:type owl:NamedIndividual ,
-                                                                    :FrequencyUnit .
+                                                                    :FrequencyUnit ;
+                                                           rdfs:label "Reciprocal day"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour
 <http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour> rdf:type owl:NamedIndividual ,
-                                                                     :FrequencyUnit .
+                                                                     :FrequencyUnit ;
+                                                            rdfs:label "Reciprocal hour"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time
 <http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> rdf:type owl:NamedIndividual ,
-                                                                            :FrequencyUnit .
+                                                                            :FrequencyUnit ;
+                                                                   rdfs:label "Reciprocal second"@en .
 
 
 ###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year
 <http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year> rdf:type owl:NamedIndividual ,
-                                                                     :FrequencyUnit .
+                                                                     :FrequencyUnit ;
+                                                            rdfs:label "Reciprocal year"@en .
 
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
