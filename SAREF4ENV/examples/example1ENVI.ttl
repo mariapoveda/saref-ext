@@ -1,0 +1,356 @@
+@prefix : <http://saref.linkeddata.es/def/bldg#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://saref.linkeddata.es/def/envi/example1> .
+
+<http://saref.linkeddata.es/def/envi/example1> rdf:type owl:Ontology ;
+                                                owl:versionIRI <http://saref.linkeddata.es/def/v1/envi/example1> ;
+                                                dcterms:creator <http://purl.org/net/mpoveda> ;
+                                                rdfs:comment "Example of use for the SAREF extension for environment"@en ;
+                                                dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                                dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                owl:versionInfo "1.0" ;
+                                                dc:publisher <http://www.oeg-upm.net/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/dateCopyrighted
+dcterms:dateCopyrighted rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rightsHolder
+dcterms:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#hadPrimarySource
+prov:hadPrimarySource rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://saref.linkeddata.es/def/bldg#isContainedIn
+:isContainedIn rdf:type owl:ObjectProperty ,
+                        owl:TransitiveProperty ;
+               rdfs:comment "A relation between an object and the physical space in which it is located."@en ;
+               rdfs:label "is contained in"@en .
+
+
+###  http://saref.linkeddata.es/def/envi#hasMeasurementFrequency
+<http://saref.linkeddata.es/def/envi#hasMeasurementFrequency> rdf:type owl:ObjectProperty .
+
+
+###  http://saref.linkeddata.es/def/envi#hasTransmissionPeriod
+<http://saref.linkeddata.es/def/envi#hasTransmissionPeriod> rdf:type owl:ObjectProperty .
+
+
+###  http://saref.linkeddata.es/def/envi#makesMeasurement
+<http://saref.linkeddata.es/def/envi#makesMeasurement> rdf:type owl:ObjectProperty .
+
+
+###  http://saref.linkeddata.es/def/envi#measuresProperty
+<http://saref.linkeddata.es/def/envi#measuresProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://saref.linkeddata.es/def/envi#relatesToProperty
+<http://saref.linkeddata.es/def/envi#relatesToProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://saref.linkeddata.es/def/envi#usesCommunicationInterface
+<http://saref.linkeddata.es/def/envi#usesCommunicationInterface> rdf:type owl:ObjectProperty .
+
+
+###  http://saref.linkeddata.es/def/envi#usesCommunicationProtocol
+<http://saref.linkeddata.es/def/envi#usesCommunicationProtocol> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
+                                                   rdfs:comment "The relation between something and the point,  or other geometrical thing in space, where it is.  For example, the realtionship between a radio tower and a Point with a given lat and long. Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points). Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping ."@en ;
+                                                   rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+                                                   rdfs:label "location"@en .
+
+
+###  https://w3id.org/saref#hasConsumption
+saref:hasConsumption rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/saref#isMeasuredIn
+saref:isMeasuredIn rdf:type owl:ObjectProperty ;
+                   rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en ;
+                   rdfs:label "is measured in"@en .
+
+
+###  https://w3id.org/saref4ee#exposes
+<https://w3id.org/saref4ee#exposes> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://saref.linkeddata.es/def/envi#hasTimestamp
+<http://saref.linkeddata.es/def/envi#hasTimestamp> rdf:type owl:DatatypeProperty .
+
+
+###  http://saref.linkeddata.es/def/envi#hasVersion
+<http://saref.linkeddata.es/def/envi#hasVersion> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#latitude
+<http://www.w3.org/2003/01/geo/wgs84_pos#latitude> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#longitude
+<http://www.w3.org/2003/01/geo/wgs84_pos#longitude> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/saref#hasManufacturer
+saref:hasManufacturer rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/saref#hasName
+saref:hasName rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/saref#hasValue
+saref:hasValue rdf:type owl:DatatypeProperty ;
+               rdfs:comment "A relationship defining the value of a certain property, e.g., energy or power"@en ;
+               rdfs:isDefinedBy saref: ;
+               rdfs:label "has value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://saref.linkeddata.es/def/envi#CommunicationInterface
+<http://saref.linkeddata.es/def/envi#CommunicationInterface> rdf:type owl:Class .
+
+
+###  http://saref.linkeddata.es/def/envi#CommunicationProtocol
+<http://saref.linkeddata.es/def/envi#CommunicationProtocol> rdf:type owl:Class .
+
+
+###  http://saref.linkeddata.es/def/envi#FrequencyMeasurement
+<http://saref.linkeddata.es/def/envi#FrequencyMeasurement> rdf:type owl:Class .
+
+
+###  http://saref.linkeddata.es/def/envi#FrequencyUnit
+<http://saref.linkeddata.es/def/envi#FrequencyUnit> rdf:type owl:Class .
+
+
+###  http://saref.linkeddata.es/def/envi#LightProperty
+<http://saref.linkeddata.es/def/envi#LightProperty> rdf:type owl:Class .
+
+
+###  http://saref.linkeddata.es/def/envi#Measurement
+<http://saref.linkeddata.es/def/envi#Measurement> rdf:type owl:Class .
+
+
+###  http://saref.linkeddata.es/def/envi#PeriodMeasurement
+<http://saref.linkeddata.es/def/envi#PeriodMeasurement> rdf:type owl:Class .
+
+
+###  http://saref.linkeddata.es/def/envi#TESS
+<http://saref.linkeddata.es/def/envi#TESS> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
+                                                       rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
+                                                       rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+                                                       rdfs:label "Spatial thing"@en .
+
+
+###  http://www.w3.org/2006/time#TemporalUnit
+<http://www.w3.org/2006/time#TemporalUnit> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#PowerUnit
+saref:PowerUnit rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#UnitOfMeasure
+saref:UnitOfMeasure rdf:type owl:Class ;
+                    rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
+                    rdfs:isDefinedBy saref: ;
+                    rdfs:label "Unit of measure"@en .
+
+
+###  https://w3id.org/saref4ee#Power
+<https://w3id.org/saref4ee#Power> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref4ee#PowerProfile
+<https://w3id.org/saref4ee#PowerProfile> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://saref.linkeddata.es/def/bldg#LocationTESS005-UCM
+:LocationTESS005-UCM rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                     <http://www.w3.org/2003/01/geo/wgs84_pos#latitude> "40.451"^^xsd:float ;
+                     <http://www.w3.org/2003/01/geo/wgs84_pos#longitude> "-3.7261"^^xsd:float ;
+                     rdfs:label "Location of photometer TESS stars5"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#PowerProfileTESS005-UCM
+:PowerProfileTESS005-UCM rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref4ee#PowerProfile> ;
+                         saref:hasConsumption :PowerTESS005-UCM ;
+                         rdfs:label "Power profile of photometer TESS stars5"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#PowerTESS005-UCM
+:PowerTESS005-UCM rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/saref4ee#Power> ;
+                  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/watt> ;
+                  saref:hasValue "20.0"^^xsd:float ;
+                  rdfs:label "Power of photometer TESS stars5"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#TESS005-UCM
+:TESS005-UCM rdf:type owl:NamedIndividual ,
+                      <http://saref.linkeddata.es/def/envi#TESS> ;
+             <http://saref.linkeddata.es/def/envi#hasMeasurementFrequency> :FequencyMeasurementTESS005-UCM ;
+             <http://saref.linkeddata.es/def/envi#hasTransmissionPeriod> :PeriodMeasurementTESS005-UCM ;
+             <http://saref.linkeddata.es/def/envi#makesMeasurement> :Measurement2016-10-05T08:15:30TESS005-UCM ,
+                                                                    :Measurement2016-10-05T08:15:40TESS005-UCM ;
+             <http://saref.linkeddata.es/def/envi#measuresProperty> <http://saref.linkeddata.es/def/envi#LightMagnitude> ;
+             <http://saref.linkeddata.es/def/envi#usesCommunicationInterface> :Bluettothv2.1 ,
+                                                                              :RS232v24 ,
+                                                                              :Wi-Fiv802.11ah ;
+             <http://saref.linkeddata.es/def/envi#usesCommunicationProtocol> :MQTT-Broker ;
+             <http://www.w3.org/2003/01/geo/wgs84_pos#location> :LocationTESS005-UCM ;
+             <https://w3id.org/saref4ee#exposes> :PowerProfileTESS005-UCM ;
+             <http://saref.linkeddata.es/def/envi#hasVersion> "v1"^^xsd:string ;
+             saref:hasManufacturer "Universidad Complutense de Madrid"^^xsd:string ;
+             saref:hasName "stars5"^^xsd:string ;
+             rdfs:label "TESS photometer stars5"@en .
+
+
+###  http://saref.linkeddata.es/def/envi#LightMagnitude
+<http://saref.linkeddata.es/def/envi#LightMagnitude> rdf:type owl:NamedIndividual ,
+                                                              <http://saref.linkeddata.es/def/envi#LightProperty> .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#Bluettothv2.1
+:Bluettothv2.1 rdf:type owl:NamedIndividual ,
+                        <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
+               <http://saref.linkeddata.es/def/envi#hasVersion> "v2.1"^^xsd:string ;
+               rdfs:label "Bluettoth v2.1"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#FequencyMeasurementTESS005-UCM
+:FequencyMeasurementTESS005-UCM rdf:type owl:NamedIndividual ,
+                                         <http://saref.linkeddata.es/def/envi#FrequencyMeasurement> ;
+                                saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> ;
+                                saref:hasValue "10.0"^^xsd:float ;
+                                rdfs:label "FequencyMeasurementTESS005-UCM"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#MQTT-Broker
+:MQTT-Broker rdf:type owl:NamedIndividual ,
+                      <http://saref.linkeddata.es/def/envi#CommunicationProtocol> ;
+             rdfs:label "MQTT-Broker"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#PeriodMeasurementTESS005-UCM
+:PeriodMeasurementTESS005-UCM rdf:type owl:NamedIndividual ,
+                                       <http://saref.linkeddata.es/def/envi#PeriodMeasurement> ;
+                              saref:isMeasuredIn <http://www.w3.org/2006/time#unitSecond> ;
+                              saref:hasValue "30.0"^^xsd:float ;
+                              rdfs:label "PeriodMeasurementTESS005-UCM"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#RS232v24
+:RS232v24 rdf:type owl:NamedIndividual ,
+                   <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
+          <http://saref.linkeddata.es/def/envi#hasVersion> "v24"^^xsd:string ;
+          rdfs:label "RS232 v24"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#Wi-Fiv802.11ah
+:Wi-Fiv802.11ah rdf:type owl:NamedIndividual ,
+                         <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
+                <http://saref.linkeddata.es/def/envi#hasVersion> "802.11ah"^^xsd:string ;
+                rdfs:label "Wi-Fi v802.11ah"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#mgPerarcsec2
+:mgPerarcsec2 rdf:type owl:NamedIndividual ,
+                       saref:UnitOfMeasure ;
+              rdfs:label "mgPerarcsec2"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#Measurement2016-10-05T08:15:30TESS005-UCM
+:Measurement2016-10-05T08:15:30TESS005-UCM rdf:type owl:NamedIndividual ,
+                                                    <http://saref.linkeddata.es/def/envi#Measurement> ;
+                                           <http://saref.linkeddata.es/def/envi#relatesToProperty> <http://saref.linkeddata.es/def/envi#LightMagnitude> ;
+                                           saref:isMeasuredIn :mgPerarcsec2 ;
+                                           <http://saref.linkeddata.es/def/envi#hasTimestamp> "2016-10-05T08:15:30"^^xsd:dateTime ;
+                                           saref:hasValue "0.1"^^xsd:float ;
+                                           rdfs:label "Measurement 2016-10-05T08:15:30 TESS005-UCM"@en .
+
+
+###  http://saref.linkeddata.es/def/envi/example1#Measurement2016-10-05T08:15:40TESS005-UCM
+:Measurement2016-10-05T08:15:40TESS005-UCM rdf:type owl:NamedIndividual ,
+                                                    <http://saref.linkeddata.es/def/envi#Measurement> ;
+                                           <http://saref.linkeddata.es/def/envi#relatesToProperty> <http://saref.linkeddata.es/def/envi#LightMagnitude> ;
+                                           saref:isMeasuredIn :mgPerarcsec2 ;
+                                           <http://saref.linkeddata.es/def/envi#hasTimestamp> "2016-10-05T08:15:40"^^xsd:dateTime ;
+                                           saref:hasValue "0.8"^^xsd:float ;
+                                           rdfs:label "Measurement 2016-10-05T08:15:40 TESS005-UCM"@en .
+
+
+###  http://www.w3.org/2006/time#unitSecond
+<http://www.w3.org/2006/time#unitSecond> rdf:type owl:NamedIndividual ,
+                                                  <http://www.w3.org/2006/time#TemporalUnit> .
+
+
+###  http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> rdf:type owl:NamedIndividual ,
+                                                                            <http://saref.linkeddata.es/def/envi#FrequencyUnit> .
+
+
+###  http://www.wurvoc.org/vocabularies/om-1.8/watt
+<http://www.wurvoc.org/vocabularies/om-1.8/watt> rdf:type owl:NamedIndividual ,
+                                                          saref:PowerUnit .
+
+
+###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
