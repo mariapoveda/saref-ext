@@ -3045,6 +3045,9 @@ bldg:Measurement rdf:type owl:Class ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange xsd:float
                                  ] ;
+                 owl:disjointWith bldg:Property ,
+                                  <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                                  saref:UnitOfMeasure ;
                  rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
                  rdfs:label "Measurement"@en .
 
@@ -3104,6 +3107,8 @@ bldg:PhysicalObject rdf:type owl:Class ;
 
 ###  http://saref.linkeddata.es/def/bldg#Property
 bldg:Property rdf:type owl:Class ;
+              owl:disjointWith <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                               saref:UnitOfMeasure ;
               rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
               rdfs:label "Property"@en .
 
@@ -3657,6 +3662,7 @@ bldg:VibrationIsolator rdf:type owl:Class ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
+                                                       owl:disjointWith saref:UnitOfMeasure ;
                                                        rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
                                                        rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
                                                        rdfs:label "Spatial thing"@en .

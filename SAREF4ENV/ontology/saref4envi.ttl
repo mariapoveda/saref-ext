@@ -76,6 +76,12 @@
                           rdfs:label "has digital representation"@en .
 
 
+###  http://saref.linkeddata.es/def/envi#hasFrequencyMeasurement
+:hasFrequencyMeasurement rdf:type owl:ObjectProperty ;
+                         rdfs:comment "The relation between a device and the frequency in which it makes measurements."@en ;
+                         rdfs:label "has frequency measurement"@en .
+
+
 ###  http://saref.linkeddata.es/def/envi#hasGeometry
 :hasGeometry rdf:type owl:ObjectProperty ;
              rdfs:comment "A relation between a light emitted and the shape it is projected in."@en ;
@@ -86,12 +92,6 @@
 :hasLightPoint rdf:type owl:ObjectProperty ;
                rdfs:comment "A relation between a lamppost and its light points"@en ;
                rdfs:label "has light point"@en .
-
-
-###  http://saref.linkeddata.es/def/envi#hasMeasurementFrequency
-:hasMeasurementFrequency rdf:type owl:ObjectProperty ;
-                         rdfs:comment "The relation between a device and the frequency in which it makes measurements."@en ;
-                         rdfs:label "has measurement frequency"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasTransmissionPeriod
@@ -306,6 +306,15 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
 
 ###  http://saref.linkeddata.es/def/envi#Color
 :Color rdf:type owl:Class ;
+       owl:disjointWith :CommunicationInterface ,
+                        :CommunicationProtocol ,
+                        :CompassDirection ,
+                        :DigitalRepresentation ,
+                        :Geometry ,
+                        :Light ,
+                        geo:SpatialThing ,
+                        saref:Service ,
+                        saref:UnitOfMeasure ;
        rdfs:comment "Color of the emitted light. It might be indicated by named colors or using other type of color values like hexadecimal for RGB, color temperature, etc."@en ;
        rdfs:label "Color"@en .
 
@@ -321,18 +330,44 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                           owl:onDataRange xsd:string
                                         ] ;
+                        owl:disjointWith :CommunicationProtocol ,
+                                         :CompassDirection ,
+                                         :DigitalRepresentation ,
+                                         :Geometry ,
+                                         :Light ,
+                                         :Measurement ,
+                                         :Property ,
+                                         geo:SpatialThing ,
+                                         saref:UnitOfMeasure ;
                         rdfs:comment "An interface defines which primitive operations and services the lower layer makes available to the upper one, when referring to network layers. (Definition adapted from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en ;
                         rdfs:label "Communication interface"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#CommunicationProtocol
 :CommunicationProtocol rdf:type owl:Class ;
+                       owl:disjointWith :CompassDirection ,
+                                        :DigitalRepresentation ,
+                                        :Geometry ,
+                                        :Light ,
+                                        :Measurement ,
+                                        :Property ,
+                                        geo:SpatialThing ,
+                                        saref:Service ,
+                                        saref:UnitOfMeasure ;
                        rdfs:comment "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en ;
                        rdfs:label "Communication protocol"@en .
 
 
 ###  http://saref.linkeddata.es/def/envi#CompassDirection
 :CompassDirection rdf:type owl:Class ;
+                  owl:disjointWith :DigitalRepresentation ,
+                                   :Geometry ,
+                                   :Light ,
+                                   :Measurement ,
+                                   :Property ,
+                                   geo:SpatialThing ,
+                                   saref:Service ,
+                                   saref:UnitOfMeasure ;
                   rdfs:comment "The four cardinal directions or cardinal points are the directions of north, east, south, and west, commonly denoted by their initials: N, E, S, W. East and west are at right angles to north and south, with east being in the clockwise direction of rotation from north and west being directly opposite east. Intermediate points between the four cardinal directions form the points of the compass. (definition taken from https://en.wikipedia.org/wiki/Cardinal_direction)"@en ;
                   rdfs:label "Compass direction"@en .
 
@@ -342,7 +377,7 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
         rdfs:subClassOf :System ,
                         saref:Device ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasMeasurementFrequency ;
+                          owl:onProperty :hasFrequencyMeasurement ;
                           owl:allValuesFrom :FrequencyMeasurement
                         ] ,
                         [ rdf:type owl:Restriction ;
@@ -419,6 +454,11 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                          owl:onDataRange xsd:string
                                        ] ;
+                       owl:disjointWith :Geometry ,
+                                        :Light ,
+                                        :Measurement ,
+                                        geo:SpatialThing ,
+                                        saref:UnitOfMeasure ;
                        rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
                        rdfs:label "Digital representation"@en .
 
@@ -448,6 +488,12 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
 
 ###  http://saref.linkeddata.es/def/envi#Geometry
 :Geometry rdf:type owl:Class ;
+          owl:disjointWith :Light ,
+                           :Measurement ,
+                           :Property ,
+                           geo:SpatialThing ,
+                           saref:Service ,
+                           saref:UnitOfMeasure ;
           rdfs:comment "Represents the shape of the light emission. It might be instantiated by individuals like \"spherical\", \"cylindrical\", etc. even though it is open to more comples representation of geometries using other vocabularies."@en ;
           rdfs:label "Geometry"@en .
 
@@ -520,6 +566,10 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
                          owl:onProperty :hasProjectionAngle ;
                          owl:allValuesFrom xsd:float
                        ] ;
+       owl:disjointWith :Measurement ,
+                        :Property ,
+                        saref:Service ,
+                        saref:UnitOfMeasure ;
        rdfs:comment "A light source, which may be a lantern, a street light, a floodlight, a signal lamp or any other device whose primary purpose is the generation of light. (Definition taken from http://wiki.openstreetmap.org/wiki/Proposed_features/Key:light_source#Description)"@en ;
        rdfs:label "Light"@en .
 
@@ -579,6 +629,10 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onDataRange xsd:float
                              ] ;
+             owl:disjointWith :Property ,
+                              geo:SpatialThing ,
+                              saref:Service ,
+                              saref:UnitOfMeasure ;
              rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
              rdfs:label "Measurement"@en .
 
@@ -639,6 +693,8 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
 
 ###  http://saref.linkeddata.es/def/envi#Property
 :Property rdf:type owl:Class ;
+          owl:disjointWith saref:Service ,
+                           saref:UnitOfMeasure ;
           rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
           rdfs:label "Property"@en .
 
@@ -702,6 +758,7 @@ geo:Point rdf:type owl:Class ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 geo:SpatialThing rdf:type owl:Class ;
+                 owl:disjointWith saref:Service ;
                  rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
                  rdfs:isDefinedBy geo: ;
                  rdfs:label "Spatial thing"@en .
@@ -709,6 +766,7 @@ geo:SpatialThing rdf:type owl:Class ;
 
 ###  http://www.w3.org/2006/time#TemporalUnit
 time:TemporalUnit rdf:type owl:Class ;
+                  rdfs:subClassOf saref:UnitOfMeasure ;
                   rdfs:comment "A temporal unit of measure, which provides a scale factor for a time quantity."@en ;
                   rdfs:isDefinedBy time: ;
                   rdfs:label "Temporal unit"@en .
@@ -731,6 +789,7 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
 
 ###  https://w3id.org/saref#Service
 saref:Service rdf:type owl:Class ;
+              owl:disjointWith saref:UnitOfMeasure ;
               rdfs:comment "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service."@en ;
               rdfs:isDefinedBy saref: ;
               rdfs:label "Service"@en .

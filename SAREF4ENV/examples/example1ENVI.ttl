@@ -67,8 +67,8 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:label "is contained in"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#hasMeasurementFrequency
-<http://saref.linkeddata.es/def/envi#hasMeasurementFrequency> rdf:type owl:ObjectProperty .
+###  http://saref.linkeddata.es/def/envi#hasFrequencyMeasurement
+<http://saref.linkeddata.es/def/envi#hasFrequencyMeasurement> rdf:type owl:ObjectProperty .
 
 
 ###  http://saref.linkeddata.es/def/envi#hasTransmissionPeriod
@@ -221,12 +221,41 @@ saref:UnitOfMeasure rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  http://saref.linkeddata.es/def/bldg#Bluettothv2.1
+:Bluettothv2.1 rdf:type owl:NamedIndividual ,
+                        <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
+               <http://saref.linkeddata.es/def/envi#hasVersion> "v2.1"^^xsd:string ;
+               rdfs:label "Bluettoth v2.1"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#FequencyMeasurementTESS005-UCM
+:FequencyMeasurementTESS005-UCM rdf:type owl:NamedIndividual ,
+                                         <http://saref.linkeddata.es/def/envi#FrequencyMeasurement> ;
+                                saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> ;
+                                saref:hasValue "10.0"^^xsd:float ;
+                                rdfs:label "FequencyMeasurementTESS005-UCM"@en .
+
+
 ###  http://saref.linkeddata.es/def/bldg#LocationTESS005-UCM
 :LocationTESS005-UCM rdf:type owl:NamedIndividual ,
                               <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
                      <http://www.w3.org/2003/01/geo/wgs84_pos#latitude> "40.451"^^xsd:float ;
                      <http://www.w3.org/2003/01/geo/wgs84_pos#longitude> "-3.7261"^^xsd:float ;
                      rdfs:label "Location of photometer TESS stars5"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#MQTT-Broker
+:MQTT-Broker rdf:type owl:NamedIndividual ,
+                      <http://saref.linkeddata.es/def/envi#CommunicationProtocol> ;
+             rdfs:label "MQTT-Broker"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#PeriodMeasurementTESS005-UCM
+:PeriodMeasurementTESS005-UCM rdf:type owl:NamedIndividual ,
+                                       <http://saref.linkeddata.es/def/envi#PeriodMeasurement> ;
+                              saref:isMeasuredIn <http://www.w3.org/2006/time#unitSecond> ;
+                              saref:hasValue "30.0"^^xsd:float ;
+                              rdfs:label "PeriodMeasurementTESS005-UCM"@en .
 
 
 ###  http://saref.linkeddata.es/def/bldg#PowerProfileTESS005-UCM
@@ -244,10 +273,17 @@ saref:UnitOfMeasure rdf:type owl:Class ;
                   rdfs:label "Power of photometer TESS stars5"@en .
 
 
+###  http://saref.linkeddata.es/def/bldg#RS232v24
+:RS232v24 rdf:type owl:NamedIndividual ,
+                   <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
+          <http://saref.linkeddata.es/def/envi#hasVersion> "v24"^^xsd:string ;
+          rdfs:label "RS232 v24"@en .
+
+
 ###  http://saref.linkeddata.es/def/bldg#TESS005-UCM
 :TESS005-UCM rdf:type owl:NamedIndividual ,
                       <http://saref.linkeddata.es/def/envi#TESS> ;
-             <http://saref.linkeddata.es/def/envi#hasMeasurementFrequency> :FequencyMeasurementTESS005-UCM ;
+             <http://saref.linkeddata.es/def/envi#hasFrequencyMeasurement> :FequencyMeasurementTESS005-UCM ;
              <http://saref.linkeddata.es/def/envi#hasTransmissionPeriod> :PeriodMeasurementTESS005-UCM ;
              <http://saref.linkeddata.es/def/envi#makesMeasurement> :Measurement2016-10-05T08:15:30TESS005-UCM ,
                                                                     :Measurement2016-10-05T08:15:40TESS005-UCM ;
@@ -264,61 +300,20 @@ saref:UnitOfMeasure rdf:type owl:Class ;
              rdfs:label "TESS photometer stars5"@en .
 
 
-###  http://saref.linkeddata.es/def/envi#LightMagnitude
-<http://saref.linkeddata.es/def/envi#LightMagnitude> rdf:type owl:NamedIndividual ,
-                                                              <http://saref.linkeddata.es/def/envi#LightProperty> .
-
-
-###  http://saref.linkeddata.es/def/envi/example1#Bluettothv2.1
-:Bluettothv2.1 rdf:type owl:NamedIndividual ,
-                        <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
-               <http://saref.linkeddata.es/def/envi#hasVersion> "v2.1"^^xsd:string ;
-               rdfs:label "Bluettoth v2.1"@en .
-
-
-###  http://saref.linkeddata.es/def/envi/example1#FequencyMeasurementTESS005-UCM
-:FequencyMeasurementTESS005-UCM rdf:type owl:NamedIndividual ,
-                                         <http://saref.linkeddata.es/def/envi#FrequencyMeasurement> ;
-                                saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> ;
-                                saref:hasValue "10.0"^^xsd:float ;
-                                rdfs:label "FequencyMeasurementTESS005-UCM"@en .
-
-
-###  http://saref.linkeddata.es/def/envi/example1#MQTT-Broker
-:MQTT-Broker rdf:type owl:NamedIndividual ,
-                      <http://saref.linkeddata.es/def/envi#CommunicationProtocol> ;
-             rdfs:label "MQTT-Broker"@en .
-
-
-###  http://saref.linkeddata.es/def/envi/example1#PeriodMeasurementTESS005-UCM
-:PeriodMeasurementTESS005-UCM rdf:type owl:NamedIndividual ,
-                                       <http://saref.linkeddata.es/def/envi#PeriodMeasurement> ;
-                              saref:isMeasuredIn <http://www.w3.org/2006/time#unitSecond> ;
-                              saref:hasValue "30.0"^^xsd:float ;
-                              rdfs:label "PeriodMeasurementTESS005-UCM"@en .
-
-
-###  http://saref.linkeddata.es/def/envi/example1#RS232v24
-:RS232v24 rdf:type owl:NamedIndividual ,
-                   <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
-          <http://saref.linkeddata.es/def/envi#hasVersion> "v24"^^xsd:string ;
-          rdfs:label "RS232 v24"@en .
-
-
-###  http://saref.linkeddata.es/def/envi/example1#Wi-Fiv802.11ah
+###  http://saref.linkeddata.es/def/bldg#Wi-Fiv802.11ah
 :Wi-Fiv802.11ah rdf:type owl:NamedIndividual ,
                          <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
                 <http://saref.linkeddata.es/def/envi#hasVersion> "802.11ah"^^xsd:string ;
                 rdfs:label "Wi-Fi v802.11ah"@en .
 
 
-###  http://saref.linkeddata.es/def/envi/example1#mgPerarcsec2
+###  http://saref.linkeddata.es/def/bldg#mgPerarcsec2
 :mgPerarcsec2 rdf:type owl:NamedIndividual ,
                        saref:UnitOfMeasure ;
               rdfs:label "mgPerarcsec2"@en .
 
 
-###  http://saref.linkeddata.es/def/envi/example1#Measurement2016-10-05T08:15:30TESS005-UCM
+###  http://saref.linkeddata.es/def/bldg#Measurement2016-10-05T08:15:30TESS005-UCM
 :Measurement2016-10-05T08:15:30TESS005-UCM rdf:type owl:NamedIndividual ,
                                                     <http://saref.linkeddata.es/def/envi#Measurement> ;
                                            <http://saref.linkeddata.es/def/envi#relatesToProperty> <http://saref.linkeddata.es/def/envi#LightMagnitude> ;
@@ -328,7 +323,7 @@ saref:UnitOfMeasure rdf:type owl:Class ;
                                            rdfs:label "Measurement 2016-10-05T08:15:30 TESS005-UCM"@en .
 
 
-###  http://saref.linkeddata.es/def/envi/example1#Measurement2016-10-05T08:15:40TESS005-UCM
+###  http://saref.linkeddata.es/def/bldg#Measurement2016-10-05T08:15:40TESS005-UCM
 :Measurement2016-10-05T08:15:40TESS005-UCM rdf:type owl:NamedIndividual ,
                                                     <http://saref.linkeddata.es/def/envi#Measurement> ;
                                            <http://saref.linkeddata.es/def/envi#relatesToProperty> <http://saref.linkeddata.es/def/envi#LightMagnitude> ;
@@ -336,6 +331,11 @@ saref:UnitOfMeasure rdf:type owl:Class ;
                                            <http://saref.linkeddata.es/def/envi#hasTimestamp> "2016-10-05T08:15:40"^^xsd:dateTime ;
                                            saref:hasValue "0.8"^^xsd:float ;
                                            rdfs:label "Measurement 2016-10-05T08:15:40 TESS005-UCM"@en .
+
+
+###  http://saref.linkeddata.es/def/envi#LightMagnitude
+<http://saref.linkeddata.es/def/envi#LightMagnitude> rdf:type owl:NamedIndividual ,
+                                                              <http://saref.linkeddata.es/def/envi#LightProperty> .
 
 
 ###  http://www.w3.org/2006/time#unitSecond
