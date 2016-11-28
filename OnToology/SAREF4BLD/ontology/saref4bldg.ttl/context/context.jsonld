@@ -1,0 +1,1303 @@
+{
+  "@context" : {
+    "waterPressureMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#waterPressureMax",
+      "@type" : "@id"
+    },
+    "fluidFlowRateMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#fluidFlowRateMax",
+      "@type" : "@id"
+    },
+    "workingPressureMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#workingPressureMin",
+      "@type" : "@id"
+    },
+    "waterStorageCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#waterStorageCapacity",
+      "@type" : "@id"
+    },
+    "valveMechanism" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#valveMechanism",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "capacityControlType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#capacityControlType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mechanicalOperated" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#mechanicalOperated",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "CooledBeam" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#CooledBeam"
+    },
+    "UnitOfMeasure" : {
+      "@id" : "https://w3id.org/saref#UnitOfMeasure"
+    },
+    "secondaryCurrent" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondaryCurrent",
+      "@type" : "@id"
+    },
+    "transformerVectorGroup" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#transformerVectorGroup",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SolarDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SolarDevice"
+    },
+    "teTime" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#teTime",
+      "@type" : "@id"
+    },
+    "secondaryAirFlowRateMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondaryAirFlowRateMin",
+      "@type" : "@id"
+    },
+    "Burner" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Burner"
+    },
+    "nominalPowerRate" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalPowerRate",
+      "@type" : "@id"
+    },
+    "primaryApparentPower" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#primaryApparentPower",
+      "@type" : "@id"
+    },
+    "temperatureRating" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#temperatureRating",
+      "@type" : "@id"
+    },
+    "CommunicationAppliance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#CommunicationAppliance"
+    },
+    "colorRenderingIndex" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#colorRenderingIndex",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "colorAppearance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#colorAppearance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TubeBundle" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#TubeBundle"
+    },
+    "nominalCoolingCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalCoolingCapacity",
+      "@type" : "@id"
+    },
+    "controlStrategy" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#controlStrategy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Filter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Filter"
+    },
+    "ambientDesignWetBulbTemperature" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ambientDesignWetBulbTemperature",
+      "@type" : "@id"
+    },
+    "secondaryApparentPower" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondaryApparentPower",
+      "@type" : "@id"
+    },
+    "nominalMoistureGain" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalMoistureGain",
+      "@type" : "@id"
+    },
+    "Lamp" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Lamp"
+    },
+    "finishColor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#finishColor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "VibrationIsolator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#VibrationIsolator"
+    },
+    "pressureRating" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#pressureRating",
+      "@type" : "@id"
+    },
+    "airFlowRateMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#airFlowRateMax",
+      "@type" : "@id"
+    },
+    "hasSpace" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasSpace",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "nominalStaticPressure" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalStaticPressure",
+      "@type" : "@id"
+    },
+    "coilWidth" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#coilWidth",
+      "@type" : "@id"
+    },
+    "heatTransferDimension" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#heatTransferDimension",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ProtectiveDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ProtectiveDevice"
+    },
+    "nominalFrequency" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalFrequency",
+      "@type" : "@id"
+    },
+    "pumpFlowRateMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#pumpFlowRateMin",
+      "@type" : "@id"
+    },
+    "FlowInstrument" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowInstrument"
+    },
+    "standard" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#standard",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "colorTemperature" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#colorTemperature",
+      "@type" : "@id"
+    },
+    "bladeAction" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#bladeAction",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalEfficiency" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalEfficiency",
+      "@type" : "@id"
+    },
+    "SanitaryTerminal" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SanitaryTerminal"
+    },
+    "Humidifier" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Humidifier"
+    },
+    "hasDefrost" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasDefrost",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "waterInletTemperatureMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#waterInletTemperatureMin",
+      "@type" : "@id"
+    },
+    "closeOffRating" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#closeOffRating",
+      "@type" : "@id"
+    },
+    "BuildingDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#BuildingDevice"
+    },
+    "frameDepth" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#frameDepth",
+      "@type" : "@id"
+    },
+    "ShadingDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ShadingDevice"
+    },
+    "internalRefrigerantVolume" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#internalRefrigerantVolume",
+      "@type" : "@id"
+    },
+    "frameType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#frameType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "startingTime" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#startingTime",
+      "@type" : "@id"
+    },
+    "workingPressureMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#workingPressureMax",
+      "@type" : "@id"
+    },
+    "basinReserveVolume" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#basinReserveVolume",
+      "@type" : "@id"
+    },
+    "height" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#height",
+      "@type" : "@id"
+    },
+    "patternType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#patternType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "numberOfGangs" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOfGangs",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "waterFlowControlSystemType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#waterFlowControlSystemType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "externalSurfaceArea" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#externalSurfaceArea",
+      "@type" : "@id"
+    },
+    "lightEmitterNominalPower" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#lightEmitterNominalPower",
+      "@type" : "@id"
+    },
+    "hydraulicDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hydraulicDiameter",
+      "@type" : "@id"
+    },
+    "FireSuppressionTerminal" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FireSuppressionTerminal"
+    },
+    "nominalSupplyWaterTemperatureCooling" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSupplyWaterTemperatureCooling",
+      "@type" : "@id"
+    },
+    "MedicalDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#MedicalDevice"
+    },
+    "verticalSpacing" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#verticalSpacing",
+      "@type" : "@id"
+    },
+    "nominalHeatTransferArea" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalHeatTransferArea",
+      "@type" : "@id"
+    },
+    "heatTransferSurfaceArea" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#heatTransferSurfaceArea",
+      "@type" : "@id"
+    },
+    "hasValue" : {
+      "@id" : "https://w3id.org/saref#hasValue"
+    },
+    "flowArrangement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#flowArrangement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inLineRowSpacing" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#inLineRowSpacing",
+      "@type" : "@id"
+    },
+    "heatTransferTypeEnum" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#heatTransferTypeEnum",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalHeatRejectionRate" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalHeatRejectionRate",
+      "@type" : "@id"
+    },
+    "refrigerantClass" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#refrigerantClass",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HeatExchanger" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#HeatExchanger"
+    },
+    "energySource" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#energySource",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "lampMaintenanceFactor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#lampMaintenanceFactor",
+      "@type" : "@id"
+    },
+    "electricGeneratorEfficiency" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#electricGeneratorEfficiency",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#contains",
+      "@type" : "@id"
+    },
+    "mediaSource" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#mediaSource",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "integratedLightingType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#integratedLightingType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "testPressure" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#testPressure",
+      "@type" : "@id"
+    },
+    "hasTurbulator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasTurbulator",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "insideDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#insideDiameter",
+      "@type" : "@id"
+    },
+    "Damper" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Damper"
+    },
+    "Tank" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Tank"
+    },
+    "isWaterStorageHeater" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isWaterStorageHeater",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "staggeredRowSpacing" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#staggeredRowSpacing",
+      "@type" : "@id"
+    },
+    "nominalLengthOrDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalLengthOrDiameter",
+      "@type" : "@id"
+    },
+    "Measurement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Measurement"
+    },
+    "accessType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#accessType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Boiler" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Boiler"
+    },
+    "audioVolume" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#audioVolume",
+      "@type" : "@id"
+    },
+    "motorDriveType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#motorDriveType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "waterRequirement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#waterRequirement",
+      "@type" : "@id"
+    },
+    "valvePattern" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#valvePattern",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "bladeShape" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#bladeShape",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalCapacity",
+      "@type" : "@id"
+    },
+    "ElectricMotor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricMotor"
+    },
+    "remoteReading" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#remoteReading",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "shadingDeviceType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#shadingDeviceType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DistributionDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#DistributionDevice"
+    },
+    "legend" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#legend",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "supportedWeightMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#supportedWeightMax",
+      "@type" : "@id"
+    },
+    "idealShaftPower" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#idealShaftPower",
+      "@type" : "@id"
+    },
+    "Condenser" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Condenser"
+    },
+    "nominalEnergyConsumption" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalEnergyConsumption",
+      "@type" : "@id"
+    },
+    "secondaryAirFlowRateMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondaryAirFlowRateMax",
+      "@type" : "@id"
+    },
+    "arrangement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#arrangement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AirToAirHeatRecovery" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#AirToAirHeatRecovery"
+    },
+    "impellerDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#impellerDiameter",
+      "@type" : "@id"
+    },
+    "rightsHolder" : {
+      "@id" : "http://purl.org/dc/terms/rightsHolder"
+    },
+    "TransportElement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#TransportElement"
+    },
+    "startCurrentFactor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#startCurrentFactor",
+      "@type" : "@id"
+    },
+    "openPressureDrop" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#openPressureDrop",
+      "@type" : "@id"
+    },
+    "nominalSupplyWaterTemperatureHeating" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSupplyWaterTemperatureHeating",
+      "@type" : "@id"
+    },
+    "nominalSorroundingHumidityCooling" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSorroundingHumidityCooling",
+      "@type" : "@id"
+    },
+    "FlowMovingDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowMovingDevice"
+    },
+    "DuctSilencer" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#DuctSilencer"
+    },
+    "primaryAirFlowRateMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#primaryAirFlowRateMin",
+      "@type" : "@id"
+    },
+    "heatTransferMedium" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#heatTransferMedium",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "outletTemperatureMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#outletTemperatureMin",
+      "@type" : "@id"
+    },
+    "imaginaryImpedanceRatio" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#imaginaryImpedanceRatio",
+      "@type" : "@id"
+    },
+    "BuildingObject" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#BuildingObject"
+    },
+    "sprayType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#sprayType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "connectionSize" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#connectionSize",
+      "@type" : "@id"
+    },
+    "DistributionControlDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#DistributionControlDevice"
+    },
+    "faceArea" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#faceArea",
+      "@type" : "@id"
+    },
+    "nominalDepth" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalDepth",
+      "@type" : "@id"
+    },
+    "endShapeType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#endShapeType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "secondCurvatureRadius" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondCurvatureRadius",
+      "@type" : "@id"
+    },
+    "shortCircuitVoltage" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#shortCircuitVoltage",
+      "@type" : "@id"
+    },
+    "operatingMode" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#operatingMode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "primaryFrequency" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#primaryFrequency",
+      "@type" : "@id"
+    },
+    "pipeConnectionEnum" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#pipeConnectionEnum",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "capacityPeople" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#capacityPeople",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "nominalWidthOrDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalWidthOrDiameter",
+      "@type" : "@id"
+    },
+    "hasPartWinding" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasPartWinding",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "frameThickness" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#frameThickness",
+      "@type" : "@id"
+    },
+    "frameSize" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#frameSize",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "internalSurfaceArea" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#internalSurfaceArea",
+      "@type" : "@id"
+    },
+    "numberOfBlades" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOfBlades",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Transformer" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Transformer"
+    },
+    "Outlet" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Outlet"
+    },
+    "Building" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Building"
+    },
+    "FlowStorageDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowStorageDevice"
+    },
+    "evaporationCoolant" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#evaporationCoolant",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isolatorCompressibility" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isolatorCompressibility",
+      "@type" : "@id"
+    },
+    "nominalAirFlowRate" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalAirFlowRate",
+      "@type" : "@id"
+    },
+    "bladeEdge" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#bladeEdge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "liftElevationDifference" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#liftElevationDifference",
+      "@type" : "@id"
+    },
+    "isContainedIn" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isContainedIn",
+      "@type" : "@id"
+    },
+    "isIlluminated" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isIlluminated",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "partLoadRatioMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#partLoadRatioMax",
+      "@type" : "@id"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
+    },
+    "FlowTreatmentDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowTreatmentDevice"
+    },
+    "application" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#application",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Compressor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Compressor"
+    },
+    "SwitchingDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SwitchingDevice"
+    },
+    "Evaporator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Evaporator"
+    },
+    "bodyMass" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#bodyMass",
+      "@type" : "@id"
+    },
+    "outletConnectionSize" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#outletConnectionSize",
+      "@type" : "@id"
+    },
+    "isFreeHanging" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isFreeHanging",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "isolatorStaticDeflection" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isolatorStaticDeflection",
+      "@type" : "@id"
+    },
+    "dateCopyrighted" : {
+      "@id" : "http://purl.org/dc/terms/dateCopyrighted"
+    },
+    "idealCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#idealCapacity",
+      "@type" : "@id"
+    },
+    "primaryVoltage" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#primaryVoltage",
+      "@type" : "@id"
+    },
+    "lockedRotorCurrent" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#lockedRotorCurrent",
+      "@type" : "@id"
+    },
+    "operatingWight" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#operatingWight",
+      "@type" : "@id"
+    },
+    "capacityWeight" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#capacityWeight",
+      "@type" : "@id"
+    },
+    "hadPrimarySource" : {
+      "@id" : "http://www.w3.org/ns/prov#hadPrimarySource"
+    },
+    "nominalDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalDiameter",
+      "@type" : "@id"
+    },
+    "visibleLightReflectance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#visibleLightReflectance",
+      "@type" : "@id"
+    },
+    "operation" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#operation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "powerOutputMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#powerOutputMax",
+      "@type" : "@id"
+    },
+    "operationalRiterial" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#operationalRiterial",
+      "@type" : "@id"
+    },
+    "nominalFlowRate" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalFlowRate",
+      "@type" : "@id"
+    },
+    "readOutType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#readOutType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalBodyDepth" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalBodyDepth",
+      "@type" : "@id"
+    },
+    "spectrumMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#spectrumMax",
+      "@type" : "@id"
+    },
+    "outsideDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#outsideDiameter",
+      "@type" : "@id"
+    },
+    "numberOfRows" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOfRows",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "nominalEvaporatingTemmperature" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalEvaporatingTemmperature",
+      "@type" : "@id"
+    },
+    "ElectricTimeControl" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricTimeControl"
+    },
+    "Fan" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Fan"
+    },
+    "thermalEfficiency" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#thermalEfficiency",
+      "@type" : "@id"
+    },
+    "nomminalRotationSpeed" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nomminalRotationSpeed",
+      "@type" : "@id"
+    },
+    "SpaceHeater" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SpaceHeater"
+    },
+    "switchFunction" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#switchFunction",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Coil" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Coil"
+    },
+    "DistributionFlowDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#DistributionFlowDevice"
+    },
+    "nominalSorroundingTemperatureCooling" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSorroundingTemperatureCooling",
+      "@type" : "@id"
+    },
+    "netPositiveSuctionHead" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#netPositiveSuctionHead",
+      "@type" : "@id"
+    },
+    "partLoadRatioMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#partLoadRatioMin",
+      "@type" : "@id"
+    },
+    "pumpFlowRateMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#pumpFlowRateMax",
+      "@type" : "@id"
+    },
+    "bladeThickness" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#bladeThickness",
+      "@type" : "@id"
+    },
+    "capacityControl" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#capacityControl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flowCoefficient" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#flowCoefficient",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "EvaporativeCooler" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#EvaporativeCooler"
+    },
+    "ElectricFlowStorageDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricFlowStorageDevice"
+    },
+    "thermalTransmittance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#thermalTransmittance",
+      "@type" : "@id"
+    },
+    "thermalMassHeatCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#thermalMassHeatCapacity",
+      "@type" : "@id"
+    },
+    "lampBallastType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#lampBallastType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "length" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#length",
+      "@type" : "@id"
+    },
+    "flowResistanceMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#flowResistanceMax",
+      "@type" : "@id"
+    },
+    "spectrumMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#spectrumMin",
+      "@type" : "@id"
+    },
+    "effectiveCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#effectiveCapacity",
+      "@type" : "@id"
+    },
+    "finalResistance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#finalResistance",
+      "@type" : "@id"
+    },
+    "primaryAirFlowRateMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#primaryAirFlowRateMax",
+      "@type" : "@id"
+    },
+    "nominalWaterFlowCooling" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalWaterFlowCooling",
+      "@type" : "@id"
+    },
+    "flowResistanceMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#flowResistanceMin",
+      "@type" : "@id"
+    },
+    "outputCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#outputCapacity",
+      "@type" : "@id"
+    },
+    "nominalRotationSpeed" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalRotationSpeed",
+      "@type" : "@id"
+    },
+    "isExternal" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isExternal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "CoolingTower" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#CoolingTower"
+    },
+    "isPluggableOutlet" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isPluggableOutlet",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "circuitType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#circuitType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ElectricGenerator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricGenerator"
+    },
+    "failPosition" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#failPosition",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "storageType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#storageType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalReturnWaterTemperatureHeating" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalReturnWaterTemperatureHeating",
+      "@type" : "@id"
+    },
+    "coverWidth" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#coverWidth",
+      "@type" : "@id"
+    },
+    "manualOverride" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#manualOverride",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "primaryCurrent" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#primaryCurrent",
+      "@type" : "@id"
+    },
+    "Property" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Property"
+    },
+    "workingPressure" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#workingPressure",
+      "@type" : "@id"
+    },
+    "evaporationMediumType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#evaporationMediumType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isNeutralSecondaryTerminalAvailable" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isNeutralSecondaryTerminalAvailable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "temperatureClassification" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#temperatureClassification",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "numberOfSections" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOfSections",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "limitingTerminalSize" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#limitingTerminalSize",
+      "@type" : "@id"
+    },
+    "Interceptor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Interceptor"
+    },
+    "isMeasuredIn" : {
+      "@id" : "https://w3id.org/saref#isMeasuredIn",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "coilLength" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#coilLength",
+      "@type" : "@id"
+    },
+    "initialResistance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#initialResistance",
+      "@type" : "@id"
+    },
+    "nominalHeatTransferCoefficient" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalHeatTransferCoefficient",
+      "@type" : "@id"
+    },
+    "FlowMeter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowMeter"
+    },
+    "valveOperation" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#valveOperation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fireExit" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#fireExit",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "nominalParticleGeometricStandardDeviation" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalParticleGeometricStandardDeviation",
+      "@type" : "@id"
+    },
+    "nominalVolumetricCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalVolumetricCapacity",
+      "@type" : "@id"
+    },
+    "motorEnclosureType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#motorEnclosureType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalCondensingTemperature" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalCondensingTemperature",
+      "@type" : "@id"
+    },
+    "nominalSorroundingTemperatureHeating" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSorroundingTemperatureHeating",
+      "@type" : "@id"
+    },
+    "fluidFlowRateMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#fluidFlowRateMin",
+      "@type" : "@id"
+    },
+    "vibrationTransmissibility" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#vibrationTransmissibility",
+      "@type" : "@id"
+    },
+    "compressorSpeed" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#compressorSpeed",
+      "@type" : "@id"
+    },
+    "nominalSensibleCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSensibleCapacity",
+      "@type" : "@id"
+    },
+    "secondaryCurrentType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondaryCurrentType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalLatentCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalLatentCapacity",
+      "@type" : "@id"
+    },
+    "volumen" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#volumen",
+      "@type" : "@id"
+    },
+    "numberOfCircuits" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOfCircuits",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Pump" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Pump"
+    },
+    "inletConnectionSize" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#inletConnectionSize",
+      "@type" : "@id"
+    },
+    "operationTemperatureMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#operationTemperatureMin",
+      "@type" : "@id"
+    },
+    "nominalPartLoadRatio" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalPartLoadRatio",
+      "@type" : "@id"
+    },
+    "foulingFactor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#foulingFactor",
+      "@type" : "@id"
+    },
+    "Alarm" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Alarm"
+    },
+    "lampCompensationType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#lampCompensationType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "solarReflectance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#solarReflectance",
+      "@type" : "@id"
+    },
+    "outletTemperatureMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#outletTemperatureMax",
+      "@type" : "@id"
+    },
+    "relatesToProperty" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#relatesToProperty",
+      "@type" : "@id"
+    },
+    "size" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#size",
+      "@type" : "@id"
+    },
+    "FlowTerminal" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowTerminal"
+    },
+    "nominalPowerConsumption" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalPowerConsumption",
+      "@type" : "@id"
+    },
+    "Engine" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Engine"
+    },
+    "Actuator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Actuator"
+    },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "secondaryFrequency" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondaryFrequency",
+      "@type" : "@id"
+    },
+    "visibleLightTransmittance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#visibleLightTransmittance",
+      "@type" : "@id"
+    },
+    "Controller" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Controller"
+    },
+    "BuildingSpace" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#BuildingSpace"
+    },
+    "placementType" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#placementType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "solarTransmittance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#solarTransmittance",
+      "@type" : "@id"
+    },
+    "AudioVisualAppliance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#AudioVisualAppliance"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isNeutralPrimaryTerminalAvailable" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isNeutralPrimaryTerminalAvailable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "contributedLuminousFlux" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#contributedLuminousFlux",
+      "@type" : "@id"
+    },
+    "nominalReturnWaterTemperatureCooling" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalReturnWaterTemperatureCooling",
+      "@type" : "@id"
+    },
+    "nominalFilterFaceVelocity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalFilterFaceVelocity",
+      "@type" : "@id"
+    },
+    "nominalParticleGeometricMeanDiameter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalParticleGeometricMeanDiameter",
+      "@type" : "@id"
+    },
+    "hasHotGasBypass" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasHotGasBypass",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "nominalMediaSurfaceVelocity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalMediaSurfaceVelocity",
+      "@type" : "@id"
+    },
+    "Chiller" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Chiller"
+    },
+    "nominalSupplyVoltage" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSupplyVoltage",
+      "@type" : "@id"
+    },
+    "nominalTotalPressure" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalTotalPressure",
+      "@type" : "@id"
+    },
+    "electricMotorEfficiency" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#electricMotorEfficiency",
+      "@type" : "@id"
+    },
+    "thermalConductivity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#thermalConductivity",
+      "@type" : "@id"
+    },
+    "internalControl" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#internalControl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "roughness" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#roughness",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "FlowController" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowController"
+    },
+    "firstCurvatureRadius" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#firstCurvatureRadius",
+      "@type" : "@id"
+    },
+    "Device" : {
+      "@id" : "https://w3id.org/saref#Device"
+    },
+    "UnitaryControlElement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#UnitaryControlElement"
+    },
+    "nominalBodyLength" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalBodyLength",
+      "@type" : "@id"
+    },
+    "nominalUa" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalUa",
+      "@type" : "@id"
+    },
+    "apparentPowerMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#apparentPowerMax",
+      "@type" : "@id"
+    },
+    "Valve" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Valve"
+    },
+    "ProtectiveDeviceTrippingUnit" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ProtectiveDeviceTrippingUnit"
+    },
+    "nominalWaterFlowHeating" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalWaterFlowHeating",
+      "@type" : "@id"
+    },
+    "hasLock" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasLock",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasTimestamp" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasTimestamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "heatExchangeArea" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#heatExchangeArea",
+      "@type" : "@id"
+    },
+    "horizontalSpacing" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#horizontalSpacing",
+      "@type" : "@id"
+    },
+    "waterInletTemperatureMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#waterInletTemperatureMax",
+      "@type" : "@id"
+    },
+    "leakageFullyClosed" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#leakageFullyClosed",
+      "@type" : "@id"
+    },
+    "airFlowRateMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#airFlowRateMin",
+      "@type" : "@id"
+    },
+    "numberOfPanels" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOfPanels",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "internalWaterVolume" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#internalWaterVolume",
+      "@type" : "@id"
+    },
+    "realImpedanceRatio" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#realImpedanceRatio",
+      "@type" : "@id"
+    },
+    "ambientDesignDryBulbTemperature" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ambientDesignDryBulbTemperature",
+      "@type" : "@id"
+    },
+    "numberOsSockets" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOsSockets",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "coverLength" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#coverLength",
+      "@type" : "@id"
+    },
+    "weight" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#weight",
+      "@type" : "@id"
+    },
+    "orientation" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#orientation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nominalSupplyVoltageMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSupplyVoltageMax",
+      "@type" : "@id"
+    },
+    "operationTemperatureMax" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#operationTemperatureMax",
+      "@type" : "@id"
+    },
+    "nominalPressureDrop" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalPressureDrop",
+      "@type" : "@id"
+    },
+    "EnergyConversionDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#EnergyConversionDevice"
+    },
+    "numberOfCells" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#numberOfCells",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "nominalSupplyVoltageMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalSupplyVoltageMin",
+      "@type" : "@id"
+    },
+    "nominalBodyWidth" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalBodyWidth",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "isSpaceOf" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isSpaceOf",
+      "@type" : "@id"
+    },
+    "PhysicalObject" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#PhysicalObject"
+    },
+    "hasExteriorInsulation" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#hasExteriorInsulation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "isGuarded" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#isGuarded",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ElectricAppliance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricAppliance"
+    },
+    "nominalHeatingCapacity" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#nominalHeatingCapacity",
+      "@type" : "@id"
+    },
+    "powerSource" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#powerSource",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "waterPressureMin" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#waterPressureMin",
+      "@type" : "@id"
+    },
+    "Sensor" : {
+      "@id" : "https://w3id.org/saref#Sensor"
+    },
+    "secondaryVoltage" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#secondaryVoltage",
+      "@type" : "@id"
+    },
+    "ventilatingPipeSize" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ventilatingPipeSize",
+      "@type" : "@id"
+    }
+  }
+}
