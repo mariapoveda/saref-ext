@@ -279,18 +279,18 @@ This section provides details for each class and property defined by bldg.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#manualOverride"
-               title="http://saref.linkeddata.es/def/bldg#manualOverride">manual override</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
             <a href="#failPosition"
                title="http://saref.linkeddata.es/def/bldg#failPosition">fail position</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#manualOverride"
+               title="http://saref.linkeddata.es/def/bldg#manualOverride">manual override</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
       </dl>
    </div>
@@ -336,23 +336,8 @@ This section provides details for each class and property defined by bldg.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#heatTransferTypeEnum"
-               title="http://saref.linkeddata.es/def/bldg#heatTransferTypeEnum">heat transfer type enum</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#operationTemperatureMin"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#primaryAirFlowRateMin"
-               title="http://saref.linkeddata.es/def/bldg#primaryAirFlowRateMin">primary air flow rate range</a>
+            <a href="#primaryAirFlowRateMax"
+               title="http://saref.linkeddata.es/def/bldg#primaryAirFlowRateMax">primary air flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -367,8 +352,23 @@ This section provides details for each class and property defined by bldg.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#secondaryAirFlowRateMin"
-               title="http://saref.linkeddata.es/def/bldg#secondaryAirFlowRateMin">secondary air flow rate range</a>
+            <a href="#heatTransferTypeEnum"
+               title="http://saref.linkeddata.es/def/bldg#heatTransferTypeEnum">heat transfer type enum</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#primaryAirFlowRateMin"
+               title="http://saref.linkeddata.es/def/bldg#primaryAirFlowRateMin">primary air flow rate range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#operationTemperatureMin"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -389,8 +389,8 @@ This section provides details for each class and property defined by bldg.
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
          <dd>
-            <a href="#primaryAirFlowRateMax"
-               title="http://saref.linkeddata.es/def/bldg#primaryAirFlowRateMax">primary air flow rate range</a>
+            <a href="#secondaryAirFlowRateMin"
+               title="http://saref.linkeddata.es/def/bldg#secondaryAirFlowRateMin">secondary air flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -471,31 +471,62 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#pressureRating"
-               title="http://saref.linkeddata.es/def/bldg#pressureRating">pressure rating</a>
+            <a href="#heatTransferSurfaceArea"
+               title="http://saref.linkeddata.es/def/bldg#heatTransferSurfaceArea">heat transfer surface area</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#waterStorageCapacity"
-               title="http://saref.linkeddata.es/def/bldg#waterStorageCapacity">water storage capacity</a>
+            <a href="#waterInletTemperatureMax"
+               title="http://saref.linkeddata.es/def/bldg#waterInletTemperatureMax">water inlet temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#energySource"
-               title="http://saref.linkeddata.es/def/bldg#energySource">energy source</a>
+            <a href="#operatingMode"
+               title="http://saref.linkeddata.es/def/bldg#operatingMode">operating mode</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
+            <a href="#isWaterStorageHeater"
+               title="http://saref.linkeddata.es/def/bldg#isWaterStorageHeater">is water storage heater</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#nominalEnergyConsumption"
+               title="http://saref.linkeddata.es/def/bldg#nominalEnergyConsumption">nominal energy consumption</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalPartLoadRatio"
+               title="http://saref.linkeddata.es/def/bldg#nominalPartLoadRatio">nominal part load ratio</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#waterInletTemperatureMin"
                title="http://saref.linkeddata.es/def/bldg#waterInletTemperatureMin">water inlet temperature range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#pressureRating"
+               title="http://saref.linkeddata.es/def/bldg#pressureRating">pressure rating</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -510,27 +541,11 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalEnergyConsumption"
-               title="http://saref.linkeddata.es/def/bldg#nominalEnergyConsumption">nominal energy consumption</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#operatingMode"
-               title="http://saref.linkeddata.es/def/bldg#operatingMode">operating mode</a>
+            <a href="#energySource"
+               title="http://saref.linkeddata.es/def/bldg#energySource">energy source</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#waterInletTemperatureMax"
-               title="http://saref.linkeddata.es/def/bldg#waterInletTemperatureMax">water inlet temperature range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#outletTemperatureMin"
@@ -541,23 +556,8 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#isWaterStorageHeater"
-               title="http://saref.linkeddata.es/def/bldg#isWaterStorageHeater">is water storage heater</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
-            <a href="#nominalPartLoadRatio"
-               title="http://saref.linkeddata.es/def/bldg#nominalPartLoadRatio">nominal part load ratio</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#heatTransferSurfaceArea"
-               title="http://saref.linkeddata.es/def/bldg#heatTransferSurfaceArea">heat transfer surface area</a>
+            <a href="#waterStorageCapacity"
+               title="http://saref.linkeddata.es/def/bldg#waterStorageCapacity">water storage capacity</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -675,14 +675,6 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#contains" title="http://saref.linkeddata.es/def/bldg#contains">contains</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#PhysicalObject"
-               title="http://saref.linkeddata.es/def/bldg#PhysicalObject">Physical object</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#isSpaceOf" title="http://saref.linkeddata.es/def/bldg#isSpaceOf">isSpaceOf</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
@@ -699,6 +691,14 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <span class="logic">only</span> 
             <a href="#BuildingSpace"
                title="http://saref.linkeddata.es/def/bldg#BuildingSpace">Building space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#contains" title="http://saref.linkeddata.es/def/bldg#contains">contains</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#PhysicalObject"
+               title="http://saref.linkeddata.es/def/bldg#PhysicalObject">Physical object</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -747,6 +747,14 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#nominalHeatRejectionRate"
+               title="http://saref.linkeddata.es/def/bldg#nominalHeatRejectionRate">nominal heat rejection rate</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#nominalCondensingTemperature"
                title="http://saref.linkeddata.es/def/bldg#nominalCondensingTemperature">nominal condensing temperature</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -755,8 +763,8 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalHeatRejectionRate"
-               title="http://saref.linkeddata.es/def/bldg#nominalHeatRejectionRate">nominal heat rejection rate</a>
+            <a href="#nominalPowerConsumption"
+               title="http://saref.linkeddata.es/def/bldg#nominalPowerConsumption">nominal power consumption</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -771,14 +779,6 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalCapacity"
-               title="http://saref.linkeddata.es/def/bldg#nominalCapacity">nominal capacity</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#nominalEvaporatingTemmperature"
                title="http://saref.linkeddata.es/def/bldg#nominalEvaporatingTemmperature">nominal evaporating temmperature</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -787,8 +787,8 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalPowerConsumption"
-               title="http://saref.linkeddata.es/def/bldg#nominalPowerConsumption">nominal power consumption</a>
+            <a href="#nominalCapacity"
+               title="http://saref.linkeddata.es/def/bldg#nominalCapacity">nominal capacity</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -816,22 +816,23 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.</
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalUa" title="http://saref.linkeddata.es/def/bldg#nominalUa">nominal ua</a>
+            <a href="#airFlowRateMax"
+               title="http://saref.linkeddata.es/def/bldg#airFlowRateMax">air flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#placementType"
-               title="http://saref.linkeddata.es/def/bldg#placementType">placement type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#operationTemperatureMax"
                title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalUa" title="http://saref.linkeddata.es/def/bldg#nominalUa">nominal ua</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -846,8 +847,15 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.</
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#airFlowRateMax"
-               title="http://saref.linkeddata.es/def/bldg#airFlowRateMax">air flow rate range</a>
+            <a href="#placementType"
+               title="http://saref.linkeddata.es/def/bldg#placementType">placement type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#operationTemperatureMin"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -864,14 +872,6 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.</
          <dd>
             <a href="#nominalLatentCapacity"
                title="http://saref.linkeddata.es/def/bldg#nominalLatentCapacity">nominal latent capacity</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#operationTemperatureMin"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -918,38 +918,8 @@ Communication appliances may be fixed in place or may be able to be moved from o
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#compressorSpeed"
-               title="http://saref.linkeddata.es/def/bldg#compressorSpeed">compressor speed</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#powerSource" title="http://saref.linkeddata.es/def/bldg#powerSource">power source</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#impellerDiameter"
-               title="http://saref.linkeddata.es/def/bldg#impellerDiameter">impeller diameter</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#idealShaftPower"
-               title="http://saref.linkeddata.es/def/bldg#idealShaftPower">ideal shaft power</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#partLoadRatioMin"
-               title="http://saref.linkeddata.es/def/bldg#partLoadRatioMin">minimum part load ratio</a>
+            <a href="#nominalCapacity"
+               title="http://saref.linkeddata.es/def/bldg#nominalCapacity">nominal capacity</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -964,16 +934,29 @@ Communication appliances may be fixed in place or may be able to be moved from o
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#partLoadRatioMax"
-               title="http://saref.linkeddata.es/def/bldg#partLoadRatioMax">maximum part load ratio</a>
+            <a href="#powerSource" title="http://saref.linkeddata.es/def/bldg#powerSource">power source</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#refrigerantClass"
+               title="http://saref.linkeddata.es/def/bldg#refrigerantClass">refrigerant class</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#partLoadRatioMin"
+               title="http://saref.linkeddata.es/def/bldg#partLoadRatioMin">minimum part load ratio</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalCapacity"
-               title="http://saref.linkeddata.es/def/bldg#nominalCapacity">nominal capacity</a>
+            <a href="#partLoadRatioMax"
+               title="http://saref.linkeddata.es/def/bldg#partLoadRatioMax">maximum part load ratio</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -987,11 +970,28 @@ Communication appliances may be fixed in place or may be able to be moved from o
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
          <dd>
-            <a href="#refrigerantClass"
-               title="http://saref.linkeddata.es/def/bldg#refrigerantClass">refrigerant class</a>
-            <sup class="type-dp" title="data property">dp</sup> 
+            <a href="#idealShaftPower"
+               title="http://saref.linkeddata.es/def/bldg#idealShaftPower">ideal shaft power</a>
+            <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#compressorSpeed"
+               title="http://saref.linkeddata.es/def/bldg#compressorSpeed">compressor speed</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#impellerDiameter"
+               title="http://saref.linkeddata.es/def/bldg#impellerDiameter">impeller diameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1013,40 +1013,8 @@ Communication appliances may be fixed in place or may be able to be moved from o
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalHeatTransferCoefficient"
-               title="http://saref.linkeddata.es/def/bldg#nominalHeatTransferCoefficient">nominal heat transfer coefficient</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#internalWaterVolume"
-               title="http://saref.linkeddata.es/def/bldg#internalWaterVolume">internal water volume</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#internalSurfaceArea"
-               title="http://saref.linkeddata.es/def/bldg#internalSurfaceArea">internal surface area</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#nominalHeatTransferArea"
                title="http://saref.linkeddata.es/def/bldg#nominalHeatTransferArea">nominal heat transfer area</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#internalRefrigerantVolume"
-               title="http://saref.linkeddata.es/def/bldg#internalRefrigerantVolume">internal refrigerant volume</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1062,6 +1030,38 @@ Communication appliances may be fixed in place or may be able to be moved from o
          <dd>
             <a href="#externalSurfaceArea"
                title="http://saref.linkeddata.es/def/bldg#externalSurfaceArea">external surface area</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#internalSurfaceArea"
+               title="http://saref.linkeddata.es/def/bldg#internalSurfaceArea">internal surface area</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#internalWaterVolume"
+               title="http://saref.linkeddata.es/def/bldg#internalWaterVolume">internal water volume</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#internalRefrigerantVolume"
+               title="http://saref.linkeddata.es/def/bldg#internalRefrigerantVolume">internal refrigerant volume</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalHeatTransferCoefficient"
+               title="http://saref.linkeddata.es/def/bldg#nominalHeatTransferCoefficient">nominal heat transfer coefficient</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1108,8 +1108,7 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalWaterFlowCooling"
-               title="http://saref.linkeddata.es/def/bldg#nominalWaterFlowCooling">nominal water flow cooling</a>
+            <a href="#coilWidth" title="http://saref.linkeddata.es/def/bldg#coilWidth">coil width</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1123,20 +1122,34 @@ A controller may be physical (having placement within a spatial structure) or lo
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#nominalSorroundingHumidityCooling"
-               title="http://saref.linkeddata.es/def/bldg#nominalSorroundingHumidityCooling">nominal sorrounding humidity cooling</a>
+            <a href="#waterFlowControlSystemType"
+               title="http://saref.linkeddata.es/def/bldg#waterFlowControlSystemType">water flow control system type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#nominalSorroundingTemperatureCooling"
+               title="http://saref.linkeddata.es/def/bldg#nominalSorroundingTemperatureCooling">nominal sorrounding temperature cooling</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#waterPressureMin"
-               title="http://saref.linkeddata.es/def/bldg#waterPressureMin">water pressure range</a>
+            <a href="#nominalWaterFlowCooling"
+               title="http://saref.linkeddata.es/def/bldg#nominalWaterFlowCooling">nominal water flow cooling</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isFreeHanging"
+               title="http://saref.linkeddata.es/def/bldg#isFreeHanging">is free hanging</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
          <dd>
             <a href="#nominalCoolingCapacity"
@@ -1147,15 +1160,23 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#integratedLightingType"
-               title="http://saref.linkeddata.es/def/bldg#integratedLightingType">integrated lighting type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
+            <a href="#nominalHeatingCapacity"
+               title="http://saref.linkeddata.es/def/bldg#nominalHeatingCapacity">nominal heating capacity</a>
+            <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalSupplyWaterTemperatureHeating"
-               title="http://saref.linkeddata.es/def/bldg#nominalSupplyWaterTemperatureHeating">nominal supply water temperature heating</a>
+            <a href="#nominalSorroundingHumidityCooling"
+               title="http://saref.linkeddata.es/def/bldg#nominalSorroundingHumidityCooling">nominal sorrounding humidity cooling</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#coilLength" title="http://saref.linkeddata.es/def/bldg#coilLength">coil length</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1170,8 +1191,32 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalReturnWaterTemperatureCooling"
-               title="http://saref.linkeddata.es/def/bldg#nominalReturnWaterTemperatureCooling">nominal return water temperature cooling</a>
+            <a href="#nominalReturnWaterTemperatureHeating"
+               title="http://saref.linkeddata.es/def/bldg#nominalReturnWaterTemperatureHeating">nominal return water temperature heating</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalWaterFlowHeating"
+               title="http://saref.linkeddata.es/def/bldg#nominalWaterFlowHeating">nominal water flow heating</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#waterPressureMin"
+               title="http://saref.linkeddata.es/def/bldg#waterPressureMin">water pressure range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalSupplyWaterTemperatureCooling"
+               title="http://saref.linkeddata.es/def/bldg#nominalSupplyWaterTemperatureCooling">nominal supply water temperature cooling</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1192,72 +1237,27 @@ A controller may be physical (having placement within a spatial structure) or lo
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#coilLength" title="http://saref.linkeddata.es/def/bldg#coilLength">coil length</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalSupplyWaterTemperatureCooling"
-               title="http://saref.linkeddata.es/def/bldg#nominalSupplyWaterTemperatureCooling">nominal supply water temperature cooling</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalHeatingCapacity"
-               title="http://saref.linkeddata.es/def/bldg#nominalHeatingCapacity">nominal heating capacity</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalReturnWaterTemperatureHeating"
-               title="http://saref.linkeddata.es/def/bldg#nominalReturnWaterTemperatureHeating">nominal return water temperature heating</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#isFreeHanging"
-               title="http://saref.linkeddata.es/def/bldg#isFreeHanging">is free hanging</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
-            <a href="#coilWidth" title="http://saref.linkeddata.es/def/bldg#coilWidth">coil width</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalSorroundingTemperatureCooling"
-               title="http://saref.linkeddata.es/def/bldg#nominalSorroundingTemperatureCooling">nominal sorrounding temperature cooling</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalWaterFlowHeating"
-               title="http://saref.linkeddata.es/def/bldg#nominalWaterFlowHeating">nominal water flow heating</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#waterFlowControlSystemType"
-               title="http://saref.linkeddata.es/def/bldg#waterFlowControlSystemType">water flow control system type</a>
+            <a href="#integratedLightingType"
+               title="http://saref.linkeddata.es/def/bldg#integratedLightingType">integrated lighting type</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#nominalSupplyWaterTemperatureHeating"
+               title="http://saref.linkeddata.es/def/bldg#nominalSupplyWaterTemperatureHeating">nominal supply water temperature heating</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalReturnWaterTemperatureCooling"
+               title="http://saref.linkeddata.es/def/bldg#nominalReturnWaterTemperatureCooling">nominal return water temperature cooling</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1279,11 +1279,34 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#capacityControl"
-               title="http://saref.linkeddata.es/def/bldg#capacityControl">capacity control</a>
+            <a href="#liftElevationDifference"
+               title="http://saref.linkeddata.es/def/bldg#liftElevationDifference">lift elevation difference</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#sprayType" title="http://saref.linkeddata.es/def/bldg#sprayType">spray type</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#nominalCapacity"
+               title="http://saref.linkeddata.es/def/bldg#nominalCapacity">nominal capacity</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#basinReserveVolume"
+               title="http://saref.linkeddata.es/def/bldg#basinReserveVolume">basin reserve volume</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#circuitType" title="http://saref.linkeddata.es/def/bldg#circuitType">circuit type</a>
@@ -1292,8 +1315,15 @@ A controller may be physical (having placement within a spatial structure) or lo
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#operationTemperatureMax"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
+            <a href="#capacityControl"
+               title="http://saref.linkeddata.es/def/bldg#capacityControl">capacity control</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#operationTemperatureMin"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1308,39 +1338,30 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#operationTemperatureMin"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#controlStrategy"
-               title="http://saref.linkeddata.es/def/bldg#controlStrategy">control strategy</a>
+            <a href="#flowArrangement"
+               title="http://saref.linkeddata.es/def/bldg#flowArrangement">flow arrangement</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#basinReserveVolume"
-               title="http://saref.linkeddata.es/def/bldg#basinReserveVolume">basin reserve volume</a>
+            <a href="#operationTemperatureMax"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#numberOfCells"
+               title="http://saref.linkeddata.es/def/bldg#numberOfCells">number of cells</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
          </dd>
          <dd>
             <a href="#ambientDesignDryBulbTemperature"
                title="http://saref.linkeddata.es/def/bldg#ambientDesignDryBulbTemperature">ambient design dry bulb temperature</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#liftElevationDifference"
-               title="http://saref.linkeddata.es/def/bldg#liftElevationDifference">lift elevation difference</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1355,29 +1376,8 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalCapacity"
-               title="http://saref.linkeddata.es/def/bldg#nominalCapacity">nominal capacity</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#numberOfCells"
-               title="http://saref.linkeddata.es/def/bldg#numberOfCells">number of cells</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
-         </dd>
-         <dd>
-            <a href="#sprayType" title="http://saref.linkeddata.es/def/bldg#sprayType">spray type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#flowArrangement"
-               title="http://saref.linkeddata.es/def/bldg#flowArrangement">flow arrangement</a>
+            <a href="#controlStrategy"
+               title="http://saref.linkeddata.es/def/bldg#controlStrategy">control strategy</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -1402,6 +1402,14 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#operationTemperatureMin"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#airFlowRateMax"
                title="http://saref.linkeddata.es/def/bldg#airFlowRateMax">air flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -1410,8 +1418,7 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#openPressureDrop"
-               title="http://saref.linkeddata.es/def/bldg#openPressureDrop">open pressure drop</a>
+            <a href="#faceArea" title="http://saref.linkeddata.es/def/bldg#faceArea">face area</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1426,7 +1433,8 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#frameDepth" title="http://saref.linkeddata.es/def/bldg#frameDepth">frame depth</a>
+            <a href="#temperatureRating"
+               title="http://saref.linkeddata.es/def/bldg#temperatureRating">temperature rating</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1441,11 +1449,40 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#numberOfBlades"
-               title="http://saref.linkeddata.es/def/bldg#numberOfBlades">number of blades</a>
+            <a href="#nominalAirFlowRate"
+               title="http://saref.linkeddata.es/def/bldg#nominalAirFlowRate">nominal air flow rate</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#bladeShape" title="http://saref.linkeddata.es/def/bldg#bladeShape">blade shape</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#bladeAction" title="http://saref.linkeddata.es/def/bldg#bladeAction">blade action</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#frameThickness"
+               title="http://saref.linkeddata.es/def/bldg#frameThickness">frame thickness</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#openPressureDrop"
+               title="http://saref.linkeddata.es/def/bldg#openPressureDrop">open pressure drop</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#bladeEdge" title="http://saref.linkeddata.es/def/bldg#bladeEdge">blade edge</a>
@@ -1454,14 +1491,7 @@ A controller may be physical (having placement within a spatial structure) or lo
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#faceArea" title="http://saref.linkeddata.es/def/bldg#faceArea">face area</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#bladeShape" title="http://saref.linkeddata.es/def/bldg#bladeShape">blade shape</a>
+            <a href="#frameType" title="http://saref.linkeddata.es/def/bldg#frameType">frame type</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -1475,51 +1505,13 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#operationTemperatureMin"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#frameType" title="http://saref.linkeddata.es/def/bldg#frameType">frame type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#bladeAction" title="http://saref.linkeddata.es/def/bldg#bladeAction">blade action</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#operationTemperatureMax"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#temperatureRating"
-               title="http://saref.linkeddata.es/def/bldg#temperatureRating">temperature rating</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalAirFlowRate"
-               title="http://saref.linkeddata.es/def/bldg#nominalAirFlowRate">nominal air flow rate</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#operation" title="http://saref.linkeddata.es/def/bldg#operation">operation</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#orientation" title="http://saref.linkeddata.es/def/bldg#orientation">orientation</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -1533,14 +1525,22 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#orientation" title="http://saref.linkeddata.es/def/bldg#orientation">orientation</a>
+            <a href="#numberOfBlades"
+               title="http://saref.linkeddata.es/def/bldg#numberOfBlades">number of blades</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
          </dd>
          <dd>
-            <a href="#frameThickness"
-               title="http://saref.linkeddata.es/def/bldg#frameThickness">frame thickness</a>
+            <a href="#frameDepth" title="http://saref.linkeddata.es/def/bldg#frameDepth">frame depth</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#operationTemperatureMax"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1704,31 +1704,23 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#airFlowRateMax"
+               title="http://saref.linkeddata.es/def/bldg#airFlowRateMax">air flow rate range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasExteriorInsulation"
+               title="http://saref.linkeddata.es/def/bldg#hasExteriorInsulation">has exterior insulation</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
             <a href="#hydraulicDiameter"
                title="http://saref.linkeddata.es/def/bldg#hydraulicDiameter">hydraulic diameter</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#workingPressureMax"
-               title="http://saref.linkeddata.es/def/bldg#workingPressureMax">maximum working pressure</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#airFlowRateMin"
-               title="http://saref.linkeddata.es/def/bldg#airFlowRateMin">air flow rate range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#weight" title="http://saref.linkeddata.es/def/bldg#weight">weight</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1743,8 +1735,8 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#airFlowRateMax"
-               title="http://saref.linkeddata.es/def/bldg#airFlowRateMax">air flow rate range</a>
+            <a href="#airFlowRateMin"
+               title="http://saref.linkeddata.es/def/bldg#airFlowRateMin">air flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1759,14 +1751,22 @@ A controller may be physical (having placement within a spatial structure) or lo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#hasExteriorInsulation"
-               title="http://saref.linkeddata.es/def/bldg#hasExteriorInsulation">has exterior insulation</a>
-            <sup class="type-dp" title="data property">dp</sup> 
+            <a href="#length" title="http://saref.linkeddata.es/def/bldg#length">length</a>
+            <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#length" title="http://saref.linkeddata.es/def/bldg#length">length</a>
+            <a href="#weight" title="http://saref.linkeddata.es/def/bldg#weight">weight</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#workingPressureMax"
+               title="http://saref.linkeddata.es/def/bldg#workingPressureMax">maximum working pressure</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1813,16 +1813,16 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalFrequency"
-               title="http://saref.linkeddata.es/def/bldg#nominalFrequency">nominal frequency</a>
+            <a href="#nominalSupplyVoltageMin"
+               title="http://saref.linkeddata.es/def/bldg#nominalSupplyVoltageMin">nominal supply voltage offset</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalSupplyVoltageMin"
-               title="http://saref.linkeddata.es/def/bldg#nominalSupplyVoltageMin">nominal supply voltage offset</a>
+            <a href="#nominalFrequency"
+               title="http://saref.linkeddata.es/def/bldg#nominalFrequency">nominal frequency</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1856,8 +1856,8 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#powerOutputMax"
-               title="http://saref.linkeddata.es/def/bldg#powerOutputMax">maximum power output</a>
+            <a href="#electricGeneratorEfficiency"
+               title="http://saref.linkeddata.es/def/bldg#electricGeneratorEfficiency">electric generator efficiency</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1872,8 +1872,8 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#electricGeneratorEfficiency"
-               title="http://saref.linkeddata.es/def/bldg#electricGeneratorEfficiency">electric generator efficiency</a>
+            <a href="#powerOutputMax"
+               title="http://saref.linkeddata.es/def/bldg#powerOutputMax">maximum power output</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1899,8 +1899,50 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#powerOutputMax"
+               title="http://saref.linkeddata.es/def/bldg#powerOutputMax">maximum power output</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#startingTime"
                title="http://saref.linkeddata.es/def/bldg#startingTime">starting time</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#frameSize" title="http://saref.linkeddata.es/def/bldg#frameSize">frame size</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#motorEnclosureType"
+               title="http://saref.linkeddata.es/def/bldg#motorEnclosureType">motor enclosure type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#hasPartWinding"
+               title="http://saref.linkeddata.es/def/bldg#hasPartWinding">has part winding</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#isGuarded" title="http://saref.linkeddata.es/def/bldg#isGuarded">is guarded</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#startCurrentFactor"
+               title="http://saref.linkeddata.es/def/bldg#startCurrentFactor">start current factor</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -1914,27 +1956,6 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#motorEnclosureType"
-               title="http://saref.linkeddata.es/def/bldg#motorEnclosureType">motor enclosure type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#powerOutputMax"
-               title="http://saref.linkeddata.es/def/bldg#powerOutputMax">maximum power output</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#isGuarded" title="http://saref.linkeddata.es/def/bldg#isGuarded">is guarded</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
             <a href="#lockedRotorCurrent"
                title="http://saref.linkeddata.es/def/bldg#lockedRotorCurrent">locked rotor current</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -1943,29 +1964,8 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#frameSize" title="http://saref.linkeddata.es/def/bldg#frameSize">frame size</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#hasPartWinding"
-               title="http://saref.linkeddata.es/def/bldg#hasPartWinding">has part winding</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
             <a href="#electricMotorEfficiency"
                title="http://saref.linkeddata.es/def/bldg#electricMotorEfficiency">electric motor efficiency</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#startCurrentFactor"
-               title="http://saref.linkeddata.es/def/bldg#startCurrentFactor">start current factor</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2083,16 +2083,23 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#operationTemperatureMin"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
+            <a href="#flowArrangement"
+               title="http://saref.linkeddata.es/def/bldg#flowArrangement">flow arrangement</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#waterRequirement"
+               title="http://saref.linkeddata.es/def/bldg#waterRequirement">water requirement</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#waterRequirement"
-               title="http://saref.linkeddata.es/def/bldg#waterRequirement">water requirement</a>
+            <a href="#operationTemperatureMin"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2105,13 +2112,6 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#flowArrangement"
-               title="http://saref.linkeddata.es/def/bldg#flowArrangement">flow arrangement</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
             <a href="#heatExchangeArea"
@@ -2141,6 +2141,28 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#nominalHeatTransferArea"
+               title="http://saref.linkeddata.es/def/bldg#nominalHeatTransferArea">nominal heat transfer area</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#evaporationCoolant"
+               title="http://saref.linkeddata.es/def/bldg#evaporationCoolant">evaporation coolant</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#evaporationMediumType"
+               title="http://saref.linkeddata.es/def/bldg#evaporationMediumType">evaporation medium type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
             <a href="#externalSurfaceArea"
                title="http://saref.linkeddata.es/def/bldg#externalSurfaceArea">external surface area</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -2164,29 +2186,6 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#internalSurfaceArea"
-               title="http://saref.linkeddata.es/def/bldg#internalSurfaceArea">internal surface area</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalHeatTransferArea"
-               title="http://saref.linkeddata.es/def/bldg#nominalHeatTransferArea">nominal heat transfer area</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#evaporationCoolant"
-               title="http://saref.linkeddata.es/def/bldg#evaporationCoolant">evaporation coolant</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#internalWaterVolume"
                title="http://saref.linkeddata.es/def/bldg#internalWaterVolume">internal water volume</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -2195,15 +2194,16 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#evaporationMediumType"
-               title="http://saref.linkeddata.es/def/bldg#evaporationMediumType">evaporation medium type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#nominalHeatTransferCoefficient"
                title="http://saref.linkeddata.es/def/bldg#nominalHeatTransferCoefficient">nominal heat transfer coefficient</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#internalSurfaceArea"
+               title="http://saref.linkeddata.es/def/bldg#internalSurfaceArea">internal surface area</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2229,16 +2229,8 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalTotalPressure"
-               title="http://saref.linkeddata.es/def/bldg#nominalTotalPressure">nominal total pressure</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalRotationSpeed"
-               title="http://saref.linkeddata.es/def/bldg#nominalRotationSpeed">nominal rotation speed</a>
+            <a href="#nominalStaticPressure"
+               title="http://saref.linkeddata.es/def/bldg#nominalStaticPressure">nominal static pressure</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2252,6 +2244,14 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
+            <a href="#nominalTotalPressure"
+               title="http://saref.linkeddata.es/def/bldg#nominalTotalPressure">nominal total pressure</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#operationTemperatureMax"
                title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -2260,8 +2260,8 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalStaticPressure"
-               title="http://saref.linkeddata.es/def/bldg#nominalStaticPressure">nominal static pressure</a>
+            <a href="#operationalRiterial"
+               title="http://saref.linkeddata.es/def/bldg#operationalRiterial">operational riterial</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2276,8 +2276,8 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalAirFlowRate"
-               title="http://saref.linkeddata.es/def/bldg#nominalAirFlowRate">nominal air flow rate</a>
+            <a href="#operationTemperatureMin"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2291,16 +2291,16 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#operationalRiterial"
-               title="http://saref.linkeddata.es/def/bldg#operationalRiterial">operational riterial</a>
+            <a href="#nominalRotationSpeed"
+               title="http://saref.linkeddata.es/def/bldg#nominalRotationSpeed">nominal rotation speed</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#operationTemperatureMin"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
+            <a href="#nominalAirFlowRate"
+               title="http://saref.linkeddata.es/def/bldg#nominalAirFlowRate">nominal air flow rate</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2349,56 +2349,8 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nominalParticleGeometricMeanDiameter"
-               title="http://saref.linkeddata.es/def/bldg#nominalParticleGeometricMeanDiameter">nominal particle geometric mean diameter</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalPressureDrop"
-               title="http://saref.linkeddata.es/def/bldg#nominalPressureDrop">nominal pressure drop</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalMediaSurfaceVelocity"
-               title="http://saref.linkeddata.es/def/bldg#nominalMediaSurfaceVelocity">nominal media surface velocity</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalParticleGeometricStandardDeviation"
-               title="http://saref.linkeddata.es/def/bldg#nominalParticleGeometricStandardDeviation">nominal particle geometric standard deviation</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalFlowRate"
-               title="http://saref.linkeddata.es/def/bldg#nominalFlowRate">nominal flow rate</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#operationTemperatureMax"
                title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#fluidFlowRateMin"
-               title="http://saref.linkeddata.es/def/bldg#fluidFlowRateMin">fluid flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2413,6 +2365,22 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#nominalPressureDrop"
+               title="http://saref.linkeddata.es/def/bldg#nominalPressureDrop">nominal pressure drop</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#fluidFlowRateMin"
+               title="http://saref.linkeddata.es/def/bldg#fluidFlowRateMin">fluid flow rate range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#fluidFlowRateMax"
                title="http://saref.linkeddata.es/def/bldg#fluidFlowRateMax">fluid flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -2421,8 +2389,40 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#nominalParticleGeometricStandardDeviation"
+               title="http://saref.linkeddata.es/def/bldg#nominalParticleGeometricStandardDeviation">nominal particle geometric standard deviation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#operationTemperatureMin"
                title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalMediaSurfaceVelocity"
+               title="http://saref.linkeddata.es/def/bldg#nominalMediaSurfaceVelocity">nominal media surface velocity</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalParticleGeometricMeanDiameter"
+               title="http://saref.linkeddata.es/def/bldg#nominalParticleGeometricMeanDiameter">nominal particle geometric mean diameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalFlowRate"
+               title="http://saref.linkeddata.es/def/bldg#nominalFlowRate">nominal flow rate</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2522,17 +2522,17 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#readOutType" title="http://saref.linkeddata.es/def/bldg#readOutType">read out type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#remoteReading"
                title="http://saref.linkeddata.es/def/bldg#remoteReading">remote reading</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#readOutType" title="http://saref.linkeddata.es/def/bldg#readOutType">read out type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
       </dl>
    </div>
@@ -2696,6 +2696,12 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#application" title="http://saref.linkeddata.es/def/bldg#application">application</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
             <a href="#nominalAirFlowRate"
                title="http://saref.linkeddata.es/def/bldg#nominalAirFlowRate">nominal air flow rate</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -2704,17 +2710,19 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#application" title="http://saref.linkeddata.es/def/bldg#application">application</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#internalControl"
                title="http://saref.linkeddata.es/def/bldg#internalControl">internal control</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#nominalMoistureGain"
+               title="http://saref.linkeddata.es/def/bldg#nominalMoistureGain">nominal moisture gain</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#waterRequirement"
@@ -2726,14 +2734,6 @@ Instrumentation is typically for the purpose of determining the value of the pro
          </dd>
          <dd>
             <a href="#weight" title="http://saref.linkeddata.es/def/bldg#weight">weight</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalMoistureGain"
-               title="http://saref.linkeddata.es/def/bldg#nominalMoistureGain">nominal moisture gain</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2759,16 +2759,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#outletConnectionSize"
-               title="http://saref.linkeddata.es/def/bldg#outletConnectionSize">outlet connection size</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#inletConnectionSize"
-               title="http://saref.linkeddata.es/def/bldg#inletConnectionSize">inlet connection size</a>
+            <a href="#coverWidth" title="http://saref.linkeddata.es/def/bldg#coverWidth">cover width</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2783,6 +2774,21 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#coverLength" title="http://saref.linkeddata.es/def/bldg#coverLength">cover length</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#outletConnectionSize"
+               title="http://saref.linkeddata.es/def/bldg#outletConnectionSize">outlet connection size</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#nominalBodyLength"
                title="http://saref.linkeddata.es/def/bldg#nominalBodyLength">nominal body length</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -2791,22 +2797,8 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#coverLength" title="http://saref.linkeddata.es/def/bldg#coverLength">cover length</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#coverWidth" title="http://saref.linkeddata.es/def/bldg#coverWidth">cover width</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalBodyDepth"
-               title="http://saref.linkeddata.es/def/bldg#nominalBodyDepth">nominal body depth</a>
+            <a href="#inletConnectionSize"
+               title="http://saref.linkeddata.es/def/bldg#inletConnectionSize">inlet connection size</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2815,6 +2807,14 @@ Instrumentation is typically for the purpose of determining the value of the pro
          <dd>
             <a href="#nominalBodyWidth"
                title="http://saref.linkeddata.es/def/bldg#nominalBodyWidth">nominal body width</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalBodyDepth"
+               title="http://saref.linkeddata.es/def/bldg#nominalBodyDepth">nominal body depth</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2840,8 +2840,15 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#lightEmitterNominalPower"
-               title="http://saref.linkeddata.es/def/bldg#lightEmitterNominalPower">light emitter nominal power</a>
+            <a href="#colorRenderingIndex"
+               title="http://saref.linkeddata.es/def/bldg#colorRenderingIndex">color rendering index</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#lampMaintenanceFactor"
+               title="http://saref.linkeddata.es/def/bldg#lampMaintenanceFactor">lamp maintenance factor</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2855,27 +2862,6 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#colorRenderingIndex"
-               title="http://saref.linkeddata.es/def/bldg#colorRenderingIndex">color rendering index</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
-         </dd>
-         <dd>
-            <a href="#spectrumMax" title="http://saref.linkeddata.es/def/bldg#spectrumMax">maximum spectrum</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#spectrumMin" title="http://saref.linkeddata.es/def/bldg#spectrumMin">minimum spectrum</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#contributedLuminousFlux"
                title="http://saref.linkeddata.es/def/bldg#contributedLuminousFlux">contributed luminous flux</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -2884,16 +2870,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#colorTemperature"
-               title="http://saref.linkeddata.es/def/bldg#colorTemperature">color temperature</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#lampMaintenanceFactor"
-               title="http://saref.linkeddata.es/def/bldg#lampMaintenanceFactor">lamp maintenance factor</a>
+            <a href="#spectrumMin" title="http://saref.linkeddata.es/def/bldg#spectrumMin">minimum spectrum</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -2913,6 +2890,29 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
+         <dd>
+            <a href="#spectrumMax" title="http://saref.linkeddata.es/def/bldg#spectrumMax">maximum spectrum</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#colorTemperature"
+               title="http://saref.linkeddata.es/def/bldg#colorTemperature">color temperature</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#lightEmitterNominalPower"
+               title="http://saref.linkeddata.es/def/bldg#lightEmitterNominalPower">light emitter nominal power</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Measurement">
@@ -2930,14 +2930,9 @@ Instrumentation is typically for the purpose of determining the value of the pro
          <dd>
             <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <span class="logic">exactly</span> 1 <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dd>
-            <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">exactly</span> 1</dd>
          <dd>
             <a href="#hasTimestamp"
                title="http://saref.linkeddata.es/def/bldg#hasTimestamp">has timestamp</a>
@@ -2949,21 +2944,26 @@ Instrumentation is typically for the purpose of determining the value of the pro
             <a href="#relatesToProperty"
                title="http://saref.linkeddata.es/def/bldg#relatesToProperty">relates to property</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Property" title="http://saref.linkeddata.es/def/bldg#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">exactly</span> 1 <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <span class="logic">exactly</span> 1 <a href="#Property" title="http://saref.linkeddata.es/def/bldg#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#relatesToProperty"
                title="http://saref.linkeddata.es/def/bldg#relatesToProperty">relates to property</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">exactly</span> 1 <a href="#Property" title="http://saref.linkeddata.es/def/bldg#Property">Property</a>
+            <span class="logic">only</span> 
+            <a href="#Property" title="http://saref.linkeddata.es/def/bldg#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -3015,18 +3015,18 @@ Power outlets are commonly connected within a junction box; data outlets may be 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#isPluggableOutlet"
-               title="http://saref.linkeddata.es/def/bldg#isPluggableOutlet">is pluggable outlet</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
             <a href="#numberOsSockets"
                title="http://saref.linkeddata.es/def/bldg#numberOsSockets">number os sockets</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#isPluggableOutlet"
+               title="http://saref.linkeddata.es/def/bldg#isPluggableOutlet">is pluggable outlet</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
       </dl>
    </div>
@@ -3048,11 +3048,12 @@ Power outlets are commonly connected within a junction box; data outlets may be 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#contains" title="http://saref.linkeddata.es/def/bldg#contains">contains</a>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location"
+               title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#PhysicalObject"
-               title="http://saref.linkeddata.es/def/bldg#PhysicalObject">Physical object</a>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -3069,12 +3070,11 @@ Power outlets are commonly connected within a junction box; data outlets may be 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
+            <a href="#contains" title="http://saref.linkeddata.es/def/bldg#contains">contains</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+            <a href="#PhysicalObject"
+               title="http://saref.linkeddata.es/def/bldg#PhysicalObject">Physical object</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -3146,18 +3146,18 @@ A protective device provides protection against electrical current only (not as 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#standard" title="http://saref.linkeddata.es/def/bldg#standard">standard</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#limitingTerminalSize"
                title="http://saref.linkeddata.es/def/bldg#limitingTerminalSize">limiting terminal size</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#standard" title="http://saref.linkeddata.es/def/bldg#standard">standard</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
       </dl>
    </div>
@@ -3179,8 +3179,8 @@ A protective device provides protection against electrical current only (not as 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#pumpFlowRateMin"
-               title="http://saref.linkeddata.es/def/bldg#pumpFlowRateMin">pump flow rate range</a>
+            <a href="#operationTemperatureMin"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3195,32 +3195,8 @@ A protective device provides protection against electrical current only (not as 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#nomminalRotationSpeed"
-               title="http://saref.linkeddata.es/def/bldg#nomminalRotationSpeed">nomminal rotation speed</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#connectionSize"
                title="http://saref.linkeddata.es/def/bldg#connectionSize">connection size</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#operationTemperatureMin"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMin">operation temperature range</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#operationTemperatureMax"
-               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3243,8 +3219,32 @@ A protective device provides protection against electrical current only (not as 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#operationTemperatureMax"
+               title="http://saref.linkeddata.es/def/bldg#operationTemperatureMax">operation temperature range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nomminalRotationSpeed"
+               title="http://saref.linkeddata.es/def/bldg#nomminalRotationSpeed">nomminal rotation speed</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#pumpFlowRateMax"
                title="http://saref.linkeddata.es/def/bldg#pumpFlowRateMax">pump flow rate range</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#pumpFlowRateMin"
+               title="http://saref.linkeddata.es/def/bldg#pumpFlowRateMin">pump flow rate range</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3337,57 +3337,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#solarTransmittance"
-               title="http://saref.linkeddata.es/def/bldg#solarTransmittance">solar transmittance</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#isExternal" title="http://saref.linkeddata.es/def/bldg#isExternal">is external</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
-            <a href="#shadingDeviceType"
-               title="http://saref.linkeddata.es/def/bldg#shadingDeviceType">shading device type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#roughness" title="http://saref.linkeddata.es/def/bldg#roughness">roughness</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#solarReflectance"
-               title="http://saref.linkeddata.es/def/bldg#solarReflectance">solar reflectance</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#visibleLightReflectance"
-               title="http://saref.linkeddata.es/def/bldg#visibleLightReflectance">visible light reflectance</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#thermalTransmittance"
-               title="http://saref.linkeddata.es/def/bldg#thermalTransmittance">thermal transmittance</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#visibleLightTransmittance"
                title="http://saref.linkeddata.es/def/bldg#visibleLightTransmittance">visible light transmittance</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3401,6 +3350,57 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#visibleLightReflectance"
+               title="http://saref.linkeddata.es/def/bldg#visibleLightReflectance">visible light reflectance</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#solarTransmittance"
+               title="http://saref.linkeddata.es/def/bldg#solarTransmittance">solar transmittance</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#roughness" title="http://saref.linkeddata.es/def/bldg#roughness">roughness</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#thermalTransmittance"
+               title="http://saref.linkeddata.es/def/bldg#thermalTransmittance">thermal transmittance</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#shadingDeviceType"
+               title="http://saref.linkeddata.es/def/bldg#shadingDeviceType">shading device type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#isExternal" title="http://saref.linkeddata.es/def/bldg#isExternal">is external</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#solarReflectance"
+               title="http://saref.linkeddata.es/def/bldg#solarReflectance">solar reflectance</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -3443,19 +3443,32 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#thermalEfficiency"
-               title="http://saref.linkeddata.es/def/bldg#thermalEfficiency">thermal efficiency</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#numberOfSections"
-               title="http://saref.linkeddata.es/def/bldg#numberOfSections">number of sections</a>
+            <a href="#numberOfPanels"
+               title="http://saref.linkeddata.es/def/bldg#numberOfPanels">number of panels</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#heatTransferMedium"
+               title="http://saref.linkeddata.es/def/bldg#heatTransferMedium">heat transfer medium</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#temperatureClassification"
+               title="http://saref.linkeddata.es/def/bldg#temperatureClassification">temperature classification</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#placementType"
+               title="http://saref.linkeddata.es/def/bldg#placementType">placement type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
             <a href="#heatTransferDimension"
@@ -3473,43 +3486,23 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#placementType"
-               title="http://saref.linkeddata.es/def/bldg#placementType">placement type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#heatTransferMedium"
-               title="http://saref.linkeddata.es/def/bldg#heatTransferMedium">heat transfer medium</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#numberOfPanels"
-               title="http://saref.linkeddata.es/def/bldg#numberOfPanels">number of panels</a>
+            <a href="#numberOfSections"
+               title="http://saref.linkeddata.es/def/bldg#numberOfSections">number of sections</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
          </dd>
          <dd>
-            <a href="#energySource"
-               title="http://saref.linkeddata.es/def/bldg#energySource">energy source</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#temperatureClassification"
-               title="http://saref.linkeddata.es/def/bldg#temperatureClassification">temperature classification</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#thermalMassHeatCapacity"
                title="http://saref.linkeddata.es/def/bldg#thermalMassHeatCapacity">thermal mass heat capacity</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#thermalEfficiency"
+               title="http://saref.linkeddata.es/def/bldg#thermalEfficiency">thermal efficiency</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3521,6 +3514,13 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#energySource"
+               title="http://saref.linkeddata.es/def/bldg#energySource">energy source</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
       </dl>
    </div>
@@ -3585,6 +3585,19 @@ Switches include those used for electrical power, communications, audio-visual, 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
+            <a href="#hasLock" title="http://saref.linkeddata.es/def/bldg#hasLock">has lock</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#isIlluminated"
+               title="http://saref.linkeddata.es/def/bldg#isIlluminated">is illuminated</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
             <a href="#numberOfGangs"
                title="http://saref.linkeddata.es/def/bldg#numberOfGangs">number of gangs</a>
             <sup class="type-dp" title="data property">dp</sup> 
@@ -3597,19 +3610,6 @@ Switches include those used for electrical power, communications, audio-visual, 
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#hasLock" title="http://saref.linkeddata.es/def/bldg#hasLock">has lock</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
-            <a href="#isIlluminated"
-               title="http://saref.linkeddata.es/def/bldg#isIlluminated">is illuminated</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
       </dl>
    </div>
@@ -3631,57 +3631,8 @@ Switches include those used for electrical power, communications, audio-visual, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#accessType" title="http://saref.linkeddata.es/def/bldg#accessType">access type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#firstCurvatureRadius"
                title="http://saref.linkeddata.es/def/bldg#firstCurvatureRadius">first curvature radius</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#patternType" title="http://saref.linkeddata.es/def/bldg#patternType">pattern type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#endShapeType"
-               title="http://saref.linkeddata.es/def/bldg#endShapeType">end shape type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#storageType" title="http://saref.linkeddata.es/def/bldg#storageType">storage type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#nominalVolumetricCapacity"
-               title="http://saref.linkeddata.es/def/bldg#nominalVolumetricCapacity">nominal volumetric capacity</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalWidthOrDiameter"
-               title="http://saref.linkeddata.es/def/bldg#nominalWidthOrDiameter">nominal width or diameter</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalLengthOrDiameter"
-               title="http://saref.linkeddata.es/def/bldg#nominalLengthOrDiameter">nominal length or diameter</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3696,8 +3647,42 @@ Switches include those used for electrical power, communications, audio-visual, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#secondCurvatureRadius"
-               title="http://saref.linkeddata.es/def/bldg#secondCurvatureRadius">second curvature radius</a>
+            <a href="#endShapeType"
+               title="http://saref.linkeddata.es/def/bldg#endShapeType">end shape type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#patternType" title="http://saref.linkeddata.es/def/bldg#patternType">pattern type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#numberOfSections"
+               title="http://saref.linkeddata.es/def/bldg#numberOfSections">number of sections</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#accessType" title="http://saref.linkeddata.es/def/bldg#accessType">access type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#nominalLengthOrDiameter"
+               title="http://saref.linkeddata.es/def/bldg#nominalLengthOrDiameter">nominal length or diameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#operatingWight"
+               title="http://saref.linkeddata.es/def/bldg#operatingWight">operating wight</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3711,15 +3696,30 @@ Switches include those used for electrical power, communications, audio-visual, 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#numberOfSections"
-               title="http://saref.linkeddata.es/def/bldg#numberOfSections">number of sections</a>
-            <sup class="type-dp" title="data property">dp</sup> 
+            <a href="#nominalVolumetricCapacity"
+               title="http://saref.linkeddata.es/def/bldg#nominalVolumetricCapacity">nominal volumetric capacity</a>
+            <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#operatingWight"
-               title="http://saref.linkeddata.es/def/bldg#operatingWight">operating wight</a>
+            <a href="#storageType" title="http://saref.linkeddata.es/def/bldg#storageType">storage type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#nominalWidthOrDiameter"
+               title="http://saref.linkeddata.es/def/bldg#nominalWidthOrDiameter">nominal width or diameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#secondCurvatureRadius"
+               title="http://saref.linkeddata.es/def/bldg#secondCurvatureRadius">second curvature radius</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3747,85 +3747,8 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#secondaryApparentPower"
-               title="http://saref.linkeddata.es/def/bldg#secondaryApparentPower">secondary apparent power</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#secondaryFrequency"
-               title="http://saref.linkeddata.es/def/bldg#secondaryFrequency">secondary frequency</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#secondaryCurrentType"
-               title="http://saref.linkeddata.es/def/bldg#secondaryCurrentType">secondary current type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#transformerVectorGroup"
-               title="http://saref.linkeddata.es/def/bldg#transformerVectorGroup">transformer vector group</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#isNeutralPrimaryTerminalAvailable"
-               title="http://saref.linkeddata.es/def/bldg#isNeutralPrimaryTerminalAvailable">is neutral primary terminal available</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
-            <a href="#apparentPowerMax"
-               title="http://saref.linkeddata.es/def/bldg#apparentPowerMax">maximum apparent power</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#imaginaryImpedanceRatio"
-               title="http://saref.linkeddata.es/def/bldg#imaginaryImpedanceRatio">imaginary impedance ratio</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#primaryApparentPower"
-               title="http://saref.linkeddata.es/def/bldg#primaryApparentPower">primary apparent power</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#secondaryVoltage"
-               title="http://saref.linkeddata.es/def/bldg#secondaryVoltage">secondary voltage</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#primaryCurrent"
-               title="http://saref.linkeddata.es/def/bldg#primaryCurrent">primary current</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#primaryFrequency"
-               title="http://saref.linkeddata.es/def/bldg#primaryFrequency">primary frequency</a>
+            <a href="#primaryVoltage"
+               title="http://saref.linkeddata.es/def/bldg#primaryVoltage">primary voltage</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3840,6 +3763,22 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#primaryFrequency"
+               title="http://saref.linkeddata.es/def/bldg#primaryFrequency">primary frequency</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#secondaryApparentPower"
+               title="http://saref.linkeddata.es/def/bldg#secondaryApparentPower">secondary apparent power</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#secondaryCurrent"
                title="http://saref.linkeddata.es/def/bldg#secondaryCurrent">secondary current</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3848,8 +3787,53 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#primaryVoltage"
-               title="http://saref.linkeddata.es/def/bldg#primaryVoltage">primary voltage</a>
+            <a href="#transformerVectorGroup"
+               title="http://saref.linkeddata.es/def/bldg#transformerVectorGroup">transformer vector group</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#primaryCurrent"
+               title="http://saref.linkeddata.es/def/bldg#primaryCurrent">primary current</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#imaginaryImpedanceRatio"
+               title="http://saref.linkeddata.es/def/bldg#imaginaryImpedanceRatio">imaginary impedance ratio</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isNeutralPrimaryTerminalAvailable"
+               title="http://saref.linkeddata.es/def/bldg#isNeutralPrimaryTerminalAvailable">is neutral primary terminal available</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#secondaryCurrentType"
+               title="http://saref.linkeddata.es/def/bldg#secondaryCurrentType">secondary current type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#secondaryFrequency"
+               title="http://saref.linkeddata.es/def/bldg#secondaryFrequency">secondary frequency</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#primaryApparentPower"
+               title="http://saref.linkeddata.es/def/bldg#primaryApparentPower">primary apparent power</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3861,6 +3845,22 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#apparentPowerMax"
+               title="http://saref.linkeddata.es/def/bldg#apparentPowerMax">maximum apparent power</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#secondaryVoltage"
+               title="http://saref.linkeddata.es/def/bldg#secondaryVoltage">secondary voltage</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -3889,17 +3889,17 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#fireExit" title="http://saref.linkeddata.es/def/bldg#fireExit">fire exit</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
             <a href="#capacityPeople"
                title="http://saref.linkeddata.es/def/bldg#capacityPeople">capacity people</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive integer</span>
+         </dd>
+         <dd>
+            <a href="#fireExit" title="http://saref.linkeddata.es/def/bldg#fireExit">fire exit</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
       </dl>
    </div>
@@ -3921,53 +3921,16 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#insideDiameter"
+               title="http://saref.linkeddata.es/def/bldg#insideDiameter">inside diameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#horizontalSpacing"
                title="http://saref.linkeddata.es/def/bldg#horizontalSpacing">horizontal spacing</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#length" title="http://saref.linkeddata.es/def/bldg#length">length</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasTurbulator"
-               title="http://saref.linkeddata.es/def/bldg#hasTurbulator">has turbulator</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
-            <a href="#numberOfRows"
-               title="http://saref.linkeddata.es/def/bldg#numberOfRows">number of rows</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
-         </dd>
-         <dd>
-            <a href="#inLineRowSpacing"
-               title="http://saref.linkeddata.es/def/bldg#inLineRowSpacing">in line row spacing</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#outsideDiameter"
-               title="http://saref.linkeddata.es/def/bldg#outsideDiameter">outside diameter</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#staggeredRowSpacing"
-               title="http://saref.linkeddata.es/def/bldg#staggeredRowSpacing">staggered row spacing</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -3982,31 +3945,7 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#verticalSpacing"
-               title="http://saref.linkeddata.es/def/bldg#verticalSpacing">vertical spacing</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#numberOfCircuits"
-               title="http://saref.linkeddata.es/def/bldg#numberOfCircuits">number of circuits</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
-         </dd>
-         <dd>
-            <a href="#insideDiameter"
-               title="http://saref.linkeddata.es/def/bldg#insideDiameter">inside diameter</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#nominalDiameter"
-               title="http://saref.linkeddata.es/def/bldg#nominalDiameter">nominal diameter</a>
+            <a href="#length" title="http://saref.linkeddata.es/def/bldg#length">length</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -4021,7 +3960,68 @@ Transformer is used to transform electric power; conversion of electric signals 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#numberOfRows"
+               title="http://saref.linkeddata.es/def/bldg#numberOfRows">number of rows</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#verticalSpacing"
+               title="http://saref.linkeddata.es/def/bldg#verticalSpacing">vertical spacing</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasTurbulator"
+               title="http://saref.linkeddata.es/def/bldg#hasTurbulator">has turbulator</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+         </dd>
+         <dd>
+            <a href="#outsideDiameter"
+               title="http://saref.linkeddata.es/def/bldg#outsideDiameter">outside diameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#numberOfCircuits"
+               title="http://saref.linkeddata.es/def/bldg#numberOfCircuits">number of circuits</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
             <a href="#volumen" title="http://saref.linkeddata.es/def/bldg#volumen">volumen</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#nominalDiameter"
+               title="http://saref.linkeddata.es/def/bldg#nominalDiameter">nominal diameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#inLineRowSpacing"
+               title="http://saref.linkeddata.es/def/bldg#inLineRowSpacing">in line row spacing</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#staggeredRowSpacing"
+               title="http://saref.linkeddata.es/def/bldg#staggeredRowSpacing">staggered row spacing</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
@@ -4095,26 +4095,27 @@ A unitary control element provides a housing for an aggregation of control or el
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#valveOperation"
-               title="http://saref.linkeddata.es/def/bldg#valveOperation">valve operation</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#valvePattern"
-               title="http://saref.linkeddata.es/def/bldg#valvePattern">valve pattern</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#closeOffRating"
                title="http://saref.linkeddata.es/def/bldg#closeOffRating">close off rating</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#flowCoefficient"
+               title="http://saref.linkeddata.es/def/bldg#flowCoefficient">flow coefficient</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#valveOperation"
+               title="http://saref.linkeddata.es/def/bldg#valveOperation">valve operation</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
             <a href="#workingPressure"
@@ -4140,19 +4141,18 @@ A unitary control element provides a housing for an aggregation of control or el
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#flowCoefficient"
-               title="http://saref.linkeddata.es/def/bldg#flowCoefficient">flow coefficient</a>
+            <a href="#size" title="http://saref.linkeddata.es/def/bldg#size">size</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#size" title="http://saref.linkeddata.es/def/bldg#size">size</a>
-            <sup class="type-op" title="object property">op</sup> 
+            <a href="#valvePattern"
+               title="http://saref.linkeddata.es/def/bldg#valvePattern">valve pattern</a>
+            <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
       </dl>
    </div>
@@ -4173,6 +4173,13 @@ A unitary control element provides a housing for an aggregation of control or el
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#height" title="http://saref.linkeddata.es/def/bldg#height">height</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#supportedWeightMax"
                title="http://saref.linkeddata.es/def/bldg#supportedWeightMax">maximum supported weight</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4189,14 +4196,6 @@ A unitary control element provides a housing for an aggregation of control or el
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#isolatorStaticDeflection"
-               title="http://saref.linkeddata.es/def/bldg#isolatorStaticDeflection">isolator static deflection</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#isolatorCompressibility"
                title="http://saref.linkeddata.es/def/bldg#isolatorCompressibility">isolator compressibility</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4205,7 +4204,8 @@ A unitary control element provides a housing for an aggregation of control or el
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#height" title="http://saref.linkeddata.es/def/bldg#height">height</a>
+            <a href="#isolatorStaticDeflection"
+               title="http://saref.linkeddata.es/def/bldg#isolatorStaticDeflection">isolator static deflection</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Measurement" title="http://saref.linkeddata.es/def/bldg#Measurement">Measurement</a>

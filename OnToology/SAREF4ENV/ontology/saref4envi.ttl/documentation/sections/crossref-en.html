@@ -180,13 +180,13 @@ This section provides details for each class and property defined by envi.
          <dd>
             <a href="#hasVersion" title="http://saref.linkeddata.es/def/envi#hasVersion">has version</a>
             <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#hasVersion" title="http://saref.linkeddata.es/def/envi#hasVersion">has version</a>
-            <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
+         <dd>
+            <a href="#hasVersion" title="http://saref.linkeddata.es/def/envi#hasVersion">has version</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#Color" title="http://saref.linkeddata.es/def/envi#Color">Color</a>
@@ -292,12 +292,21 @@ This section provides details for each class and property defined by envi.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#hasFrequencyMeasurement"
-               title="http://saref.linkeddata.es/def/envi#hasFrequencyMeasurement">has frequency measurement</a>
+            <a href="#isContainedIn"
+               title="http://saref.linkeddata.es/def/envi#isContainedIn">is contained in</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#FrequencyMeasurement"
-               title="http://saref.linkeddata.es/def/envi#FrequencyMeasurement">Frequency measurement</a>
+            <a href="#PhysicalObject"
+               title="http://saref.linkeddata.es/def/envi#PhysicalObject">Physical object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasTransmissionPeriod"
+               title="http://saref.linkeddata.es/def/envi#hasTransmissionPeriod">has transmission period</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#PeriodMeasurement"
+               title="http://saref.linkeddata.es/def/envi#PeriodMeasurement">Period measurement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -310,42 +319,33 @@ This section provides details for each class and property defined by envi.
             <a href="#hasRevisionNumber"
                title="http://saref.linkeddata.es/def/envi#hasRevisionNumber">has revision number</a>
             <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">max</span> 1</dd>
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#hasFrequencyMeasurement"
+               title="http://saref.linkeddata.es/def/envi#hasFrequencyMeasurement">has frequency measurement</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#FrequencyMeasurement"
+               title="http://saref.linkeddata.es/def/envi#FrequencyMeasurement">Frequency measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dd>
             <a href="#hasVersion" title="http://saref.linkeddata.es/def/envi#hasVersion">has version</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#hasVersion" title="http://saref.linkeddata.es/def/envi#hasVersion">has version</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#isContainedIn"
-               title="http://saref.linkeddata.es/def/envi#isContainedIn">is contained in</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#PhysicalObject"
-               title="http://saref.linkeddata.es/def/envi#PhysicalObject">Physical object</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#hasRevisionNumber"
                title="http://saref.linkeddata.es/def/envi#hasRevisionNumber">has revision number</a>
             <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
+            <span class="logic">max</span> 1</dd>
          <dd>
-            <a href="#hasTransmissionPeriod"
-               title="http://saref.linkeddata.es/def/envi#hasTransmissionPeriod">has transmission period</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#PeriodMeasurement"
-               title="http://saref.linkeddata.es/def/envi#PeriodMeasurement">Period measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
+            <a href="#hasVersion" title="http://saref.linkeddata.es/def/envi#hasVersion">has version</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Actuator" title="http://saref.linkeddata.es/def/envi#Actuator">Actuator</a>
@@ -392,10 +392,11 @@ This section provides details for each class and property defined by envi.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#hasCreationDate"
-               title="http://saref.linkeddata.es/def/envi#hasCreationDate">has creation date</a>
+            <a href="#hasTag" title="http://saref.linkeddata.es/def/envi#hasTag">has tag</a>
             <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">max</span> 1</dd>
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
          <dd>
             <a href="#hasCreationDate"
                title="http://saref.linkeddata.es/def/envi#hasCreationDate">has creation date</a>
@@ -404,32 +405,13 @@ This section provides details for each class and property defined by envi.
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
          </dd>
          <dd>
-            <a href="#hasIdentifier"
-               title="http://saref.linkeddata.es/def/envi#hasIdentifier">has identifier</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#https://w3id.org/saref#hasName" title="https://w3id.org/saref#hasName">has name</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#encapsulates" title="http://saref.linkeddata.es/def/envi#encapsulates">encapsulates</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#PhysicalObject"
-               title="http://saref.linkeddata.es/def/envi#PhysicalObject">Physical object</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasTag" title="http://saref.linkeddata.es/def/envi#hasTag">has tag</a>
+            <a href="#https://w3id.org/saref#hasName" title="https://w3id.org/saref#hasName">has name</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -442,6 +424,24 @@ This section provides details for each class and property defined by envi.
             <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dd>
+            <a href="#hasIdentifier"
+               title="http://saref.linkeddata.es/def/envi#hasIdentifier">has identifier</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#encapsulates" title="http://saref.linkeddata.es/def/envi#encapsulates">encapsulates</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#PhysicalObject"
+               title="http://saref.linkeddata.es/def/envi#PhysicalObject">Physical object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasCreationDate"
+               title="http://saref.linkeddata.es/def/envi#hasCreationDate">has creation date</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
          <dd>
             <a href="#hasIdentifier"
                title="http://saref.linkeddata.es/def/envi#hasIdentifier">has identifier</a>
@@ -683,10 +683,20 @@ This section provides details for each class and property defined by envi.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#hasFlash" title="http://saref.linkeddata.es/def/envi#hasFlash">has flash</a>
+            <a href="#hasProjectionAngle"
+               title="http://saref.linkeddata.es/def/envi#hasProjectionAngle">has projection angle</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+         </dd>
+         <dd>
+            <a href="#isProjectedFromHeight"
+               title="http://saref.linkeddata.es/def/envi#isProjectedFromHeight">is projected from height</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#HeightMeasurement"
+               title="http://saref.linkeddata.es/def/envi#HeightMeasurement">Height measurement</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#hasGeometry" title="http://saref.linkeddata.es/def/envi#hasGeometry">has geometry</a>
@@ -705,27 +715,17 @@ This section provides details for each class and property defined by envi.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#hasProjectionAngle"
-               title="http://saref.linkeddata.es/def/envi#hasProjectionAngle">has projection angle</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
-         </dd>
-         <dd>
-            <a href="#isProjectedFromHeight"
-               title="http://saref.linkeddata.es/def/envi#isProjectedFromHeight">is projected from height</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#HeightMeasurement"
-               title="http://saref.linkeddata.es/def/envi#HeightMeasurement">Height measurement</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#hasColor" title="http://saref.linkeddata.es/def/envi#hasColor">has color</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Color" title="http://saref.linkeddata.es/def/envi#Color">Color</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasFlash" title="http://saref.linkeddata.es/def/envi#hasFlash">has flash</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
@@ -764,19 +764,19 @@ This section provides details for each class and property defined by envi.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#projectsLight"
-               title="http://saref.linkeddata.es/def/envi#projectsLight">projects light</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Light" title="http://saref.linkeddata.es/def/envi#Light">Light</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
                title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#projectsLight"
+               title="http://saref.linkeddata.es/def/envi#projectsLight">projects light</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Light" title="http://saref.linkeddata.es/def/envi#Light">Light</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -832,16 +832,18 @@ This section provides details for each class and property defined by envi.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#relatesToProperty"
-               title="http://saref.linkeddata.es/def/envi#relatesToProperty">relates to property</a>
+            <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">exactly</span> 1 <a href="#Property" title="http://saref.linkeddata.es/def/envi#Property">Property</a>
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
             <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">exactly</span> 1</dd>
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+         </dd>
          <dd>
             <a href="#hasTimestamp" title="http://saref.linkeddata.es/def/envi#hasTimestamp">has timestamp</a>
             <sup class="type-dp" title="data property">dp</sup> 
@@ -855,24 +857,22 @@ This section provides details for each class and property defined by envi.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#relatesToProperty"
+               title="http://saref.linkeddata.es/def/envi#relatesToProperty">relates to property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#Property" title="http://saref.linkeddata.es/def/envi#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
             <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
-         </dd>
+            <span class="logic">exactly</span> 1</dd>
          <dd>
             <a href="#relatesToProperty"
                title="http://saref.linkeddata.es/def/envi#relatesToProperty">relates to property</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Property" title="http://saref.linkeddata.es/def/envi#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1001,20 +1001,20 @@ This section provides details for each class and property defined by envi.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#hasDigitalRepresentation"
                title="http://saref.linkeddata.es/def/envi#hasDigitalRepresentation">has digital representation</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#DigitalRepresentation"
                title="http://saref.linkeddata.es/def/envi#DigitalRepresentation">Digital representation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -1276,19 +1276,19 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#hasComponent" title="http://saref.linkeddata.es/def/envi#hasComponent">has component</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#System" title="http://saref.linkeddata.es/def/envi#System">System</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#usesCommunicationInterface"
                title="http://saref.linkeddata.es/def/envi#usesCommunicationInterface">uses communication interface</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#CommunicationInterface"
                title="http://saref.linkeddata.es/def/envi#CommunicationInterface">Communication interface</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasComponent" title="http://saref.linkeddata.es/def/envi#hasComponent">has component</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#System" title="http://saref.linkeddata.es/def/envi#System">System</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
