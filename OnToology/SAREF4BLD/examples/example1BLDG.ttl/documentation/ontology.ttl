@@ -1,4 +1,4 @@
-@prefix :        <http://saref.linkeddata.es/def/bldg#> .
+@prefix :        <http://saref.linkeddata.es/data/bldg#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
@@ -10,32 +10,28 @@
 @prefix saref:   <https://w3id.org/saref#> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 
-:ImpellerDiameterCompressor001SIERRA02-0434C3
-      a       owl:NamedIndividual , :Measurement ;
-      rdfs:label "Impeller diameter of compressor001 SIERRA02-0434C3"@en ;
-      saref:hasValue "5.9"^^xsd:float ;
-      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/inch-international> .
-
-:RefrigerationStoreComputerScienceBuilding1
-      a       owl:NamedIndividual , :BuildingSpace ;
-      rdfs:label "Refrigeration store of Computer Science Building 1"@en ;
-      :isSpaceOf :ComputerScienceBuilding1 ;
-      <http://www.w3.org/2003/01/geo/wgs84_pos#location>
-              :LocationRefrigerationStoreComputerScienceBuilding1 .
-
 saref:hasName
       a       owl:DatatypeProperty .
+
+:hasHotGasBypass
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Whether or not hot gas bypass is provided for the compressor. TRUE = Yes, FALSE = No."@en ;
+      rdfs:label "has hot gas bypass"@en ;
+      rdfs:range xsd:boolean .
 
 prov:hadPrimarySource
       a       owl:AnnotationProperty .
 
-:LocationCompressor001SIERRA02-0434C3
-      a       owl:NamedIndividual , <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-      rdfs:label "Location of compressor001 SIERRA02-0434C3"@en ;
-      <http://www.w3.org/2003/01/geo/wgs84_pos#latitude>
-              40.405155 ;
-      <http://www.w3.org/2003/01/geo/wgs84_pos#longitude>
-              -3.839203 .
+:IdealCapacityCompressor001SIERRA02-0434C3
+      a       :Measurement , owl:NamedIndividual ;
+      rdfs:label "Ideal capacity of compressor001 SIERRA02-0434C3"@en ;
+      saref:hasValue "1800.0"^^xsd:float ;
+      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/watt> .
+
+:idealCapacity
+      a       owl:ObjectProperty ;
+      rdfs:comment "Compressor capacity under ideal conditions. Usually measured in Watts (W, J/s)."@en ;
+      rdfs:label "ideal capacity"@en .
 
 vann:preferredNamespaceUri
       a       owl:AnnotationProperty .
@@ -49,55 +45,21 @@ saref:hasValue
       rdfs:isDefinedBy saref: ;
       rdfs:label "has value"@en .
 
-<http://www.wurvoc.org/vocabularies/om-1.8/inch-international>
-      a       owl:NamedIndividual , saref:UnitOfMeasure ;
-      rdfs:label "inch international"@en .
-
-:compressorSpeed
-      a       owl:ObjectProperty ;
-      rdfs:comment "Compressor speed. Usually measured in cycles/s."@en ;
-      rdfs:label "compressor speed"@en .
-
-<http://saref.linkeddata.es/def/bldg/example1>
-      a       owl:Ontology ;
-      rdfs:comment "Example of use for the SAREF extension for building devices"@en ;
-      dc:publisher <http://www.oeg-upm.net/> ;
-      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
-      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-      owl:versionIRI <http://saref.linkeddata.es/def/v1/bldg/example1> ;
-      owl:versionInfo "1.0" .
-
-:powerSource
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Type of power driving the compressor."@en ;
-      rdfs:label "power source"@en ;
-      rdfs:range xsd:string .
-
 :isSpaceOf
       a       owl:TransitiveProperty , owl:ObjectProperty ;
       rdfs:comment "Relation between a building space and the building or building space it belongs to."@en ;
       rdfs:label "isSpaceOf"@en .
 
-:PowerProfileCompressor001SIERRA02-0434C3
-      a       <https://w3id.org/saref4ee#PowerProfile> , owl:NamedIndividual ;
-      rdfs:label "Power profile of compressor 001 SIERRA02-0434C3"@en ;
-      saref:hasConsumption
-              :PowerCompressor001SIERRA02-0434C3 .
+:RefrigerationStoreComputerScienceBuilding1
+      a       owl:NamedIndividual , :BuildingSpace ;
+      rdfs:label "Refrigeration store of Computer Science Building 1"@en ;
+      :isSpaceOf :ComputerScienceBuilding1 ;
+      <http://www.w3.org/2003/01/geo/wgs84_pos#location>
+              :LocationRefrigerationStoreComputerScienceBuilding1 .
 
-saref:hasConsumption
-      a       owl:ObjectProperty .
-
-<http://www.w3.org/2003/01/geo/wgs84_pos#longitude>
-      a       owl:DatatypeProperty .
-
-saref:UnitOfMeasure
-      a       owl:Class ;
-      rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
-      rdfs:isDefinedBy saref: ;
-      rdfs:label "Unit of measure"@en .
-
-dcterms:rightsHolder
-      a       owl:AnnotationProperty .
+<http://www.wurvoc.org/vocabularies/om-1.8/inch-international>
+      a       owl:NamedIndividual , saref:UnitOfMeasure ;
+      rdfs:label "inch international"@en .
 
 :LocationComputerScienceBuilding1
       a       owl:NamedIndividual , <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
@@ -107,103 +69,8 @@ dcterms:rightsHolder
       <http://www.w3.org/2003/01/geo/wgs84_pos#longitude>
               -3.839349 .
 
-dcterms:creator
-      a       owl:AnnotationProperty .
-
-:IdealCapacityCompressor001SIERRA02-0434C3
-      a       owl:NamedIndividual , :Measurement ;
-      rdfs:label "Ideal capacity of compressor001 SIERRA02-0434C3"@en ;
-      saref:hasValue "1800.0"^^xsd:float ;
-      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/watt> .
-
-:Compressor
-      a       owl:Class ;
-      rdfs:comment "A compressor is a device that compresses a fluid typically used in a refrigeration circuit."@en ;
-      rdfs:label "Compressor"@en ;
-      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCompressor" ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :refrigerantClass
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :compressorSpeed
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :powerSource
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :impellerDiameter
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalCapacity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :hasHotGasBypass
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :idealCapacity
-              ] ;
-      prov:hadPrimarySource
-              <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_compressortypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccompressor.htm> .
-
-<http://www.wurvoc.org/vocabularies/om-1.8/watt>
-      a       owl:NamedIndividual , saref:PowerUnit .
-
-<https://w3id.org/saref4ee#Power>
-      a       owl:Class .
-
-vann:preferredNamespacePrefix
-      a       owl:AnnotationProperty .
-
-:PowerCompressor001SIERRA02-0434C3
-      a       <https://w3id.org/saref4ee#Power> , owl:NamedIndividual ;
-      rdfs:label "Power of compressor 001 SIERRA02-0434C3"@en ;
-      saref:hasValue "902.0"^^xsd:float ;
-      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/watt> .
-
-<https://w3id.org/saref4ee#exposes>
-      a       owl:ObjectProperty .
-
-:idealCapacity
-      a       owl:ObjectProperty ;
-      rdfs:comment "Compressor capacity under ideal conditions. Usually measured in Watts (W, J/s)."@en ;
-      rdfs:label "ideal capacity"@en .
-
-:isContainedIn
-      a       owl:TransitiveProperty , owl:ObjectProperty ;
-      rdfs:comment "A relation between an object and the physical space in which it is located."@en ;
-      rdfs:label "is contained in"@en .
-
-:refrigerantClass
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Refrigerant class used by the compressor. CFC: Chlorofluorocarbons. HCFC: Hydrochlorofluorocarbons. HFC: Hydrofluorocarbons."@en ;
-      rdfs:label "refrigerant class"@en ;
-      rdfs:range xsd:string .
-
-<http://www.w3.org/2003/01/geo/wgs84_pos#latitude>
-      a       owl:DatatypeProperty .
-
-:NominalCapacityCompressor001SIERRA02-0434C3
-      a       owl:NamedIndividual , :Measurement ;
-      rdfs:label "Nominal capacity of compressor001 SIERRA02-0434C3"@en ;
-      saref:hasValue "680.0"^^xsd:float ;
-      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/watt> .
-
 :Compressor001SIERRA02-0434C3
-      a       :Compressor , owl:NamedIndividual ;
+      a       owl:NamedIndividual , :Compressor ;
       rdfs:label "CompressorSIERRA02-0434C3"@en ;
       :compressorSpeed :CompressorSpeedCompressor001SIERRA02-0434C3 ;
       :hasHotGasBypass "false"^^xsd:boolean ;
@@ -221,77 +88,35 @@ vann:preferredNamespacePrefix
       <https://w3id.org/saref4ee#exposes>
               :PowerProfileCompressor001SIERRA02-0434C3 .
 
-:BuildingSpace
+saref:hasConsumption
+      a       owl:ObjectProperty .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#longitude>
+      a       owl:DatatypeProperty .
+
+saref:UnitOfMeasure
       a       owl:Class ;
-      rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
-      rdfs:label "Building space"@en ;
-      rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (:Building :BuildingSpace)
-                        ] ;
-                owl:onProperty :isSpaceOf
-              ] .
+      rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
+      rdfs:isDefinedBy saref: ;
+      rdfs:label "Unit of measure"@en .
 
-:ComputerScienceBuilding1
-      a       :Building , owl:NamedIndividual ;
-      rdfs:label "Computer Science Building 1"@en ;
-      <http://www.w3.org/2003/01/geo/wgs84_pos#location>
-              :LocationComputerScienceBuilding1 .
-
-<https://w3id.org/saref4ee#PowerProfile>
-      a       owl:Class .
-
-:nominalCapacity
-      a       owl:ObjectProperty ;
-      rdfs:comment "Nominal capacity. Usually measured in Watts (W, J/s)."@en ;
-      rdfs:label "nominal capacity"@en .
-
-saref:PowerUnit
-      a       owl:Class .
-
-:cyclesPerSecond
-      a       owl:NamedIndividual , saref:UnitOfMeasure ;
-      rdfs:label "cycles per second"@en .
-
-<http://www.w3.org/2003/01/geo/wgs84_pos#location>
-      a       owl:ObjectProperty ;
-      rdfs:comment "The relation between something and the point,  or other geometrical thing in space, where it is.  For example, the realtionship between a radio tower and a Point with a given lat and long. Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points). Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping ."@en ;
-      rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-      rdfs:label "location"@en .
-
-:CompressorSpeedCompressor001SIERRA02-0434C3
-      a       owl:NamedIndividual , :Measurement ;
-      rdfs:label "Compressor speed of compressor001 SIERRA02-0434C3"@en ;
-      saref:hasValue "3.0"^^xsd:float ;
-      saref:isMeasuredIn :cyclesPerSecond .
-
-xsd:duration
-      a       rdfs:Datatype .
-
-:LocationRefrigerationStoreComputerScienceBuilding1
-      a       owl:NamedIndividual , <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-      rdfs:label "LocationRefrigerationStoreComputerScienceBuilding1"@en ;
-      <http://www.w3.org/2003/01/geo/wgs84_pos#latitude>
-              40.405152 ;
-      <http://www.w3.org/2003/01/geo/wgs84_pos#longitude>
-              -3.839209 .
-
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
-      a       owl:Class ;
-      rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
-      rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-      rdfs:label "Spatial thing"@en .
-
-saref:isMeasuredIn
-      a       owl:ObjectProperty ;
-      rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en ;
-      rdfs:label "is measured in"@en .
-
-dcterms:dateCopyrighted
+dcterms:rightsHolder
       a       owl:AnnotationProperty .
+
+dcterms:creator
+      a       owl:AnnotationProperty .
+
+<http://www.wurvoc.org/vocabularies/om-1.8/watt>
+      a       owl:NamedIndividual , saref:PowerUnit .
+
+<https://w3id.org/saref4ee#Power>
+      a       owl:Class .
+
+vann:preferredNamespacePrefix
+      a       owl:AnnotationProperty .
+
+<https://w3id.org/saref4ee#exposes>
+      a       owl:ObjectProperty .
 
 :Building
       a       owl:Class ;
@@ -307,15 +132,190 @@ dcterms:dateCopyrighted
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifcbuilding.htm> .
 
+:LocationCompressor001SIERRA02-0434C3
+      a       owl:NamedIndividual , <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+      rdfs:label "Location of compressor001 SIERRA02-0434C3"@en ;
+      <http://www.w3.org/2003/01/geo/wgs84_pos#latitude>
+              40.405155 ;
+      <http://www.w3.org/2003/01/geo/wgs84_pos#longitude>
+              -3.839203 .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#latitude>
+      a       owl:DatatypeProperty .
+
+:LocationRefrigerationStoreComputerScienceBuilding1
+      a       owl:NamedIndividual , <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+      rdfs:label "LocationRefrigerationStoreComputerScienceBuilding1"@en ;
+      <http://www.w3.org/2003/01/geo/wgs84_pos#latitude>
+              40.405152 ;
+      <http://www.w3.org/2003/01/geo/wgs84_pos#longitude>
+              -3.839209 .
+
+:PowerProfileCompressor001SIERRA02-0434C3
+      a       <https://w3id.org/saref4ee#PowerProfile> , owl:NamedIndividual ;
+      rdfs:label "Power profile of compressor 001 SIERRA02-0434C3"@en ;
+      saref:hasConsumption
+              :PowerCompressor001SIERRA02-0434C3 .
+
+:nominalCapacity
+      a       owl:ObjectProperty ;
+      rdfs:comment "Nominal capacity. Usually measured in Watts (W, J/s)."@en ;
+      rdfs:label "nominal capacity"@en .
+
+<https://w3id.org/saref4ee#PowerProfile>
+      a       owl:Class .
+
+:ComputerScienceBuilding1
+      a       owl:NamedIndividual , :Building ;
+      rdfs:label "Computer Science Building 1"@en ;
+      <http://www.w3.org/2003/01/geo/wgs84_pos#location>
+              :LocationComputerScienceBuilding1 .
+
+:powerSource
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Type of power driving the compressor."@en ;
+      rdfs:label "power source"@en ;
+      rdfs:range xsd:string .
+
+saref:PowerUnit
+      a       owl:Class .
+
+:impellerDiameter
+      a       owl:ObjectProperty ;
+      rdfs:comment "Diameter of compressor impeller - used to scale performance of geometrically similar compressors. Usually measured in millimeters (mm)."@en ;
+      rdfs:label "impeller diameter"@en .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#location>
+      a       owl:ObjectProperty ;
+      rdfs:comment "The relation between something and the point,  or other geometrical thing in space, where it is.  For example, the realtionship between a radio tower and a Point with a given lat and long. Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points). Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping ."@en ;
+      rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+      rdfs:label "location"@en .
+
+:ImpellerDiameterCompressor001SIERRA02-0434C3
+      a       :Measurement , owl:NamedIndividual ;
+      rdfs:label "Impeller diameter of compressor001 SIERRA02-0434C3"@en ;
+      saref:hasValue "5.9"^^xsd:float ;
+      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/inch-international> .
+
+:BuildingSpace
+      a       owl:Class ;
+      rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
+      rdfs:label "Building space"@en ;
+      rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Building :BuildingSpace)
+                        ] ;
+                owl:onProperty :isSpaceOf
+              ] .
+
+:Compressor
+      a       owl:Class ;
+      rdfs:comment "A compressor is a device that compresses a fluid typically used in a refrigeration circuit."@en ;
+      rdfs:label "Compressor"@en ;
+      rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcCompressor" ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalCapacity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :compressorSpeed
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :refrigerantClass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :hasHotGasBypass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :powerSource
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :idealCapacity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :impellerDiameter
+              ] ;
+      prov:hadPrimarySource
+              <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_compressortypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccompressor.htm> .
+
+:isContainedIn
+      a       owl:TransitiveProperty , owl:ObjectProperty ;
+      rdfs:comment "A relation between an object and the physical space in which it is located."@en ;
+      rdfs:label "is contained in"@en .
+
+:cyclesPerSecond
+      a       owl:NamedIndividual , saref:UnitOfMeasure ;
+      rdfs:label "cycles per second"@en .
+
+xsd:duration
+      a       rdfs:Datatype .
+
+<http://saref.linkeddata.es/data/bldg/example1>
+      a       owl:Ontology ;
+      rdfs:comment "Example of use for the SAREF extension for building devices"@en ;
+      dc:publisher <http://www.oeg-upm.net/> ;
+      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
+      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+      owl:versionIRI <http://saref.linkeddata.es/data/v1/bldg/example1> ;
+      owl:versionInfo "1.0" .
+
+:CompressorSpeedCompressor001SIERRA02-0434C3
+      a       :Measurement , owl:NamedIndividual ;
+      rdfs:label "Compressor speed of compressor001 SIERRA02-0434C3"@en ;
+      saref:hasValue "3.0"^^xsd:float ;
+      saref:isMeasuredIn :cyclesPerSecond .
+
+:PowerCompressor001SIERRA02-0434C3
+      a       <https://w3id.org/saref4ee#Power> , owl:NamedIndividual ;
+      rdfs:label "Power of compressor 001 SIERRA02-0434C3"@en ;
+      saref:hasValue "902.0"^^xsd:float ;
+      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/watt> .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
+      a       owl:Class ;
+      rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
+      rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+      rdfs:label "Spatial thing"@en .
+
+:compressorSpeed
+      a       owl:ObjectProperty ;
+      rdfs:comment "Compressor speed. Usually measured in cycles/s."@en ;
+      rdfs:label "compressor speed"@en .
+
+saref:isMeasuredIn
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en ;
+      rdfs:label "is measured in"@en .
+
+dcterms:dateCopyrighted
+      a       owl:AnnotationProperty .
+
+:NominalCapacityCompressor001SIERRA02-0434C3
+      a       :Measurement , owl:NamedIndividual ;
+      rdfs:label "Nominal capacity of compressor001 SIERRA02-0434C3"@en ;
+      saref:hasValue "680.0"^^xsd:float ;
+      saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/watt> .
+
 :Measurement
       a       owl:Class ;
       rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
       rdfs:label "Measurement"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom saref:UnitOfMeasure ;
-                owl:onProperty saref:isMeasuredIn
-              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onDataRange xsd:float ;
@@ -329,15 +329,15 @@ dcterms:dateCopyrighted
                 owl:onProperty saref:isMeasuredIn ;
                 owl:qualifiedCardinality
                         "1"^^xsd:nonNegativeInteger
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom saref:UnitOfMeasure ;
+                owl:onProperty saref:isMeasuredIn
               ] .
 
-:hasHotGasBypass
+:refrigerantClass
       a       owl:DatatypeProperty ;
-      rdfs:comment "Whether or not hot gas bypass is provided for the compressor. TRUE = Yes, FALSE = No."@en ;
-      rdfs:label "has hot gas bypass"@en ;
-      rdfs:range xsd:boolean .
-
-:impellerDiameter
-      a       owl:ObjectProperty ;
-      rdfs:comment "Diameter of compressor impeller - used to scale performance of geometrically similar compressors. Usually measured in millimeters (mm)."@en ;
-      rdfs:label "impeller diameter"@en .
+      rdfs:comment "Refrigerant class used by the compressor. CFC: Chlorofluorocarbons. HCFC: Hydrochlorofluorocarbons. HFC: Hydrofluorocarbons."@en ;
+      rdfs:label "refrigerant class"@en ;
+      rdfs:range xsd:string .
