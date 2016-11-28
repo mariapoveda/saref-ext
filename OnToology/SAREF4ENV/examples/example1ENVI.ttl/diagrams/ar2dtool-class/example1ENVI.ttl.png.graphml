@@ -168,19 +168,19 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_http://saref.linkeddata.es/def/v1/envi/example1">
+      <node id="nid_http://saref.linkeddata.es/data/v1/envi/example1">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="470.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="480.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://saref.linkeddata.es/def/v1/envi/example1</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://saref.linkeddata.es/data/v1/envi/example1</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:versionIRI6" source="nid_http://saref.linkeddata.es/data/envi/example1" target="nid_http://saref.linkeddata.es/def/v1/envi/example1">
+    <edge id="eid_owl:versionIRI6" source="nid_http://saref.linkeddata.es/data/envi/example1" target="nid_http://saref.linkeddata.es/data/v1/envi/example1">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -307,6 +307,29 @@
          </data>
          <data key="d1" />
       </node>
+      <node id="nid_base:Wi-Fiv802-11ah">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="190.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:Wi-Fiv802-11ah</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_:usesCommunicationInterface11" source="nid_base:TESS005-UCM" target="nid_base:Wi-Fiv802-11ah">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">:usesCommunicationInterface</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_base:MQTT-Broker">
          <data key="d0">
             <y:ShapeNode>
@@ -319,7 +342,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_:usesCommunicationProtocol11" source="nid_base:TESS005-UCM" target="nid_base:MQTT-Broker">
+    <edge id="eid_:usesCommunicationProtocol12" source="nid_base:TESS005-UCM" target="nid_base:MQTT-Broker">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -330,7 +353,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_:exposes12" source="nid_base:TESS005-UCM" target="nid_base:PowerProfileTESS005-UCM">
+    <edge id="eid_:exposes13" source="nid_base:TESS005-UCM" target="nid_base:PowerProfileTESS005-UCM">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -353,7 +376,30 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_:usesCommunicationInterface13" source="nid_base:TESS005-UCM" target="nid_base:RS232v24">
+    <edge id="eid_:usesCommunicationInterface14" source="nid_base:TESS005-UCM" target="nid_base:RS232v24">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">:usesCommunicationInterface</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_base:Bluettothv2-1">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="180.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:Bluettothv2-1</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_:usesCommunicationInterface15" source="nid_base:TESS005-UCM" target="nid_base:Bluettothv2-1">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -376,7 +422,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_:location14" source="nid_base:TESS005-UCM" target="nid_base:LocationTESS005-UCM">
+    <edge id="eid_:location16" source="nid_base:TESS005-UCM" target="nid_base:LocationTESS005-UCM">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -387,7 +433,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_:measuresProperty15" source="nid_base:TESS005-UCM" target="nid_:LightMagnitude">
+    <edge id="eid_:measuresProperty17" source="nid_base:TESS005-UCM" target="nid_:LightMagnitude">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -398,7 +444,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_:hasTransmissionPeriod16" source="nid_base:TESS005-UCM" target="nid_base:TransmissionPeriodTESS005-UCM">
+    <edge id="eid_:hasTransmissionPeriod18" source="nid_base:TESS005-UCM" target="nid_base:TransmissionPeriodTESS005-UCM">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -409,30 +455,7 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_base:Wi-Fiv802.11ah">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="190.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:Wi-Fiv802.11ah</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_:usesCommunicationInterface17" source="nid_base:TESS005-UCM" target="nid_base:Wi-Fiv802.11ah">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">:usesCommunicationInterface</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_:makesMeasurement18" source="nid_base:TESS005-UCM" target="nid_http://saref.linkeddata.es/def/bldg#Measurement2016-10-05T08:15:30TESS005-UCM">
+    <edge id="eid_:makesMeasurement19" source="nid_base:TESS005-UCM" target="nid_http://saref.linkeddata.es/def/bldg#Measurement2016-10-05T08:15:30TESS005-UCM">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -443,7 +466,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_:makesMeasurement19" source="nid_base:TESS005-UCM" target="nid_http://saref.linkeddata.es/def/bldg#Measurement2016-10-05T08:15:40TESS005-UCM">
+    <edge id="eid_:makesMeasurement20" source="nid_base:TESS005-UCM" target="nid_http://saref.linkeddata.es/def/bldg#Measurement2016-10-05T08:15:40TESS005-UCM">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -466,35 +489,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_:hasFrequencyMeasurement20" source="nid_base:TESS005-UCM" target="nid_base:FequencyMeasurementTESS005-UCM">
+    <edge id="eid_:hasFrequencyMeasurement21" source="nid_base:TESS005-UCM" target="nid_base:FequencyMeasurementTESS005-UCM">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">:hasFrequencyMeasurement</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_base:Bluettothv2.1">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="180.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:Bluettothv2.1</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_:usesCommunicationInterface21" source="nid_base:TESS005-UCM" target="nid_base:Bluettothv2.1">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">:usesCommunicationInterface</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
