@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:Property" "base:Measurement" "base:LightProperty" "base:HeightMeasurement" "base:Lamppost" "saref:Sensor" "saref:Device" "base:LightPoint" "base:PeriodMeasurement" "base:FrequencyUnit" "base:Sensor" "base:PhysicalObject" "geo:SpatialThing" "base:TESS" "base:Device" "base:Photometer" "base:Actuator" "saref:UnitOfMeasure" "geo:Point" "time:TemporalUnit" "base:System" "base:LengthUnit" "base:FrequencyMeasurement" ; /*classes style*/
+	"base:LengthUnit" -> "saref:UnitOfMeasure" [ label = "rdfs:subClassOf" ];
+	"base:LightPoint" -> "geo:Point" [ label = "rdfs:subClassOf" ];
+	"base:FrequencyUnit" -> "saref:UnitOfMeasure" [ label = "rdfs:subClassOf" ];
+	"time:TemporalUnit" -> "saref:UnitOfMeasure" [ label = "rdfs:subClassOf" ];
+	"base:LightProperty" -> "base:Property" [ label = "rdfs:subClassOf" ];
+	"base:PeriodMeasurement" -> "base:Measurement" [ label = "rdfs:subClassOf" ];
+	"base:TESS" -> "base:Photometer" [ label = "rdfs:subClassOf" ];
+	"base:Photometer" -> "base:Sensor" [ label = "rdfs:subClassOf" ];
+	"base:HeightMeasurement" -> "base:Measurement" [ label = "rdfs:subClassOf" ];
+	"base:Actuator" -> "base:Device" [ label = "rdfs:subClassOf" ];
+	"base:Device" -> "saref:Device" [ label = "rdfs:subClassOf" ];
+	"base:Device" -> "base:System" [ label = "rdfs:subClassOf" ];
+	"base:Sensor" -> "saref:Sensor" [ label = "rdfs:subClassOf" ];
+	"base:Sensor" -> "base:Device" [ label = "rdfs:subClassOf" ];
+	"base:Lamppost" -> "base:Device" [ label = "rdfs:subClassOf" ];
+	"base:FrequencyMeasurement" -> "base:Measurement" [ label = "rdfs:subClassOf" ];
+	"base:System" -> "base:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"base:PhysicalObject" -> "geo:SpatialThing" [ label = "rdfs:subClassOf" ];
+
+}

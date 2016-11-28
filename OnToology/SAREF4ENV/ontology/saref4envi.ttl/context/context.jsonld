@@ -1,0 +1,265 @@
+{
+  "@context" : {
+    "UnitOfMeasure" : {
+      "@id" : "https://w3id.org/saref#UnitOfMeasure"
+    },
+    "hasManufacturer" : {
+      "@id" : "https://w3id.org/saref#hasManufacturer"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Photometer" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Photometer"
+    },
+    "hasShield" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasShield",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "CompassDirection" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#CompassDirection"
+    },
+    "DigitalRepresentation" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#DigitalRepresentation"
+    },
+    "hasLightPoint" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasLightPoint",
+      "@type" : "@id"
+    },
+    "hasTag" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasTag",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TemporalUnit" : {
+      "@id" : "http://www.w3.org/2006/time#TemporalUnit"
+    },
+    "hasName" : {
+      "@id" : "https://w3id.org/saref#hasName"
+    },
+    "hasDigitalRepresentation" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasDigitalRepresentation",
+      "@type" : "@id"
+    },
+    "hasVersion" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "measuresProperty" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#measuresProperty",
+      "@type" : "@id"
+    },
+    "Geometry" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Geometry"
+    },
+    "hasValue" : {
+      "@id" : "https://w3id.org/saref#hasValue"
+    },
+    "PeriodMeasurement" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#PeriodMeasurement"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasIdentifier" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasIdentifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "contains" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#contains",
+      "@type" : "@id"
+    },
+    "Measurement" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Measurement"
+    },
+    "hasColor" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasColor",
+      "@type" : "@id"
+    },
+    "HeightMeasurement" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#HeightMeasurement"
+    },
+    "isProjectedInDirection" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#isProjectedInDirection",
+      "@type" : "@id"
+    },
+    "hasProjectionAngle" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasProjectionAngle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Light" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Light"
+    },
+    "projectsLight" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#projectsLight",
+      "@type" : "@id"
+    },
+    "LightPoint" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#LightPoint"
+    },
+    "Lamppost" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Lamppost"
+    },
+    "hasFrequencyMeasurement" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasFrequencyMeasurement",
+      "@type" : "@id"
+    },
+    "LengthUnit" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#LengthUnit"
+    },
+    "usesCommunicationProtocol" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#usesCommunicationProtocol",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "isConnectedTo" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#isConnectedTo",
+      "@type" : "@id"
+    },
+    "CommunicationProtocol" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#CommunicationProtocol"
+    },
+    "isContainedIn" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#isContainedIn",
+      "@type" : "@id"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
+    },
+    "isComponentOf" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#isComponentOf",
+      "@type" : "@id"
+    },
+    "isAccesibleThrough" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#isAccesibleThrough",
+      "@type" : "@id"
+    },
+    "affectsProperty" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#affectsProperty",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "CommunicationInterface" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#CommunicationInterface"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Point" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+    },
+    "makesMeasurement" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#makesMeasurement",
+      "@type" : "@id"
+    },
+    "isProjectedFromHeight" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#isProjectedFromHeight",
+      "@type" : "@id"
+    },
+    "hasGeometry" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasGeometry",
+      "@type" : "@id"
+    },
+    "Property" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Property"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "isMeasuredIn" : {
+      "@id" : "https://w3id.org/saref#isMeasuredIn",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "hasTransmissionPeriod" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasTransmissionPeriod",
+      "@type" : "@id"
+    },
+    "hasFlash" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasFlash",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasCreationDate" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasCreationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "FrequencyUnit" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#FrequencyUnit"
+    },
+    "hasRevisionNumber" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasRevisionNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "relatesToProperty" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#relatesToProperty",
+      "@type" : "@id"
+    },
+    "usesCommunicationInterface" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#usesCommunicationInterface",
+      "@type" : "@id"
+    },
+    "Actuator" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Actuator"
+    },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Service" : {
+      "@id" : "https://w3id.org/saref#Service"
+    },
+    "encapsulates" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#encapsulates",
+      "@type" : "@id"
+    },
+    "LightProperty" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#LightProperty"
+    },
+    "System" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#System"
+    },
+    "hasComponent" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasComponent",
+      "@type" : "@id"
+    },
+    "Color" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Color"
+    },
+    "Device" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#Device"
+    },
+    "hasDescription" : {
+      "@id" : "https://w3id.org/saref#hasDescription"
+    },
+    "hasTimestamp" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#hasTimestamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "TESS" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#TESS"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "PhysicalObject" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#PhysicalObject"
+    },
+    "FrequencyMeasurement" : {
+      "@id" : "http://saref.linkeddata.es/def/envi#FrequencyMeasurement"
+    },
+    "Sensor" : {
+      "@id" : "https://w3id.org/saref#Sensor"
+    }
+  }
+}

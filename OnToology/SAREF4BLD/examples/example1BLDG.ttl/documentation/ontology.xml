@@ -1,0 +1,370 @@
+<rdf:RDF
+    xmlns="http://saref.linkeddata.es/def/bldg#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="https://w3id.org/saref4ee#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:saref="https://w3id.org/saref#"
+    xmlns:j.1="http://www.w3.org/2003/01/geo/wgs84_pos#" > 
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#ImpellerDiameterCompressor001SIERRA02-0434C3">
+    <rdfs:label xml:lang="en">Impeller diameter of compressor001 SIERRA02-0434C3</rdfs:label>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.9</saref:hasValue>
+    <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/inch-international"/>
+    <rdf:type rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#RefrigerationStoreComputerScienceBuilding1">
+    <rdfs:label xml:lang="en">Refrigeration store of Computer Science Building 1</rdfs:label>
+    <j.1:location rdf:resource="http://saref.linkeddata.es/def/bldg#LocationRefrigerationStoreComputerScienceBuilding1"/>
+    <isSpaceOf rdf:resource="http://saref.linkeddata.es/def/bldg#ComputerScienceBuilding1"/>
+    <rdf:type rdf:resource="http://saref.linkeddata.es/def/bldg#BuildingSpace"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#hasName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#hadPrimarySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#LocationCompressor001SIERRA02-0434C3">
+    <rdfs:label xml:lang="en">Location of compressor001 SIERRA02-0434C3</rdfs:label>
+    <j.1:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3.839203</j.1:longitude>
+    <j.1:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.405155</j.1:latitude>
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:allValuesFrom rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#compressorSpeed"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#hasManufacturer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#hasValue">
+    <rdfs:label xml:lang="en">has value</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
+    <rdfs:comment xml:lang="en">A relationship defining the value of a certain property, e.g., energy or power</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#hasHotGasBypass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/inch-international">
+    <rdfs:label xml:lang="en">inch international</rdfs:label>
+    <rdf:type rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#compressorSpeed">
+    <rdfs:label xml:lang="en">compressor speed</rdfs:label>
+    <rdfs:comment xml:lang="en">Compressor speed. Usually measured in cycles/s.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg/example1">
+    <rdfs:comment xml:lang="en">Example of use for the SAREF extension for building devices</rdfs:comment>
+    <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    <dcterms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+    <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>
+    <owl:versionIRI rdf:resource="http://saref.linkeddata.es/def/v1/bldg/example1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#powerSource">
+    <rdfs:label xml:lang="en">power source</rdfs:label>
+    <rdfs:comment xml:lang="en">Type of power driving the compressor.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#isSpaceOf">
+    <rdfs:label xml:lang="en">isSpaceOf</rdfs:label>
+    <rdfs:comment xml:lang="en">Relation between a building space and the building or building space it belongs to.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#PowerProfileCompressor001SIERRA02-0434C3">
+    <rdfs:label xml:lang="en">Power profile of compressor 001 SIERRA02-0434C3</rdfs:label>
+    <saref:hasConsumption rdf:resource="http://saref.linkeddata.es/def/bldg#PowerCompressor001SIERRA02-0434C3"/>
+    <rdf:type rdf:resource="https://w3id.org/saref4ee#PowerProfile"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#hasConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://saref.linkeddata.es/def/bldg#BuildingSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#longitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#UnitOfMeasure">
+    <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
+    <rdfs:comment xml:lang="en">The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called "watt". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:allValuesFrom rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#nominalCapacity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/rightsHolder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#LocationComputerScienceBuilding1">
+    <rdfs:label xml:lang="en">Location of Computer Science Building 1</rdfs:label>
+    <j.1:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3.839349</j.1:longitude>
+    <j.1:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.405013</j.1:latitude>
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#IdealCapacityCompressor001SIERRA02-0434C3">
+    <rdfs:label xml:lang="en">Ideal capacity of compressor001 SIERRA02-0434C3</rdfs:label>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1800.0</saref:hasValue>
+    <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+    <rdf:type rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#Compressor">
+    <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_compressortypecommon.htm"/>
+    <rdfs:subClassOf rdf:nodeID="A5"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:nodeID="A6"/>
+    <rdfs:subClassOf rdf:nodeID="A4"/>
+    <rdfs:label xml:lang="en">Compressor</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A7"/>
+    <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCompressor</rdfs:seeAlso>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A compressor is a device that compresses a fluid typically used in a refrigeration circuit.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccompressor.htm"/>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/watt">
+    <rdf:type rdf:resource="https://w3id.org/saref#PowerUnit"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref4ee#Power">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#PowerCompressor001SIERRA02-0434C3">
+    <rdfs:label xml:lang="en">Power of compressor 001 SIERRA02-0434C3</rdfs:label>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">902.0</saref:hasValue>
+    <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+    <rdf:type rdf:resource="https://w3id.org/saref4ee#Power"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref4ee#exposes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#idealCapacity">
+    <rdfs:label xml:lang="en">ideal capacity</rdfs:label>
+    <rdfs:comment xml:lang="en">Compressor capacity under ideal conditions. Usually measured in Watts (W, J/s).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#isContainedIn">
+    <rdfs:label xml:lang="en">is contained in</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation between an object and the physical space in which it is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#refrigerantClass">
+    <rdfs:label xml:lang="en">refrigerant class</rdfs:label>
+    <rdfs:comment xml:lang="en">Refrigerant class used by the compressor. CFC: Chlorofluorocarbons. HCFC: Hydrochlorofluorocarbons. HFC: Hydrofluorocarbons.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#latitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#NominalCapacityCompressor001SIERRA02-0434C3">
+    <rdfs:label xml:lang="en">Nominal capacity of compressor001 SIERRA02-0434C3</rdfs:label>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">680.0</saref:hasValue>
+    <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+    <rdf:type rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#Compressor001SIERRA02-0434C3">
+    <impellerDiameter rdf:resource="http://saref.linkeddata.es/def/bldg#ImpellerDiameterCompressor001SIERRA02-0434C3"/>
+    <j.1:location rdf:resource="http://saref.linkeddata.es/def/bldg#LocationCompressor001SIERRA02-0434C3"/>
+    <rdf:type rdf:resource="http://saref.linkeddata.es/def/bldg#Compressor"/>
+    <rdfs:label xml:lang="en">CompressorSIERRA02-0434C3</rdfs:label>
+    <nominalCapacity rdf:resource="http://saref.linkeddata.es/def/bldg#NominalCapacityCompressor001SIERRA02-0434C3"/>
+    <idealCapacity rdf:resource="http://saref.linkeddata.es/def/bldg#IdealCapacityCompressor001SIERRA02-0434C3"/>
+    <compressorSpeed rdf:resource="http://saref.linkeddata.es/def/bldg#CompressorSpeedCompressor001SIERRA02-0434C3"/>
+    <hasHotGasBypass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasHotGasBypass>
+    <isContainedIn rdf:resource="http://saref.linkeddata.es/def/bldg#RefrigerationStoreComputerScienceBuilding1"/>
+    <j.0:exposes rdf:resource="http://saref.linkeddata.es/def/bldg#PowerProfileCompressor001SIERRA02-0434C3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <saref:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIERRA 02-0434C3</saref:hasName>
+    <saref:hasManufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS</saref:hasManufacturer>
+    <refrigerantClass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HFC</refrigerantClass>
+    <powerSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MotorDriven</powerSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#BuildingSpace">
+    <rdfs:label xml:lang="en">Building space</rdfs:label>
+    <rdfs:comment xml:lang="en">An entity used to define the physical spaces of the building. A building space contains devices or building objects.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#refrigerantClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#ComputerScienceBuilding1">
+    <rdfs:label xml:lang="en">Computer Science Building 1</rdfs:label>
+    <j.1:location rdf:resource="http://saref.linkeddata.es/def/bldg#LocationComputerScienceBuilding1"/>
+    <rdf:type rdf:resource="http://saref.linkeddata.es/def/bldg#Building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:allValuesFrom rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#impellerDiameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref4ee#PowerProfile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#nominalCapacity">
+    <rdfs:label xml:lang="en">nominal capacity</rdfs:label>
+    <rdfs:comment xml:lang="en">Nominal capacity. Usually measured in Watts (W, J/s).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#PowerUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:allValuesFrom rdf:nodeID="A11"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#isSpaceOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <owl:onClass rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#cyclesPerSecond">
+    <rdfs:label xml:lang="en">cycles per second</rdfs:label>
+    <rdf:type rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+    <rdfs:label xml:lang="en">location</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <rdfs:comment xml:lang="en">The relation between something and the point,  or other geometrical thing in space, where it is.  For example, the realtionship between a radio tower and a Point with a given lat and long. Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points). Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping .</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#CompressorSpeedCompressor001SIERRA02-0434C3">
+    <rdfs:label xml:lang="en">Compressor speed of compressor001 SIERRA02-0434C3</rdfs:label>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</saref:hasValue>
+    <saref:isMeasuredIn rdf:resource="http://saref.linkeddata.es/def/bldg#cyclesPerSecond"/>
+    <rdf:type rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#duration">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#LocationRefrigerationStoreComputerScienceBuilding1">
+    <rdfs:label xml:lang="en">LocationRefrigerationStoreComputerScienceBuilding1</rdfs:label>
+    <j.1:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-3.839209</j.1:longitude>
+    <j.1:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.405152</j.1:latitude>
+    <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#powerSource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+    <rdfs:label xml:lang="en">Spatial thing</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <rdfs:comment xml:lang="en">Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#isMeasuredIn">
+    <rdfs:label xml:lang="en">is measured in</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation between a measurement and the unit of measure in which the measurement value is expressed.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/dateCopyrighted">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:allValuesFrom rdf:resource="http://saref.linkeddata.es/def/bldg#Measurement"/>
+    <owl:onProperty rdf:resource="http://saref.linkeddata.es/def/bldg#idealCapacity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#Building">
+    <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifcbuilding.htm"/>
+    <rdfs:seeAlso rdf:resource="https://w3id.org/ifc/IFC4_ADD1#IfcBuilding"/>
+    <rdfs:label xml:lang="en">Building</rdfs:label>
+    <rdfs:comment xml:lang="en">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#Measurement">
+    <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A13"/>
+    <rdfs:subClassOf rdf:nodeID="A12"/>
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#hasHotGasBypass">
+    <rdfs:label xml:lang="en">has hot gas bypass</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether or not hot gas bypass is provided for the compressor. TRUE = Yes, FALSE = No.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="http://saref.linkeddata.es/def/bldg#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:unionOf rdf:nodeID="A14"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://saref.linkeddata.es/def/bldg#impellerDiameter">
+    <rdfs:label xml:lang="en">impeller diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Diameter of compressor impeller - used to scale performance of geometrically similar compressors. Usually measured in millimeters (mm).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

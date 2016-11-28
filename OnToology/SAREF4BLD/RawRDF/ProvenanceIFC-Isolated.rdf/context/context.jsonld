@@ -1,0 +1,181 @@
+{
+  "@context" : {
+    "CooledBeam" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#CooledBeam"
+    },
+    "SolarDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SolarDevice"
+    },
+    "Burner" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Burner"
+    },
+    "CommunicationAppliance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#CommunicationAppliance"
+    },
+    "TubeBundle" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#TubeBundle"
+    },
+    "Filter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Filter"
+    },
+    "Lamp" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Lamp"
+    },
+    "VibrationIsolator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#VibrationIsolator"
+    },
+    "ProtectiveDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ProtectiveDevice"
+    },
+    "FlowInstrument" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowInstrument"
+    },
+    "SanitaryTerminal" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SanitaryTerminal"
+    },
+    "Humidifier" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Humidifier"
+    },
+    "ShadingDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ShadingDevice"
+    },
+    "FireSuppressionTerminal" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FireSuppressionTerminal"
+    },
+    "MedicalDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#MedicalDevice"
+    },
+    "HeatExchanger" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#HeatExchanger"
+    },
+    "Damper" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Damper"
+    },
+    "Tank" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Tank"
+    },
+    "Boiler" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Boiler"
+    },
+    "UnitaryEquipment" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#UnitaryEquipment"
+    },
+    "ElectricMotor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricMotor"
+    },
+    "Condenser" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Condenser"
+    },
+    "AirToAirHeatRecovery" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#AirToAirHeatRecovery"
+    },
+    "TransportElement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#TransportElement"
+    },
+    "FlowMovingDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowMovingDevice"
+    },
+    "DuctSilencer" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#DuctSilencer"
+    },
+    "Transformer" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Transformer"
+    },
+    "Outlet" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Outlet"
+    },
+    "FlowStorageDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowStorageDevice"
+    },
+    "FlowTreatmentDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowTreatmentDevice"
+    },
+    "Compressor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Compressor"
+    },
+    "SwitchingDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SwitchingDevice"
+    },
+    "Evaporator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Evaporator"
+    },
+    "hadPrimarySource" : {
+      "@id" : "http://www.w3.org/ns/prov#hadPrimarySource"
+    },
+    "ElectricTimeControl" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricTimeControl"
+    },
+    "Fan" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Fan"
+    },
+    "SpaceHeater" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#SpaceHeater"
+    },
+    "Coil" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Coil"
+    },
+    "EvaporativeCooler" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#EvaporativeCooler"
+    },
+    "ElectricFlowStorageDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricFlowStorageDevice"
+    },
+    "CoolingTower" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#CoolingTower"
+    },
+    "ElectricGenerator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricGenerator"
+    },
+    "Interceptor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Interceptor"
+    },
+    "FlowMeter" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowMeter"
+    },
+    "Pump" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Pump"
+    },
+    "Alarm" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Alarm"
+    },
+    "FlowTerminal" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowTerminal"
+    },
+    "Engine" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Engine"
+    },
+    "Actuator" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Actuator"
+    },
+    "Controller" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Controller"
+    },
+    "AudioVisualAppliance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#AudioVisualAppliance"
+    },
+    "Chiller" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Chiller"
+    },
+    "FlowController" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#FlowController"
+    },
+    "UnitaryControlElement" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#UnitaryControlElement"
+    },
+    "Valve" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Valve"
+    },
+    "ProtectiveDeviceTrippingUnit" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ProtectiveDeviceTrippingUnit"
+    },
+    "EnergyConversionDevice" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#EnergyConversionDevice"
+    },
+    "ElectricAppliance" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#ElectricAppliance"
+    },
+    "Sensor" : {
+      "@id" : "http://saref.linkeddata.es/def/bldg#Sensor"
+    }
+  }
+}
