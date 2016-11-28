@@ -1,0 +1,134 @@
+@prefix : <http://saref.linkeddata.es/def/bldg/example1> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix s4bldg: <https://w3id.org/saref4bldg#> .
+@prefix s4ener: <https://w3id.org/saref4ee#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix wurvoc: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@base <http://saref.linkeddata.es/def/bldg/example1> .
+
+<http://saref.linkeddata.es/data/bldg/example1> rdf:type owl:Ontology ;
+                                                owl:versionIRI <http://saref.linkeddata.es/data/v1/bldg/example1> ;
+                                                dcterms:creator <http://purl.org/net/mpoveda> ,
+                                                                <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                                dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                owl:versionInfo "1.0" ;
+                                                dc:publisher <http://www.oeg-upm.net/> ;
+                                                rdfs:comment "Example of use for the SAREF extension for building devices"@en .
+
+
+:Compressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                       :Compressor ;
+                              :compressorSpeed :CompressorSpeedCompressor001SIERRA02-0434C3 ;
+                              :idealCapacity :IdealCapacityCompressor001SIERRA02-0434C3 ;
+                              :impellerDiameter :ImpellerDiameterCompressor001SIERRA02-0434C3 ;
+                              :isContainedIn :RefrigerationStoreComputerScienceBuilding1 ;
+                              :nominalCapacity :NominalCapacityCompressor001SIERRA02-0434C3 ;
+                              geo:location :LocationCompressor001SIERRA02-0434C3 ;
+                              s4ener:exposes :PowerProfileCompressor001SIERRA02-0434C3 ;
+                              :hasHotGasBypass "false"^^xsd:boolean ;
+                              :powerSource "MotorDriven"^^xsd:string ;
+                              :refrigerantClass "HFC"^^xsd:string ;
+                              saref:hasManufacturer "SIEMENS"^^xsd:string ;
+                              saref:hasName "SIERRA 02-0434C3"^^xsd:string ;
+                              rdfs:label "CompressorSIERRA02-0434C3"@en .
+
+
+:CompressorSpeedCompressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                                      :Measurement ;
+                                             saref:isMeasuredIn :cyclesPerSecond ;
+                                             saref:hasValue "3.0"^^xsd:float ;
+                                             rdfs:label "Compressor speed of compressor001 SIERRA02-0434C3"@en .
+
+
+:ComputerScienceBuilding1 rdf:type owl:NamedIndividual ,
+                                   :Building ;
+                          geo:location :LocationComputerScienceBuilding1 ;
+                          rdfs:label "Computer Science Building 1"@en .
+
+
+:IdealCapacityCompressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                                    :Measurement ;
+                                           saref:isMeasuredIn wurvoc:watt ;
+                                           saref:hasValue "1800.0"^^xsd:float ;
+                                           rdfs:label "Ideal capacity of compressor001 SIERRA02-0434C3"@en .
+
+
+:ImpellerDiameterCompressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                                       :Measurement ;
+                                              saref:isMeasuredIn wurvoc:inch-international ;
+                                              saref:hasValue "5.9"^^xsd:float ;
+                                              rdfs:label "Impeller diameter of compressor001 SIERRA02-0434C3"@en .
+
+
+:LocationCompressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                               geo:SpatialThing ;
+                                      geo:latitude 40.405155 ;
+                                      geo:longitude -3.839203 ;
+                                      rdfs:label "Location of compressor001 SIERRA02-0434C3"@en .
+
+
+:LocationComputerScienceBuilding1 rdf:type owl:NamedIndividual ,
+                                           geo:SpatialThing ;
+                                  geo:latitude 40.405013 ;
+                                  geo:longitude -3.839349 ;
+                                  rdfs:label "Location of Computer Science Building 1"@en .
+
+
+:LocationRefrigerationStoreComputerScienceBuilding1 rdf:type owl:NamedIndividual ,
+                                                             geo:SpatialThing ;
+                                                    geo:latitude 40.405152 ;
+                                                    geo:longitude -3.839209 ;
+                                                    rdfs:label "LocationRefrigerationStoreComputerScienceBuilding1"@en .
+
+
+:NominalCapacityCompressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                                      :Measurement ;
+                                             saref:isMeasuredIn wurvoc:watt ;
+                                             saref:hasValue "680.0"^^xsd:float ;
+                                             rdfs:label "Nominal capacity of compressor001 SIERRA02-0434C3"@en .
+
+
+:PowerCompressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                            s4ener:Power ;
+                                   saref:isMeasuredIn wurvoc:watt ;
+                                   saref:hasValue "902.0"^^xsd:float ;
+                                   rdfs:label "Power of compressor 001 SIERRA02-0434C3"@en .
+
+
+:PowerProfileCompressor001SIERRA02-0434C3 rdf:type owl:NamedIndividual ,
+                                                   s4ener:PowerProfile ;
+                                          saref:hasConsumption :PowerCompressor001SIERRA02-0434C3 ;
+                                          rdfs:label "Power profile of compressor 001 SIERRA02-0434C3"@en .
+
+
+:RefrigerationStoreComputerScienceBuilding1 rdf:type owl:NamedIndividual ,
+                                                     :BuildingSpace ;
+                                            :isSpaceOf :ComputerScienceBuilding1 ;
+                                            geo:location :LocationRefrigerationStoreComputerScienceBuilding1 ;
+                                            rdfs:label "Refrigeration store of Computer Science Building 1"@en .
+
+
+:cyclesPerSecond rdf:type owl:NamedIndividual ,
+                          saref:UnitOfMeasure ;
+                 rdfs:label "cycles per second"@en .
+
+
+wurvoc:inch-international rdf:type owl:NamedIndividual ,
+                                                                        saref:UnitOfMeasure ;
+                                                               rdfs:label "inch international"@en .
+
+
+wurvoc:watt rdf:type owl:NamedIndividual ,
+                                                          saref:PowerUnit .
+
+

@@ -1,0 +1,141 @@
+@prefix : <http://saref.linkeddata.es/data/envi/example1> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix s4envi: <https://w3id.org/saref4envi#> .
+@prefix s4ener: <https://w3id.org/saref4ee#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix wurvoc: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@base <http://saref.linkeddata.es/data/envi/example1> .
+
+<http://saref.linkeddata.es/data/envi/example1> rdf:type owl:Ontology ;
+                                                owl:versionIRI <http://saref.linkeddata.es/def/v1/envi/example1> ;
+                                                dcterms:creator <http://purl.org/net/mpoveda> ;
+                                                rdfs:comment "Example of use for the SAREF extension for environment"@en ;
+                                                dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                                dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                owl:versionInfo "1.0" ;
+                                                dc:publisher <http://www.oeg-upm.net/> .
+
+
+:Bluetoothv2-1 rdf:type owl:NamedIndividual ,
+                        s4envi:CommunicationInterface ;
+               s4envi:hasVersion "v2.1"^^xsd:string ;
+               rdfs:label "Bluetooth v2.1"@en .
+
+
+:FequencyMeasurementTESS005-UCM rdf:type owl:NamedIndividual ,
+                                         s4envi:FrequencyMeasurement ;
+                                saref:isMeasuredIn wurvoc:reciprocal_second-time ;
+                                saref:hasValue "10.0"^^xsd:float ;
+                                rdfs:label "FequencyMeasurementTESS005-UCM"@en .
+
+
+:LocationTESS005-UCM rdf:type owl:NamedIndividual ,
+                              geo:SpatialThing ;
+                     geo:latitude "40.451"^^xsd:float ;
+                     geo:longitude "-3.7261"^^xsd:float ;
+                     rdfs:label "Location of photometer TESS stars5"@en .
+
+
+:MQTT-Broker rdf:type owl:NamedIndividual ,
+                      s4envi:CommunicationProtocol ;
+             rdfs:label "MQTT-Broker"@en .
+
+
+:TransmissionPeriodTESS005-UCM rdf:type owl:NamedIndividual ,
+                                       s4envi:PeriodMeasurement ;
+                              saref:isMeasuredIn time:unitSecond ;
+                              saref:hasValue "30.0"^^xsd:float ;
+                              rdfs:label "TransmissionPeriodTESS005-UCM"@en .
+
+
+:PowerProfileTESS005-UCM rdf:type owl:NamedIndividual ,
+                                  s4ener:PowerProfile ;
+                         saref:hasConsumption :PowerTESS005-UCM ;
+                         rdfs:label "Power profile of photometer TESS stars5"@en .
+
+
+:PowerTESS005-UCM rdf:type owl:NamedIndividual ,
+                           s4ener:Power ;
+                  saref:isMeasuredIn wurvoc:watt ;
+                  saref:hasValue "20.0"^^xsd:float ;
+                  rdfs:label "Power of photometer TESS stars5"@en .
+
+
+:RS232v24 rdf:type owl:NamedIndividual ,
+                   s4envi:CommunicationInterface ;
+          s4envi:hasVersion "v24"^^xsd:string ;
+          rdfs:label "RS232 v24"@en .
+
+
+:TESS005-UCM rdf:type owl:NamedIndividual ,
+                      s4envi:TESS ;
+             s4envi:hasFrequencyMeasurement :FequencyMeasurementTESS005-UCM ;
+             s4envi:hasTransmissionPeriod :TransmissionPeriodTESS005-UCM ;
+             s4envi:makesMeasurement :Measurement2016-10-05T08:15:30TESS005-UCM ,
+                                                                    :Measurement2016-10-05T08:15:40TESS005-UCM ;
+             s4envi:measuresProperty s4envi:LightMagnitude ;
+             s4envi:usesCommunicationInterface :Bluetoothv2-1 ,
+                                                                              :RS232v24 ,
+                                                                              :Wi-Fiv802-11ah ;
+             s4envi:usesCommunicationProtocol :MQTT-Broker ;
+             geo:location :LocationTESS005-UCM ;
+             s4ener:exposes :PowerProfileTESS005-UCM ;
+             s4envi:hasVersion "v1"^^xsd:string ;
+             saref:hasManufacturer "Universidad Complutense de Madrid"^^xsd:string ;
+             saref:hasName "stars5"^^xsd:string ;
+             rdfs:label "TESS photometer stars5"@en .
+
+
+:Wi-Fiv802-11ah rdf:type owl:NamedIndividual ,
+                         s4envi:CommunicationInterface ;
+                s4envi:hasVersion "802.11ah"^^xsd:string ;
+                rdfs:label "Wi-Fi v802.11ah"@en .
+
+
+:mgPerarcsec2 rdf:type owl:NamedIndividual ,
+                       saref:UnitOfMeasure ;
+              rdfs:label "mgPerarcsec2"@en .
+
+
+:Measurement2016-10-05T08:15:30TESS005-UCM rdf:type owl:NamedIndividual ,
+                                                    s4envi:Measurement ;
+                                           s4envi:relatesToProperty s4envi:LightMagnitude ;
+                                           saref:isMeasuredIn :mgPerarcsec2 ;
+                                           s4envi:hasTimestamp "2016-10-05T08:15:30"^^xsd:dateTime ;
+                                           saref:hasValue "0.1"^^xsd:float ;
+                                           rdfs:label "Measurement 2016-10-05T08:15:30 TESS005-UCM"@en .
+
+
+:Measurement2016-10-05T08:15:40TESS005-UCM rdf:type owl:NamedIndividual ,
+                                                    s4envi:Measurement ;
+                                           s4envi:relatesToProperty s4envi:LightMagnitude ;
+                                           saref:isMeasuredIn :mgPerarcsec2 ;
+                                           s4envi:hasTimestamp "2016-10-05T08:15:40"^^xsd:dateTime ;
+                                           saref:hasValue "0.8"^^xsd:float ;
+                                           rdfs:label "Measurement 2016-10-05T08:15:40 TESS005-UCM"@en .
+
+
+s4envi:LightMagnitude rdf:type owl:NamedIndividual ,
+                                                              s4envi:LightProperty .
+
+
+time:unitSecond rdf:type owl:NamedIndividual ,
+                                                  time:TemporalUnit .
+
+
+wurvoc:reciprocal_second-time rdf:type owl:NamedIndividual ,
+                                                                            s4envi:FrequencyUnit .
+
+
+wurvoc:watt rdf:type owl:NamedIndividual ,
+                                                          saref:PowerUnit .

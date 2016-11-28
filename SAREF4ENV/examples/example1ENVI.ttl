@@ -12,13 +12,13 @@
 @base <http://saref.linkeddata.es/data/envi/example1> .
 
 <http://saref.linkeddata.es/data/envi/example1> rdf:type owl:Ontology ;
-                                                owl:versionIRI <http://saref.linkeddata.es/def/v1/envi/example1> ;
-                                                dcterms:creator <http://purl.org/net/mpoveda> ;
-                                                rdfs:comment "Example of use for the SAREF extension for environment"@en ;
-                                                dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                                dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                                owl:versionInfo "1.0" ;
-                                                dc:publisher <http://www.oeg-upm.net/> .
+                                                 owl:versionIRI <http://saref.linkeddata.es/data/v1/envi/example1> ;
+                                                 dcterms:creator <http://purl.org/net/mpoveda> ;
+                                                 rdfs:comment "Example of use for the SAREF extension for environment"@en ;
+                                                 dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                                 dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                 owl:versionInfo "1.0" ;
+                                                 dc:publisher <http://www.oeg-upm.net/> .
 
 #################################################################
 #    Annotation properties
@@ -221,8 +221,8 @@ saref:UnitOfMeasure rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://saref.linkeddata.es/def/bldg#Bluettothv2.1
-:Bluettothv2.1 rdf:type owl:NamedIndividual ,
+###  http://saref.linkeddata.es/def/bldg#Bluettothv2-1
+:Bluettothv2-1 rdf:type owl:NamedIndividual ,
                         <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
                <http://saref.linkeddata.es/def/envi#hasVersion> "v2.1"^^xsd:string ;
                rdfs:label "Bluettoth v2.1"@en .
@@ -248,14 +248,6 @@ saref:UnitOfMeasure rdf:type owl:Class ;
 :MQTT-Broker rdf:type owl:NamedIndividual ,
                       <http://saref.linkeddata.es/def/envi#CommunicationProtocol> ;
              rdfs:label "MQTT-Broker"@en .
-
-
-###  http://saref.linkeddata.es/def/bldg#TransmissionPeriodTESS005-UCM
-:TransmissionPeriodTESS005-UCM rdf:type owl:NamedIndividual ,
-                                       <http://saref.linkeddata.es/def/envi#PeriodMeasurement> ;
-                              saref:isMeasuredIn <http://www.w3.org/2006/time#unitSecond> ;
-                              saref:hasValue "30.0"^^xsd:float ;
-                              rdfs:label "TransmissionPeriodTESS005-UCM"@en .
 
 
 ###  http://saref.linkeddata.es/def/bldg#PowerProfileTESS005-UCM
@@ -288,9 +280,9 @@ saref:UnitOfMeasure rdf:type owl:Class ;
              <http://saref.linkeddata.es/def/envi#makesMeasurement> :Measurement2016-10-05T08:15:30TESS005-UCM ,
                                                                     :Measurement2016-10-05T08:15:40TESS005-UCM ;
              <http://saref.linkeddata.es/def/envi#measuresProperty> <http://saref.linkeddata.es/def/envi#LightMagnitude> ;
-             <http://saref.linkeddata.es/def/envi#usesCommunicationInterface> :Bluettothv2.1 ,
+             <http://saref.linkeddata.es/def/envi#usesCommunicationInterface> :Bluettothv2-1 ,
                                                                               :RS232v24 ,
-                                                                              :Wi-Fiv802.11ah ;
+                                                                              :Wi-Fiv802-11ah ;
              <http://saref.linkeddata.es/def/envi#usesCommunicationProtocol> :MQTT-Broker ;
              <http://www.w3.org/2003/01/geo/wgs84_pos#location> :LocationTESS005-UCM ;
              <https://w3id.org/saref4ee#exposes> :PowerProfileTESS005-UCM ;
@@ -300,8 +292,16 @@ saref:UnitOfMeasure rdf:type owl:Class ;
              rdfs:label "TESS photometer stars5"@en .
 
 
-###  http://saref.linkeddata.es/def/bldg#Wi-Fiv802.11ah
-:Wi-Fiv802.11ah rdf:type owl:NamedIndividual ,
+###  http://saref.linkeddata.es/def/bldg#TransmissionPeriodTESS005-UCM
+:TransmissionPeriodTESS005-UCM rdf:type owl:NamedIndividual ,
+                                        <http://saref.linkeddata.es/def/envi#PeriodMeasurement> ;
+                               saref:isMeasuredIn <http://www.w3.org/2006/time#unitSecond> ;
+                               saref:hasValue "30.0"^^xsd:float ;
+                               rdfs:label "TransmissionPeriodTESS005-UCM"@en .
+
+
+###  http://saref.linkeddata.es/def/bldg#Wi-Fiv802-11ah
+:Wi-Fiv802-11ah rdf:type owl:NamedIndividual ,
                          <http://saref.linkeddata.es/def/envi#CommunicationInterface> ;
                 <http://saref.linkeddata.es/def/envi#hasVersion> "802.11ah"^^xsd:string ;
                 rdfs:label "Wi-Fi v802.11ah"@en .
