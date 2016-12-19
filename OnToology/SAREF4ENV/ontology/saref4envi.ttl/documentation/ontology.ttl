@@ -168,16 +168,6 @@ saref:UnitOfMeasure
       rdfs:label "Light"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :CompassDirection ;
-                owl:onProperty :isProjectedInDirection
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :HeightMeasurement ;
-                owl:onProperty :isProjectedFromHeight
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty :hasFlash
               ] ;
@@ -188,13 +178,23 @@ saref:UnitOfMeasure
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :Color ;
+                owl:onProperty :hasColor
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :CompassDirection ;
+                owl:onProperty :isProjectedInDirection
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :Geometry ;
                 owl:onProperty :hasGeometry
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Color ;
-                owl:onProperty :hasColor
+                owl:allValuesFrom :HeightMeasurement ;
+                owl:onProperty :isProjectedFromHeight
               ] ;
       owl:disjointWith saref:Service , :Measurement , saref:UnitOfMeasure , :Property .
 
@@ -388,13 +388,13 @@ saref:hasName
       rdfs:subClassOf geo:Point ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom geo:SpatialThing ;
-                owl:onProperty geo:location
+                owl:allValuesFrom :Light ;
+                owl:onProperty :projectsLight
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Light ;
-                owl:onProperty :projectsLight
+                owl:allValuesFrom geo:SpatialThing ;
+                owl:onProperty geo:location
               ] .
 
 :measuresProperty
@@ -420,18 +420,8 @@ saref:hasManufacturer
       rdfs:subClassOf geo:SpatialThing ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom geo:SpatialThing ;
-                owl:onProperty geo:location
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty saref:hasDescription
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :PhysicalObject ;
-                owl:onProperty :contains
+                owl:onProperty :isContainedIn
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -440,8 +430,18 @@ saref:hasManufacturer
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom geo:SpatialThing ;
+                owl:onProperty geo:location
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :PhysicalObject ;
-                owl:onProperty :isContainedIn
+                owl:onProperty :contains
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty saref:hasDescription
               ] .
 
 :isComponentOf
@@ -520,33 +520,6 @@ saref:hasManufacturer
       rdfs:subClassOf saref:Device , :System ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :FrequencyMeasurement ;
-                owl:onProperty :hasFrequencyMeasurement
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :PeriodMeasurement ;
-                owl:onProperty :hasTransmissionPeriod
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :hasRevisionNumber
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:maxQualifiedCardinality
-                        "1"^^xsd:nonNegativeInteger ;
-                owl:onDataRange xsd:string ;
-                owl:onProperty :hasVersion
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :PhysicalObject ;
-                owl:onProperty :isContainedIn
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onDataRange xsd:string ;
@@ -560,6 +533,33 @@ saref:hasManufacturer
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
+                owl:onProperty :hasRevisionNumber
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :hasVersion
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :PeriodMeasurement ;
+                owl:onProperty :hasTransmissionPeriod
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :PhysicalObject ;
+                owl:onProperty :isContainedIn
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :FrequencyMeasurement ;
+                owl:onProperty :hasFrequencyMeasurement
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onDataRange xsd:string ;
                 owl:onProperty :hasVersion
               ] .
 
@@ -603,8 +603,18 @@ saref:hasManufacturer
       rdfs:subClassOf :PhysicalObject ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :CommunicationProtocol ;
+                owl:onProperty :usesCommunicationProtocol
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :System ;
                 owl:onProperty :isComponentOf
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :System ;
+                owl:onProperty :hasComponent
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -613,18 +623,8 @@ saref:hasManufacturer
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :CommunicationProtocol ;
-                owl:onProperty :usesCommunicationProtocol
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :CommunicationInterface ;
                 owl:onProperty :usesCommunicationInterface
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :System ;
-                owl:onProperty :hasComponent
               ] .
 
 :Lamppost
@@ -639,13 +639,13 @@ saref:hasManufacturer
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :hasShield
+                owl:allValuesFrom :LightPoint ;
+                owl:onProperty :hasLightPoint
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :LightPoint ;
-                owl:onProperty :hasLightPoint
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :hasShield
               ] .
 
 :DigitalRepresentation
@@ -654,25 +654,30 @@ saref:hasManufacturer
       rdfs:label "Digital representation"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:maxQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onDataRange xsd:string ;
+                owl:onProperty :hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :PhysicalObject ;
+                owl:onProperty :encapsulates
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty :hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom saref:Service ;
+                owl:onProperty :isAccesibleThrough
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty :hasTag
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty saref:hasName
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:maxQualifiedCardinality
-                        "1"^^xsd:nonNegativeInteger ;
-                owl:onDataRange xsd:string ;
-                owl:onProperty :hasIdentifier
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -693,13 +698,8 @@ saref:hasManufacturer
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :PhysicalObject ;
-                owl:onProperty :encapsulates
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom saref:Service ;
-                owl:onProperty :isAccesibleThrough
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty saref:hasName
               ] ;
       owl:disjointWith :Measurement , :Light , saref:UnitOfMeasure , :Geometry .
 
@@ -713,8 +713,27 @@ saref:hasManufacturer
       rdfs:label "Measurement"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onClass :Property ;
+                owl:onProperty :relatesToProperty ;
+                owl:qualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:dateTime ;
                 owl:onProperty :hasTimestamp
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onClass saref:UnitOfMeasure ;
+                owl:onProperty saref:isMeasuredIn ;
+                owl:qualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom saref:UnitOfMeasure ;
+                owl:onProperty saref:isMeasuredIn
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -725,32 +744,13 @@ saref:hasManufacturer
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:float ;
-                owl:onProperty saref:hasValue
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :Property ;
                 owl:onProperty :relatesToProperty
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom saref:UnitOfMeasure ;
-                owl:onProperty saref:isMeasuredIn
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onClass :Property ;
-                owl:onProperty :relatesToProperty ;
-                owl:qualifiedCardinality
-                        "1"^^xsd:nonNegativeInteger
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onClass saref:UnitOfMeasure ;
-                owl:onProperty saref:isMeasuredIn ;
-                owl:qualifiedCardinality
-                        "1"^^xsd:nonNegativeInteger
+                owl:allValuesFrom xsd:float ;
+                owl:onProperty saref:hasValue
               ] ;
       owl:disjointWith saref:Service , saref:UnitOfMeasure , :Property .
 
@@ -796,14 +796,14 @@ geo:SpatialThing
       rdfs:label "Spatial thing"@en ;
       owl:disjointWith :CompassDirection , saref:Service , :Color , :CommunicationProtocol , :Measurement , :DigitalRepresentation , :Geometry , :CommunicationInterface .
 
+saref:isMeasuredIn
+      a       owl:ObjectProperty ;
+      rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en , "is measured in"@en .
+
 :isProjectedFromHeight
       a       owl:ObjectProperty ;
       rdfs:comment "A relation between a light and the height measurement from which it is projected."@en ;
       rdfs:label "is projected from height"@en .
-
-saref:isMeasuredIn
-      a       owl:ObjectProperty ;
-      rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en , "is measured in"@en .
 
 time:TemporalUnit
       a       owl:Class ;
