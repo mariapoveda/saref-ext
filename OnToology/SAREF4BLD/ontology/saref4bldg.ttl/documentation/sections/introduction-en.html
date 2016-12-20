@@ -1,5 +1,15 @@
 <h2>1. Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<p>This should talk a bit about your ontology, its motivation, soa and goals</p>
+<p>A more efficient interaction and integration of actors, methods and tools during the different phases of the building life cycle is being demanded in the Architecture, Engineering and Construction (AEC) and Facilities Management (FM) fields. Along its life cycle, multiple tools interact with building models to extract information for different purposes (e.g., energy demand, appliance characteristics, etc.). Therefore, mechanisms to facilitate the exchange of data between actors along the different stages of the building life cycle and to provide the required interoperability between tools are needed. As the ISO standard data model Industry Foundation Classes (IFC) supports interoperability between data and tools, we decided to extend the SAREF ontology with the subset of this standard related to devices and appliances. </p>
+
+<p>This document describes the SAREF4BLDG ontology, an extension of the SAREF ontology that was created based on the Industry Foundation Classes (IFC) standard for building information. It should be noted that not the whole standard has been transformed since it exceeds the scope of this extension, which is limited to devices and appliances within the building domain.</p>
+
+<p>The IFC specification is developed and maintained by buildingSMART International as its "Data standard" and, since its version IFC4, it is published as the ISO 16739 standard. SAREF4BLDG is meant to enable the (currently missing) interoperability among various actors (architects, engineers, consultants, contractors, and product component manufacturers, among others) and applications managing building information involved in the different phases of the building life cycle (Planning and Design, Construction, Commissioning, Operation, Retrofitting/Refurbishment/Reconfiguration, and Demolition/Recycling). By using SAREF4BLDG, smart appliances from manufacturers that support the IFC data model will easily communicate with each other. Towards this aim, SAREF4BLDG should be used to annotate (or generate) neutral device descriptions to be shared among various stakeholders.</p>
+
+<p>SAREF4BLDG is an OWL-DL ontology that extends SAREF with 72 classes (67 defined in SAREF4EBLDG and 5 reused from the SAREF and geo ontologies), 179 object properties (177 defined in SAREF4EBLDG and 2 reused from the SAREF and geo ontologies), and 83 data type properties (82 defined in SAREF4EBLDG and 1 reused from the SAREF ontology).</p>
+
+<p>SAREF4BLDG focuses on extending the SAREF ontology to include those devices defined by the IFC version 4 - Addendum 1 and to enable the representation of such devices and other physical objects in building spaces.</p>
+
+
 <div id="namespacedeclarations">
 <h2>1.1. Namespace declarations<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 </p><div id="ns" align="center">
@@ -25,6 +35,7 @@
 <tr><td><b>saref</b></td><td>&lt;https://w3id.org/saref#&gt;</td></tr>
 <tr><td><b>lexical</b></td><td>&lt;http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/&gt;</td></tr>
 <tr><td><b>pset</b></td><td>&lt;http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/&gt;</td></tr>
+<tr><td><b>bldg</b></td><td>&lt;http://w3id.org/def/bldg#&gt;</td></tr>
 </tbody>
 </table>
 </div>
