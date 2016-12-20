@@ -85,17 +85,12 @@ saref:hasValue
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :externalSurfaceArea
+                owl:onProperty :nominalHeatTransferCoefficient
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalHeatTransferArea
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :refrigerantClass
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -110,12 +105,17 @@ saref:hasValue
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalHeatTransferCoefficient
+                owl:onProperty :internalSurfaceArea
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :refrigerantClass
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :internalSurfaceArea
+                owl:onProperty :externalSurfaceArea
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccondenser.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_condensertypecommon.htm> .
@@ -160,12 +160,32 @@ saref:hasValue
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :size
+                owl:onProperty :workingPressure
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :valveMechanism
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :closeOffRating
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty :valvePattern
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :size
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :flowCoefficient
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -175,27 +195,7 @@ saref:hasValue
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :flowCoefficient
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :closeOffRating
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :workingPressure
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :testPressure
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :valveMechanism
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcvalve.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_valvetypecommon.htm> .
@@ -214,27 +214,15 @@ dcterms:rightsHolder
       rdfs:label "Measurement"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onDataRange xsd:float ;
-                owl:onProperty saref:hasValue ;
+                owl:onClass :Property ;
+                owl:onProperty :relatesToProperty ;
                 owl:qualifiedCardinality
                         "1"^^xsd:nonNegativeInteger
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Property ;
-                owl:onProperty :relatesToProperty
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom saref:UnitOfMeasure ;
                 owl:onProperty saref:isMeasuredIn
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onClass :Property ;
-                owl:onProperty :relatesToProperty ;
-                owl:qualifiedCardinality
-                        "1"^^xsd:nonNegativeInteger
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -245,8 +233,20 @@ dcterms:rightsHolder
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onDataRange xsd:float ;
+                owl:onProperty saref:hasValue ;
+                owl:qualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:dateTime ;
                 owl:onProperty :hasTimestamp
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Property ;
+                owl:onProperty :relatesToProperty
               ] ;
       owl:disjointWith :Property , saref:UnitOfMeasure .
 
@@ -325,28 +325,8 @@ dcterms:rightsHolder
       rdfs:subClassOf :EnergyConversionDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :liftElevationDifference
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty :capacityControl
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :circuitType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalCapacity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :basinReserveVolume
+                owl:onProperty :controlStrategy
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -356,7 +336,37 @@ dcterms:rightsHolder
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
+                owl:onProperty :circuitType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
                 owl:onProperty :flowArrangement
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :basinReserveVolume
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :ambientDesignDryBulbTemperature
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalCapacity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :liftElevationDifference
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :capacityControl
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -375,23 +385,13 @@ dcterms:rightsHolder
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :controlStrategy
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :sprayType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:integer ;
                 owl:onProperty :numberOfCells
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :ambientDesignDryBulbTemperature
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :sprayType
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccoolingtower.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_coolingtowertypecommon.htm> .
@@ -413,13 +413,13 @@ dcterms:rightsHolder
       rdfs:subClassOf saref:Actuator , :DistributionControlDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :manualOverride
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :failPosition
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :failPosition
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :manualOverride
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcactuator.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_actuatortypecommon.htm> .
@@ -505,13 +505,13 @@ saref:Device
       rdfs:subClassOf :BuildingDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :visibleLightTransmittance
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :shadingDeviceType
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :visibleLightReflectance
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :roughness
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -525,23 +525,23 @@ saref:Device
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :solarReflectance
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty :mechanicalOperated
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :roughness
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :visibleLightReflectance
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :shadingDeviceType
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :visibleLightTransmittance
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :solarReflectance
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -610,13 +610,13 @@ saref:Device
       rdfs:subClassOf :DistributionControlDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :limitingTerminalSize
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :standard
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :standard
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :limitingTerminalSize
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_protectivedevicetrippingunittypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcprotectivedevicetrippingunit.htm> .
@@ -770,8 +770,28 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf :EnergyConversionDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :airFlowRateMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalLatentCapacity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty :placementType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMax
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -786,27 +806,7 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalLatentCapacity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :airFlowRateMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :airFlowRateMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMax
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_coiltypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccoil.htm> .
@@ -850,18 +850,13 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf :FlowController ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :bladeShape
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :bladeEdge
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :closeOffRating
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :airFlowRateMax
+                owl:onProperty :faceArea
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -871,27 +866,7 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :workingPressureMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :bladeAction
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :orientation
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :temperatureRating
+                owl:onProperty :bladeThickness
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -901,37 +876,7 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :faceArea
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :closeOffRating
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :frameDepth
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :frameThickness
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :operation
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :openPressureDrop
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMax
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -941,12 +886,67 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :bladeThickness
+                owl:onProperty :leakageFullyClosed
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :operation
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :orientation
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :leakageFullyClosed
+                owl:onProperty :frameDepth
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :openPressureDrop
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :temperatureRating
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :airFlowRateMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :bladeEdge
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :bladeShape
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :workingPressureMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :bladeAction
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_dampertypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcdamper.htm> .
@@ -960,6 +960,36 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
+                owl:onProperty :impellerDiameter
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :idealShaftPower
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :refrigerantClass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :powerSource
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :compressorSpeed
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :hasHotGasBypass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalCapacity
               ] ;
       rdfs:subClassOf
@@ -970,42 +1000,12 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :idealShaftPower
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :impellerDiameter
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :hasHotGasBypass
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :idealCapacity
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :partLoadRatioMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :refrigerantClass
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :compressorSpeed
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :powerSource
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_compressortypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccompressor.htm> .
@@ -1024,17 +1024,7 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :weight
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :waterRequirement
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :application
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1043,8 +1033,18 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.""
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :weight
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty :internalControl
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :application
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifchumidifier.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_humidifiertypecommon.htm> .
@@ -1153,13 +1153,18 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
       rdfs:subClassOf :EnergyConversionDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :electricMotorEfficiency
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :motorEnclosureType
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :teTime
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isGuarded
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :hasPartWinding
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1169,12 +1174,7 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :startCurrentFactor
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :startingTime
+                owl:onProperty :electricMotorEfficiency
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1183,18 +1183,18 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isGuarded
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :startCurrentFactor
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :motorEnclosureType
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :teTime
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :hasPartWinding
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :startingTime
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1236,11 +1236,6 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf :EnergyConversionDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :transformerVectorGroup
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :secondaryCurrent
               ] ;
@@ -1252,12 +1247,17 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :secondaryFrequency
+                owl:onProperty :realImpedanceRatio
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :transformerVectorGroup
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :secondaryVoltage
+                owl:onProperty :apparentPowerMax
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1267,17 +1267,7 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :realImpedanceRatio
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :primaryApparentPower
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isNeutralPrimaryTerminalAvailable
+                owl:onProperty :primaryCurrent
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1292,7 +1282,17 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :apparentPowerMax
+                owl:onProperty :secondaryFrequency
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :primaryApparentPower
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isNeutralPrimaryTerminalAvailable
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1307,7 +1307,7 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :primaryCurrent
+                owl:onProperty :secondaryVoltage
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_transformertypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifctransformer.htm> .
@@ -1373,41 +1373,6 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalLengthOrDiameter
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :storageType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :effectiveCapacity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :patternType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :secondCurvatureRadius
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :accessType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :endShapeType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :operatingWight
               ] ;
       rdfs:subClassOf
@@ -1422,6 +1387,21 @@ Transformer is used to transform electric power; conversion of electric signals 
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :effectiveCapacity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :secondCurvatureRadius
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :patternType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:integer ;
                 owl:onProperty :numberOfSections
               ] ;
@@ -1432,8 +1412,28 @@ Transformer is used to transform electric power; conversion of electric signals 
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :storageType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalLengthOrDiameter
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalDepth
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :endShapeType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :accessType
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_tanktypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifctank.htm> .
@@ -1456,13 +1456,13 @@ Transformer is used to transform electric power; conversion of electric signals 
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :fireExit
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :capacityWeight
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :capacityWeight
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :fireExit
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifctransportelement.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/pset/pset_transportelementcommon.htm> .
@@ -1507,7 +1507,7 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :inletConnectionSize
+                owl:onProperty :outletConnectionSize
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1517,22 +1517,7 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :ventilatingPipeSize
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalBodyDepth
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :coverWidth
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :outletConnectionSize
+                owl:onProperty :coverLength
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1542,7 +1527,22 @@ Transformer is used to transform electric power; conversion of electric signals 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :coverLength
+                owl:onProperty :nominalBodyDepth
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :ventilatingPipeSize
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :coverWidth
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :inletConnectionSize
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/pset/pset_interceptortypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/lexical/ifcinterceptor.htm> .
@@ -1584,17 +1584,12 @@ A unitary control element provides a housing for an aggregation of control or el
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalCondensingTemperature
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalCapacity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalEfficiency
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalEvaporatingTemmperature
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1609,7 +1604,12 @@ A unitary control element provides a housing for an aggregation of control or el
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalEvaporatingTemmperature
+                owl:onProperty :nominalCondensingTemperature
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalCapacity
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcchiller.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_chillertypecommon.htm> .
@@ -1666,17 +1666,7 @@ A unitary control element provides a housing for an aggregation of control or el
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :volumen
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :thermalConductivity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :foulingFactor
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1686,12 +1676,27 @@ A unitary control element provides a housing for an aggregation of control or el
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :verticalSpacing
+                owl:onProperty :nominalDiameter
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :foulingFactor
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :outsideDiameter
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:integer ;
                 owl:onProperty :numberOfCircuits
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :length
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1701,22 +1706,17 @@ A unitary control element provides a housing for an aggregation of control or el
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
+                owl:onProperty :volumen
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :verticalSpacing
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
                 owl:onProperty :horizontalSpacing
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :outsideDiameter
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :length
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalDiameter
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1765,32 +1765,7 @@ A unitary control element provides a housing for an aggregation of control or el
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :netPositiveSuctionHead
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nomminalRotationSpeed
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :operationTemperatureMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :flowResistanceMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :connectionSize
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1806,6 +1781,31 @@ A unitary control element provides a housing for an aggregation of control or el
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :pumpFlowRateMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :flowResistanceMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nomminalRotationSpeed
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :netPositiveSuctionHead
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :connectionSize
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcpump.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_pumptypecommon.htm> .
@@ -1956,8 +1956,13 @@ saref:Actuator
       rdfs:subClassOf :FlowTerminal ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :spectrumMin
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :colorAppearance
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:integer ;
+                owl:onProperty :colorRenderingIndex
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1972,22 +1977,12 @@ saref:Actuator
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :contributedLuminousFlux
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :lampMaintenanceFactor
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :colorAppearance
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :colorTemperature
+                owl:onProperty :lightEmitterNominalPower
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1997,12 +1992,17 @@ saref:Actuator
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :lightEmitterNominalPower
+                owl:onProperty :contributedLuminousFlux
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:integer ;
-                owl:onProperty :colorRenderingIndex
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :colorTemperature
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :spectrumMin
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifclamp.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_lamptypecommon.htm> .
@@ -2069,18 +2069,8 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :placementType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:integer ;
-                owl:onProperty :numberOfSections
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:integer ;
-                owl:onProperty :numberOfPanels
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :outputCapacity
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2095,12 +2085,17 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty :temperatureClassification
+                owl:onProperty :placementType
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :bodyMass
+                owl:allValuesFrom xsd:integer ;
+                owl:onProperty :numberOfPanels
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:integer ;
+                owl:onProperty :numberOfSections
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2110,7 +2105,12 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :outputCapacity
+                owl:onProperty :bodyMass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :temperatureClassification
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2144,22 +2144,12 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :secondaryAirFlowRateMin
+                owl:onProperty :primaryAirFlowRateMin
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :primaryAirFlowRateMax
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :heatTransferTypeEnum
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2169,17 +2159,27 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :secondaryAirFlowRateMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :heatTransferTypeEnum
+                owl:onProperty :operationTemperatureMin
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :primaryAirFlowRateMin
+                owl:onProperty :operationTemperatureMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :primaryAirFlowRateMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :secondaryAirFlowRateMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :secondaryAirFlowRateMin
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_airtoairheatrecoverytypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcairtoairheatrecovery.htm> .
@@ -2198,17 +2198,17 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
+                owl:onProperty :powerOutputMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
                 owl:onProperty :electricGeneratorEfficiency
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :startCurrentFactor
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :powerOutputMax
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricgenerator.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricgeneratortypecommon.htm> .
@@ -2234,13 +2234,13 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
       rdfs:subClassOf :FlowTerminal ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :audioVolume
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :mediaSource
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :mediaSource
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :audioVolume
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcaudiovisualappliance.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_audiovisualappliancetypecommon.htm> .
@@ -2324,13 +2324,8 @@ Switches include those used for electrical power, communications, audio-visual, 
       rdfs:subClassOf :FlowController ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isIlluminated
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :hasLock
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :legend
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2340,12 +2335,17 @@ Switches include those used for electrical power, communications, audio-visual, 
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty :legend
+                owl:onProperty :switchFunction
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :switchFunction
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isIlluminated
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :hasLock
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcswitchingdevice.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_switchingdevicetypecommon.htm> .
@@ -2446,22 +2446,12 @@ dcterms:dateCopyrighted
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalFilterFaceVelocity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :fluidFlowRateMin
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalFlowRate
+                owl:onProperty :operationTemperatureMin
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2476,17 +2466,22 @@ dcterms:dateCopyrighted
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMax
+                owl:onProperty :initialResistance
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :finalResistance
+                owl:onProperty :nominalFilterFaceVelocity
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalMediaSurfaceVelocity
+                owl:onProperty :nominalFlowRate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalPressureDrop
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2501,12 +2496,17 @@ dcterms:dateCopyrighted
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalPressureDrop
+                owl:onProperty :nominalMediaSurfaceVelocity
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :initialResistance
+                owl:onProperty :finalResistance
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMax
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcfilter.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_filtertypecommon.htm> .
@@ -2643,7 +2643,12 @@ vann:preferredNamespacePrefix
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :height
+                owl:onProperty :isolatorStaticDeflection
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :isolatorCompressibility
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2653,12 +2658,7 @@ vann:preferredNamespacePrefix
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :isolatorStaticDeflection
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :isolatorCompressibility
+                owl:onProperty :height
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcvibrationisolator.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_vibrationisolatortypecommon.htm> .
@@ -2813,37 +2813,12 @@ vann:preferredNamespaceUri
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :motorDriveType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalStaticPressure
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :capacityControlType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :operationalRiterial
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalTotalPressure
+                owl:onProperty :operationTemperatureMax
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2853,12 +2828,37 @@ vann:preferredNamespaceUri
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalPowerRate
+                owl:onProperty :nominalStaticPressure
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalRotationSpeed
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalPowerRate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :capacityControlType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :motorDriveType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalTotalPressure
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcfan.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_fantypecommon.htm> .
@@ -2920,13 +2920,8 @@ vann:preferredNamespaceUri
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :flowArrangement
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :waterRequirement
+                owl:onProperty :heatExchangeArea
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -2936,7 +2931,12 @@ vann:preferredNamespaceUri
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :heatExchangeArea
+                owl:onProperty :waterRequirement
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :flowArrangement
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_evaporativecoolertypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcevaporativecooler.htm> .
@@ -2946,6 +2946,11 @@ vann:preferredNamespaceUri
       rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
       rdfs:label "Building space"@en ;
       rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :PhysicalObject ;
+                owl:onProperty :contains
+              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :BuildingSpace ;
@@ -2958,11 +2963,6 @@ vann:preferredNamespaceUri
                           owl:unionOf (:Building :BuildingSpace)
                         ] ;
                 owl:onProperty :isSpaceOf
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :PhysicalObject ;
-                owl:onProperty :contains
               ] .
 
 :isPluggableOutlet
@@ -2989,16 +2989,16 @@ vann:preferredNamespaceUri
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :PhysicalObject ;
+                owl:onProperty :contains
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (:BuildingSpace :PhysicalObject)
                         ] ;
                 owl:onProperty :isContainedIn
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :PhysicalObject ;
-                owl:onProperty :contains
               ] .
 
 :nominalSupplyVoltageMax
@@ -3138,58 +3138,8 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf :EnergyConversionDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isFreeHanging
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :waterFlowControlSystemType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :pipeConnectionEnum
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :integratedLightingType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :finishColor
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :coilWidth
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalWaterFlowCooling
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :waterPressureMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :waterPressureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalSorroundingTemperatureHeating
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalSorroundingTemperatureCooling
+                owl:onProperty :nominalSorroundingHumidityCooling
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3199,12 +3149,7 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalSupplyWaterTemperatureCooling
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalSupplyWaterTemperatureHeating
+                owl:onProperty :coilWidth
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3214,17 +3159,47 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalSupplyWaterTemperatureHeating
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :waterFlowControlSystemType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalSorroundingTemperatureCooling
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalWaterFlowCooling
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalCoolingCapacity
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :coilLength
+                owl:onProperty :nominalSorroundingTemperatureHeating
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalSorroundingHumidityCooling
+                owl:onProperty :waterPressureMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :integratedLightingType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :pipeConnectionEnum
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3235,6 +3210,31 @@ A controller may be physical (having placement within a spatial structure) or lo
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalHeatingCapacity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :finishColor
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :waterPressureMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isFreeHanging
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalSupplyWaterTemperatureCooling
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :coilLength
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccooledbeam.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_cooledbeamtypecommon.htm> .
@@ -3247,28 +3247,8 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf :EnergyConversionDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :energySource
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isWaterStorageHeater
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :operatingMode
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :outletTemperatureMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalPartLoadRatio
+                owl:onProperty :heatTransferSurfaceArea
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3278,12 +3258,7 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalEnergyConsumption
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :outletTemperatureMin
+                owl:onProperty :waterInletTemperatureMax
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3293,7 +3268,12 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :waterInletTemperatureMax
+                owl:onProperty :nominalPartLoadRatio
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :outletTemperatureMin
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3302,8 +3282,28 @@ A controller may be physical (having placement within a spatial structure) or lo
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isWaterStorageHeater
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :heatTransferSurfaceArea
+                owl:onProperty :outletTemperatureMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :energySource
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :operatingMode
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalEnergyConsumption
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_boilertypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcboiler.htm> .
@@ -3370,6 +3370,21 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf :EnergyConversionDevice ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :evaporationCoolant
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :internalRefrigerantVolume
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty :evaporationMediumType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :externalSurfaceArea
               ] ;
@@ -3380,8 +3395,8 @@ A controller may be physical (having placement within a spatial structure) or lo
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :evaporationMediumType
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :internalWaterVolume
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3391,27 +3406,12 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :internalWaterVolume
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :internalSurfaceArea
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty :evaporationCoolant
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalHeatTransferCoefficient
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :internalRefrigerantVolume
+                owl:onProperty :internalSurfaceArea
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_evaporatortypecommon.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcevaporator.htm> .
@@ -3450,17 +3450,17 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
+                owl:onProperty :nominalSupplyVoltageMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalFrequency
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :nominalSupplyVoltage
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :nominalSupplyVoltageMin
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricflowstoragedevice.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricflowstoragedevicetypecommon.htm> .
@@ -3527,27 +3527,7 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :weight
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :workingPressureMin
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Measurement ;
-                owl:onProperty :operationTemperatureMax
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :hasExteriorInsulation
+                owl:onProperty :hydraulicDiameter
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3557,7 +3537,17 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :airFlowRateMax
+                owl:onProperty :operationTemperatureMin
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :operationTemperatureMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :weight
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3567,12 +3557,22 @@ A controller may be physical (having placement within a spatial structure) or lo
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
-                owl:onProperty :hydraulicDiameter
+                owl:onProperty :airFlowRateMax
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Measurement ;
                 owl:onProperty :workingPressureMax
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :hasExteriorInsulation
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Measurement ;
+                owl:onProperty :workingPressureMin
               ] ;
       prov:hadPrimarySource
               <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcductsilencer.htm> , <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_ductsilencertypecommon.htm> .
