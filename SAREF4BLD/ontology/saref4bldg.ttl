@@ -9,7 +9,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/def/saref4bldg#> .
+@base <https://w3id.org/def/saref4bldg> .
 
 <https://w3id.org/def/saref4bldg> rdf:type owl:Ontology ;
                                    owl:versionIRI <https://w3id.org/def/v1/saref4bldg> ;
@@ -892,12 +892,6 @@ xsd:duration rdf:type rdfs:Datatype .
                     rdfs:label "real impedance ratio"@en .
 
 
-###  https://w3id.org/def/saref4bldg#relatesToProperty
-:relatesToProperty rdf:type owl:ObjectProperty ;
-                   rdfs:comment "A relation between a measurement and the property such measurement is about."@en ;
-                   rdfs:label "relates to property"@en .
-
-
 ###  https://w3id.org/def/saref4bldg#secondCurvatureRadius
 :secondCurvatureRadius rdf:type owl:ObjectProperty ;
                        rdfs:comment "SecondCurvatureRadius should be defined as the top or right side radius of curvature value. Usually measured in millimeters (mm)."@en ;
@@ -1141,7 +1135,15 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  https://w3id.org/saref#isMeasuredIn
 saref:isMeasuredIn rdf:type owl:ObjectProperty ;
                    rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en ;
+                   rdfs:isDefinedBy "https://w3id.org/saref#" ;
                    rdfs:label "is measured in"@en .
+
+
+###  https://w3id.org/saref#relatesToProperty
+saref:relatesToProperty rdf:type owl:ObjectProperty ;
+                        rdfs:comment "A relation between a measurement and the property such measurement is about."@en ;
+                        rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                        rdfs:label "relates to property"@en .
 
 
 #################################################################
@@ -1343,13 +1345,6 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
                 rdfs:range xsd:boolean ;
                 rdfs:comment "Indication of whether the motor is single speed, i.e. has a single winding (= FALSE) or multi-speed i.e.has part winding (= TRUE) ."@en ;
                 rdfs:label "has part winding"@en .
-
-
-###  https://w3id.org/def/saref4bldg#hasTimestamp
-:hasTimestamp rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:range xsd:dateTime ;
-              rdfs:label "has timestamp"@en .
 
 
 ###  https://w3id.org/def/saref4bldg#hasTurbulator
@@ -1723,6 +1718,15 @@ saref:isMeasuredIn rdf:type owl:ObjectProperty ;
                             rdfs:label "water flow control system type"@en .
 
 
+###  https://w3id.org/saref#hasTimestamp
+saref:hasTimestamp rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "A relationship stating the timestamp of an entity (e.g. a measurement)."@en ;
+                   rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                   rdfs:label "has timestamp"@en .
+
+
 ###  https://w3id.org/saref#hasValue
 saref:hasValue rdf:type owl:DatatypeProperty ;
                rdfs:comment "A relationship defining the value of a certain property, e.g., energy or power"@en ;
@@ -1736,8 +1740,8 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
-                                                       owl:disjointWith :Measurement ,
-                                                                        :Property ,
+                                                       owl:disjointWith saref:Measurement ,
+                                                                        saref:Property ,
                                                                         saref:UnitOfMeasure ;
                                                        rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
                                                        rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
@@ -1768,27 +1772,27 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
                       rdfs:subClassOf :EnergyConversionDevice ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :operationTemperatureMax ;
-                                        owl:allValuesFrom :Measurement
+                                        owl:allValuesFrom saref:Measurement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :operationTemperatureMin ;
-                                        owl:allValuesFrom :Measurement
+                                        owl:allValuesFrom saref:Measurement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :primaryAirFlowRateMax ;
-                                        owl:allValuesFrom :Measurement
+                                        owl:allValuesFrom saref:Measurement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :primaryAirFlowRateMin ;
-                                        owl:allValuesFrom :Measurement
+                                        owl:allValuesFrom saref:Measurement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :secondaryAirFlowRateMax ;
-                                        owl:allValuesFrom :Measurement
+                                        owl:allValuesFrom saref:Measurement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :secondaryAirFlowRateMin ;
-                                        owl:allValuesFrom :Measurement
+                                        owl:allValuesFrom saref:Measurement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasDefrost ;
@@ -1822,7 +1826,7 @@ Alarms include the provision of break glass buttons and manual pull boxes that a
                       rdfs:subClassOf :FlowTerminal ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :audioVolume ;
-                                        owl:allValuesFrom :Measurement
+                                        owl:allValuesFrom saref:Measurement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :mediaSource ;
@@ -1842,39 +1846,39 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
         rdfs:subClassOf :EnergyConversionDevice ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :heatTransferSurfaceArea ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalEnergyConsumption ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalPartLoadRatio ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :outletTemperatureMax ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :outletTemperatureMin ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :pressureRating ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :waterInletTemperatureMax ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :waterInletTemperatureMin ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :waterStorageCapacity ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :energySource ;
@@ -1969,27 +1973,27 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
          rdfs:subClassOf :EnergyConversionDevice ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :nominalCapacity ;
-                           owl:allValuesFrom :Measurement
+                           owl:allValuesFrom saref:Measurement
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :nominalCondensingTemperature ;
-                           owl:allValuesFrom :Measurement
+                           owl:allValuesFrom saref:Measurement
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :nominalEfficiency ;
-                           owl:allValuesFrom :Measurement
+                           owl:allValuesFrom saref:Measurement
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :nominalEvaporatingTemmperature ;
-                           owl:allValuesFrom :Measurement
+                           owl:allValuesFrom saref:Measurement
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :nominalHeatRejectionRate ;
-                           owl:allValuesFrom :Measurement
+                           owl:allValuesFrom saref:Measurement
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :nominalPowerConsumption ;
-                           owl:allValuesFrom :Measurement
+                           owl:allValuesFrom saref:Measurement
                          ] ;
          rdfs:comment "A chiller is a device used to remove heat from a liquid via a vapor-compression or absorption refrigeration cycle to cool a fluid, typically water or a mixture of water and glycol. The chilled fluid is then used to cool and dehumidify air in a building."@en ;
          rdfs:label "Chiller"@en ;
@@ -2003,31 +2007,31 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
       rdfs:subClassOf :EnergyConversionDevice ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :airFlowRateMax ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :airFlowRateMin ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nominalLatentCapacity ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nominalSensibleCapacity ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nominalUa ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :operationTemperatureMax ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :operationTemperatureMin ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :placementType ;
@@ -2059,31 +2063,31 @@ Communication appliances may be fixed in place or may be able to be moved from o
             rdfs:subClassOf :FlowMovingDevice ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :compressorSpeed ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :idealCapacity ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :idealShaftPower ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :impellerDiameter ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalCapacity ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :partLoadRatioMax ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :partLoadRatioMin ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasHotGasBypass ;
@@ -2109,27 +2113,27 @@ Communication appliances may be fixed in place or may be able to be moved from o
            rdfs:subClassOf :EnergyConversionDevice ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :externalSurfaceArea ;
-                             owl:allValuesFrom :Measurement
+                             owl:allValuesFrom saref:Measurement
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :internalRefrigerantVolume ;
-                             owl:allValuesFrom :Measurement
+                             owl:allValuesFrom saref:Measurement
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :internalSurfaceArea ;
-                             owl:allValuesFrom :Measurement
+                             owl:allValuesFrom saref:Measurement
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :internalWaterVolume ;
-                             owl:allValuesFrom :Measurement
+                             owl:allValuesFrom saref:Measurement
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :nominalHeatTransferArea ;
-                             owl:allValuesFrom :Measurement
+                             owl:allValuesFrom saref:Measurement
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :nominalHeatTransferCoefficient ;
-                             owl:allValuesFrom :Measurement
+                             owl:allValuesFrom saref:Measurement
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :refrigerantClass ;
@@ -2159,63 +2163,63 @@ A controller may be physical (having placement within a spatial structure) or lo
             rdfs:subClassOf :EnergyConversionDevice ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :coilLength ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :coilWidth ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalCoolingCapacity ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalHeatingCapacity ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalReturnWaterTemperatureCooling ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalReturnWaterTemperatureHeating ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalSorroundingHumidityCooling ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalSorroundingTemperatureCooling ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalSorroundingTemperatureHeating ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalSupplyWaterTemperatureCooling ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalSupplyWaterTemperatureHeating ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalWaterFlowCooling ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalWaterFlowHeating ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :waterPressureMax ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :waterPressureMin ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :finishColor ;
@@ -2249,35 +2253,35 @@ A controller may be physical (having placement within a spatial structure) or lo
               rdfs:subClassOf :EnergyConversionDevice ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :ambientDesignDryBulbTemperature ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :ambientDesignWetBulbTemperature ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :basinReserveVolume ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :liftElevationDifference ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :nominalCapacity ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :operationTemperatureMax ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :operationTemperatureMin ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :waterRequirement ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :capacityControl ;
@@ -2315,55 +2319,55 @@ A controller may be physical (having placement within a spatial structure) or lo
         rdfs:subClassOf :FlowController ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :airFlowRateMax ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :bladeThickness ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :closeOffRating ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :faceArea ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :frameDepth ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :frameThickness ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :leakageFullyClosed ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalAirFlowRate ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :openPressureDrop ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :operationTemperatureMax ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :operationTemperatureMin ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :temperatureRating ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :workingPressureMax ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :bladeAction ;
@@ -2426,39 +2430,39 @@ A controller may be physical (having placement within a spatial structure) or lo
               rdfs:subClassOf :FlowTreatmentDevice ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :airFlowRateMax ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :airFlowRateMin ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hydraulicDiameter ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :length ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :operationTemperatureMax ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :operationTemperatureMin ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :weight ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :workingPressureMax ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :workingPressureMin ;
-                                owl:allValuesFrom :Measurement
+                                owl:allValuesFrom saref:Measurement
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasExteriorInsulation ;
@@ -2488,15 +2492,15 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
                            rdfs:subClassOf :FlowStorageDevice ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :nominalFrequency ;
-                                             owl:allValuesFrom :Measurement
+                                             owl:allValuesFrom saref:Measurement
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :nominalSupplyVoltage ;
-                                             owl:allValuesFrom :Measurement
+                                             owl:allValuesFrom saref:Measurement
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :nominalSupplyVoltageMin ;
-                                             owl:allValuesFrom :Measurement
+                                             owl:allValuesFrom saref:Measurement
                                            ] ;
                            rdfs:comment "An electric flow storage device is a device in which electrical energy is stored and from which energy may be progressively released."@en ;
                            rdfs:label "Electric flow storage device"@en ;
@@ -2510,15 +2514,15 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
                    rdfs:subClassOf :EnergyConversionDevice ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :electricGeneratorEfficiency ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :powerOutputMax ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :startCurrentFactor ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ;
                    rdfs:comment "An electric generator is an engine that is a machine for converting mechanical energy into electrical energy."@en ;
                    rdfs:label "Electric generator"@en ;
@@ -2532,27 +2536,27 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
                rdfs:subClassOf :EnergyConversionDevice ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :electricMotorEfficiency ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :lockedRotorCurrent ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :powerOutputMax ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :startCurrentFactor ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :startingTime ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :teTime ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :frameSize ;
@@ -2615,19 +2619,19 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
                    rdfs:subClassOf :EnergyConversionDevice ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :heatExchangeArea ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :operationTemperatureMax ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :operationTemperatureMin ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :waterRequirement ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :flowArrangement ;
@@ -2645,27 +2649,27 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
             rdfs:subClassOf :EnergyConversionDevice ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :externalSurfaceArea ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :internalRefrigerantVolume ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :internalSurfaceArea ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :internalWaterVolume ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalHeatTransferArea ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalHeatTransferCoefficient ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :evaporationCoolant ;
@@ -2691,35 +2695,35 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
      rdfs:subClassOf :FlowMovingDevice ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :nominalAirFlowRate ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :nominalPowerRate ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :nominalRotationSpeed ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :nominalStaticPressure ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :nominalTotalPressure ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :operationTemperatureMax ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :operationTemperatureMin ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :operationalRiterial ;
-                       owl:allValuesFrom :Measurement
+                       owl:allValuesFrom saref:Measurement
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :capacityControlType ;
@@ -2741,55 +2745,55 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         rdfs:subClassOf :FlowTreatmentDevice ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :finalResistance ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :fluidFlowRateMax ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :fluidFlowRateMin ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :initialResistance ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalFilterFaceVelocity ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalFlowRate ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalMediaSurfaceVelocity ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalParticleGeometricMeanDiameter ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalParticleGeometricStandardDeviation ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :nominalPressureDrop ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :operationTemperatureMax ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :operationTemperatureMin ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :weight ;
-                          owl:allValuesFrom :Measurement
+                          owl:allValuesFrom saref:Measurement
                         ] ;
         rdfs:comment "A filter is an apparatus used to remove particulate or gaseous matter from fluids and gases."@en ;
         rdfs:label "Filter"@en ;
@@ -2904,19 +2908,19 @@ Instrumentation is typically for the purpose of determining the value of the pro
             rdfs:subClassOf :EnergyConversionDevice ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalAirFlowRate ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalMoistureGain ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :waterRequirement ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :weight ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :application ;
@@ -2938,35 +2942,35 @@ Instrumentation is typically for the purpose of determining the value of the pro
              rdfs:subClassOf :FlowTreatmentDevice ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :coverLength ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :coverWidth ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :inletConnectionSize ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :nominalBodyDepth ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :nominalBodyLength ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :nominalBodyWidth ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :outletConnectionSize ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :ventilatingPipeSize ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ;
              rdfs:comment "An interceptor is a device designed and installed in order to separate and retain deleterious, hazardous or undesirable matter while permitting normal sewage or liquids to discharge into a collection system by gravity."@en ;
              rdfs:label "Interceptor"@en ;
@@ -2980,27 +2984,27 @@ Instrumentation is typically for the purpose of determining the value of the pro
       rdfs:subClassOf :FlowTerminal ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :colorTemperature ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :contributedLuminousFlux ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :lampMaintenanceFactor ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :lightEmitterNominalPower ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :spectrumMax ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :spectrumMin ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :colorAppearance ;
@@ -3023,41 +3027,6 @@ Instrumentation is typically for the purpose of determining the value of the pro
       rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcLamp" ;
       prov:hadPrimarySource <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifclamp.htm> ,
                             <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_lamptypecommon.htm> .
-
-
-###  https://w3id.org/def/saref4bldg#Measurement
-:Measurement rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty :relatesToProperty ;
-                               owl:allValuesFrom :Property
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:isMeasuredIn ;
-                               owl:allValuesFrom saref:UnitOfMeasure
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :relatesToProperty ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onClass :Property
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:isMeasuredIn ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onClass saref:UnitOfMeasure
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasTimestamp ;
-                               owl:allValuesFrom xsd:dateTime
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty saref:hasValue ;
-                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onDataRange xsd:float
-                             ] ;
-             owl:disjointWith :Property ,
-                              saref:UnitOfMeasure ;
-             rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
-             rdfs:label "Measurement"@en .
 
 
 ###  https://w3id.org/def/saref4bldg#MedicalDevice
@@ -3113,13 +3082,6 @@ Power outlets are commonly connected within a junction box; data outlets may be 
                 rdfs:label "Physical object"@en .
 
 
-###  https://w3id.org/def/saref4bldg#Property
-:Property rdf:type owl:Class ;
-          owl:disjointWith saref:UnitOfMeasure ;
-          rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
-          rdfs:label "Property"@en .
-
-
 ###  https://w3id.org/def/saref4bldg#ProtectiveDevice
 :ProtectiveDevice rdf:type owl:Class ;
                   rdfs:subClassOf :FlowController ;
@@ -3137,7 +3099,7 @@ A protective device provides protection against electrical current only (not as 
                               rdfs:subClassOf :DistributionControlDevice ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :limitingTerminalSize ;
-                                                owl:allValuesFrom :Measurement
+                                                owl:allValuesFrom saref:Measurement
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :standard ;
@@ -3155,39 +3117,39 @@ A protective device provides protection against electrical current only (not as 
       rdfs:subClassOf :FlowMovingDevice ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :connectionSize ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :flowResistanceMax ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :flowResistanceMin ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :netPositiveSuctionHead ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nomminalRotationSpeed ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :operationTemperatureMax ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :operationTemperatureMin ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :pumpFlowRateMax ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :pumpFlowRateMin ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ;
       rdfs:comment "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en ;
       rdfs:label "Pump"@en ;
@@ -3222,23 +3184,23 @@ A protective device provides protection against electrical current only (not as 
                rdfs:subClassOf :BuildingDevice ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :solarReflectance ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :solarTransmittance ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :thermalTransmittance ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :visibleLightReflectance ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :visibleLightTransmittance ;
-                                 owl:allValuesFrom :Measurement
+                                 owl:allValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :isExternal ;
@@ -3278,19 +3240,19 @@ A protective device provides protection against electrical current only (not as 
              rdfs:subClassOf :FlowTerminal ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :bodyMass ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :outputCapacity ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :thermalEfficiency ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :thermalMassHeatCapacity ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :energySource ;
@@ -3366,35 +3328,35 @@ Switches include those used for electrical power, communications, audio-visual, 
       rdfs:subClassOf :FlowStorageDevice ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :effectiveCapacity ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :firstCurvatureRadius ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nominalDepth ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nominalLengthOrDiameter ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nominalVolumetricCapacity ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :nominalWidthOrDiameter ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :operatingWight ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :secondCurvatureRadius ;
-                        owl:allValuesFrom :Measurement
+                        owl:allValuesFrom saref:Measurement
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :accessType ;
@@ -3428,47 +3390,47 @@ Switches include those used for electrical power, communications, audio-visual, 
              rdfs:subClassOf :EnergyConversionDevice ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :apparentPowerMax ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :imaginaryImpedanceRatio ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :primaryApparentPower ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :primaryCurrent ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :primaryFrequency ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :primaryVoltage ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :realImpedanceRatio ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :secondaryApparentPower ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :secondaryCurrent ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :secondaryFrequency ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :secondaryVoltage ;
-                               owl:allValuesFrom :Measurement
+                               owl:allValuesFrom saref:Measurement
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :isNeutralPrimaryTerminalAvailable ;
@@ -3500,7 +3462,7 @@ Transformer is used to transform electric power; conversion of electric signals 
                   rdfs:subClassOf saref:Device ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :capacityWeight ;
-                                    owl:allValuesFrom :Measurement
+                                    owl:allValuesFrom saref:Measurement
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :capacityPeople ;
@@ -3522,47 +3484,47 @@ Transformer is used to transform electric power; conversion of electric signals 
             rdfs:subClassOf :EnergyConversionDevice ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :foulingFactor ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :horizontalSpacing ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :inLineRowSpacing ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :insideDiameter ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :length ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :nominalDiameter ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :outsideDiameter ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :staggeredRowSpacing ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :thermalConductivity ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :verticalSpacing ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :volumen ;
-                              owl:allValuesFrom :Measurement
+                              owl:allValuesFrom saref:Measurement
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasTurbulator ;
@@ -3600,23 +3562,23 @@ A unitary control element provides a housing for an aggregation of control or el
        rdfs:subClassOf :FlowController ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :closeOffRating ;
-                         owl:allValuesFrom :Measurement
+                         owl:allValuesFrom saref:Measurement
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :flowCoefficient ;
-                         owl:allValuesFrom :Measurement
+                         owl:allValuesFrom saref:Measurement
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :size ;
-                         owl:allValuesFrom :Measurement
+                         owl:allValuesFrom saref:Measurement
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :testPressure ;
-                         owl:allValuesFrom :Measurement
+                         owl:allValuesFrom saref:Measurement
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :workingPressure ;
-                         owl:allValuesFrom :Measurement
+                         owl:allValuesFrom saref:Measurement
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :valveMechanism ;
@@ -3642,23 +3604,23 @@ A unitary control element provides a housing for an aggregation of control or el
                    rdfs:subClassOf saref:Device ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :height ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :isolatorCompressibility ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :isolatorStaticDeflection ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :supportedWeightMax ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :vibrationTransmissibility ;
-                                     owl:allValuesFrom :Measurement
+                                     owl:allValuesFrom saref:Measurement
                                    ] ;
                    rdfs:comment "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a building."@en ;
                    rdfs:label "Vibration isolator"@en ;
@@ -3680,6 +3642,50 @@ saref:Device rdf:type owl:Class ;
              rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs the start and stop function."@en ;
              rdfs:isDefinedBy saref: ;
              rdfs:label "Device"@en .
+
+
+###  https://w3id.org/saref#Measurement
+saref:Measurement rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty saref:isMeasuredIn ;
+                                    owl:allValuesFrom saref:UnitOfMeasure
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty saref:relatesToProperty ;
+                                    owl:allValuesFrom saref:Property
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty saref:isMeasuredIn ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass saref:UnitOfMeasure
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty saref:relatesToProperty ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass saref:Property
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty saref:hasTimestamp ;
+                                    owl:allValuesFrom xsd:dateTime
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty saref:hasValue ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:float
+                                  ] ;
+                  owl:disjointWith saref:Property ,
+                                   saref:UnitOfMeasure ;
+                  rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
+                  rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                  rdfs:label "Measurement"@en .
+
+
+###  https://w3id.org/saref#Property
+saref:Property rdf:type owl:Class ;
+               owl:disjointWith saref:UnitOfMeasure ;
+               rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
+               rdfs:isDefinedBy "https://w3id.org/saref#" ;
+               rdfs:label "Property"@en .
 
 
 ###  https://w3id.org/saref#Sensor
