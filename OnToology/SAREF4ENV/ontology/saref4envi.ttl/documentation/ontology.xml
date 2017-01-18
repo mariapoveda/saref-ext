@@ -11,45 +11,50 @@
     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
     xmlns:saref="https://w3id.org/saref#" > 
   <rdf:Description rdf:nodeID="A0">
-    <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#measuresProperty"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#contains"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#FrequencyMeasurement">
     <rdfs:label xml:lang="en">Frequency measurement</rdfs:label>
     <rdfs:comment xml:lang="en">Represents the measured value made over a frequency property. It is also linked to the frequency unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A1"/>
     <rdfs:subClassOf rdf:nodeID="A2"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Measurement"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Property"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#relatesToProperty"/>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasProjectionAngle"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasFlash"/>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasDescription"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#HeightMeasurement">
     <rdfs:label xml:lang="en">Height measurement</rdfs:label>
     <rdfs:comment xml:lang="en">Represents the measured value made over a height property. It is also linked to the height unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A5"/>
     <rdfs:subClassOf rdf:nodeID="A6"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
+    <rdfs:subClassOf rdf:nodeID="A7"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Measurement"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#affectsProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/millimetre">
     <rdfs:label xml:lang="en">Milimetre</rdfs:label>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Geometry"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasGeometry"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/saref#hasValue">
     <rdfs:label xml:lang="en">has value</rdfs:label>
@@ -57,20 +62,20 @@
     <rdfs:comment xml:lang="en">A relationship defining the value of a certain property, e.g., energy or power</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Property"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#measuresProperty"/>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Measurement"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#makesMeasurement"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#relatesToProperty">
-    <rdfs:label xml:lang="en">relates to property</rdfs:label>
-    <rdfs:comment xml:lang="en">A relation between a measurement and the property such measurement is about.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/centimetre">
     <rdfs:label xml:lang="en">Centimetre</rdfs:label>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasManufacturer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasCreationDate">
     <rdfs:label xml:lang="en">has creation date</rdfs:label>
@@ -79,28 +84,16 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <owl:hasValue rdf:resource="https://w3id.org/def/saref4envi#Frequency"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#relatesToProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isContainedIn"/>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#LightPoint"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasLightPoint"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#LightProperty">
     <rdfs:label xml:lang="en">Light property</rdfs:label>
     <rdfs:comment xml:lang="en">An aspect of light that can be observable by a sensor.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Property"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasTimestamp">
-    <rdfs:label xml:lang="en">has timestamp</rdfs:label>
-    <rdfs:comment xml:lang="en">A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Illuminance">
     <rdfs:label xml:lang="en">Illuminance</rdfs:label>
@@ -108,38 +101,40 @@
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+  <rdf:Description rdf:nodeID="A12">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Property">
-    <rdfs:label xml:lang="en">Property</rdfs:label>
-    <rdfs:comment xml:lang="en">An aspect of an entity that can be observable by a sensor.</rdfs:comment>
-    <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Property"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#affectsProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="https://w3id.org/saref#relatesToProperty">
+    <rdfs:label xml:lang="en">relates to property</rdfs:label>
+    <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">A relation between a measurement and the property such measurement is about.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/saref#Sensor">
     <rdfs:label xml:lang="en">Sensor</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
     <rdfs:comment xml:lang="en">A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes.
 A device that has category saref:Sensor and performs a saref:SensingFunction.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A13"/>
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#CompassDirection"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isProjectedInDirection"/>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#DigitalRepresentation"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasDigitalRepresentation"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/saref#UnitOfMeasure">
@@ -148,15 +143,14 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:comment xml:lang="en">The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called "watt". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <owl:onClass rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#relatesToProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Color"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasColor"/>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#measuresProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/metre">
@@ -164,26 +158,21 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasVersion"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#contains">
     <rdfs:label xml:lang="en">contains</rdfs:label>
     <rdfs:comment xml:lang="en">A relation between a physical object and the physical objects that can be contained in it.</rdfs:comment>
     <owl:inverseOf rdf:resource="https://w3id.org/def/saref4envi#isContainedIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasRevisionNumber"/>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:onClass rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A18">
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasIdentifier"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#LightMagnitude">
@@ -194,27 +183,23 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#CommunicationInterface">
     <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-    <rdfs:subClassOf rdf:nodeID="A19"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Light"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#CommunicationProtocol"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Geometry"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="A16"/>
+    <rdfs:subClassOf rdf:nodeID="A19"/>
     <rdfs:label xml:lang="en">Communication interface</rdfs:label>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Property"/>
+    <rdfs:subClassOf rdf:nodeID="A16"/>
     <rdfs:comment xml:lang="en">An interface defines which primitive operations and services the lower layer makes available to the upper one, when referring to network layers. (Definition adapted from "Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.")</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#CompassDirection"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#DigitalRepresentation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Sensor">
-    <rdfs:label xml:lang="en">Sensor</rdfs:label>
-    <rdfs:comment xml:lang="en">A device that makes measurements of particular properties of a area of interes. For example, the light luminiscence.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A8"/>
-    <rdfs:subClassOf rdf:nodeID="A20"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Device"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A20">
+    <owl:hasValue rdf:resource="https://w3id.org/def/saref4envi#Period"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#relatesToProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#isContainedIn">
     <rdfs:label xml:lang="en">is contained in</rdfs:label>
@@ -222,29 +207,30 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A21">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#HeightMeasurement"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isProjectedFromHeight"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A22">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasShield"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasCreationDate"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Light">
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Property"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
+    <rdfs:subClassOf rdf:nodeID="A22"/>
     <rdfs:subClassOf rdf:nodeID="A4"/>
-    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:subClassOf rdf:nodeID="A24"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="A12"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
-    <rdfs:subClassOf rdf:nodeID="A21"/>
+    <rdfs:subClassOf rdf:nodeID="A25"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
+    <rdfs:subClassOf rdf:nodeID="A26"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
     <rdfs:label xml:lang="en">Light</rdfs:label>
     <rdfs:comment xml:lang="en">A light source, which may be a lantern, a street light, a floodlight, a signal lamp or any other device whose primary purpose is the generation of light. (Definition taken from http://wiki.openstreetmap.org/wiki/Proposed_features/Key:light_source#Description)</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A23"/>
-    <rdfs:subClassOf rdf:nodeID="A7"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#measuresProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasVersion">
     <rdfs:label xml:lang="en">has version</rdfs:label>
@@ -266,9 +252,15 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:subClassOf rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A24">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasCreationDate"/>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#CompassDirection"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isProjectedInDirection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <owl:onClass rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
@@ -282,21 +274,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A25">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Service"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isAccesibleThrough"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A26">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#FrequencyMeasurement"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasFrequencyMeasurement"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#makesMeasurement"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hectometre">
     <rdfs:label xml:lang="en">Hectometre</rdfs:label>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
@@ -305,8 +282,8 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Photometer">
     <rdfs:label xml:lang="en">Photometer</rdfs:label>
     <rdfs:comment xml:lang="en">A photometer, generally, is an instrument that measures light intensity or optical properties of solutions or surfaces.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A0"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Sensor"/>
+    <rdfs:subClassOf rdf:nodeID="A27"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#isAccesibleThrough">
@@ -315,28 +292,15 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasVersion"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A27">
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasCreationDate"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
     <rdfs:label xml:lang="en">location</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     <rdfs:comment xml:lang="en">The relation between something and the point,  or other geometrical thing in space, where it is.  For example, the realtionship between a radio tower and a Point with a given lat and long. Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points). Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping .</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A28">
-    <owl:onClass rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+  <rdf:Description rdf:nodeID="A29">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasShield"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#LightAbsorption">
@@ -345,6 +309,11 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasRevisionNumber"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/saref#Service">
     <rdfs:label xml:lang="en">Service</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
@@ -352,20 +321,32 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A29">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Light"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#projectsLight"/>
+  <rdf:Description rdf:nodeID="A31">
+    <owl:onClass rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#measuresProperty">
+    <rdfs:label xml:lang="en">measures property</rdfs:label>
+    <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">A relation between a sensor and the property o properties it can take measurement about.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hertz">
     <rdfs:label xml:lang="en">Hertz</rdfs:label>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#FrequencyUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#makesMeasurement">
-    <rdfs:label xml:lang="en">makes measurement</rdfs:label>
-    <rdfs:comment xml:lang="en">A relation between a sensor and the measurements it makes. Such measurement will link together the valur of the measurement, its unit of measure and the property to which it relates.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasFlash"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#ReflectionOfLight">
     <rdfs:label xml:lang="en">Reflection of light</rdfs:label>
@@ -373,20 +354,10 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A30">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#encapsulates"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time">
     <rdfs:label xml:lang="en">Reciprocal second</rdfs:label>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#FrequencyUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A31">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PeriodMeasurement"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasTransmissionPeriod"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/saref#Device">
     <rdfs:label xml:lang="en">Device</rdfs:label>
@@ -410,9 +381,9 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#PeriodMeasurement">
     <rdfs:label xml:lang="en">Period measurement</rdfs:label>
     <rdfs:comment xml:lang="en">Represents the measured value over a period property. It is also linked to the period unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A14"/>
-    <rdfs:subClassOf rdf:nodeID="A32"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
+    <rdfs:subClassOf rdf:nodeID="A31"/>
+    <rdfs:subClassOf rdf:nodeID="A20"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Measurement"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasTag">
@@ -452,9 +423,8 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A33">
-    <owl:onClass rdf:resource="https://w3id.org/def/saref4envi#Property"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#relatesToProperty"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isContainedIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Phosphorescence">
@@ -462,6 +432,17 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:comment xml:lang="en">An individual representing the light property phosphorescence.</rdfs:comment>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#makesMeasurement">
+    <rdfs:label xml:lang="en">makes measurement</rdfs:label>
+    <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">A relation between a sensor and the measurements it makes. Such measurement will link together the valur of the measurement, its unit of measure and the property to which it relates.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Light"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#projectsLight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#usesCommunicationProtocol">
     <rdfs:label xml:lang="en">uses communication protocol</rdfs:label>
@@ -488,35 +469,25 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#LightPoint">
     <rdfs:label xml:lang="en">Light point</rdfs:label>
     <rdfs:comment xml:lang="en">An spatial point from where a light is projected. It might belong to a lamppost.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A34"/>
     <rdfs:subClassOf rdf:nodeID="A35"/>
+    <rdfs:subClassOf rdf:nodeID="A12"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A36">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasTag"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#System"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasComponent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Geometry"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasGeometry"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A37">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#hasValue"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Service"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isAccesibleThrough"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A38">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#CommunicationProtocol"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#usesCommunicationProtocol"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A39">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#LightPoint"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasLightPoint"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#measuresProperty">
-    <rdfs:label xml:lang="en">measures property</rdfs:label>
-    <rdfs:comment xml:lang="en">A relation between a sensor and the property o properties it can take measurement about.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#usesCommunicationInterface">
     <rdfs:label xml:lang="en">uses communication interface</rdfs:label>
@@ -532,11 +503,11 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#PhysicalObject">
     <rdfs:label xml:lang="en">Physical object</rdfs:label>
     <rdfs:comment xml:lang="en">Any Object that has a proper space region.  (Definition extracted from DUL ontology)</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A40"/>
-    <rdfs:subClassOf rdf:nodeID="A41"/>
-    <rdfs:subClassOf rdf:nodeID="A42"/>
-    <rdfs:subClassOf rdf:nodeID="A43"/>
-    <rdfs:subClassOf rdf:nodeID="A13"/>
+    <rdfs:subClassOf rdf:nodeID="A38"/>
+    <rdfs:subClassOf rdf:nodeID="A39"/>
+    <rdfs:subClassOf rdf:nodeID="A14"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:nodeID="A32"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
@@ -546,30 +517,50 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PeriodMeasurement"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasTransmissionPeriod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#CommunicationProtocol">
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#CompassDirection"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
     <rdfs:label xml:lang="en">Communication protocol</rdfs:label>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#DigitalRepresentation"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Geometry"/>
     <rdfs:comment xml:lang="en">A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from "Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.")</rdfs:comment>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Light"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#Measurement">
+    <rdfs:subClassOf rdf:nodeID="A28"/>
+    <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A41"/>
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdfs:subClassOf rdf:nodeID="A42"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
+    <rdfs:subClassOf rdf:nodeID="A43"/>
+    <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
+    <rdfs:subClassOf rdf:nodeID="A44"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Actuator">
     <rdfs:label xml:lang="en">Actuator</rdfs:label>
     <rdfs:comment xml:lang="en">Device that can act over at least one property.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
     <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Device"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Height">
     <rdfs:label xml:lang="en">Height</rdfs:label>
     <rdfs:comment xml:lang="en">An individual representing the property height.</rdfs:comment>
-    <rdf:type rdf:resource="https://w3id.org/def/saref4envi#Property"/>
+    <rdf:type rdf:resource="https://w3id.org/saref#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Fluorescence">
@@ -583,12 +574,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:comment xml:lang="en">An individual representing the light property luminiscence.</rdfs:comment>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A44">
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasRevisionNumber"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasFlash">
     <rdfs:label xml:lang="en">has flash</rdfs:label>
@@ -607,10 +592,15 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:comment xml:lang="en">Represents the shape of the light emission. It might be instantiated by individuals like "spherical", "cylindrical", etc. even though it is open to more comples representation of geometries using other vocabularies.</rdfs:comment>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Property"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Light"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:hasValue rdf:resource="https://w3id.org/def/saref4envi#Frequency"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#relatesToProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasShield">
     <rdfs:label xml:lang="en">has shield</rdfs:label>
@@ -625,18 +615,14 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A41">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isContainedIn"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasValue"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A45">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasIdentifier"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A46">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasTimestamp"/>
+  <rdf:Description rdf:nodeID="A25">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Color"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasColor"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#projectsLight">
@@ -644,24 +630,34 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:comment xml:lang="en">A relation between a lamppost or a light point and the light (or lights) they might project.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Device">
-    <rdfs:subClassOf rdf:nodeID="A9"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#System"/>
-    <rdfs:subClassOf rdf:nodeID="A26"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
-    <rdfs:subClassOf rdf:nodeID="A47"/>
-    <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, especially a piece of mechanical or electronic equipment. For example ‘a measuring device’ (definition taken from https://en.oxforddictionaries.com/definition/device). In this ontology it refers to the devices for environmental purposes.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A17"/>
-    <rdfs:subClassOf rdf:nodeID="A44"/>
-    <rdfs:label xml:lang="en">Device</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A48"/>
-    <rdfs:subClassOf rdf:nodeID="A31"/>
-    <rdfs:subClassOf rdf:nodeID="A49"/>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#HeightMeasurement"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isProjectedFromHeight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A50">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#CommunicationInterface"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#usesCommunicationInterface"/>
+  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Device">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#System"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A30"/>
+    <rdfs:subClassOf rdf:nodeID="A40"/>
+    <rdfs:subClassOf rdf:nodeID="A45"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, especially a piece of mechanical or electronic equipment. For example ‘a measuring device’ (definition taken from https://en.oxforddictionaries.com/definition/device). In this ontology it refers to the devices for environmental purposes.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A33"/>
+    <rdfs:label xml:lang="en">Device</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A46"/>
+    <rdfs:subClassOf rdf:nodeID="A47"/>
+    <rdfs:subClassOf rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#System"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isComponentOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#System"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isConnectedTo"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasGeometry">
@@ -669,11 +665,18 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:comment xml:lang="en">A relation between a light emitted and the shape it is projected in.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <owl:onClass rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+  <rdf:Description rdf:nodeID="A50">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#encapsulates"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#hasTimestamp">
+    <rdfs:label xml:lang="en">has timestamp</rdfs:label>
+    <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasLightPoint">
     <rdfs:label xml:lang="en">has light point</rdfs:label>
@@ -691,9 +694,14 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Photometer"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A34">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Light"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#projectsLight"/>
+  <rdf:Description rdf:nodeID="A51">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasCreationDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#FrequencyMeasurement"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasFrequencyMeasurement"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasComponent">
@@ -713,75 +721,72 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#System">
     <rdfs:label xml:lang="en">System</rdfs:label>
     <rdfs:comment xml:lang="en">A group of related hardware units or programs or both, especially when dedicated to a single application. (Definition taken from https://en.oxforddictionaries.com/definition/system)</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A38"/>
-    <rdfs:subClassOf rdf:nodeID="A50"/>
-    <rdfs:subClassOf rdf:nodeID="A51"/>
     <rdfs:subClassOf rdf:nodeID="A52"/>
     <rdfs:subClassOf rdf:nodeID="A53"/>
+    <rdfs:subClassOf rdf:nodeID="A49"/>
+    <rdfs:subClassOf rdf:nodeID="A48"/>
+    <rdfs:subClassOf rdf:nodeID="A36"/>
     <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A48">
+  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Lamppost">
+    <rdfs:label xml:lang="en">Lamppost</rdfs:label>
+    <rdfs:comment xml:lang="en">A tall pole with a light at the top.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A29"/>
+    <rdfs:subClassOf rdf:nodeID="A34"/>
+    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Device"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
     <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
     <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Lamppost">
-    <rdfs:label xml:lang="en">Lamppost</rdfs:label>
-    <rdfs:comment xml:lang="en">A tall pole with a light at the top.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A22"/>
-    <rdfs:subClassOf rdf:nodeID="A29"/>
-    <rdfs:subClassOf rdf:nodeID="A39"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4envi#Device"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A40">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#hasDescription"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A51">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#System"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isConnectedTo"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A32">
-    <owl:hasValue rdf:resource="https://w3id.org/def/saref4envi#Period"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#relatesToProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A54">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#hasName"/>
+  <rdf:Description rdf:nodeID="A39">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isContainedIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#DigitalRepresentation">
-    <rdfs:subClassOf rdf:nodeID="A54"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Light"/>
     <rdfs:label xml:lang="en">Digital representation</rdfs:label>
     <rdfs:subClassOf rdf:nodeID="A55"/>
-    <rdfs:subClassOf rdf:nodeID="A25"/>
-    <rdfs:subClassOf rdf:nodeID="A36"/>
+    <rdfs:subClassOf rdf:nodeID="A51"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-    <rdfs:subClassOf rdf:nodeID="A45"/>
-    <rdfs:subClassOf rdf:nodeID="A27"/>
-    <rdfs:subClassOf rdf:nodeID="A30"/>
+    <rdfs:subClassOf rdf:nodeID="A21"/>
+    <rdfs:subClassOf rdf:nodeID="A54"/>
     <rdfs:comment xml:lang="en">A digital representation encapsulates a physical object accessible via Web services</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A18"/>
-    <rdfs:subClassOf rdf:nodeID="A24"/>
+    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdfs:subClassOf rdf:nodeID="A37"/>
+    <rdfs:subClassOf rdf:nodeID="A50"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Geometry"/>
+    <rdfs:subClassOf rdf:nodeID="A5"/>
+    <rdfs:subClassOf rdf:nodeID="A56"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A35">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+  <rdf:Description rdf:nodeID="A45">
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:hasValue rdf:resource="https://w3id.org/def/saref4envi#Height"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#relatesToProperty"/>
+  <rdf:Description rdf:nodeID="A53">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#CommunicationInterface"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#usesCommunicationInterface"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/kilometre">
@@ -789,20 +794,10 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LengthUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Measurement">
-    <rdfs:label xml:lang="en">Measurement</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A37"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
-    <rdfs:subClassOf rdf:nodeID="A46"/>
-    <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A28"/>
-    <rdfs:subClassOf rdf:nodeID="A33"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Property"/>
-    <rdfs:subClassOf rdf:nodeID="A10"/>
-    <rdfs:subClassOf rdf:nodeID="A3"/>
-    <rdfs:subClassOf rdf:nodeID="A56"/>
+  <rdf:Description rdf:nodeID="A55">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#hasDigitalRepresentation">
     <rdfs:label xml:lang="en">has digital representation</rdfs:label>
@@ -815,32 +810,37 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#FrequencyUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A49">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasVersion"/>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:hasValue rdf:resource="https://w3id.org/def/saref4envi#Height"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#relatesToProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A43">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#PhysicalObject"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#contains"/>
+  <rdf:Description rdf:nodeID="A44">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasTimestamp"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#Light"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#projectsLight"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#hasDescription"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#CompassDirection">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Property"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Light"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
     <rdfs:label xml:lang="en">Compass direction</rdfs:label>
     <rdfs:comment xml:lang="en">The four cardinal directions or cardinal points are the directions of north, east, south, and west, commonly denoted by their initials: N, E, S, W. East and west are at right angles to north and south, with east being in the clockwise direction of rotation from north and west being directly opposite east. Intermediate points between the four cardinal directions form the points of the compass. (definition taken from https://en.wikipedia.org/wiki/Cardinal_direction)</rdfs:comment>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#DigitalRepresentation"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Geometry"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A52">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#System"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#isComponentOf"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Color">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -855,49 +855,28 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
     <rdfs:comment xml:lang="en">Color of the emitted light. It might be indicated by named colors or using other type of color values like hexadecimal for RGB, color temperature, etc.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A56">
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#hasValue"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year">
     <rdfs:label xml:lang="en">Reciprocal year</rdfs:label>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#FrequencyUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A55">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#hasDescription"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:onClass rdf:resource="https://w3id.org/def/saref4envi#FrequencyUnit"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A23">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasProjectionAngle"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Period">
     <rdfs:label xml:lang="en">Period</rdfs:label>
     <rdfs:comment xml:lang="en">An individual representing the property period.</rdfs:comment>
-    <rdf:type rdf:resource="https://w3id.org/def/saref4envi#Property"/>
+    <rdf:type rdf:resource="https://w3id.org/saref#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Frequency">
     <rdfs:label xml:lang="en">Frequency</rdfs:label>
     <rdfs:comment xml:lang="en">An individual representing the property frequency.</rdfs:comment>
-    <rdf:type rdf:resource="https://w3id.org/def/saref4envi#Property"/>
+    <rdf:type rdf:resource="https://w3id.org/saref#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
     <rdfs:comment xml:lang="en">Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Geometry"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#CommunicationInterface"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#CommunicationProtocol"/>
@@ -905,18 +884,29 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">Spatial thing</rdfs:label>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#DigitalRepresentation"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#Measurement"/>
     <owl:disjointWith rdf:resource="https://w3id.org/def/saref4envi#CompassDirection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasRevisionNumber"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/saref#isMeasuredIn">
+    <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">is measured in</rdfs:comment>
+    <rdfs:comment xml:lang="en">A relation between a measurement and the unit of measure in which the measurement value is expressed.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#isProjectedFromHeight">
     <rdfs:label xml:lang="en">is projected from height</rdfs:label>
     <rdfs:comment xml:lang="en">A relation between a light and the height measurement from which it is projected.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/saref#isMeasuredIn">
-    <rdfs:comment xml:lang="en">is measured in</rdfs:comment>
-    <rdfs:comment xml:lang="en">A relation between a measurement and the unit of measure in which the measurement value is expressed.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A52">
+    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#CommunicationProtocol"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#usesCommunicationProtocol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalUnit">
     <rdfs:label xml:lang="en">Temporal unit</rdfs:label>
@@ -935,15 +925,27 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdfs:comment xml:lang="en">A relation between a light emitted and its color.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasTag"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:onClass rdf:resource="https://w3id.org/def/saref4envi#FrequencyUnit"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4envi#Irradiance">
     <rdfs:label xml:lang="en">Irradiance</rdfs:label>
     <rdfs:comment xml:lang="en">An individual representing the light property irradiance.</rdfs:comment>
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#LightProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A47">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="https://w3id.org/saref#hasManufacturer"/>
+  <rdf:Description rdf:nodeID="A42">
+    <owl:onClass rdf:resource="https://w3id.org/saref#Property"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/saref#relatesToProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour">
@@ -951,14 +953,11 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
     <rdf:type rdf:resource="https://w3id.org/def/saref4envi#FrequencyUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A42">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#DigitalRepresentation"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasDigitalRepresentation"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A53">
-    <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4envi#System"/>
-    <owl:onProperty rdf:resource="https://w3id.org/def/saref4envi#hasComponent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="https://w3id.org/saref#Property">
+    <rdfs:label xml:lang="en">Property</rdfs:label>
+    <rdfs:comment xml:lang="en">An aspect of an entity that can be observable by a sensor.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>
