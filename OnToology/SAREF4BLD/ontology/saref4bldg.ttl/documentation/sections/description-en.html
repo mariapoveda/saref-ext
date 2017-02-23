@@ -1,2 +1,68 @@
-<h2 id="desc" class="list">bldg: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<p>This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</p>
+<h2>3. bldg: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<p>Figure 1 presents an overview of the classes (only the top levels of the hierarchy) and the properties included in the SAREF4BLDG extension. As it can be observed the classes s4bldg:Building, s4bldg:BuildingSpace and s4bldg:PhysicalObject have been declared as subclasses of the class geo:SpatialThing in order to reuse the conceptualization for locations already proposed by the geo ontology. The modelling of building objects and building spaces has been adapted from the SAREF ontology; in this sense, the new classes deprecate the saref:BuildingObject and saref:BuildingSpace classes. In addition, a new class has been created, the s4bldg:Building class, to represent buildings.</p>
+
+<p>
+The concepts s4bldg:Building and s4bldg:BuildingSpace are related to each other by means of the properties s4bldg:hasSpace and s4bldg:isSpaceOf; such properties are defined as inverse properties among them. These properties might also be used to declare that a s4bldg:BuildingSpace has other spaces belonging to the class s4bldg:BuildingSpace.</p>
+
+<p>The relationship between building spaces and devices and building objects has also been transferred and generalized from the SAREF ontology. In this regard, we can see that a s4bldg:BuildingSpace can contain (represented by the property s4bldg:contains) individuals belonging to the class s4bldg:PhysicalObject. This generalization has been implemented in order to support building spaces to contain both building objects and devices. Accordingly, the classes s4bldg:BuildingObject and saref:Device are declared as subclasses of s4bldg:PhysicalObject.</p>
+
+<center><img src="resources/images/saref4bldg3.png" alt="General overview of the top levels of the SAREF4BLDG extension.">   <figcaption>Figure 1. - General overview of the top levels of the SAREF4BLDG extension.</figcaption></center>
+
+<p>The device classes are organized into 6 hierarchical levels that, for the sake of clarity, will be displayed in Figure 2 and Figure 3.</p>
+
+<p>Figure 2 shows the first five levels of the hierarchy. Since transport elements (s4bldg:TransportElement) and vibration isolations (s4bldg:VibrationIsolation) are not classified under IFC elements, they belong directly to the class s4bldg:Device. The building elements are divided into s4bldg:ShadingDevice and s4bldg:DistributionDevice. In fact, most of the device types included in IFC belong to the distribution device category which contains the classes s4bldg:DistributionControlDevice and s4bldg:DistributionFlowDevice. The hierarchy under the s4bldg:DistributionFlowDevice is depicted in Figure 3.</p>
+
+<p>As can be observed in Figure 2, some classes defined in SAREF4BLDG are also defined in the SAREF ontology. More precisely, this occurs in the classes s4bldg:Actuator and s4bldg:Sensor that extend the classes saref:Actuator and saref:Sensor, respectively. This decision has been taken because in the SAREF4BLDG extension these concepts refer to specific sensors and actuators that are placed in or related to buildings.</p>
+
+
+<center><img src="resources/images/saref4bldg1.png" alt="Device hierarchy in SAREF4BLDG (Part 1).">   <figcaption>Figure 2. - Device hierarchy in SAREF4BLDG (Part 1).</figcaption></center>
+
+<p>For each class extracted from the IFC specification, rdfs:label and rdfs:comment annotations have been generated including the identifier and an excerpt of the definition provided in the IFC online documentation. In addition, provenance information has been included using the <a href="https://www.w3.org/TR/prov-o/">PROV-O ontology</a>, which has been published by the W3C as recommendation. In our case, the property prov:hadPrimarySource is used to link each class with (a) the online document in IFC describing the concept and (b) the online document in IFC describing the properties defined for such concept. It should be noted that properties are not specified in IFC for all the concepts but just for those representing particular devices. That is, there is no description of properties for the following general classes: s4bldg:EnergyConversionDevice, s4bldg:FlowController, s4bldg:FlowMovingDevice, s4bldg:FlowStorageDevice, s4bldg:FlowTerminal, and s4bldg:FlowTreatmentDevice.</p>
+
+<p>In addition, the classes created in this extension have been related to the <a href="https://w3id.org/ifc/IFC4_ADD1">ifcOWL ontology</a> when possible. This relation has been declared by means of the annotation property rdfs:seeAlso from the SAREF4BLDG classes to the ifcOWL ones.</p>
+
+
+
+ 
+
+<center><img src="resources/images/saref4bldg2.png" alt="Device hierarchy in SAREF4BLDG (Part 2).">   <figcaption>Figure 3. - Device hierarchy in SAREF4BLDG (Part 2).</figcaption></center>
+
+
+<h3>Instantiating SAREF4BLDG <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+
+<p>This section shows an example of instantiation of the SAREF4BLDG ontology. Such example aims to illustrate how to describe a given device that can be found in a building, in this case a compressor, using the SAREF4BLDG ontology.  In addition, the example is complemented with energy consumption information for which the SAREF4ENER ontology is used. The example is graphically represented in Figure 4, Figure 5 and Figure 6 and the corresponding Turtle code is provided in <a href="http://saref.linkeddata.es/data/bldg/example1">example code</a>.</p>
+
+<p>Figure 4 represents the core part of the example. In such figure a compressor of type SIERRA 02-0434C3 is depicted by a purple box. This purple box represents the instance ex:Compressor001SIERRA02-0434C3 that belongs to the class s4bldg:Compressor. This compressor is named “Compressor 001 SIERRA 02-0434C3” and is manufactured by “SIEMENS” as indicated by the values of the datatype properties saref:hasName and saref:hasManufacturer.</p>
+
+<p>The refrigerant used by the compressor is R407C which is a hydrofluorocarbon. This information is represented by the datatype property s4bldg:refrigerantClass and the value expressed “HFC” that refers to hydrofluorocarbon according to IFC.</p>
+
+<p>The fact that the compressor is motor driven is indicated by the datatype property s4bldg:powerSource and the associated literal value. Besides, since the compressor has no hot gas by pass, the value for the datatype property s4bldg:hasHotGasByPass is set to the Boolean “False”.</p>
+
+<p>So far we have shown values that are represented directly by a datatype property and in which only one triple is involved. Next we present those descriptions about the compressor that need to instantiate an n-ary pattern in order to relate the value for a given property with the unit of measurement in which such value is provided.</p>
+
+<p>In order to indicate the compressor speed, we need to have an instance linking the value “3.0” with the unit of measurement of such value, in this case cycles per second. For doing so we have created the instance ex:CompressorSpeedCompressor001SIERRA02-0434C3 that belongs to the class saref:Measurement. The compressor is linked to such instance by means of the property s4bldg:compressorSpeed. Finally, this new instance represents the value of the compressor speed by means of the datatype property saref:hasValue and the unit of measurement by the object property saref:isMeasuredIn. The specific unit of measurement is represented by the instance ex:cyclesPerSecond that belongs to the class saref:UnitOfMeasure.</p>
+
+<p>The same pattern is used to represent the ideal capacity of the compressor, the nominal capacity and the impeller diameter using the object properties s4bldg:idealCapacity, s4bldg:nominalCapacity and s4bldg:impellerDiameter, respectively, between the compressor and the new instance created in each case. It is worth noting that in each case the unit of measurement used has been adapted according to the needs, for example using watts (represented by the instance wurvoc:watt) for the measurements about capacity and using inches (represented by the instance wurvoc:inch-international) for the measurement about the diameter.</p>
+
+<center><img src="resources/images/saref4bldgEx1.png" alt="Compressor description example.">   <figcaption>Figure 4. - Compressor description example.</figcaption></center>
+
+<p>Figure 5 complements the compressor description including location information also provided by the SAREF4BLDG ontology. In this case we can observe the geographical coordinates of the compressor (40.405155, -3.839203) represented by the instance of the class geo:SpatialThing named ex:LocationCompressor001SIERRA02-0434C3. Such instance indicates the value of the coordinates by means of the properties geo:latitude and geo:longitude. The compressor is linked to such instance by means of the object property geo:location.</p>
+
+<p>It is also shown that the compressor is located in the refrigeration store of the building 1 in a Computer Science faculty. </p>
+
+<p>The refrigeration store is represented by the instance ex:RefrigerationStoreComputerScienceBuilding1 that belongs to the class s4bldg:BuildingSpace. And the computer science building is represented by the instance ex:ComputerScienceBuilding1 that belongs to the class s4bldg:Building.</p>
+
+<p>It is indicated that the compressor is located in the refrigeration store by means of the object property s4bldg:isContainedIn established between the instance representing the compressor and the instance representing the refrigeration store.</p>
+
+<p>The fact that the refrigeration store belongs to the building 1 is represented by means of the object property s4bldg:isSpaceOf established between the instance representing the refrigeration store and the instance representing the building.</p>
+
+<p>The geographical coordinates of the refrigeration store and the building are indicated following the same pattern as for the compressor by means of the object property geo:location and the creation of an instance from which the values of the latitude and longitude are linked.</p>
+
+
+<center><img src="resources/images/saref4bldgEx2.png" alt="Compressor location example.">   <figcaption>Figure 5. - Compressor location example.</figcaption></center>
+
+<p>Figure 6 shows an example that combines ontological elements from the SAREF4BLDG ontology with the SAREF4ENER one. More precisely, it indicates the power consumption of the compressor described above. For doing so, the instance representing the compressor, namely ex:Compressor001SIERRA02-0434C3, is linked to an instance named ex:PowerProfileCompressor001SIERRA02-0434C3 that belongs to the class s4ee:PowerProfile, which represents the power profile of the compressor. This later instance indicates the compressor power consumption by linking, using the object property saref:hasConsumption, to an instance named ex:PowerCompressor001SIERRA02-0434C3 that belongs to the class s4ener:Power. Finally, this instance indicates the power consumption value “902.0” by means of the datatype property saref:hasValue and the unit in which such value is measured by means of the object property saref:isMeasuredIn that points to the instance wurvoc:watt. 
+</p>
+
+<center><img src="resources/images/saref4bldgEx3.png" alt="Compressor related to the energy extension example.">   <figcaption>Figure 6. - Compressor related to the energy extension example.</figcaption></center>
