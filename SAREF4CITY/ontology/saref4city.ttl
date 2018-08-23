@@ -71,10 +71,215 @@ xsd:duration a rdfs:Datatype .
 # 
 # #################################################################
 # #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+
+<http://www.opengis.net/ont/geosparql#hasGeometry> a owl:ObjectProperty ;
+	rdfs:comment "A spatial representation for a given feature."@en ;
+	rdfs:isDefinedBy "http://www.opengis.net/ont/geosparql#" ;
+	rdfs:label "has geomtry"@en .
+# 
+# https://w3id.org/def/saref4city#belongsTo
+
+<https://w3id.org/def/saref4city#belongsTo> a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#accomplishes
+
+saref:accomplishes a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#consistsOf
+
+saref:consistsOf a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#controlsProperty
+
+saref:controlsProperty a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#hasCommand
+
+saref:hasCommand a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#hasFunction
+
+saref:hasFunction a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#hasProfile
+
+saref:hasProfile a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#hasState
+
+saref:hasState a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#hasTypicalConsumption
+
+saref:hasTypicalConsumption a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#isControlledByDevice
+
+saref:isControlledByDevice a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#isMeasuredByDevice
+
+saref:isMeasuredByDevice a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#isMeasuredIn
+
+saref:isMeasuredIn a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#isUsedFor
+
+saref:isUsedFor a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#makesMeasurement
+
+saref:makesMeasurement a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#measuresProperty
+
+saref:measuresProperty a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#offers
+
+saref:offers a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#relatesToMeasurement
+
+saref:relatesToMeasurement a owl:ObjectProperty .
+# 
+# https://w3id.org/saref#relatesToProperty
+
+saref:relatesToProperty a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/saref#hasDescription
+
+saref:hasDescription a owl:DatatypeProperty .
+# 
+# https://w3id.org/saref#hasManufacturer
+
+saref:hasManufacturer a owl:DatatypeProperty .
+# 
+# https://w3id.org/saref#hasModel
+
+saref:hasModel a owl:DatatypeProperty .
+# 
+# https://w3id.org/saref#hasTimestamp
+
+saref:hasTimestamp a owl:DatatypeProperty .
+# 
+# https://w3id.org/saref#hasValue
+
+saref:hasValue a owl:DatatypeProperty .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Classes
 # #
 # #################################################################
 # 
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+
+<http://www.opengis.net/ont/geosparql#Geometry> a owl:Class ;
+	rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+	rdfs:isDefinedBy "http://www.opengis.net/ont/geosparql"@en ;
+	rdfs:label "Geometry"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> a owl:Class ;
+	rdfs:comment "\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"@en ;
+	rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
+	rdfs:label "Spatial thing"@en .
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+
+<http://www.w3.org/2006/time#TemporalEntity> a owl:Class ;
+	rdfs:comment "A temporal interval or instant."@en ;
+	rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+	rdfs:label "Temporal entity"@en .
+# 
+# https://w3id.org/def/saref4city#AdministrativeArea
+
+<https://w3id.org/def/saref4city#AdministrativeArea> a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# https://w3id.org/def/saref4city#Agent
+
+<https://w3id.org/def/saref4city#Agent> a owl:Class .
+# 
+# https://w3id.org/def/saref4city#City
+
+<https://w3id.org/def/saref4city#City> a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+# 
+# https://w3id.org/def/saref4city#CityObject
+
+<https://w3id.org/def/saref4city#CityObject> a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+# 
+# https://w3id.org/def/saref4city#Country
+
+<https://w3id.org/def/saref4city#Country> a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+# 
+# https://w3id.org/def/saref4city#District
+
+<https://w3id.org/def/saref4city#District> a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+# 
+# https://w3id.org/def/saref4city#Event
+
+<https://w3id.org/def/saref4city#Event> a owl:Class .
+# 
+# https://w3id.org/def/saref4city#FeatureOfInterest
+
+<https://w3id.org/def/saref4city#FeatureOfInterest> a owl:Class ;
+	rdfs:comment """TESTING!
+ It might be replaced by ssn feature of interest or created in saref ontology"""@en .
+# 
+# https://w3id.org/def/saref4city#KeyPerformanceIndicator
+
+<https://w3id.org/def/saref4city#KeyPerformanceIndicator> a owl:Class ;
+	rdfs:label "Key Performance Indicator"@en .
+# 
+# https://w3id.org/def/saref4city#Neighbourhood
+
+<https://w3id.org/def/saref4city#Neighbourhood> a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+# 
+# https://w3id.org/def/saref4city#PublicAdministration
+
+<https://w3id.org/def/saref4city#PublicAdministration> a owl:Class ;
+	rdfs:subClassOf <https://w3id.org/def/saref4city#Agent> .
+# 
+# https://w3id.org/def/saref4city#PublicService
+
+<https://w3id.org/def/saref4city#PublicService> a owl:Class .
+# 
+# https://w3id.org/def/saref4city#Rule
+
+<https://w3id.org/def/saref4city#Rule> a owl:Class .
 # 
 # https://w3id.org/saref#Actuator
 
@@ -83,21 +288,222 @@ saref:Actuator a owl:Class ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Actuator"@en .
 # 
+# https://w3id.org/saref#Command
+
+saref:Command a owl:Class .
+# 
+# https://w3id.org/saref#Commodity
+
+saref:Commodity a owl:Class .
+# 
+# https://w3id.org/saref#Device
+
+saref:Device a owl:Class ;
+	rdfs:subClassOf _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty saref:consistsOf ;
+	owl:allValuesFrom saref:Device .
+
+saref:Device rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty saref:controlsProperty ;
+	owl:allValuesFrom saref:Property .
+
+saref:Device rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty saref:hasProfile ;
+	owl:allValuesFrom saref:Profile .
+
+saref:Profile a owl:Class .
+
+saref:Device rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty saref:hasState ;
+	owl:allValuesFrom saref:State .
+
+saref:State a owl:Class .
+
+saref:Device rdfs:subClassOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty saref:hasTypicalConsumption ;
+	owl:allValuesFrom _:genid6 .
+
+_:genid6 a owl:Class ;
+	owl:unionOf _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first saref:Energy .
+
+saref:Energy a owl:Class .
+
+_:genid8 rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first saref:Power .
+
+saref:Power a owl:Class .
+
+_:genid7 rdf:rest rdf:nil .
+
+saref:Device rdfs:subClassOf _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty saref:isUsedFor ;
+	owl:allValuesFrom saref:Commodity .
+
+saref:Device rdfs:subClassOf _:genid10 .
+
+_:genid10 a owl:Restriction ;
+	owl:onProperty saref:makesMeasurement ;
+	owl:allValuesFrom saref:Measurement .
+
+saref:Device rdfs:subClassOf _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty saref:measuresProperty ;
+	owl:allValuesFrom saref:Property .
+
+saref:Device rdfs:subClassOf _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty saref:offers ;
+	owl:allValuesFrom saref:Service .
+
+saref:Service a owl:Class .
+
+saref:Device rdfs:subClassOf _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty saref:accomplishes ;
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:Task .
+
+saref:Task a owl:Class .
+
+saref:Device rdfs:subClassOf _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty saref:hasFunction ;
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:Function .
+
+saref:Device rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction ;
+	owl:onProperty saref:hasDescription ;
+	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
+
+saref:Device rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty saref:hasManufacturer ;
+	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
+
+saref:Device rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty saref:hasModel ;
+	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
+
+saref:Device rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
+	rdfs:label "Device"^^xsd:string .
+# 
+# https://w3id.org/saref#Energy
+# 
+# https://w3id.org/saref#Function
+
+saref:Function a owl:Class ;
+	rdfs:subClassOf _:genid18 .
+
+_:genid18 a owl:Restriction ;
+	owl:onProperty saref:hasCommand ;
+	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:Command .
+
+saref:Function rdfs:comment "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. "^^xsd:string ;
+	rdfs:label "Function"^^xsd:string .
+# 
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	owl:disjointWith saref:Property , saref:UnitOfMeasure ;
+	rdfs:subClassOf _:genid19 .
+
+_:genid19 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:allValuesFrom saref:UnitOfMeasure .
+
+saref:Measurement rdfs:subClassOf _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty saref:relatesToProperty ;
+	owl:allValuesFrom saref:Property .
+
+saref:Measurement rdfs:subClassOf _:genid21 .
+
+_:genid21 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:UnitOfMeasure .
+
+saref:Measurement rdfs:subClassOf _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty saref:relatesToProperty ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:Property .
+
+saref:Measurement rdfs:subClassOf _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty saref:hasTimestamp ;
+	owl:allValuesFrom xsd:dateTime .
+
+saref:Measurement rdfs:subClassOf _:genid24 .
+
+_:genid24 a owl:Restriction ;
+	owl:onProperty saref:hasValue ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:float .
+
+saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 	rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
 	rdfs:isDefinedBy "https://w3id.org/saref#" ;
 	rdfs:label "Measurement"@en .
 # 
+# https://w3id.org/saref#Power
+# 
+# https://w3id.org/saref#Profile
+# 
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	owl:disjointWith saref:UnitOfMeasure ;
-	rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
+	rdfs:subClassOf _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty saref:isControlledByDevice ;
+	owl:allValuesFrom saref:Device .
+
+saref:Property rdfs:subClassOf _:genid26 .
+
+_:genid26 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredByDevice ;
+	owl:allValuesFrom saref:Device .
+
+saref:Property rdfs:subClassOf _:genid27 .
+
+_:genid27 a owl:Restriction ;
+	owl:onProperty saref:relatesToMeasurement ;
+	owl:allValuesFrom saref:Measurement .
+
+saref:Property owl:disjointWith saref:UnitOfMeasure ;
+	rdfs:comment "An aspect of an entity that can be observable by a sensor."@en , "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
 	rdfs:isDefinedBy "https://w3id.org/saref#" ;
-	rdfs:label "Property"@en .
+	rdfs:label "Property"@en , "Property"^^xsd:string .
 # 
 # https://w3id.org/saref#Sensor
 
@@ -106,6 +512,12 @@ saref:Sensor a owl:Class ;
 A device that has category saref:Sensor and performs a saref:SensingFunction."""@en ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Sensor"@en .
+# 
+# https://w3id.org/saref#Service
+# 
+# https://w3id.org/saref#State
+# 
+# https://w3id.org/saref#Task
 # 
 # https://w3id.org/saref#UnitOfMeasure
 
