@@ -83,9 +83,55 @@ xsd:duration a rdfs:Datatype .
 	rdfs:isDefinedBy "http://www.opengis.net/ont/geosparql#" ;
 	rdfs:label "has geomtry"@en .
 # 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#availableIn
+
+<https://w3id.org/def/saref4city#availableIn> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#availableInLanguage
+
+<https://w3id.org/def/saref4city#availableInLanguage> a owl:ObjectProperty ;
+	rdfs:range <https://w3id.org/def/saref4city#Language> .
+# 
 # https://w3id.org/def/saref4city#belongsTo
 
 <https://w3id.org/def/saref4city#belongsTo> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#belongsToCity
+
+<https://w3id.org/def/saref4city#belongsToCity> a owl:ObjectProperty ;
+	owl:inverseOf <https://w3id.org/def/saref4city#hasCityObject> .
+# 
+# https://w3id.org/def/saref4city#contains
+
+<https://w3id.org/def/saref4city#contains> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#hasAccesibility
+
+<https://w3id.org/def/saref4city#hasAccesibility> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#hasCityObject
+
+<https://w3id.org/def/saref4city#hasCityObject> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#providesService
+
+<https://w3id.org/def/saref4city#providesService> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#regulatedBy
+
+<https://w3id.org/def/saref4city#regulatedBy> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#takesPlaceAtTime
+
+<https://w3id.org/def/saref4city#takesPlaceAtTime> a owl:ObjectProperty .
+# 
+# https://w3id.org/def/saref4city#usesService
+
+<https://w3id.org/def/saref4city#usesService> a owl:ObjectProperty .
 # 
 # https://w3id.org/saref#accomplishes
 
@@ -164,6 +210,15 @@ saref:relatesToProperty a owl:ObjectProperty .
 # #################################################################
 # 
 # 
+# https://w3id.org/def/saref4city#hasServiceDescription
+
+<https://w3id.org/def/saref4city#hasServiceDescription> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf saref:hasDescription .
+# 
+# https://w3id.org/def/saref4city#name
+
+<https://w3id.org/def/saref4city#name> a owl:DatatypeProperty .
+# 
 # https://w3id.org/saref#hasDescription
 
 saref:hasDescription a owl:DatatypeProperty .
@@ -192,6 +247,12 @@ saref:hasValue a owl:DatatypeProperty .
 # #
 # #################################################################
 # 
+# 
+# http://www.lingvoj.org/ontology#Lingvo
+
+<http://www.lingvoj.org/ontology#Lingvo> a owl:Class ;
+	owl:equivalentClass <https://w3id.org/def/saref4city#Language> ;
+	rdfs:label "Language"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
 
@@ -222,16 +283,19 @@ saref:hasValue a owl:DatatypeProperty .
 # https://w3id.org/def/saref4city#AdministrativeArea
 
 <https://w3id.org/def/saref4city#AdministrativeArea> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en .
 # 
 # https://w3id.org/def/saref4city#Agent
 
-<https://w3id.org/def/saref4city#Agent> a owl:Class .
+<https://w3id.org/def/saref4city#Agent> a owl:Class ;
+	rdfs:label "Agent"@en .
 # 
 # https://w3id.org/def/saref4city#City
 
 <https://w3id.org/def/saref4city#City> a owl:Class ;
-	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
+	rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en .
 # 
 # https://w3id.org/def/saref4city#CityObject
 
@@ -246,7 +310,8 @@ saref:hasValue a owl:DatatypeProperty .
 # https://w3id.org/def/saref4city#District
 
 <https://w3id.org/def/saref4city#District> a owl:Class ;
-	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
+	rdfs:comment "A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"@en .
 # 
 # https://w3id.org/def/saref4city#Event
 
@@ -263,15 +328,22 @@ saref:hasValue a owl:DatatypeProperty .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> a owl:Class ;
 	rdfs:label "Key Performance Indicator"@en .
 # 
+# https://w3id.org/def/saref4city#Language
+
+<https://w3id.org/def/saref4city#Language> a owl:Class ;
+	rdfs:label "Language"@en .
+# 
 # https://w3id.org/def/saref4city#Neighbourhood
 
 <https://w3id.org/def/saref4city#Neighbourhood> a owl:Class ;
-	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
+	rdfs:comment "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"@en .
 # 
 # https://w3id.org/def/saref4city#PublicAdministration
 
 <https://w3id.org/def/saref4city#PublicAdministration> a owl:Class ;
-	rdfs:subClassOf <https://w3id.org/def/saref4city#Agent> .
+	rdfs:subClassOf <https://w3id.org/def/saref4city#Agent> ;
+	rdfs:label "Public administration"@en .
 # 
 # https://w3id.org/def/saref4city#PublicService
 
@@ -317,15 +389,11 @@ _:genid3 a owl:Restriction ;
 	owl:onProperty saref:hasProfile ;
 	owl:allValuesFrom saref:Profile .
 
-saref:Profile a owl:Class .
-
 saref:Device rdfs:subClassOf _:genid4 .
 
 _:genid4 a owl:Restriction ;
 	owl:onProperty saref:hasState ;
 	owl:allValuesFrom saref:State .
-
-saref:State a owl:Class .
 
 saref:Device rdfs:subClassOf _:genid5 .
 
@@ -337,18 +405,12 @@ _:genid6 a owl:Class ;
 	owl:unionOf _:genid8 .
 
 _:genid8 a rdf:List ;
-	rdf:first saref:Energy .
-
-saref:Energy a owl:Class .
-
-_:genid8 rdf:rest _:genid7 .
+	rdf:first saref:Energy ;
+	rdf:rest _:genid7 .
 
 _:genid7 a rdf:List ;
-	rdf:first saref:Power .
-
-saref:Power a owl:Class .
-
-_:genid7 rdf:rest rdf:nil .
+	rdf:first saref:Power ;
+	rdf:rest rdf:nil .
 
 saref:Device rdfs:subClassOf _:genid9 .
 
@@ -374,16 +436,12 @@ _:genid12 a owl:Restriction ;
 	owl:onProperty saref:offers ;
 	owl:allValuesFrom saref:Service .
 
-saref:Service a owl:Class .
-
 saref:Device rdfs:subClassOf _:genid13 .
 
 _:genid13 a owl:Restriction ;
 	owl:onProperty saref:accomplishes ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Task .
-
-saref:Task a owl:Class .
 
 saref:Device rdfs:subClassOf _:genid14 .
 
@@ -414,6 +472,8 @@ saref:Device rdfs:comment "A tangible object designed to accomplish a particular
 	rdfs:label "Device"^^xsd:string .
 # 
 # https://w3id.org/saref#Energy
+
+saref:Energy a owl:Class .
 # 
 # https://w3id.org/saref#Function
 
@@ -476,8 +536,12 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 	rdfs:label "Measurement"@en .
 # 
 # https://w3id.org/saref#Power
+
+saref:Power a owl:Class .
 # 
 # https://w3id.org/saref#Profile
+
+saref:Profile a owl:Class .
 # 
 # https://w3id.org/saref#Property
 
@@ -514,10 +578,16 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
 	rdfs:label "Sensor"@en .
 # 
 # https://w3id.org/saref#Service
+
+saref:Service a owl:Class .
 # 
 # https://w3id.org/saref#State
+
+saref:State a owl:Class .
 # 
 # https://w3id.org/saref#Task
+
+saref:Task a owl:Class .
 # 
 # https://w3id.org/saref#UnitOfMeasure
 
