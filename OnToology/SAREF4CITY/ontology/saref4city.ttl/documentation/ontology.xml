@@ -121,10 +121,91 @@
     
 
 
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#availableIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#availableIn"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#availableInLanguage -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#availableInLanguage">
+        <rdfs:range rdf:resource="https://w3id.org/def/saref4city#Language"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/saref4city#belongsTo -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#belongsTo"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#belongsToCity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#belongsToCity">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/saref4city#hasCityObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#contains"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#hasAccesibility -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#hasAccesibility"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#hasCityObject -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#hasCityObject"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#providesService -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#providesService"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#regulatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#regulatedBy"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#takesPlaceAtTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#takesPlaceAtTime"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#usesService -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#usesService"/>
     
 
 
@@ -259,6 +340,22 @@
     
 
 
+    <!-- https://w3id.org/def/saref4city#hasServiceDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#hasServiceDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/saref#hasDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#name"/>
+    
+
+
     <!-- https://w3id.org/saref#hasDescription -->
 
 
@@ -303,6 +400,16 @@
      -->
 
 
+    
+
+
+    <!-- http://www.lingvoj.org/ontology#Lingvo -->
+
+
+    <owl:Class rdf:about="http://www.lingvoj.org/ontology#Lingvo">
+        <owl:equivalentClass rdf:resource="https://w3id.org/def/saref4city#Language"/>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </owl:Class>
     
 
 
@@ -353,6 +460,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#AdministrativeArea">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:comment xml:lang="en">An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)</rdfs:comment>
     </owl:Class>
     
 
@@ -360,7 +468,9 @@
     <!-- https://w3id.org/def/saref4city#Agent -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/saref4city#Agent"/>
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#Agent">
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
     
 
 
@@ -369,6 +479,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#City">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4city#AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)</rdfs:comment>
     </owl:Class>
     
 
@@ -396,6 +507,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#District">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4city#AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as &quot;districts&quot; vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)</rdfs:comment>
     </owl:Class>
     
 
@@ -426,11 +538,21 @@
     
 
 
+    <!-- https://w3id.org/def/saref4city#Language -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/saref4city#Neighbourhood -->
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#Neighbourhood">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4city#AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)</rdfs:comment>
     </owl:Class>
     
 
@@ -440,6 +562,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#PublicAdministration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4city#Agent"/>
+        <rdfs:label xml:lang="en">Public administration</rdfs:label>
     </owl:Class>
     
 

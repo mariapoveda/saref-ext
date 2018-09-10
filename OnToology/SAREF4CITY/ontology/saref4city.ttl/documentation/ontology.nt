@@ -63,8 +63,43 @@
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.opengis.net/ont/geosparql#" .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geomtry"@en .
 # 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#availableIn
+<https://w3id.org/def/saref4city#availableIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#availableInLanguage
+<https://w3id.org/def/saref4city#availableInLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#availableInLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4city#Language> .
+# 
 # https://w3id.org/def/saref4city#belongsTo
 <https://w3id.org/def/saref4city#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#belongsToCity
+<https://w3id.org/def/saref4city#belongsToCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#belongsToCity> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4city#hasCityObject> .
+# 
+# https://w3id.org/def/saref4city#contains
+<https://w3id.org/def/saref4city#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#hasAccesibility
+<https://w3id.org/def/saref4city#hasAccesibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#hasCityObject
+<https://w3id.org/def/saref4city#hasCityObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#providesService
+<https://w3id.org/def/saref4city#providesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#regulatedBy
+<https://w3id.org/def/saref4city#regulatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#takesPlaceAtTime
+<https://w3id.org/def/saref4city#takesPlaceAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4city#usesService
+<https://w3id.org/def/saref4city#usesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # https://w3id.org/saref#accomplishes
 <https://w3id.org/saref#accomplishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -126,6 +161,13 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/def/saref4city#hasServiceDescription
+<https://w3id.org/def/saref4city#hasServiceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4city#hasServiceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/saref#hasDescription> .
+# 
+# https://w3id.org/def/saref4city#name
+<https://w3id.org/def/saref4city#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
 # https://w3id.org/saref#hasDescription
 <https://w3id.org/saref#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
@@ -149,6 +191,11 @@
 # #
 # #################################################################
 # 
+# 
+# http://www.lingvoj.org/ontology#Lingvo
+<http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/def/saref4city#Language> .
+<http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -175,13 +222,16 @@
 # https://w3id.org/def/saref4city#AdministrativeArea
 <https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en .
 # 
 # https://w3id.org/def/saref4city#Agent
 <https://w3id.org/def/saref4city#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4city#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
 # 
 # https://w3id.org/def/saref4city#City
 <https://w3id.org/def/saref4city#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4city#AdministrativeArea> .
+<https://w3id.org/def/saref4city#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en .
 # 
 # https://w3id.org/def/saref4city#CityObject
 <https://w3id.org/def/saref4city#CityObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -194,6 +244,7 @@
 # https://w3id.org/def/saref4city#District
 <https://w3id.org/def/saref4city#District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4city#AdministrativeArea> .
+<https://w3id.org/def/saref4city#District> <http://www.w3.org/2000/01/rdf-schema#comment> "A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"@en .
 # 
 # https://w3id.org/def/saref4city#Event
 <https://w3id.org/def/saref4city#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -206,13 +257,19 @@
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Key Performance Indicator"@en .
 # 
+# https://w3id.org/def/saref4city#Language
+<https://w3id.org/def/saref4city#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4city#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
+# 
 # https://w3id.org/def/saref4city#Neighbourhood
 <https://w3id.org/def/saref4city#Neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#Neighbourhood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4city#AdministrativeArea> .
+<https://w3id.org/def/saref4city#Neighbourhood> <http://www.w3.org/2000/01/rdf-schema#comment> "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"@en .
 # 
 # https://w3id.org/def/saref4city#PublicAdministration
 <https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4city#Agent> .
+<https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#label> "Public administration"@en .
 # 
 # https://w3id.org/def/saref4city#PublicService
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

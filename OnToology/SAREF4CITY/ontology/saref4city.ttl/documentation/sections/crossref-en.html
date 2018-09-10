@@ -13,6 +13,9 @@ This section provides details for each class and property defined by SAREF exten
          </a>
       </li>
       <li>
+         <a href="#Agent" title="https://w3id.org/def/saref4city#Agent">Agent</a>
+      </li>
+      <li>
          <a href="#City" title="https://w3id.org/def/saref4city#City">
             <span>city</span>
          </a>
@@ -52,6 +55,12 @@ This section provides details for each class and property defined by SAREF exten
             title="https://w3id.org/def/saref4city#KeyPerformanceIndicator">Key Performance Indicator</a>
       </li>
       <li>
+         <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Language</a>
+      </li>
+      <li>
+         <a href="#Language" title="https://w3id.org/def/saref4city#Language">Language</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
       </li>
       <li>
@@ -69,9 +78,7 @@ This section provides details for each class and property defined by SAREF exten
       </li>
       <li>
          <a href="#PublicAdministration"
-            title="https://w3id.org/def/saref4city#PublicAdministration">
-            <span>public administration</span>
-         </a>
+            title="https://w3id.org/def/saref4city#PublicAdministration">Public administration</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
@@ -111,6 +118,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#AdministrativeArea</p>
+      <div class="comment">
+         <span class="markdown">An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -128,6 +138,22 @@ This section provides details for each class and property defined by SAREF exten
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Agent">
+      <h3>Agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#Agent</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PublicAdministration"
+               title="https://w3id.org/def/saref4city#PublicAdministration">Public administration</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="City">
       <h3>city<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -135,6 +161,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#City</p>
+      <div class="comment">
+         <span class="markdown">A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -287,6 +316,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#District</p>
+      <div class="comment">
+         <span class="markdown">A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as "districts" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -350,6 +382,37 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#KeyPerformanceIndicator</p>
+   </div>
+   <div class="entity" id="http://www.lingvoj.org/ontology#Lingvo">
+      <h3>Language<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.lingvoj.org/ontology#Lingvo</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Language" title="https://w3id.org/def/saref4city#Language">Language</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Language">
+      <h3>Language<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#Language</p>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#availableInLanguage"
+               title="https://w3id.org/def/saref4city#availableInLanguage">available in language</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="https://w3id.org/saref#Measurement">
       <h3>Measurement<sup class="type-c" title="class">c</sup>
@@ -418,6 +481,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#Neighbourhood</p>
+      <div class="comment">
+         <span class="markdown">A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -489,7 +555,7 @@ This section provides details for each class and property defined by SAREF exten
       </dl>
    </div>
    <div class="entity" id="PublicAdministration">
-      <h3>public administration<sup class="type-c" title="class">c</sup>
+      <h3>Public administration<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -498,7 +564,7 @@ This section provides details for each class and property defined by SAREF exten
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/def/saref4city#Agent">agent</span>
+            <a href="#Agent" title="https://w3id.org/def/saref4city#Agent">Agent</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -590,9 +656,54 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#availableInLanguage"
+            title="https://w3id.org/def/saref4city#availableInLanguage">
+            <span>available in language</span>
+         </a>
+      </li>
+      <li>
+         <a href="#belongsToCity" title="https://w3id.org/def/saref4city#belongsToCity">
+            <span>belongs to city</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geomtry</a>
       </li>
    </ul>
+   <div class="entity" id="availableInLanguage">
+      <h3>available in language<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#availableInLanguage</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Language" title="https://w3id.org/def/saref4city#Language">Language</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="belongsToCity">
+      <h3>belongs to city<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#belongsToCity</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/def/saref4city#hasCityObject">has city object</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#hasGeometry">
       <h3>has geomtry<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -607,6 +718,33 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <dt>Is defined by</dt>
          <dd>https://w3id.org/def/saref4city</dd>
       </dl>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasServiceDescription"
+            title="https://w3id.org/def/saref4city#hasServiceDescription">
+            <span>has service description</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="hasServiceDescription">
+      <h3>has service description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#hasServiceDescription</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/saref#hasDescription">has description</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
