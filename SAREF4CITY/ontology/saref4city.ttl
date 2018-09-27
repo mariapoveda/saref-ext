@@ -264,7 +264,8 @@ saref:hasValue a owl:DatatypeProperty .
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
 
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+	rdfs:label "Point"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 
@@ -284,38 +285,52 @@ saref:hasValue a owl:DatatypeProperty .
 
 <https://w3id.org/def/saref4city#AdministrativeArea> a owl:Class ;
 	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en .
+	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
+	rdfs:seeAlso "Administrative area"@en .
 # 
 # https://w3id.org/def/saref4city#Agent
 
 <https://w3id.org/def/saref4city#Agent> a owl:Class ;
+	rdfs:comment "A person or company that provides a particular service. (Definition taken from https://en.oxforddictionaries.com/definition/agent )"@en ;
 	rdfs:label "Agent"@en .
 # 
 # https://w3id.org/def/saref4city#City
 
 <https://w3id.org/def/saref4city#City> a owl:Class ;
 	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
-	rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en .
+	rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
+	rdfs:label "City"@en .
 # 
 # https://w3id.org/def/saref4city#CityObject
 
 <https://w3id.org/def/saref4city#CityObject> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+	rdfs:label "City object"@en .
 # 
 # https://w3id.org/def/saref4city#Country
 
 <https://w3id.org/def/saref4city#Country> a owl:Class ;
-	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> .
+	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
+	rdfs:label "Country"@en .
 # 
 # https://w3id.org/def/saref4city#District
 
 <https://w3id.org/def/saref4city#District> a owl:Class ;
 	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
-	rdfs:comment "A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"@en .
+	rdfs:comment "A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"@en ;
+	rdfs:label "District"@en .
 # 
 # https://w3id.org/def/saref4city#Event
 
-<https://w3id.org/def/saref4city#Event> a owl:Class .
+<https://w3id.org/def/saref4city#Event> a owl:Class ;
+	rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
+	rdfs:label "Event"@en ;
+	rdfs:seeAlso "https://www.wikidata.org/wiki/Q1656682" .
+# 
+# https://w3id.org/def/saref4city#Facility
+
+<https://w3id.org/def/saref4city#Facility> a owl:Class ;
+	rdfs:label "Facility"@en .
 # 
 # https://w3id.org/def/saref4city#FeatureOfInterest
 
@@ -337,21 +352,26 @@ saref:hasValue a owl:DatatypeProperty .
 
 <https://w3id.org/def/saref4city#Neighbourhood> a owl:Class ;
 	rdfs:subClassOf <https://w3id.org/def/saref4city#AdministrativeArea> ;
-	rdfs:comment "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"@en .
+	rdfs:comment "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"@en ;
+	rdfs:label "Neighbourhood"@en .
 # 
 # https://w3id.org/def/saref4city#PublicAdministration
 
 <https://w3id.org/def/saref4city#PublicAdministration> a owl:Class ;
 	rdfs:subClassOf <https://w3id.org/def/saref4city#Agent> ;
-	rdfs:label "Public administration"@en .
+	rdfs:comment "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"@en ;
+	rdfs:label "Public administration"@en ;
+	rdfs:seeAlso "https://www.wikidata.org/wiki/Q31728" .
 # 
 # https://w3id.org/def/saref4city#PublicService
 
-<https://w3id.org/def/saref4city#PublicService> a owl:Class .
+<https://w3id.org/def/saref4city#PublicService> a owl:Class ;
+	rdfs:label "Public service"@en .
 # 
 # https://w3id.org/def/saref4city#Rule
 
-<https://w3id.org/def/saref4city#Rule> a owl:Class .
+<https://w3id.org/def/saref4city#Rule> a owl:Class ;
+	rdfs:label "Rule"@en .
 # 
 # https://w3id.org/saref#Actuator
 
@@ -359,14 +379,6 @@ saref:Actuator a owl:Class ;
 	rdfs:comment "A device responsible for moving or controlling a mechanism or system"@en ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Actuator"@en .
-# 
-# https://w3id.org/saref#Command
-
-saref:Command a owl:Class .
-# 
-# https://w3id.org/saref#Commodity
-
-saref:Commodity a owl:Class .
 # 
 # https://w3id.org/saref#Device
 
@@ -386,146 +398,87 @@ _:genid2 a owl:Restriction ;
 saref:Device rdfs:subClassOf _:genid3 .
 
 _:genid3 a owl:Restriction ;
-	owl:onProperty saref:hasProfile ;
-	owl:allValuesFrom saref:Profile .
+	owl:onProperty saref:makesMeasurement ;
+	owl:allValuesFrom saref:Measurement .
 
 saref:Device rdfs:subClassOf _:genid4 .
 
 _:genid4 a owl:Restriction ;
-	owl:onProperty saref:hasState ;
-	owl:allValuesFrom saref:State .
+	owl:onProperty saref:measuresProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:Device rdfs:subClassOf _:genid5 .
 
 _:genid5 a owl:Restriction ;
-	owl:onProperty saref:hasTypicalConsumption ;
-	owl:allValuesFrom _:genid6 .
-
-_:genid6 a owl:Class ;
-	owl:unionOf _:genid8 .
-
-_:genid8 a rdf:List ;
-	rdf:first saref:Energy ;
-	rdf:rest _:genid7 .
-
-_:genid7 a rdf:List ;
-	rdf:first saref:Power ;
-	rdf:rest rdf:nil .
-
-saref:Device rdfs:subClassOf _:genid9 .
-
-_:genid9 a owl:Restriction ;
-	owl:onProperty saref:isUsedFor ;
-	owl:allValuesFrom saref:Commodity .
-
-saref:Device rdfs:subClassOf _:genid10 .
-
-_:genid10 a owl:Restriction ;
-	owl:onProperty saref:makesMeasurement ;
-	owl:allValuesFrom saref:Measurement .
-
-saref:Device rdfs:subClassOf _:genid11 .
-
-_:genid11 a owl:Restriction ;
-	owl:onProperty saref:measuresProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Device rdfs:subClassOf _:genid12 .
-
-_:genid12 a owl:Restriction ;
-	owl:onProperty saref:offers ;
-	owl:allValuesFrom saref:Service .
-
-saref:Device rdfs:subClassOf _:genid13 .
-
-_:genid13 a owl:Restriction ;
-	owl:onProperty saref:accomplishes ;
-	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:Task .
-
-saref:Device rdfs:subClassOf _:genid14 .
-
-_:genid14 a owl:Restriction ;
 	owl:onProperty saref:hasFunction ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Function .
 
-saref:Device rdfs:subClassOf _:genid15 .
+saref:Device rdfs:subClassOf _:genid6 .
 
-_:genid15 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
-saref:Device rdfs:subClassOf _:genid16 .
+saref:Device rdfs:subClassOf _:genid7 .
 
-_:genid16 a owl:Restriction ;
+_:genid7 a owl:Restriction ;
 	owl:onProperty saref:hasManufacturer ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
-saref:Device rdfs:subClassOf _:genid17 .
+saref:Device rdfs:subClassOf _:genid8 .
 
-_:genid17 a owl:Restriction ;
+_:genid8 a owl:Restriction ;
 	owl:onProperty saref:hasModel ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
 saref:Device rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
 	rdfs:label "Device"^^xsd:string .
 # 
-# https://w3id.org/saref#Energy
-
-saref:Energy a owl:Class .
-# 
 # https://w3id.org/saref#Function
 
 saref:Function a owl:Class ;
-	rdfs:subClassOf _:genid18 .
-
-_:genid18 a owl:Restriction ;
-	owl:onProperty saref:hasCommand ;
-	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:Command .
-
-saref:Function rdfs:comment "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. "^^xsd:string ;
+	rdfs:comment "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. "^^xsd:string ;
 	rdfs:label "Function"^^xsd:string .
 # 
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid19 .
+	rdfs:subClassOf _:genid9 .
 
-_:genid19 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:allValuesFrom saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid20 .
+saref:Measurement rdfs:subClassOf _:genid10 .
 
-_:genid20 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:allValuesFrom saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid21 .
+saref:Measurement rdfs:subClassOf _:genid11 .
 
-_:genid21 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid22 .
+saref:Measurement rdfs:subClassOf _:genid12 .
 
-_:genid22 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid23 .
+saref:Measurement rdfs:subClassOf _:genid13 .
 
-_:genid23 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty saref:hasTimestamp ;
 	owl:allValuesFrom xsd:dateTime .
 
-saref:Measurement rdfs:subClassOf _:genid24 .
+saref:Measurement rdfs:subClassOf _:genid14 .
 
-_:genid24 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:float .
@@ -535,32 +488,24 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 	rdfs:isDefinedBy "https://w3id.org/saref#" ;
 	rdfs:label "Measurement"@en .
 # 
-# https://w3id.org/saref#Power
-
-saref:Power a owl:Class .
-# 
-# https://w3id.org/saref#Profile
-
-saref:Profile a owl:Class .
-# 
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid25 .
+	rdfs:subClassOf _:genid15 .
 
-_:genid25 a owl:Restriction ;
+_:genid15 a owl:Restriction ;
 	owl:onProperty saref:isControlledByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid26 .
+saref:Property rdfs:subClassOf _:genid16 .
 
-_:genid26 a owl:Restriction ;
+_:genid16 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid27 .
+saref:Property rdfs:subClassOf _:genid17 .
 
-_:genid27 a owl:Restriction ;
+_:genid17 a owl:Restriction ;
 	owl:onProperty saref:relatesToMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -576,18 +521,6 @@ saref:Sensor a owl:Class ;
 A device that has category saref:Sensor and performs a saref:SensingFunction."""@en ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Sensor"@en .
-# 
-# https://w3id.org/saref#Service
-
-saref:Service a owl:Class .
-# 
-# https://w3id.org/saref#State
-
-saref:State a owl:Class .
-# 
-# https://w3id.org/saref#Task
-
-saref:Task a owl:Class .
 # 
 # https://w3id.org/saref#UnitOfMeasure
 
