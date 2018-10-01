@@ -1,1 +1,950 @@
-[{"@id":"_:genid1","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#Device"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#consistsOf"}]},{"@id":"_:genid10","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"http://www.w3.org/2001/XMLSchema#dateTime"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#hasTimestamp"}]},{"@id":"_:genid11","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#onDataRange":[{"@id":"http://www.w3.org/2001/XMLSchema#float"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#hasValue"}],"http://www.w3.org/2002/07/owl#qualifiedCardinality":[{"@type":"http://www.w3.org/2001/XMLSchema#nonNegativeInteger","@value":"1"}]},{"@id":"_:genid12","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#Device"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#isMeasuredByDevice"}]},{"@id":"_:genid13","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#Measurement"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#relatesToMeasurement"}]},{"@id":"_:genid2","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#Property"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#controlsProperty"}]},{"@id":"_:genid3","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#Measurement"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#makesMeasurement"}]},{"@id":"_:genid4","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#Property"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#measuresProperty"}]},{"@id":"_:genid5","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#maxCardinality":[{"@type":"http://www.w3.org/2001/XMLSchema#nonNegativeInteger","@value":"1"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#hasDescription"}]},{"@id":"_:genid6","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#UnitOfMeasure"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#isMeasuredIn"}]},{"@id":"_:genid7","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#allValuesFrom":[{"@id":"https://w3id.org/saref#Property"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#relatesToProperty"}]},{"@id":"_:genid8","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#onClass":[{"@id":"https://w3id.org/saref#UnitOfMeasure"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#isMeasuredIn"}],"http://www.w3.org/2002/07/owl#qualifiedCardinality":[{"@type":"http://www.w3.org/2001/XMLSchema#nonNegativeInteger","@value":"1"}]},{"@id":"_:genid9","@type":["http://www.w3.org/2002/07/owl#Restriction"],"http://www.w3.org/2002/07/owl#onClass":[{"@id":"https://w3id.org/saref#Property"}],"http://www.w3.org/2002/07/owl#onProperty":[{"@id":"https://w3id.org/saref#relatesToProperty"}],"http://www.w3.org/2002/07/owl#qualifiedCardinality":[{"@type":"http://www.w3.org/2001/XMLSchema#nonNegativeInteger","@value":"1"}]},{"@id":"http://purl.org/dc/terms/creator","@type":["http://www.w3.org/2002/07/owl#AnnotationProperty"]},{"@id":"http://purl.org/dc/terms/dateCopyrighted","@type":["http://www.w3.org/2002/07/owl#AnnotationProperty"]},{"@id":"http://purl.org/dc/terms/rightsHolder","@type":["http://www.w3.org/2002/07/owl#AnnotationProperty"]},{"@id":"http://purl.org/vocab/vann/preferredNamespacePrefix","@type":["http://www.w3.org/2002/07/owl#AnnotationProperty"]},{"@id":"http://purl.org/vocab/vann/preferredNamespaceUri","@type":["http://www.w3.org/2002/07/owl#AnnotationProperty"]},{"@id":"http://www.lingvoj.org/ontology#Lingvo","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Language"}],"http://www.w3.org/2002/07/owl#equivalentClass":[{"@id":"https://w3id.org/def/saref4city#Language"}]},{"@id":"http://www.opengis.net/ont/geosparql#Geometry","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@language":"en","@value":"http://www.opengis.net/ont/geosparql"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Geometry"}]},{"@id":"http://www.opengis.net/ont/geosparql#hasGeometry","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A spatial representation for a given feature."}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"http://www.opengis.net/ont/geosparql#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"has geometry"}]},{"@id":"http://www.w3.org/2001/XMLSchema#duration","@type":["http://www.w3.org/2000/01/rdf-schema#Datatype"]},{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#Point","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"http://www.w3.org/2003/01/geo/wgs84_pos#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Point"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"}]},{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"http://www.w3.org/2003/01/geo/wgs84_pos#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Spatial thing"}]},{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#location","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"location"}]},{"@id":"http://www.w3.org/2006/time#Interval","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"http://www.w3.org/2006/time#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"A temporal entity with an extent or duration"},{"@language":"en","@value":"Time interval"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"http://www.w3.org/2006/time#TemporalEntity"}]},{"@id":"http://www.w3.org/2006/time#TemporalEntity","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A temporal interval or instant."}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"http://www.w3.org/2006/time#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Temporal entity"}]},{"@id":"http://www.w3.org/ns/prov#hadPrimarySource","@type":["http://www.w3.org/2002/07/owl#AnnotationProperty"]},{"@id":"https://w3id.org/def/saref4city","@type":["http://www.w3.org/2002/07/owl#Ontology"],"http://purl.org/dc/elements/1.1/description":[{"@language":"en","@value":"This ontology extends the SAREF ontology for the Smart Cities domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart Cities domain."}],"http://purl.org/dc/elements/1.1/publisher":[{"@id":"http://www.oeg-upm.net/"}],"http://purl.org/dc/elements/1.1/title":[{"@language":"en","@value":"SAREF extension for Smart Cities"}],"http://purl.org/dc/terms/creator":[{"@id":"http://w3id.org/people/mpoveda"},{"@id":"http://www.garcia-castro.com/foaf.rdf#me"}],"http://purl.org/dc/terms/license":[{"@id":"http://purl.org/NET/rdflicense/cc-by4.0"}],"http://purl.org/vocab/vann/preferredNamespacePrefix":[{"@value":"s4city"}],"http://purl.org/vocab/vann/preferredNamespaceUri":[{"@value":"https://w3id.org/def/saref4city#"}],"http://www.w3.org/2002/07/owl#versionIRI":[{"@id":"https://w3id.org/def/v1/saref4city"}],"http://www.w3.org/2002/07/owl#versionInfo":[{"@type":"http://www.w3.org/2001/XMLSchema#decimal","@value":"0.1"}]},{"@id":"https://w3id.org/def/saref4city#AdministrativeArea","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Administrative area"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"}]},{"@id":"https://w3id.org/def/saref4city#Agent","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A person or company that provides a particular service. (Definition taken from https://en.oxforddictionaries.com/definition/agent )"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Agent"}]},{"@id":"https://w3id.org/def/saref4city#City","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"City"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"https://w3id.org/def/saref4city#AdministrativeArea"}]},{"@id":"https://w3id.org/def/saref4city#CityObject","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"City object"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"}]},{"@id":"https://w3id.org/def/saref4city#Country","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A country is a region that is identified as a distinct national entity in political geography. (https://en.wikipedia.org/wiki/Country)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Country"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"https://w3id.org/def/saref4city#AdministrativeArea"}]},{"@id":"https://w3id.org/def/saref4city#District","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"District"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"https://w3id.org/def/saref4city#AdministrativeArea"}]},{"@id":"https://w3id.org/def/saref4city#Event","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Event"}],"http://www.w3.org/2000/01/rdf-schema#seeAlso":[{"@value":"https://www.wikidata.org/wiki/Q1656682"}]},{"@id":"https://w3id.org/def/saref4city#Facility","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Facility"}]},{"@id":"https://w3id.org/def/saref4city#FeatureOfInterest","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"TESTING!\n It might be replaced by ssn feature of interest or created in saref ontology"}]},{"@id":"https://w3id.org/def/saref4city#KeyPerformanceIndicator","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Key Performance Indicator"}],"http://www.w3.org/2000/01/rdf-schema#seeAlso":[{"@value":"http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html"}]},{"@id":"https://w3id.org/def/saref4city#Language","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Language"}]},{"@id":"https://w3id.org/def/saref4city#Neighbourhood","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Neighbourhood"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"https://w3id.org/def/saref4city#AdministrativeArea"}]},{"@id":"https://w3id.org/def/saref4city#NonConvexInterval","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"Non-convex intervals are those that use time units in a repetitive way or refer to recur-ring periods."}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Non-convex interval"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"http://www.w3.org/2006/time#Interval"}]},{"@id":"https://w3id.org/def/saref4city#PublicAdministration","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Public administration"}],"http://www.w3.org/2000/01/rdf-schema#seeAlso":[{"@value":"https://www.wikidata.org/wiki/Q31728"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"https://w3id.org/def/saref4city#Agent"}]},{"@id":"https://w3id.org/def/saref4city#PublicService","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Public service"}],"http://www.w3.org/2000/01/rdf-schema#seeAlso":[{"@value":"https://en.wikipedia.org/wiki/Public_service"}]},{"@id":"https://w3id.org/def/saref4city#Rule","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Rule"}]},{"@id":"https://w3id.org/def/saref4city#aggregatesData","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"aggregates data"}]},{"@id":"https://w3id.org/def/saref4city#assess","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"assess"}]},{"@id":"https://w3id.org/def/saref4city#atTime","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"at time"}]},{"@id":"https://w3id.org/def/saref4city#belongsTo","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"belongs to"}]},{"@id":"https://w3id.org/def/saref4city#belongsToCity","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"belongs to city"}],"http://www.w3.org/2002/07/owl#inverseOf":[{"@id":"https://w3id.org/def/saref4city#hasCityObject"}]},{"@id":"https://w3id.org/def/saref4city#calculatedBy","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"calculated by"}]},{"@id":"https://w3id.org/def/saref4city#contains","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#domain":[{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"contains"}],"http://www.w3.org/2000/01/rdf-schema#range":[{"@id":"http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"}]},{"@id":"https://w3id.org/def/saref4city#creationDate","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"],"http://www.w3.org/2000/01/rdf-schema#range":[{"@id":"http://www.w3.org/2001/XMLSchema#dateTime"}]},{"@id":"https://w3id.org/def/saref4city#expirationDate","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"],"http://www.w3.org/2000/01/rdf-schema#range":[{"@id":"http://www.w3.org/2001/XMLSchema#dateTime"}]},{"@id":"https://w3id.org/def/saref4city#hasAccesibility","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"has accesibility"}]},{"@id":"https://w3id.org/def/saref4city#hasCalculationPeriod","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"has calculation period"}]},{"@id":"https://w3id.org/def/saref4city#hasCityObject","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"has city object"}]},{"@id":"https://w3id.org/def/saref4city#hasFeatureOfInterest","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"has feature of interest"}]},{"@id":"https://w3id.org/def/saref4city#hasIndicatorUnit","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"has indicator unit"}]},{"@id":"https://w3id.org/def/saref4city#hasKPIDescription","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"],"http://www.w3.org/2000/01/rdf-schema#subPropertyOf":[{"@id":"https://w3id.org/saref#hasDescription"}]},{"@id":"https://w3id.org/def/saref4city#hasKPIValue","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"],"http://www.w3.org/2000/01/rdf-schema#subPropertyOf":[{"@id":"https://w3id.org/saref#hasValue"}]},{"@id":"https://w3id.org/def/saref4city#hasProperty","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"has property"}],"http://www.w3.org/2002/07/owl#inverseOf":[{"@id":"https://w3id.org/def/saref4city#isPropertyOf"}]},{"@id":"https://w3id.org/def/saref4city#hasServiceDescription","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"],"http://www.w3.org/2000/01/rdf-schema#subPropertyOf":[{"@id":"https://w3id.org/saref#hasDescription"}]},{"@id":"https://w3id.org/def/saref4city#involvesFacility","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"involves facility"}]},{"@id":"https://w3id.org/def/saref4city#isAvailableInArea","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"is available in area"}]},{"@id":"https://w3id.org/def/saref4city#isAvailableInLanguage","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"is available in language"}],"http://www.w3.org/2000/01/rdf-schema#range":[{"@id":"https://w3id.org/def/saref4city#Language"}]},{"@id":"https://w3id.org/def/saref4city#isOrganizedBy","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"is organized by"}],"http://www.w3.org/2000/01/rdf-schema#subPropertyOf":[{"@id":"http://www.w3.org/2002/07/owl#topObjectProperty"}]},{"@id":"https://w3id.org/def/saref4city#isPropertyOf","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"is property of"}],"http://www.w3.org/2000/01/rdf-schema#subPropertyOf":[{"@id":"http://www.w3.org/2002/07/owl#topObjectProperty"}]},{"@id":"https://w3id.org/def/saref4city#isSubEventOf","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"is subevent of"}]},{"@id":"https://w3id.org/def/saref4city#lastUpdateDate","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"],"http://www.w3.org/2000/01/rdf-schema#range":[{"@id":"http://www.w3.org/2001/XMLSchema#dateTime"}],"http://www.w3.org/2000/01/rdf-schema#subPropertyOf":[{"@id":"http://www.w3.org/2002/07/owl#topDataProperty"}]},{"@id":"https://w3id.org/def/saref4city#name","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"name"}]},{"@id":"https://w3id.org/def/saref4city#providesService","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"provides service"}]},{"@id":"https://w3id.org/def/saref4city#refersTo","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"refers to"}]},{"@id":"https://w3id.org/def/saref4city#regulatedBy","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"regulated by"}]},{"@id":"https://w3id.org/def/saref4city#takesPlaceAtTime","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"takes place at time"}]},{"@id":"https://w3id.org/def/saref4city#usesService","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"uses service"}]},{"@id":"https://w3id.org/saref#Actuator","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A device responsible for moving or controlling a mechanism or system"}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@id":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Actuator"}]},{"@id":"https://w3id.org/saref#Device","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@value":"A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Device"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"_:genid1"},{"@id":"_:genid2"},{"@id":"_:genid3"},{"@id":"_:genid4"},{"@id":"_:genid5"}]},{"@id":"https://w3id.org/saref#Function","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@value":"The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. "}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Function"}]},{"@id":"https://w3id.org/saref#Measurement","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Measurement"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"_:genid6"},{"@id":"_:genid7"},{"@id":"_:genid8"},{"@id":"_:genid9"},{"@id":"_:genid10"},{"@id":"_:genid11"}],"http://www.w3.org/2002/07/owl#disjointWith":[{"@id":"https://w3id.org/saref#Property"},{"@id":"https://w3id.org/saref#UnitOfMeasure"}]},{"@id":"https://w3id.org/saref#Property","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"An aspect of an entity that can be observable by a sensor."},{"@value":"Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Property"},{"@value":"Property"}],"http://www.w3.org/2000/01/rdf-schema#subClassOf":[{"@id":"_:genid12"},{"@id":"_:genid13"}],"http://www.w3.org/2002/07/owl#disjointWith":[{"@id":"https://w3id.org/saref#UnitOfMeasure"}]},{"@id":"https://w3id.org/saref#Sensor","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes.\nA device that has category saref:Sensor and performs a saref:SensingFunction."}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@id":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Sensor"}]},{"@id":"https://w3id.org/saref#UnitOfMeasure","@type":["http://www.w3.org/2002/07/owl#Class"],"http://www.w3.org/2000/01/rdf-schema#comment":[{"@language":"en","@value":"The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."}],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@id":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"Unit of measure"}]},{"@id":"https://w3id.org/saref#accomplishes","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@language":"en","@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"accomplishes"}]},{"@id":"https://w3id.org/saref#consistsOf","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@language":"en","@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"consists of"}]},{"@id":"https://w3id.org/saref#controlsProperty","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"controls property"}]},{"@id":"https://w3id.org/saref#hasDescription","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"]},{"@id":"https://w3id.org/saref#hasTimestamp","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"]},{"@id":"https://w3id.org/saref#hasValue","@type":["http://www.w3.org/2002/07/owl#DatatypeProperty"]},{"@id":"https://w3id.org/saref#isMeasuredByDevice","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@language":"en","@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"is measured by device"}],"http://www.w3.org/2002/07/owl#inverseOf":[{"@id":"https://w3id.org/saref#makesMeasurement"}]},{"@id":"https://w3id.org/saref#isMeasuredIn","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@language":"en","@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"is measured in"}]},{"@id":"https://w3id.org/saref#makesMeasurement","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@language":"en","@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"makes measurement"}]},{"@id":"https://w3id.org/saref#measuresProperty","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"measures property"}]},{"@id":"https://w3id.org/saref#relatesToMeasurement","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"relates to measurement"}]},{"@id":"https://w3id.org/saref#relatesToProperty","@type":["http://www.w3.org/2002/07/owl#ObjectProperty"],"http://www.w3.org/2000/01/rdf-schema#isDefinedBy":[{"@value":"https://w3id.org/saref#"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@language":"en","@value":"relates to property"}]}]
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Device"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#consistsOf"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#hasTimestamp"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#hasValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Device"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#isMeasuredByDevice"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#relatesToMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#controlsProperty"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#makesMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#measuresProperty"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#hasDescription"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#isMeasuredIn"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#relatesToProperty"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#isMeasuredIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#relatesToProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/dateCopyrighted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/rightsHolder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.lingvoj.org/ontology#Lingvo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Language"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/def/saref4city#Language"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://www.opengis.net/ont/geosparql"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geometry"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A spatial representation for a given feature."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.opengis.net/ont/geosparql#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has geometry"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#duration",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spatial thing"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "location"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Interval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.w3.org/2006/time#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A temporal entity with an extent or duration"
+  }, {
+    "@language" : "en",
+    "@value" : "Time interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#TemporalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A temporal interval or instant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.w3.org/2006/time#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Temporal entity"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#hadPrimarySource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology extends the SAREF ontology for the Smart Cities domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart City domain."
+  } ],
+  "http://purl.org/dc/elements/1.1/publisher" : [ {
+    "@id" : "http://www.oeg-upm.net/"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "SAREF extension for Smart City"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "http://w3id.org/people/mpoveda"
+  }, {
+    "@id" : "http://www.garcia-castro.com/foaf.rdf#me"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "s4city"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/def/saref4city#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/def/v1/saref4city"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#AdministrativeArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Administrative area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person or company that provides a particular service. (Definition taken from https://en.oxforddictionaries.com/definition/agent )"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Agent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4city#AdministrativeArea"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#CityObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "City object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A country is a region that is identified as a distinct national entity in political geography. (https://en.wikipedia.org/wiki/Country)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4city#AdministrativeArea"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#District",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "District"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4city#AdministrativeArea"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.wikidata.org/wiki/Q1656682"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#Facility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Facility"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#FeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TESTING!\n It might be replaced by ssn feature of interest or created in saref ontology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#KeyPerformanceIndicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Key Performance Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Language"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#Neighbourhood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Neighbourhood"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4city#AdministrativeArea"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#NonConvexInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Non-convex intervals are those that use time units in a repetitive way or refer to recur-ring periods."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-convex interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2006/time#Interval"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#PublicAdministration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Public administration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.wikidata.org/wiki/Q31728"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4city#Agent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#PublicService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Public service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://en.wikipedia.org/wiki/Public_service"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#Rule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rule"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#aggregatesData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "aggregates data"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#assess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "assess"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#atTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "at time"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#belongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belongs to"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#belongsToCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belongs to city"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/saref4city#hasCityObject"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#calculatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "calculated by"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#contains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contains"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#creationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#expirationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasAccesibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has accesibility"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasCalculationPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has calculation period"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasCityObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has city object"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has feature of interest"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasIndicatorUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has indicator unit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasKPIDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/saref#hasDescription"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasKPIValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/saref#hasValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has property"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/saref4city#isPropertyOf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasServiceDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/saref#hasDescription"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#involvesFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "involves facility"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#isAvailableInArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is available in area"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#isAvailableInLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is available in language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/saref4city#Language"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#isOrganizedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is organized by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#isPropertyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is property of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#isSubEventOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is subevent of"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#lastUpdateDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "name"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#providesService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "provides service"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#refersTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "refers to"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#regulatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "regulated by"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#takesPlaceAtTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "takes place at time"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#usesService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses service"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Actuator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A device responsible for moving or controlling a mechanism or system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Actuator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Function",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Measurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  }, {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An aspect of an entity that can be observable by a sensor."
+  }, {
+    "@value" : "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Property"
+  }, {
+    "@value" : "Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes.\nA device that has category saref:Sensor and performs a saref:SensingFunction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#UnitOfMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unit of measure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#accomplishes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accomplishes"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#consistsOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "consists of"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#controlsProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "controls property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#hasDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasTimestamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#isMeasuredByDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is measured by device"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/saref#makesMeasurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#isMeasuredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is measured in"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#makesMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "makes measurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#measuresProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "measures property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#relatesToMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "relates to measurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#relatesToProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "relates to property"
+  } ]
+} ]
