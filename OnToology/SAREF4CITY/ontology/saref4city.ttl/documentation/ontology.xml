@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/def/saref4city#"
      xml:base="https://w3id.org/def/saref4city"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/def/saref4city">
         <owl:versionIRI rdf:resource="https://w3id.org/def/v1/saref4city"/>
-        <dc:description xml:lang="en">This ontology extends the SAREF ontology for the Smart Cities domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart Cities domain.</dc:description>
+        <dc:description xml:lang="en">This ontology extends the SAREF ontology for the Smart City domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart City domain.</dc:description>
         <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
-        <dc:title xml:lang="en">SAREF extension for Smart Cities</dc:title>
+        <dc:title xml:lang="en">SAREF extension for Smart City</dc:title>
         <terms:creator rdf:resource="http://w3id.org/people/mpoveda"/>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s4city</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/def/saref4city#</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix>s4city</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/def/saref4city#</vann:preferredNamespaceUri>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -115,7 +115,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
         <rdfs:comment xml:lang="en">A spatial representation for a given feature.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.opengis.net/ont/geosparql#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://www.opengis.net/ont/geosparql#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">has geometry</rdfs:label>
     </owl:ObjectProperty>
     
@@ -417,7 +417,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#measuresProperty">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">measures property</rdfs:label>
     </owl:ObjectProperty>
     
@@ -427,7 +427,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#relatesToMeasurement">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">relates to measurement</rdfs:label>
     </owl:ObjectProperty>
     
@@ -437,7 +437,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#relatesToProperty">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">relates to property</rdfs:label>
     </owl:ObjectProperty>
     
@@ -578,7 +578,7 @@
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2003/01/geo/wgs84_pos#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://www.w3.org/2003/01/geo/wgs84_pos#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Point</rdfs:label>
     </owl:Class>
     
@@ -589,7 +589,7 @@
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
         <rdfs:comment xml:lang="en">&quot;Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.&quot;@en</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2003/01/geo/wgs84_pos#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://www.w3.org/2003/01/geo/wgs84_pos#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Spatial thing</rdfs:label>
     </owl:Class>
     
@@ -600,7 +600,7 @@
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2006/time#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">A temporal entity with an extent or duration</rdfs:label>
         <rdfs:label xml:lang="en">Time interval</rdfs:label>
     </owl:Class>
@@ -612,7 +612,7 @@
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
         <rdfs:comment xml:lang="en">A temporal interval or instant.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2006/time#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
     </owl:Class>
     
@@ -688,7 +688,7 @@
     <owl:Class rdf:about="https://w3id.org/def/saref4city#Event">
         <rdfs:comment xml:lang="en">Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q1656682</rdfs:seeAlso>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q1656682</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -718,7 +718,7 @@
     <owl:Class rdf:about="https://w3id.org/def/saref4city#KeyPerformanceIndicator">
         <rdfs:comment xml:lang="en">A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)</rdfs:comment>
         <rdfs:label xml:lang="en">Key Performance Indicator</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html</rdfs:seeAlso>
+        <rdfs:seeAlso>http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -761,7 +761,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4city#Agent"/>
         <rdfs:comment xml:lang="en">Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)</rdfs:comment>
         <rdfs:label xml:lang="en">Public administration</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q31728</rdfs:seeAlso>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q31728</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -772,7 +772,7 @@
     <owl:Class rdf:about="https://w3id.org/def/saref4city#PublicService">
         <rdfs:comment xml:lang="en">Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)</rdfs:comment>
         <rdfs:label xml:lang="en">Public service</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Public_service</rdfs:seeAlso>
+        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Public_service</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -831,8 +831,8 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device&apos;s user vs. the point of view of the device&apos;s manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Device</rdfs:label>
+        <rdfs:comment>A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device&apos;s user vs. the point of view of the device&apos;s manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+        <rdfs:label>Device</rdfs:label>
     </owl:Class>
     
 
@@ -841,8 +841,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/saref#Function">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. </rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function</rdfs:label>
+        <rdfs:comment>The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. </rdfs:comment>
+        <rdfs:label>Function</rdfs:label>
     </owl:Class>
     
 
@@ -893,7 +893,7 @@
         <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
         <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
         <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
     </owl:Class>
     
@@ -917,10 +917,10 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
         <rdfs:comment xml:lang="en">An aspect of an entity that can be observable by a sensor.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:comment>Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Property</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property</rdfs:label>
+        <rdfs:label>Property</rdfs:label>
     </owl:Class>
     
 
@@ -949,6 +949,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
 
 
 
-<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
 
 
