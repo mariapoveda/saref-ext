@@ -62,95 +62,237 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
                                                    rdfs:comment "A spatial representation for a given feature."@en ;
                                                    rdfs:isDefinedBy "http://www.opengis.net/ont/geosparql#"^^xsd:string ;
-                                                   rdfs:label "has geomtry"@en .
+                                                   rdfs:label "has geometry"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "location"@en .
+
+
+###  https://w3id.org/def/saref4city#aggregatesData
+:aggregatesData rdf:type owl:ObjectProperty ;
+                rdfs:label "aggregates data"@en .
+
+
+###  https://w3id.org/def/saref4city#assess
+:assess rdf:type owl:ObjectProperty ;
+        rdfs:label "assess"@en .
+
+
+###  https://w3id.org/def/saref4city#atTime
+:atTime rdf:type owl:ObjectProperty ;
+        rdfs:label "at time"@en .
 
 
 ###  https://w3id.org/def/saref4city#belongsTo
-:belongsTo rdf:type owl:ObjectProperty .
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:label "belongs to"@en .
+
+
+###  https://w3id.org/def/saref4city#belongsToCity
+:belongsToCity rdf:type owl:ObjectProperty ;
+               owl:inverseOf :hasCityObject ;
+               rdfs:label "belongs to city"@en .
+
+
+###  https://w3id.org/def/saref4city#calculatedBy
+:calculatedBy rdf:type owl:ObjectProperty ;
+              rdfs:label "calculated by"@en .
+
+
+###  https://w3id.org/def/saref4city#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+          rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+          rdfs:label "contains"@en .
+
+
+###  https://w3id.org/def/saref4city#hasAccesibility
+:hasAccesibility rdf:type owl:ObjectProperty ;
+                 rdfs:label "has accesibility"@en .
+
+
+###  https://w3id.org/def/saref4city#hasCalculationPeriod
+:hasCalculationPeriod rdf:type owl:ObjectProperty ;
+                      rdfs:label "has calculation period"@en .
+
+
+###  https://w3id.org/def/saref4city#hasCityObject
+:hasCityObject rdf:type owl:ObjectProperty ;
+               rdfs:label "has city object"@en .
+
+
+###  https://w3id.org/def/saref4city#hasFeatureOfInterest
+:hasFeatureOfInterest rdf:type owl:ObjectProperty ;
+                      rdfs:label "has feature of interest"@en .
+
+
+###  https://w3id.org/def/saref4city#hasIndicatorUnit
+:hasIndicatorUnit rdf:type owl:ObjectProperty ;
+                  rdfs:label "has indicator unit"@en .
+
+
+###  https://w3id.org/def/saref4city#hasProperty
+:hasProperty rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isPropertyOf ;
+             rdfs:label "has property"@en .
+
+
+###  https://w3id.org/def/saref4city#involvesFacility
+:involvesFacility rdf:type owl:ObjectProperty ;
+                  rdfs:label "involves facility"@en .
+
+
+###  https://w3id.org/def/saref4city#isAvailableInArea
+:isAvailableInArea rdf:type owl:ObjectProperty ;
+                   rdfs:label "is available in area"@en .
+
+
+###  https://w3id.org/def/saref4city#isAvailableInLanguage
+:isAvailableInLanguage rdf:type owl:ObjectProperty ;
+                       rdfs:range :Language ;
+                       rdfs:label "is available in language"@en .
+
+
+###  https://w3id.org/def/saref4city#isOrganizedBy
+:isOrganizedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:label "is organized by"@en .
+
+
+###  https://w3id.org/def/saref4city#isPropertyOf
+:isPropertyOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "is property of"@en .
+
+
+###  https://w3id.org/def/saref4city#isSubEventOf
+:isSubEventOf rdf:type owl:ObjectProperty ;
+              rdfs:label "is subevent of"@en .
+
+
+###  https://w3id.org/def/saref4city#providesService
+:providesService rdf:type owl:ObjectProperty ;
+                 rdfs:label "provides service"@en .
+
+
+###  https://w3id.org/def/saref4city#refersTo
+:refersTo rdf:type owl:ObjectProperty ;
+          rdfs:label "refers to"@en .
+
+
+###  https://w3id.org/def/saref4city#regulatedBy
+:regulatedBy rdf:type owl:ObjectProperty ;
+             rdfs:label "regulated by"@en .
+
+
+###  https://w3id.org/def/saref4city#takesPlaceAtTime
+:takesPlaceAtTime rdf:type owl:ObjectProperty ;
+                  rdfs:label "takes place at time"@en .
+
+
+###  https://w3id.org/def/saref4city#usesService
+:usesService rdf:type owl:ObjectProperty ;
+             rdfs:label "uses service"@en .
 
 
 ###  https://w3id.org/saref#accomplishes
-<https://w3id.org/saref#accomplishes> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#accomplishes> rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                      rdfs:label "accomplishes"@en .
 
 
 ###  https://w3id.org/saref#consistsOf
-<https://w3id.org/saref#consistsOf> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#consistsOf> rdf:type owl:ObjectProperty ;
+                                    rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                    rdfs:label "consists of"@en .
 
 
 ###  https://w3id.org/saref#controlsProperty
-<https://w3id.org/saref#controlsProperty> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#hasCommand
-<https://w3id.org/saref#hasCommand> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#hasFunction
-<https://w3id.org/saref#hasFunction> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#hasProfile
-<https://w3id.org/saref#hasProfile> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#hasState
-<https://w3id.org/saref#hasState> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#hasTypicalConsumption
-<https://w3id.org/saref#hasTypicalConsumption> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#isControlledByDevice
-<https://w3id.org/saref#isControlledByDevice> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#controlsProperty> rdf:type owl:ObjectProperty ;
+                                          rdfs:label "controls property"@en .
 
 
 ###  https://w3id.org/saref#isMeasuredByDevice
-<https://w3id.org/saref#isMeasuredByDevice> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#isMeasuredByDevice> rdf:type owl:ObjectProperty ;
+                                            owl:inverseOf <https://w3id.org/saref#makesMeasurement> ;
+                                            rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                            rdfs:label "is measured by device"@en .
 
 
 ###  https://w3id.org/saref#isMeasuredIn
-<https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#isUsedFor
-<https://w3id.org/saref#isUsedFor> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                      rdfs:label "is measured in"@en .
 
 
 ###  https://w3id.org/saref#makesMeasurement
-<https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty ;
+                                          rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                          rdfs:label "makes measurement"@en .
 
 
 ###  https://w3id.org/saref#measuresProperty
-<https://w3id.org/saref#measuresProperty> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/saref#offers
-<https://w3id.org/saref#offers> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#measuresProperty> rdf:type owl:ObjectProperty ;
+                                          rdfs:isDefinedBy "https://w3id.org/saref#"^^xsd:string ;
+                                          rdfs:label "measures property"@en .
 
 
 ###  https://w3id.org/saref#relatesToMeasurement
-<https://w3id.org/saref#relatesToMeasurement> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#relatesToMeasurement> rdf:type owl:ObjectProperty ;
+                                              rdfs:isDefinedBy "https://w3id.org/saref#"^^xsd:string ;
+                                              rdfs:label "relates to measurement"@en .
 
 
 ###  https://w3id.org/saref#relatesToProperty
-<https://w3id.org/saref#relatesToProperty> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#relatesToProperty> rdf:type owl:ObjectProperty ;
+                                           rdfs:isDefinedBy "https://w3id.org/saref#"^^xsd:string ;
+                                           rdfs:label "relates to property"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
+###  https://w3id.org/def/saref4city#creationDate
+:creationDate rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/def/saref4city#expirationDate
+:expirationDate rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/def/saref4city#hasKPIDescription
+:hasKPIDescription rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf <https://w3id.org/saref#hasDescription> .
+
+
+###  https://w3id.org/def/saref4city#hasKPIValue
+:hasKPIValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf <https://w3id.org/saref#hasValue> .
+
+
+###  https://w3id.org/def/saref4city#hasServiceDescription
+:hasServiceDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf <https://w3id.org/saref#hasDescription> .
+
+
+###  https://w3id.org/def/saref4city#lastUpdateDate
+:lastUpdateDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/def/saref4city#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:label "name"@en .
+
+
 ###  https://w3id.org/saref#hasDescription
 <https://w3id.org/saref#hasDescription> rdf:type owl:DatatypeProperty .
-
-
-###  https://w3id.org/saref#hasManufacturer
-<https://w3id.org/saref#hasManufacturer> rdf:type owl:DatatypeProperty .
-
-
-###  https://w3id.org/saref#hasModel
-<https://w3id.org/saref#hasModel> rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/saref#hasTimestamp
@@ -165,6 +307,12 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://www.lingvoj.org/ontology#Lingvo
+<http://www.lingvoj.org/ontology#Lingvo> rdf:type owl:Class ;
+                                         owl:equivalentClass :Language ;
+                                         rdfs:label "Language"@en .
+
+
 ###  http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
                                                 rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
@@ -174,7 +322,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+                                                rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                                rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#"^^xsd:string ;
+                                                rdfs:label "Point"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
@@ -182,6 +332,14 @@ xsd:duration rdf:type rdfs:Datatype .
                                                        rdfs:comment "\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"@en ;
                                                        rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#"^^xsd:string ;
                                                        rdfs:label "Spatial thing"@en .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                       rdfs:isDefinedBy "http://www.w3.org/2006/time#"^^xsd:string ;
+                                       rdfs:label "A temporal entity with an extent or duration"@en ,
+                                                  "Time interval"@en .
 
 
 ###  http://www.w3.org/2006/time#TemporalEntity
@@ -193,35 +351,54 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/saref4city#AdministrativeArea
 :AdministrativeArea rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+                    rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                    rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
+                    rdfs:label "Administrative area"@en .
 
 
 ###  https://w3id.org/def/saref4city#Agent
-:Agent rdf:type owl:Class .
+:Agent rdf:type owl:Class ;
+       rdfs:comment "A person or company that provides a particular service. (Definition taken from https://en.oxforddictionaries.com/definition/agent )"@en ;
+       rdfs:label "Agent"@en .
 
 
 ###  https://w3id.org/def/saref4city#City
 :City rdf:type owl:Class ;
-      rdfs:subClassOf :AdministrativeArea .
+      rdfs:subClassOf :AdministrativeArea ;
+      rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
+      rdfs:label "City"@en .
 
 
 ###  https://w3id.org/def/saref4city#CityObject
 :CityObject rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+            rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            rdfs:label "City object"@en .
 
 
 ###  https://w3id.org/def/saref4city#Country
 :Country rdf:type owl:Class ;
-         rdfs:subClassOf :AdministrativeArea .
+         rdfs:subClassOf :AdministrativeArea ;
+         rdfs:comment "A country is a region that is identified as a distinct national entity in political geography. (https://en.wikipedia.org/wiki/Country)"@en ;
+         rdfs:label "Country"@en .
 
 
 ###  https://w3id.org/def/saref4city#District
 :District rdf:type owl:Class ;
-          rdfs:subClassOf :AdministrativeArea .
+          rdfs:subClassOf :AdministrativeArea ;
+          rdfs:comment "A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"@en ;
+          rdfs:label "District"@en .
 
 
 ###  https://w3id.org/def/saref4city#Event
-:Event rdf:type owl:Class .
+:Event rdf:type owl:Class ;
+       rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
+       rdfs:label "Event"@en ;
+       rdfs:seeAlso "https://www.wikidata.org/wiki/Q1656682"^^xsd:string .
+
+
+###  https://w3id.org/def/saref4city#Facility
+:Facility rdf:type owl:Class ;
+          rdfs:label "Facility"@en .
 
 
 ###  https://w3id.org/def/saref4city#FeatureOfInterest
@@ -232,25 +409,48 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/saref4city#KeyPerformanceIndicator
 :KeyPerformanceIndicator rdf:type owl:Class ;
-                         rdfs:label "Key Performance Indicator"@en .
+                         rdfs:comment "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en ;
+                         rdfs:label "Key Performance Indicator"@en ;
+                         rdfs:seeAlso "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html"^^xsd:string .
+
+
+###  https://w3id.org/def/saref4city#Language
+:Language rdf:type owl:Class ;
+          rdfs:label "Language"@en .
 
 
 ###  https://w3id.org/def/saref4city#Neighbourhood
 :Neighbourhood rdf:type owl:Class ;
-               rdfs:subClassOf :AdministrativeArea .
+               rdfs:subClassOf :AdministrativeArea ;
+               rdfs:comment "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"@en ;
+               rdfs:label "Neighbourhood"@en .
+
+
+###  https://w3id.org/def/saref4city#NonConvexInterval
+:NonConvexInterval rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/2006/time#Interval> ;
+                   rdfs:comment "Non-convex intervals are those that use time units in a repetitive way or refer to recur-ring periods."@en ;
+                   rdfs:label "Non-convex interval"@en .
 
 
 ###  https://w3id.org/def/saref4city#PublicAdministration
 :PublicAdministration rdf:type owl:Class ;
-                      rdfs:subClassOf :Agent .
+                      rdfs:subClassOf :Agent ;
+                      rdfs:comment "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"@en ;
+                      rdfs:label "Public administration"@en ;
+                      rdfs:seeAlso "https://www.wikidata.org/wiki/Q31728"^^xsd:string .
 
 
 ###  https://w3id.org/def/saref4city#PublicService
-:PublicService rdf:type owl:Class .
+:PublicService rdf:type owl:Class ;
+               rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
+               rdfs:label "Public service"@en ;
+               rdfs:seeAlso "https://en.wikipedia.org/wiki/Public_service"^^xsd:string .
 
 
 ###  https://w3id.org/def/saref4city#Rule
-:Rule rdf:type owl:Class .
+:Rule rdf:type owl:Class ;
+      rdfs:label "Rule"@en .
 
 
 ###  https://w3id.org/saref#Actuator
@@ -258,14 +458,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                   rdfs:comment "A device responsible for moving or controlling a mechanism or system"@en ;
                                   rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                   rdfs:label "Actuator"@en .
-
-
-###  https://w3id.org/saref#Command
-<https://w3id.org/saref#Command> rdf:type owl:Class .
-
-
-###  https://w3id.org/saref#Commodity
-<https://w3id.org/saref#Commodity> rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Device
@@ -279,26 +471,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                                   owl:allValuesFrom <https://w3id.org/saref#Property>
                                                 ] ,
                                                 [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#hasProfile> ;
-                                                  owl:allValuesFrom <https://w3id.org/saref#Profile>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#hasState> ;
-                                                  owl:allValuesFrom <https://w3id.org/saref#State>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#hasTypicalConsumption> ;
-                                                  owl:allValuesFrom [ rdf:type owl:Class ;
-                                                                      owl:unionOf ( <https://w3id.org/saref#Energy>
-                                                                                    <https://w3id.org/saref#Power>
-                                                                                  )
-                                                                    ]
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#isUsedFor> ;
-                                                  owl:allValuesFrom <https://w3id.org/saref#Commodity>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
                                                   owl:onProperty <https://w3id.org/saref#makesMeasurement> ;
                                                   owl:allValuesFrom <https://w3id.org/saref#Measurement>
                                                 ] ,
@@ -307,46 +479,15 @@ xsd:duration rdf:type rdfs:Datatype .
                                                   owl:allValuesFrom <https://w3id.org/saref#Property>
                                                 ] ,
                                                 [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#offers> ;
-                                                  owl:allValuesFrom <https://w3id.org/saref#Service>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#accomplishes> ;
-                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                  owl:onClass <https://w3id.org/saref#Task>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#hasFunction> ;
-                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                  owl:onClass <https://w3id.org/saref#Function>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
                                                   owl:onProperty <https://w3id.org/saref#hasDescription> ;
-                                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#hasManufacturer> ;
-                                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#hasModel> ;
                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                 ] ;
                                 rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
                                 rdfs:label "Device"^^xsd:string .
 
 
-###  https://w3id.org/saref#Energy
-<https://w3id.org/saref#Energy> rdf:type owl:Class .
-
-
 ###  https://w3id.org/saref#Function
 <https://w3id.org/saref#Function> rdf:type owl:Class ;
-                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/saref#hasCommand> ;
-                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                    owl:onClass <https://w3id.org/saref#Command>
-                                                  ] ;
                                   rdfs:comment "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. "^^xsd:string ;
                                   rdfs:label "Function"^^xsd:string .
 
@@ -387,21 +528,9 @@ xsd:duration rdf:type rdfs:Datatype .
                                      rdfs:label "Measurement"@en .
 
 
-###  https://w3id.org/saref#Power
-<https://w3id.org/saref#Power> rdf:type owl:Class .
-
-
-###  https://w3id.org/saref#Profile
-<https://w3id.org/saref#Profile> rdf:type owl:Class .
-
-
 ###  https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/saref#isControlledByDevice> ;
-                                                    owl:allValuesFrom <https://w3id.org/saref#Device>
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isMeasuredByDevice> ;
                                                     owl:allValuesFrom <https://w3id.org/saref#Device>
                                                   ] ,
@@ -423,18 +552,6 @@ xsd:duration rdf:type rdfs:Datatype .
 A device that has category saref:Sensor and performs a saref:SensingFunction."""@en ;
                                 rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                 rdfs:label "Sensor"@en .
-
-
-###  https://w3id.org/saref#Service
-<https://w3id.org/saref#Service> rdf:type owl:Class .
-
-
-###  https://w3id.org/saref#State
-<https://w3id.org/saref#State> rdf:type owl:Class .
-
-
-###  https://w3id.org/saref#Task
-<https://w3id.org/saref#Task> rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#UnitOfMeasure
