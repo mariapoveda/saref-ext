@@ -98,11 +98,6 @@ xsd:duration a rdfs:Datatype .
 <https://w3id.org/def/saref4city#assess> a owl:ObjectProperty ;
 	rdfs:label "assess"@en .
 # 
-# https://w3id.org/def/saref4city#atTime
-
-<https://w3id.org/def/saref4city#atTime> a owl:ObjectProperty ;
-	rdfs:label "at time"@en .
-# 
 # https://w3id.org/def/saref4city#belongsTo
 
 <https://w3id.org/def/saref4city#belongsTo> a owl:ObjectProperty ;
@@ -170,7 +165,7 @@ xsd:duration a rdfs:Datatype .
 # https://w3id.org/def/saref4city#isAvailableInLanguage
 
 <https://w3id.org/def/saref4city#isAvailableInLanguage> a owl:ObjectProperty ;
-	rdfs:range <https://w3id.org/def/saref4city#Language> ;
+	rdfs:range <http://www.lingvoj.org/ontology#Lingvo> ;
 	rdfs:label "is available in language"@en .
 # 
 # https://w3id.org/def/saref4city#isOrganizedBy
@@ -214,12 +209,6 @@ xsd:duration a rdfs:Datatype .
 
 <https://w3id.org/def/saref4city#usesService> a owl:ObjectProperty ;
 	rdfs:label "uses service"@en .
-# 
-# https://w3id.org/saref#accomplishes
-
-saref:accomplishes a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
-	rdfs:label "accomplishes"@en .
 # 
 # https://w3id.org/saref#consistsOf
 
@@ -338,7 +327,6 @@ saref:hasValue a owl:DatatypeProperty .
 # http://www.lingvoj.org/ontology#Lingvo
 
 <http://www.lingvoj.org/ontology#Lingvo> a owl:Class ;
-	owl:equivalentClass <https://w3id.org/def/saref4city#Language> ;
 	rdfs:label "Language"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
@@ -441,10 +429,9 @@ saref:hasValue a owl:DatatypeProperty .
 	rdfs:label "Key Performance Indicator"@en ;
 	rdfs:seeAlso "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
 # 
-# https://w3id.org/def/saref4city#Language
+# https://w3id.org/def/saref4city#List
 
-<https://w3id.org/def/saref4city#Language> a owl:Class ;
-	rdfs:label "Language"@en .
+<https://w3id.org/def/saref4city#List> a owl:Class .
 # 
 # https://w3id.org/def/saref4city#Neighbourhood
 
@@ -483,6 +470,7 @@ saref:hasValue a owl:DatatypeProperty .
 # https://w3id.org/saref#Actuator
 
 saref:Actuator a owl:Class ;
+	rdfs:subClassOf saref:Device ;
 	rdfs:comment "A device responsible for moving or controlling a mechanism or system"@en ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Actuator"@en .
@@ -522,12 +510,6 @@ _:genid5 a owl:Restriction ;
 
 saref:Device rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
 	rdfs:label "Device"^^xsd:string .
-# 
-# https://w3id.org/saref#Function
-
-saref:Function a owl:Class ;
-	rdfs:comment "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. "^^xsd:string ;
-	rdfs:label "Function"^^xsd:string .
 # 
 # https://w3id.org/saref#Measurement
 
@@ -599,6 +581,7 @@ saref:Property owl:disjointWith saref:UnitOfMeasure ;
 # https://w3id.org/saref#Sensor
 
 saref:Sensor a owl:Class ;
+	rdfs:subClassOf saref:Device ;
 	rdfs:comment """A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes.
 A device that has category saref:Sensor and performs a saref:SensingFunction."""@en ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
