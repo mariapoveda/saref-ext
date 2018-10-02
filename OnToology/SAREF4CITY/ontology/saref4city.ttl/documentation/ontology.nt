@@ -1,8 +1,8 @@
 <https://w3id.org/def/saref4city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/def/saref4city> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/v1/saref4city> .
-<https://w3id.org/def/saref4city> <http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the Smart Cities domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart Cities domain."@en .
+<https://w3id.org/def/saref4city> <http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the Smart City domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart City domain."@en .
 <https://w3id.org/def/saref4city> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
-<https://w3id.org/def/saref4city> <http://purl.org/dc/elements/1.1/title> "SAREF extension for Smart Cities"@en .
+<https://w3id.org/def/saref4city> <http://purl.org/dc/elements/1.1/title> "SAREF extension for Smart City"@en .
 <https://w3id.org/def/saref4city> <http://purl.org/dc/terms/creator> <http://w3id.org/people/mpoveda> .
 <https://w3id.org/def/saref4city> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
 <https://w3id.org/def/saref4city> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
@@ -75,10 +75,6 @@
 <https://w3id.org/def/saref4city#assess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#assess> <http://www.w3.org/2000/01/rdf-schema#label> "assess"@en .
 # 
-# https://w3id.org/def/saref4city#atTime
-<https://w3id.org/def/saref4city#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en .
-# 
 # https://w3id.org/def/saref4city#belongsTo
 <https://w3id.org/def/saref4city#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
@@ -133,7 +129,7 @@
 # 
 # https://w3id.org/def/saref4city#isAvailableInLanguage
 <https://w3id.org/def/saref4city#isAvailableInLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#isAvailableInLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4city#Language> .
+<https://w3id.org/def/saref4city#isAvailableInLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lingvoj.org/ontology#Lingvo> .
 <https://w3id.org/def/saref4city#isAvailableInLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "is available in language"@en .
 # 
 # https://w3id.org/def/saref4city#isOrganizedBy
@@ -169,11 +165,6 @@
 # https://w3id.org/def/saref4city#usesService
 <https://w3id.org/def/saref4city#usesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#usesService> <http://www.w3.org/2000/01/rdf-schema#label> "uses service"@en .
-# 
-# https://w3id.org/saref#accomplishes
-<https://w3id.org/saref#accomplishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#accomplishes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#"@en .
-<https://w3id.org/saref#accomplishes> <http://www.w3.org/2000/01/rdf-schema#label> "accomplishes"@en .
 # 
 # https://w3id.org/saref#consistsOf
 <https://w3id.org/saref#consistsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -273,7 +264,6 @@
 # 
 # http://www.lingvoj.org/ontology#Lingvo
 <http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/def/saref4city#Language> .
 <http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
@@ -293,6 +283,10 @@
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#comment> "\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"@en .
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2003/01/geo/wgs84_pos#" .
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial thing"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2004/02/skos/core#" .
 # 
 # http://www.w3.org/2006/time#Interval
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -361,9 +355,8 @@
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Key Performance Indicator"@en .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
 # 
-# https://w3id.org/def/saref4city#Language
-<https://w3id.org/def/saref4city#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4city#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
+# https://w3id.org/def/saref4city#List
+<https://w3id.org/def/saref4city#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/def/saref4city#Neighbourhood
 <https://w3id.org/def/saref4city#Neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -396,6 +389,7 @@
 # 
 # https://w3id.org/saref#Actuator
 <https://w3id.org/saref#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Actuator> <http://www.w3.org/2000/01/rdf-schema#comment> "A device responsible for moving or controlling a mechanism or system"@en .
 <https://w3id.org/saref#Actuator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator"@en .
@@ -424,11 +418,6 @@ _:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasD
 _:genid5 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
-# 
-# https://w3id.org/saref#Function
-<https://w3id.org/saref#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. " .
-<https://w3id.org/saref#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function" .
 # 
 # https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -484,6 +473,7 @@ _:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 # 
 # https://w3id.org/saref#Sensor
 <https://w3id.org/saref#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes.\nA device that has category saref:Sensor and performs a saref:SensingFunction."@en .
 <https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
@@ -494,4 +484,4 @@ _:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of measure"@en .
 # 
-# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

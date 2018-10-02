@@ -23,6 +23,11 @@ This section provides details for each class and property defined by SAREF exten
          <a href="#CityObject" title="https://w3id.org/def/saref4city#CityObject">City object</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">
+            <span>concept</span>
+         </a>
+      </li>
+      <li>
          <a href="#Country" title="https://w3id.org/def/saref4city#Country">Country</a>
       </li>
       <li>
@@ -44,9 +49,6 @@ This section provides details for each class and property defined by SAREF exten
          </a>
       </li>
       <li>
-         <a href="#https://w3id.org/saref#Function" title="https://w3id.org/saref#Function">Function</a>
-      </li>
-      <li>
          <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
       </li>
       <li>
@@ -55,9 +57,6 @@ This section provides details for each class and property defined by SAREF exten
       </li>
       <li>
          <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Language</a>
-      </li>
-      <li>
-         <a href="#Language" title="https://w3id.org/def/saref4city#Language">Language</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
@@ -138,6 +137,13 @@ This section provides details for each class and property defined by SAREF exten
          <dt>Is defined by</dt>
          <dd>
             <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -222,6 +228,18 @@ This section provides details for each class and property defined by SAREF exten
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
+      <h3>concept<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/saref4city</dd>
+      </dl>
+   </div>
    <div class="entity" id="Country">
       <h3>Country<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -285,6 +303,12 @@ This section provides details for each class and property defined by SAREF exten
             <span class="dotted" title="https://w3id.org/saref#hasDescription">has description</span>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">max</span> 1</dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Actuator" title="https://w3id.org/saref#Actuator">Actuator</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="District">
@@ -337,17 +361,6 @@ This section provides details for each class and property defined by SAREF exten
  It might be replaced by ssn feature of interest or created in saref ontology</span>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/saref#Function">
-      <h3>Function<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/saref#Function</p>
-      <div class="comment">
-         <span class="markdown">The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. </span>
-      </div>
-   </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#Geometry">
       <h3>Geometry<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -381,21 +394,6 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> http://www.lingvoj.org/ontology#Lingvo</p>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#Language" title="https://w3id.org/def/saref4city#Language">Language</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Language">
-      <h3>Language<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4city#Language</p>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -614,6 +612,13 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
             <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
          </dd>
       </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
       <h3>Spatial thing<sup class="type-c" title="class">c</sup>
@@ -701,16 +706,10 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://w3id.org/saref#accomplishes" title="https://w3id.org/saref#accomplishes">accomplishes</a>
-      </li>
-      <li>
          <a href="#aggregatesData" title="https://w3id.org/def/saref4city#aggregatesData">aggregates data</a>
       </li>
       <li>
          <a href="#assess" title="https://w3id.org/def/saref4city#assess">assess</a>
-      </li>
-      <li>
-         <a href="#atTime" title="https://w3id.org/def/saref4city#atTime">at time</a>
       </li>
       <li>
          <a href="#belongsTo" title="https://w3id.org/def/saref4city#belongsTo">belongs to</a>
@@ -810,18 +809,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <a href="#usesService" title="https://w3id.org/def/saref4city#usesService">uses service</a>
       </li>
    </ul>
-   <div class="entity" id="https://w3id.org/saref#accomplishes">
-      <h3>accomplishes<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/saref#accomplishes</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>https://w3id.org/def/saref4city</dd>
-      </dl>
-   </div>
    <div class="entity" id="aggregatesData">
       <h3>aggregates data<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -837,14 +824,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#assess</p>
-   </div>
-   <div class="entity" id="atTime">
-      <h3>at time<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4city#atTime</p>
    </div>
    <div class="entity" id="belongsTo">
       <h3>belongs to<sup class="type-op" title="object property">op</sup>
@@ -1031,7 +1010,7 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <dl>
             <dt>has range</dt>
             <dd>
-               <a href="#Language" title="https://w3id.org/def/saref4city#Language">Language</a>
+               <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Language</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
