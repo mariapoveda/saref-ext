@@ -171,19 +171,22 @@ xsd:duration a rdfs:Datatype .
 # https://w3id.org/def/saref4city#isOrganizedBy
 
 <https://w3id.org/def/saref4city#isOrganizedBy> a owl:ObjectProperty ;
-	rdfs:subPropertyOf owl:topObjectProperty ;
 	rdfs:label "is organized by"@en .
 # 
 # https://w3id.org/def/saref4city#isPropertyOf
 
 <https://w3id.org/def/saref4city#isPropertyOf> a owl:ObjectProperty ;
-	rdfs:subPropertyOf owl:topObjectProperty ;
 	rdfs:label "is property of"@en .
 # 
 # https://w3id.org/def/saref4city#isSubEventOf
 
 <https://w3id.org/def/saref4city#isSubEventOf> a owl:ObjectProperty ;
 	rdfs:label "is subevent of"@en .
+# 
+# https://w3id.org/def/saref4city#measurementMadeBy
+
+<https://w3id.org/def/saref4city#measurementMadeBy> a owl:ObjectProperty ;
+	owl:inverseOf saref:makesMeasurement .
 # 
 # https://w3id.org/def/saref4city#providesService
 
@@ -224,7 +227,6 @@ saref:controlsProperty a owl:ObjectProperty ;
 # https://w3id.org/saref#isMeasuredByDevice
 
 saref:isMeasuredByDevice a owl:ObjectProperty ;
-	owl:inverseOf saref:makesMeasurement ;
 	rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
 	rdfs:label "is measured by device"@en .
 # 
@@ -277,10 +279,21 @@ saref:relatesToProperty a owl:ObjectProperty ;
 <https://w3id.org/def/saref4city#expirationDate> a owl:DatatypeProperty ;
 	rdfs:range xsd:dateTime .
 # 
+# https://w3id.org/def/saref4city#hasEventName
+
+<https://w3id.org/def/saref4city#hasEventName> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf <https://w3id.org/def/saref4city#name> ;
+	rdfs:label "has event name"@en .
+# 
 # https://w3id.org/def/saref4city#hasKPIDescription
 
 <https://w3id.org/def/saref4city#hasKPIDescription> a owl:DatatypeProperty ;
 	rdfs:subPropertyOf saref:hasDescription .
+# 
+# https://w3id.org/def/saref4city#hasKPIName
+
+<https://w3id.org/def/saref4city#hasKPIName> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf <https://w3id.org/def/saref4city#name> .
 # 
 # https://w3id.org/def/saref4city#hasKPIValue
 
@@ -291,6 +304,11 @@ saref:relatesToProperty a owl:ObjectProperty ;
 
 <https://w3id.org/def/saref4city#hasServiceDescription> a owl:DatatypeProperty ;
 	rdfs:subPropertyOf saref:hasDescription .
+# 
+# https://w3id.org/def/saref4city#hasServiceName
+
+<https://w3id.org/def/saref4city#hasServiceName> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf <https://w3id.org/def/saref4city#name> .
 # 
 # https://w3id.org/def/saref4city#lastUpdateDate
 
