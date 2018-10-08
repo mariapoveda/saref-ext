@@ -14,7 +14,7 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative area</a>
    </li>
    <li>
-      <a href="#Agent" title="https://w3id.org/def/saref4city#Agent">Agent</a>
+      <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
    </li>
    <li>
       <a href="#City" title="https://w3id.org/def/saref4city#City">City</a>
@@ -52,8 +52,15 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instant</a>
+   </li>
+   <li>
       <a href="#KeyPerformanceIndicator"
          title="https://w3id.org/def/saref4city#KeyPerformanceIndicator">Key Performance Indicator</a>
+   </li>
+   <li>
+      <a href="#KeyPerformanceIndicatorValue"
+         title="https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue">Key performance indicator value</a>
    </li>
    <li>
       <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Language</a>
@@ -65,8 +72,10 @@ This ontology has the following classes and properties.</span>
       <a href="#Neighbourhood" title="https://w3id.org/def/saref4city#Neighbourhood">Neighbourhood</a>
    </li>
    <li>
-      <a href="#NonConvexInterval"
-         title="https://w3id.org/def/saref4city#NonConvexInterval">Non-convex interval</a>
+      <a href="#http://www.w3.org/ns/org#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
    </li>
    <li>
       <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">Point</a>
@@ -82,9 +91,6 @@ This ontology has the following classes and properties.</span>
       <a href="#PublicService" title="https://w3id.org/def/saref4city#PublicService">Public service</a>
    </li>
    <li>
-      <a href="#Rule" title="https://w3id.org/def/saref4city#Rule">Rule</a>
-   </li>
-   <li>
       <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
    </li>
    <li>
@@ -98,9 +104,6 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
-   <li>
-      <a href="#aggregatesData" title="https://w3id.org/def/saref4city#aggregatesData">aggregates data</a>
-   </li>
    <li>
       <a href="#assess" title="https://w3id.org/def/saref4city#assess">assess</a>
    </li>
@@ -146,6 +149,9 @@ This ontology has the following classes and properties.</span>
       <a href="#hasProperty" title="https://w3id.org/def/saref4city#hasProperty">has property</a>
    </li>
    <li>
+      <a href="#implementsKPI" title="https://w3id.org/def/saref4city#implementsKPI">implements KPI</a>
+   </li>
+   <li>
       <a href="#involvesFacility" title="https://w3id.org/def/saref4city#involvesFacility">involves facility</a>
    </li>
    <li>
@@ -155,6 +161,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#isAvailableInLanguage"
          title="https://w3id.org/def/saref4city#isAvailableInLanguage">is available in language</a>
+   </li>
+   <li>
+      <a href="#isDerivedFrom" title="https://w3id.org/def/saref4city#isDerivedFrom">is derived from</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#isMeasuredByDevice" title="https://w3id.org/saref#isMeasuredByDevice">is measured by device</a>
@@ -172,7 +181,9 @@ This ontology has the following classes and properties.</span>
       <a href="#isSubEventOf" title="https://w3id.org/def/saref4city#isSubEventOf">is subevent of</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+         <span>location</span>
+      </a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#makesMeasurement" title="https://w3id.org/saref#makesMeasurement">makes measurement</a>
@@ -190,16 +201,17 @@ This ontology has the following classes and properties.</span>
       <a href="#providesService" title="https://w3id.org/def/saref4city#providesService">provides service</a>
    </li>
    <li>
-      <a href="#refersTo" title="https://w3id.org/def/saref4city#refersTo">refers to</a>
-   </li>
-   <li>
-      <a href="#regulatedBy" title="https://w3id.org/def/saref4city#regulatedBy">regulated by</a>
+      <a href="#refersToSpace" title="https://w3id.org/def/saref4city#refersToSpace">refers to space</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#relatesToMeasurement" title="https://w3id.org/saref#relatesToMeasurement">relates to measurement</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#relatesToProperty" title="https://w3id.org/saref#relatesToProperty">relates to property</a>
+   </li>
+   <li>
+      <a href="#takesPlaceAtFacility"
+         title="https://w3id.org/def/saref4city#takesPlaceAtFacility">takes place at facility</a>
    </li>
    <li>
       <a href="#takesPlaceAtTime" title="https://w3id.org/def/saref4city#takesPlaceAtTime">takes place at time</a>

@@ -22,6 +22,18 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
@@ -42,8 +54,39 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid).""" ;
+                                              rdfs:label "altitude" ;
+                                              rdf:type owl:AnnotationProperty ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
+                                              rdfs:label "latitude" ;
+                                              rdf:type owl:AnnotationProperty ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+                                               rdfs:label "longitude" ;
+                                               rdf:type owl:AnnotationProperty ;
+                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
 ###  http://www.w3.org/ns/prov#hadPrimarySource
 <http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/based_near
+<http://xmlns.com/foaf/0.1/based_near> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -67,12 +110,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
-                                                   rdfs:label "location"@en .
-
-
-###  https://w3id.org/def/saref4city#aggregatesData
-:aggregatesData rdf:type owl:ObjectProperty ;
-                rdfs:label "aggregates data"@en .
+                                                   rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
 ###  https://w3id.org/def/saref4city#assess
@@ -134,6 +172,11 @@ xsd:duration rdf:type rdfs:Datatype .
              rdfs:label "has property"@en .
 
 
+###  https://w3id.org/def/saref4city#implementsKPI
+:implementsKPI rdf:type owl:ObjectProperty ;
+               rdfs:label "implements KPI"@en .
+
+
 ###  https://w3id.org/def/saref4city#involvesFacility
 :involvesFacility rdf:type owl:ObjectProperty ;
                   rdfs:label "involves facility"@en .
@@ -148,6 +191,11 @@ xsd:duration rdf:type rdfs:Datatype .
 :isAvailableInLanguage rdf:type owl:ObjectProperty ;
                        rdfs:range <http://www.lingvoj.org/ontology#Lingvo> ;
                        rdfs:label "is available in language"@en .
+
+
+###  https://w3id.org/def/saref4city#isDerivedFrom
+:isDerivedFrom rdf:type owl:ObjectProperty ;
+               rdfs:label "is derived from"@en .
 
 
 ###  https://w3id.org/def/saref4city#isOrganizedBy
@@ -175,14 +223,14 @@ xsd:duration rdf:type rdfs:Datatype .
                  rdfs:label "provides service"@en .
 
 
-###  https://w3id.org/def/saref4city#refersTo
-:refersTo rdf:type owl:ObjectProperty ;
-          rdfs:label "refers to"@en .
+###  https://w3id.org/def/saref4city#refersToSpace
+:refersToSpace rdf:type owl:ObjectProperty ;
+               rdfs:label "refers to space"@en .
 
 
-###  https://w3id.org/def/saref4city#regulatedBy
-:regulatedBy rdf:type owl:ObjectProperty ;
-             rdfs:label "regulated by"@en .
+###  https://w3id.org/def/saref4city#takesPlaceAtFacility
+:takesPlaceAtFacility rdf:type owl:ObjectProperty ;
+                      rdfs:label "takes place at facility"@en .
 
 
 ###  https://w3id.org/def/saref4city#takesPlaceAtTime
@@ -329,20 +377,43 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> rdf:type owl:Class ;
                                                 rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                                rdfs:comment """ 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  """ ,
+                                                             """A point, typically described using a coordinate system relative to Earth, such as WGS84.
+  """ ;
                                                 rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
-                                                rdfs:label "Point"@en .
+                                                rdfs:label "Point"@en ,
+                                                           "point" .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
-                                                       rdfs:comment "\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"@en ;
+                                                       rdfs:comment "\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"@en ,
+                                                                    """Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+""" ;
                                                        rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
-                                                       rdfs:label "Spatial thing"@en .
+                                                       rdfs:label "Spatial thing"@en ,
+                                                                  "SpatialThing" .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
                                               rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#" .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                      rdfs:comment "A temporal entity with zero extent or duration"@en ;
+                                      rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+                                      rdfs:label "Instant"@en .
 
 
 ###  http://www.w3.org/2006/time#Interval
@@ -360,17 +431,31 @@ xsd:duration rdf:type rdfs:Datatype .
                                              rdfs:label "Temporal entity"@en .
 
 
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                        rdfs:isDefinedBy "http://www.w3.org/ns/org#" ;
+                                        rdfs:label "Organization"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+                                  rdfs:label "Agent"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                   rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+                                   rdfs:label "Person"@en .
+
+
 ###  https://w3id.org/def/saref4city#AdministrativeArea
 :AdministrativeArea rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
                     rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
                     rdfs:label "Administrative area"@en .
-
-
-###  https://w3id.org/def/saref4city#Agent
-:Agent rdf:type owl:Class ;
-       rdfs:comment "A person or company that provides a particular service. (Definition taken from https://en.oxforddictionaries.com/definition/agent )"@en ;
-       rdfs:label "Agent"@en .
 
 
 ###  https://w3id.org/def/saref4city#City
@@ -409,6 +494,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/saref4city#Facility
 :Facility rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
           rdfs:label "Facility"@en .
 
 
@@ -425,8 +511,10 @@ xsd:duration rdf:type rdfs:Datatype .
                          rdfs:seeAlso "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
 
 
-###  https://w3id.org/def/saref4city#List
-:List rdf:type owl:Class .
+###  https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
+:KeyPerformanceIndicatorValue rdf:type owl:Class ;
+                              rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
+                              rdfs:label "Key performance indicator value"@en .
 
 
 ###  https://w3id.org/def/saref4city#Neighbourhood
@@ -436,16 +524,9 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:label "Neighbourhood"@en .
 
 
-###  https://w3id.org/def/saref4city#NonConvexInterval
-:NonConvexInterval rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/2006/time#Interval> ;
-                   rdfs:comment "Non-convex intervals are those that use time units in a repetitive way or refer to recur-ring periods."@en ;
-                   rdfs:label "Non-convex interval"@en .
-
-
 ###  https://w3id.org/def/saref4city#PublicAdministration
 :PublicAdministration rdf:type owl:Class ;
-                      rdfs:subClassOf :Agent ;
+                      rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
                       rdfs:comment "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"@en ;
                       rdfs:label "Public administration"@en ;
                       rdfs:seeAlso "https://www.wikidata.org/wiki/Q31728" .
@@ -458,11 +539,6 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:seeAlso "https://en.wikipedia.org/wiki/Public_service" .
 
 
-###  https://w3id.org/def/saref4city#Rule
-:Rule rdf:type owl:Class ;
-      rdfs:label "Rule"@en .
-
-
 ###  https://w3id.org/saref#Actuator
 <https://w3id.org/saref#Actuator> rdf:type owl:Class ;
                                   rdfs:subClassOf <https://w3id.org/saref#Device> ;
@@ -473,7 +549,8 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> rdf:type owl:Class ;
-                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                                                [ rdf:type owl:Restriction ;
                                                   owl:onProperty <https://w3id.org/saref#consistsOf> ;
                                                   owl:allValuesFrom <https://w3id.org/saref#Device>
                                                 ] ,
@@ -565,6 +642,118 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
                                        rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
                                        rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                        rdfs:label "Unit of measure"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" ;
+                                           <http://purl.org/dc/elements/1.1/description> """A vocabulary for representing latitude, longitude and 
+ altitude information in the WGS84 geodetic reference datum. 
+ Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.""" ;
+                                           <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" ;
+                                           rdfs:comment """
+Recent changes to this namespace:
+$Log: wgs84_pos.rdf,v $
+Revision 1.22  2009/04/20 15:00:30  timbl
+Remove the time bits which have been deal with elsewhere eg in iCal.
+
+Revision 1.21  2009/04/20 12:52:47  timbl
+try again
+
+Revision 1.20  2009/04/20 12:42:11  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.19  2009/04/20 12:36:31  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.18  2006/02/01 22:01:04  danbri
+Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid
+
+Revision 1.17  2004/02/06 17:38:12  danbri
+Fixed a bad commit screwup
+
+Revision 1.15  2003/04/19 11:24:08  danbri
+Fixed the typo even more.
+
+Revision 1.14  2003/04/19 11:16:56  danbri
+fixed a typo
+
+Revision 1.13  2003/02/19 22:27:27  connolly
+relaxed domain constraints on lat/long/alt from Point to SpatialThing
+
+Revision 1.12  2003/01/12 01:41:41  danbri
+Trying local copy of XSLT doc.
+
+Revision 1.11  2003/01/12 01:20:18  danbri
+added a link to morten's xslt rdfs viewer.
+
+Revision 1.10  2003/01/11 18:56:49  danbri
+Removed datatype range from lat and long properties, since they would
+have required each occurance of the property to mention the datatype.
+
+Revision 1.9  2003/01/11 11:41:31  danbri
+Another typo; repaired rdfs:Property to rdf:Property x4
+
+Revision 1.8  2003/01/11 11:05:02  danbri
+Added an rdfs:range for each lat/long/alt property,
+http://www.w3.org/2001/XMLSchema#float
+
+Revision 1.7  2003/01/10 20:25:16  danbri
+Longer rdfs:comment for Point, trying to be Earth-centric and neutral about
+coordinate system(s) at the same time. Feedback welcomed.
+
+Revision 1.6  2003/01/10 20:18:30  danbri
+Added CVS log comments into the RDF/XML as an rdfs:comment property of the
+vocabulary. Note that this is not common practice (but seems both harmless
+and potentially useful).
+
+
+revision 1.5
+date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5
+Updated schema:
+Added a dc:date, added url for more info. Changed the rdfs:label of the
+namespace from gp to geo. Added a class Point, set as the rdfs:domain of
+each property. Added XML comment on the lat_long property suggesting that
+we might not need it (based on #rdfig commentary from implementors).
+
+revision 1.4
+date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5
+Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in
+#rdfig for catching this error.
+
+revision 1.3
+date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3
+fixed buglet in vocab, added more wgs links
+
+revision 1.2
+date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4
+Removed alt from the as-a-flat-string property, and switched from
+space separated to comma separated.
+
+revision 1.1
+date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
+basic geo vocab
+
+""" ;
+                                           rdfs:label "geo" .
+
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." ;
+                                                   rdfs:label "lat/long" .
+
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """ ;
+                                                   rdfs:label "location"@en ,
+                                                              "location" .
 
 
 ###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
