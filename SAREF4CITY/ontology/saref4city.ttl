@@ -12,6 +12,7 @@
 
 <https://w3id.org/def/saref4city> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4city> ;
+	owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
 	dc:title "SAREF extension for Smart City"@en ;
 	owl:versionInfo "0.1"^^xsd:decimal ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
@@ -88,11 +89,6 @@ xsd:duration a rdfs:Datatype .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> a owl:ObjectProperty ;
 	rdfs:label "location"@en .
 # 
-# https://w3id.org/def/saref4city#aggregatesData
-
-<https://w3id.org/def/saref4city#aggregatesData> a owl:ObjectProperty ;
-	rdfs:label "aggregates data"@en .
-# 
 # https://w3id.org/def/saref4city#assess
 
 <https://w3id.org/def/saref4city#assess> a owl:ObjectProperty ;
@@ -152,6 +148,11 @@ xsd:duration a rdfs:Datatype .
 	owl:inverseOf <https://w3id.org/def/saref4city#isPropertyOf> ;
 	rdfs:label "has property"@en .
 # 
+# https://w3id.org/def/saref4city#implementsKPI
+
+<https://w3id.org/def/saref4city#implementsKPI> a owl:ObjectProperty ;
+	rdfs:label "implements KPI"@en .
+# 
 # https://w3id.org/def/saref4city#involvesFacility
 
 <https://w3id.org/def/saref4city#involvesFacility> a owl:ObjectProperty ;
@@ -167,6 +168,11 @@ xsd:duration a rdfs:Datatype .
 <https://w3id.org/def/saref4city#isAvailableInLanguage> a owl:ObjectProperty ;
 	rdfs:range <http://www.lingvoj.org/ontology#Lingvo> ;
 	rdfs:label "is available in language"@en .
+# 
+# https://w3id.org/def/saref4city#isDerivedFrom
+
+<https://w3id.org/def/saref4city#isDerivedFrom> a owl:ObjectProperty ;
+	rdfs:label "is derived from"@en .
 # 
 # https://w3id.org/def/saref4city#isOrganizedBy
 
@@ -193,15 +199,15 @@ xsd:duration a rdfs:Datatype .
 <https://w3id.org/def/saref4city#providesService> a owl:ObjectProperty ;
 	rdfs:label "provides service"@en .
 # 
-# https://w3id.org/def/saref4city#refersTo
+# https://w3id.org/def/saref4city#refersToSpace
 
-<https://w3id.org/def/saref4city#refersTo> a owl:ObjectProperty ;
-	rdfs:label "refers to"@en .
+<https://w3id.org/def/saref4city#refersToSpace> a owl:ObjectProperty ;
+	rdfs:label "refers to space"@en .
 # 
-# https://w3id.org/def/saref4city#regulatedBy
+# https://w3id.org/def/saref4city#takesPlaceAtFacility
 
-<https://w3id.org/def/saref4city#regulatedBy> a owl:ObjectProperty ;
-	rdfs:label "regulated by"@en .
+<https://w3id.org/def/saref4city#takesPlaceAtFacility> a owl:ObjectProperty ;
+	rdfs:label "takes place at facility"@en .
 # 
 # https://w3id.org/def/saref4city#takesPlaceAtTime
 
@@ -357,7 +363,6 @@ saref:hasValue a owl:DatatypeProperty .
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
 
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
 	rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
 	rdfs:label "Point"@en .
 # 
@@ -373,6 +378,14 @@ saref:hasValue a owl:DatatypeProperty .
 <http://www.w3.org/2004/02/skos/core#Concept> a owl:Class ;
 	rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#" .
 # 
+# http://www.w3.org/2006/time#Instant
+
+<http://www.w3.org/2006/time#Instant> a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+	rdfs:comment "A temporal entity with zero extent or duration"@en ;
+	rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+	rdfs:label "Instant"@en .
+# 
 # http://www.w3.org/2006/time#Interval
 
 <http://www.w3.org/2006/time#Interval> a owl:Class ;
@@ -387,18 +400,32 @@ saref:hasValue a owl:DatatypeProperty .
 	rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
 	rdfs:label "Temporal entity"@en .
 # 
+# http://www.w3.org/ns/org#Organization
+
+<http://www.w3.org/ns/org#Organization> a owl:Class ;
+	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+	rdfs:isDefinedBy "http://www.w3.org/ns/org#" ;
+	rdfs:label "Organization"@en .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+
+<http://xmlns.com/foaf/0.1/Agent> a owl:Class ;
+	rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+	rdfs:label "Agent"@en .
+# 
+# http://xmlns.com/foaf/0.1/Person
+
+<http://xmlns.com/foaf/0.1/Person> a owl:Class ;
+	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+	rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+	rdfs:label "Person"@en .
+# 
 # https://w3id.org/def/saref4city#AdministrativeArea
 
 <https://w3id.org/def/saref4city#AdministrativeArea> a owl:Class ;
 	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
 	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
 	rdfs:label "Administrative area"@en .
-# 
-# https://w3id.org/def/saref4city#Agent
-
-<https://w3id.org/def/saref4city#Agent> a owl:Class ;
-	rdfs:comment "A person or company that provides a particular service. (Definition taken from https://en.oxforddictionaries.com/definition/agent )"@en ;
-	rdfs:label "Agent"@en .
 # 
 # https://w3id.org/def/saref4city#City
 
@@ -437,6 +464,7 @@ saref:hasValue a owl:DatatypeProperty .
 # https://w3id.org/def/saref4city#Facility
 
 <https://w3id.org/def/saref4city#Facility> a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
 	rdfs:label "Facility"@en .
 # 
 # https://w3id.org/def/saref4city#FeatureOfInterest
@@ -452,9 +480,11 @@ saref:hasValue a owl:DatatypeProperty .
 	rdfs:label "Key Performance Indicator"@en ;
 	rdfs:seeAlso "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
 # 
-# https://w3id.org/def/saref4city#List
+# https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
 
-<https://w3id.org/def/saref4city#List> a owl:Class .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> a owl:Class ;
+	rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
+	rdfs:label "Key performance indicator value"@en .
 # 
 # https://w3id.org/def/saref4city#Neighbourhood
 
@@ -463,17 +493,10 @@ saref:hasValue a owl:DatatypeProperty .
 	rdfs:comment "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"@en ;
 	rdfs:label "Neighbourhood"@en .
 # 
-# https://w3id.org/def/saref4city#NonConvexInterval
-
-<https://w3id.org/def/saref4city#NonConvexInterval> a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/2006/time#Interval> ;
-	rdfs:comment "Non-convex intervals are those that use time units in a repetitive way or refer to recur-ring periods."@en ;
-	rdfs:label "Non-convex interval"@en .
-# 
 # https://w3id.org/def/saref4city#PublicAdministration
 
 <https://w3id.org/def/saref4city#PublicAdministration> a owl:Class ;
-	rdfs:subClassOf <https://w3id.org/def/saref4city#Agent> ;
+	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
 	rdfs:comment "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"@en ;
 	rdfs:label "Public administration"@en ;
 	rdfs:seeAlso "https://www.wikidata.org/wiki/Q31728" .
@@ -484,11 +507,6 @@ saref:hasValue a owl:DatatypeProperty .
 	rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
 	rdfs:label "Public service"@en ;
 	rdfs:seeAlso "https://en.wikipedia.org/wiki/Public_service" .
-# 
-# https://w3id.org/def/saref4city#Rule
-
-<https://w3id.org/def/saref4city#Rule> a owl:Class ;
-	rdfs:label "Rule"@en .
 # 
 # https://w3id.org/saref#Actuator
 
@@ -501,7 +519,7 @@ saref:Actuator a owl:Class ;
 # https://w3id.org/saref#Device
 
 saref:Device a owl:Class ;
-	rdfs:subClassOf _:genid1 .
+	rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> , _:genid1 .
 
 _:genid1 a owl:Restriction ;
 	owl:onProperty saref:consistsOf ;
