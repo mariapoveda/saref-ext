@@ -43,13 +43,16 @@ This section provides details for each class and property defined by SAREF exten
          <a href="#Facility" title="https://w3id.org/def/saref4city#Facility">Facility</a>
       </li>
       <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
+      </li>
+      <li>
          <a href="#FeatureOfInterest"
             title="https://w3id.org/def/saref4city#FeatureOfInterest">
             <span>feature of interest</span>
          </a>
       </li>
       <li>
-         <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
+         <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry Geometry</a>
       </li>
       <li>
          <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instant</a>
@@ -94,8 +97,8 @@ This section provides details for each class and property defined by SAREF exten
          <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-            title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+         <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+            title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject SpatialObject</a>
       </li>
       <li>
          <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Temporal entity</a>
@@ -160,8 +163,7 @@ This section provides details for each class and property defined by SAREF exten
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -225,8 +227,7 @@ This section provides details for each class and property defined by SAREF exten
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -275,11 +276,6 @@ This section provides details for each class and property defined by SAREF exten
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
@@ -308,7 +304,7 @@ This section provides details for each class and property defined by SAREF exten
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="https://w3id.org/saref#hasDescription">has description</span>
+            <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">max</span> 1</dd>
          <dt>has sub-classes</dt>
@@ -359,8 +355,88 @@ This section provides details for each class and property defined by SAREF exten
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
+      <h3>Feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Feature</p>
+      <div class="comment">
+         <span class="markdown">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </span>
+      </div>
+      <div class="comment">
+         <span class="markdown">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </span>
+      </div>
+      <div class="info">
+         <span class="markdown">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>16/06/2011</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+         <dt>Contributors:</dt>
+         <dd>Matthew Perry</dd>
+      </dl>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/ont/gml">http://www.opengis.net/ont/gml</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/spec/geosparql/1.0">http://www.opengis.net/spec/geosparql/1.0</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject SpatialObject</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AdministrativeArea"
+               title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CityObject" title="https://w3id.org/def/saref4city#CityObject">City object</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Facility" title="https://w3id.org/def/saref4city#Facility">Facility</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry hasGeometry</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry Geometry</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -382,14 +458,78 @@ This section provides details for each class and property defined by SAREF exten
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
+      <h3>Geometry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
       <p>
          <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Geometry</p>
       <div class="comment">
-         <span class="markdown">The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.</span>
+         <span class="markdown">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </span>
       </div>
+      <div class="comment">
+         <span class="markdown">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </span>
+      </div>
+      <div class="info">
+         <span class="markdown">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>16/06/2011</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+         <dt>Contributors:</dt>
+         <dd>Matthew Perry</dd>
+      </dl>
       <dl class="definedBy">
          <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/ont/gml">http://www.opengis.net/ont/gml</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/spec/geosparql/1.0">http://www.opengis.net/spec/geosparql/1.0</a>
+         </dd>
          <dd>https://w3id.org/def/saref4city</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject SpatialObject</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry hasGeometry</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://www.w3.org/2006/time#Instant">
@@ -495,13 +635,13 @@ This section provides details for each class and property defined by SAREF exten
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <span class="dotted" title="https://w3id.org/saref#hasTimestamp">has timestamp</span>
+            <a href="#https://w3id.org/saref#hasTimestamp" title="https://w3id.org/saref#hasTimestamp">has timestamp</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
          </dd>
          <dd>
-            <span class="dotted" title="https://w3id.org/saref#hasValue">has value</span>
+            <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">exactly</span> 1</dd>
          <dt>is disjoint with</dt>
@@ -593,8 +733,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+            <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry Geometry</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -691,40 +830,72 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
-      <h3>Spatial thing<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#SpatialObject">
+      <h3>SpatialObject<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>SpatialObject<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#SpatialObject</p>
       <div class="comment">
-         <span class="markdown">"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en</span>
+         <span class="markdown">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </span>
       </div>
+      <div class="comment">
+         <span class="markdown">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </span>
+      </div>
+      <div class="info">
+         <span class="markdown">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>16/06/2011</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+         <dt>Contributors:</dt>
+         <dd>Matthew Perry</dd>
+      </dl>
       <dl class="definedBy">
          <dt>Is defined by</dt>
-         <dd>https://w3id.org/def/saref4city</dd>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/ont/gml">http://www.opengis.net/ont/gml</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/spec/geosparql/1.0">http://www.opengis.net/spec/geosparql/1.0</a>
+         </dd>
       </dl>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#AdministrativeArea"
-               title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#CityObject" title="https://w3id.org/def/saref4city#CityObject">City object</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Facility" title="https://w3id.org/def/saref4city#Facility">Facility</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">Point</a>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry Geometry</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">altitude</span>, <a href="#contains" title="https://w3id.org/def/saref4city#contains">contains</a>
-            <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</span>, <span class="dotted" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</span>
+            <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains contains</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#contains" title="https://w3id.org/def/saref4city#contains">contains</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
+            <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains contains</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -796,7 +967,7 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
       </li>
       <li>
-         <a href="#contains" title="https://w3id.org/def/saref4city#contains">contains</a>
+         <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains contains</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#controlsProperty" title="https://w3id.org/saref#controlsProperty">controls property</a>
@@ -816,7 +987,7 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
             title="https://w3id.org/def/saref4city#hasFeatureOfInterest">has feature of interest</a>
       </li>
       <li>
-         <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry</a>
+         <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry hasGeometry</a>
       </li>
       <li>
          <a href="#hasIndicatorUnit" title="https://w3id.org/def/saref4city#hasIndicatorUnit">has indicator unit</a>
@@ -839,6 +1010,9 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
             title="https://w3id.org/def/saref4city#isAvailableInLanguage">is available in language</a>
       </li>
       <li>
+         <a href="#https://w3id.org/saref#isControlledByDevice" title="https://w3id.org/saref#isControlledByDevice">is controlled by device</a>
+      </li>
+      <li>
          <a href="#isDerivedFrom" title="https://w3id.org/def/saref4city#isDerivedFrom">is derived from</a>
       </li>
       <li>
@@ -857,11 +1031,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <a href="#isSubEventOf" title="https://w3id.org/def/saref4city#isSubEventOf">is subevent of</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-            <span>location</span>
-         </a>
-      </li>
-      <li>
          <a href="#https://w3id.org/saref#makesMeasurement" title="https://w3id.org/saref#makesMeasurement">makes measurement</a>
       </li>
       <li>
@@ -878,6 +1047,9 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       </li>
       <li>
          <a href="#refersToSpace" title="https://w3id.org/def/saref4city#refersToSpace">refers to space</a>
+      </li>
+      <li>
+         <a href="#refersToTime" title="https://w3id.org/def/saref4city#refersToTime">refers to time</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#relatesToMeasurement" title="https://w3id.org/saref#relatesToMeasurement">relates to measurement</a>
@@ -949,25 +1121,66 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <dd>https://w3id.org/def/saref4city</dd>
       </dl>
    </div>
-   <div class="entity" id="contains">
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#sfContains">
+      <h3>contains<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
       <h3>contains<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4city#contains</p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfContains</p>
+      <div class="comment">
+         <span class="markdown">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </span>
+      </div>
+      <div class="comment">
+         <span class="markdown">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </span>
+      </div>
+      <div class="info">
+         <span class="markdown">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>16/06/2011</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+         <dt>Contributors:</dt>
+         <dd>Matthew Perry</dd>
+      </dl>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/spec/geosparql/1.0">http://www.opengis.net/spec/geosparql/1.0</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+               <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+                  title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject SpatialObject</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+               <a href="#http://www.opengis.net/ont/geosparql#SpatialObject"
+                  title="http://www.opengis.net/ont/geosparql#SpatialObject">SpatialObject SpatialObject</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1027,15 +1240,61 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
+      <h3>hasGeometry<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
       <p>
          <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#hasGeometry</p>
       <div class="comment">
-         <span class="markdown">A spatial representation for a given feature.</span>
+         <span class="markdown">
+      A spatial representation for a given feature.
+    </span>
       </div>
+      <div class="comment">
+         <span class="markdown">
+      A spatial representation for a given feature.
+    </span>
+      </div>
+      <div class="info">
+         <span class="markdown">
+      A spatial representation for a given feature.
+    </span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>16/06/2011</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>OGC GeoSPARQL 1.0 Standard Working Group</dd>
+         <dt>Contributors:</dt>
+         <dd>Matthew Perry</dd>
+      </dl>
       <dl class="definedBy">
          <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+         <dd>
+            <a href="http://www.opengis.net/spec/geosparql/1.0">http://www.opengis.net/spec/geosparql/1.0</a>
+         </dd>
          <dd>https://w3id.org/def/saref4city</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry Geometry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasIndicatorUnit">
       <h3>has indicator unit<sup class="type-op" title="object property">op</sup>
@@ -1103,6 +1362,18 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          </dl>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/saref#isControlledByDevice">
+      <h3>is controlled by device<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#isControlledByDevice</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/saref4city</dd>
+      </dl>
+   </div>
    <div class="entity" id="isDerivedFrom">
       <h3>is derived from<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1167,28 +1438,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#isSubEventOf</p>
-   </div>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-      <h3>location<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#location</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location">annotation property</a>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/saref#makesMeasurement">
       <h3>makes measurement<sup class="type-op" title="object property">op</sup>
@@ -1257,6 +1506,14 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#refersToSpace</p>
    </div>
+   <div class="entity" id="refersToTime">
+      <h3>refers to time<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#refersToTime</p>
+   </div>
    <div class="entity" id="https://w3id.org/saref#relatesToMeasurement">
       <h3>relates to measurement<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1309,28 +1566,16 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#creationDate" title="https://w3id.org/def/saref4city#creationDate">
-            <span>creation date</span>
-         </a>
+         <a href="#creationDate" title="https://w3id.org/def/saref4city#creationDate">creation date</a>
       </li>
       <li>
-         <a href="#expirationDate" title="https://w3id.org/def/saref4city#expirationDate">
-            <span>expiration date</span>
-         </a>
+         <a href="#expirationDate" title="https://w3id.org/def/saref4city#expirationDate">expiration date</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
       </li>
       <li>
          <a href="#hasEventName" title="https://w3id.org/def/saref4city#hasEventName">has event name</a>
-      </li>
-      <li>
-         <a href="#hasKPIDescription"
-            title="https://w3id.org/def/saref4city#hasKPIDescription">
-            <span>has k p i description</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasKPIName" title="https://w3id.org/def/saref4city#hasKPIName">
-            <span>has k p i name</span>
-         </a>
       </li>
       <li>
          <a href="#hasKPIValue" title="https://w3id.org/def/saref4city#hasKPIValue">
@@ -1338,23 +1583,30 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          </a>
       </li>
       <li>
+         <a href="#hasKPIDescription"
+            title="https://w3id.org/def/saref4city#hasKPIDescription">has KPI description</a>
+      </li>
+      <li>
+         <a href="#hasName" title="https://w3id.org/def/saref4city#hasName">has name</a>
+      </li>
+      <li>
          <a href="#hasServiceDescription"
-            title="https://w3id.org/def/saref4city#hasServiceDescription">
-            <span>has service description</span>
-         </a>
+            title="https://w3id.org/def/saref4city#hasServiceDescription">has service description</a>
       </li>
       <li>
-         <a href="#hasServiceName" title="https://w3id.org/def/saref4city#hasServiceName">
-            <span>has service name</span>
-         </a>
+         <a href="#hasServiceName" title="https://w3id.org/def/saref4city#hasServiceName">has service name</a>
       </li>
       <li>
-         <a href="#lastUpdateDate" title="https://w3id.org/def/saref4city#lastUpdateDate">
-            <span>last update date</span>
-         </a>
+         <a href="#https://w3id.org/saref#hasTimestamp" title="https://w3id.org/saref#hasTimestamp">has timestamp</a>
       </li>
       <li>
-         <a href="#name" title="https://w3id.org/def/saref4city#name">name</a>
+         <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
+      </li>
+      <li>
+         <a href="#hasKPIName" title="https://w3id.org/def/saref4city#hasKPIName">KPI name</a>
+      </li>
+      <li>
+         <a href="#lastUpdateDate" title="https://w3id.org/def/saref4city#lastUpdateDate">last update date</a>
       </li>
    </ul>
    <div class="entity" id="creationDate">
@@ -1389,6 +1641,30 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          </dl>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/saref#hasDescription">
+      <h3>has description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasDescription</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/saref4city</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasKPIDescription"
+                  title="https://w3id.org/def/saref4city#hasKPIDescription">has KPI description</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasServiceDescription"
+                  title="https://w3id.org/def/saref4city#hasServiceDescription">has service description</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasEventName">
       <h3>has event name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1400,41 +1676,7 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#name" title="https://w3id.org/def/saref4city#name">name</a>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasKPIDescription">
-      <h3>has k p i description<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4city#hasKPIDescription</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="https://w3id.org/saref#hasDescription">has description</span>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasKPIName">
-      <h3>has k p i name<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4city#hasKPIName</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#name" title="https://w3id.org/def/saref4city#name">name</a>
+               <a href="#hasName" title="https://w3id.org/def/saref4city#hasName">has name</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
@@ -1451,7 +1693,43 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/saref#hasValue">has value</span>
+               <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasKPIDescription">
+      <h3>has KPI description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#hasKPIDescription</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasName">
+      <h3>has name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#hasName</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasKPIName" title="https://w3id.org/def/saref4city#hasKPIName">KPI name</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEventName" title="https://w3id.org/def/saref4city#hasEventName">has event name</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasServiceName" title="https://w3id.org/def/saref4city#hasServiceName">has service name</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
@@ -1468,7 +1746,7 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/saref#hasDescription">has description</span>
+               <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
@@ -1485,7 +1763,57 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#name" title="https://w3id.org/def/saref4city#name">name</a>
+               <a href="#hasName" title="https://w3id.org/def/saref4city#hasName">has name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasTimestamp">
+      <h3>has timestamp<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasTimestamp</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/saref4city</dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasValue">
+      <h3>has value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasValue</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/saref4city</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasKPIValue" title="https://w3id.org/def/saref4city#hasKPIValue">has k p i value</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasKPIName">
+      <h3>KPI name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#hasKPIName</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasName" title="https://w3id.org/def/saref4city#hasName">has name</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
@@ -1507,25 +1835,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="name">
-      <h3>name<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4city#name</p>
-      <div class="description">
-         <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#hasEventName" title="https://w3id.org/def/saref4city#hasEventName">has event name</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasKPIName" title="https://w3id.org/def/saref4city#hasKPIName">has k p i name</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasServiceName" title="https://w3id.org/def/saref4city#hasServiceName">has service name</a>
-               <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
       </div>
