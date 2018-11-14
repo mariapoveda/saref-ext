@@ -129,6 +129,12 @@
     "@value" : "1"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/date",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -160,34 +166,239 @@
     "@value" : "Language"
   } ]
 }, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Matthew Perry"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "OGC GeoSPARQL 1.0 Standard Working Group"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2011-06-16"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "http://www.opengis.net/ont/gml"
+  }, {
+    "@id" : "http://www.opengis.net/spec/geosparql/1.0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Feature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Feature"
+  } ]
+}, {
   "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Matthew Perry"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "OGC GeoSPARQL 1.0 Standard Working Group"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2011-06-16"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "
+  }, {
     "@language" : "en",
     "@value" : "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "http://www.opengis.net/ont/gml"
+  }, {
+    "@id" : "http://www.opengis.net/spec/geosparql/1.0"
+  }, {
     "@language" : "en",
     "@value" : "http://www.opengis.net/ont/geosparql"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Geometry"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Matthew Perry"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "OGC GeoSPARQL 1.0 Standard Working Group"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2011-06-16"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "http://www.opengis.net/ont/gml"
+  }, {
+    "@id" : "http://www.opengis.net/spec/geosparql/1.0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SpatialObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "SpatialObject"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Matthew Perry"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "OGC GeoSPARQL 1.0 Standard Working Group"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2011-06-16"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "\n      A spatial representation for a given feature.\n    "
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      A spatial representation for a given feature.\n    "
+  }, {
     "@language" : "en",
     "@value" : "A spatial representation for a given feature."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "http://www.opengis.net/spec/geosparql/1.0"
+  }, {
     "@value" : "http://www.opengis.net/ont/geosparql#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has geometry"
+  }, {
+    "@language" : "en",
+    "@value" : "hasGeometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "\n      A spatial representation for a given feature.\n    "
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasGeometry"
   } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#sfContains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Matthew Perry"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "OGC GeoSPARQL 1.0 Standard Working Group"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2011-06-16"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "http://www.opengis.net/spec/geosparql/1.0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "contains"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "contains"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#duration",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
@@ -226,25 +437,7 @@
     "@value" : "point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "\"Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.\"@en"
-  }, {
-    "@value" : "Anything with spatial extent, i.e. size, shape, or position.\n e.g. people, places, bowling balls, as well as abstract areas like cubes.\n"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://www.w3.org/2003/01/geo/wgs84_pos#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Spatial thing"
-  }, {
-    "@value" : "SpatialThing"
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
@@ -290,9 +483,6 @@
   }, {
     "@value" : "location"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/based_near"
   } ]
@@ -314,6 +504,12 @@
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@value" : "http://www.w3.org/2004/02/skos/core#"
   } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2006/time#Instant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -436,7 +632,7 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.1"
+    "@value" : "0.2"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#AdministrativeArea",
@@ -450,7 +646,7 @@
     "@value" : "Administrative area"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#City",
@@ -474,7 +670,7 @@
     "@value" : "City object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#Country",
@@ -526,7 +722,7 @@
     "@value" : "Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#FeatureOfInterest",
@@ -637,27 +833,22 @@
     "@value" : "calculated by"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/saref4city#contains",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "contains"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/saref4city#creationDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "creation date"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#expirationDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "expiration date"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
@@ -690,7 +881,7 @@
     "@value" : "has event name"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/def/saref4city#name"
+    "@id" : "https://w3id.org/def/saref4city#hasName"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#hasFeatureOfInterest",
@@ -709,20 +900,35 @@
 }, {
   "@id" : "https://w3id.org/def/saref4city#hasKPIDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has KPI description"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/saref#hasDescription"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#hasKPIName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "KPI name"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/def/saref4city#name"
+    "@id" : "https://w3id.org/def/saref4city#hasName"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#hasKPIValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/saref#hasValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#hasName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has name"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#hasProperty",
@@ -737,14 +943,22 @@
 }, {
   "@id" : "https://w3id.org/def/saref4city#hasServiceDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has service description"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/saref#hasDescription"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#hasServiceName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has service name"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/def/saref4city#name"
+    "@id" : "https://w3id.org/def/saref4city#hasName"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#implementsKPI",
@@ -808,6 +1022,10 @@
 }, {
   "@id" : "https://w3id.org/def/saref4city#lastUpdateDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "last update date"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
@@ -819,13 +1037,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/saref#makesMeasurement"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/saref4city#name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "name"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#providesService",
@@ -840,6 +1051,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "refers to space"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4city#refersToTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "refers to time"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4city#takesPlaceAtFacility",
@@ -889,8 +1107,6 @@
     "@value" : "Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  }, {
     "@id" : "_:genid1"
   }, {
     "@id" : "_:genid2"
@@ -1010,13 +1226,44 @@
   } ]
 }, {
   "@id" : "https://w3id.org/saref#hasDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has description"
+  } ]
 }, {
   "@id" : "https://w3id.org/saref#hasTimestamp",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has timestamp"
+  } ]
 }, {
   "@id" : "https://w3id.org/saref#hasValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has value"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#isControlledByDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/saref#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is controlled by device"
+  } ]
 }, {
   "@id" : "https://w3id.org/saref#isMeasuredByDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],

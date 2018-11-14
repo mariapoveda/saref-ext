@@ -34,6 +34,10 @@
       "@id" : "https://w3id.org/def/saref4city#hasIndicatorUnit",
       "@type" : "@id"
     },
+    "isControlledByDevice" : {
+      "@id" : "https://w3id.org/saref#isControlledByDevice",
+      "@type" : "@id"
+    },
     "PublicService" : {
       "@id" : "https://w3id.org/def/saref4city#PublicService"
     },
@@ -62,6 +66,9 @@
     "hasServiceName" : {
       "@id" : "https://w3id.org/def/saref4city#hasServiceName"
     },
+    "hasName" : {
+      "@id" : "https://w3id.org/def/saref4city#hasName"
+    },
     "FeatureOfInterest" : {
       "@id" : "https://w3id.org/def/saref4city#FeatureOfInterest"
     },
@@ -88,15 +95,14 @@
     "long" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
     },
+    "Feature" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "belongsToCity" : {
       "@id" : "https://w3id.org/def/saref4city#belongsToCity",
-      "@type" : "@id"
-    },
-    "contains" : {
-      "@id" : "https://w3id.org/def/saref4city#contains",
       "@type" : "@id"
     },
     "Concept" : {
@@ -140,10 +146,7 @@
       "@id" : "http://xmlns.com/foaf/0.1/Agent"
     },
     "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator"
-    },
-    "name" : {
-      "@id" : "https://w3id.org/def/saref4city#name"
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
     "takesPlaceAtTime" : {
       "@id" : "https://w3id.org/def/saref4city#takesPlaceAtTime",
@@ -213,6 +216,9 @@
     "KeyPerformanceIndicator" : {
       "@id" : "https://w3id.org/def/saref4city#KeyPerformanceIndicator"
     },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
     "makesMeasurement" : {
       "@id" : "https://w3id.org/saref#makesMeasurement",
       "@type" : "@id"
@@ -227,6 +233,10 @@
     "Property" : {
       "@id" : "https://w3id.org/saref#Property"
     },
+    "sfContains" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#sfContains",
+      "@type" : "@id"
+    },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
@@ -236,6 +246,9 @@
     },
     "publisher" : {
       "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "SpatialObject" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
     },
     "hasFeatureOfInterest" : {
       "@id" : "https://w3id.org/def/saref4city#hasFeatureOfInterest",
@@ -279,6 +292,10 @@
     "City" : {
       "@id" : "https://w3id.org/def/saref4city#City"
     },
+    "refersToTime" : {
+      "@id" : "https://w3id.org/def/saref4city#refersToTime",
+      "@type" : "@id"
+    },
     "relatesToProperty" : {
       "@id" : "https://w3id.org/saref#relatesToProperty",
       "@type" : "@id"
@@ -288,9 +305,6 @@
     },
     "Actuator" : {
       "@id" : "https://w3id.org/saref#Actuator"
-    },
-    "SpatialThing" : {
-      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -305,6 +319,9 @@
     },
     "hasKPIName" : {
       "@id" : "https://w3id.org/def/saref4city#hasKPIName"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
     },
     "isSubEventOf" : {
       "@id" : "https://w3id.org/def/saref4city#isSubEventOf",
@@ -321,6 +338,9 @@
     },
     "AdministrativeArea" : {
       "@id" : "https://w3id.org/def/saref4city#AdministrativeArea"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
     },
     "assess" : {
       "@id" : "https://w3id.org/def/saref4city#assess",

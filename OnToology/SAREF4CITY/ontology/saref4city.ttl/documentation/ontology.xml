@@ -9,6 +9,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
@@ -22,7 +23,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>s4city</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/saref4city#</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -36,6 +37,20 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -138,6 +153,20 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- http://www.w3.org/ns/prov#hadPrimarySource -->
 
 
@@ -164,6 +193,13 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
     <!-- http://www.w3.org/2001/XMLSchema#duration -->
 
 
@@ -187,9 +223,56 @@ above the local reference ellipsoid).</rdfs:comment>
 
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      A spatial representation for a given feature.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      A spatial representation for a given feature.
+    </rdfs:comment>
         <rdfs:comment xml:lang="en">A spatial representation for a given feature.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:isDefinedBy>http://www.opengis.net/ont/geosparql#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">has geometry</rdfs:label>
+        <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+        <skos:definition xml:lang="en">
+      A spatial representation for a given feature.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">hasGeometry</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfContains -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">contains</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -197,9 +280,7 @@ above the local reference ellipsoid).</rdfs:comment>
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
     
 
 
@@ -236,17 +317,6 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#calculatedBy">
         <rdfs:label xml:lang="en">calculated by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/saref4city#contains -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#contains">
-        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:label xml:lang="en">contains</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -406,6 +476,15 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/def/saref4city#refersToTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#refersToTime">
+        <rdfs:label xml:lang="en">refers to time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/saref4city#takesPlaceAtFacility -->
 
 
@@ -448,6 +527,16 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#controlsProperty">
         <rdfs:label xml:lang="en">controls property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/saref#isControlledByDevice -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#isControlledByDevice">
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">is controlled by device</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -529,6 +618,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#creationDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">creation date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -538,6 +628,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#expirationDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">expiration date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -546,7 +637,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#hasEventName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/saref4city#name"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/saref4city#hasName"/>
         <rdfs:label xml:lang="en">has event name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -557,6 +648,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#hasKPIDescription">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/saref#hasDescription"/>
+        <rdfs:label xml:lang="en">has KPI description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -565,7 +657,8 @@ above the local reference ellipsoid).</rdfs:comment>
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#hasKPIName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/saref4city#name"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/saref4city#hasName"/>
+        <rdfs:label xml:lang="en">KPI name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -579,11 +672,21 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/def/saref4city#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#hasName">
+        <rdfs:label xml:lang="en">has name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/def/saref4city#hasServiceDescription -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#hasServiceDescription">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/saref#hasDescription"/>
+        <rdfs:label xml:lang="en">has service description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -592,7 +695,8 @@ above the local reference ellipsoid).</rdfs:comment>
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#hasServiceName">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/saref4city#name"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/saref4city#hasName"/>
+        <rdfs:label xml:lang="en">has service name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -603,15 +707,7 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#lastUpdateDate">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/saref4city#name -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4city#name">
-        <rdfs:label xml:lang="en">name</rdfs:label>
+        <rdfs:label xml:lang="en">last update date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -619,21 +715,30 @@ above the local reference ellipsoid).</rdfs:comment>
     <!-- https://w3id.org/saref#hasDescription -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/saref#hasDescription"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/saref#hasDescription">
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/saref#hasTimestamp -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/saref#hasTimestamp"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/saref#hasTimestamp">
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has timestamp</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/saref#hasValue -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/saref#hasValue"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/saref#hasValue">
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -658,13 +763,97 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <owl:disjointWith rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/gml"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <skos:definition xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">Feature</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#Geometry -->
 
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </rdfs:comment>
         <rdfs:comment xml:lang="en">The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/gml"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:isDefinedBy xml:lang="en">http://www.opengis.net/ont/geosparql</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
+        <skos:definition xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/gml"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:label xml:lang="en">SpatialObject</rdfs:label>
+        <skos:definition xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">SpatialObject</skos:prefLabel>
     </owl:Class>
     
 
@@ -673,7 +862,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
         <rdfs:comment> 
 Uniquely identified by lat/long/alt. i.e.
 
@@ -687,21 +876,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:isDefinedBy>http://www.w3.org/2003/01/geo/wgs84_pos#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Point</rdfs:label>
         <rdfs:label>point</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
-        <rdfs:comment xml:lang="en">&quot;Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.&quot;@en</rdfs:comment>
-        <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position.
- e.g. people, places, bowling balls, as well as abstract areas like cubes.
-</rdfs:comment>
-        <rdfs:isDefinedBy>http://www.w3.org/2003/01/geo/wgs84_pos#</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Spatial thing</rdfs:label>
-        <rdfs:label>SpatialThing</rdfs:label>
     </owl:Class>
     
 
@@ -786,7 +960,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#AdministrativeArea">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:comment xml:lang="en">An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)</rdfs:comment>
         <rdfs:label xml:lang="en">Administrative area</rdfs:label>
     </owl:Class>
@@ -808,7 +982,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#CityObject">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label xml:lang="en">City object</rdfs:label>
     </owl:Class>
     
@@ -851,7 +1025,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#Facility">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:label xml:lang="en">Facility</rdfs:label>
     </owl:Class>
     
@@ -938,7 +1112,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/saref#Device">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#consistsOf"/>
