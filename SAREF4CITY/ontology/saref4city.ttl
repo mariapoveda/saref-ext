@@ -11,13 +11,14 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix geosp: <http://www.opengis.net/ont/geosparql#> .
 @prefix saref: <https://w3id.org/saref#> .
+@prefix s4city: <https://w3id.org/def/saref4city#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix saref4city: <https://w3id.org/def/saref4city#> .
+@prefix lingvoj: <http://www.lingvoj.org/ontology#> .
 
 <https://w3id.org/def/saref4city> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4city> ;
 	dc:title "SAREF extension for Smart City"@en ;
-	owl:versionInfo "0.2"^^xsd:decimal ;
+	owl:versionInfo "0.3"^^xsd:decimal ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	dcterms:creator <http://w3id.org/people/mpoveda> ;
@@ -194,130 +195,130 @@ geo:location a owl:ObjectProperty .
 # 
 # https://w3id.org/def/saref4city#assess
 
-saref4city:assess a owl:ObjectProperty ;
+s4city:assess a owl:ObjectProperty ;
 	rdfs:label "assess"@en .
 # 
 # https://w3id.org/def/saref4city#belongsTo
 
-saref4city:belongsTo a owl:ObjectProperty ;
+s4city:belongsTo a owl:ObjectProperty ;
 	rdfs:label "belongs to"@en .
 # 
 # https://w3id.org/def/saref4city#belongsToCity
 
-saref4city:belongsToCity a owl:ObjectProperty ;
-	owl:inverseOf saref4city:hasCityObject ;
+s4city:belongsToCity a owl:ObjectProperty ;
+	owl:inverseOf s4city:hasCityObject ;
 	rdfs:label "belongs to city"@en .
 # 
 # https://w3id.org/def/saref4city#calculatedBy
 
-saref4city:calculatedBy a owl:ObjectProperty ;
+s4city:calculatedBy a owl:ObjectProperty ;
 	rdfs:label "calculated by"@en .
 # 
 # https://w3id.org/def/saref4city#hasAccesibility
 
-saref4city:hasAccesibility a owl:ObjectProperty ;
+s4city:hasAccesibility a owl:ObjectProperty ;
 	rdfs:label "has accesibility"@en .
 # 
 # https://w3id.org/def/saref4city#hasCalculationPeriod
 
-saref4city:hasCalculationPeriod a owl:ObjectProperty ;
+s4city:hasCalculationPeriod a owl:ObjectProperty ;
 	rdfs:label "has calculation period"@en .
 # 
 # https://w3id.org/def/saref4city#hasCityObject
 
-saref4city:hasCityObject a owl:ObjectProperty ;
+s4city:hasCityObject a owl:ObjectProperty ;
 	rdfs:label "has city object"@en .
 # 
 # https://w3id.org/def/saref4city#hasFeatureOfInterest
 
-saref4city:hasFeatureOfInterest a owl:ObjectProperty ;
+s4city:hasFeatureOfInterest a owl:ObjectProperty ;
 	rdfs:label "has feature of interest"@en .
 # 
 # https://w3id.org/def/saref4city#hasIndicatorUnit
 
-saref4city:hasIndicatorUnit a owl:ObjectProperty ;
+s4city:hasIndicatorUnit a owl:ObjectProperty ;
 	rdfs:label "has indicator unit"@en .
 # 
 # https://w3id.org/def/saref4city#hasProperty
 
-saref4city:hasProperty a owl:ObjectProperty ;
-	owl:inverseOf saref4city:isPropertyOf ;
+s4city:hasProperty a owl:ObjectProperty ;
+	owl:inverseOf s4city:isPropertyOf ;
 	rdfs:label "has property"@en .
 # 
 # https://w3id.org/def/saref4city#implementsKPI
 
-saref4city:implementsKPI a owl:ObjectProperty ;
+s4city:implementsKPI a owl:ObjectProperty ;
 	rdfs:label "implements KPI"@en .
 # 
 # https://w3id.org/def/saref4city#involvesFacility
 
-saref4city:involvesFacility a owl:ObjectProperty ;
+s4city:involvesFacility a owl:ObjectProperty ;
 	rdfs:label "involves facility"@en .
 # 
 # https://w3id.org/def/saref4city#isAvailableInArea
 
-saref4city:isAvailableInArea a owl:ObjectProperty ;
+s4city:isAvailableInArea a owl:ObjectProperty ;
 	rdfs:label "is available in area"@en .
 # 
 # https://w3id.org/def/saref4city#isAvailableInLanguage
 
-saref4city:isAvailableInLanguage a owl:ObjectProperty ;
-	rdfs:range <http://www.lingvoj.org/ontology#Lingvo> ;
+s4city:isAvailableInLanguage a owl:ObjectProperty ;
+	rdfs:range lingvoj:Lingvo ;
 	rdfs:label "is available in language"@en .
 # 
 # https://w3id.org/def/saref4city#isDerivedFrom
 
-saref4city:isDerivedFrom a owl:ObjectProperty ;
+s4city:isDerivedFrom a owl:ObjectProperty ;
 	rdfs:label "is derived from"@en .
 # 
 # https://w3id.org/def/saref4city#isOrganizedBy
 
-saref4city:isOrganizedBy a owl:ObjectProperty ;
+s4city:isOrganizedBy a owl:ObjectProperty ;
 	rdfs:label "is organized by"@en .
 # 
 # https://w3id.org/def/saref4city#isPropertyOf
 
-saref4city:isPropertyOf a owl:ObjectProperty ;
+s4city:isPropertyOf a owl:ObjectProperty ;
 	rdfs:label "is property of"@en .
 # 
 # https://w3id.org/def/saref4city#isSubEventOf
 
-saref4city:isSubEventOf a owl:ObjectProperty ;
+s4city:isSubEventOf a owl:ObjectProperty ;
 	rdfs:label "is subevent of"@en .
 # 
 # https://w3id.org/def/saref4city#measurementMadeBy
 
-saref4city:measurementMadeBy a owl:ObjectProperty ;
+s4city:measurementMadeBy a owl:ObjectProperty ;
 	owl:inverseOf saref:makesMeasurement .
 # 
 # https://w3id.org/def/saref4city#providesService
 
-saref4city:providesService a owl:ObjectProperty ;
+s4city:providesService a owl:ObjectProperty ;
 	rdfs:label "provides service"@en .
 # 
 # https://w3id.org/def/saref4city#refersToSpace
 
-saref4city:refersToSpace a owl:ObjectProperty ;
+s4city:refersToSpace a owl:ObjectProperty ;
 	rdfs:label "refers to space"@en .
 # 
 # https://w3id.org/def/saref4city#refersToTime
 
-saref4city:refersToTime a owl:ObjectProperty ;
+s4city:refersToTime a owl:ObjectProperty ;
 	rdfs:label "refers to time"@en .
 # 
 # https://w3id.org/def/saref4city#takesPlaceAtFacility
 
-saref4city:takesPlaceAtFacility a owl:ObjectProperty ;
+s4city:takesPlaceAtFacility a owl:ObjectProperty ;
 	rdfs:label "takes place at facility"@en .
 # 
 # https://w3id.org/def/saref4city#takesPlaceAtTime
 
-saref4city:takesPlaceAtTime a owl:ObjectProperty ;
+s4city:takesPlaceAtTime a owl:ObjectProperty ;
 	rdfs:label "takes place at time"@en .
 # 
 # https://w3id.org/def/saref4city#usesService
 
-saref4city:usesService a owl:ObjectProperty ;
+s4city:usesService a owl:ObjectProperty ;
 	rdfs:label "uses service"@en .
 # 
 # https://w3id.org/saref#consistsOf
@@ -384,59 +385,59 @@ saref:relatesToProperty a owl:ObjectProperty ;
 # 
 # https://w3id.org/def/saref4city#creationDate
 
-saref4city:creationDate a owl:DatatypeProperty ;
+s4city:creationDate a owl:DatatypeProperty ;
 	rdfs:range xsd:dateTime ;
 	rdfs:label "creation date"@en .
 # 
 # https://w3id.org/def/saref4city#expirationDate
 
-saref4city:expirationDate a owl:DatatypeProperty ;
+s4city:expirationDate a owl:DatatypeProperty ;
 	rdfs:range xsd:dateTime ;
 	rdfs:label "expiration date"@en .
 # 
 # https://w3id.org/def/saref4city#hasEventName
 
-saref4city:hasEventName a owl:DatatypeProperty ;
-	rdfs:subPropertyOf saref4city:hasName ;
+s4city:hasEventName a owl:DatatypeProperty ;
+	rdfs:subPropertyOf s4city:hasName ;
 	rdfs:label "has event name"@en .
 # 
 # https://w3id.org/def/saref4city#hasKPIDescription
 
-saref4city:hasKPIDescription a owl:DatatypeProperty ;
+s4city:hasKPIDescription a owl:DatatypeProperty ;
 	rdfs:subPropertyOf saref:hasDescription ;
 	rdfs:label "has KPI description"@en .
 # 
 # https://w3id.org/def/saref4city#hasKPIName
 
-saref4city:hasKPIName a owl:DatatypeProperty ;
-	rdfs:subPropertyOf saref4city:hasName ;
+s4city:hasKPIName a owl:DatatypeProperty ;
+	rdfs:subPropertyOf s4city:hasName ;
 	rdfs:label "KPI name"@en .
 # 
 # https://w3id.org/def/saref4city#hasKPIValue
 
-saref4city:hasKPIValue a owl:DatatypeProperty ;
+s4city:hasKPIValue a owl:DatatypeProperty ;
 	rdfs:subPropertyOf saref:hasValue .
 # 
 # https://w3id.org/def/saref4city#hasName
 
-saref4city:hasName a owl:DatatypeProperty ;
+s4city:hasName a owl:DatatypeProperty ;
 	rdfs:label "has name"@en .
 # 
 # https://w3id.org/def/saref4city#hasServiceDescription
 
-saref4city:hasServiceDescription a owl:DatatypeProperty ;
+s4city:hasServiceDescription a owl:DatatypeProperty ;
 	rdfs:subPropertyOf saref:hasDescription ;
 	rdfs:label "has service description"@en .
 # 
 # https://w3id.org/def/saref4city#hasServiceName
 
-saref4city:hasServiceName a owl:DatatypeProperty ;
-	rdfs:subPropertyOf saref4city:hasName ;
+s4city:hasServiceName a owl:DatatypeProperty ;
+	rdfs:subPropertyOf s4city:hasName ;
 	rdfs:label "has service name"@en .
 # 
 # https://w3id.org/def/saref4city#lastUpdateDate
 
-saref4city:lastUpdateDate a owl:DatatypeProperty ;
+s4city:lastUpdateDate a owl:DatatypeProperty ;
 	rdfs:subPropertyOf owl:topDataProperty ;
 	rdfs:range xsd:dateTime ;
 	rdfs:label "last update date"@en .
@@ -470,14 +471,19 @@ saref:hasValue a owl:DatatypeProperty ;
 # 
 # http://www.lingvoj.org/ontology#Lingvo
 
-<http://www.lingvoj.org/ontology#Lingvo> a owl:Class ;
+lingvoj:Lingvo a owl:Class ;
 	rdfs:label "Language"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Feature
 
 geosp:Feature a owl:Class ;
-	rdfs:subClassOf geosp:SpatialObject ;
-	owl:disjointWith geosp:Geometry ;
+	rdfs:subClassOf geosp:SpatialObject , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty geosp:hasGeometry ;
+	owl:someValuesFrom geosp:Geometry .
+
+geosp:Feature owl:disjointWith geosp:Geometry ;
 	dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
 	dc:date "2011-06-16"^^xsd:date ;
@@ -529,7 +535,19 @@ geosp:Geometry a owl:Class ;
 # http://www.opengis.net/ont/geosparql#SpatialObject
 
 geosp:SpatialObject a owl:Class ;
-	dc:contributor "Matthew Perry" ;
+	rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty geosp:sfContains ;
+	owl:someValuesFrom geosp:SpatialObject .
+
+geosp:SpatialObject rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty geo:location ;
+	owl:someValuesFrom geo:Point .
+
+geosp:SpatialObject dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
 	dc:date "2011-06-16"^^xsd:date ;
 	dc:description """
@@ -601,7 +619,19 @@ time:TemporalEntity a owl:Class ;
 # http://xmlns.com/foaf/0.1/Agent
 
 <http://xmlns.com/foaf/0.1/Agent> a owl:Class ;
-	rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+	rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty s4city:providesService ;
+	owl:someValuesFrom s4city:PublicService .
+
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty s4city:usesService ;
+	owl:someValuesFrom s4city:PublicService .
+
+<http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
 	rdfs:label "Agent"@en .
 # 
 # http://xmlns.com/foaf/0.1/Person
@@ -613,80 +643,234 @@ time:TemporalEntity a owl:Class ;
 # 
 # https://w3id.org/def/saref4city#AdministrativeArea
 
-saref4city:AdministrativeArea a owl:Class ;
-	rdfs:subClassOf geosp:Feature ;
-	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
+s4city:AdministrativeArea a owl:Class ;
+	rdfs:subClassOf geosp:Feature , _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty s4city:belongsTo ;
+	owl:someValuesFrom s4city:AdministrativeArea .
+
+s4city:AdministrativeArea rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
 	rdfs:label "Administrative area"@en .
 # 
 # https://w3id.org/def/saref4city#City
 
-saref4city:City a owl:Class ;
-	rdfs:subClassOf saref4city:AdministrativeArea ;
-	rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
+s4city:City a owl:Class ;
+	rdfs:subClassOf s4city:AdministrativeArea , _:genid7 .
+
+_:genid7 a owl:Restriction ;
+	owl:onProperty s4city:hasCityObject ;
+	owl:someValuesFrom s4city:CityObject .
+
+s4city:City rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
 	rdfs:label "City"@en .
 # 
 # https://w3id.org/def/saref4city#CityObject
 
-saref4city:CityObject a owl:Class ;
-	rdfs:subClassOf geosp:Feature ;
-	rdfs:label "City object"@en .
+s4city:CityObject a owl:Class ;
+	rdfs:subClassOf geosp:Feature , _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty s4city:belongsToCity ;
+	owl:someValuesFrom s4city:City .
+
+s4city:CityObject rdfs:label "City object"@en .
 # 
 # https://w3id.org/def/saref4city#Country
 
-saref4city:Country a owl:Class ;
-	rdfs:subClassOf saref4city:AdministrativeArea ;
+s4city:Country a owl:Class ;
+	rdfs:subClassOf s4city:AdministrativeArea ;
 	rdfs:comment "A country is a region that is identified as a distinct national entity in political geography. (https://en.wikipedia.org/wiki/Country)"@en ;
 	rdfs:label "Country"@en .
 # 
 # https://w3id.org/def/saref4city#District
 
-saref4city:District a owl:Class ;
-	rdfs:subClassOf saref4city:AdministrativeArea ;
+s4city:District a owl:Class ;
+	rdfs:subClassOf s4city:AdministrativeArea ;
 	rdfs:comment "A district is a type of administrative division that, in some countries, is managed by local government. Across the world, areas known as \"districts\" vary greatly in size, spanning regions or counties, several municipalities, subdivisions of municipalities, school district, or political district. (https://en.wikipedia.org/wiki/District)"@en ;
 	rdfs:label "District"@en .
 # 
 # https://w3id.org/def/saref4city#Event
 
-saref4city:Event a owl:Class ;
-	rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
+s4city:Event a owl:Class ;
+	rdfs:subClassOf _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty s4city:hasAccesibility ;
+	owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> .
+
+s4city:Event rdfs:subClassOf _:genid10 .
+
+_:genid10 a owl:Restriction ;
+	owl:onProperty s4city:isOrganizedBy ;
+	owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
+
+s4city:Event rdfs:subClassOf _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty s4city:isSubEventOf ;
+	owl:someValuesFrom s4city:Event .
+
+s4city:Event rdfs:subClassOf _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty s4city:takesPlaceAtFacility ;
+	owl:someValuesFrom s4city:Facility .
+
+s4city:Event rdfs:subClassOf _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty s4city:takesPlaceAtTime ;
+	owl:someValuesFrom time:TemporalEntity .
+
+s4city:Event rdfs:subClassOf _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty s4city:hasEventName ;
+	owl:someValuesFrom rdfs:Literal .
+
+s4city:Event rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
 	rdfs:label "Event"@en ;
 	rdfs:seeAlso "https://www.wikidata.org/wiki/Q1656682" .
 # 
 # https://w3id.org/def/saref4city#Facility
 
-saref4city:Facility a owl:Class ;
+s4city:Facility a owl:Class ;
 	rdfs:subClassOf geosp:Feature ;
+	rdfs:comment "A place, amenity, or piece of equipment provided for a particular purpose. (Definition taken from https://en.oxforddictionaries.com/definition/facility)"@en ;
 	rdfs:label "Facility"@en .
 # 
 # https://w3id.org/def/saref4city#FeatureOfInterest
 
-saref4city:FeatureOfInterest a owl:Class ;
-	rdfs:comment """TESTING!
+s4city:FeatureOfInterest a owl:Class ;
+	rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction ;
+	owl:onProperty s4city:hasProperty ;
+	owl:someValuesFrom saref:Property .
+
+s4city:FeatureOfInterest rdfs:comment """TESTING!
  It might be replaced by ssn feature of interest or created in saref ontology"""@en .
 # 
 # https://w3id.org/def/saref4city#KeyPerformanceIndicator
 
-saref4city:KeyPerformanceIndicator a owl:Class ;
-	rdfs:comment "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en ;
+s4city:KeyPerformanceIndicator a owl:Class ;
+	rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty s4city:hasCalculationPeriod ;
+	owl:someValuesFrom time:TemporalEntity .
+
+s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty s4city:hasKPIDescription ;
+	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+
+s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid18 .
+
+_:genid18 a owl:Restriction ;
+	owl:onProperty s4city:hasKPIName ;
+	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+
+s4city:KeyPerformanceIndicator rdfs:comment "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en ;
 	rdfs:label "Key Performance Indicator"@en ;
 	rdfs:seeAlso "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
 # 
 # https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
 
-saref4city:KeyPerformanceIndicatorValue a owl:Class ;
-	rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
+s4city:KeyPerformanceIndicatorValue a owl:Class ;
+	rdfs:subClassOf _:genid19 .
+
+_:genid19 a owl:Restriction ;
+	owl:onProperty s4city:assess ;
+	owl:someValuesFrom s4city:FeatureOfInterest .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty s4city:calculatedBy ;
+	owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid21 .
+
+_:genid21 a owl:Restriction ;
+	owl:onProperty s4city:hasIndicatorUnit ;
+	owl:someValuesFrom saref:UnitOfMeasure .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty s4city:implementsKPI ;
+	owl:someValuesFrom s4city:KeyPerformanceIndicator .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty s4city:isDerivedFrom ;
+	owl:someValuesFrom saref:Measurement .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid24 .
+
+_:genid24 a owl:Restriction ;
+	owl:onProperty s4city:refersToSpace ;
+	owl:someValuesFrom geosp:Feature .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty s4city:refersToTime ;
+	owl:someValuesFrom time:TemporalEntity .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid26 .
+
+_:genid26 a owl:Restriction ;
+	owl:onProperty s4city:creationDate ;
+	owl:someValuesFrom xsd:dateTime .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid27 .
+
+_:genid27 a owl:Restriction ;
+	owl:onProperty s4city:expirationDate ;
+	owl:someValuesFrom xsd:dateTime .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid28 .
+
+_:genid28 a owl:Restriction ;
+	owl:onProperty s4city:lastUpdateDate ;
+	owl:someValuesFrom xsd:dateTime .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid29 .
+
+_:genid29 a owl:Restriction ;
+	owl:onProperty s4city:hasKPIDescription ;
+	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty s4city:hasKPIName ;
+	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+
+s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid31 .
+
+_:genid31 a owl:Restriction ;
+	owl:onProperty s4city:hasKPIValue ;
+	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+
+s4city:KeyPerformanceIndicatorValue rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
 	rdfs:label "Key performance indicator value"@en .
 # 
 # https://w3id.org/def/saref4city#Neighbourhood
 
-saref4city:Neighbourhood a owl:Class ;
-	rdfs:subClassOf saref4city:AdministrativeArea ;
+s4city:Neighbourhood a owl:Class ;
+	rdfs:subClassOf s4city:AdministrativeArea ;
 	rdfs:comment "A neighbourhood (British English), or neighborhood (American English; see spelling differences), is a geographically localised community within a larger city, town, suburb or rural area. (https://en.wikipedia.org/wiki/Neighbourhood)"@en ;
 	rdfs:label "Neighbourhood"@en .
 # 
 # https://w3id.org/def/saref4city#PublicAdministration
 
-saref4city:PublicAdministration a owl:Class ;
+s4city:PublicAdministration a owl:Class ;
 	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
 	rdfs:comment "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"@en ;
 	rdfs:label "Public administration"@en ;
@@ -694,8 +878,38 @@ saref4city:PublicAdministration a owl:Class ;
 # 
 # https://w3id.org/def/saref4city#PublicService
 
-saref4city:PublicService a owl:Class ;
-	rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
+s4city:PublicService a owl:Class ;
+	owl:equivalentClass _:genid32 .
+
+_:genid32 a owl:Restriction ;
+	owl:onProperty s4city:hasServiceDescription ;
+	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+
+s4city:PublicService rdfs:subClassOf _:genid33 .
+
+_:genid33 a owl:Restriction ;
+	owl:onProperty s4city:involvesFacility ;
+	owl:someValuesFrom s4city:Facility .
+
+s4city:PublicService rdfs:subClassOf _:genid34 .
+
+_:genid34 a owl:Restriction ;
+	owl:onProperty s4city:isAvailableInArea ;
+	owl:someValuesFrom s4city:AdministrativeArea .
+
+s4city:PublicService rdfs:subClassOf _:genid35 .
+
+_:genid35 a owl:Restriction ;
+	owl:onProperty s4city:isAvailableInLanguage ;
+	owl:someValuesFrom lingvoj:Lingvo .
+
+s4city:PublicService rdfs:subClassOf _:genid36 .
+
+_:genid36 a owl:Restriction ;
+	owl:onProperty s4city:hasServiceName ;
+	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+
+s4city:PublicService rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
 	rdfs:label "Public service"@en ;
 	rdfs:seeAlso "https://en.wikipedia.org/wiki/Public_service" .
 # 
@@ -710,33 +924,33 @@ saref:Actuator a owl:Class ;
 # https://w3id.org/saref#Device
 
 saref:Device a owl:Class ;
-	rdfs:subClassOf _:genid1 .
+	rdfs:subClassOf geosp:Feature , _:genid37 .
 
-_:genid1 a owl:Restriction ;
+_:genid37 a owl:Restriction ;
 	owl:onProperty saref:consistsOf ;
 	owl:allValuesFrom saref:Device .
 
-saref:Device rdfs:subClassOf _:genid2 .
+saref:Device rdfs:subClassOf _:genid38 .
 
-_:genid2 a owl:Restriction ;
+_:genid38 a owl:Restriction ;
 	owl:onProperty saref:controlsProperty ;
 	owl:allValuesFrom saref:Property .
 
-saref:Device rdfs:subClassOf _:genid3 .
+saref:Device rdfs:subClassOf _:genid39 .
 
-_:genid3 a owl:Restriction ;
+_:genid39 a owl:Restriction ;
 	owl:onProperty saref:makesMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
-saref:Device rdfs:subClassOf _:genid4 .
+saref:Device rdfs:subClassOf _:genid40 .
 
-_:genid4 a owl:Restriction ;
+_:genid40 a owl:Restriction ;
 	owl:onProperty saref:measuresProperty ;
 	owl:allValuesFrom saref:Property .
 
-saref:Device rdfs:subClassOf _:genid5 .
+saref:Device rdfs:subClassOf _:genid41 .
 
-_:genid5 a owl:Restriction ;
+_:genid41 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -746,41 +960,53 @@ saref:Device rdfs:comment "A tangible object designed to accomplish a particular
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid6 .
+	rdfs:subClassOf _:genid42 .
 
-_:genid6 a owl:Restriction ;
+_:genid42 a owl:Restriction ;
+	owl:onProperty s4city:hasFeatureOfInterest ;
+	owl:someValuesFrom s4city:FeatureOfInterest .
+
+saref:Measurement rdfs:subClassOf _:genid43 .
+
+_:genid43 a owl:Restriction ;
+	owl:onProperty s4city:measurementMadeBy ;
+	owl:someValuesFrom saref:Device .
+
+saref:Measurement rdfs:subClassOf _:genid44 .
+
+_:genid44 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:allValuesFrom saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid7 .
+saref:Measurement rdfs:subClassOf _:genid45 .
 
-_:genid7 a owl:Restriction ;
+_:genid45 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:allValuesFrom saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid8 .
+saref:Measurement rdfs:subClassOf _:genid46 .
 
-_:genid8 a owl:Restriction ;
+_:genid46 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid9 .
+saref:Measurement rdfs:subClassOf _:genid47 .
 
-_:genid9 a owl:Restriction ;
+_:genid47 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid10 .
+saref:Measurement rdfs:subClassOf _:genid48 .
 
-_:genid10 a owl:Restriction ;
+_:genid48 a owl:Restriction ;
 	owl:onProperty saref:hasTimestamp ;
 	owl:allValuesFrom xsd:dateTime .
 
-saref:Measurement rdfs:subClassOf _:genid11 .
+saref:Measurement rdfs:subClassOf _:genid49 .
 
-_:genid11 a owl:Restriction ;
+_:genid49 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:float .
@@ -793,15 +1019,27 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid12 .
+	rdfs:subClassOf _:genid50 .
 
-_:genid12 a owl:Restriction ;
+_:genid50 a owl:Restriction ;
+	owl:onProperty s4city:isPropertyOf ;
+	owl:someValuesFrom s4city:FeatureOfInterest .
+
+saref:Property rdfs:subClassOf _:genid51 .
+
+_:genid51 a owl:Restriction ;
+	owl:onProperty saref:isControlledByDevice ;
+	owl:someValuesFrom saref:Device .
+
+saref:Property rdfs:subClassOf _:genid52 .
+
+_:genid52 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid13 .
+saref:Property rdfs:subClassOf _:genid53 .
 
-_:genid13 a owl:Restriction ;
+_:genid53 a owl:Restriction ;
 	owl:onProperty saref:relatesToMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
