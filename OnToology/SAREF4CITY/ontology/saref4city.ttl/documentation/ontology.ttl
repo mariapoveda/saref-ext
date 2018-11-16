@@ -16,7 +16,7 @@
                                    <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4city" ;
                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4city#" ;
-                                   owl:versionInfo 0.2 .
+                                   owl:versionInfo 0.3 .
 
 #################################################################
 #    Annotation properties
@@ -448,7 +448,11 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://www.opengis.net/ont/geosparql#Feature
 <http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                 owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                               ] ;
                                                owl:disjointWith <http://www.opengis.net/ont/geosparql#Geometry> ;
                                                <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
                                                <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
@@ -507,6 +511,14 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://www.opengis.net/ont/geosparql#SpatialObject
 <http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.opengis.net/ont/geosparql#sfContains> ;
+                                                                       owl:someValuesFrom <http://www.opengis.net/ont/geosparql#SpatialObject>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
+                                                                       owl:someValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#Point>
+                                                                     ] ;
                                                      <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
                                                      <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
                                                      <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
@@ -584,6 +596,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  http://xmlns.com/foaf/0.1/Agent
 <http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :providesService ;
+                                                    owl:someValuesFrom :PublicService
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :usesService ;
+                                                    owl:someValuesFrom :PublicService
+                                                  ] ;
                                   rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
                                   rdfs:label "Agent"@en .
 
@@ -597,21 +617,33 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4city#AdministrativeArea
 :AdministrativeArea rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                    rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :belongsTo ;
+                                      owl:someValuesFrom :AdministrativeArea
+                                    ] ;
                     rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
                     rdfs:label "Administrative area"@en .
 
 
 ###  https://w3id.org/def/saref4city#City
 :City rdf:type owl:Class ;
-      rdfs:subClassOf :AdministrativeArea ;
+      rdfs:subClassOf :AdministrativeArea ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCityObject ;
+                        owl:someValuesFrom :CityObject
+                      ] ;
       rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
       rdfs:label "City"@en .
 
 
 ###  https://w3id.org/def/saref4city#CityObject
 :CityObject rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+            rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :belongsToCity ;
+                              owl:someValuesFrom :City
+                            ] ;
             rdfs:label "City object"@en .
 
 
@@ -631,6 +663,30 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4city#Event
 :Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAccesibility ;
+                         owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isOrganizedBy ;
+                         owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isSubEventOf ;
+                         owl:someValuesFrom :Event
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :takesPlaceAtFacility ;
+                         owl:someValuesFrom :Facility
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :takesPlaceAtTime ;
+                         owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasEventName ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ;
        rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
        rdfs:label "Event"@en ;
        rdfs:seeAlso "https://www.wikidata.org/wiki/Q1656682" .
@@ -639,17 +695,34 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/def/saref4city#Facility
 :Facility rdf:type owl:Class ;
           rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+          rdfs:comment "A place, amenity, or piece of equipment provided for a particular purpose. (Definition taken from https://en.oxforddictionaries.com/definition/facility)"@en ;
           rdfs:label "Facility"@en .
 
 
 ###  https://w3id.org/def/saref4city#FeatureOfInterest
 :FeatureOfInterest rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasProperty ;
+                                     owl:someValuesFrom <https://w3id.org/saref#Property>
+                                   ] ;
                    rdfs:comment """TESTING!
  It might be replaced by ssn feature of interest or created in saref ontology"""@en .
 
 
 ###  https://w3id.org/def/saref4city#KeyPerformanceIndicator
 :KeyPerformanceIndicator rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasCalculationPeriod ;
+                                           owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasKPIDescription ;
+                                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasKPIName ;
+                                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ;
                          rdfs:comment "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en ;
                          rdfs:label "Key Performance Indicator"@en ;
                          rdfs:seeAlso "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
@@ -657,6 +730,58 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
 :KeyPerformanceIndicatorValue rdf:type owl:Class ;
+                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty :assess ;
+                                                owl:someValuesFrom :FeatureOfInterest
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :calculatedBy ;
+                                                owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent>
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasIndicatorUnit ;
+                                                owl:someValuesFrom <https://w3id.org/saref#UnitOfMeasure>
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :implementsKPI ;
+                                                owl:someValuesFrom :KeyPerformanceIndicator
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :isDerivedFrom ;
+                                                owl:someValuesFrom <https://w3id.org/saref#Measurement>
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :refersToSpace ;
+                                                owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Feature>
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :refersToTime ;
+                                                owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :creationDate ;
+                                                owl:someValuesFrom xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :expirationDate ;
+                                                owl:someValuesFrom xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :lastUpdateDate ;
+                                                owl:someValuesFrom xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasKPIDescription ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasKPIName ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasKPIValue ;
+                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ;
                               rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
                               rdfs:label "Key performance indicator value"@en .
 
@@ -678,6 +803,26 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4city#PublicService
 :PublicService rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasServiceDescription ;
+                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :involvesFacility ;
+                                 owl:someValuesFrom :Facility
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isAvailableInArea ;
+                                 owl:someValuesFrom :AdministrativeArea
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isAvailableInLanguage ;
+                                 owl:someValuesFrom <http://www.lingvoj.org/ontology#Lingvo>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasServiceName ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
                rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
                rdfs:label "Public service"@en ;
                rdfs:seeAlso "https://en.wikipedia.org/wiki/Public_service" .
@@ -693,7 +838,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> rdf:type owl:Class ;
-                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                                                [ rdf:type owl:Restriction ;
                                                   owl:onProperty <https://w3id.org/saref#consistsOf> ;
                                                   owl:allValuesFrom <https://w3id.org/saref#Device>
                                                 ] ,
@@ -720,6 +866,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> rdf:type owl:Class ;
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasFeatureOfInterest ;
+                                                       owl:someValuesFrom :FeatureOfInterest
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :measurementMadeBy ;
+                                                       owl:someValuesFrom <https://w3id.org/saref#Device>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
                                                        owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
                                                      ] ,
@@ -756,6 +910,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :isPropertyOf ;
+                                                    owl:someValuesFrom :FeatureOfInterest
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/saref#isControlledByDevice> ;
+                                                    owl:someValuesFrom <https://w3id.org/saref#Device>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isMeasuredByDevice> ;
                                                     owl:allValuesFrom <https://w3id.org/saref#Device>
                                                   ] ,
