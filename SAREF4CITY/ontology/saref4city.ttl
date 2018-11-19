@@ -78,8 +78,7 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 # http://www.w3.org/2003/01/geo/wgs84_pos#alt
 
 geo:alt a owl:AnnotationProperty ;
-	rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
-above the local reference ellipsoid).""" ;
+	rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
 	rdfs:label "altitude" ;
 	rdfs:domain geo:SpatialThing .
 # 
@@ -89,11 +88,6 @@ geo:lat a owl:AnnotationProperty ;
 	rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
 	rdfs:label "latitude" ;
 	rdfs:domain geo:SpatialThing .
-# 
-# http://www.w3.org/2003/01/geo/wgs84_pos#location
-
-geo:location a owl:AnnotationProperty ;
-	rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#long
 
@@ -152,17 +146,11 @@ geosp:hasGeometry a owl:ObjectProperty ;
 	dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
 	dc:date "2011-06-16"^^xsd:date ;
-	dc:description """
-      A spatial representation for a given feature.
-    """@en ;
-	rdfs:comment """
-      A spatial representation for a given feature.
-    """@en , "A spatial representation for a given feature."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> , "http://www.opengis.net/ont/geosparql#" ;
+	dc:description "A spatial representation for a given feature."@en ;
+	rdfs:comment "A spatial representation for a given feature."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> , <http://www.opengis.net/ont/geosparql#> ;
 	rdfs:label "has geometry"@en , "hasGeometry"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> """
-      A spatial representation for a given feature.
-    """@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "A spatial representation for a given feature."@en ;
 	<http://www.w3.org/2004/02/skos/core#prefLabel> "hasGeometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfContains
@@ -173,25 +161,28 @@ geosp:sfContains a owl:ObjectProperty ;
 	dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
 	dc:date "2011-06-16"^^xsd:date ;
-	dc:description """
-      Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*
-    """@en ;
-	rdfs:comment """
-      Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*
-    """@en ;
+	dc:description "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
+	rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
 	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> ;
 	rdfs:label "contains"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> """
-      Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*
-    """@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*"@en ;
 	<http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 
-geo:location a owl:ObjectProperty .
+geo:location a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> ;
+	rdfs:label "location"@en ;
+	rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """ .
+
 # 
 # https://w3id.org/def/saref4city#assess
 
@@ -324,7 +315,7 @@ s4city:usesService a owl:ObjectProperty ;
 # https://w3id.org/saref#consistsOf
 
 saref:consistsOf a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "consists of"@en .
 # 
 # https://w3id.org/saref#controlsProperty
@@ -335,43 +326,43 @@ saref:controlsProperty a owl:ObjectProperty ;
 # https://w3id.org/saref#isControlledByDevice
 
 saref:isControlledByDevice a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is controlled by device"@en .
 # 
 # https://w3id.org/saref#isMeasuredByDevice
 
 saref:isMeasuredByDevice a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is measured by device"@en .
 # 
 # https://w3id.org/saref#isMeasuredIn
 
 saref:isMeasuredIn a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is measured in"@en .
 # 
 # https://w3id.org/saref#makesMeasurement
 
 saref:makesMeasurement a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "makes measurement"@en .
 # 
 # https://w3id.org/saref#measuresProperty
 
 saref:measuresProperty a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "measures property"@en .
 # 
 # https://w3id.org/saref#relatesToMeasurement
 
 saref:relatesToMeasurement a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "relates to measurement"@en .
 # 
 # https://w3id.org/saref#relatesToProperty
 
 saref:relatesToProperty a owl:ObjectProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "relates to property"@en .
 # 
 # 
@@ -445,19 +436,19 @@ s4city:lastUpdateDate a owl:DatatypeProperty ;
 # https://w3id.org/saref#hasDescription
 
 saref:hasDescription a owl:DatatypeProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has description"@en .
 # 
 # https://w3id.org/saref#hasTimestamp
 
 saref:hasTimestamp a owl:DatatypeProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has timestamp"@en .
 # 
 # https://w3id.org/saref#hasValue
 
 saref:hasValue a owl:DatatypeProperty ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has value"@en .
 # 
 # 
@@ -487,23 +478,11 @@ geosp:Feature owl:disjointWith geosp:Geometry ;
 	dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
 	dc:date "2011-06-16"^^xsd:date ;
-	dc:description """
-      This class represents the top-level feature type. This class is 
-      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
-      superclass of all feature types.
-    """@en ;
-	rdfs:comment """
-      This class represents the top-level feature type. This class is 
-      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
-      superclass of all feature types.
-    """@en ;
+	dc:description "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+	rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
 	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
 	rdfs:label "Feature"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> """
-      This class represents the top-level feature type. This class is 
-      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
-      superclass of all feature types.
-    """@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
 	<http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
@@ -513,23 +492,11 @@ geosp:Geometry a owl:Class ;
 	dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
 	dc:date "2011-06-16"^^xsd:date ;
-	dc:description """
-      The class represents the top-level geometry type. This class is 
-      equivalent to the UML class GM_Object defined in ISO 19107, and 
-      it is superclass of all geometry types.
-    """@en ;
-	rdfs:comment """
-      The class represents the top-level geometry type. This class is 
-      equivalent to the UML class GM_Object defined in ISO 19107, and 
-      it is superclass of all geometry types.
-    """@en , "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> , "http://www.opengis.net/ont/geosparql"@en ;
+	dc:description "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+	rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en , "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
 	rdfs:label "Geometry"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> """
-      The class represents the top-level geometry type. This class is 
-      equivalent to the UML class GM_Object defined in ISO 19107, and 
-      it is superclass of all geometry types.
-    """@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
 	<http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#SpatialObject
@@ -550,20 +517,11 @@ _:genid3 a owl:Restriction ;
 geosp:SpatialObject dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
 	dc:date "2011-06-16"^^xsd:date ;
-	dc:description """
-      The class spatial-object represents everything that can have 
-      a spatial representation. It is superclass of feature and geometry.
-    """@en ;
-	rdfs:comment """
-      The class spatial-object represents everything that can have 
-      a spatial representation. It is superclass of feature and geometry.
-    """@en ;
+	dc:description "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+	rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
 	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
 	rdfs:label "SpatialObject"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> """
-      The class spatial-object represents everything that can have 
-      a spatial representation. It is superclass of feature and geometry.
-    """@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
 	<http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
@@ -577,43 +535,42 @@ spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
   lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
 
 sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
-  """ , """A point, typically described using a coordinate system relative to Earth, such as WGS84.
-  """ ;
-	rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
+  """ , "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
+	rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
 	rdfs:label "Point"@en , "point" .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 
 <http://www.w3.org/2004/02/skos/core#Concept> a owl:Class ;
-	rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#" .
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
 # 
 # http://www.w3.org/2006/time#Instant
 
 time:Instant a owl:Class ;
 	rdfs:subClassOf time:TemporalEntity ;
 	rdfs:comment "A temporal entity with zero extent or duration"@en ;
-	rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+	rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
 	rdfs:label "Instant"@en .
 # 
 # http://www.w3.org/2006/time#Interval
 
 time:Interval a owl:Class ;
 	rdfs:subClassOf time:TemporalEntity ;
-	rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+	rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
 	rdfs:label "A temporal entity with an extent or duration"@en , "Time interval"@en .
 # 
 # http://www.w3.org/2006/time#TemporalEntity
 
 time:TemporalEntity a owl:Class ;
 	rdfs:comment "A temporal interval or instant."@en ;
-	rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+	rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
 	rdfs:label "Temporal entity"@en .
 # 
 # http://www.w3.org/ns/org#Organization
 
 <http://www.w3.org/ns/org#Organization> a owl:Class ;
 	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
-	rdfs:isDefinedBy "http://www.w3.org/ns/org#" ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/org#> ;
 	rdfs:label "Organization"@en .
 # 
 # http://xmlns.com/foaf/0.1/Agent
@@ -631,14 +588,14 @@ _:genid5 a owl:Restriction ;
 	owl:onProperty s4city:usesService ;
 	owl:someValuesFrom s4city:PublicService .
 
-<http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+<http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
 	rdfs:label "Agent"@en .
 # 
 # http://xmlns.com/foaf/0.1/Person
 
 <http://xmlns.com/foaf/0.1/Person> a owl:Class ;
 	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
-	rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+	rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
 	rdfs:label "Person"@en .
 # 
 # https://w3id.org/def/saref4city#AdministrativeArea
@@ -1013,11 +970,12 @@ _:genid49 a owl:Restriction ;
 
 saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 	rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Measurement"@en .
 # 
 # https://w3id.org/saref#Property
 
+# FIXME Rewrite the definition of saref:Property without the splitting in blank nodes
 saref:Property a owl:Class ;
 	rdfs:subClassOf _:genid50 .
 
@@ -1045,8 +1003,8 @@ _:genid53 a owl:Restriction ;
 
 saref:Property owl:disjointWith saref:UnitOfMeasure ;
 	rdfs:comment "An aspect of an entity that can be observable by a sensor."@en , "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
-	rdfs:isDefinedBy "https://w3id.org/saref#" ;
-	rdfs:label "Property"@en , "Property"^^xsd:string .
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "Property"@en .
 # 
 # https://w3id.org/saref#Sensor
 
@@ -1074,111 +1032,3 @@ saref:UnitOfMeasure a owl:Class ;
 # 
 # 
 
-<http://www.w3.org/2003/01/geo/wgs84_pos#> dc:date "$Date: 2009/04/20 15:00:30 $" ;
-	rdfs:label "geo" ;
-	dc:description """A vocabulary for representing latitude, longitude and 
- altitude information in the WGS84 geodetic reference datum. 
- Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.""" ;
-	rdfs:comment """
-Recent changes to this namespace:
-$Log: wgs84_pos.rdf,v $
-Revision 1.22  2009/04/20 15:00:30  timbl
-Remove the time bits which have been deal with elsewhere eg in iCal.
-
-Revision 1.21  2009/04/20 12:52:47  timbl
-try again
-
-Revision 1.20  2009/04/20 12:42:11  timbl
-Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
-
-Revision 1.19  2009/04/20 12:36:31  timbl
-Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
-
-Revision 1.18  2006/02/01 22:01:04  danbri
-Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid
-
-Revision 1.17  2004/02/06 17:38:12  danbri
-Fixed a bad commit screwup
-
-Revision 1.15  2003/04/19 11:24:08  danbri
-Fixed the typo even more.
-
-Revision 1.14  2003/04/19 11:16:56  danbri
-fixed a typo
-
-Revision 1.13  2003/02/19 22:27:27  connolly
-relaxed domain constraints on lat/long/alt from Point to SpatialThing
-
-Revision 1.12  2003/01/12 01:41:41  danbri
-Trying local copy of XSLT doc.
-
-Revision 1.11  2003/01/12 01:20:18  danbri
-added a link to morten's xslt rdfs viewer.
-
-Revision 1.10  2003/01/11 18:56:49  danbri
-Removed datatype range from lat and long properties, since they would
-have required each occurance of the property to mention the datatype.
-
-Revision 1.9  2003/01/11 11:41:31  danbri
-Another typo; repaired rdfs:Property to rdf:Property x4
-
-Revision 1.8  2003/01/11 11:05:02  danbri
-Added an rdfs:range for each lat/long/alt property,
-http://www.w3.org/2001/XMLSchema#float
-
-Revision 1.7  2003/01/10 20:25:16  danbri
-Longer rdfs:comment for Point, trying to be Earth-centric and neutral about
-coordinate system(s) at the same time. Feedback welcomed.
-
-Revision 1.6  2003/01/10 20:18:30  danbri
-Added CVS log comments into the RDF/XML as an rdfs:comment property of the
-vocabulary. Note that this is not common practice (but seems both harmless
-and potentially useful).
-
-
-revision 1.5
-date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5
-Updated schema:
-Added a dc:date, added url for more info. Changed the rdfs:label of the
-namespace from gp to geo. Added a class Point, set as the rdfs:domain of
-each property. Added XML comment on the lat_long property suggesting that
-we might not need it (based on #rdfig commentary from implementors).
-
-revision 1.4
-date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5
-Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in
-#rdfig for catching this error.
-
-revision 1.3
-date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3
-fixed buglet in vocab, added more wgs links
-
-revision 1.2
-date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4
-Removed alt from the as-a-flat-string property, and switched from
-space separated to comma separated.
-
-revision 1.1
-date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
-basic geo vocab
-
-""" ;
-	dc:title "WGS84 Geo Positioning: an RDF vocabulary" .
-# 
-
-geo:lat_long rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." ;
-	rdfs:label "lat/long" .
-# 
-
-geo:location rdfs:label "location" ;
-	rdfs:comment """The relation between something and the point, 
- or other geometrical thing in space, where it is.  For example, the realtionship between
- a radio tower and a Point with a given lat and long.
- Or a relationship between a park and its outline as a closed arc of points, or a road and
- its location as a arc (a sequence of points).
- Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
- an accuracy appropriate for the size of the object and uses such as mapping .
- """ ;
-	rdfs:label "location"@en .
-# 
-# Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
