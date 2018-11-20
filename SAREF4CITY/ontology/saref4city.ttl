@@ -386,24 +386,23 @@ saref:relatesToProperty a owl:ObjectProperty ;
 # #################################################################
 # 
 # 
-# https://w3id.org/def/saref4city#creationDate
+# https://w3id.org/def/saref4city#hasCreationDate
 
-s4city:creationDate a owl:DatatypeProperty ;
+s4city:hasCreationDate a owl:DatatypeProperty ;
 	rdfs:range xsd:dateTime ;
-	rdfs:label "creation date"@en .
+	rdfs:label "has creation date"@en .
 # 
-# https://w3id.org/def/saref4city#expirationDate
+# https://w3id.org/def/saref4city#hasExpirationDate
 
-s4city:expirationDate a owl:DatatypeProperty ;
+s4city:hasExpirationDate a owl:DatatypeProperty ;
 	rdfs:range xsd:dateTime ;
-	rdfs:label "expiration date"@en .
+	rdfs:label "has expiration date"@en .
 # 
-# https://w3id.org/def/saref4city#lastUpdateDate
+# https://w3id.org/def/saref4city#hasLastUpdateDate
 
-s4city:lastUpdateDate a owl:DatatypeProperty ;
-	rdfs:subPropertyOf owl:topDataProperty ;
+s4city:hasLastUpdateDate a owl:DatatypeProperty ;
 	rdfs:range xsd:dateTime ;
-	rdfs:label "last update date"@en .
+	rdfs:label "has last update date"@en .
 # 
 # https://w3id.org/saref#hasDescription
 
@@ -758,19 +757,19 @@ _:genid25 a owl:Restriction ;
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid26 .
 
 _:genid26 a owl:Restriction ;
-	owl:onProperty s4city:creationDate ;
+	owl:onProperty s4city:hasCreationDate ;
 	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid27 .
 
 _:genid27 a owl:Restriction ;
-	owl:onProperty s4city:expirationDate ;
+	owl:onProperty s4city:hasExpirationDate ;
 	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid28 .
 
 _:genid28 a owl:Restriction ;
-	owl:onProperty s4city:lastUpdateDate ;
+	owl:onProperty s4city:hasLastUpdateDate ;
 	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid29 .
