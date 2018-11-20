@@ -224,6 +224,12 @@ s4city:hasCalculationPeriod a owl:ObjectProperty ;
 s4city:hasFeatureOfInterest a owl:ObjectProperty ;
 	rdfs:label "has feature of interest"@en .
 # 
+# https://w3id.org/def/saref4city#isFeatureOfInterestOf
+
+s4city:isFeatureOfInterestOf a owl:ObjectProperty ;
+	owl:inverseOf s4city:hasFeatureOfInterest ;
+	rdfs:label "is feature of interest of"@en .
+# 
 # https://w3id.org/def/saref4city#hasProperty
 
 s4city:hasProperty a owl:ObjectProperty ;
@@ -280,6 +286,12 @@ s4city:measurementMadeBy a owl:ObjectProperty ;
 
 s4city:providesService a owl:ObjectProperty ;
 	rdfs:label "provides service"@en .
+# 
+# https://w3id.org/def/saref4city#serviceProvidedBy
+
+s4city:serviceProvidedBy a owl:ObjectProperty ;
+	owl:inverseOf s4city:providesService ;
+	rdfs:label "service provided by"@en .
 # 
 # https://w3id.org/def/saref4city#refersToTime
 
@@ -680,6 +692,13 @@ _:genid15 a owl:Restriction ;
 	owl:onProperty s4city:hasProperty ;
 	owl:someValuesFrom saref:Property .
 
+s4city:FeatureOfInterest a owl:Class ;
+	rdfs:subClassOf _:genid54 .
+
+_:genid54 a owl:Restriction ;
+	owl:onProperty s4city:isFeatureOfInterestOf ;
+	owl:someValuesFrom s4city:Measurement .
+
 s4city:FeatureOfInterest rdfs:comment """TESTING!
  It might be replaced by ssn feature of interest or created in saref ontology"""@en .
 # 
@@ -837,6 +856,12 @@ _:genid36 a owl:Restriction ;
 s4city:PublicService rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
 	rdfs:label "Public service"@en ;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/Public_service> .
+	
+s4city:PublicService rdfs:subClassOf [
+	a owl:Restriction ;
+	owl:onProperty s4city:serviceProvidedBy ;
+	owl:someValuesFrom foaf:Agent .
+	] .
 # 
 # https://w3id.org/saref#Actuator
 
