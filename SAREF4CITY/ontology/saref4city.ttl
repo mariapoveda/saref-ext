@@ -405,11 +405,6 @@ s4city:hasKPIName a owl:DatatypeProperty ;
 	rdfs:subPropertyOf s4city:hasName ;
 	rdfs:label "KPI name"@en .
 # 
-# https://w3id.org/def/saref4city#hasKPIValue
-
-s4city:hasKPIValue a owl:DatatypeProperty ;
-	rdfs:subPropertyOf saref:hasValue .
-# 
 # https://w3id.org/def/saref4city#hasName
 
 s4city:hasName a owl:DatatypeProperty ;
@@ -799,8 +794,8 @@ _:genid30 a owl:Restriction ;
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid31 .
 
 _:genid31 a owl:Restriction ;
-	owl:onProperty s4city:hasKPIValue ;
-	owl:minCardinality "1"^^xsd:nonNegativeInteger .
+	owl:onProperty saref:hasValue ;
+	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
 s4city:KeyPerformanceIndicatorValue rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
 	rdfs:label "Key performance indicator value"@en .
@@ -958,8 +953,7 @@ saref:Measurement rdfs:subClassOf _:genid49 .
 
 _:genid49 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onDataRange xsd:float .
+	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
 saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 	rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
