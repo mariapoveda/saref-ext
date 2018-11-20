@@ -184,10 +184,10 @@ geo:location a owl:ObjectProperty ;
  """ .
 
 # 
-# https://w3id.org/def/saref4city#assess
+# https://w3id.org/def/saref4city#assesses
 
-s4city:assess a owl:ObjectProperty ;
-	rdfs:label "assess"@en .
+s4city:assesses a owl:ObjectProperty ;
+	rdfs:label "assesses"@en .
 # 
 # https://w3id.org/def/saref4city#belongsTo
 
@@ -200,10 +200,10 @@ s4city:belongsToCity a owl:ObjectProperty ;
 	owl:inverseOf s4city:hasCityObject ;
 	rdfs:label "belongs to city"@en .
 # 
-# https://w3id.org/def/saref4city#calculatedBy
+# https://w3id.org/def/saref4city#isAssessedBy
 
-s4city:calculatedBy a owl:ObjectProperty ;
-	rdfs:label "calculated by"@en .
+s4city:isAssessedBy a owl:ObjectProperty ;
+	rdfs:label "is assessed by"@en .
 # 
 # https://w3id.org/def/saref4city#hasAccesibility
 
@@ -236,10 +236,10 @@ s4city:hasProperty a owl:ObjectProperty ;
 	owl:inverseOf s4city:isPropertyOf ;
 	rdfs:label "has property"@en .
 # 
-# https://w3id.org/def/saref4city#implementsKPI
+# https://w3id.org/def/saref4city#quantifiesKPI
 
-s4city:implementsKPI a owl:ObjectProperty ;
-	rdfs:label "implements KPI"@en .
+s4city:quantifiesKPI a owl:ObjectProperty ;
+	rdfs:label "quantifies KPI"@en .
 # 
 # https://w3id.org/def/saref4city#involvesFacility
 
@@ -740,13 +740,13 @@ s4city:KeyPerformanceIndicatorValue a owl:Class ;
 	rdfs:subClassOf _:genid19 .
 
 _:genid19 a owl:Restriction ;
-	owl:onProperty s4city:assess ;
+	owl:onProperty s4city:assesses ;
 	owl:someValuesFrom s4city:FeatureOfInterest .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid20 .
 
 _:genid20 a owl:Restriction ;
-	owl:onProperty s4city:calculatedBy ;
+	owl:onProperty s4city:isAssessedBy ;
 	owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid21 .
@@ -758,7 +758,7 @@ _:genid21 a owl:Restriction ;
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid22 .
 
 _:genid22 a owl:Restriction ;
-	owl:onProperty s4city:implementsKPI ;
+	owl:onProperty s4city:quantifiesKPI ;
 	owl:someValuesFrom s4city:KeyPerformanceIndicator .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid23 .
