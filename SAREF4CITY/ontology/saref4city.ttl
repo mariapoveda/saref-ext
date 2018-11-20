@@ -479,7 +479,7 @@ geosp:Feature a owl:Class ;
 
 _:genid1 a owl:Restriction ;
 	owl:onProperty geosp:hasGeometry ;
-	owl:someValuesFrom geosp:Geometry .
+	owl:allValuesFrom geosp:Geometry .
 
 geosp:Feature owl:disjointWith geosp:Geometry ;
 	dc:contributor "Matthew Perry" ;
@@ -513,13 +513,13 @@ geosp:SpatialObject a owl:Class ;
 
 _:genid2 a owl:Restriction ;
 	owl:onProperty geosp:sfContains ;
-	owl:someValuesFrom geosp:SpatialObject .
+	owl:allValuesFrom geosp:SpatialObject .
 
 geosp:SpatialObject rdfs:subClassOf _:genid3 .
 
 _:genid3 a owl:Restriction ;
 	owl:onProperty geo:location ;
-	owl:someValuesFrom geo:Point .
+	owl:allValuesFrom geo:Point .
 
 geosp:SpatialObject dc:contributor "Matthew Perry" ;
 	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
@@ -587,13 +587,13 @@ time:TemporalEntity a owl:Class ;
 
 _:genid4 a owl:Restriction ;
 	owl:onProperty s4city:providesService ;
-	owl:someValuesFrom s4city:PublicService .
+	owl:allValuesFrom s4city:PublicService .
 
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf _:genid5 .
 
 _:genid5 a owl:Restriction ;
 	owl:onProperty s4city:usesService ;
-	owl:someValuesFrom s4city:PublicService .
+	owl:allValuesFrom s4city:PublicService .
 
 <http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
 	rdfs:label "Agent"@en .
@@ -646,37 +646,37 @@ s4city:Event a owl:Class ;
 
 _:genid9 a owl:Restriction ;
 	owl:onProperty s4city:hasAccesibility ;
-	owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> .
+	owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> .
 
 s4city:Event rdfs:subClassOf _:genid10 .
 
 _:genid10 a owl:Restriction ;
 	owl:onProperty s4city:isOrganizedBy ;
-	owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
+	owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
 
 s4city:Event rdfs:subClassOf _:genid11 .
 
 _:genid11 a owl:Restriction ;
 	owl:onProperty s4city:isSubEventOf ;
-	owl:someValuesFrom s4city:Event .
+	owl:allValuesFrom s4city:Event .
 
 s4city:Event rdfs:subClassOf _:genid12 .
 
 _:genid12 a owl:Restriction ;
 	owl:onProperty s4city:takesPlaceAtFacility ;
-	owl:someValuesFrom s4city:Facility .
+	owl:allValuesFrom s4city:Facility .
 
 s4city:Event rdfs:subClassOf _:genid13 .
 
 _:genid13 a owl:Restriction ;
 	owl:onProperty s4city:takesPlaceAtTime ;
-	owl:someValuesFrom time:TemporalEntity .
+	owl:allValuesFrom time:TemporalEntity .
 
 s4city:Event rdfs:subClassOf _:genid14 .
 
 _:genid14 a owl:Restriction ;
 	owl:onProperty s4city:hasEventName ;
-	owl:someValuesFrom rdfs:Literal .
+	owl:allValuesFrom rdfs:Literal .
 
 s4city:Event rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
 	rdfs:label "Event"@en ;
@@ -696,14 +696,14 @@ s4city:FeatureOfInterest a owl:Class ;
 
 _:genid15 a owl:Restriction ;
 	owl:onProperty s4city:hasProperty ;
-	owl:someValuesFrom saref:Property .
+	owl:allValuesFrom saref:Property .
 
 s4city:FeatureOfInterest a owl:Class ;
 	rdfs:subClassOf _:genid54 .
 
 _:genid54 a owl:Restriction ;
 	owl:onProperty s4city:isFeatureOfInterestOf ;
-	owl:someValuesFrom s4city:Measurement .
+	owl:allValuesFrom s4city:Measurement .
 
 s4city:FeatureOfInterest rdfs:comment """WARNING!
  This class might be moved to the SAREF ontology"""@en .
@@ -711,7 +711,7 @@ s4city:FeatureOfInterest rdfs:comment """WARNING!
 s4city:FeatureOfInterest rdfs:subClassOf [
 	a owl:Restriction ;
 	owl:onProperty s4city:hasKPI ;
-	owl:someValuesFrom s4city:KeyPerformanceIndicator .
+	owl:allValuesFrom s4city:KeyPerformanceIndicator .
 	] .
 # 
 # https://w3id.org/def/saref4city#KeyPerformanceIndicator
@@ -721,7 +721,7 @@ s4city:KeyPerformanceIndicator a owl:Class ;
 
 _:genid16 a owl:Restriction ;
 	owl:onProperty s4city:hasCalculationPeriod ;
-	owl:someValuesFrom time:TemporalEntity .
+	owl:allValuesFrom time:TemporalEntity .
 
 s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid17 .
 
@@ -742,7 +742,7 @@ s4city:KeyPerformanceIndicator rdfs:comment "A Key Performance Indicator (KPI) i
 s4city:KeyPerformanceIndicator rdfs:subClassOf [
 	a owl:Restriction ;
 	owl:onProperty s4city:isKPIOf ;
-	owl:someValuesFrom s4city:FeatureOfInterest .
+	owl:allValuesFrom s4city:FeatureOfInterest .
 	] .
 # 
 # https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
@@ -752,55 +752,55 @@ s4city:KeyPerformanceIndicatorValue a owl:Class ;
 
 _:genid19 a owl:Restriction ;
 	owl:onProperty s4city:assesses ;
-	owl:someValuesFrom s4city:FeatureOfInterest .
+	owl:allValuesFrom s4city:FeatureOfInterest .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid20 .
 
 _:genid20 a owl:Restriction ;
 	owl:onProperty s4city:isAssessedBy ;
-	owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
+	owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid21 .
 
 _:genid21 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
-	owl:someValuesFrom saref:UnitOfMeasure .
+	owl:allValuesFrom saref:UnitOfMeasure .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid22 .
 
 _:genid22 a owl:Restriction ;
 	owl:onProperty s4city:quantifiesKPI ;
-	owl:someValuesFrom s4city:KeyPerformanceIndicator .
+	owl:allValuesFrom s4city:KeyPerformanceIndicator .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid23 .
 
 _:genid23 a owl:Restriction ;
 	owl:onProperty s4city:isDerivedFrom ;
-	owl:someValuesFrom saref:Measurement .
+	owl:allValuesFrom saref:Measurement .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid25 .
 
 _:genid25 a owl:Restriction ;
 	owl:onProperty s4city:refersToTime ;
-	owl:someValuesFrom time:TemporalEntity .
+	owl:allValuesFrom time:TemporalEntity .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid26 .
 
 _:genid26 a owl:Restriction ;
 	owl:onProperty s4city:creationDate ;
-	owl:someValuesFrom xsd:dateTime .
+	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid27 .
 
 _:genid27 a owl:Restriction ;
 	owl:onProperty s4city:expirationDate ;
-	owl:someValuesFrom xsd:dateTime .
+	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid28 .
 
 _:genid28 a owl:Restriction ;
 	owl:onProperty s4city:lastUpdateDate ;
-	owl:someValuesFrom xsd:dateTime .
+	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid29 .
 
@@ -851,19 +851,19 @@ s4city:PublicService rdfs:subClassOf _:genid33 .
 
 _:genid33 a owl:Restriction ;
 	owl:onProperty s4city:involvesFacility ;
-	owl:someValuesFrom s4city:Facility .
+	owl:allValuesFrom s4city:Facility .
 
 s4city:PublicService rdfs:subClassOf _:genid34 .
 
 _:genid34 a owl:Restriction ;
 	owl:onProperty s4city:isAvailableInArea ;
-	owl:someValuesFrom s4city:AdministrativeArea .
+	owl:allValuesFrom s4city:AdministrativeArea .
 
 s4city:PublicService rdfs:subClassOf _:genid35 .
 
 _:genid35 a owl:Restriction ;
 	owl:onProperty s4city:isAvailableInLanguage ;
-	owl:someValuesFrom lingvoj:Lingvo .
+	owl:allValuesFrom lingvoj:Lingvo .
 
 s4city:PublicService rdfs:subClassOf _:genid36 .
 
@@ -878,7 +878,7 @@ s4city:PublicService rdfs:comment "Public service is a service which is provided
 s4city:PublicService rdfs:subClassOf [
 	a owl:Restriction ;
 	owl:onProperty s4city:serviceProvidedBy ;
-	owl:someValuesFrom foaf:Agent .
+	owl:allValuesFrom foaf:Agent .
 	] .
 # 
 # https://w3id.org/saref#Actuator
@@ -932,13 +932,13 @@ saref:Measurement a owl:Class ;
 
 _:genid42 a owl:Restriction ;
 	owl:onProperty s4city:hasFeatureOfInterest ;
-	owl:someValuesFrom s4city:FeatureOfInterest .
+	owl:allValuesFrom s4city:FeatureOfInterest .
 
 saref:Measurement rdfs:subClassOf _:genid43 .
 
 _:genid43 a owl:Restriction ;
 	owl:onProperty s4city:measurementMadeBy ;
-	owl:someValuesFrom saref:Device .
+	owl:allValuesFrom saref:Device .
 
 saref:Measurement rdfs:subClassOf _:genid44 .
 
@@ -991,13 +991,13 @@ saref:Property a owl:Class ;
 
 _:genid50 a owl:Restriction ;
 	owl:onProperty s4city:isPropertyOf ;
-	owl:someValuesFrom s4city:FeatureOfInterest .
+	owl:allValuesFrom s4city:FeatureOfInterest .
 
 saref:Property rdfs:subClassOf _:genid51 .
 
 _:genid51 a owl:Restriction ;
 	owl:onProperty saref:isControlledByDevice ;
-	owl:someValuesFrom saref:Device .
+	owl:allValuesFrom saref:Device .
 
 saref:Property rdfs:subClassOf _:genid52 .
 
