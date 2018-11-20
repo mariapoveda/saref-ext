@@ -169,6 +169,21 @@ geosp:sfContains a owl:ObjectProperty ;
       object SpatialObject. DE-9IM: T*****FF*"@en ;
 	<http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en .
 # 
+# http://www.opengis.net/ont/geosparql#sfWithin
+
+geosp:sfWithin a owl:ObjectProperty ;
+	rdfs:domain geosp:SpatialObject ;
+	rdfs:range geosp:SpatialObject ;
+	dc:contributor "Matthew Perry" ;
+	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	dc:date "2011-06-16"^^xsd:date ;
+	dc:description "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+	rdfs:comment "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:label "within"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "within"@en .
+# 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 
 geo:location a owl:ObjectProperty ;
@@ -189,17 +204,6 @@ geo:location a owl:ObjectProperty ;
 s4city:assesses a owl:ObjectProperty ;
 	rdfs:label "assesses"@en .
 # 
-# https://w3id.org/def/saref4city#belongsTo
-
-s4city:belongsTo a owl:ObjectProperty ;
-	rdfs:label "belongs to"@en .
-# 
-# https://w3id.org/def/saref4city#belongsToCity
-
-s4city:belongsToCity a owl:ObjectProperty ;
-	owl:inverseOf s4city:hasCityObject ;
-	rdfs:label "belongs to city"@en .
-# 
 # https://w3id.org/def/saref4city#isAssessedBy
 
 s4city:isAssessedBy a owl:ObjectProperty ;
@@ -215,20 +219,10 @@ s4city:hasAccesibility a owl:ObjectProperty ;
 s4city:hasCalculationPeriod a owl:ObjectProperty ;
 	rdfs:label "has calculation period"@en .
 # 
-# https://w3id.org/def/saref4city#hasCityObject
-
-s4city:hasCityObject a owl:ObjectProperty ;
-	rdfs:label "has city object"@en .
-# 
 # https://w3id.org/def/saref4city#hasFeatureOfInterest
 
 s4city:hasFeatureOfInterest a owl:ObjectProperty ;
 	rdfs:label "has feature of interest"@en .
-# 
-# https://w3id.org/def/saref4city#hasIndicatorUnit
-
-s4city:hasIndicatorUnit a owl:ObjectProperty ;
-	rdfs:label "has indicator unit"@en .
 # 
 # https://w3id.org/def/saref4city#hasProperty
 
@@ -286,11 +280,6 @@ s4city:measurementMadeBy a owl:ObjectProperty ;
 
 s4city:providesService a owl:ObjectProperty ;
 	rdfs:label "provides service"@en .
-# 
-# https://w3id.org/def/saref4city#refersToSpace
-
-s4city:refersToSpace a owl:ObjectProperty ;
-	rdfs:label "refers to space"@en .
 # 
 # https://w3id.org/def/saref4city#refersToTime
 
@@ -601,37 +590,22 @@ _:genid5 a owl:Restriction ;
 # https://w3id.org/def/saref4city#AdministrativeArea
 
 s4city:AdministrativeArea a owl:Class ;
-	rdfs:subClassOf geosp:Feature , _:genid6 .
-
-_:genid6 a owl:Restriction ;
-	owl:onProperty s4city:belongsTo ;
-	owl:someValuesFrom s4city:AdministrativeArea .
-
-s4city:AdministrativeArea rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
+	rdfs:subClassOf geosp:Feature ;
+	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
 	rdfs:label "Administrative area"@en .
 # 
 # https://w3id.org/def/saref4city#City
 
 s4city:City a owl:Class ;
-	rdfs:subClassOf s4city:AdministrativeArea , _:genid7 .
-
-_:genid7 a owl:Restriction ;
-	owl:onProperty s4city:hasCityObject ;
-	owl:someValuesFrom s4city:CityObject .
-
-s4city:City rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
+	rdfs:subClassOf s4city:AdministrativeArea ;
+	rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
 	rdfs:label "City"@en .
 # 
 # https://w3id.org/def/saref4city#CityObject
 
 s4city:CityObject a owl:Class ;
-	rdfs:subClassOf geosp:Feature , _:genid8 .
-
-_:genid8 a owl:Restriction ;
-	owl:onProperty s4city:belongsToCity ;
-	owl:someValuesFrom s4city:City .
-
-s4city:CityObject rdfs:label "City object"@en .
+	rdfs:subClassOf geosp:Feature ;
+	rdfs:label "City object"@en .
 # 
 # https://w3id.org/def/saref4city#Country
 
@@ -752,7 +726,7 @@ _:genid20 a owl:Restriction ;
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid21 .
 
 _:genid21 a owl:Restriction ;
-	owl:onProperty s4city:hasIndicatorUnit ;
+	owl:onProperty saref:isMeasuredIn ;
 	owl:someValuesFrom saref:UnitOfMeasure .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid22 .
@@ -766,12 +740,6 @@ s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid23 .
 _:genid23 a owl:Restriction ;
 	owl:onProperty s4city:isDerivedFrom ;
 	owl:someValuesFrom saref:Measurement .
-
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid24 .
-
-_:genid24 a owl:Restriction ;
-	owl:onProperty s4city:refersToSpace ;
-	owl:someValuesFrom geosp:Feature .
 
 s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid25 .
 
