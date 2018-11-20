@@ -13,15 +13,15 @@
 @prefix saref: <https://w3id.org/saref#> .
 @prefix s4city: <https://w3id.org/def/saref4city#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix lingvoj: <http://www.lingvoj.org/ontology#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> . 
 
 <https://w3id.org/def/saref4city> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4city> ;
 	dc:title "SAREF extension for Smart City"@en ;
 	owl:versionInfo "0.3"^^xsd:decimal ;
+	dcterms:creator <http://w3id.org/people/mpoveda> ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-	dcterms:creator <http://w3id.org/people/mpoveda> ;
 	dc:publisher <http://www.oeg-upm.net/> ;
 	vann:preferredNamespacePrefix "s4city" ;
 	vann:preferredNamespaceUri "https://w3id.org/def/saref4city#" ;
@@ -55,18 +55,6 @@ dc:description a owl:AnnotationProperty .
 
 dc:title a owl:AnnotationProperty .
 # 
-# http://purl.org/dc/terms/creator
-
-dcterms:creator a owl:AnnotationProperty .
-# 
-# http://purl.org/dc/terms/dateCopyrighted
-
-dcterms:dateCopyrighted a owl:AnnotationProperty .
-# 
-# http://purl.org/dc/terms/rightsHolder
-
-dcterms:rightsHolder a owl:AnnotationProperty .
-# 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
@@ -95,6 +83,27 @@ geo:long a owl:AnnotationProperty ;
 	rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
 	rdfs:label "longitude" ;
 	rdfs:domain geo:SpatialThing .
+# 
+# http://purl.org/vocab/cpsv#physicallyAvailableAt
+
+cpsv:physicallyAvailableAt a owl:ObjectProperty ;
+	rdfs:label "physically available at"@en ;
+	rdfs:comment "A physical location at which a user may interact with the Public Service."@en ;
+	rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> .
+# 
+# http://purl.org/vocab/cpsv#provides
+
+cpsv:provides a owl:ObjectProperty ;
+	rdfs:label "provides"@en ;
+	rdfs:comment "The provides property links an Agent to a Public Service for which it is responsible. Whether it provides the service directly or outsources it is not relevant, the Agent that provides the service is the one that is ultimately responsible for its provision."@en ;
+	rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> .
+# 
+# http://purl.org/vocab/cpsv#uses
+
+cpsv:uses a owl:ObjectProperty ;
+	rdfs:label "uses"@en;
+	rdfs:comment "The uses property links an Agent to a Public Service in which it plays the specific role of user, meaning that it provides the input and receives the output but does not play any direct role in providing the service. This will typically be an individual citizen or an outside organisation."@en ;
+	rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> .
 # 
 # http://www.w3.org/2004/02/skos/core#definition
 
@@ -257,15 +266,9 @@ s4city:quantifiesKPI a owl:ObjectProperty ;
 s4city:involvesFacility a owl:ObjectProperty ;
 	rdfs:label "involves facility"@en .
 # 
-# https://w3id.org/def/saref4city#isAvailableInArea
-
-s4city:isAvailableInArea a owl:ObjectProperty ;
-	rdfs:label "is available in area"@en .
-# 
 # https://w3id.org/def/saref4city#isAvailableInLanguage
 
 s4city:isAvailableInLanguage a owl:ObjectProperty ;
-	rdfs:range lingvoj:Lingvo ;
 	rdfs:label "is available in language"@en .
 # 
 # https://w3id.org/def/saref4city#isDerivedFrom
@@ -293,17 +296,6 @@ s4city:isSubEventOf a owl:ObjectProperty ;
 s4city:measurementMadeBy a owl:ObjectProperty ;
 	owl:inverseOf saref:makesMeasurement .
 # 
-# https://w3id.org/def/saref4city#providesService
-
-s4city:providesService a owl:ObjectProperty ;
-	rdfs:label "provides service"@en .
-# 
-# https://w3id.org/def/saref4city#serviceProvidedBy
-
-s4city:serviceProvidedBy a owl:ObjectProperty ;
-	owl:inverseOf s4city:providesService ;
-	rdfs:label "service provided by"@en .
-# 
 # https://w3id.org/def/saref4city#refersToTime
 
 s4city:refersToTime a owl:ObjectProperty ;
@@ -318,11 +310,6 @@ s4city:takesPlaceAtFacility a owl:ObjectProperty ;
 
 s4city:takesPlaceAtTime a owl:ObjectProperty ;
 	rdfs:label "takes place at time"@en .
-# 
-# https://w3id.org/def/saref4city#usesService
-
-s4city:usesService a owl:ObjectProperty ;
-	rdfs:label "uses service"@en .
 # 
 # https://w3id.org/saref#consistsOf
 
@@ -437,11 +424,6 @@ saref:hasValue a owl:DatatypeProperty ;
 # #################################################################
 # 
 # 
-# http://www.lingvoj.org/ontology#Lingvo
-
-lingvoj:Lingvo a owl:Class ;
-	rdfs:label "Language"@en .
-# 
 # http://www.opengis.net/ont/geosparql#Feature
 
 geosp:Feature a owl:Class ;
@@ -543,6 +525,13 @@ time:TemporalEntity a owl:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
 	rdfs:label "Temporal entity"@en .
 # 
+# http://purl.org/vocab/cpsv#PublicService
+
+cpsv:PublicService a owl:Class;
+	rdfs:label "Public Service"@en;
+	rdfs:comment "This class represents the service itself. A public service is the capacity to carry out a procedure and exists whether it is used or not. It is a set of deeds and acts performed by or on behalf of a public agency for the benefit of a citizen, a business or another public agency."@en ;
+  	rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> ;
+# 
 # http://www.w3.org/ns/org#Organization
 
 <http://www.w3.org/ns/org#Organization> a owl:Class ;
@@ -556,13 +545,13 @@ time:TemporalEntity a owl:Class ;
 	rdfs:subClassOf _:genid4 .
 
 _:genid4 a owl:Restriction ;
-	owl:onProperty s4city:providesService ;
+	owl:onProperty cpsv:provides ;
 	owl:allValuesFrom s4city:PublicService .
 
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf _:genid5 .
 
 _:genid5 a owl:Restriction ;
-	owl:onProperty s4city:usesService ;
+	owl:onProperty cpsv:uses ;
 	owl:allValuesFrom s4city:PublicService .
 
 <http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
@@ -812,6 +801,7 @@ s4city:PublicAdministration a owl:Class ;
 # https://w3id.org/def/saref4city#PublicService
 
 s4city:PublicService a owl:Class ;
+	rdfs:subClassOf cpsv:PublicService ;
 	owl:equivalentClass _:genid32 .
 
 _:genid32 a owl:Restriction ;
@@ -827,14 +817,14 @@ _:genid33 a owl:Restriction ;
 s4city:PublicService rdfs:subClassOf _:genid34 .
 
 _:genid34 a owl:Restriction ;
-	owl:onProperty s4city:isAvailableInArea ;
+	owl:onProperty cpsv:physicallyAvailableAt ;
 	owl:allValuesFrom s4city:AdministrativeArea .
 
 s4city:PublicService rdfs:subClassOf _:genid35 .
 
 _:genid35 a owl:Restriction ;
 	owl:onProperty s4city:isAvailableInLanguage ;
-	owl:allValuesFrom lingvoj:Lingvo .
+	owl:allValuesFrom dcterms:LinguisticSystem .
 
 s4city:PublicService rdfs:subClassOf _:genid36 .
 
@@ -846,11 +836,6 @@ s4city:PublicService rdfs:comment "Public service is a service which is provided
 	rdfs:label "Public service"@en ;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/Public_service> .
 	
-s4city:PublicService rdfs:subClassOf [
-	a owl:Restriction ;
-	owl:onProperty s4city:serviceProvidedBy ;
-	owl:allValuesFrom foaf:Agent .
-	] .
 # 
 # https://w3id.org/saref#Actuator
 
