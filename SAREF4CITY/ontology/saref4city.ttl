@@ -705,83 +705,83 @@ s4city:KeyPerformanceIndicator rdfs:subClassOf [
 	owl:allValuesFrom s4city:FeatureOfInterest .
 	] .
 # 
-# https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
+# https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment
 
-s4city:KeyPerformanceIndicatorValue a owl:Class ;
+s4city:KeyPerformanceIndicatorAssessment a owl:Class ;
 	rdfs:subClassOf _:genid19 .
 
 _:genid19 a owl:Restriction ;
 	owl:onProperty s4city:assesses ;
 	owl:allValuesFrom s4city:FeatureOfInterest .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid20 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid20 .
 
 _:genid20 a owl:Restriction ;
 	owl:onProperty s4city:isAssessedBy ;
 	owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid21 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid21 .
 
 _:genid21 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:allValuesFrom saref:UnitOfMeasure .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid22 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid22 .
 
 _:genid22 a owl:Restriction ;
 	owl:onProperty s4city:quantifiesKPI ;
 	owl:allValuesFrom s4city:KeyPerformanceIndicator .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid23 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid23 .
 
 _:genid23 a owl:Restriction ;
 	owl:onProperty s4city:isDerivedFrom ;
 	owl:allValuesFrom saref:Measurement .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid25 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid25 .
 
 _:genid25 a owl:Restriction ;
 	owl:onProperty s4city:refersToTime ;
 	owl:allValuesFrom time:TemporalEntity .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid26 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid26 .
 
 _:genid26 a owl:Restriction ;
 	owl:onProperty s4city:hasCreationDate ;
 	owl:allValuesFrom xsd:dateTime .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid27 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid27 .
 
 _:genid27 a owl:Restriction ;
 	owl:onProperty s4city:hasExpirationDate ;
 	owl:allValuesFrom xsd:dateTime .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid28 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid28 .
 
 _:genid28 a owl:Restriction ;
 	owl:onProperty s4city:hasLastUpdateDate ;
 	owl:allValuesFrom xsd:dateTime .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid29 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid29 .
 
 _:genid29 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:allValuesFrom rdfs:Literal .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid30 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid30 .
 
 _:genid30 a owl:Restriction ;
 	owl:onProperty saref:hasName ;
 	owl:allValuesFrom rdfs:Literal .
 
-s4city:KeyPerformanceIndicatorValue rdfs:subClassOf _:genid31 .
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid31 .
 
 _:genid31 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-s4city:KeyPerformanceIndicatorValue rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
-	rdfs:label "Key performance indicator value"@en .
+s4city:KeyPerformanceIndicatorAssessment rdfs:comment "A Key Performance Indicator assessment represents the assessment of a KPI calculated by a given agent in a given time."@en ;
+	rdfs:label "Key performance indicator assessment"@en .
 # 
 # https://w3id.org/def/saref4city#Neighbourhood
 
