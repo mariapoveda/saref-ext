@@ -16,7 +16,7 @@
                                    <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4city" ;
                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4city#" ;
-                                   owl:versionInfo 0.3 .
+                                   owl:versionInfo 0.4 .
 
 #################################################################
 #    Annotation properties
@@ -42,18 +42,6 @@
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/dateCopyrighted
-<http://purl.org/dc/terms/dateCopyrighted> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/rightsHolder
-<http://purl.org/dc/terms/rightsHolder> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
@@ -64,8 +52,7 @@
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:AnnotationProperty ;
-                                              rdfs:comment """The WGS84 altitude of a SpatialThing (decimal meters 
-above the local reference ellipsoid).""" ;
+                                              rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
                                               rdfs:label "altitude" ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
@@ -121,6 +108,27 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://purl.org/vocab/cpsv#physicallyAvailableAt
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> rdf:type owl:ObjectProperty ;
+                                                   rdfs:comment "A physical location at which a user may interact with the Public Service."@en ;
+                                                   rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> ;
+                                                   rdfs:label "physically available at"@en .
+
+
+###  http://purl.org/vocab/cpsv#provides
+<http://purl.org/vocab/cpsv#provides> rdf:type owl:ObjectProperty ;
+                                      rdfs:comment "The provides property links an Agent to a Public Service for which it is responsible. Whether it provides the service directly or outsources it is not relevant, the Agent that provides the service is the one that is ultimately responsible for its provision."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> ;
+                                      rdfs:label "provides"@en .
+
+
+###  http://purl.org/vocab/cpsv#uses
+<http://purl.org/vocab/cpsv#uses> rdf:type owl:ObjectProperty ;
+                                  rdfs:comment "The uses property links an Agent to a Public Service in which it plays the specific role of user, meaning that it provides the input and receives the output but does not play any direct role in providing the service. This will typically be an individual citizen or an outside organisation."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> ;
+                                  rdfs:label "uses"@en .
+
+
 ###  http://www.opengis.net/ont/geosparql#hasGeometry
 <http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
@@ -128,21 +136,14 @@ xsd:duration rdf:type rdfs:Datatype .
                                                    <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
                                                    <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
                                                    <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                                   <http://purl.org/dc/elements/1.1/description> """
-      A spatial representation for a given feature.
-    """@en ;
-                                                   rdfs:comment """
-      A spatial representation for a given feature.
-    """@en ,
-                                                                "A spatial representation for a given feature."@en ;
+                                                   <http://purl.org/dc/elements/1.1/description> "A spatial representation for a given feature."@en ;
+                                                   rdfs:comment "A spatial representation for a given feature."@en ;
                                                    rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
-                                                                    <http://www.opengis.net/spec/geosparql/1.0> ,
-                                                                    "http://www.opengis.net/ont/geosparql#" ;
+                                                                    <http://www.opengis.net/ont/geosparql#> ,
+                                                                    <http://www.opengis.net/spec/geosparql/1.0> ;
                                                    rdfs:label "has geometry"@en ,
                                                               "hasGeometry"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> """
-      A spatial representation for a given feature.
-    """@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A spatial representation for a given feature."@en ;
                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "hasGeometry"@en .
 
 
@@ -153,47 +154,39 @@ xsd:duration rdf:type rdfs:Datatype .
                                                   <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
                                                   <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
                                                   <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                                  <http://purl.org/dc/elements/1.1/description> """
-      Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*
-    """@en ;
-                                                  rdfs:comment """
-      Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*
-    """@en ;
+                                                  <http://purl.org/dc/elements/1.1/description> "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
+                                                  rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
                                                                    <http://www.opengis.net/spec/geosparql/1.0> ;
                                                   rdfs:label "contains"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> """
-      Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*
-    """@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> """Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*"""@en ;
                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#sfWithin
+<http://www.opengis.net/ont/geosparql#sfWithin> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                                <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                                <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                                <http://purl.org/dc/elements/1.1/description> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+                                                rdfs:comment "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                 <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                rdfs:label "within"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "within"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/def/saref4city#assess
-:assess rdf:type owl:ObjectProperty ;
-        rdfs:label "assess"@en .
-
-
-###  https://w3id.org/def/saref4city#belongsTo
-:belongsTo rdf:type owl:ObjectProperty ;
-           rdfs:label "belongs to"@en .
-
-
-###  https://w3id.org/def/saref4city#belongsToCity
-:belongsToCity rdf:type owl:ObjectProperty ;
-               owl:inverseOf :hasCityObject ;
-               rdfs:label "belongs to city"@en .
-
-
-###  https://w3id.org/def/saref4city#calculatedBy
-:calculatedBy rdf:type owl:ObjectProperty ;
-              rdfs:label "calculated by"@en .
+###  https://w3id.org/def/saref4city#assesses
+:assesses rdf:type owl:ObjectProperty ;
+          rdfs:label "assesses"@en .
 
 
 ###  https://w3id.org/def/saref4city#hasAccesibility
@@ -206,19 +199,16 @@ xsd:duration rdf:type rdfs:Datatype .
                       rdfs:label "has calculation period"@en .
 
 
-###  https://w3id.org/def/saref4city#hasCityObject
-:hasCityObject rdf:type owl:ObjectProperty ;
-               rdfs:label "has city object"@en .
-
-
 ###  https://w3id.org/def/saref4city#hasFeatureOfInterest
 :hasFeatureOfInterest rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isFeatureOfInterestOf ;
                       rdfs:label "has feature of interest"@en .
 
 
-###  https://w3id.org/def/saref4city#hasIndicatorUnit
-:hasIndicatorUnit rdf:type owl:ObjectProperty ;
-                  rdfs:label "has indicator unit"@en .
+###  https://w3id.org/def/saref4city#hasKPI
+:hasKPI rdf:type owl:ObjectProperty ;
+        owl:inverseOf :isKPIOf ;
+        rdfs:label "has key performance indicator"@en .
 
 
 ###  https://w3id.org/def/saref4city#hasProperty
@@ -227,30 +217,34 @@ xsd:duration rdf:type rdfs:Datatype .
              rdfs:label "has property"@en .
 
 
-###  https://w3id.org/def/saref4city#implementsKPI
-:implementsKPI rdf:type owl:ObjectProperty ;
-               rdfs:label "implements KPI"@en .
-
-
 ###  https://w3id.org/def/saref4city#involvesFacility
 :involvesFacility rdf:type owl:ObjectProperty ;
                   rdfs:label "involves facility"@en .
 
 
-###  https://w3id.org/def/saref4city#isAvailableInArea
-:isAvailableInArea rdf:type owl:ObjectProperty ;
-                   rdfs:label "is available in area"@en .
+###  https://w3id.org/def/saref4city#isAssessedBy
+:isAssessedBy rdf:type owl:ObjectProperty ;
+              rdfs:label "is assessed by"@en .
 
 
 ###  https://w3id.org/def/saref4city#isAvailableInLanguage
 :isAvailableInLanguage rdf:type owl:ObjectProperty ;
-                       rdfs:range <http://www.lingvoj.org/ontology#Lingvo> ;
                        rdfs:label "is available in language"@en .
 
 
 ###  https://w3id.org/def/saref4city#isDerivedFrom
 :isDerivedFrom rdf:type owl:ObjectProperty ;
                rdfs:label "is derived from"@en .
+
+
+###  https://w3id.org/def/saref4city#isFeatureOfInterestOf
+:isFeatureOfInterestOf rdf:type owl:ObjectProperty ;
+                       rdfs:label "is feature of interest of"@en .
+
+
+###  https://w3id.org/def/saref4city#isKPIOf
+:isKPIOf rdf:type owl:ObjectProperty ;
+         rdfs:label "is key performance indicator of"@en .
 
 
 ###  https://w3id.org/def/saref4city#isOrganizedBy
@@ -273,14 +267,9 @@ xsd:duration rdf:type rdfs:Datatype .
                    owl:inverseOf <https://w3id.org/saref#makesMeasurement> .
 
 
-###  https://w3id.org/def/saref4city#providesService
-:providesService rdf:type owl:ObjectProperty ;
-                 rdfs:label "provides service"@en .
-
-
-###  https://w3id.org/def/saref4city#refersToSpace
-:refersToSpace rdf:type owl:ObjectProperty ;
-               rdfs:label "refers to space"@en .
+###  https://w3id.org/def/saref4city#quantifiesKPI
+:quantifiesKPI rdf:type owl:ObjectProperty ;
+               rdfs:label "quantifies KPI"@en .
 
 
 ###  https://w3id.org/def/saref4city#refersToTime
@@ -298,14 +287,9 @@ xsd:duration rdf:type rdfs:Datatype .
                   rdfs:label "takes place at time"@en .
 
 
-###  https://w3id.org/def/saref4city#usesService
-:usesService rdf:type owl:ObjectProperty ;
-             rdfs:label "uses service"@en .
-
-
 ###  https://w3id.org/saref#consistsOf
 <https://w3id.org/saref#consistsOf> rdf:type owl:ObjectProperty ;
-                                    rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                    rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                     rdfs:label "consists of"@en .
 
 
@@ -316,43 +300,43 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/saref#isControlledByDevice
 <https://w3id.org/saref#isControlledByDevice> rdf:type owl:ObjectProperty ;
-                                              rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                              rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                               rdfs:label "is controlled by device"@en .
 
 
 ###  https://w3id.org/saref#isMeasuredByDevice
 <https://w3id.org/saref#isMeasuredByDevice> rdf:type owl:ObjectProperty ;
-                                            rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                            rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                             rdfs:label "is measured by device"@en .
 
 
 ###  https://w3id.org/saref#isMeasuredIn
 <https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty ;
-                                      rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                      rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                       rdfs:label "is measured in"@en .
 
 
 ###  https://w3id.org/saref#makesMeasurement
 <https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty ;
-                                          rdfs:isDefinedBy "https://w3id.org/saref#"@en ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                           rdfs:label "makes measurement"@en .
 
 
 ###  https://w3id.org/saref#measuresProperty
 <https://w3id.org/saref#measuresProperty> rdf:type owl:ObjectProperty ;
-                                          rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                           rdfs:label "measures property"@en .
 
 
 ###  https://w3id.org/saref#relatesToMeasurement
 <https://w3id.org/saref#relatesToMeasurement> rdf:type owl:ObjectProperty ;
-                                              rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                              rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                               rdfs:label "relates to measurement"@en .
 
 
 ###  https://w3id.org/saref#relatesToProperty
 <https://w3id.org/saref#relatesToProperty> rdf:type owl:ObjectProperty ;
-                                           rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                            rdfs:label "relates to property"@en .
 
 
@@ -360,80 +344,45 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/def/saref4city#creationDate
-:creationDate rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:dateTime ;
-              rdfs:label "creation date"@en .
+###  https://w3id.org/def/saref4city#hasCreationDate
+:hasCreationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:label "has creation date"@en .
 
 
-###  https://w3id.org/def/saref4city#expirationDate
-:expirationDate rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:dateTime ;
-                rdfs:label "expiration date"@en .
+###  https://w3id.org/def/saref4city#hasExpirationDate
+:hasExpirationDate rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:label "has expiration date"@en .
 
 
-###  https://w3id.org/def/saref4city#hasEventName
-:hasEventName rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf :hasName ;
-              rdfs:label "has event name"@en .
-
-
-###  https://w3id.org/def/saref4city#hasKPIDescription
-:hasKPIDescription rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf <https://w3id.org/saref#hasDescription> ;
-                   rdfs:label "has KPI description"@en .
-
-
-###  https://w3id.org/def/saref4city#hasKPIName
-:hasKPIName rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :hasName ;
-            rdfs:label "KPI name"@en .
-
-
-###  https://w3id.org/def/saref4city#hasKPIValue
-:hasKPIValue rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf <https://w3id.org/saref#hasValue> .
-
-
-###  https://w3id.org/def/saref4city#hasName
-:hasName rdf:type owl:DatatypeProperty ;
-         rdfs:label "has name"@en .
-
-
-###  https://w3id.org/def/saref4city#hasServiceDescription
-:hasServiceDescription rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf <https://w3id.org/saref#hasDescription> ;
-                       rdfs:label "has service description"@en .
-
-
-###  https://w3id.org/def/saref4city#hasServiceName
-:hasServiceName rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf :hasName ;
-                rdfs:label "has service name"@en .
-
-
-###  https://w3id.org/def/saref4city#lastUpdateDate
-:lastUpdateDate rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:range xsd:dateTime ;
-                rdfs:label "last update date"@en .
+###  https://w3id.org/def/saref4city#hasLastUpdateDate
+:hasLastUpdateDate rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:label "has last update date"@en .
 
 
 ###  https://w3id.org/saref#hasDescription
 <https://w3id.org/saref#hasDescription> rdf:type owl:DatatypeProperty ;
-                                        rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                        rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                         rdfs:label "has description"@en .
+
+
+###  https://w3id.org/saref#hasName
+<https://w3id.org/saref#hasName> rdf:type owl:DatatypeProperty ;
+                                 rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                 rdfs:label "has name"@en .
 
 
 ###  https://w3id.org/saref#hasTimestamp
 <https://w3id.org/saref#hasTimestamp> rdf:type owl:DatatypeProperty ;
-                                      rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                      rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                       rdfs:label "has timestamp"@en .
 
 
 ###  https://w3id.org/saref#hasValue
 <https://w3id.org/saref#hasValue> rdf:type owl:DatatypeProperty ;
-                                  rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                   rdfs:label "has value"@en .
 
 
@@ -441,9 +390,15 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://www.lingvoj.org/ontology#Lingvo
-<http://www.lingvoj.org/ontology#Lingvo> rdf:type owl:Class ;
-                                         rdfs:label "Language"@en .
+###  http://purl.org/dc/terms/LinguisticSystem
+<http://purl.org/dc/terms/LinguisticSystem> rdf:type owl:Class .
+
+
+###  http://purl.org/vocab/cpsv#PublicService
+<http://purl.org/vocab/cpsv#PublicService> rdf:type owl:Class ;
+                                           rdfs:comment "This class represents the service itself. A public service is the capacity to carry out a procedure and exists whether it is used or not. It is a set of deeds and acts performed by or on behalf of a public agency for the benefit of a citizen, a business or another public agency."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/vocab/cpsv#> ;
+                                           rdfs:label "Public Service"@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#Feature
@@ -451,31 +406,19 @@ xsd:duration rdf:type rdfs:Datatype .
                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
-                                                                 owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                 owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
                                                                ] ;
                                                owl:disjointWith <http://www.opengis.net/ont/geosparql#Geometry> ;
                                                <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
                                                <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
                                                <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                               <http://purl.org/dc/elements/1.1/description> """
-      This class represents the top-level feature type. This class is 
-      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
-      superclass of all feature types.
-    """@en ;
-                                               rdfs:comment """
-      This class represents the top-level feature type. This class is 
-      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
-      superclass of all feature types.
-    """@en ;
+                                               <http://purl.org/dc/elements/1.1/description> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+                                               rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
                                                                 <http://www.opengis.net/ont/gml> ,
                                                                 <http://www.opengis.net/spec/geosparql/1.0> ;
                                                rdfs:label "Feature"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> """
-      This class represents the top-level feature type. This class is 
-      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
-      superclass of all feature types.
-    """@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
 
 
@@ -485,27 +428,13 @@ xsd:duration rdf:type rdfs:Datatype .
                                                 <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
                                                 <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
                                                 <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                                <http://purl.org/dc/elements/1.1/description> """
-      The class represents the top-level geometry type. This class is 
-      equivalent to the UML class GM_Object defined in ISO 19107, and 
-      it is superclass of all geometry types.
-    """@en ;
-                                                rdfs:comment """
-      The class represents the top-level geometry type. This class is 
-      equivalent to the UML class GM_Object defined in ISO 19107, and 
-      it is superclass of all geometry types.
-    """@en ,
-                                                             "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+                                                <http://purl.org/dc/elements/1.1/description> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+                                                rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
                                                 rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
                                                                  <http://www.opengis.net/ont/gml> ,
-                                                                 <http://www.opengis.net/spec/geosparql/1.0> ,
-                                                                 "http://www.opengis.net/ont/geosparql"@en ;
+                                                                 <http://www.opengis.net/spec/geosparql/1.0> ;
                                                 rdfs:label "Geometry"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> """
-      The class represents the top-level geometry type. This class is 
-      equivalent to the UML class GM_Object defined in ISO 19107, and 
-      it is superclass of all geometry types.
-    """@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
 
 
@@ -513,31 +442,22 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://www.opengis.net/ont/geosparql#sfContains> ;
-                                                                       owl:someValuesFrom <http://www.opengis.net/ont/geosparql#SpatialObject>
+                                                                       owl:allValuesFrom <http://www.opengis.net/ont/geosparql#SpatialObject>
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
-                                                                       owl:someValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#Point>
+                                                                       owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#Point>
                                                                      ] ;
                                                      <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
                                                      <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
                                                      <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                                     <http://purl.org/dc/elements/1.1/description> """
-      The class spatial-object represents everything that can have 
-      a spatial representation. It is superclass of feature and geometry.
-    """@en ;
-                                                     rdfs:comment """
-      The class spatial-object represents everything that can have 
-      a spatial representation. It is superclass of feature and geometry.
-    """@en ;
+                                                     <http://purl.org/dc/elements/1.1/description> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+                                                     rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
                                                      rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
                                                                       <http://www.opengis.net/ont/gml> ,
                                                                       <http://www.opengis.net/spec/geosparql/1.0> ;
                                                      rdfs:label "SpatialObject"@en ;
-                                                     <http://www.w3.org/2004/02/skos/core#definition> """
-      The class spatial-object represents everything that can have 
-      a spatial representation. It is superclass of feature and geometry.
-    """@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
 
 
@@ -552,30 +472,29 @@ spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
 
 sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
   """ ,
-                                                             """A point, typically described using a coordinate system relative to Earth, such as WGS84.
-  """ ;
-                                                rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
+                                                             "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
                                                 rdfs:label "Point"@en ,
                                                            "point" .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
-                                              rdfs:isDefinedBy "http://www.w3.org/2004/02/skos/core#" .
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
 
 
 ###  http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
                                       rdfs:comment "A temporal entity with zero extent or duration"@en ;
-                                      rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+                                      rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
                                       rdfs:label "Instant"@en .
 
 
 ###  http://www.w3.org/2006/time#Interval
 <http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
-                                       rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+                                       rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
                                        rdfs:label "A temporal entity with an extent or duration"@en ,
                                                   "Time interval"@en .
 
@@ -583,67 +502,56 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  http://www.w3.org/2006/time#TemporalEntity
 <http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
                                              rdfs:comment "A temporal interval or instant."@en ;
-                                             rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
+                                             rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
                                              rdfs:label "Temporal entity"@en .
 
 
 ###  http://www.w3.org/ns/org#Organization
 <http://www.w3.org/ns/org#Organization> rdf:type owl:Class ;
                                         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
-                                        rdfs:isDefinedBy "http://www.w3.org/ns/org#" ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/org#> ;
                                         rdfs:label "Organization"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
 <http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :providesService ;
-                                                    owl:someValuesFrom :PublicService
+                                                    owl:onProperty <http://purl.org/vocab/cpsv#provides> ;
+                                                    owl:allValuesFrom :PublicService
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :usesService ;
-                                                    owl:someValuesFrom :PublicService
+                                                    owl:onProperty <http://purl.org/vocab/cpsv#uses> ;
+                                                    owl:allValuesFrom :PublicService
                                                   ] ;
-                                  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+                                  rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
                                   rdfs:label "Agent"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
 <http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
                                    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
-                                   rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+                                   rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
                                    rdfs:label "Person"@en .
 
 
 ###  https://w3id.org/def/saref4city#AdministrativeArea
 :AdministrativeArea rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :belongsTo ;
-                                      owl:someValuesFrom :AdministrativeArea
-                                    ] ;
+                    rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
                     rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
                     rdfs:label "Administrative area"@en .
 
 
 ###  https://w3id.org/def/saref4city#City
 :City rdf:type owl:Class ;
-      rdfs:subClassOf :AdministrativeArea ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasCityObject ;
-                        owl:someValuesFrom :CityObject
-                      ] ;
+      rdfs:subClassOf :AdministrativeArea ;
       rdfs:comment "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en ;
       rdfs:label "City"@en .
 
 
 ###  https://w3id.org/def/saref4city#CityObject
 :CityObject rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :belongsToCity ;
-                              owl:someValuesFrom :City
-                            ] ;
+            rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+            rdfs:comment "Generic class for describing city objects."@en ;
             rdfs:label "City object"@en .
 
 
@@ -665,31 +573,31 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :Event rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :hasAccesibility ;
-                         owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                         owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :isOrganizedBy ;
-                         owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent>
+                         owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent>
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :isSubEventOf ;
-                         owl:someValuesFrom :Event
+                         owl:allValuesFrom :Event
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :takesPlaceAtFacility ;
-                         owl:someValuesFrom :Facility
+                         owl:allValuesFrom :Facility
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :takesPlaceAtTime ;
-                         owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                         owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasEventName ;
-                         owl:someValuesFrom rdfs:Literal
+                         owl:onProperty <https://w3id.org/saref#hasName> ;
+                         owl:allValuesFrom rdfs:Literal
                        ] ;
        rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
        rdfs:label "Event"@en ;
-       rdfs:seeAlso "https://www.wikidata.org/wiki/Q1656682" .
+       rdfs:seeAlso <https://www.wikidata.org/wiki/Q1656682> .
 
 
 ###  https://w3id.org/def/saref4city#Facility
@@ -702,88 +610,96 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/def/saref4city#FeatureOfInterest
 :FeatureOfInterest rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasKPI ;
+                                     owl:allValuesFrom :KeyPerformanceIndicator
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasProperty ;
-                                     owl:someValuesFrom <https://w3id.org/saref#Property>
+                                     owl:allValuesFrom <https://w3id.org/saref#Property>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :isFeatureOfInterestOf ;
+                                     owl:allValuesFrom <https://w3id.org/saref#Measurement>
                                    ] ;
-                   rdfs:comment """TESTING!
- It might be replaced by ssn feature of interest or created in saref ontology"""@en .
+                   rdfs:comment """WARNING!
+ This class might be moved to the SAREF ontology"""@en .
 
 
 ###  https://w3id.org/def/saref4city#KeyPerformanceIndicator
 :KeyPerformanceIndicator rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasCalculationPeriod ;
-                                           owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                           owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasKPIDescription ;
-                                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                           owl:onProperty :isKPIOf ;
+                                           owl:allValuesFrom :FeatureOfInterest
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasKPIName ;
-                                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                           owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                           owl:allValuesFrom rdfs:Literal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <https://w3id.org/saref#hasName> ;
+                                           owl:allValuesFrom rdfs:Literal
                                          ] ;
                          rdfs:comment "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en ;
                          rdfs:label "Key Performance Indicator"@en ;
-                         rdfs:seeAlso "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
+                         rdfs:seeAlso <http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html> .
 
 
-###  https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
-:KeyPerformanceIndicatorValue rdf:type owl:Class ;
-                              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                owl:onProperty :assess ;
-                                                owl:someValuesFrom :FeatureOfInterest
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :calculatedBy ;
-                                                owl:someValuesFrom <http://xmlns.com/foaf/0.1/Agent>
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :hasIndicatorUnit ;
-                                                owl:someValuesFrom <https://w3id.org/saref#UnitOfMeasure>
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :implementsKPI ;
-                                                owl:someValuesFrom :KeyPerformanceIndicator
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :isDerivedFrom ;
-                                                owl:someValuesFrom <https://w3id.org/saref#Measurement>
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :refersToSpace ;
-                                                owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Feature>
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :refersToTime ;
-                                                owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :creationDate ;
-                                                owl:someValuesFrom xsd:dateTime
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :expirationDate ;
-                                                owl:someValuesFrom xsd:dateTime
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :lastUpdateDate ;
-                                                owl:someValuesFrom xsd:dateTime
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :hasKPIDescription ;
-                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :hasKPIName ;
-                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                              ] ,
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :hasKPIValue ;
-                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                              ] ;
-                              rdfs:comment "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en ;
-                              rdfs:label "Key performance indicator value"@en .
+###  https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment
+:KeyPerformanceIndicatorAssessment rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :assesses ;
+                                                     owl:allValuesFrom :FeatureOfInterest
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :isAssessedBy ;
+                                                     owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :isDerivedFrom ;
+                                                     owl:allValuesFrom <https://w3id.org/saref#Measurement>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :quantifiesKPI ;
+                                                     owl:allValuesFrom :KeyPerformanceIndicator
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :refersToTime ;
+                                                     owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                                                     owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasCreationDate ;
+                                                     owl:allValuesFrom xsd:dateTime
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasExpirationDate ;
+                                                     owl:allValuesFrom xsd:dateTime
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasLastUpdateDate ;
+                                                     owl:allValuesFrom xsd:dateTime
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                                     owl:allValuesFrom rdfs:Literal
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/saref#hasName> ;
+                                                     owl:allValuesFrom rdfs:Literal
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/saref#hasValue> ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ] ;
+                                   rdfs:comment "A Key Performance Indicator assessment represents the assessment of a KPI calculated by a given agent in a given time."@en ;
+                                   rdfs:label "Key performance indicator assessment"@en .
 
 
 ###  https://w3id.org/def/saref4city#Neighbourhood
@@ -795,37 +711,38 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4city#PublicAdministration
 :PublicAdministration rdf:type owl:Class ;
-                      rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                      rdfs:subClassOf <http://www.w3.org/ns/org#Organization> ;
                       rdfs:comment "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"@en ;
                       rdfs:label "Public administration"@en ;
-                      rdfs:seeAlso "https://www.wikidata.org/wiki/Q31728" .
+                      rdfs:seeAlso <https://www.wikidata.org/wiki/Q31728> .
 
 
 ###  https://w3id.org/def/saref4city#PublicService
 :PublicService rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasServiceDescription ;
-                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                     owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                     owl:allValuesFrom rdfs:Literal
                                    ] ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty :involvesFacility ;
-                                 owl:someValuesFrom :Facility
+               rdfs:subClassOf <http://purl.org/vocab/cpsv#PublicService> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://purl.org/vocab/cpsv#physicallyAvailableAt> ;
+                                 owl:allValuesFrom :AdministrativeArea
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :isAvailableInArea ;
-                                 owl:someValuesFrom :AdministrativeArea
+                                 owl:onProperty :involvesFacility ;
+                                 owl:allValuesFrom :Facility
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :isAvailableInLanguage ;
-                                 owl:someValuesFrom <http://www.lingvoj.org/ontology#Lingvo>
+                                 owl:allValuesFrom <http://purl.org/dc/terms/LinguisticSystem>
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasServiceName ;
-                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                 owl:onProperty <https://w3id.org/saref#hasName> ;
+                                 owl:allValuesFrom rdfs:Literal
                                ] ;
                rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
                rdfs:label "Public service"@en ;
-               rdfs:seeAlso "https://en.wikipedia.org/wiki/Public_service" .
+               rdfs:seeAlso <https://en.wikipedia.org/wiki/Public_service> .
 
 
 ###  https://w3id.org/saref#Actuator
@@ -867,11 +784,11 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 <https://w3id.org/saref#Measurement> rdf:type owl:Class ;
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasFeatureOfInterest ;
-                                                       owl:someValuesFrom :FeatureOfInterest
+                                                       owl:allValuesFrom :FeatureOfInterest
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :measurementMadeBy ;
-                                                       owl:someValuesFrom <https://w3id.org/saref#Device>
+                                                       owl:allValuesFrom <https://w3id.org/saref#Device>
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
@@ -897,13 +814,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#hasValue> ;
-                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onDataRange xsd:float
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
                                                      ] ;
                                      owl:disjointWith <https://w3id.org/saref#Property> ,
                                                       <https://w3id.org/saref#UnitOfMeasure> ;
                                      rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
-                                     rdfs:isDefinedBy "https://w3id.org/saref#" ;
+                                     rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                      rdfs:label "Measurement"@en .
 
 
@@ -911,11 +827,11 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 <https://w3id.org/saref#Property> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                     owl:onProperty :isPropertyOf ;
-                                                    owl:someValuesFrom :FeatureOfInterest
+                                                    owl:allValuesFrom :FeatureOfInterest
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isControlledByDevice> ;
-                                                    owl:someValuesFrom <https://w3id.org/saref#Device>
+                                                    owl:allValuesFrom <https://w3id.org/saref#Device>
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isMeasuredByDevice> ;
@@ -928,9 +844,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                   owl:disjointWith <https://w3id.org/saref#UnitOfMeasure> ;
                                   rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ,
                                                "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended." ;
-                                  rdfs:isDefinedBy "https://w3id.org/saref#" ;
-                                  rdfs:label "Property"@en ,
-                                             "Property" .
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                  rdfs:label "Property"@en .
 
 
 ###  https://w3id.org/saref#Sensor
@@ -953,102 +868,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
 #    Annotations
 #################################################################
 
-<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" ;
-                                           <http://purl.org/dc/elements/1.1/description> """A vocabulary for representing latitude, longitude and 
- altitude information in the WGS84 geodetic reference datum. 
- Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.""" ;
-                                           <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" ;
-                                           rdfs:comment """
-Recent changes to this namespace:
-$Log: wgs84_pos.rdf,v $
-Revision 1.22  2009/04/20 15:00:30  timbl
-Remove the time bits which have been deal with elsewhere eg in iCal.
-
-Revision 1.21  2009/04/20 12:52:47  timbl
-try again
-
-Revision 1.20  2009/04/20 12:42:11  timbl
-Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
-
-Revision 1.19  2009/04/20 12:36:31  timbl
-Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
-
-Revision 1.18  2006/02/01 22:01:04  danbri
-Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid
-
-Revision 1.17  2004/02/06 17:38:12  danbri
-Fixed a bad commit screwup
-
-Revision 1.15  2003/04/19 11:24:08  danbri
-Fixed the typo even more.
-
-Revision 1.14  2003/04/19 11:16:56  danbri
-fixed a typo
-
-Revision 1.13  2003/02/19 22:27:27  connolly
-relaxed domain constraints on lat/long/alt from Point to SpatialThing
-
-Revision 1.12  2003/01/12 01:41:41  danbri
-Trying local copy of XSLT doc.
-
-Revision 1.11  2003/01/12 01:20:18  danbri
-added a link to morten's xslt rdfs viewer.
-
-Revision 1.10  2003/01/11 18:56:49  danbri
-Removed datatype range from lat and long properties, since they would
-have required each occurance of the property to mention the datatype.
-
-Revision 1.9  2003/01/11 11:41:31  danbri
-Another typo; repaired rdfs:Property to rdf:Property x4
-
-Revision 1.8  2003/01/11 11:05:02  danbri
-Added an rdfs:range for each lat/long/alt property,
-http://www.w3.org/2001/XMLSchema#float
-
-Revision 1.7  2003/01/10 20:25:16  danbri
-Longer rdfs:comment for Point, trying to be Earth-centric and neutral about
-coordinate system(s) at the same time. Feedback welcomed.
-
-Revision 1.6  2003/01/10 20:18:30  danbri
-Added CVS log comments into the RDF/XML as an rdfs:comment property of the
-vocabulary. Note that this is not common practice (but seems both harmless
-and potentially useful).
-
-
-revision 1.5
-date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5
-Updated schema:
-Added a dc:date, added url for more info. Changed the rdfs:label of the
-namespace from gp to geo. Added a class Point, set as the rdfs:domain of
-each property. Added XML comment on the lat_long property suggesting that
-we might not need it (based on #rdfig commentary from implementors).
-
-revision 1.4
-date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5
-Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in
-#rdfig for catching this error.
-
-revision 1.3
-date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3
-fixed buglet in vocab, added more wgs links
-
-revision 1.2
-date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4
-Removed alt from the as-a-flat-string property, and switched from
-space separated to comma separated.
-
-revision 1.1
-date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
-basic geo vocab
-
-""" ;
-                                           rdfs:label "geo" .
-
-
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." ;
-                                                   rdfs:label "lat/long" .
-
-
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdfs:comment """The relation between something and the point, 
  or other geometrical thing in space, where it is.  For example, the realtionship between
  a radio tower and a Point with a given lat and long.
@@ -1057,8 +876,7 @@ basic geo vocab
  Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
  an accuracy appropriate for the size of the object and uses such as mapping .
  """ ;
-                                                   rdfs:label "location"@en ,
-                                                              "location" .
+                                                   rdfs:label "location"@en .
 
 
 ###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

@@ -8,7 +8,7 @@
 <https://w3id.org/def/saref4city> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <https://w3id.org/def/saref4city> <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4city" .
 <https://w3id.org/def/saref4city> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4city#" .
-<https://w3id.org/def/saref4city> <http://www.w3.org/2002/07/owl#versionInfo> "0.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/def/saref4city> <http://www.w3.org/2002/07/owl#versionInfo> "0.4"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -33,15 +33,6 @@
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/dateCopyrighted
-<http://purl.org/dc/terms/dateCopyrighted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/rightsHolder
-<http://purl.org/dc/terms/rightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -50,7 +41,7 @@
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 altitude of a SpatialThing (decimal meters \nabove the local reference ellipsoid)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitude" .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 # 
@@ -106,6 +97,24 @@
 # #################################################################
 # 
 # 
+# http://purl.org/vocab/cpsv#physicallyAvailableAt
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical location at which a user may interact with the Public Service."@en .
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/cpsv#> .
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/2000/01/rdf-schema#label> "physically available at"@en .
+# 
+# http://purl.org/vocab/cpsv#provides
+<http://purl.org/vocab/cpsv#provides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/cpsv#provides> <http://www.w3.org/2000/01/rdf-schema#comment> "The provides property links an Agent to a Public Service for which it is responsible. Whether it provides the service directly or outsources it is not relevant, the Agent that provides the service is the one that is ultimately responsible for its provision."@en .
+<http://purl.org/vocab/cpsv#provides> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/cpsv#> .
+<http://purl.org/vocab/cpsv#provides> <http://www.w3.org/2000/01/rdf-schema#label> "provides"@en .
+# 
+# http://purl.org/vocab/cpsv#uses
+<http://purl.org/vocab/cpsv#uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/cpsv#uses> <http://www.w3.org/2000/01/rdf-schema#comment> "The uses property links an Agent to a Public Service in which it plays the specific role of user, meaning that it provides the input and receives the output but does not play any direct role in providing the service. This will typically be an individual citizen or an outside organisation."@en .
+<http://purl.org/vocab/cpsv#uses> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/cpsv#> .
+<http://purl.org/vocab/cpsv#uses> <http://www.w3.org/2000/01/rdf-schema#label> "uses"@en .
+# 
 # http://www.opengis.net/ont/geosparql#hasGeometry
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Feature> .
@@ -113,15 +122,14 @@
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/description> "\n      A spatial representation for a given feature.\n    "@en .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      A spatial representation for a given feature.\n    "@en .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/description> "A spatial representation for a given feature."@en .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial representation for a given feature."@en .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.opengis.net/ont/geosparql#" .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "hasGeometry"@en .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2004/02/skos/core#definition> "\n      A spatial representation for a given feature.\n    "@en .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2004/02/skos/core#definition> "A spatial representation for a given feature."@en .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasGeometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfContains
@@ -131,33 +139,35 @@
 <http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "@en .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "@en .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/description> "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#comment> "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "@en .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*"@en .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en .
+# 
+# http://www.opengis.net/ont/geosparql#sfWithin
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/description> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#comment> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#label> "within"@en .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2004/02/skos/core#prefLabel> "within"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
-# https://w3id.org/def/saref4city#assess
-<https://w3id.org/def/saref4city#assess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#assess> <http://www.w3.org/2000/01/rdf-schema#label> "assess"@en .
-# 
-# https://w3id.org/def/saref4city#belongsTo
-<https://w3id.org/def/saref4city#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
-# 
-# https://w3id.org/def/saref4city#belongsToCity
-<https://w3id.org/def/saref4city#belongsToCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#belongsToCity> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4city#hasCityObject> .
-<https://w3id.org/def/saref4city#belongsToCity> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to city"@en .
-# 
-# https://w3id.org/def/saref4city#calculatedBy
-<https://w3id.org/def/saref4city#calculatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#calculatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "calculated by"@en .
+# https://w3id.org/def/saref4city#assesses
+<https://w3id.org/def/saref4city#assesses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#assesses> <http://www.w3.org/2000/01/rdf-schema#label> "assesses"@en .
 # 
 # https://w3id.org/def/saref4city#hasAccesibility
 <https://w3id.org/def/saref4city#hasAccesibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -167,43 +177,44 @@
 <https://w3id.org/def/saref4city#hasCalculationPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#hasCalculationPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "has calculation period"@en .
 # 
-# https://w3id.org/def/saref4city#hasCityObject
-<https://w3id.org/def/saref4city#hasCityObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#hasCityObject> <http://www.w3.org/2000/01/rdf-schema#label> "has city object"@en .
-# 
 # https://w3id.org/def/saref4city#hasFeatureOfInterest
 <https://w3id.org/def/saref4city#hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4city#isFeatureOfInterestOf> .
 <https://w3id.org/def/saref4city#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en .
 # 
-# https://w3id.org/def/saref4city#hasIndicatorUnit
-<https://w3id.org/def/saref4city#hasIndicatorUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#hasIndicatorUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has indicator unit"@en .
+# https://w3id.org/def/saref4city#hasKPI
+<https://w3id.org/def/saref4city#hasKPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#hasKPI> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4city#isKPIOf> .
+<https://w3id.org/def/saref4city#hasKPI> <http://www.w3.org/2000/01/rdf-schema#label> "has key performance indicator"@en .
 # 
 # https://w3id.org/def/saref4city#hasProperty
 <https://w3id.org/def/saref4city#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4city#isPropertyOf> .
 <https://w3id.org/def/saref4city#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
 # 
-# https://w3id.org/def/saref4city#implementsKPI
-<https://w3id.org/def/saref4city#implementsKPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#implementsKPI> <http://www.w3.org/2000/01/rdf-schema#label> "implements KPI"@en .
-# 
 # https://w3id.org/def/saref4city#involvesFacility
 <https://w3id.org/def/saref4city#involvesFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#involvesFacility> <http://www.w3.org/2000/01/rdf-schema#label> "involves facility"@en .
 # 
-# https://w3id.org/def/saref4city#isAvailableInArea
-<https://w3id.org/def/saref4city#isAvailableInArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#isAvailableInArea> <http://www.w3.org/2000/01/rdf-schema#label> "is available in area"@en .
+# https://w3id.org/def/saref4city#isAssessedBy
+<https://w3id.org/def/saref4city#isAssessedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#isAssessedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is assessed by"@en .
 # 
 # https://w3id.org/def/saref4city#isAvailableInLanguage
 <https://w3id.org/def/saref4city#isAvailableInLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#isAvailableInLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lingvoj.org/ontology#Lingvo> .
 <https://w3id.org/def/saref4city#isAvailableInLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "is available in language"@en .
 # 
 # https://w3id.org/def/saref4city#isDerivedFrom
 <https://w3id.org/def/saref4city#isDerivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#isDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "is derived from"@en .
+# 
+# https://w3id.org/def/saref4city#isFeatureOfInterestOf
+<https://w3id.org/def/saref4city#isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of interest of"@en .
+# 
+# https://w3id.org/def/saref4city#isKPIOf
+<https://w3id.org/def/saref4city#isKPIOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#isKPIOf> <http://www.w3.org/2000/01/rdf-schema#label> "is key performance indicator of"@en .
 # 
 # https://w3id.org/def/saref4city#isOrganizedBy
 <https://w3id.org/def/saref4city#isOrganizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -221,13 +232,9 @@
 <https://w3id.org/def/saref4city#measurementMadeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#measurementMadeBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/saref#makesMeasurement> .
 # 
-# https://w3id.org/def/saref4city#providesService
-<https://w3id.org/def/saref4city#providesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#providesService> <http://www.w3.org/2000/01/rdf-schema#label> "provides service"@en .
-# 
-# https://w3id.org/def/saref4city#refersToSpace
-<https://w3id.org/def/saref4city#refersToSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#refersToSpace> <http://www.w3.org/2000/01/rdf-schema#label> "refers to space"@en .
+# https://w3id.org/def/saref4city#quantifiesKPI
+<https://w3id.org/def/saref4city#quantifiesKPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#quantifiesKPI> <http://www.w3.org/2000/01/rdf-schema#label> "quantifies KPI"@en .
 # 
 # https://w3id.org/def/saref4city#refersToTime
 <https://w3id.org/def/saref4city#refersToTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -241,13 +248,9 @@
 <https://w3id.org/def/saref4city#takesPlaceAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#takesPlaceAtTime> <http://www.w3.org/2000/01/rdf-schema#label> "takes place at time"@en .
 # 
-# https://w3id.org/def/saref4city#usesService
-<https://w3id.org/def/saref4city#usesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4city#usesService> <http://www.w3.org/2000/01/rdf-schema#label> "uses service"@en .
-# 
 # https://w3id.org/saref#consistsOf
 <https://w3id.org/saref#consistsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#consistsOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#"@en .
+<https://w3id.org/saref#consistsOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#consistsOf> <http://www.w3.org/2000/01/rdf-schema#label> "consists of"@en .
 # 
 # https://w3id.org/saref#controlsProperty
@@ -256,37 +259,37 @@
 # 
 # https://w3id.org/saref#isControlledByDevice
 <https://w3id.org/saref#isControlledByDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#isControlledByDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#isControlledByDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#isControlledByDevice> <http://www.w3.org/2000/01/rdf-schema#label> "is controlled by device"@en .
 # 
 # https://w3id.org/saref#isMeasuredByDevice
 <https://w3id.org/saref#isMeasuredByDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#isMeasuredByDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#"@en .
+<https://w3id.org/saref#isMeasuredByDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#isMeasuredByDevice> <http://www.w3.org/2000/01/rdf-schema#label> "is measured by device"@en .
 # 
 # https://w3id.org/saref#isMeasuredIn
 <https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#"@en .
+<https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#label> "is measured in"@en .
 # 
 # https://w3id.org/saref#makesMeasurement
 <https://w3id.org/saref#makesMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#"@en .
+<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "makes measurement"@en .
 # 
 # https://w3id.org/saref#measuresProperty
 <https://w3id.org/saref#measuresProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#label> "measures property"@en .
 # 
 # https://w3id.org/saref#relatesToMeasurement
 <https://w3id.org/saref#relatesToMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "relates to measurement"@en .
 # 
 # https://w3id.org/saref#relatesToProperty
 <https://w3id.org/saref#relatesToProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#label> "relates to property"@en .
 # 
 # 
@@ -298,68 +301,39 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/def/saref4city#creationDate
-<https://w3id.org/def/saref4city#creationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#creationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/saref4city#creationDate> <http://www.w3.org/2000/01/rdf-schema#label> "creation date"@en .
+# https://w3id.org/def/saref4city#hasCreationDate
+<https://w3id.org/def/saref4city#hasCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4city#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4city#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has creation date"@en .
 # 
-# https://w3id.org/def/saref4city#expirationDate
-<https://w3id.org/def/saref4city#expirationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#expirationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/saref4city#expirationDate> <http://www.w3.org/2000/01/rdf-schema#label> "expiration date"@en .
+# https://w3id.org/def/saref4city#hasExpirationDate
+<https://w3id.org/def/saref4city#hasExpirationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4city#hasExpirationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4city#hasExpirationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has expiration date"@en .
 # 
-# https://w3id.org/def/saref4city#hasEventName
-<https://w3id.org/def/saref4city#hasEventName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#hasEventName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4city#hasName> .
-<https://w3id.org/def/saref4city#hasEventName> <http://www.w3.org/2000/01/rdf-schema#label> "has event name"@en .
-# 
-# https://w3id.org/def/saref4city#hasKPIDescription
-<https://w3id.org/def/saref4city#hasKPIDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#hasKPIDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/saref#hasDescription> .
-<https://w3id.org/def/saref4city#hasKPIDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has KPI description"@en .
-# 
-# https://w3id.org/def/saref4city#hasKPIName
-<https://w3id.org/def/saref4city#hasKPIName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#hasKPIName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4city#hasName> .
-<https://w3id.org/def/saref4city#hasKPIName> <http://www.w3.org/2000/01/rdf-schema#label> "KPI name"@en .
-# 
-# https://w3id.org/def/saref4city#hasKPIValue
-<https://w3id.org/def/saref4city#hasKPIValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#hasKPIValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/saref#hasValue> .
-# 
-# https://w3id.org/def/saref4city#hasName
-<https://w3id.org/def/saref4city#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name"@en .
-# 
-# https://w3id.org/def/saref4city#hasServiceDescription
-<https://w3id.org/def/saref4city#hasServiceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#hasServiceDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/saref#hasDescription> .
-<https://w3id.org/def/saref4city#hasServiceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has service description"@en .
-# 
-# https://w3id.org/def/saref4city#hasServiceName
-<https://w3id.org/def/saref4city#hasServiceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#hasServiceName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4city#hasName> .
-<https://w3id.org/def/saref4city#hasServiceName> <http://www.w3.org/2000/01/rdf-schema#label> "has service name"@en .
-# 
-# https://w3id.org/def/saref4city#lastUpdateDate
-<https://w3id.org/def/saref4city#lastUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4city#lastUpdateDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
-<https://w3id.org/def/saref4city#lastUpdateDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/saref4city#lastUpdateDate> <http://www.w3.org/2000/01/rdf-schema#label> "last update date"@en .
+# https://w3id.org/def/saref4city#hasLastUpdateDate
+<https://w3id.org/def/saref4city#hasLastUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4city#hasLastUpdateDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4city#hasLastUpdateDate> <http://www.w3.org/2000/01/rdf-schema#label> "has last update date"@en .
 # 
 # https://w3id.org/saref#hasDescription
 <https://w3id.org/saref#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref#hasDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#hasDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+# 
+# https://w3id.org/saref#hasName
+<https://w3id.org/saref#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/saref#hasName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name"@en .
 # 
 # https://w3id.org/saref#hasTimestamp
 <https://w3id.org/saref#hasTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has timestamp"@en .
 # 
 # https://w3id.org/saref#hasValue
 <https://w3id.org/saref#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref#hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
 # 
 # 
@@ -371,9 +345,14 @@
 # #################################################################
 # 
 # 
-# http://www.lingvoj.org/ontology#Lingvo
-<http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.lingvoj.org/ontology#Lingvo> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
+# http://purl.org/dc/terms/LinguisticSystem
+<http://purl.org/dc/terms/LinguisticSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/vocab/cpsv#PublicService
+<http://purl.org/vocab/cpsv#PublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/cpsv#PublicService> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the service itself. A public service is the capacity to carry out a procedure and exists whether it is used or not. It is a set of deeds and acts performed by or on behalf of a public agency for the benefit of a citizen, a business or another public agency."@en .
+<http://purl.org/vocab/cpsv#PublicService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/cpsv#> .
+<http://purl.org/vocab/cpsv#PublicService> <http://www.w3.org/2000/01/rdf-schema#label> "Public Service"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Feature
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -381,18 +360,18 @@
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
-_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
 <http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
 <http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/description> "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "@en .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "@en .
+<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/description> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature"@en .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2004/02/skos/core#definition> "\n      This class represents the top-level feature type. This class is \n      equivalent to GFI_Feature defined in ISO 19156:2011, and it is \n      superclass of all feature types.\n    "@en .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
@@ -401,15 +380,13 @@ _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/
 <http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/description> "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "@en .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "@en .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/description> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.opengis.net/ont/geosparql"@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2004/02/skos/core#definition> "\n      The class represents the top-level geometry type. This class is \n      equivalent to the UML class GM_Object defined in ISO 19107, and \n      it is superclass of all geometry types.\n    "@en .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#SpatialObject
@@ -417,108 +394,97 @@ _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#sfContains> .
-_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#SpatialObject> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
-_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/description> "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "@en .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "@en .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/description> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialObject"@en .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2004/02/skos/core#definition> "\n      The class spatial-object represents everything that can have \n      a spatial representation. It is superclass of feature and geometry.\n    "@en .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> " \nUniquely identified by lat/long/alt. i.e.\n\nspaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),\n  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).\n\nsameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).\n  " .
-<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84.\n  " .
-<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2003/01/geo/wgs84_pos#" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "point" .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2004/02/skos/core#" .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
 # 
 # http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with zero extent or duration"@en .
-<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2006/time#" .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant"@en .
 # 
 # http://www.w3.org/2006/time#Interval
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
-<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2006/time#" .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "A temporal entity with an extent or duration"@en .
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "Time interval"@en .
 # 
 # http://www.w3.org/2006/time#TemporalEntity
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal interval or instant."@en .
-<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/2006/time#" .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal entity"@en .
 # 
 # http://www.w3.org/ns/org#Organization
 <http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
-<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.w3.org/ns/org#" .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org#> .
 <http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
 # 
 # http://xmlns.com/foaf/0.1/Agent
 <http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#providesService> .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#PublicService> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/cpsv#provides> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#PublicService> .
 <http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#usesService> .
-_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#PublicService> .
-<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/0.1/" .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/cpsv#uses> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#PublicService> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
 <http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
 # 
 # http://xmlns.com/foaf/0.1/Person
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/0.1/" .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
 # 
 # https://w3id.org/def/saref4city#AdministrativeArea
 <https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
-<https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#belongsTo> .
-_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#AdministrativeArea> .
 <https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en .
 <https://w3id.org/def/saref4city#AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#label> "Administrative area"@en .
 # 
 # https://w3id.org/def/saref4city#City
 <https://w3id.org/def/saref4city#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4city#AdministrativeArea> .
-<https://w3id.org/def/saref4city#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasCityObject> .
-_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#CityObject> .
 <https://w3id.org/def/saref4city#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A city is a large human settlement. A city is distinguished from other human settlements by its relatively great size, but also by its functions and its special symbolic status, which may be conferred by a central authority. (https://en.wikipedia.org/wiki/City)"@en .
 <https://w3id.org/def/saref4city#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
 # 
 # https://w3id.org/def/saref4city#CityObject
 <https://w3id.org/def/saref4city#CityObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/saref4city#CityObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
-<https://w3id.org/def/saref4city#CityObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#belongsToCity> .
-_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#City> .
+<https://w3id.org/def/saref4city#CityObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic class for describing city objects."@en .
 <https://w3id.org/def/saref4city#CityObject> <http://www.w3.org/2000/01/rdf-schema#label> "City object"@en .
 # 
 # https://w3id.org/def/saref4city#Country
@@ -535,33 +501,33 @@ _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/sa
 # 
 # https://w3id.org/def/saref4city#Event
 <https://w3id.org/def/saref4city#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasAccesibility> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isOrganizedBy> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isSubEventOf> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#Event> .
 <https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasAccesibility> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#takesPlaceAtFacility> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#Facility> .
 <https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isOrganizedBy> .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://xmlns.com/foaf/0.1/Agent> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#takesPlaceAtTime> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
 <https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isSubEventOf> .
-_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#Event> .
-<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#takesPlaceAtFacility> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#Facility> .
-<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#takesPlaceAtTime> .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
-<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasEventName> .
-_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasName> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en .
 <https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
-<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.wikidata.org/wiki/Q1656682" .
+<https://w3id.org/def/saref4city#Event> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q1656682> .
 # 
 # https://w3id.org/def/saref4city#Facility
 <https://w3id.org/def/saref4city#Facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -571,86 +537,94 @@ _:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 # 
 # https://w3id.org/def/saref4city#FeatureOfInterest
 <https://w3id.org/def/saref4city#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4city#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasProperty> .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref#Property> .
-<https://w3id.org/def/saref4city#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "TESTING!\n It might be replaced by ssn feature of interest or created in saref ontology"@en .
+<https://w3id.org/def/saref4city#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPI> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#KeyPerformanceIndicator> .
+<https://w3id.org/def/saref4city#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasProperty> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4city#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isFeatureOfInterestOf> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4city#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "WARNING!\n This class might be moved to the SAREF ontology"@en .
 # 
 # https://w3id.org/def/saref4city#KeyPerformanceIndicator
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasCalculationPeriod> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasCalculationPeriod> .
-_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isKPIOf> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#FeatureOfInterest> .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPIDescription> .
-_:genid17 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPIName> .
-_:genid18 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasName> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en .
 <https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Key Performance Indicator"@en .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html" .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html> .
 # 
-# https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+# https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#assess> .
-_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#FeatureOfInterest> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#assesses> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#FeatureOfInterest> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#calculatedBy> .
-_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isAssessedBy> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasIndicatorUnit> .
-_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isDerivedFrom> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#implementsKPI> .
-_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#KeyPerformanceIndicator> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#quantifiesKPI> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#KeyPerformanceIndicator> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isDerivedFrom> .
-_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref#Measurement> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#refersToTime> .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#refersToSpace> .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#Feature> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#refersToTime> .
-_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasCreationDate> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#creationDate> .
-_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasExpirationDate> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#expirationDate> .
-_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasLastUpdateDate> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#lastUpdateDate> .
-_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPIDescription> .
-_:genid29 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasName> .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPIName> .
-_:genid30 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPIValue> .
-_:genid31 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A Key Performance Indicator value represents a given value of a KPI calculated by a given agent in a given time."@en .
-<https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue> <http://www.w3.org/2000/01/rdf-schema#label> "Key performance indicator value"@en .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid30 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A Key Performance Indicator assessment represents the assessment of a KPI calculated by a given agent in a given time."@en .
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Key performance indicator assessment"@en .
 # 
 # https://w3id.org/def/saref4city#Neighbourhood
 <https://w3id.org/def/saref4city#Neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -660,36 +634,37 @@ _:genid31 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 # 
 # https://w3id.org/def/saref4city#PublicAdministration
 <https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
 <https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#comment> "Public leadership of public affairs directly responsible for executive action. (Definition taken from wikidata)"@en .
 <https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#label> "Public administration"@en .
-<https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.wikidata.org/wiki/Q31728" .
+<https://w3id.org/def/saref4city#PublicAdministration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q31728> .
 # 
 # https://w3id.org/def/saref4city#PublicService
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid32 .
+<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/cpsv#PublicService> .
+<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasServiceDescription> .
-_:genid32 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/cpsv#physicallyAvailableAt> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#AdministrativeArea> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#involvesFacility> .
-_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#Facility> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#Facility> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isAvailableInArea> .
-_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#AdministrativeArea> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isAvailableInLanguage> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/dc/terms/LinguisticSystem> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isAvailableInLanguage> .
-_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.lingvoj.org/ontology#Lingvo> .
-<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasServiceName> .
-_:genid36 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasName> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#comment> "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#label> "Public service"@en .
-<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://en.wikipedia.org/wiki/Public_service" .
+<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/Public_service> .
 # 
 # https://w3id.org/saref#Actuator
 <https://w3id.org/saref#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -701,96 +676,94 @@ _:genid36 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 # https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#consistsOf> .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#consistsOf> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#controlsProperty> .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#controlsProperty> .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#makesMeasurement> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#makesMeasurement> .
-_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
-_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
-<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
-_:genid41 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid40 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
 # 
 # https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasFeatureOfInterest> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#FeatureOfInterest> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasFeatureOfInterest> .
-_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#FeatureOfInterest> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#measurementMadeBy> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#measurementMadeBy> .
-_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref#Device> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
-_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
-_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid45 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid45 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
 _:genid46 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid46 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#UnitOfMeasure> .
+_:genid46 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
-_:genid47 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid47 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Property> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasTimestamp> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasTimestamp> .
-_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
-_:genid49 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid48 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement"@en .
 # 
 # https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isPropertyOf> .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#FeatureOfInterest> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isPropertyOf> .
-_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4city#FeatureOfInterest> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isControlledByDevice> .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isControlledByDevice> .
-_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref#Device> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredByDevice> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredByDevice> .
-_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToMeasurement> .
-_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToMeasurement> .
+_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An aspect of an entity that can be observable by a sensor."@en .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended." .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
 # 
 # https://w3id.org/saref#Sensor
 <https://w3id.org/saref#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -814,17 +787,7 @@ _:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 # #################################################################
 # 
 # 
-<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" .
-<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/description> "A vocabulary for representing latitude, longitude and \n altitude information in the WGS84 geodetic reference datum. \n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details." .
-<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" .
-<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#comment> "\nRecent changes to this namespace:\n$Log: wgs84_pos.rdf,v $\nRevision 1.22  2009/04/20 15:00:30  timbl\nRemove the time bits which have been deal with elsewhere eg in iCal.\n\nRevision 1.21  2009/04/20 12:52:47  timbl\ntry again\n\nRevision 1.20  2009/04/20 12:42:11  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.19  2009/04/20 12:36:31  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.18  2006/02/01 22:01:04  danbri\nClarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\n\nRevision 1.17  2004/02/06 17:38:12  danbri\nFixed a bad commit screwup\n\nRevision 1.15  2003/04/19 11:24:08  danbri\nFixed the typo even more.\n\nRevision 1.14  2003/04/19 11:16:56  danbri\nfixed a typo\n\nRevision 1.13  2003/02/19 22:27:27  connolly\nrelaxed domain constraints on lat/long/alt from Point to SpatialThing\n\nRevision 1.12  2003/01/12 01:41:41  danbri\nTrying local copy of XSLT doc.\n\nRevision 1.11  2003/01/12 01:20:18  danbri\nadded a link to morten's xslt rdfs viewer.\n\nRevision 1.10  2003/01/11 18:56:49  danbri\nRemoved datatype range from lat and long properties, since they would\nhave required each occurance of the property to mention the datatype.\n\nRevision 1.9  2003/01/11 11:41:31  danbri\nAnother typo; repaired rdfs:Property to rdf:Property x4\n\nRevision 1.8  2003/01/11 11:05:02  danbri\nAdded an rdfs:range for each lat/long/alt property,\nhttp://www.w3.org/2001/XMLSchema#float\n\nRevision 1.7  2003/01/10 20:25:16  danbri\nLonger rdfs:comment for Point, trying to be Earth-centric and neutral about\ncoordinate system(s) at the same time. Feedback welcomed.\n\nRevision 1.6  2003/01/10 20:18:30  danbri\nAdded CVS log comments into the RDF/XML as an rdfs:comment property of the\nvocabulary. Note that this is not common practice (but seems both harmless\nand potentially useful).\n\n\nrevision 1.5\ndate: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\nUpdated schema:\nAdded a dc:date, added url for more info. Changed the rdfs:label of the\nnamespace from gp to geo. Added a class Point, set as the rdfs:domain of\neach property. Added XML comment on the lat_long property suggesting that\nwe might not need it (based on #rdfig commentary from implementors).\n\nrevision 1.4\ndate: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\nFixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\n#rdfig for catching this error.\n\nrevision 1.3\ndate: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\nfixed buglet in vocab, added more wgs links\n\nrevision 1.2\ndate: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\nRemoved alt from the as-a-flat-string property, and switched from\nspace separated to comma separated.\n\nrevision 1.1\ndate: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\nbasic geo vocab\n\n" .
-<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#label> "geo" .
-# 
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> <http://www.w3.org/2000/01/rdf-schema#comment> "A comma-separated representation of a latitude, longitude coordinate." .
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> <http://www.w3.org/2000/01/rdf-schema#label> "lat/long" .
-# 
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n " .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location" .
 # 
 # Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

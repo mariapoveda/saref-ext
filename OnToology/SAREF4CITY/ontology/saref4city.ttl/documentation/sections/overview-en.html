@@ -62,11 +62,8 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/def/saref4city#KeyPerformanceIndicator">Key Performance Indicator</a>
    </li>
    <li>
-      <a href="#KeyPerformanceIndicatorValue"
-         title="https://w3id.org/def/saref4city#KeyPerformanceIndicatorValue">Key performance indicator value</a>
-   </li>
-   <li>
-      <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Language</a>
+      <a href="#KeyPerformanceIndicatorAssessment"
+         title="https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment">Key performance indicator assessment</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
@@ -91,6 +88,9 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/def/saref4city#PublicAdministration">Public administration</a>
    </li>
    <li>
+      <a href="#http://purl.org/vocab/cpsv#PublicService" title="http://purl.org/vocab/cpsv#PublicService">Public Service</a>
+   </li>
+   <li>
       <a href="#PublicService" title="https://w3id.org/def/saref4city#PublicService">Public service</a>
    </li>
    <li>
@@ -108,16 +108,7 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#assess" title="https://w3id.org/def/saref4city#assess">assess</a>
-   </li>
-   <li>
-      <a href="#belongsTo" title="https://w3id.org/def/saref4city#belongsTo">belongs to</a>
-   </li>
-   <li>
-      <a href="#belongsToCity" title="https://w3id.org/def/saref4city#belongsToCity">belongs to city</a>
-   </li>
-   <li>
-      <a href="#calculatedBy" title="https://w3id.org/def/saref4city#calculatedBy">calculated by</a>
+      <a href="#assesses" title="https://w3id.org/def/saref4city#assesses">assesses</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
@@ -136,9 +127,6 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/def/saref4city#hasCalculationPeriod">has calculation period</a>
    </li>
    <li>
-      <a href="#hasCityObject" title="https://w3id.org/def/saref4city#hasCityObject">has city object</a>
-   </li>
-   <li>
       <a href="#hasFeatureOfInterest"
          title="https://w3id.org/def/saref4city#hasFeatureOfInterest">has feature of interest</a>
    </li>
@@ -146,20 +134,16 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry hasGeometry</a>
    </li>
    <li>
-      <a href="#hasIndicatorUnit" title="https://w3id.org/def/saref4city#hasIndicatorUnit">has indicator unit</a>
+      <a href="#hasKPI" title="https://w3id.org/def/saref4city#hasKPI">has key performance indicator</a>
    </li>
    <li>
       <a href="#hasProperty" title="https://w3id.org/def/saref4city#hasProperty">has property</a>
    </li>
    <li>
-      <a href="#implementsKPI" title="https://w3id.org/def/saref4city#implementsKPI">implements KPI</a>
-   </li>
-   <li>
       <a href="#involvesFacility" title="https://w3id.org/def/saref4city#involvesFacility">involves facility</a>
    </li>
    <li>
-      <a href="#isAvailableInArea"
-         title="https://w3id.org/def/saref4city#isAvailableInArea">is available in area</a>
+      <a href="#isAssessedBy" title="https://w3id.org/def/saref4city#isAssessedBy">is assessed by</a>
    </li>
    <li>
       <a href="#isAvailableInLanguage"
@@ -170,6 +154,13 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#isDerivedFrom" title="https://w3id.org/def/saref4city#isDerivedFrom">is derived from</a>
+   </li>
+   <li>
+      <a href="#isFeatureOfInterestOf"
+         title="https://w3id.org/def/saref4city#isFeatureOfInterestOf">is feature of interest of</a>
+   </li>
+   <li>
+      <a href="#isKPIOf" title="https://w3id.org/def/saref4city#isKPIOf">is key performance indicator of</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#isMeasuredByDevice" title="https://w3id.org/saref#isMeasuredByDevice">is measured by device</a>
@@ -199,10 +190,13 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/saref#measuresProperty" title="https://w3id.org/saref#measuresProperty">measures property</a>
    </li>
    <li>
-      <a href="#providesService" title="https://w3id.org/def/saref4city#providesService">provides service</a>
+      <a href="#http://purl.org/vocab/cpsv#physicallyAvailableAt" title="http://purl.org/vocab/cpsv#physicallyAvailableAt">physically available at</a>
    </li>
    <li>
-      <a href="#refersToSpace" title="https://w3id.org/def/saref4city#refersToSpace">refers to space</a>
+      <a href="#http://purl.org/vocab/cpsv#provides" title="http://purl.org/vocab/cpsv#provides">provides</a>
+   </li>
+   <li>
+      <a href="#quantifiesKPI" title="https://w3id.org/def/saref4city#quantifiesKPI">quantifies KPI</a>
    </li>
    <li>
       <a href="#refersToTime" title="https://w3id.org/def/saref4city#refersToTime">refers to time</a>
@@ -221,50 +215,33 @@ This ontology has the following classes and properties.</span>
       <a href="#takesPlaceAtTime" title="https://w3id.org/def/saref4city#takesPlaceAtTime">takes place at time</a>
    </li>
    <li>
-      <a href="#usesService" title="https://w3id.org/def/saref4city#usesService">uses service</a>
+      <a href="#http://purl.org/vocab/cpsv#uses" title="http://purl.org/vocab/cpsv#uses">uses</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin">within within</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
-      <a href="#creationDate" title="https://w3id.org/def/saref4city#creationDate">creation date</a>
-   </li>
-   <li>
-      <a href="#expirationDate" title="https://w3id.org/def/saref4city#expirationDate">expiration date</a>
+      <a href="#hasCreationDate" title="https://w3id.org/def/saref4city#hasCreationDate">has creation date</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
    </li>
    <li>
-      <a href="#hasEventName" title="https://w3id.org/def/saref4city#hasEventName">has event name</a>
+      <a href="#hasExpirationDate"
+         title="https://w3id.org/def/saref4city#hasExpirationDate">has expiration date</a>
    </li>
    <li>
-      <a href="#hasKPIValue" title="https://w3id.org/def/saref4city#hasKPIValue">
-         <span>has k p i value</span>
-      </a>
+      <a href="#hasLastUpdateDate"
+         title="https://w3id.org/def/saref4city#hasLastUpdateDate">has last update date</a>
    </li>
    <li>
-      <a href="#hasKPIDescription"
-         title="https://w3id.org/def/saref4city#hasKPIDescription">has KPI description</a>
-   </li>
-   <li>
-      <a href="#hasName" title="https://w3id.org/def/saref4city#hasName">has name</a>
-   </li>
-   <li>
-      <a href="#hasServiceDescription"
-         title="https://w3id.org/def/saref4city#hasServiceDescription">has service description</a>
-   </li>
-   <li>
-      <a href="#hasServiceName" title="https://w3id.org/def/saref4city#hasServiceName">has service name</a>
+      <a href="#https://w3id.org/saref#hasName" title="https://w3id.org/saref#hasName">has name</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#hasTimestamp" title="https://w3id.org/saref#hasTimestamp">has timestamp</a>
    </li>
    <li>
       <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
-   </li>
-   <li>
-      <a href="#hasKPIName" title="https://w3id.org/def/saref4city#hasKPIName">KPI name</a>
-   </li>
-   <li>
-      <a href="#lastUpdateDate" title="https://w3id.org/def/saref4city#lastUpdateDate">last update date</a>
    </li>
 </ul>
