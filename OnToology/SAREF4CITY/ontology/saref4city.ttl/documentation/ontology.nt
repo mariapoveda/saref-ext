@@ -641,23 +641,23 @@ _:genid30 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/20
 # 
 # https://w3id.org/def/saref4city#PublicService
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
-_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/cpsv#PublicService> .
+<https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/cpsv#physicallyAvailableAt> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#AdministrativeArea> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/cpsv#physicallyAvailableAt> .
-_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#AdministrativeArea> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#involvesFacility> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#Facility> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#involvesFacility> .
-_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#Facility> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isAvailableInLanguage> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/dc/terms/LinguisticSystem> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#isAvailableInLanguage> .
-_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/dc/terms/LinguisticSystem> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/saref4city#PublicService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasName> .
