@@ -1,0 +1,374 @@
+@prefix : <http://w3id.org/saref4inma#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://w3id.org/saref#> .
+@base <http://w3id.org/saref4inma> .
+
+<http://w3id.org/saref4inma> rdf:type owl:Ontology ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "saref4inma" ;
+                              <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
+                              owl:versionInfo "0.0.1" ;
+                              rdfs:comment "This ontology extends the SAREF ontology for the industry and manufacturing domain. This extension is based on the Reference Architectural Model Industry 4.0 (RAMI)" ;
+                              <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                              <http://purl.org/dc/elements/1.1/title> "SAREF extension for industry and manufacturing domain" ;
+                              <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/saref4inma#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:comment "A relationship indicating that an  entity  consists of other entities" ;
+          rdfs:label "contains" .
+
+
+###  http://w3id.org/saref4inma#hasCategory
+:hasCategory rdf:type owl:ObjectProperty ;
+             rdfs:comment "The type of product that can be produced in a factory" ;
+             rdfs:label "has category" .
+
+
+###  http://w3id.org/saref4inma#hasUpdate
+:hasUpdate rdf:type owl:ObjectProperty ;
+           rdfs:comment "Updates of a product or equipment" ;
+           rdfs:label "has update" .
+
+
+###  http://w3id.org/saref4inma#isCreatedIn
+:isCreatedIn rdf:type owl:ObjectProperty ;
+             rdfs:comment "A relationship indicating where an entity is producted" ;
+             rdfs:label "is created in" .
+
+
+###  http://w3id.org/saref4inma#makes
+:makes rdf:type owl:ObjectProperty ;
+       rdfs:comment "A relationship indicating that entity can produce other entities" ;
+       rdfs:label "makes" .
+
+
+###  http://w3id.org/saref4inma#needsEquipment
+:needsEquipment rdf:type owl:ObjectProperty ;
+                rdfs:comment "A relationship indicating that an entity needs particular equipment to produce" ;
+                rdfs:label "needs equipment" .
+
+
+###  http://w3id.org/saref4inma#needsMaterial
+:needsMaterial rdf:type owl:ObjectProperty ;
+               rdfs:comment "A relationship indicating the material needed to produce an entity" ;
+               rdfs:label "needs material" .
+
+
+###  https://w3id.org/saref#hasCommand
+saref:hasCommand rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/saref#hasFunction
+saref:hasFunction rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/saref#hasState
+saref:hasState rdf:type owl:ObjectProperty ;
+               rdfs:label "has state" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/saref4inma#brand
+:brand rdf:type owl:DatatypeProperty ;
+       rdfs:range rdfs:Literal ;
+       rdfs:comment "Brand of a product" ;
+       rdfs:label "brand" .
+
+
+###  http://w3id.org/saref4inma#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "Description of a product equipment" ;
+             rdfs:label "description" .
+
+
+###  http://w3id.org/saref4inma#hasGTIN12
+:hasGTIN12 rdf:type owl:DatatypeProperty ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "GTIN identifier that consists of 12 digits" ;
+           rdfs:label "has GTIN-12" .
+
+
+###  http://w3id.org/saref4inma#hasGTIN13
+:hasGTIN13 rdf:type owl:DatatypeProperty ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "GTIN identifier that consists of 13 digits" ;
+           rdfs:label "has GTIN-13" .
+
+
+###  http://w3id.org/saref4inma#hasGTIN14
+:hasGTIN14 rdf:type owl:DatatypeProperty ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "GTIN identifier that consists of 14 digits" ;
+           rdfs:label "has GTIN-14" .
+
+
+###  http://w3id.org/saref4inma#hasGTIN8
+:hasGTIN8 rdf:type owl:DatatypeProperty ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "GTIN identifier that consists of 8 digits" ;
+          rdfs:label "has GTIN-8" .
+
+
+###  http://w3id.org/saref4inma#manufacturer
+:manufacturer rdf:type owl:DatatypeProperty ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "Manufacturer of a product" ;
+              rdfs:label "manufacturer" .
+
+
+###  http://w3id.org/saref4inma#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "Name of a product equipment" ;
+      rdfs:label "name" .
+
+
+###  http://w3id.org/saref4inma#size
+:size rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer ;
+      rdfs:comment "Size of a batch" ;
+      rdfs:label "size" .
+
+
+###  http://w3id.org/saref4inma#supplier
+:supplier rdf:type owl:DatatypeProperty ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "Supplier of a product" ;
+          rdfs:label "supplier" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/saref4inma#Area
+:Area rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :contains ;
+                        owl:someValuesFrom :WorkCenter
+                      ] ;
+      rdfs:comment "Physical, geographical or logical grouping of resources determined by the site  (definition taken from IEC 62264)" ;
+      rdfs:label "Area" .
+
+
+###  http://w3id.org/saref4inma#Batch
+:Batch rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :needsEquipment ;
+                         owl:allValuesFrom :ProductEquipment
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGTIN12 ;
+                         owl:allValuesFrom rdfs:Literal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGTIN13 ;
+                         owl:allValuesFrom rdfs:Literal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGTIN14 ;
+                         owl:allValuesFrom rdfs:Literal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGTIN8 ;
+                         owl:allValuesFrom rdfs:Literal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :size ;
+                         owl:allValuesFrom xsd:integer
+                       ] ;
+       rdfs:comment "The material that is being produced  (definition taken from IEC 61512)" ;
+       rdfs:label "Batch" .
+
+
+###  http://w3id.org/saref4inma#ControlModule
+:ControlModule rdf:type owl:Class ;
+               rdfs:subClassOf :ProductEquipment ;
+               rdfs:comment "The lowest level grouping of equipment in the physical model that can carry out basic control  (definition taken from IEC 61512)" ;
+               rdfs:label "Control module" .
+
+
+###  http://w3id.org/saref4inma#EquipmentModule
+:EquipmentModule rdf:type owl:Class ;
+                 rdfs:subClassOf :ProductEquipment ;
+                 rdfs:comment "A functional  group of equipment that can carry out a finit number of specific minor processing activities (definition taken from IEC 61512)" ;
+                 rdfs:label "Equipment module" .
+
+
+###  http://w3id.org/saref4inma#Factory
+:Factory rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :contains ;
+                           owl:someValuesFrom :Site
+                         ] ;
+         rdfs:comment "One or more organizations sharing a definit mission, goals and objectives which provides an output such as a product  (definition taken from IEC 62264)" ;
+         rdfs:label "Factory" .
+
+
+###  http://w3id.org/saref4inma#InjectionUnit
+:InjectionUnit rdf:type owl:Class ;
+               rdfs:subClassOf :EquipmentModule ;
+               rdfs:label "Injection unit" .
+
+
+###  http://w3id.org/saref4inma#Material
+:Material rdf:type owl:Class ;
+          rdfs:comment "Material needed for producing products" ;
+          rdfs:label "Material" .
+
+
+###  http://w3id.org/saref4inma#MouldingMachine
+:MouldingMachine rdf:type owl:Class ;
+                 rdfs:subClassOf :EquipmentModule ;
+                 rdfs:label "Moulding machine" .
+
+
+###  http://w3id.org/saref4inma#ProcessCell
+:ProcessCell rdf:type owl:Class ;
+             rdfs:subClassOf :WorkCenter ;
+             rdfs:comment "A logical grouping of equipment that includes the equipment required for production of one or more batches  (definition taken from IEC 61512)" ;
+             rdfs:label "Process cell" .
+
+
+###  http://w3id.org/saref4inma#Product
+:Product rdf:type owl:Class ;
+         rdfs:comment "Products built in a factory" ;
+         rdfs:label "Product" .
+
+
+###  http://w3id.org/saref4inma#ProductCategory
+:ProductCategory rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :brand ;
+                                   owl:allValuesFrom rdfs:Literal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :manufacturer ;
+                                   owl:allValuesFrom rdfs:Literal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :supplier ;
+                                   owl:allValuesFrom rdfs:Literal
+                                 ] ;
+                 owl:disjointWith :ProductEquipment ;
+                 rdfs:comment "It represents the  type of products that can be produced" ;
+                 rdfs:label "Product category" .
+
+
+###  http://w3id.org/saref4inma#ProductEquipment
+:ProductEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf saref:Device ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :makes ;
+                                    owl:someValuesFrom :ProductCategory
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :description ;
+                                    owl:allValuesFrom rdfs:Literal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :name ;
+                                    owl:allValuesFrom rdfs:Literal
+                                  ] ;
+                  rdfs:comment "Equipment in a factory that is used to produce products" ;
+                  rdfs:label "Product equipment" .
+
+
+###  http://w3id.org/saref4inma#ProductionUnit
+:ProductionUnit rdf:type owl:Class ;
+                rdfs:subClassOf :WorkCenter ;
+                rdfs:comment "Collection of equipment that converts, separates or reacts one or more feedstocks to produce intermediate or final products  (definition taken from IEC 62264)" ;
+                rdfs:label "Production unit" .
+
+
+###  http://w3id.org/saref4inma#Site
+:Site rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :contains ;
+                        owl:someValuesFrom :Area
+                      ] ;
+      rdfs:comment "identified physical, geographical, and/or logical component grouping of a manufacturing enterprise (definition taken from IEC 62264)" ;
+      rdfs:label "Site" .
+
+
+###  http://w3id.org/saref4inma#Unit
+:Unit rdf:type owl:Class ;
+      rdfs:subClassOf :ProductEquipment ;
+      rdfs:comment "Level of equipment composed by lower level elements, such as equipment modules, in which one or more processign activities can be conducted" ;
+      rdfs:label "Unit" .
+
+
+###  http://w3id.org/saref4inma#WorkCenter
+:WorkCenter rdf:type owl:Class ;
+            rdfs:subClassOf :ProductEquipment ;
+            rdfs:comment "Equipment element under an area in a role-based equipment hierarchy that performs production, storage or material movement  (definition taken from IEC 62264)" ;
+            rdfs:label "Work center" .
+
+
+###  https://w3id.org/saref#Command
+saref:Command rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Device
+saref:Device rdf:type owl:Class ;
+             rdfs:label "Device" .
+
+
+###  https://w3id.org/saref#Function
+saref:Function rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Property
+saref:Property rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#State
+saref:State rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/saref4inma#ScrewDiameter
+:ScrewDiameter rdf:type owl:NamedIndividual .
+
+
+###  http://w3id.org/saref4inma#ScrewVolume
+:ScrewVolume rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
