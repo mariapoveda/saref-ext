@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/saref4inma#"
+     xml:base="http://w3id.org/saref4inma"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://w3id.org/saref4inma">
+        <dc:title>SAREF extension for industry and manufacturing domain</dc:title>
+        <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms:creator>Alba Fernández Izquierdo</terms:creator>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <vann:preferredNamespacePrefix>saref4inma</vann:preferredNamespacePrefix>
+        <rdfs:comment>This ontology extends the SAREF ontology for the industry and manufacturing domain. This extension is based on the Reference Architectural Model Industry 4.0 (RAMI)</rdfs:comment>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/saref4inma#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/saref4inma#contains">
+        <rdfs:comment>A relationship indicating that an  entity  consists of other entities</rdfs:comment>
+        <rdfs:label>contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#hasCategory -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/saref4inma#hasCategory">
+        <rdfs:comment>The type of product that can be produced in a factory</rdfs:comment>
+        <rdfs:label>has category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#hasUpdate -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/saref4inma#hasUpdate">
+        <rdfs:comment>Updates of a product or equipment</rdfs:comment>
+        <rdfs:label>has update</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#isCreatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/saref4inma#isCreatedIn">
+        <rdfs:comment>A relationship indicating where an entity is producted</rdfs:comment>
+        <rdfs:label>is created in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#makes -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/saref4inma#makes">
+        <rdfs:comment>A relationship indicating that entity can produce other entities</rdfs:comment>
+        <rdfs:label>makes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#needsEquipment -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/saref4inma#needsEquipment">
+        <rdfs:comment>A relationship indicating that an entity needs particular equipment to produce</rdfs:comment>
+        <rdfs:label>needs equipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#needsMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/saref4inma#needsMaterial">
+        <rdfs:comment>A relationship indicating the material needed to produce an entity</rdfs:comment>
+        <rdfs:label>needs material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/saref#hasCommand -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#hasCommand"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasFunction -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#hasFunction"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasState -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#hasState">
+        <rdfs:label>has state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/saref4inma#brand -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#brand">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Brand of a product</rdfs:comment>
+        <rdfs:label>brand</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#description">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of a product equipment</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#hasGTIN12 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#hasGTIN12">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>GTIN identifier that consists of 12 digits</rdfs:comment>
+        <rdfs:label>has GTIN-12</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#hasGTIN13 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#hasGTIN13">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>GTIN identifier that consists of 13 digits</rdfs:comment>
+        <rdfs:label>has GTIN-13</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#hasGTIN14 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#hasGTIN14">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>GTIN identifier that consists of 14 digits</rdfs:comment>
+        <rdfs:label>has GTIN-14</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#hasGTIN8 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#hasGTIN8">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>GTIN identifier that consists of 8 digits</rdfs:comment>
+        <rdfs:label>has GTIN-8</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#manufacturer -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#manufacturer">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Manufacturer of a product</rdfs:comment>
+        <rdfs:label>manufacturer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Name of a product equipment</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#size -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#size">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Size of a batch</rdfs:comment>
+        <rdfs:label>size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/saref4inma#supplier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/saref4inma#supplier">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Supplier of a product</rdfs:comment>
+        <rdfs:label>supplier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/saref4inma#Area -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#Area">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#contains"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/saref4inma#WorkCenter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Physical, geographical or logical grouping of resources determined by the site  (definition taken from IEC 62264)</rdfs:comment>
+        <rdfs:label>Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#Batch -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#Batch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#needsEquipment"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/saref4inma#ProductEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#hasGTIN12"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#hasGTIN13"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#hasGTIN14"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#hasGTIN8"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#size"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The material that is being produced  (definition taken from IEC 61512)</rdfs:comment>
+        <rdfs:label>Batch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#ControlModule -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#ControlModule">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#ProductEquipment"/>
+        <rdfs:comment>The lowest level grouping of equipment in the physical model that can carry out basic control  (definition taken from IEC 61512)</rdfs:comment>
+        <rdfs:label>Control module</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#EquipmentModule -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#EquipmentModule">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#ProductEquipment"/>
+        <rdfs:comment>A functional  group of equipment that can carry out a finit number of specific minor processing activities (definition taken from IEC 61512)</rdfs:comment>
+        <rdfs:label>Equipment module</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#Factory -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#Factory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#contains"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/saref4inma#Site"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>One or more organizations sharing a definit mission, goals and objectives which provides an output such as a product  (definition taken from IEC 62264)</rdfs:comment>
+        <rdfs:label>Factory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#InjectionUnit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#InjectionUnit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#EquipmentModule"/>
+        <rdfs:label>Injection unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#Material -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#Material">
+        <rdfs:comment>Material needed for producing products</rdfs:comment>
+        <rdfs:label>Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#MouldingMachine -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#MouldingMachine">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#EquipmentModule"/>
+        <rdfs:label>Moulding machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#ProcessCell -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#ProcessCell">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#WorkCenter"/>
+        <rdfs:comment>A logical grouping of equipment that includes the equipment required for production of one or more batches  (definition taken from IEC 61512)</rdfs:comment>
+        <rdfs:label>Process cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#Product -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#Product">
+        <rdfs:comment>Products built in a factory</rdfs:comment>
+        <rdfs:label>Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#ProductCategory -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#ProductCategory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#brand"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#manufacturer"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#supplier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://w3id.org/saref4inma#ProductEquipment"/>
+        <rdfs:comment>It represents the  type of products that can be produced</rdfs:comment>
+        <rdfs:label>Product category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#ProductEquipment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#ProductEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#makes"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/saref4inma#ProductCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Equipment in a factory that is used to produce products</rdfs:comment>
+        <rdfs:label>Product equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#ProductionUnit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#ProductionUnit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#WorkCenter"/>
+        <rdfs:comment>Collection of equipment that converts, separates or reacts one or more feedstocks to produce intermediate or final products  (definition taken from IEC 62264)</rdfs:comment>
+        <rdfs:label>Production unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#Site -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#Site">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/saref4inma#contains"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/saref4inma#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>identified physical, geographical, and/or logical component grouping of a manufacturing enterprise (definition taken from IEC 62264)</rdfs:comment>
+        <rdfs:label>Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#Unit -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#Unit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#ProductEquipment"/>
+        <rdfs:comment>Level of equipment composed by lower level elements, such as equipment modules, in which one or more processign activities can be conducted</rdfs:comment>
+        <rdfs:label>Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/saref4inma#WorkCenter -->
+
+
+    <owl:Class rdf:about="http://w3id.org/saref4inma#WorkCenter">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/saref4inma#ProductEquipment"/>
+        <rdfs:comment>Equipment element under an area in a role-based equipment hierarchy that performs production, storage or material movement  (definition taken from IEC 62264)</rdfs:comment>
+        <rdfs:label>Work center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/saref#Command -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Command"/>
+    
+
+
+    <!-- https://w3id.org/saref#Device -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Device">
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/saref#Function -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Function"/>
+    
+
+
+    <!-- https://w3id.org/saref#Property -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Property"/>
+    
+
+
+    <!-- https://w3id.org/saref#State -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#State"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/saref4inma#ScrewDiameter -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/saref4inma#ScrewDiameter"/>
+    
+
+
+    <!-- http://w3id.org/saref4inma#ScrewVolume -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/saref4inma#ScrewVolume"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:ProductionUnit" "base:MouldingMachine" "saref:Device" "base:InjectionUnit" "base:Unit" "base:ProductEquipment" "base:ProcessCell" "base:EquipmentModule" "base:WorkCenter" "base:ControlModule" ; /*classes style*/
+	"base:InjectionUnit" -> "base:EquipmentModule" [ label = "rdfs:subClassOf" ];
+	"base:WorkCenter" -> "base:ProductEquipment" [ label = "rdfs:subClassOf" ];
+	"base:ProcessCell" -> "base:WorkCenter" [ label = "rdfs:subClassOf" ];
+	"base:Unit" -> "base:ProductEquipment" [ label = "rdfs:subClassOf" ];
+	"base:ProductionUnit" -> "base:WorkCenter" [ label = "rdfs:subClassOf" ];
+	"base:EquipmentModule" -> "base:ProductEquipment" [ label = "rdfs:subClassOf" ];
+	"base:ProductEquipment" -> "saref:Device" [ label = "rdfs:subClassOf" ];
+	"base:MouldingMachine" -> "base:EquipmentModule" [ label = "rdfs:subClassOf" ];
+	"base:ControlModule" -> "base:ProductEquipment" [ label = "rdfs:subClassOf" ];
+
+}
