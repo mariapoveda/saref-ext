@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "saref:Humidity" "saref:Property" "saref:Time" "saref:Temperature" ; /*classes style*/
+	"saref:Humidity" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"saref:Temperature" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"saref:Time" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,529 @@
+@prefix : <https://w3id.org/def/saref4agri#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/def/saref4agri> .
+
+<https://w3id.org/def/saref4agri> rdf:type owl:Ontology ;
+                                   owl:versionIRI <https://w3id.org/def/v1/saref4agri> ;
+                                   <http://purl.org/dc/elements/1.1/contributor> <http://w3id.org/people/mpoveda> ;
+                                   <http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Agricultural domain."@en ;
+                                   <http://purl.org/dc/elements/1.1/title> "SAREF extension for Agriculture"@en ;
+                                   <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4agri" ;
+                                   <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4agri#" ;
+                                   owl:versionInfo 0.1 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:AnnotationProperty ;
+                                              rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
+                                              rdfs:label "altitude" ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:AnnotationProperty ;
+                                              rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
+                                              rdfs:label "latitude" ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:AnnotationProperty ;
+                                               rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+                                               rdfs:label "longitude" ;
+                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/based_near
+<http://xmlns.com/foaf/0.1/based_near> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/def/saref4agri#deployedOnPlatform
+:deployedOnPlatform rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :inDeployment ;
+                    rdfs:label "deployed on platform"@en .
+
+
+###  https://w3id.org/def/saref4agri#deployedSystem
+:deployedSystem rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasDeployment ;
+                rdfs:label "deployed system"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasDeployment
+:hasDeployment rdf:type owl:ObjectProperty ;
+               rdfs:label "has deployment"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasFeatureOfInterest
+:hasFeatureOfInterest rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isFeatureOfInterestOf ;
+                      rdfs:label "has feature of interest"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasProperty
+:hasProperty rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isPropertyOf ;
+             rdfs:label "has property"@en .
+
+
+###  https://w3id.org/def/saref4agri#hosts
+:hosts rdf:type owl:ObjectProperty ;
+       owl:inverseOf :isHostedBy ;
+       rdfs:label "host"@en .
+
+
+###  https://w3id.org/def/saref4agri#inDeployment
+:inDeployment rdf:type owl:ObjectProperty ;
+              rdfs:label "in deployment"@en .
+
+
+###  https://w3id.org/def/saref4agri#isFeatureOfInterestOf
+:isFeatureOfInterestOf rdf:type owl:ObjectProperty ;
+                       rdfs:label "is feature of interest of"@en .
+
+
+###  https://w3id.org/def/saref4agri#isHostedBy
+:isHostedBy rdf:type owl:ObjectProperty ;
+            rdfs:label "is hosted by"@en .
+
+
+###  https://w3id.org/def/saref4agri#isPropertyOf
+:isPropertyOf rdf:type owl:ObjectProperty ;
+              rdfs:label "is property of"@en .
+
+
+###  https://w3id.org/def/saref4agri#measurementMadeBy
+:measurementMadeBy rdf:type owl:ObjectProperty ;
+                   owl:inverseOf <https://w3id.org/saref#makesMeasurement> ;
+                   rdfs:label "measurement made by"@en .
+
+
+###  https://w3id.org/saref#accomplishes
+<https://w3id.org/saref#accomplishes> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <https://w3id.org/saref#isAccomplishedBy> ;
+                                      rdfs:comment "A relationship between a certain entity (e.g., a device) and the task it accomplishes" ;
+                                      rdfs:label "accomplishes" .
+
+
+###  https://w3id.org/saref#actsUpon
+<https://w3id.org/saref#actsUpon> rdf:type owl:ObjectProperty ;
+                                  rdfs:comment "A relationship between a command and a state" ;
+                                  rdfs:label "acts upon" .
+
+
+###  https://w3id.org/saref#consistsOf
+<https://w3id.org/saref#consistsOf> rdf:type owl:ObjectProperty ;
+                                    rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                    rdfs:label "consists of"@en .
+
+
+###  https://w3id.org/saref#controlsProperty
+<https://w3id.org/saref#controlsProperty> rdf:type owl:ObjectProperty ;
+                                          rdfs:label "controls property"@en .
+
+
+###  https://w3id.org/saref#hasCommand
+<https://w3id.org/saref#hasCommand> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf <https://w3id.org/saref#isCommandOf> ;
+                                    rdfs:comment "A relationship between an entity (such as a function) and a command" ;
+                                    rdfs:label "has command" .
+
+
+###  https://w3id.org/saref#hasFunction
+<https://w3id.org/saref#hasFunction> rdf:type owl:ObjectProperty ;
+                                     rdfs:comment "A relationship identifying the type of function of a device" ;
+                                     rdfs:label "has function" .
+
+
+###  https://w3id.org/saref#isAccomplishedBy
+<https://w3id.org/saref#isAccomplishedBy> rdf:type owl:ObjectProperty ;
+                                          rdfs:comment "A relationship indentifying the task accomplished by a certain entity (e.g., a device)" ;
+                                          rdfs:label "is accomplished by" .
+
+
+###  https://w3id.org/saref#isCommandOf
+<https://w3id.org/saref#isCommandOf> rdf:type owl:ObjectProperty ;
+                                     rdfs:comment "A relationship between a command and a function." ;
+                                     rdfs:label "is command of" .
+
+
+###  https://w3id.org/saref#isControlledByDevice
+<https://w3id.org/saref#isControlledByDevice> rdf:type owl:ObjectProperty ;
+                                              rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                              rdfs:label "is controlled by device"@en .
+
+
+###  https://w3id.org/saref#isMeasuredByDevice
+<https://w3id.org/saref#isMeasuredByDevice> rdf:type owl:ObjectProperty ;
+                                            rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                            rdfs:label "is measured by device"@en .
+
+
+###  https://w3id.org/saref#isMeasuredIn
+<https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                      rdfs:label "is measured in"@en .
+
+
+###  https://w3id.org/saref#makesMeasurement
+<https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                          rdfs:label "makes measurement"@en .
+
+
+###  https://w3id.org/saref#measuresProperty
+<https://w3id.org/saref#measuresProperty> rdf:type owl:ObjectProperty ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                          rdfs:label "measures property"@en .
+
+
+###  https://w3id.org/saref#relatesToMeasurement
+<https://w3id.org/saref#relatesToMeasurement> rdf:type owl:ObjectProperty ;
+                                              rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                              rdfs:label "relates to measurement"@en .
+
+
+###  https://w3id.org/saref#relatesToProperty
+<https://w3id.org/saref#relatesToProperty> rdf:type owl:ObjectProperty ;
+                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                           rdfs:label "relates to property"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/def/saref4agri#hasCreationDate
+:hasCreationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:label "has creation date"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasExpirationDate
+:hasExpirationDate rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:label "has expiration date"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasLastUpdateDate
+:hasLastUpdateDate rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:label "has last update date"@en .
+
+
+###  https://w3id.org/saref#hasDescription
+<https://w3id.org/saref#hasDescription> rdf:type owl:DatatypeProperty ;
+                                        rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                        rdfs:label "has description"@en .
+
+
+###  https://w3id.org/saref#hasName
+<https://w3id.org/saref#hasName> rdf:type owl:DatatypeProperty ;
+                                 rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                 rdfs:label "has name"@en .
+
+
+###  https://w3id.org/saref#hasTimestamp
+<https://w3id.org/saref#hasTimestamp> rdf:type owl:DatatypeProperty ;
+                                      rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                      rdfs:label "has timestamp"@en .
+
+
+###  https://w3id.org/saref#hasValue
+<https://w3id.org/saref#hasValue> rdf:type owl:DatatypeProperty ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                  rdfs:label "has value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4agri#Deployment
+:Deployment rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :deployedOnPlatform ;
+                              owl:someValuesFrom :Platform
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :deployedSystem ;
+                              owl:someValuesFrom :System
+                            ] ;
+            rdfs:label "Deployment"@en .
+
+
+###  https://w3id.org/def/saref4agri#FeatureOfInterest
+:FeatureOfInterest rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasProperty ;
+                                     owl:allValuesFrom <https://w3id.org/saref#Property>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :isFeatureOfInterestOf ;
+                                     owl:allValuesFrom <https://w3id.org/saref#Measurement>
+                                   ] ;
+                   rdfs:comment """WARNING!
+ This class might be moved to the SAREF ontology"""@en ;
+                   rdfs:label "Feature of interest"@en .
+
+
+###  https://w3id.org/def/saref4agri#Platform
+:Platform rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hosts ;
+                            owl:someValuesFrom :System
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :inDeployment ;
+                            owl:someValuesFrom :Deployment
+                          ] ;
+          rdfs:label "Platform"@en .
+
+
+###  https://w3id.org/def/saref4agri#System
+:System rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDeployment ;
+                          owl:someValuesFrom :Deployment
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isHostedBy ;
+                          owl:someValuesFrom :Platform
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <https://w3id.org/saref#consistsOf> ;
+                          owl:allValuesFrom :System
+                        ] ;
+        rdfs:label "System"@en .
+
+
+###  https://w3id.org/saref#Command
+<https://w3id.org/saref#Command> rdf:type owl:Class ;
+                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <https://w3id.org/saref#actsUpon> ;
+                                                   owl:allValuesFrom <https://w3id.org/saref#State>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <https://w3id.org/saref#isCommandOf> ;
+                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass <https://w3id.org/saref#Function>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                 ] ;
+                                 rdfs:comment "A directive that a device must support to perform a certain function. A command may act upon a state, but does not necessarily act upon a state. For example, the ON command acts upon the ON/OFF state, but the GET command does not act upon any state, it simply gives a directive to retrieve a certain value. We propose here a list of commands that are relevant for the purpose of SAREF, but this list can be extended." ;
+                                 rdfs:label "Command" .
+
+
+###  https://w3id.org/saref#Device
+<https://w3id.org/saref#Device> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Function
+<https://w3id.org/saref#Function> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/saref#hasCommand> ;
+                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass <https://w3id.org/saref#Command>
+                                                  ] ;
+                                  rdfs:comment "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. " ;
+                                  rdfs:label "Function" .
+
+
+###  https://w3id.org/saref#Humidity
+<https://w3id.org/saref#Humidity> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/saref#Property> ;
+                                  rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit" ;
+                                  rdfs:label "Humidity" .
+
+
+###  https://w3id.org/saref#Measurement
+<https://w3id.org/saref#Measurement> rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasFeatureOfInterest ;
+                                                       owl:allValuesFrom :FeatureOfInterest
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                                                       owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#relatesToProperty> ;
+                                                       owl:allValuesFrom <https://w3id.org/saref#Property>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <https://w3id.org/saref#UnitOfMeasure>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#relatesToProperty> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <https://w3id.org/saref#Property>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#hasTimestamp> ;
+                                                       owl:allValuesFrom xsd:dateTime
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#hasValue> ;
+                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#hasValue> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onDataRange xsd:float
+                                                     ] ;
+                                     owl:disjointWith <https://w3id.org/saref#Property> ,
+                                                      <https://w3id.org/saref#UnitOfMeasure> ;
+                                     rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
+                                     rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                     rdfs:label "Measurement"@en .
+
+
+###  https://w3id.org/saref#Property
+<https://w3id.org/saref#Property> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :isPropertyOf ;
+                                                    owl:allValuesFrom :FeatureOfInterest
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/saref#isControlledByDevice> ;
+                                                    owl:allValuesFrom <https://w3id.org/saref#Device>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/saref#isMeasuredByDevice> ;
+                                                    owl:allValuesFrom <https://w3id.org/saref#Device>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/saref#relatesToMeasurement> ;
+                                                    owl:allValuesFrom <https://w3id.org/saref#Measurement>
+                                                  ] ;
+                                  owl:disjointWith <https://w3id.org/saref#UnitOfMeasure> ;
+                                  rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ,
+                                               "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended." ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                  rdfs:label "Property"@en ,
+                                             "Property" .
+
+
+###  https://w3id.org/saref#State
+<https://w3id.org/saref#State> rdf:type owl:Class ;
+                               rdfs:comment "The state in which a device can be found, e.g, ON/OFF/STANDBY, or ONLINE/OFFLINE. We propose here a list of states that are relevant for the purpose of SAREF, but this list can be extended." ;
+                               rdfs:label "State" .
+
+
+###  https://w3id.org/saref#Task
+<https://w3id.org/saref#Task> rdf:type owl:Class ;
+                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty <https://w3id.org/saref#isAccomplishedBy> ;
+                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass <https://w3id.org/saref#Device>
+                                              ] ;
+                              rdfs:comment "The goal for which a device is designed (from a user perspective). For example, a washing machine is designed for the task of washing. We propose here a list of tasks that are relevant for the purpose of SAREF, but this list can be extended." ;
+                              rdfs:label "Task" .
+
+
+###  https://w3id.org/saref#Temperature
+<https://w3id.org/saref#Temperature> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/saref#Property> ;
+                                     rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)" ;
+                                     rdfs:label "Temperature" .
+
+
+###  https://w3id.org/saref#Time
+<https://w3id.org/saref#Time> rdf:type owl:Class ;
+                              rdfs:subClassOf <https://w3id.org/saref#Property> ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <https://w3id.org/saref#consistsOf> ;
+                                                owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                              ] ;
+                              rdfs:comment "A saref:Property that allows to specify the time concept in terms of instants or intervals according to the imported W3C Time ontology." ;
+                              rdfs:label "Time" .
+
+
+###  https://w3id.org/saref#UnitOfMeasure
+<https://w3id.org/saref#UnitOfMeasure> rdf:type owl:Class ;
+                                       rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ,
+                                                    "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)." ;
+                                       rdfs:isDefinedBy <http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure> ,
+                                                        <https://w3id.org/saref#> ;
+                                       rdfs:label "Unit of measure"@en ,
+                                                  "Unit of measure" .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

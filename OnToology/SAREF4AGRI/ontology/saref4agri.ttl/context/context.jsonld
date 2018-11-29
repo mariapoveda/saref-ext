@@ -1,0 +1,240 @@
+{
+  "@context" : {
+    "actsUpon" : {
+      "@id" : "https://w3id.org/saref#actsUpon",
+      "@type" : "@id"
+    },
+    "UnitOfMeasure" : {
+      "@id" : "https://w3id.org/saref#UnitOfMeasure"
+    },
+    "isControlledByDevice" : {
+      "@id" : "https://w3id.org/saref#isControlledByDevice",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Humidity" : {
+      "@id" : "https://w3id.org/saref#Humidity"
+    },
+    "Platform" : {
+      "@id" : "https://w3id.org/def/saref4agri#Platform"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "Deployment" : {
+      "@id" : "https://w3id.org/def/saref4agri#Deployment"
+    },
+    "accomplishes" : {
+      "@id" : "https://w3id.org/saref#accomplishes",
+      "@type" : "@id"
+    },
+    "hasExpirationDate" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasExpirationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hosts" : {
+      "@id" : "https://w3id.org/def/saref4agri#hosts",
+      "@type" : "@id"
+    },
+    "hasName" : {
+      "@id" : "https://w3id.org/saref#hasName"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "https://w3id.org/def/saref4agri#FeatureOfInterest"
+    },
+    "measuresProperty" : {
+      "@id" : "https://w3id.org/saref#measuresProperty",
+      "@type" : "@id"
+    },
+    "hasValue" : {
+      "@id" : "https://w3id.org/saref#hasValue"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Measurement" : {
+      "@id" : "https://w3id.org/saref#Measurement"
+    },
+    "isHostedBy" : {
+      "@id" : "https://w3id.org/def/saref4agri#isHostedBy",
+      "@type" : "@id"
+    },
+    "hasCommand" : {
+      "@id" : "https://w3id.org/saref#hasCommand",
+      "@type" : "@id"
+    },
+    "inDeployment" : {
+      "@id" : "https://w3id.org/def/saref4agri#inDeployment",
+      "@type" : "@id"
+    },
+    "Temperature" : {
+      "@id" : "https://w3id.org/saref#Temperature"
+    },
+    "isAccomplishedBy" : {
+      "@id" : "https://w3id.org/saref#isAccomplishedBy",
+      "@type" : "@id"
+    },
+    "hasProperty" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasProperty",
+      "@type" : "@id"
+    },
+    "based_near" : {
+      "@id" : "http://xmlns.com/foaf/0.1/based_near"
+    },
+    "measurementMadeBy" : {
+      "@id" : "https://w3id.org/def/saref4agri#measurementMadeBy",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location"
+    },
+    "TemporalEntity" : {
+      "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    "hadPrimarySource" : {
+      "@id" : "http://www.w3.org/ns/prov#hadPrimarySource"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
+    },
+    "relatesToMeasurement" : {
+      "@id" : "https://w3id.org/saref#relatesToMeasurement",
+      "@type" : "@id"
+    },
+    "isMeasuredByDevice" : {
+      "@id" : "https://w3id.org/saref#isMeasuredByDevice",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "makesMeasurement" : {
+      "@id" : "https://w3id.org/saref#makesMeasurement",
+      "@type" : "@id"
+    },
+    "hasDeployment" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasDeployment",
+      "@type" : "@id"
+    },
+    "Property" : {
+      "@id" : "https://w3id.org/saref#Property"
+    },
+    "hasFunction" : {
+      "@id" : "https://w3id.org/saref#hasFunction",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "Command" : {
+      "@id" : "https://w3id.org/saref#Command"
+    },
+    "isMeasuredIn" : {
+      "@id" : "https://w3id.org/saref#isMeasuredIn",
+      "@type" : "@id"
+    },
+    "hasFeatureOfInterest" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasFeatureOfInterest",
+      "@type" : "@id"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+    },
+    "consistsOf" : {
+      "@id" : "https://w3id.org/saref#consistsOf",
+      "@type" : "@id"
+    },
+    "hasLastUpdateDate" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasLastUpdateDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "isCommandOf" : {
+      "@id" : "https://w3id.org/saref#isCommandOf",
+      "@type" : "@id"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "isPropertyOf" : {
+      "@id" : "https://w3id.org/def/saref4agri#isPropertyOf",
+      "@type" : "@id"
+    },
+    "hasCreationDate" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasCreationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "State" : {
+      "@id" : "https://w3id.org/saref#State"
+    },
+    "relatesToProperty" : {
+      "@id" : "https://w3id.org/saref#relatesToProperty",
+      "@type" : "@id"
+    },
+    "Function" : {
+      "@id" : "https://w3id.org/saref#Function"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "controlsProperty" : {
+      "@id" : "https://w3id.org/saref#controlsProperty",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "deployedSystem" : {
+      "@id" : "https://w3id.org/def/saref4agri#deployedSystem",
+      "@type" : "@id"
+    },
+    "System" : {
+      "@id" : "https://w3id.org/def/saref4agri#System"
+    },
+    "Device" : {
+      "@id" : "https://w3id.org/saref#Device"
+    },
+    "deployedOnPlatform" : {
+      "@id" : "https://w3id.org/def/saref4agri#deployedOnPlatform",
+      "@type" : "@id"
+    },
+    "hasDescription" : {
+      "@id" : "https://w3id.org/saref#hasDescription"
+    },
+    "hasTimestamp" : {
+      "@id" : "https://w3id.org/saref#hasTimestamp"
+    },
+    "Task" : {
+      "@id" : "https://w3id.org/saref#Task"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "Time" : {
+      "@id" : "https://w3id.org/saref#Time"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "isFeatureOfInterestOf" : {
+      "@id" : "https://w3id.org/def/saref4agri#isFeatureOfInterestOf",
+      "@type" : "@id"
+    }
+  }
+}

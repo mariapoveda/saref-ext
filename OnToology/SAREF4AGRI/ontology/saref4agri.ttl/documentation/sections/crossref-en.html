@@ -1,0 +1,1118 @@
+<h2  id="crossreference" class="list">Cross reference for SAREF extension for Agriculture classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by SAREF extension for Agriculture.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/saref#Command" title="https://w3id.org/saref#Command">Command</a>
+      </li>
+      <li>
+         <a href="#Deployment" title="https://w3id.org/def/saref4agri#Deployment">Deployment</a>
+      </li>
+      <li>
+         <a href="#FeatureOfInterest"
+            title="https://w3id.org/def/saref4agri#FeatureOfInterest">Feature of interest</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Function" title="https://w3id.org/saref#Function">Function</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Humidity" title="https://w3id.org/saref#Humidity">Humidity</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
+      </li>
+      <li>
+         <a href="#Platform" title="https://w3id.org/def/saref4agri#Platform">Platform</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#State" title="https://w3id.org/saref#State">State</a>
+      </li>
+      <li>
+         <a href="#System" title="https://w3id.org/def/saref4agri#System">System</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Task" title="https://w3id.org/saref#Task">Task</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Temperature" title="https://w3id.org/saref#Temperature">Temperature</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#Time" title="https://w3id.org/saref#Time">Time</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/saref#Command">
+      <h3>Command<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Command</p>
+      <div class="comment">
+         <span class="markdown">A directive that a device must support to perform a certain function. A command may act upon a state, but does not necessarily act upon a state. For example, the ON command acts upon the ON/OFF state, but the GET command does not act upon any state, it simply gives a directive to retrieve a certain value. We propose here a list of commands that are relevant for the purpose of SAREF, but this list can be extended.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#actsUpon" title="https://w3id.org/saref#actsUpon">acts upon</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#State" title="https://w3id.org/saref#State">State</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#isCommandOf" title="https://w3id.org/saref#isCommandOf">is command of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#https://w3id.org/saref#Function" title="https://w3id.org/saref#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+      </dl>
+   </div>
+   <div class="entity" id="Deployment">
+      <h3>Deployment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#Deployment</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#deployedOnPlatform"
+               title="https://w3id.org/def/saref4agri#deployedOnPlatform">deployed on platform</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Platform" title="https://w3id.org/def/saref4agri#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#deployedSystem" title="https://w3id.org/def/saref4agri#deployedSystem">deployed system</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#System" title="https://w3id.org/def/saref4agri#System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FeatureOfInterest">
+      <h3>Feature of interest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#FeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">WARNING!
+ This class might be moved to the SAREF ontology</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasProperty" title="https://w3id.org/def/saref4agri#hasProperty">has property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isFeatureOfInterestOf"
+               title="https://w3id.org/def/saref4agri#isFeatureOfInterestOf">is feature of interest of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Function">
+      <h3>Function<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Function</p>
+      <div class="comment">
+         <span class="markdown">The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. </span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#hasCommand" title="https://w3id.org/saref#hasCommand">has command</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#https://w3id.org/saref#Command" title="https://w3id.org/saref#Command">Command</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Humidity">
+      <h3>Humidity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Humidity</p>
+      <div class="comment">
+         <span class="markdown">A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Measurement">
+      <h3>Measurement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Measurement</p>
+      <div class="comment">
+         <span class="markdown">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasFeatureOfInterest"
+               title="https://w3id.org/def/saref4agri#hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#FeatureOfInterest"
+               title="https://w3id.org/def/saref4agri#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#relatesToProperty" title="https://w3id.org/saref#relatesToProperty">relates to property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#relatesToProperty" title="https://w3id.org/saref#relatesToProperty">relates to property</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#hasTimestamp" title="https://w3id.org/saref#hasTimestamp">has timestamp</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dd>
+            <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Platform">
+      <h3>Platform<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#Platform</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hosts" title="https://w3id.org/def/saref4agri#hosts">host</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#System" title="https://w3id.org/def/saref4agri#System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#inDeployment" title="https://w3id.org/def/saref4agri#inDeployment">in deployment</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Deployment" title="https://w3id.org/def/saref4agri#Deployment">Deployment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Property">
+      <h3>Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Property</p>
+      <div class="comment">
+         <span class="markdown">An aspect of an entity that can be observable by a sensor.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#isPropertyOf" title="https://w3id.org/def/saref4agri#isPropertyOf">is property of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#FeatureOfInterest"
+               title="https://w3id.org/def/saref4agri#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#isControlledByDevice" title="https://w3id.org/saref#isControlledByDevice">is controlled by device</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="https://w3id.org/saref#Device">device</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#isMeasuredByDevice" title="https://w3id.org/saref#isMeasuredByDevice">is measured by device</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="https://w3id.org/saref#Device">device</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#relatesToMeasurement" title="https://w3id.org/saref#relatesToMeasurement">relates to measurement</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Humidity" title="https://w3id.org/saref#Humidity">Humidity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Temperature" title="https://w3id.org/saref#Temperature">Temperature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Time" title="https://w3id.org/saref#Time">Time</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#State">
+      <h3>State<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#State</p>
+      <div class="comment">
+         <span class="markdown">The state in which a device can be found, e.g, ON/OFF/STANDBY, or ONLINE/OFFLINE. We propose here a list of states that are relevant for the purpose of SAREF, but this list can be extended.</span>
+      </div>
+   </div>
+   <div class="entity" id="System">
+      <h3>System<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#System</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasDeployment" title="https://w3id.org/def/saref4agri#hasDeployment">has deployment</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Deployment" title="https://w3id.org/def/saref4agri#Deployment">Deployment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isHostedBy" title="https://w3id.org/def/saref4agri#isHostedBy">is hosted by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Platform" title="https://w3id.org/def/saref4agri#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#System" title="https://w3id.org/def/saref4agri#System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Task">
+      <h3>Task<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Task</p>
+      <div class="comment">
+         <span class="markdown">The goal for which a device is designed (from a user perspective). For example, a washing machine is designed for the task of washing. We propose here a list of tasks that are relevant for the purpose of SAREF, but this list can be extended.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#isAccomplishedBy" title="https://w3id.org/saref#isAccomplishedBy">is accomplished by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <span class="dotted" title="https://w3id.org/saref#Device">device</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Temperature">
+      <h3>Temperature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Temperature</p>
+      <div class="comment">
+         <span class="markdown">A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#Time">
+      <h3>Time<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#Time</p>
+      <div class="comment">
+         <span class="markdown">A saref:Property that allows to specify the time concept in terms of instants or intervals according to the imported W3C Time ontology.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#UnitOfMeasure">
+      <h3>Unit of measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#UnitOfMeasure</p>
+      <div class="comment">
+         <span class="markdown">The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called "watt". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure">http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure</a>
+         </dd>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/saref#accomplishes" title="https://w3id.org/saref#accomplishes">accomplishes</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#actsUpon" title="https://w3id.org/saref#actsUpon">acts upon</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#controlsProperty" title="https://w3id.org/saref#controlsProperty">controls property</a>
+      </li>
+      <li>
+         <a href="#deployedOnPlatform"
+            title="https://w3id.org/def/saref4agri#deployedOnPlatform">deployed on platform</a>
+      </li>
+      <li>
+         <a href="#deployedSystem" title="https://w3id.org/def/saref4agri#deployedSystem">deployed system</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#hasCommand" title="https://w3id.org/saref#hasCommand">has command</a>
+      </li>
+      <li>
+         <a href="#hasDeployment" title="https://w3id.org/def/saref4agri#hasDeployment">has deployment</a>
+      </li>
+      <li>
+         <a href="#hasFeatureOfInterest"
+            title="https://w3id.org/def/saref4agri#hasFeatureOfInterest">has feature of interest</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#hasFunction" title="https://w3id.org/saref#hasFunction">has function</a>
+      </li>
+      <li>
+         <a href="#hasProperty" title="https://w3id.org/def/saref4agri#hasProperty">has property</a>
+      </li>
+      <li>
+         <a href="#hosts" title="https://w3id.org/def/saref4agri#hosts">host</a>
+      </li>
+      <li>
+         <a href="#inDeployment" title="https://w3id.org/def/saref4agri#inDeployment">in deployment</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#isAccomplishedBy" title="https://w3id.org/saref#isAccomplishedBy">is accomplished by</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#isCommandOf" title="https://w3id.org/saref#isCommandOf">is command of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#isControlledByDevice" title="https://w3id.org/saref#isControlledByDevice">is controlled by device</a>
+      </li>
+      <li>
+         <a href="#isFeatureOfInterestOf"
+            title="https://w3id.org/def/saref4agri#isFeatureOfInterestOf">is feature of interest of</a>
+      </li>
+      <li>
+         <a href="#isHostedBy" title="https://w3id.org/def/saref4agri#isHostedBy">is hosted by</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#isMeasuredByDevice" title="https://w3id.org/saref#isMeasuredByDevice">is measured by device</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
+      </li>
+      <li>
+         <a href="#isPropertyOf" title="https://w3id.org/def/saref4agri#isPropertyOf">is property of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#makesMeasurement" title="https://w3id.org/saref#makesMeasurement">makes measurement</a>
+      </li>
+      <li>
+         <a href="#measurementMadeBy"
+            title="https://w3id.org/def/saref4agri#measurementMadeBy">measurement made by</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#measuresProperty" title="https://w3id.org/saref#measuresProperty">measures property</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#relatesToMeasurement" title="https://w3id.org/saref#relatesToMeasurement">relates to measurement</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#relatesToProperty" title="https://w3id.org/saref#relatesToProperty">relates to property</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/saref#accomplishes">
+      <h3>accomplishes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#accomplishes</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a certain entity (e.g., a device) and the task it accomplishes</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/saref#isAccomplishedBy" title="https://w3id.org/saref#isAccomplishedBy">is accomplished by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#actsUpon">
+      <h3>acts upon<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#actsUpon</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a command and a state</span>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#consistsOf">
+      <h3>consists of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#consistsOf</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#controlsProperty">
+      <h3>controls property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#controlsProperty</p>
+   </div>
+   <div class="entity" id="deployedOnPlatform">
+      <h3>deployed on platform<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#deployedOnPlatform</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#inDeployment" title="https://w3id.org/def/saref4agri#inDeployment">in deployment</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="deployedSystem">
+      <h3>deployed system<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#deployedSystem</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasDeployment" title="https://w3id.org/def/saref4agri#hasDeployment">has deployment</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasCommand">
+      <h3>has command<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasCommand</p>
+      <div class="comment">
+         <span class="markdown">A relationship between an entity (such as a function) and a command</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/saref#isCommandOf" title="https://w3id.org/saref#isCommandOf">is command of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDeployment">
+      <h3>has deployment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasDeployment</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#deployedSystem" title="https://w3id.org/def/saref4agri#deployedSystem">deployed system</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFeatureOfInterest">
+      <h3>has feature of interest<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasFeatureOfInterest</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isFeatureOfInterestOf"
+                  title="https://w3id.org/def/saref4agri#isFeatureOfInterestOf">is feature of interest of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasFunction">
+      <h3>has function<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasFunction</p>
+      <div class="comment">
+         <span class="markdown">A relationship identifying the type of function of a device</span>
+      </div>
+   </div>
+   <div class="entity" id="hasProperty">
+      <h3>has property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasProperty</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPropertyOf" title="https://w3id.org/def/saref4agri#isPropertyOf">is property of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hosts">
+      <h3>host<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hosts</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isHostedBy" title="https://w3id.org/def/saref4agri#isHostedBy">is hosted by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inDeployment">
+      <h3>in deployment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#inDeployment</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#deployedOnPlatform"
+                  title="https://w3id.org/def/saref4agri#deployedOnPlatform">deployed on platform</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#isAccomplishedBy">
+      <h3>is accomplished by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#isAccomplishedBy</p>
+      <div class="comment">
+         <span class="markdown">A relationship indentifying the task accomplished by a certain entity (e.g., a device)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/saref#accomplishes" title="https://w3id.org/saref#accomplishes">accomplishes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#isCommandOf">
+      <h3>is command of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#isCommandOf</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a command and a function.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/saref#hasCommand" title="https://w3id.org/saref#hasCommand">has command</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#isControlledByDevice">
+      <h3>is controlled by device<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#isControlledByDevice</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="isFeatureOfInterestOf">
+      <h3>is feature of interest of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isFeatureOfInterestOf</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasFeatureOfInterest"
+                  title="https://w3id.org/def/saref4agri#hasFeatureOfInterest">has feature of interest</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isHostedBy">
+      <h3>is hosted by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isHostedBy</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hosts" title="https://w3id.org/def/saref4agri#hosts">host</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#isMeasuredByDevice">
+      <h3>is measured by device<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#isMeasuredByDevice</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#isMeasuredIn">
+      <h3>is measured in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#isMeasuredIn</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="isPropertyOf">
+      <h3>is property of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isPropertyOf</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasProperty" title="https://w3id.org/def/saref4agri#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#makesMeasurement">
+      <h3>makes measurement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#makesMeasurement</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#measurementMadeBy"
+                  title="https://w3id.org/def/saref4agri#measurementMadeBy">measurement made by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="measurementMadeBy">
+      <h3>measurement made by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#measurementMadeBy</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/saref#makesMeasurement" title="https://w3id.org/saref#makesMeasurement">makes measurement</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#measuresProperty">
+      <h3>measures property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#measuresProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#relatesToMeasurement">
+      <h3>relates to measurement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#relatesToMeasurement</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#relatesToProperty">
+      <h3>relates to property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#relatesToProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasCreationDate" title="https://w3id.org/def/saref4agri#hasCreationDate">has creation date</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#hasDescription" title="https://w3id.org/saref#hasDescription">has description</a>
+      </li>
+      <li>
+         <a href="#hasExpirationDate"
+            title="https://w3id.org/def/saref4agri#hasExpirationDate">has expiration date</a>
+      </li>
+      <li>
+         <a href="#hasLastUpdateDate"
+            title="https://w3id.org/def/saref4agri#hasLastUpdateDate">has last update date</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#hasName" title="https://w3id.org/saref#hasName">has name</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#hasTimestamp" title="https://w3id.org/saref#hasTimestamp">has timestamp</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasCreationDate">
+      <h3>has creation date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasCreationDate</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasDescription">
+      <h3>has description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasDescription</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="hasExpirationDate">
+      <h3>has expiration date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasExpirationDate</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLastUpdateDate">
+      <h3>has last update date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasLastUpdateDate</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasName">
+      <h3>has name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasName</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasTimestamp">
+      <h3>has timestamp<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasTimestamp</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/saref#hasValue">
+      <h3>has value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasValue</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
