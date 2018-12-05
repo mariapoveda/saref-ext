@@ -130,6 +130,37 @@ xsd:duration a rdfs:Datatype .
 # #################################################################
 # 
 # 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+
+geosp:hasGeometry a owl:ObjectProperty ;
+	rdfs:domain geosp:Feature ;
+	rdfs:range geosp:Geometry ;
+	rdfs:comment "A spatial representation for a given feature."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/geosparql#> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:label "has geometry"@en .
+# 
+# http://www.opengis.net/ont/geosparql#sfContains
+
+geosp:sfContains a owl:ObjectProperty ;
+	rdfs:domain geosp:SpatialObject ;
+	rdfs:range geosp:SpatialObject ;
+	rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:label "contains"@en .
+# 
+# http://www.opengis.net/ont/geosparql#sfWithin
+
+geosp:sfWithin a owl:ObjectProperty ;
+	rdfs:domain geosp:SpatialObject ;
+	rdfs:range geosp:SpatialObject ;
+	rdfs:comment "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:label "within"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+
+geo:location a owl:ObjectProperty .
+# 
 # https://w3id.org/def/saref4agri#deployedOnPlatform
 
 s4agri:deployedOnPlatform a owl:ObjectProperty ;
@@ -141,6 +172,11 @@ s4agri:deployedOnPlatform a owl:ObjectProperty ;
 s4agri:deployedSystem a owl:ObjectProperty ;
 	owl:inverseOf s4agri:hasDeployment ;
 	rdfs:label "deployed system"@en .
+# 
+# https://w3id.org/def/saref4agri#fromNode
+
+s4agri:fromNode a owl:ObjectProperty ;
+	rdfs:label "from node"@en .
 # 
 # https://w3id.org/def/saref4agri#hasDeployment
 
@@ -158,6 +194,11 @@ s4agri:hasFeatureOfInterest a owl:ObjectProperty ;
 s4agri:hasProperty a owl:ObjectProperty ;
 	owl:inverseOf s4agri:isPropertyOf ;
 	rdfs:label "has property"@en .
+# 
+# https://w3id.org/def/saref4agri#hasRole
+
+s4agri:hasRole a owl:ObjectProperty ;
+	rdfs:label "has role"@en .
 # 
 # https://w3id.org/def/saref4agri#hosts
 
@@ -191,17 +232,40 @@ s4agri:measurementMadeBy a owl:ObjectProperty ;
 	owl:inverseOf saref:makesMeasurement ;
 	rdfs:label "measurement made by"@en .
 # 
+# https://w3id.org/def/saref4agri#playedByNode
+
+s4agri:playedByNode a owl:ObjectProperty ;
+	rdfs:label "played by node"@en .
+# 
+# https://w3id.org/def/saref4agri#roleInCommunication
+
+s4agri:roleInCommunication a owl:ObjectProperty ;
+	rdfs:label "role in communication"@en .
+# 
+# https://w3id.org/def/saref4agri#roleInNetwork
+
+s4agri:roleInNetwork a owl:ObjectProperty ;
+	rdfs:label "role in network"@en .
+# 
+# https://w3id.org/def/saref4agri#toNode
+
+s4agri:toNode a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
+	rdfs:label "to node"@en .
+# 
 # https://w3id.org/saref#accomplishes
 
 saref:accomplishes a owl:ObjectProperty ;
 	owl:inverseOf saref:isAccomplishedBy ;
 	rdfs:comment "A relationship between a certain entity (e.g., a device) and the task it accomplishes"^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "accomplishes"^^xsd:string .
 # 
 # https://w3id.org/saref#actsUpon
 
 saref:actsUpon a owl:ObjectProperty ;
 	rdfs:comment "A relationship between a command and a state"^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "acts upon"^^xsd:string .
 # 
 # https://w3id.org/saref#consistsOf
@@ -213,6 +277,7 @@ saref:consistsOf a owl:ObjectProperty ;
 # https://w3id.org/saref#controlsProperty
 
 saref:controlsProperty a owl:ObjectProperty ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "controls property"@en .
 # 
 # https://w3id.org/saref#hasCommand
@@ -220,24 +285,34 @@ saref:controlsProperty a owl:ObjectProperty ;
 saref:hasCommand a owl:ObjectProperty ;
 	owl:inverseOf saref:isCommandOf ;
 	rdfs:comment "A relationship between an entity (such as a function) and a command"^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has command"^^xsd:string .
 # 
 # https://w3id.org/saref#hasFunction
 
 saref:hasFunction a owl:ObjectProperty ;
 	rdfs:comment "A relationship identifying the type of function of a device"^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has function"^^xsd:string .
+# 
+# https://w3id.org/saref#hasState
+
+saref:hasState a owl:ObjectProperty ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "has state"@en .
 # 
 # https://w3id.org/saref#isAccomplishedBy
 
 saref:isAccomplishedBy a owl:ObjectProperty ;
 	rdfs:comment "A relationship indentifying the task accomplished by a certain entity (e.g., a device)"^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is accomplished by"^^xsd:string .
 # 
 # https://w3id.org/saref#isCommandOf
 
 saref:isCommandOf a owl:ObjectProperty ;
 	rdfs:comment "A relationship between a command and a function."^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is command of"^^xsd:string .
 # 
 # https://w3id.org/saref#isControlledByDevice
@@ -291,29 +366,34 @@ saref:relatesToProperty a owl:ObjectProperty ;
 # #################################################################
 # 
 # 
-# https://w3id.org/def/saref4agri#hasCreationDate
+# https://w3id.org/def/saref4agri#hasProtocol
 
-s4agri:hasCreationDate a owl:DatatypeProperty ;
-	rdfs:range xsd:dateTime ;
-	rdfs:label "has creation date"@en .
-# 
-# https://w3id.org/def/saref4agri#hasExpirationDate
-
-s4agri:hasExpirationDate a owl:DatatypeProperty ;
-	rdfs:range xsd:dateTime ;
-	rdfs:label "has expiration date"@en .
-# 
-# https://w3id.org/def/saref4agri#hasLastUpdateDate
-
-s4agri:hasLastUpdateDate a owl:DatatypeProperty ;
-	rdfs:range xsd:dateTime ;
-	rdfs:label "has last update date"@en .
+s4agri:hasProtocol a owl:DatatypeProperty ;
+	rdfs:range rdfs:Literal .
 # 
 # https://w3id.org/saref#hasDescription
 
 saref:hasDescription a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:comment "A relationship providing a description of an entity (e.g., device)"^^xsd:string ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has description"@en .
+# 
+# https://w3id.org/saref#hasManufacturer
+
+saref:hasManufacturer a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:comment "A relationship identifying the manufacturer of an entity (e.g., device)"^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "has manufacturer"^^xsd:string .
+# 
+# https://w3id.org/saref#hasModel
+
+saref:hasModel a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	rdfs:comment "A relationship identifying the model of an entity (e.g., device)"^^xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "has model"^^xsd:string .
 # 
 # https://w3id.org/saref#hasName
 
@@ -342,22 +422,124 @@ saref:hasValue a owl:DatatypeProperty ;
 # #################################################################
 # 
 # 
+# http://www.opengis.net/ont/geosparql#Feature
+
+geosp:Feature a owl:Class ;
+	rdfs:subClassOf geosp:SpatialObject , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty geosp:hasGeometry ;
+	owl:allValuesFrom geosp:Geometry .
+
+geosp:Feature owl:disjointWith geosp:Geometry ;
+	dc:contributor "Matthew Perry" ;
+	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	dc:date "2011-06-16"^^xsd:date ;
+	dc:description "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+	rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:label "Feature"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+
+geosp:Geometry a owl:Class ;
+	rdfs:subClassOf geosp:SpatialObject ;
+	dc:contributor "Matthew Perry" ;
+	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	dc:date "2011-06-16"^^xsd:date ;
+	dc:description "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+	rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:label "Geometry"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
+# 
+# http://www.opengis.net/ont/geosparql#SpatialObject
+
+geosp:SpatialObject a owl:Class ;
+	rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty geosp:sfContains ;
+	owl:allValuesFrom geosp:SpatialObject .
+
+geosp:SpatialObject rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty geo:location ;
+	owl:allValuesFrom geo:Point .
+
+geosp:SpatialObject dc:contributor "Matthew Perry" ;
+	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+	dc:date "2011-06-16"^^xsd:date ;
+	dc:description "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+	rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:label "SpatialObject"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+
+geo:Point a owl:Class ;
+	rdfs:subClassOf geosp:Geometry ;
+	rdfs:comment """ 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  """ , "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
+	rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+	rdfs:label "Point"@en , "point" .
+# 
+# http://www.w3.org/2006/time#Instant
+
+time:Instant a owl:Class ;
+	rdfs:subClassOf time:TemporalEntity ;
+	rdfs:comment "A temporal entity with zero extent or duration"@en ;
+	rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+	rdfs:label "Instant"@en .
+# 
+# http://www.w3.org/2006/time#Interval
+
+time:Interval a owl:Class ;
+	rdfs:subClassOf time:TemporalEntity ;
+	rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+	rdfs:label "A temporal entity with an extent or duration"@en , "Time interval"@en .
+# 
 # http://www.w3.org/2006/time#TemporalEntity
 
-time:TemporalEntity a owl:Class .
+time:TemporalEntity a owl:Class ;
+	rdfs:comment "A temporal interval or instant."@en ;
+	rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+	rdfs:label "Temporal entity"@en .
+# 
+# https://w3id.org/def/saref4agri#Communication
+
+s4agri:Communication a owl:Class ;
+	rdfs:label "Communication"@es .
+# 
+# https://w3id.org/def/saref4agri#CommunicationRole
+
+s4agri:CommunicationRole a owl:Class ;
+	rdfs:label "Communication role"@es .
 # 
 # https://w3id.org/def/saref4agri#Deployment
 
 s4agri:Deployment a owl:Class ;
-	rdfs:subClassOf _:genid1 .
+	rdfs:subClassOf _:genid4 .
 
-_:genid1 a owl:Restriction ;
+_:genid4 a owl:Restriction ;
 	owl:onProperty s4agri:deployedOnPlatform ;
 	owl:someValuesFrom s4agri:Platform .
 
-s4agri:Deployment rdfs:subClassOf _:genid2 .
+s4agri:Deployment rdfs:subClassOf _:genid5 .
 
-_:genid2 a owl:Restriction ;
+_:genid5 a owl:Restriction ;
 	owl:onProperty s4agri:deployedSystem ;
 	owl:someValuesFrom s4agri:System .
 
@@ -366,15 +548,15 @@ s4agri:Deployment rdfs:label "Deployment"@en .
 # https://w3id.org/def/saref4agri#FeatureOfInterest
 
 s4agri:FeatureOfInterest a owl:Class ;
-	rdfs:subClassOf _:genid3 .
+	rdfs:subClassOf _:genid6 .
 
-_:genid3 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty s4agri:hasProperty ;
 	owl:allValuesFrom saref:Property .
 
-s4agri:FeatureOfInterest rdfs:subClassOf _:genid4 .
+s4agri:FeatureOfInterest rdfs:subClassOf _:genid7 .
 
-_:genid4 a owl:Restriction ;
+_:genid7 a owl:Restriction ;
 	owl:onProperty s4agri:isFeatureOfInterestOf ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -382,18 +564,28 @@ s4agri:FeatureOfInterest rdfs:comment """WARNING!
  This class might be moved to the SAREF ontology"""@en ;
 	rdfs:label "Feature of interest"@en .
 # 
+# https://w3id.org/def/saref4agri#Network
+
+s4agri:Network a owl:Class ;
+	rdfs:label "Network"@es .
+# 
+# https://w3id.org/def/saref4agri#Node
+
+s4agri:Node a owl:Class ;
+	rdfs:label "Node"@es .
+# 
 # https://w3id.org/def/saref4agri#Platform
 
 s4agri:Platform a owl:Class ;
-	rdfs:subClassOf _:genid5 .
+	rdfs:subClassOf _:genid8 .
 
-_:genid5 a owl:Restriction ;
+_:genid8 a owl:Restriction ;
 	owl:onProperty s4agri:hosts ;
 	owl:someValuesFrom s4agri:System .
 
-s4agri:Platform rdfs:subClassOf _:genid6 .
+s4agri:Platform rdfs:subClassOf _:genid9 .
 
-_:genid6 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty s4agri:inDeployment ;
 	owl:someValuesFrom s4agri:Deployment .
 
@@ -402,45 +594,52 @@ s4agri:Platform rdfs:label "Platform"@en .
 # https://w3id.org/def/saref4agri#System
 
 s4agri:System a owl:Class ;
-	rdfs:subClassOf _:genid7 .
+	rdfs:subClassOf _:genid10 .
 
-_:genid7 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty s4agri:hasDeployment ;
 	owl:someValuesFrom s4agri:Deployment .
 
-s4agri:System rdfs:subClassOf _:genid8 .
+s4agri:System rdfs:subClassOf _:genid11 .
 
-_:genid8 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty s4agri:isHostedBy ;
 	owl:someValuesFrom s4agri:Platform .
 
-s4agri:System rdfs:subClassOf _:genid9 .
+s4agri:System rdfs:subClassOf _:genid12 .
 
-_:genid9 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty saref:consistsOf ;
 	owl:allValuesFrom s4agri:System .
 
 s4agri:System rdfs:label "System"@en .
 # 
+# https://w3id.org/saref#Actuator
+
+saref:Actuator a owl:Class ;
+	rdfs:subClassOf saref:Device ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "Actuator"@en .
+# 
 # https://w3id.org/saref#Command
 
 saref:Command a owl:Class ;
-	rdfs:subClassOf _:genid10 .
+	rdfs:subClassOf _:genid13 .
 
-_:genid10 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty saref:actsUpon ;
 	owl:allValuesFrom saref:State .
 
-saref:Command rdfs:subClassOf _:genid11 .
+saref:Command rdfs:subClassOf _:genid14 .
 
-_:genid11 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty saref:isCommandOf ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Function .
 
-saref:Command rdfs:subClassOf _:genid12 .
+saref:Command rdfs:subClassOf _:genid15 .
 
-_:genid12 a owl:Restriction ;
+_:genid15 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -449,14 +648,16 @@ saref:Command rdfs:comment "A directive that a device must support to perform a 
 # 
 # https://w3id.org/saref#Device
 
-saref:Device a owl:Class .
+saref:Device a owl:Class ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "Device"@en .
 # 
 # https://w3id.org/saref#Function
 
 saref:Function a owl:Class ;
-	rdfs:subClassOf _:genid13 .
+	rdfs:subClassOf _:genid16 .
 
-_:genid13 a owl:Restriction ;
+_:genid16 a owl:Restriction ;
 	owl:onProperty saref:hasCommand ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Command .
@@ -474,53 +675,53 @@ saref:Humidity a owl:Class ;
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid14 .
-
-_:genid14 a owl:Restriction ;
-	owl:onProperty s4agri:hasFeatureOfInterest ;
-	owl:allValuesFrom s4agri:FeatureOfInterest .
-
-saref:Measurement rdfs:subClassOf _:genid15 .
-
-_:genid15 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:allValuesFrom saref:UnitOfMeasure .
-
-saref:Measurement rdfs:subClassOf _:genid16 .
-
-_:genid16 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Measurement rdfs:subClassOf _:genid17 .
+	rdfs:subClassOf _:genid17 .
 
 _:genid17 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:UnitOfMeasure .
+	owl:onProperty s4agri:hasFeatureOfInterest ;
+	owl:allValuesFrom s4agri:FeatureOfInterest .
 
 saref:Measurement rdfs:subClassOf _:genid18 .
 
 _:genid18 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:Property .
+	owl:onProperty saref:isMeasuredIn ;
+	owl:allValuesFrom saref:UnitOfMeasure .
 
 saref:Measurement rdfs:subClassOf _:genid19 .
 
 _:genid19 a owl:Restriction ;
-	owl:onProperty saref:hasTimestamp ;
-	owl:allValuesFrom xsd:dateTime .
+	owl:onProperty saref:relatesToProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:Measurement rdfs:subClassOf _:genid20 .
 
 _:genid20 a owl:Restriction ;
-	owl:onProperty saref:hasValue ;
-	owl:cardinality "1"^^xsd:nonNegativeInteger .
+	owl:onProperty saref:isMeasuredIn ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:UnitOfMeasure .
 
 saref:Measurement rdfs:subClassOf _:genid21 .
 
 _:genid21 a owl:Restriction ;
+	owl:onProperty saref:relatesToProperty ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:Property .
+
+saref:Measurement rdfs:subClassOf _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty saref:hasTimestamp ;
+	owl:allValuesFrom xsd:dateTime .
+
+saref:Measurement rdfs:subClassOf _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty saref:hasValue ;
+	owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+saref:Measurement rdfs:subClassOf _:genid24 .
+
+_:genid24 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:float .
@@ -533,27 +734,27 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid22 .
+	rdfs:subClassOf _:genid25 .
 
-_:genid22 a owl:Restriction ;
+_:genid25 a owl:Restriction ;
 	owl:onProperty s4agri:isPropertyOf ;
 	owl:allValuesFrom s4agri:FeatureOfInterest .
 
-saref:Property rdfs:subClassOf _:genid23 .
+saref:Property rdfs:subClassOf _:genid26 .
 
-_:genid23 a owl:Restriction ;
+_:genid26 a owl:Restriction ;
 	owl:onProperty saref:isControlledByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid24 .
+saref:Property rdfs:subClassOf _:genid27 .
 
-_:genid24 a owl:Restriction ;
+_:genid27 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid25 .
+saref:Property rdfs:subClassOf _:genid28 .
 
-_:genid25 a owl:Restriction ;
+_:genid28 a owl:Restriction ;
 	owl:onProperty saref:relatesToMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -561,6 +762,13 @@ saref:Property owl:disjointWith saref:UnitOfMeasure ;
 	rdfs:comment "An aspect of an entity that can be observable by a sensor."@en , "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Property"@en , "Property"^^xsd:string .
+# 
+# https://w3id.org/saref#Sensor
+
+saref:Sensor a owl:Class ;
+	rdfs:subClassOf saref:Device ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "Sensor"@en .
 # 
 # https://w3id.org/saref#State
 
@@ -571,9 +779,9 @@ saref:State a owl:Class ;
 # https://w3id.org/saref#Task
 
 saref:Task a owl:Class ;
-	rdfs:subClassOf _:genid26 .
+	rdfs:subClassOf _:genid29 .
 
-_:genid26 a owl:Restriction ;
+_:genid29 a owl:Restriction ;
 	owl:onProperty saref:isAccomplishedBy ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Device .
@@ -591,9 +799,9 @@ saref:Temperature a owl:Class ;
 # https://w3id.org/saref#Time
 
 saref:Time a owl:Class ;
-	rdfs:subClassOf saref:Property , _:genid27 .
+	rdfs:subClassOf saref:Property , _:genid30 .
 
-_:genid27 a owl:Restriction ;
+_:genid30 a owl:Restriction ;
 	owl:onProperty saref:consistsOf ;
 	owl:someValuesFrom time:TemporalEntity .
 
@@ -606,5 +814,25 @@ saref:UnitOfMeasure a owl:Class ;
 	rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)."^^xsd:string , "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
 	rdfs:isDefinedBy <http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure> , <https://w3id.org/saref#> ;
 	rdfs:label "Unit of measure"@en , "Unit of measure"^^xsd:string .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+geo:location rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """ ;
+	rdfs:label "location"@en .
 # 
 # Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
