@@ -3,4 +3,4 @@ This repository contains the code and documentation generated for the SAREF exte
 
 
 Current version of the ontology model
-![Current version of the model](https://github.com/mariapoveda/saref-ext/blob/master/OnToology/SAREF4CITY/ontology/saref4agri.ttl/documentation/resources/images/saref4agri.png "SAREF4AGRI model")
+![Current version of the model](https://github.com/mariapoveda/saref-ext/blob/master/OnToology/SAREF4AGRI/ontology/saref4agri.ttl/documentation/resources/images/saref4agri.png "SAREF4AGRI model")
