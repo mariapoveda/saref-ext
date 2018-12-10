@@ -1,5 +1,5 @@
 # SAREF4CITY
-This repository contains the code and documentation generated for the SAREF extension for agriculture is published at https://w3id.org/def/saref4city
+This repository contains the code and documentation generated for the SAREF extension for Smart City is published at https://w3id.org/def/saref4city
 
 
 Current version of the ontology model
