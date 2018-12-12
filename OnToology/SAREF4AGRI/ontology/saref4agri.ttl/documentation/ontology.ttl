@@ -106,6 +106,41 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   rdfs:comment "A spatial representation for a given feature."@en ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                    <http://www.opengis.net/ont/geosparql#> ,
+                                                                    <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                   rdfs:label "has geometry"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#sfContains
+<http://www.opengis.net/ont/geosparql#sfContains> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                  rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                  rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
+                                                  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                   <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                  rdfs:label "contains"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#sfWithin
+<http://www.opengis.net/ont/geosparql#sfWithin> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                rdfs:comment "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                 <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                rdfs:label "within"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/def/saref4agri#deployedOnPlatform
 :deployedOnPlatform rdf:type owl:ObjectProperty ;
                     owl:inverseOf :inDeployment ;
@@ -116,6 +151,11 @@ xsd:duration rdf:type rdfs:Datatype .
 :deployedSystem rdf:type owl:ObjectProperty ;
                 owl:inverseOf :hasDeployment ;
                 rdfs:label "deployed system"@en .
+
+
+###  https://w3id.org/def/saref4agri#fromNode
+:fromNode rdf:type owl:ObjectProperty ;
+          rdfs:label "from node"@en .
 
 
 ###  https://w3id.org/def/saref4agri#hasDeployment
@@ -133,6 +173,11 @@ xsd:duration rdf:type rdfs:Datatype .
 :hasProperty rdf:type owl:ObjectProperty ;
              owl:inverseOf :isPropertyOf ;
              rdfs:label "has property"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:label "has role"@en .
 
 
 ###  https://w3id.org/def/saref4agri#hosts
@@ -167,16 +212,39 @@ xsd:duration rdf:type rdfs:Datatype .
                    rdfs:label "measurement made by"@en .
 
 
+###  https://w3id.org/def/saref4agri#playedByNode
+:playedByNode rdf:type owl:ObjectProperty ;
+              rdfs:label "played by node"@en .
+
+
+###  https://w3id.org/def/saref4agri#roleInCommunication
+:roleInCommunication rdf:type owl:ObjectProperty ;
+                     rdfs:label "role in communication"@en .
+
+
+###  https://w3id.org/def/saref4agri#roleInNetwork
+:roleInNetwork rdf:type owl:ObjectProperty ;
+               rdfs:label "role in network"@en .
+
+
+###  https://w3id.org/def/saref4agri#toNode
+:toNode rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:label "to node"@en .
+
+
 ###  https://w3id.org/saref#accomplishes
 <https://w3id.org/saref#accomplishes> rdf:type owl:ObjectProperty ;
                                       owl:inverseOf <https://w3id.org/saref#isAccomplishedBy> ;
                                       rdfs:comment "A relationship between a certain entity (e.g., a device) and the task it accomplishes" ;
+                                      rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                       rdfs:label "accomplishes" .
 
 
 ###  https://w3id.org/saref#actsUpon
 <https://w3id.org/saref#actsUpon> rdf:type owl:ObjectProperty ;
                                   rdfs:comment "A relationship between a command and a state" ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                   rdfs:label "acts upon" .
 
 
@@ -188,6 +256,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/saref#controlsProperty
 <https://w3id.org/saref#controlsProperty> rdf:type owl:ObjectProperty ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                           rdfs:label "controls property"@en .
 
 
@@ -195,24 +264,34 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://w3id.org/saref#hasCommand> rdf:type owl:ObjectProperty ;
                                     owl:inverseOf <https://w3id.org/saref#isCommandOf> ;
                                     rdfs:comment "A relationship between an entity (such as a function) and a command" ;
+                                    rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                     rdfs:label "has command" .
 
 
 ###  https://w3id.org/saref#hasFunction
 <https://w3id.org/saref#hasFunction> rdf:type owl:ObjectProperty ;
                                      rdfs:comment "A relationship identifying the type of function of a device" ;
+                                     rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                      rdfs:label "has function" .
+
+
+###  https://w3id.org/saref#hasState
+<https://w3id.org/saref#hasState> rdf:type owl:ObjectProperty ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                  rdfs:label "has state"@en .
 
 
 ###  https://w3id.org/saref#isAccomplishedBy
 <https://w3id.org/saref#isAccomplishedBy> rdf:type owl:ObjectProperty ;
                                           rdfs:comment "A relationship indentifying the task accomplished by a certain entity (e.g., a device)" ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                           rdfs:label "is accomplished by" .
 
 
 ###  https://w3id.org/saref#isCommandOf
 <https://w3id.org/saref#isCommandOf> rdf:type owl:ObjectProperty ;
                                      rdfs:comment "A relationship between a command and a function." ;
+                                     rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                      rdfs:label "is command of" .
 
 
@@ -262,28 +341,33 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/def/saref4agri#hasCreationDate
-:hasCreationDate rdf:type owl:DatatypeProperty ;
-                 rdfs:range xsd:dateTime ;
-                 rdfs:label "has creation date"@en .
-
-
-###  https://w3id.org/def/saref4agri#hasExpirationDate
-:hasExpirationDate rdf:type owl:DatatypeProperty ;
-                   rdfs:range xsd:dateTime ;
-                   rdfs:label "has expiration date"@en .
-
-
-###  https://w3id.org/def/saref4agri#hasLastUpdateDate
-:hasLastUpdateDate rdf:type owl:DatatypeProperty ;
-                   rdfs:range xsd:dateTime ;
-                   rdfs:label "has last update date"@en .
+###  https://w3id.org/def/saref4agri#hasProtocol
+:hasProtocol rdf:type owl:DatatypeProperty ;
+             rdfs:range rdfs:Literal .
 
 
 ###  https://w3id.org/saref#hasDescription
 <https://w3id.org/saref#hasDescription> rdf:type owl:DatatypeProperty ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "A relationship providing a description of an entity (e.g., device)" ;
                                         rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                         rdfs:label "has description"@en .
+
+
+###  https://w3id.org/saref#hasManufacturer
+<https://w3id.org/saref#hasManufacturer> rdf:type owl:DatatypeProperty ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:comment "A relationship identifying the manufacturer of an entity (e.g., device)" ;
+                                         rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                         rdfs:label "has manufacturer" .
+
+
+###  https://w3id.org/saref#hasModel
+<https://w3id.org/saref#hasModel> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "A relationship identifying the model of an entity (e.g., device)" ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                  rdfs:label "has model" .
 
 
 ###  https://w3id.org/saref#hasName
@@ -308,8 +392,114 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                 owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                               ] ;
+                                               owl:disjointWith <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                               <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                               <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                               <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                               <http://purl.org/dc/elements/1.1/description> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+                                               rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+                                               rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                <http://www.opengis.net/ont/gml> ,
+                                                                <http://www.opengis.net/spec/geosparql/1.0> ;
+                                               rdfs:label "Feature"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                                <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                                <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                                <http://purl.org/dc/elements/1.1/description> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+                                                rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                 <http://www.opengis.net/ont/gml> ,
+                                                                 <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                rdfs:label "Geometry"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.opengis.net/ont/geosparql#sfContains> ;
+                                                                       owl:allValuesFrom <http://www.opengis.net/ont/geosparql#SpatialObject>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
+                                                                       owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#Point>
+                                                                     ] ;
+                                                     <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
+                                                     <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
+                                                     <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
+                                                     <http://purl.org/dc/elements/1.1/description> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+                                                     rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+                                                     rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                      <http://www.opengis.net/ont/gml> ,
+                                                                      <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                     rdfs:label "SpatialObject"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                rdfs:comment """ 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  """ ,
+                                                             "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+                                                rdfs:label "Point"@en ,
+                                                           "point" .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                      rdfs:comment "A temporal entity with zero extent or duration"@en ;
+                                      rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                      rdfs:label "Instant"@en .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                       rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                       rdfs:label "A temporal entity with an extent or duration"@en ,
+                                                  "Time interval"@en .
+
+
 ###  http://www.w3.org/2006/time#TemporalEntity
-<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class .
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
+                                             rdfs:comment "A temporal interval or instant."@en ;
+                                             rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                             rdfs:label "Temporal entity"@en .
+
+
+###  https://w3id.org/def/saref4agri#Communication
+:Communication rdf:type owl:Class ;
+               rdfs:label "Communication"@es .
+
+
+###  https://w3id.org/def/saref4agri#CommunicationRole
+:CommunicationRole rdf:type owl:Class ;
+                   rdfs:label "Communication role"@es .
 
 
 ###  https://w3id.org/def/saref4agri#Deployment
@@ -338,6 +528,16 @@ xsd:duration rdf:type rdfs:Datatype .
                    rdfs:comment """WARNING!
  This class might be moved to the SAREF ontology"""@en ;
                    rdfs:label "Feature of interest"@en .
+
+
+###  https://w3id.org/def/saref4agri#Network
+:Network rdf:type owl:Class ;
+         rdfs:label "Network"@es .
+
+
+###  https://w3id.org/def/saref4agri#Node
+:Node rdf:type owl:Class ;
+      rdfs:label "Node"@es .
 
 
 ###  https://w3id.org/def/saref4agri#Platform
@@ -370,6 +570,13 @@ xsd:duration rdf:type rdfs:Datatype .
         rdfs:label "System"@en .
 
 
+###  https://w3id.org/saref#Actuator
+<https://w3id.org/saref#Actuator> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/saref#Device> ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                  rdfs:label "Actuator"@en .
+
+
 ###  https://w3id.org/saref#Command
 <https://w3id.org/saref#Command> rdf:type owl:Class ;
                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -390,7 +597,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/saref#Device
-<https://w3id.org/saref#Device> rdf:type owl:Class .
+<https://w3id.org/saref#Device> rdf:type owl:Class ;
+                                rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                rdfs:label "Device"@en .
 
 
 ###  https://w3id.org/saref#Function
@@ -481,6 +690,13 @@ xsd:duration rdf:type rdfs:Datatype .
                                              "Property" .
 
 
+###  https://w3id.org/saref#Sensor
+<https://w3id.org/saref#Sensor> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/saref#Device> ;
+                                rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                rdfs:label "Sensor"@en .
+
+
 ###  https://w3id.org/saref#State
 <https://w3id.org/saref#State> rdf:type owl:Class ;
                                rdfs:comment "The state in which a device can be found, e.g, ON/OFF/STANDBY, or ONLINE/OFFLINE. We propose here a list of states that are relevant for the purpose of SAREF, but this list can be extended." ;
@@ -524,6 +740,21 @@ xsd:duration rdf:type rdfs:Datatype .
                                                         <https://w3id.org/saref#> ;
                                        rdfs:label "Unit of measure"@en ,
                                                   "Unit of measure" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """ ;
+                                                   rdfs:label "location"@en .
 
 
 ###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

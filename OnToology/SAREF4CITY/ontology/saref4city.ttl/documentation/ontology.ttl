@@ -719,10 +719,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4city#PublicService
 :PublicService rdf:type owl:Class ;
-               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                     owl:onProperty <https://w3id.org/saref#hasDescription> ;
-                                     owl:allValuesFrom rdfs:Literal
-                                   ] ;
                rdfs:subClassOf <http://purl.org/vocab/cpsv#PublicService> ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty <http://purl.org/vocab/cpsv#physicallyAvailableAt> ;
@@ -735,6 +731,10 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :isAvailableInLanguage ;
                                  owl:allValuesFrom <http://purl.org/dc/terms/LinguisticSystem>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <https://w3id.org/saref#hasDescription> ;
+                                 owl:allValuesFrom rdfs:Literal
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty <https://w3id.org/saref#hasName> ;

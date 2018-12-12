@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/def/saref4bldg#"
      xml:base="https://w3id.org/def/saref4bldg"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/def/saref4bldg">
         <owl:versionIRI rdf:resource="https://w3id.org/def/v1/saref4bldg"/>
         <dc:description xml:lang="en">This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) standard for data sharing in the construction and facility management industries. The descriptions of the classes and properties extracted from IFC have been taken from the IFC documentation.</dc:description>
@@ -18,9 +18,9 @@
         <terms:creator rdf:resource="http://purl.org/net/mpoveda"/>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s4bldg</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/def/saref4bldg#</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+        <vann:preferredNamespacePrefix>s4bldg</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/def/saref4bldg#</vann:preferredNamespaceUri>
+        <owl:versionInfo>1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1892,7 +1892,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#isMeasuredIn">
         <rdfs:comment xml:lang="en">A relation between a measurement and the unit of measure in which the measurement value is expressed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">is measured in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1903,7 +1903,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#relatesToProperty">
         <rdfs:comment xml:lang="en">A relation between a measurement and the property such measurement is about.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">relates to property</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2820,7 +2820,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">has timestamp</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2883,7 +2883,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An actuator is a mechanical device for moving or controlling a mechanism or system. An actuator takes energy, usually created by air, electricity, or liquid, and converts that into some kind of motion.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuator</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcActuator</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcActuator</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcactuator.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_actuatortypecommon.htm"/>
     </owl:Class>
@@ -2945,7 +2945,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An air-to-air heat recovery device employs a counter-flow heat exchanger between inbound and outbound air flow. It is typically used to transfer heat from warmer air in one chamber to cooler air in the second chamber (i.e., typically used to recover heat from the conditioned air being exhausted and the outside air being supplied to a building), resulting in energy savings from reduced heating (or cooling) requirements.</rdfs:comment>
         <rdfs:label xml:lang="en">Air to air heat recovery</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcAirToAirHeatRecovery</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAirToAirHeatRecovery</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcairtoairheatrecovery.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_airtoairheatrecoverytypecommon.htm"/>
     </owl:Class>
@@ -2961,7 +2961,7 @@
 
 Alarms include the provision of break glass buttons and manual pull boxes that are used to activate alarms.</rdfs:comment>
         <rdfs:label xml:lang="en">Alarm</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcAlarm</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAlarm</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcalarm.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_alarmtypecommon.htm"/>
     </owl:Class>
@@ -2989,7 +2989,7 @@ Alarms include the provision of break glass buttons and manual pull boxes that a
 
 Audio-visual appliances may be fixed in place or may be able to be moved from one space to another. They may require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source. Audio-visual appliances may be connected to data circuits including specialist circuits for audio visual purposes only.</rdfs:comment>
         <rdfs:label xml:lang="en">Audio visual appliance</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcAudioVisualApplicance</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcAudioVisualApplicance</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcaudiovisualappliance.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_audiovisualappliancetypecommon.htm"/>
     </owl:Class>
@@ -3075,7 +3075,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications.</rdfs:comment>
         <rdfs:label xml:lang="en">Boiler</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcBoiler</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcBoiler</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcboiler.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_boilertypecommon.htm"/>
     </owl:Class>
@@ -3179,7 +3179,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A burner is a device that converts fuel into heat through combustion. It includes gas, oil, and wood burners.</rdfs:comment>
         <rdfs:label xml:lang="en">Burner</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcBurner</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcBurner</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcburner.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_burnertypecommon.htm"/>
     </owl:Class>
@@ -3229,7 +3229,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A chiller is a device used to remove heat from a liquid via a vapor-compression or absorption refrigeration cycle to cool a fluid, typically water or a mixture of water and glycol. The chilled fluid is then used to cool and dehumidify air in a building.</rdfs:comment>
         <rdfs:label xml:lang="en">Chiller</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcChiller</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcChiller</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcchiller.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_chillertypecommon.htm"/>
     </owl:Class>
@@ -3293,7 +3293,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
 Coils may also be used for non-airflow cases such as embedded in a floor slab.</rdfs:comment>
         <rdfs:label xml:lang="en">Coil</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcCoil</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCoil</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccoil.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_coiltypecommon.htm"/>
     </owl:Class>
@@ -3309,7 +3309,7 @@ Coils may also be used for non-airflow cases such as embedded in a floor slab.</
 
 Communication appliances may be fixed in place or may be able to be moved from one space to another. Communication appliances require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source.</rdfs:comment>
         <rdfs:label xml:lang="en">Communication appliance</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcCommunicationAppliance</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCommunicationAppliance</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifccommunicationsappliance.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_communicationsappliancetypecommon.htm"/>
     </owl:Class>
@@ -3383,7 +3383,7 @@ Communication appliances may be fixed in place or may be able to be moved from o
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A compressor is a device that compresses a fluid typically used in a refrigeration circuit.</rdfs:comment>
         <rdfs:label xml:lang="en">Compressor</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcCompressor</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCompressor</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccompressor.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_compressortypecommon.htm"/>
     </owl:Class>
@@ -3439,7 +3439,7 @@ Communication appliances may be fixed in place or may be able to be moved from o
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A condenser is a device that is used to dissipate heat, typically by condensing a substance such as a refrigerant from its gaseous to its liquid state.</rdfs:comment>
         <rdfs:label xml:lang="en">Condenser</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcCondenser</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCondenser</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccondenser.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_condensertypecommon.htm"/>
     </owl:Class>
@@ -3455,7 +3455,7 @@ Communication appliances may be fixed in place or may be able to be moved from o
 
 A controller may be physical (having placement within a spatial structure) or logical (a software interface or aggregated within a programmable physical controller).</rdfs:comment>
         <rdfs:label xml:lang="en">Controller</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcController</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcController</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifccontroller.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_controllertypecommon.htm"/>
     </owl:Class>
@@ -3589,7 +3589,7 @@ A controller may be physical (having placement within a spatial structure) or lo
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A cooled beam (or chilled beam) is a device typically used to cool air by circulating a fluid such as chilled water through exposed finned tubes above a space. Typically mounted overhead near or within a ceiling, the cooled beam uses convection to cool the space below it by acting as a heat sink for the naturally rising warm air of the space. Once cooled, the air naturally drops back to the floor where the cycle begins again.</rdfs:comment>
         <rdfs:label xml:lang="en">Cooled beam</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcCooledBeam</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCooledBeam</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccooledbeam.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_cooledbeamtypecommon.htm"/>
     </owl:Class>
@@ -3687,7 +3687,7 @@ A controller may be physical (having placement within a spatial structure) or lo
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A cooling tower is a device which rejects heat to ambient air by circulating a fluid such as water through it to reduce its temperature by partial evaporation.</rdfs:comment>
         <rdfs:label xml:lang="en">Cooling tower</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcCoolingTower</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcCoolingTower</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifccoolingtower.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_coolingtowertypecommon.htm"/>
     </owl:Class>
@@ -3821,7 +3821,7 @@ A controller may be physical (having placement within a spatial structure) or lo
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A damper typically participates in an HVAC duct distribution system and is used to control or modulate the flow of air.</rdfs:comment>
         <rdfs:label xml:lang="en">Damper</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcDamper</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcDamper</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcdamper.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_dampertypecommon.htm"/>
     </owl:Class>
@@ -3928,7 +3928,7 @@ A controller may be physical (having placement within a spatial structure) or lo
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A duct silencer is a device that is typically installed inside a duct distribution system for the purpose of reducing the noise levels from air movement, fan noise, etc. in the adjacent space or downstream of the duct silencer device.</rdfs:comment>
         <rdfs:label xml:lang="en">Duct silencer</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcDuctSilencer</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcDuctSilencer</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcductsilencer.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_ductsilencertypecommon.htm"/>
     </owl:Class>
@@ -3944,7 +3944,7 @@ A controller may be physical (having placement within a spatial structure) or lo
 
 Electric appliances may be fixed in place or may be able to be moved from one space to another. Electric appliances require an electrical supply that may be supplied either by an electrical circuit or provided from a local battery source.</rdfs:comment>
         <rdfs:label xml:lang="en">Electric appliance</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcElectricAppliance</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricAppliance</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricappliance.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricappliancetypecommon.htm"/>
     </owl:Class>
@@ -3976,7 +3976,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An electric flow storage device is a device in which electrical energy is stored and from which energy may be progressively released.</rdfs:comment>
         <rdfs:label xml:lang="en">Electric flow storage device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcElectricFlowStorageDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricFlowStorageDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricflowstoragedevice.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricflowstoragedevicetypecommon.htm"/>
     </owl:Class>
@@ -4008,7 +4008,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An electric generator is an engine that is a machine for converting mechanical energy into electrical energy.</rdfs:comment>
         <rdfs:label xml:lang="en">Electric generator</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcElectricGenerator</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricGenerator</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricgenerator.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricgeneratortypecommon.htm"/>
     </owl:Class>
@@ -4082,7 +4082,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An electric motor is an engine that is a machine for converting electrical energy into mechanical energy.</rdfs:comment>
         <rdfs:label xml:lang="en">Electric motor</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcElectricMotor</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricMotor</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectricmotor.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electricmotortypecommon.htm"/>
     </owl:Class>
@@ -4096,7 +4096,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#FlowController"/>
         <rdfs:comment xml:lang="en">An electric time control is a device that applies control to the provision or flow of electrical energy over time.</rdfs:comment>
         <rdfs:label xml:lang="en">Electric time control</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcElectricTimeControl</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcElectricTimeControl</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcelectrictimecontrol.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_electrictimecontroltypecommon.htm"/>
     </owl:Class>
@@ -4110,7 +4110,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#DistributionFlowDevice"/>
         <rdfs:comment xml:lang="en">The distribution flow element EnergyConversionDevice defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system.</rdfs:comment>
         <rdfs:label xml:lang="en">Energy conversion device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcEnergyConversionDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEnergyConversionDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcenergyconversiondevice.htm"/>
     </owl:Class>
     
@@ -4129,7 +4129,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An engine is a device that converts fuel into mechanical energy through combustion.</rdfs:comment>
         <rdfs:label xml:lang="en">Engine</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcEngine</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEngine</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcengine.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_enginetypecommon.htm"/>
     </owl:Class>
@@ -4173,7 +4173,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An evaporative cooler is a device that cools air by saturating it with water vapor.</rdfs:comment>
         <rdfs:label xml:lang="en">Evaporative cooler</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcEvaporativeCooler</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEvaporativeCooler</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcevaporativecooler.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_evaporativecoolertypecommon.htm"/>
     </owl:Class>
@@ -4241,7 +4241,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An evaporator is a device in which a liquid refrigerent is vaporized and absorbs heat from the surrounding fluid.</rdfs:comment>
         <rdfs:label xml:lang="en">Evaporator</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcEvaporator</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEvaporator</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcevaporator.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_evaporatortypecommon.htm"/>
     </owl:Class>
@@ -4315,7 +4315,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system.</rdfs:comment>
         <rdfs:label xml:lang="en">Fan</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFan</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFan</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcfan.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_fantypecommon.htm"/>
     </owl:Class>
@@ -4407,7 +4407,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A filter is an apparatus used to remove particulate or gaseous matter from fluids and gases.</rdfs:comment>
         <rdfs:label xml:lang="en">Filter</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFilter</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFilter</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcfilter.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_filtertypecommon.htm"/>
     </owl:Class>
@@ -4423,7 +4423,7 @@ Electric appliances may be fixed in place or may be able to be moved from one sp
 
 A fire suppression terminal provides for all forms of sprinkler, spreader and other form of terminal that is connected to a pipework system and intended to act in the role of suppressing a fire.</rdfs:comment>
         <rdfs:label xml:lang="en">Fire suppression terminal</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFireSuppressionTerminal</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFireSuppressionTerminal</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/lexical/ifcfiresuppressionterminal.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/pset/pset_firesuppressionterminaltypecommon.htm"/>
     </owl:Class>
@@ -4437,7 +4437,7 @@ A fire suppression terminal provides for all forms of sprinkler, spreader and ot
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#DistributionFlowDevice"/>
         <rdfs:comment xml:lang="en">The distribution flow element FlowController defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays.</rdfs:comment>
         <rdfs:label xml:lang="en">Flow controller</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFlowController</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowController</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm"/>
     </owl:Class>
     
@@ -4452,7 +4452,7 @@ A fire suppression terminal provides for all forms of sprinkler, spreader and ot
 
 Instrumentation is typically for the purpose of determining the value of the property at a point in time. It is not the purpose of an instrument to record or integrate the values over time (although they may be connected to recording devices that do perform such a function). This entity provides for all forms of mechanical flow instrument (thermometers, pressure gauges etc.) and electrical flow instruments (ammeters, voltmeters etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Flow instrument</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFlowInstrument</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowInstrument</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcflowinstrument.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_flowinstrumenttypecommon.htm"/>
     </owl:Class>
@@ -4478,7 +4478,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A flow meter is a device that is used to measure the flow rate in a system.</rdfs:comment>
         <rdfs:label xml:lang="en">Flow meter</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFlowMeter</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowMeter</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcflowmeter.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_flowmetertypecommon.htm"/>
     </owl:Class>
@@ -4492,7 +4492,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#DistributionFlowDevice"/>
         <rdfs:comment xml:lang="en">The distribution flow element FlowMovingDevice defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system.</rdfs:comment>
         <rdfs:label xml:lang="en">Flow moving device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFlowMovingDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowMovingDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowmovingdevice.htm"/>
     </owl:Class>
     
@@ -4505,7 +4505,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#DistributionFlowDevice"/>
         <rdfs:comment xml:lang="en">The distribution flow element FlowStorageDevice defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank).</rdfs:comment>
         <rdfs:label xml:lang="en">Flow storage device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFlowStorageDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowStorageDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowstoragedevice.htm"/>
     </owl:Class>
     
@@ -4518,7 +4518,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#DistributionFlowDevice"/>
         <rdfs:comment xml:lang="en">The distribution flow element FlowTerminal defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment.</rdfs:comment>
         <rdfs:label xml:lang="en">Flow terminal</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFlowTerminal</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowTerminal</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowterminal.htm"/>
     </owl:Class>
     
@@ -4531,7 +4531,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#DistributionFlowDevice"/>
         <rdfs:comment xml:lang="en">The distribution flow element FlowTreatmentDevice defines the occurrence of a device typically used to remove unwanted matter from a fluid, either liquid or gas, and typically participates in a flow distribution system.</rdfs:comment>
         <rdfs:label xml:lang="en">Flow treatment device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcFlowTreatmentDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcFlowTreatmentDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowtreatmentdevice.htm"/>
     </owl:Class>
     
@@ -4550,7 +4550,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers. HeatExchanger is commonly used on water-side distribution systems to recover energy from a liquid to another liquid (typically water-based), whereas AirToAirHeatRecovery is commonly used on air-side distribution systems to recover energy from a gas to a gas (usually air).</rdfs:comment>
         <rdfs:label xml:lang="en">Heat exchanger</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcHeatExchanger</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcHeatExchanger</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcheatexchanger.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_heatexchangertypecommon.htm"/>
     </owl:Class>
@@ -4600,7 +4600,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A humidifier is a device that adds moisture into the air.</rdfs:comment>
         <rdfs:label xml:lang="en">Humidifier</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcHumidifier</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcHumidifier</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifchumidifier.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_humidifiertypecommon.htm"/>
     </owl:Class>
@@ -4662,7 +4662,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An interceptor is a device designed and installed in order to separate and retain deleterious, hazardous or undesirable matter while permitting normal sewage or liquids to discharge into a collection system by gravity.</rdfs:comment>
         <rdfs:label xml:lang="en">Interceptor</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcInterceptor</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcInterceptor</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/lexical/ifcinterceptor.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/pset/pset_interceptortypecommon.htm"/>
     </owl:Class>
@@ -4736,7 +4736,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A lamp is an artificial light source such as a light bulb or tube.</rdfs:comment>
         <rdfs:label xml:lang="en">Lamp</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcLamp</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcLamp</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifclamp.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_lamptypecommon.htm"/>
     </owl:Class>
@@ -4750,7 +4750,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#FlowTerminal"/>
         <rdfs:comment xml:lang="en">A medical device is attached to a medical piping system and operates upon medical gases to perform a specific function. Medical gases include medical air, medical vacuum, oxygen, carbon dioxide, nitrogen, and nitrous oxide.</rdfs:comment>
         <rdfs:label xml:lang="en">Medical device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcMedicalDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcMedicalDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcmedicaldevice.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_medicaldevicetypecommon.htm"/>
     </owl:Class>
@@ -4778,7 +4778,7 @@ Instrumentation is typically for the purpose of determining the value of the pro
 
 Power outlets are commonly connected within a junction box; data outlets may be directly connected to a wall. For power outlets sharing the same circuit within a junction box, the ports should indicate the logical wiring relationship to the enclosing junction box, even though they may be physically connected to a cable going to another outlet, switch, or fixture.</rdfs:comment>
         <rdfs:label xml:lang="en">Outlet</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcOutlet</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcOutlet</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcoutlet.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_outlettypecommon.htm"/>
     </owl:Class>
@@ -4830,7 +4830,7 @@ Power outlets are commonly connected within a junction box; data outlets may be 
 
 A protective device provides protection against electrical current only (not as a general protective device). It may be used to represent the complete set of elements including both the tripping unit and the breaking unit that provide the protection. This may be particularly useful at earlier stages of design where the approach to breaking the electrical supply may be determined but the method of tripping may not. Alternatively, this entity may be used to specifically represent the breaking unit alone (in which case the tripping unit will also be specifically identified). This entity is specific to dedicated protective devices and excludes electrical outlets that may have circuit protection.</rdfs:comment>
         <rdfs:label xml:lang="en">Protective device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcprotectivedevice.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_protectivedevicetypecommon.htm"/>
     </owl:Class>
@@ -4856,7 +4856,7 @@ A protective device provides protection against electrical current only (not as 
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A protective device tripping unit breaks an electrical circuit at a separate breaking unit when a stated electric current that passes through the unit is exceeded.</rdfs:comment>
         <rdfs:label xml:lang="en">Protective device tripping unit</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDeviceTrippingUnit</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcProtectiveDeviceTrippingUnit</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcprotectivedevicetrippingunit.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_protectivedevicetrippingunittypecommon.htm"/>
     </owl:Class>
@@ -4924,7 +4924,7 @@ A protective device provides protection against electrical current only (not as 
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system.</rdfs:comment>
         <rdfs:label xml:lang="en">Pump</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcPump</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcPump</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcpump.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_pumptypecommon.htm"/>
     </owl:Class>
@@ -4938,7 +4938,7 @@ A protective device provides protection against electrical current only (not as 
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#FlowTerminal"/>
         <rdfs:comment xml:lang="en">A sanitary terminal is a fixed appliance or terminal usually supplied with water and used for drinking, cleaning or foul water disposal or that is an item of equipment directly used with such an appliance or terminal.</rdfs:comment>
         <rdfs:label xml:lang="en">Sanitary terminal</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcSanitaryTerminal</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSanitaryTerminal</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/lexical/ifcsanitaryterminal.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcplumbingfireprotectiondomain/pset/pset_sanitaryterminaltypecommon.htm"/>
     </owl:Class>
@@ -4953,7 +4953,7 @@ A protective device provides protection against electrical current only (not as 
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
         <rdfs:comment xml:lang="en">A sensor is a device that measures a physical quantity and converts it into a signal which can be read by an observer or by an instrument.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcSensor</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSensor</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcsensor.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_sensortypecommon.htm"/>
     </owl:Class>
@@ -5021,7 +5021,7 @@ A protective device provides protection against electrical current only (not as 
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Shading devices are purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable.</rdfs:comment>
         <rdfs:label xml:lang="en">Shading device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcShadingDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcShadingDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgelements/lexical/ifcshadingdevice.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgelements/pset/pset_shadingdevicecommon.htm"/>
     </owl:Class>
@@ -5035,7 +5035,7 @@ A protective device provides protection against electrical current only (not as 
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#EnergyConversionDevice"/>
         <rdfs:comment xml:lang="en">A solar device converts solar radiation into other energy such as electric current or thermal energy.</rdfs:comment>
         <rdfs:label xml:lang="en">Solar device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcSolarDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSolarDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcsolardevicetypeenum.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_solardevicetypecommon.htm"/>
     </owl:Class>
@@ -5117,7 +5117,7 @@ A protective device provides protection against electrical current only (not as 
 
 UnitaryEquipment should be used for packaged units supporting a combination of heating, cooling, and/or dehumidification; Coil should be used for coil-based floor heating.</rdfs:comment>
         <rdfs:label xml:lang="en">Space heater</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcSpaceHeater</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSpaceHeater</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcspaceheater.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_spaceheatertypecommon.htm"/>
     </owl:Class>
@@ -5163,7 +5163,7 @@ UnitaryEquipment should be used for packaged units supporting a combination of h
 
 Switches include those used for electrical power, communications, audio-visual, or other distribution system types as determined by the available ports.</rdfs:comment>
         <rdfs:label xml:lang="en">Switching device</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcSwitchingDevice</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcSwitchingDevice</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifcswitchingdevice.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_switchingdevicetypecommon.htm"/>
     </owl:Class>
@@ -5255,7 +5255,7 @@ Switches include those used for electrical power, communications, audio-visual, 
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A tank is a vessel or container in which a fluid or gas is stored for later use.</rdfs:comment>
         <rdfs:label xml:lang="en">Tank</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcTank</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTank</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifctank.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_tanktypecommon.htm"/>
     </owl:Class>
@@ -5361,7 +5361,7 @@ Switches include those used for electrical power, communications, audio-visual, 
 
 Transformer is used to transform electric power; conversion of electric signals for other purposes is handled at other entities: Controller converts arbitrary signals, AudioVisualAppliance converts signals for audio or video streams, and CommunicationsAppliance converts signals for data or other communications usage.</rdfs:comment>
         <rdfs:label xml:lang="en">Transformer</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcTransformer</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTransformer</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/lexical/ifctransformer.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcelectricaldomain/pset/pset_transformertypecommon.htm"/>
     </owl:Class>
@@ -5393,7 +5393,7 @@ Transformer is used to transform electric power; conversion of electric signals 
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A transport element is a generalization of all transport related objects that move people, animals or goods within a building or building complex. The TransportElement defines the occurrence of a transport element. </rdfs:comment>
         <rdfs:label xml:lang="en">Transport element</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcTransportElement</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTransportElement</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifctransportelement.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/pset/pset_transportelementcommon.htm"/>
     </owl:Class>
@@ -5491,7 +5491,7 @@ Transformer is used to transform electric power; conversion of electric signals 
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil.</rdfs:comment>
         <rdfs:label xml:lang="en">Tube bundle</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcTubeBundle</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcTubeBundle</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifctubebundle.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_tubebundletypecommon.htm"/>
     </owl:Class>
@@ -5507,7 +5507,7 @@ Transformer is used to transform electric power; conversion of electric signals 
 
 A unitary control element provides a housing for an aggregation of control or electrical distribution elements that, in combination, perform a singular (unitary) purpose. Each item in the aggregation may have its own geometric representation and location.</rdfs:comment>
         <rdfs:label xml:lang="en">Unitary control element</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcUnitaryControlElement</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcUnitaryControlElement</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/lexical/ifcunitarycontrolelement.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcbuildingcontrolsdomain/pset/pset_unitarycontrolelementtypecommon.htm"/>
     </owl:Class>
@@ -5569,7 +5569,7 @@ A unitary control element provides a housing for an aggregation of control or el
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A valve is used in a building services piping distribution system to control or modulate the flow of the fluid.</rdfs:comment>
         <rdfs:label xml:lang="en">Valve</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcValve</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcValve</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcvalve.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_valvetypecommon.htm"/>
     </owl:Class>
@@ -5613,7 +5613,7 @@ A unitary control element provides a housing for an aggregation of control or el
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A vibration isolator is a device used to minimize the effects of vibration transmissibility in a building.</rdfs:comment>
         <rdfs:label xml:lang="en">Vibration isolator</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/ifc/IFC4_ADD1#IfcVibrationIsolator</rdfs:seeAlso>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcVibrationIsolator</rdfs:seeAlso>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcvibrationisolator.htm"/>
         <prov:hadPrimarySource rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_vibrationisolatortypecommon.htm"/>
     </owl:Class>
@@ -5689,7 +5689,7 @@ A unitary control element provides a housing for an aggregation of control or el
         <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
         <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
         <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
     </owl:Class>
     
@@ -5701,7 +5701,7 @@ A unitary control element provides a housing for an aggregation of control or el
     <owl:Class rdf:about="https://w3id.org/saref#Property">
         <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
         <rdfs:comment xml:lang="en">An aspect of an entity that can be observable by a sensor.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/saref#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://w3id.org/saref#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Property</rdfs:label>
     </owl:Class>
     
@@ -5731,6 +5731,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
 
 
 
-<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
 
 

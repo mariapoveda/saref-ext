@@ -1156,12 +1156,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4city#PublicService">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#hasDescription"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1179,6 +1173,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#isAvailableInLanguage"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
