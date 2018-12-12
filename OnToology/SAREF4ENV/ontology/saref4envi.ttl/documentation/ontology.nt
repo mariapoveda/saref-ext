@@ -1,0 +1,870 @@
+<https://w3id.org/def/saref4envi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/saref4envi> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/v1/saref4envi> .
+<https://w3id.org/def/saref4envi> <http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, light, etc."@en .
+<https://w3id.org/def/saref4envi> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
+<https://w3id.org/def/saref4envi> <http://purl.org/dc/elements/1.1/title> "SAREF extension for environment"@en .
+<https://w3id.org/def/saref4envi> <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> .
+<https://w3id.org/def/saref4envi> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
+<https://w3id.org/def/saref4envi> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://w3id.org/def/saref4envi> <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4envi" .
+<https://w3id.org/def/saref4envi> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4envi#" .
+<https://w3id.org/def/saref4envi> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point,  or other geometrical thing in space, where it is.  For example, the realtionship between a radio tower and a Point with a given lat and long. Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points). Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping ."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
+# 
+# https://w3id.org/def/saref4envi#affectsProperty
+<https://w3id.org/def/saref4envi#affectsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#affectsProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an actuator with the property or properties it can act on"@en .
+<https://w3id.org/def/saref4envi#affectsProperty> <http://www.w3.org/2000/01/rdf-schema#label> "affects property"@en .
+# 
+# https://w3id.org/def/saref4envi#contains
+<https://w3id.org/def/saref4envi#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#contains> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4envi#isContainedIn> .
+<https://w3id.org/def/saref4envi#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a physical object and the physical objects that can be contained in it."@en .
+<https://w3id.org/def/saref4envi#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+# 
+# https://w3id.org/def/saref4envi#encapsulates
+<https://w3id.org/def/saref4envi#encapsulates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#encapsulates> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4envi#hasDigitalRepresentation> .
+<https://w3id.org/def/saref4envi#encapsulates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/saref4envi#encapsulates> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a digital representation and the physical objects it represents."@en .
+<https://w3id.org/def/saref4envi#encapsulates> <http://www.w3.org/2000/01/rdf-schema#label> "encapsulates"@en .
+# 
+# https://w3id.org/def/saref4envi#hasColor
+<https://w3id.org/def/saref4envi#hasColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#hasColor> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a light emitted and its color."@en .
+<https://w3id.org/def/saref4envi#hasColor> <http://www.w3.org/2000/01/rdf-schema#label> "has color"@en .
+# 
+# https://w3id.org/def/saref4envi#hasComponent
+<https://w3id.org/def/saref4envi#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#hasComponent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4envi#isComponentOf> .
+<https://w3id.org/def/saref4envi#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/def/saref4envi#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a system and the system in which it might be decomposed."@en .
+<https://w3id.org/def/saref4envi#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
+# 
+# https://w3id.org/def/saref4envi#hasDigitalRepresentation
+<https://w3id.org/def/saref4envi#hasDigitalRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#hasDigitalRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<https://w3id.org/def/saref4envi#hasDigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a physical object and the digital representation in which it is encapsulated."@en .
+<https://w3id.org/def/saref4envi#hasDigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has digital representation"@en .
+# 
+# https://w3id.org/def/saref4envi#hasFrequencyMeasurement
+<https://w3id.org/def/saref4envi#hasFrequencyMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#hasFrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a device and the frequency in which it makes measurements."@en .
+<https://w3id.org/def/saref4envi#hasFrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has frequency measurement"@en .
+# 
+# https://w3id.org/def/saref4envi#hasGeometry
+<https://w3id.org/def/saref4envi#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a light emitted and the shape it is projected in."@en .
+<https://w3id.org/def/saref4envi#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
+# 
+# https://w3id.org/def/saref4envi#hasLightPoint
+<https://w3id.org/def/saref4envi#hasLightPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#hasLightPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a lamppost and its light points"@en .
+<https://w3id.org/def/saref4envi#hasLightPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has light point"@en .
+# 
+# https://w3id.org/def/saref4envi#hasTransmissionPeriod
+<https://w3id.org/def/saref4envi#hasTransmissionPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#hasTransmissionPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a device and the period in which it transmit information."@en .
+<https://w3id.org/def/saref4envi#hasTransmissionPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "has transmission period"@en .
+# 
+# https://w3id.org/def/saref4envi#isAccesibleThrough
+<https://w3id.org/def/saref4envi#isAccesibleThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#isAccesibleThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/saref4envi#isAccesibleThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a digital representation and the service which it is accesible through."@en .
+<https://w3id.org/def/saref4envi#isAccesibleThrough> <http://www.w3.org/2000/01/rdf-schema#label> "is accesible through"@en .
+# 
+# https://w3id.org/def/saref4envi#isComponentOf
+<https://w3id.org/def/saref4envi#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/def/saref4envi#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a system and the system it belongs to as a component."@en .
+<https://w3id.org/def/saref4envi#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is component of"@en .
+# 
+# https://w3id.org/def/saref4envi#isConnectedTo
+<https://w3id.org/def/saref4envi#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/def/saref4envi#isConnectedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a system and the system to which it is connected."@en .
+<https://w3id.org/def/saref4envi#isConnectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is connected to"@en .
+# 
+# https://w3id.org/def/saref4envi#isContainedIn
+<https://w3id.org/def/saref4envi#isContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a physical object and the physical object in which it might be contained."@en .
+<https://w3id.org/def/saref4envi#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in"@en .
+# 
+# https://w3id.org/def/saref4envi#isProjectedFromHeight
+<https://w3id.org/def/saref4envi#isProjectedFromHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#isProjectedFromHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a light and the height measurement from which it is projected."@en .
+<https://w3id.org/def/saref4envi#isProjectedFromHeight> <http://www.w3.org/2000/01/rdf-schema#label> "is projected from height"@en .
+# 
+# https://w3id.org/def/saref4envi#isProjectedInDirection
+<https://w3id.org/def/saref4envi#isProjectedInDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#isProjectedInDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a light and the direction in which it is projected."@en .
+<https://w3id.org/def/saref4envi#isProjectedInDirection> <http://www.w3.org/2000/01/rdf-schema#label> "is projected in direction"@en .
+# 
+# https://w3id.org/def/saref4envi#projectsLight
+<https://w3id.org/def/saref4envi#projectsLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#projectsLight> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a lamppost or a light point and the light (or lights) they might project."@en .
+<https://w3id.org/def/saref4envi#projectsLight> <http://www.w3.org/2000/01/rdf-schema#label> "projects light"@en .
+# 
+# https://w3id.org/def/saref4envi#usesCommunicationInterface
+<https://w3id.org/def/saref4envi#usesCommunicationInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#usesCommunicationInterface> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a system and the communication interface it uses."@en .
+<https://w3id.org/def/saref4envi#usesCommunicationInterface> <http://www.w3.org/2000/01/rdf-schema#label> "uses communication interface"@en .
+# 
+# https://w3id.org/def/saref4envi#usesCommunicationProtocol
+<https://w3id.org/def/saref4envi#usesCommunicationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4envi#usesCommunicationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a system and the communication protocol it uses."@en .
+<https://w3id.org/def/saref4envi#usesCommunicationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "uses communication protocol"@en .
+# 
+# https://w3id.org/saref#isMeasuredIn
+<https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en .
+<https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "is measured in"@en .
+<https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+# 
+# https://w3id.org/saref#makesMeasurement
+<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a sensor and the measurements it makes. Such measurement will link together the valur of the measurement, its unit of measure and the property to which it relates."@en .
+<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "makes measurement"@en .
+# 
+# https://w3id.org/saref#measuresProperty
+<https://w3id.org/saref#measuresProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a sensor and the property o properties it can take measurement about."@en .
+<https://w3id.org/saref#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#label> "measures property"@en .
+# 
+# https://w3id.org/saref#relatesToProperty
+<https://w3id.org/saref#relatesToProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a measurement and the property such measurement is about."@en .
+<https://w3id.org/saref#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#label> "relates to property"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/saref4envi#hasCreationDate
+<https://w3id.org/def/saref4envi#hasCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/saref4envi#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4envi#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship defining the creation date of an entity (e.g., a digital representation)."@en .
+<https://w3id.org/def/saref4envi#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has creation date"@en .
+# 
+# https://w3id.org/def/saref4envi#hasFlash
+<https://w3id.org/def/saref4envi#hasFlash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasFlash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/saref4envi#hasFlash> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/saref4envi#hasFlash> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship stating whether a light has flash."@en .
+<https://w3id.org/def/saref4envi#hasFlash> <http://www.w3.org/2000/01/rdf-schema#label> "has flash"@en .
+# 
+# https://w3id.org/def/saref4envi#hasIdentifier
+<https://w3id.org/def/saref4envi#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship providing the identifier of an entity (e.g., digital representation)"@en .
+<https://w3id.org/def/saref4envi#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier"@en .
+# 
+# https://w3id.org/def/saref4envi#hasProjectionAngle
+<https://w3id.org/def/saref4envi#hasProjectionAngle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasProjectionAngle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/saref4envi#hasProjectionAngle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/def/saref4envi#hasProjectionAngle> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship defining the projection angle of an entity (e.g., a light)."@en .
+<https://w3id.org/def/saref4envi#hasProjectionAngle> <http://www.w3.org/2000/01/rdf-schema#label> "has projection angle"@en .
+# 
+# https://w3id.org/def/saref4envi#hasRevisionNumber
+<https://w3id.org/def/saref4envi#hasRevisionNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasRevisionNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#hasRevisionNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship defining the revision number of a certain entity (e.g., a device)"@en .
+<https://w3id.org/def/saref4envi#hasRevisionNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has revision number"@en .
+# 
+# https://w3id.org/def/saref4envi#hasShield
+<https://w3id.org/def/saref4envi#hasShield> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasShield> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/saref4envi#hasShield> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/saref4envi#hasShield> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship stating whether a lamppost has a shield."@en .
+<https://w3id.org/def/saref4envi#hasShield> <http://www.w3.org/2000/01/rdf-schema#label> "has shield"@en .
+# 
+# https://w3id.org/def/saref4envi#hasTag
+<https://w3id.org/def/saref4envi#hasTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasTag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#hasTag> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship stating the tags that can be assigned to an entity (e.g., a digital representation)."@en .
+<https://w3id.org/def/saref4envi#hasTag> <http://www.w3.org/2000/01/rdf-schema#label> "has tag"@en .
+# 
+# https://w3id.org/def/saref4envi#hasVersion
+<https://w3id.org/def/saref4envi#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4envi#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/saref4envi#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#hasVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship defining the version  of a certain entity (e.g., a device)"@en .
+<https://w3id.org/def/saref4envi#hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has version"@en .
+# 
+# https://w3id.org/saref#hasDescription
+<https://w3id.org/saref#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/saref#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship providing a description of an entity (e.g., device)"@en .
+<https://w3id.org/saref#hasDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+# 
+# https://w3id.org/saref#hasManufacturer
+<https://w3id.org/saref#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/saref#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship identifying the manufacturer of an entity (e.g., device)"@en .
+<https://w3id.org/saref#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturer"@en .
+# 
+# https://w3id.org/saref#hasName
+<https://w3id.org/saref#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/saref#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship providing the name of an entity (e.g., device)"@en .
+<https://w3id.org/saref#hasName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name"@en .
+# 
+# https://w3id.org/saref#hasTimestamp
+<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship stating the timestamp of an entity (e.g. a measurement)."@en .
+<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/saref#" .
+<https://w3id.org/saref#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has timestamp"@en .
+# 
+# https://w3id.org/saref#hasValue
+<https://w3id.org/saref#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/saref#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship defining the value of a certain property, e.g., energy or power"@en .
+<https://w3id.org/saref#hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84. Uniquely identified by lat/long/alt. i.e. spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT), at(P2, LAT), long(P2, LONG), alt(P2, ALT). sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2)."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Color> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CommunicationInterface> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CommunicationProtocol> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CompassDirection> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#DigitalRepresentation> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Geometry> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Measurement> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial thing"@en .
+# 
+# http://www.w3.org/2006/time#TemporalUnit
+<http://www.w3.org/2006/time#TemporalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#TemporalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#UnitOfMeasure> .
+<http://www.w3.org/2006/time#TemporalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal unit of measure, which provides a scale factor for a time quantity."@en .
+<http://www.w3.org/2006/time#TemporalUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
+<http://www.w3.org/2006/time#TemporalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal unit"@en .
+# 
+# https://w3id.org/def/saref4envi#Actuator
+<https://w3id.org/def/saref4envi#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4envi#Device> .
+<https://w3id.org/def/saref4envi#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#affectsProperty> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#Actuator> <http://www.w3.org/2000/01/rdf-schema#comment> "Device that can act over at least one property."@en .
+<https://w3id.org/def/saref4envi#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator"@en .
+# 
+# https://w3id.org/def/saref4envi#Color
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CommunicationInterface> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CommunicationProtocol> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CompassDirection> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#DigitalRepresentation> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Geometry> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2000/01/rdf-schema#comment> "Color of the emitted light. It might be indicated by named colors or using other type of color values like hexadecimal for RGB, color temperature, etc."@en .
+<https://w3id.org/def/saref4envi#Color> <http://www.w3.org/2000/01/rdf-schema#label> "Color"@en .
+# 
+# https://w3id.org/def/saref4envi#CommunicationInterface
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasVersion> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasVersion> .
+_:genid3 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CommunicationProtocol> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CompassDirection> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#DigitalRepresentation> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Geometry> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2000/01/rdf-schema#comment> "An interface defines which primitive operations and services the lower layer makes available to the upper one, when referring to network layers. (Definition adapted from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en .
+<https://w3id.org/def/saref4envi#CommunicationInterface> <http://www.w3.org/2000/01/rdf-schema#label> "Communication interface"@en .
+# 
+# https://w3id.org/def/saref4envi#CommunicationProtocol
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#CompassDirection> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#DigitalRepresentation> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Geometry> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en .
+<https://w3id.org/def/saref4envi#CommunicationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Communication protocol"@en .
+# 
+# https://w3id.org/def/saref4envi#CompassDirection
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#DigitalRepresentation> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Geometry> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "The four cardinal directions or cardinal points are the directions of north, east, south, and west, commonly denoted by their initials: N, E, S, W. East and west are at right angles to north and south, with east being in the clockwise direction of rotation from north and west being directly opposite east. Intermediate points between the four cardinal directions form the points of the compass. (definition taken from https://en.wikipedia.org/wiki/Cardinal_direction)"@en .
+<https://w3id.org/def/saref4envi#CompassDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Compass direction"@en .
+# 
+# https://w3id.org/def/saref4envi#Device
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4envi#System> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasFrequencyMeasurement> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#FrequencyMeasurement> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasTransmissionPeriod> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#PeriodMeasurement> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#isContainedIn> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#PhysicalObject> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasRevisionNumber> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasVersion> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasManufacturer> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasRevisionNumber> .
+_:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasVersion> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A thing made or adapted for a particular purpose, especially a piece of mechanical or electronic equipment. For example ‘a measuring device’ (definition taken from https://en.oxforddictionaries.com/definition/device). In this ontology it refers to the devices for environmental purposes."@en .
+<https://w3id.org/def/saref4envi#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+# 
+# https://w3id.org/def/saref4envi#DigitalRepresentation
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#encapsulates> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#PhysicalObject> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#isAccesibleThrough> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Service> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasCreationDate> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasIdentifier> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasTag> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasName> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasCreationDate> .
+_:genid19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasIdentifier> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Geometry> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital representation encapsulates a physical object accessible via Web services"@en .
+<https://w3id.org/def/saref4envi#DigitalRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "Digital representation"@en .
+# 
+# https://w3id.org/def/saref4envi#FrequencyMeasurement
+<https://w3id.org/def/saref4envi#FrequencyMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid21 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/saref4envi#Frequency> .
+<https://w3id.org/def/saref4envi#FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid22 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/saref4envi#FrequencyUnit> .
+<https://w3id.org/def/saref4envi#FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a frequency property. It is also linked to the frequency unit of measure in which the value is expressed and the timestamp of the measurement."@en .
+<https://w3id.org/def/saref4envi#FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency measurement"@en .
+# 
+# https://w3id.org/def/saref4envi#FrequencyUnit
+<https://w3id.org/def/saref4envi#FrequencyUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#FrequencyUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#FrequencyUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit of measure for the quantity frequency."@en .
+<https://w3id.org/def/saref4envi#FrequencyUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency unit"@en .
+# 
+# https://w3id.org/def/saref4envi#Geometry
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the shape of the light emission. It might be instantiated by individuals like \"spherical\", \"cylindrical\", etc. even though it is open to more comples representation of geometries using other vocabularies."@en .
+<https://w3id.org/def/saref4envi#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
+# 
+# https://w3id.org/def/saref4envi#HeightMeasurement
+<https://w3id.org/def/saref4envi#HeightMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid23 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/saref4envi#Height> .
+<https://w3id.org/def/saref4envi#HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid24 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/saref4envi#LengthUnit> .
+<https://w3id.org/def/saref4envi#HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a height property. It is also linked to the height unit of measure in which the value is expressed and the timestamp of the measurement."@en .
+<https://w3id.org/def/saref4envi#HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Height measurement"@en .
+# 
+# https://w3id.org/def/saref4envi#Lamppost
+<https://w3id.org/def/saref4envi#Lamppost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#Lamppost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4envi#Device> .
+<https://w3id.org/def/saref4envi#Lamppost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasLightPoint> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#LightPoint> .
+<https://w3id.org/def/saref4envi#Lamppost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#projectsLight> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#Lamppost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasShield> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/saref4envi#Lamppost> <http://www.w3.org/2000/01/rdf-schema#comment> "A tall pole with a light at the top."@en .
+<https://w3id.org/def/saref4envi#Lamppost> <http://www.w3.org/2000/01/rdf-schema#label> "Lamppost"@en .
+# 
+# https://w3id.org/def/saref4envi#LengthUnit
+<https://w3id.org/def/saref4envi#LengthUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#LengthUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#LengthUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit of measure for the quantity lenght."@en .
+<https://w3id.org/def/saref4envi#LengthUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Length unit"@en .
+# 
+# https://w3id.org/def/saref4envi#Light
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasColor> .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#Color> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasGeometry> .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#Geometry> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#isProjectedFromHeight> .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#HeightMeasurement> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#isProjectedInDirection> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#CompassDirection> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasFlash> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasProjectionAngle> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#comment> "A light source, which may be a lantern, a street light, a floodlight, a signal lamp or any other device whose primary purpose is the generation of light. (Definition taken from http://wiki.openstreetmap.org/wiki/Proposed_features/Key:light_source#Description)"@en .
+<https://w3id.org/def/saref4envi#Light> <http://www.w3.org/2000/01/rdf-schema#label> "Light"@en .
+# 
+# https://w3id.org/def/saref4envi#LightPoint
+<https://w3id.org/def/saref4envi#LightPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#LightPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<https://w3id.org/def/saref4envi#LightPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://w3id.org/def/saref4envi#LightPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#projectsLight> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#Light> .
+<https://w3id.org/def/saref4envi#LightPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "An spatial point from where a light is projected. It might belong to a lamppost."@en .
+<https://w3id.org/def/saref4envi#LightPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Light point"@en .
+# 
+# https://w3id.org/def/saref4envi#LightProperty
+<https://w3id.org/def/saref4envi#LightProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#LightProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#LightProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An aspect of light that can be observable by a sensor."@en .
+<https://w3id.org/def/saref4envi#LightProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Light property"@en .
+# 
+# https://w3id.org/def/saref4envi#PeriodMeasurement
+<https://w3id.org/def/saref4envi#PeriodMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4envi#PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid36 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/saref4envi#Period> .
+<https://w3id.org/def/saref4envi#PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid37 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2006/time#TemporalUnit> .
+<https://w3id.org/def/saref4envi#PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value over a period property. It is also linked to the period unit of measure in which the value is expressed and the timestamp of the measurement."@en .
+<https://w3id.org/def/saref4envi#PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Period measurement"@en .
+# 
+# https://w3id.org/def/saref4envi#Photometer
+<https://w3id.org/def/saref4envi#Photometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#Photometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4envi#Photometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#Photometer> <http://www.w3.org/2000/01/rdf-schema#comment> "A photometer, generally, is an instrument that measures light intensity or optical properties of solutions or surfaces."@en .
+<https://w3id.org/def/saref4envi#Photometer> <http://www.w3.org/2000/01/rdf-schema#label> "Photometer"@en .
+# 
+# https://w3id.org/def/saref4envi#PhysicalObject
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#contains> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#PhysicalObject> .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasDigitalRepresentation> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#DigitalRepresentation> .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#isContainedIn> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#PhysicalObject> .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Object that has a proper space region.  (Definition extracted from DUL ontology)"@en .
+<https://w3id.org/def/saref4envi#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "Physical object"@en .
+# 
+# https://w3id.org/def/saref4envi#System
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4envi#PhysicalObject> .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#hasComponent> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#System> .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#isComponentOf> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#System> .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#isConnectedTo> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#System> .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#usesCommunicationInterface> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#CommunicationInterface> .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4envi#usesCommunicationProtocol> .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4envi#CommunicationProtocol> .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of related hardware units or programs or both, especially when dedicated to a single application. (Definition taken from https://en.oxforddictionaries.com/definition/system)"@en .
+<https://w3id.org/def/saref4envi#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+# 
+# https://w3id.org/def/saref4envi#TESS
+<https://w3id.org/def/saref4envi#TESS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4envi#TESS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4envi#Photometer> .
+<https://w3id.org/def/saref4envi#TESS> <http://www.w3.org/2000/01/rdf-schema#comment> "The Telescope Encoder and Sky Sensor (TESS) is a Sky Brightness and Cloud detector developed as a device for a remote observatory. A TESS can observe the light magnitude and other properties as ambient temperature and sky temperature."@en .
+<https://w3id.org/def/saref4envi#TESS> <http://www.w3.org/2000/01/rdf-schema#label> "TESS (Telescope Encoder and Sky Sensor)"@en .
+# 
+# https://w3id.org/saref#Device
+<https://w3id.org/saref#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs the start and stop function."@en .
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+# 
+# https://w3id.org/saref#Measurement
+<https://w3id.org/saref#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid51 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid52 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasTimestamp> .
+_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid55 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid55 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement"@en .
+# 
+# https://w3id.org/saref#Property
+<https://w3id.org/saref#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Service> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An aspect of an entity that can be observable by a sensor."@en .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
+# 
+# https://w3id.org/saref#Sensor
+<https://w3id.org/saref#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
+<https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#makesMeasurement> .
+_:genid56 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes.\nA device that has category saref:Sensor and performs a saref:SensingFunction."@en .
+<https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+# 
+# https://w3id.org/saref#Service
+<https://w3id.org/saref#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Service> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service."@en .
+<https://w3id.org/saref#Service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+# 
+# https://w3id.org/saref#UnitOfMeasure
+<https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en .
+<https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of measure"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/centimetre
+<http://www.wurvoc.org/vocabularies/om-1.8/centimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/centimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LengthUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/centimetre> <http://www.w3.org/2000/01/rdf-schema#label> "Centimetre"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/decametre
+<http://www.wurvoc.org/vocabularies/om-1.8/decametre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/decametre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LengthUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/decametre> <http://www.w3.org/2000/01/rdf-schema#label> "Decametre"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/decimetre
+<http://www.wurvoc.org/vocabularies/om-1.8/decimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/decimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LengthUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/decimetre> <http://www.w3.org/2000/01/rdf-schema#label> "Decimetre"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/hectometre
+<http://www.wurvoc.org/vocabularies/om-1.8/hectometre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/hectometre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LengthUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/hectometre> <http://www.w3.org/2000/01/rdf-schema#label> "Hectometre"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/hertz
+<http://www.wurvoc.org/vocabularies/om-1.8/hertz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/hertz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#FrequencyUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/hertz> <http://www.w3.org/2000/01/rdf-schema#label> "Hertz"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/kilometre
+<http://www.wurvoc.org/vocabularies/om-1.8/kilometre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/kilometre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LengthUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/kilometre> <http://www.w3.org/2000/01/rdf-schema#label> "Kilometre"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/metre
+<http://www.wurvoc.org/vocabularies/om-1.8/metre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/metre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LengthUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/metre> <http://www.w3.org/2000/01/rdf-schema#label> "Metre"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/millimetre
+<http://www.wurvoc.org/vocabularies/om-1.8/millimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/millimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LengthUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/millimetre> <http://www.w3.org/2000/01/rdf-schema#label> "Milimetre"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#FrequencyUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day> <http://www.w3.org/2000/01/rdf-schema#label> "Reciprocal day"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#FrequencyUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour> <http://www.w3.org/2000/01/rdf-schema#label> "Reciprocal hour"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#FrequencyUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time> <http://www.w3.org/2000/01/rdf-schema#label> "Reciprocal second"@en .
+# 
+# http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#FrequencyUnit> .
+<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year> <http://www.w3.org/2000/01/rdf-schema#label> "Reciprocal year"@en .
+# 
+# https://w3id.org/def/saref4envi#Fluorescence
+<https://w3id.org/def/saref4envi#Fluorescence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Fluorescence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#Fluorescence> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property fluorescence."@en .
+<https://w3id.org/def/saref4envi#Fluorescence> <http://www.w3.org/2000/01/rdf-schema#label> "Fluorescence"@en .
+# 
+# https://w3id.org/def/saref4envi#Frequency
+<https://w3id.org/def/saref4envi#Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#Frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the property frequency."@en .
+<https://w3id.org/def/saref4envi#Frequency> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency"@en .
+# 
+# https://w3id.org/def/saref4envi#Height
+<https://w3id.org/def/saref4envi#Height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#Height> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the property height."@en .
+<https://w3id.org/def/saref4envi#Height> <http://www.w3.org/2000/01/rdf-schema#label> "Height"@en .
+# 
+# https://w3id.org/def/saref4envi#Illuminance
+<https://w3id.org/def/saref4envi#Illuminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Illuminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#Illuminance> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property illuminance."@en .
+<https://w3id.org/def/saref4envi#Illuminance> <http://www.w3.org/2000/01/rdf-schema#label> "Illuminance"@en .
+# 
+# https://w3id.org/def/saref4envi#Irradiance
+<https://w3id.org/def/saref4envi#Irradiance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Irradiance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#Irradiance> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property irradiance."@en .
+<https://w3id.org/def/saref4envi#Irradiance> <http://www.w3.org/2000/01/rdf-schema#label> "Irradiance"@en .
+# 
+# https://w3id.org/def/saref4envi#LightAbsorption
+<https://w3id.org/def/saref4envi#LightAbsorption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#LightAbsorption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#LightAbsorption> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property light absorption."@en .
+<https://w3id.org/def/saref4envi#LightAbsorption> <http://www.w3.org/2000/01/rdf-schema#label> "Light absorption"@en .
+# 
+# https://w3id.org/def/saref4envi#LightMagnitude
+<https://w3id.org/def/saref4envi#LightMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#LightMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#LightMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property light magnitude."@en .
+<https://w3id.org/def/saref4envi#LightMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "Light magnitude"@en .
+# 
+# https://w3id.org/def/saref4envi#Luminiscence
+<https://w3id.org/def/saref4envi#Luminiscence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Luminiscence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#Luminiscence> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property luminiscence."@en .
+<https://w3id.org/def/saref4envi#Luminiscence> <http://www.w3.org/2000/01/rdf-schema#label> "Luminiscence"@en .
+# 
+# https://w3id.org/def/saref4envi#Period
+<https://w3id.org/def/saref4envi#Period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4envi#Period> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the property period."@en .
+<https://w3id.org/def/saref4envi#Period> <http://www.w3.org/2000/01/rdf-schema#label> "Period"@en .
+# 
+# https://w3id.org/def/saref4envi#Phosphorescence
+<https://w3id.org/def/saref4envi#Phosphorescence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#Phosphorescence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#Phosphorescence> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property phosphorescence."@en .
+<https://w3id.org/def/saref4envi#Phosphorescence> <http://www.w3.org/2000/01/rdf-schema#label> "Phosphorescence"@en .
+# 
+# https://w3id.org/def/saref4envi#ReflectionOfLight
+<https://w3id.org/def/saref4envi#ReflectionOfLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#ReflectionOfLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#ReflectionOfLight> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property reflection of light."@en .
+<https://w3id.org/def/saref4envi#ReflectionOfLight> <http://www.w3.org/2000/01/rdf-schema#label> "Reflection of light"@en .
+# 
+# https://w3id.org/def/saref4envi#ScatteringOfLight
+<https://w3id.org/def/saref4envi#ScatteringOfLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4envi#ScatteringOfLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/saref4envi#LightProperty> .
+<https://w3id.org/def/saref4envi#ScatteringOfLight> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual representing the light property scattering of light."@en .
+<https://w3id.org/def/saref4envi#ScatteringOfLight> <http://www.w3.org/2000/01/rdf-schema#label> "Scattering of light"@en .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

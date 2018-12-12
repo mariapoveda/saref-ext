@@ -1,0 +1,40 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:ProductEquipment" "base:ProductCategory" "base:WorkCenter" "base:Area" "base:Site" ; /*classes style*/
+	"https://w3id.org/def/saref4inma" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "dcterms:license" ];
+	"https://w3id.org/def/saref4inma" -> "http://www.oeg-upm.net/" [ label = "dc:publisher" ];
+	"https://w3id.org/def/saref4inma" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "dcterms:creator" ];
+	"base:ProductCategory" -> "base:ProductEquipment" [ label = "owl:disjointWith" ];
+	"NULL" -> "base:hasGTIN14" [ label = "owl:onProperty" ];
+	"NULL" -> "base:hasGTIN8" [ label = "owl:onProperty" ];
+	"NULL" -> "base:description" [ label = "owl:onProperty" ];
+	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:integer" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:brand" [ label = "owl:onProperty" ];
+	"NULL" -> "base:hasGTIN12" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Site" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:needsEquipment" [ label = "owl:onProperty" ];
+	"NULL" -> "base:makes" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Area" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:size" [ label = "owl:onProperty" ];
+	"NULL" -> "base:ProductCategory" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:name" [ label = "owl:onProperty" ];
+	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:WorkCenter" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:ProductEquipment" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:hasGTIN13" [ label = "owl:onProperty" ];
+	"NULL" -> "base:manufacturer" [ label = "owl:onProperty" ];
+	"NULL" -> "base:supplier" [ label = "owl:onProperty" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:name" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:hasGTIN13" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:manufacturer" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:hasGTIN14" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:supplier" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:hasGTIN12" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:description" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:hasGTIN8" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:brand" ];
+	"owl:Thing" -> "xsd:integer" [ label = "base:size" ];
+
+}

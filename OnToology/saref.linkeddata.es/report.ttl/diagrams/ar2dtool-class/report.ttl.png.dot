@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	":ENTRY1510756761967" -> ":REPORT1510756761967" [ label = ":isEntryOfReport" ];
+	":ENTRY1510756761967" -> ":" [ label = ":entrySubject" ];
+	":ENTRY1510756761967" -> ":LICENSENOTFOUND" [ label = ":detectedProblem" ];
+	":ENTRY1510756761967" -> ":NOSERIALIZATIONSAVAILABLE" [ label = ":detectedProblem" ];
+	":ENTRY1510756761967" -> ":GENERICERROR" [ label = ":detectedProblem" ];
+	":REPORT1510756761967" -> ":ENTRY1510756761967" [ label = ":hasEntry" ];
+	":REPORT1510756761967" -> "http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4BLDG%23" [ label = ":hasEntry" ];
+	":REPORT1510756761967" -> ":ENTRY1510756761967HTTPSW3IDORGSAREF" [ label = ":hasEntry" ];
+	":REPORT1510756761967" -> "http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4ENVI%23" [ label = ":hasEntry" ];
+	"http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4ENVI%23" -> ":REPORT1510756761967" [ label = ":isEntryOfReport" ];
+	"http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4ENVI%23" -> "http://vocab.linkeddata.es/ontology/report#https:/_W3ID.ORG_DEF_SAREF4ENVI%23" [ label = ":entrySubject" ];
+	"http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4ENVI%23" -> ":LICENSENOTFOUND" [ label = ":detectedProblem" ];
+	"http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4BLDG%23" -> ":REPORT1510756761967" [ label = ":isEntryOfReport" ];
+	"http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4BLDG%23" -> "http://vocab.linkeddata.es/ontology/report#https:/_W3ID.ORG_DEF_SAREF4BLDG%23" [ label = ":entrySubject" ];
+	"http://vocab.linkeddata.es/ontology/report#ENTRY1510756761967HTTPSW3IDORGDEFSAREF4BLDG%23" -> ":LICENSENOTFOUND" [ label = ":detectedProblem" ];
+	":ENTRY1510756761967HTTPSW3IDORGSAREF" -> ":REPORT1510756761967" [ label = ":isEntryOfReport" ];
+	":ENTRY1510756761967HTTPSW3IDORGSAREF" -> "http://vocab.linkeddata.es/ontology/report#https:/_W3ID.ORG_SAREF" [ label = ":entrySubject" ];
+	":ENTRY1510756761967HTTPSW3IDORGSAREF" -> ":LICENSENOTFOUND" [ label = ":detectedProblem" ];
+	":ENTRY1510756761967HTTPSW3IDORGSAREF" -> ":LANGUAGENOTFOUND" [ label = ":detectedProblem" ];
+
+}

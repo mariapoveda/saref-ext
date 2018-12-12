@@ -7,15 +7,26 @@
     "UnitOfMeasure" : {
       "@id" : "https://w3id.org/saref#UnitOfMeasure"
     },
+    "hasManufacturer" : {
+      "@id" : "https://w3id.org/saref#hasManufacturer",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "isControlledByDevice" : {
       "@id" : "https://w3id.org/saref#isControlledByDevice",
       "@type" : "@id"
+    },
+    "Communication" : {
+      "@id" : "https://w3id.org/def/saref4agri#Communication"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
     "Humidity" : {
       "@id" : "https://w3id.org/saref#Humidity"
+    },
+    "hasModel" : {
+      "@id" : "https://w3id.org/saref#hasModel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Platform" : {
       "@id" : "https://w3id.org/def/saref4agri#Platform"
@@ -30,9 +41,9 @@
       "@id" : "https://w3id.org/saref#accomplishes",
       "@type" : "@id"
     },
-    "hasExpirationDate" : {
-      "@id" : "https://w3id.org/def/saref4agri#hasExpirationDate",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "fromNode" : {
+      "@id" : "https://w3id.org/def/saref4agri#fromNode",
+      "@type" : "@id"
     },
     "hosts" : {
       "@id" : "https://w3id.org/def/saref4agri#hosts",
@@ -48,11 +59,28 @@
       "@id" : "https://w3id.org/saref#measuresProperty",
       "@type" : "@id"
     },
+    "Geometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
     "hasValue" : {
       "@id" : "https://w3id.org/saref#hasValue"
     },
+    "Instant" : {
+      "@id" : "http://www.w3.org/2006/time#Instant"
+    },
+    "sfWithin" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#sfWithin",
+      "@type" : "@id"
+    },
+    "hasRole" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasRole",
+      "@type" : "@id"
+    },
     "long" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+    },
+    "Feature" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Feature"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
@@ -90,11 +118,19 @@
       "@id" : "https://w3id.org/def/saref4agri#measurementMadeBy",
       "@type" : "@id"
     },
+    "Interval" : {
+      "@id" : "http://www.w3.org/2006/time#Interval"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
     "location" : {
-      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location"
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
     },
     "TemporalEntity" : {
       "@id" : "http://www.w3.org/2006/time#TemporalEntity"
@@ -102,8 +138,15 @@
     "hadPrimarySource" : {
       "@id" : "http://www.w3.org/ns/prov#hadPrimarySource"
     },
+    "roleInCommunication" : {
+      "@id" : "https://w3id.org/def/saref4agri#roleInCommunication",
+      "@type" : "@id"
+    },
     "alt" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
+    },
+    "Network" : {
+      "@id" : "https://w3id.org/def/saref4agri#Network"
     },
     "relatesToMeasurement" : {
       "@id" : "https://w3id.org/saref#relatesToMeasurement",
@@ -116,8 +159,15 @@
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
     },
+    "playedByNode" : {
+      "@id" : "https://w3id.org/def/saref4agri#playedByNode",
+      "@type" : "@id"
+    },
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Point" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
     },
     "definition" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#definition"
@@ -130,8 +180,16 @@
       "@id" : "https://w3id.org/def/saref4agri#hasDeployment",
       "@type" : "@id"
     },
+    "hasGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type" : "@id"
+    },
     "Property" : {
       "@id" : "https://w3id.org/saref#Property"
+    },
+    "sfContains" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#sfContains",
+      "@type" : "@id"
     },
     "hasFunction" : {
       "@id" : "https://w3id.org/saref#hasFunction",
@@ -147,6 +205,12 @@
       "@id" : "https://w3id.org/saref#isMeasuredIn",
       "@type" : "@id"
     },
+    "CommunicationRole" : {
+      "@id" : "https://w3id.org/def/saref4agri#CommunicationRole"
+    },
+    "SpatialObject" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+    },
     "hasFeatureOfInterest" : {
       "@id" : "https://w3id.org/def/saref4agri#hasFeatureOfInterest",
       "@type" : "@id"
@@ -158,9 +222,9 @@
       "@id" : "https://w3id.org/saref#consistsOf",
       "@type" : "@id"
     },
-    "hasLastUpdateDate" : {
-      "@id" : "https://w3id.org/def/saref4agri#hasLastUpdateDate",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "toNode" : {
+      "@id" : "https://w3id.org/def/saref4agri#toNode",
+      "@type" : "@id"
     },
     "isCommandOf" : {
       "@id" : "https://w3id.org/saref#isCommandOf",
@@ -173,9 +237,9 @@
       "@id" : "https://w3id.org/def/saref4agri#isPropertyOf",
       "@type" : "@id"
     },
-    "hasCreationDate" : {
-      "@id" : "https://w3id.org/def/saref4agri#hasCreationDate",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "hasState" : {
+      "@id" : "https://w3id.org/saref#hasState",
+      "@type" : "@id"
     },
     "State" : {
       "@id" : "https://w3id.org/saref#State"
@@ -186,6 +250,9 @@
     },
     "Function" : {
       "@id" : "https://w3id.org/saref#Function"
+    },
+    "Actuator" : {
+      "@id" : "https://w3id.org/saref#Actuator"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -204,6 +271,10 @@
     "System" : {
       "@id" : "https://w3id.org/def/saref4agri#System"
     },
+    "roleInNetwork" : {
+      "@id" : "https://w3id.org/def/saref4agri#roleInNetwork",
+      "@type" : "@id"
+    },
     "Device" : {
       "@id" : "https://w3id.org/saref#Device"
     },
@@ -211,8 +282,16 @@
       "@id" : "https://w3id.org/def/saref4agri#deployedOnPlatform",
       "@type" : "@id"
     },
+    "Node" : {
+      "@id" : "https://w3id.org/def/saref4agri#Node"
+    },
     "hasDescription" : {
-      "@id" : "https://w3id.org/saref#hasDescription"
+      "@id" : "https://w3id.org/saref#hasDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasProtocol" : {
+      "@id" : "https://w3id.org/def/saref4agri#hasProtocol",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "hasTimestamp" : {
       "@id" : "https://w3id.org/saref#hasTimestamp"
@@ -231,6 +310,9 @@
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "Sensor" : {
+      "@id" : "https://w3id.org/saref#Sensor"
     },
     "isFeatureOfInterestOf" : {
       "@id" : "https://w3id.org/def/saref4agri#isFeatureOfInterestOf",
