@@ -171,6 +171,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4agri#Communication</p>
+      <div class="comment">
+         <span class="markdown">An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included.</span>
+      </div>
    </div>
    <div class="entity" id="CommunicationRole">
       <h3>Communication role<sup class="type-c" title="class">c</sup>
@@ -179,6 +182,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4agri#CommunicationRole</p>
+      <div class="comment">
+         <span class="markdown">An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel.</span>
+      </div>
    </div>
    <div class="entity" id="Deployment">
       <h3>Deployment<sup class="type-c" title="class">c</sup>
@@ -187,6 +193,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4agri#Deployment</p>
+      <div class="comment">
+         <span class="markdown">The scenario, including temporal and spatial information, in which the devices are installed.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -223,6 +232,7 @@ This section provides details for each class and property defined by SAREF exten
          <dt>has sub-classes</dt>
          <dd>
             <a href="#https://w3id.org/saref#Actuator" title="https://w3id.org/saref#Actuator">Actuator</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -536,6 +546,9 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4agri#Network</p>
+      <div class="comment">
+         <span class="markdown">Collection of nodes connected.</span>
+      </div>
    </div>
    <div class="entity" id="Node">
       <h3>Node<sup class="type-c" title="class">c</sup>
@@ -544,6 +557,13 @@ This section provides details for each class and property defined by SAREF exten
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4agri#Node</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Platform">
       <h3>Platform<sup class="type-c" title="class">c</sup>
@@ -954,7 +974,16 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#https://w3id.org/saref#hasCommand" title="https://w3id.org/saref#hasCommand">has command</a>
       </li>
       <li>
+         <a href="#hasConstituent" title="https://w3id.org/def/saref4agri#hasConstituent">has constituent</a>
+      </li>
+      <li>
          <a href="#hasDeployment" title="https://w3id.org/def/saref4agri#hasDeployment">has deployment</a>
+      </li>
+      <li>
+         <a href="#hasDeploymentPeriod"
+            title="https://w3id.org/def/saref4agri#hasDeploymentPeriod">
+            <span>has deployment period</span>
+         </a>
       </li>
       <li>
          <a href="#hasFeatureOfInterest"
@@ -988,7 +1017,16 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#https://w3id.org/saref#isCommandOf" title="https://w3id.org/saref#isCommandOf">is command of</a>
       </li>
       <li>
+         <a href="#isConstituentOf" title="https://w3id.org/def/saref4agri#isConstituentOf">is constituent of</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/saref#isControlledByDevice" title="https://w3id.org/saref#isControlledByDevice">is controlled by device</a>
+      </li>
+      <li>
+         <a href="#isDeployedAtSpace"
+            title="https://w3id.org/def/saref4agri#isDeployedAtSpace">
+            <span>is deployed at space</span>
+         </a>
       </li>
       <li>
          <a href="#isFeatureOfInterestOf"
@@ -1214,6 +1252,23 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasConstituent">
+      <h3>has constituent<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasConstituent</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isConstituentOf" title="https://w3id.org/def/saref4agri#isConstituentOf">is constituent of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasDeployment">
       <h3>has deployment<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1229,6 +1284,17 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDeploymentPeriod">
+      <h3>has deployment period<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasDeploymentPeriod</p>
+      <div class="comment">
+         <span class="markdown">has deployment period</span>
       </div>
    </div>
    <div class="entity" id="hasFeatureOfInterest">
@@ -1429,6 +1495,23 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dl>
       </div>
    </div>
+   <div class="entity" id="isConstituentOf">
+      <h3>is constituent of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isConstituentOf</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasConstituent" title="https://w3id.org/def/saref4agri#hasConstituent">has constituent</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/saref#isControlledByDevice">
       <h3>is controlled by device<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1442,6 +1525,17 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
          </dd>
       </dl>
+   </div>
+   <div class="entity" id="isDeployedAtSpace">
+      <h3>is deployed at space<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isDeployedAtSpace</p>
+      <div class="comment">
+         <span class="markdown">is deployed at space</span>
+      </div>
    </div>
    <div class="entity" id="isFeatureOfInterestOf">
       <h3>is feature of interest of<sup class="type-op" title="object property">op</sup>
@@ -1698,9 +1792,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#https://w3id.org/saref#hasName" title="https://w3id.org/saref#hasName">has name</a>
       </li>
       <li>
-         <a href="#hasProtocol" title="https://w3id.org/def/saref4agri#hasProtocol">
-            <span>has protocol</span>
-         </a>
+         <a href="#hasProtocol" title="https://w3id.org/def/saref4agri#hasProtocol">has protocol</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#hasTimestamp" title="https://w3id.org/saref#hasTimestamp">has timestamp</a>
@@ -1805,6 +1897,9 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasProtocol</p>
+      <div class="comment">
+         <span class="markdown">The protocol used in a given communition between nodes.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>

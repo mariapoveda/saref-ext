@@ -158,9 +158,20 @@ xsd:duration rdf:type rdfs:Datatype .
           rdfs:label "from node"@en .
 
 
+###  https://w3id.org/def/saref4agri#hasConstituent
+:hasConstituent rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isConstituentOf ;
+                rdfs:label "has constituent"@en .
+
+
 ###  https://w3id.org/def/saref4agri#hasDeployment
 :hasDeployment rdf:type owl:ObjectProperty ;
                rdfs:label "has deployment"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasDeploymentPeriod
+:hasDeploymentPeriod rdf:type owl:ObjectProperty ;
+                     rdfs:comment "has deployment period"@en .
 
 
 ###  https://w3id.org/def/saref4agri#hasFeatureOfInterest
@@ -189,6 +200,16 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  https://w3id.org/def/saref4agri#inDeployment
 :inDeployment rdf:type owl:ObjectProperty ;
               rdfs:label "in deployment"@en .
+
+
+###  https://w3id.org/def/saref4agri#isConstituentOf
+:isConstituentOf rdf:type owl:ObjectProperty ;
+                 rdfs:label "is constituent of"@en .
+
+
+###  https://w3id.org/def/saref4agri#isDeployedAtSpace
+:isDeployedAtSpace rdf:type owl:ObjectProperty ;
+                   rdfs:comment "is deployed at space"@en .
 
 
 ###  https://w3id.org/def/saref4agri#isFeatureOfInterestOf
@@ -343,7 +364,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/saref4agri#hasProtocol
 :hasProtocol rdf:type owl:DatatypeProperty ;
-             rdfs:range rdfs:Literal .
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "The protocol used in a given communition between nodes."@en ;
+             rdfs:label "has protocol"@en .
 
 
 ###  https://w3id.org/saref#hasDescription
@@ -494,11 +517,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4agri#Communication
 :Communication rdf:type owl:Class ;
+               rdfs:comment "An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included."@en ;
                rdfs:label "Communication"@es .
 
 
 ###  https://w3id.org/def/saref4agri#CommunicationRole
 :CommunicationRole rdf:type owl:Class ;
+                   rdfs:comment "An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel."@en ;
                    rdfs:label "Communication role"@es .
 
 
@@ -512,6 +537,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                               owl:onProperty :deployedSystem ;
                               owl:someValuesFrom :System
                             ] ;
+            rdfs:comment "The scenario, including temporal and spatial information, in which the devices are installed."@en ;
             rdfs:label "Deployment"@en .
 
 
@@ -532,11 +558,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4agri#Network
 :Network rdf:type owl:Class ;
+         rdfs:comment "Collection of nodes connected."@en ;
          rdfs:label "Network"@es .
 
 
 ###  https://w3id.org/def/saref4agri#Node
 :Node rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/saref#Device> ;
       rdfs:label "Node"@es .
 
 
