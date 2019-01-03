@@ -165,23 +165,27 @@ geo:location a owl:ObjectProperty .
 
 s4agri:deployedOnPlatform a owl:ObjectProperty ;
 	owl:inverseOf s4agri:inDeployment ;
+	rdfs:comment "Relation between a deployment and the platform(s) involved in the deployment."@en ;
 	rdfs:label "deployed on platform"@en .
 # 
 # https://w3id.org/def/saref4agri#deployedSystem
 
 s4agri:deployedSystem a owl:ObjectProperty ;
 	owl:inverseOf s4agri:hasDeployment ;
+	rdfs:comment "Relation between a deployment and the system deployed."@en ;
 	rdfs:label "deployed system"@en .
 # 
 # https://w3id.org/def/saref4agri#fromNode
 
 s4agri:fromNode a owl:ObjectProperty ;
+	rdfs:comment "Origin node in directed communications."@en ;
 	rdfs:label "from node"@en .
 # 
 # https://w3id.org/def/saref4agri#hasConstituent
 
 s4agri:hasConstituent a owl:ObjectProperty ;
 	owl:inverseOf s4agri:isConstituentOf ;
+	rdfs:comment "Relation between a network and its constituents systems."@en ;
 	rdfs:label "has constituent"@en .
 # 
 # https://w3id.org/def/saref4agri#hasDeployment
@@ -192,86 +196,106 @@ s4agri:hasDeployment a owl:ObjectProperty ;
 # https://w3id.org/def/saref4agri#hasDeploymentPeriod
 
 s4agri:hasDeploymentPeriod a owl:ObjectProperty ;
-	rdfs:comment "has deployment period"@en .
+	rdfs:comment "Relation to indicate the temporal duration or period of a deployment."@en , "has deployment period"@en .
 # 
 # https://w3id.org/def/saref4agri#hasFeatureOfInterest
 
 s4agri:hasFeatureOfInterest a owl:ObjectProperty ;
 	owl:inverseOf s4agri:isFeatureOfInterestOf ;
+	rdfs:comment "Relation between a measurement and the feature of interest being measured."@en ;
 	rdfs:label "has feature of interest"@en .
 # 
 # https://w3id.org/def/saref4agri#hasProperty
 
 s4agri:hasProperty a owl:ObjectProperty ;
 	owl:inverseOf s4agri:isPropertyOf ;
+	rdfs:comment "Relation between a feature of interest and its properties."@en ;
 	rdfs:label "has property"@en .
 # 
 # https://w3id.org/def/saref4agri#hasRole
 
 s4agri:hasRole a owl:ObjectProperty ;
+	rdfs:comment "A relation to indicate the role of a given node in a communication channel or network."@en ;
 	rdfs:label "has role"@en .
 # 
 # https://w3id.org/def/saref4agri#hosts
 
 s4agri:hosts a owl:ObjectProperty ;
 	owl:inverseOf s4agri:isHostedBy ;
+	rdfs:comment "Relation between a platform and the systems it hosts."@en ;
 	rdfs:label "host"@en .
 # 
 # https://w3id.org/def/saref4agri#inDeployment
 
 s4agri:inDeployment a owl:ObjectProperty ;
+	rdfs:comment "Relation between a platform and the deployment(s) that takes place in the platform."@en ;
 	rdfs:label "in deployment"@en .
 # 
 # https://w3id.org/def/saref4agri#isConstituentOf
 
 s4agri:isConstituentOf a owl:ObjectProperty ;
+	rdfs:comment "Relation between a node and the network(s) it is part of."@en ;
 	rdfs:label "is constituent of"@en .
 # 
 # https://w3id.org/def/saref4agri#isDeployedAtSpace
 
 s4agri:isDeployedAtSpace a owl:ObjectProperty ;
-	rdfs:comment "is deployed at space"@en .
+	rdfs:comment "Relation to indicate the geographical componet of a deployment."@en , "is deployed at space"@en .
 # 
 # https://w3id.org/def/saref4agri#isFeatureOfInterestOf
 
 s4agri:isFeatureOfInterestOf a owl:ObjectProperty ;
+	rdfs:comment "Relation betwwen a feature of interest and the measurments that are about it."@en ;
 	rdfs:label "is feature of interest of"@en .
 # 
 # https://w3id.org/def/saref4agri#isHostedBy
 
 s4agri:isHostedBy a owl:ObjectProperty ;
+	rdfs:comment "Relation between a system and its hosting platform."@en ;
 	rdfs:label "is hosted by"@en .
 # 
 # https://w3id.org/def/saref4agri#isPropertyOf
 
 s4agri:isPropertyOf a owl:ObjectProperty ;
+	rdfs:comment "Relation between a property and a feature of interest in which such property appears."@en ;
 	rdfs:label "is property of"@en .
 # 
 # https://w3id.org/def/saref4agri#measurementMadeBy
 
 s4agri:measurementMadeBy a owl:ObjectProperty ;
 	owl:inverseOf saref:makesMeasurement ;
+	rdfs:comment "Relation between a measurement and the device that made it."@en ;
 	rdfs:label "measurement made by"@en .
 # 
 # https://w3id.org/def/saref4agri#playedByNode
 
 s4agri:playedByNode a owl:ObjectProperty ;
+	rdfs:domain s4agri:CommunicationRole ;
+	rdfs:range s4agri:Node ;
+	rdfs:comment "Relation use to indicate the node playing a given role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
 	rdfs:label "played by node"@en .
 # 
 # https://w3id.org/def/saref4agri#roleInCommunication
 
 s4agri:roleInCommunication a owl:ObjectProperty ;
+	rdfs:domain s4agri:CommunicationRole ;
+	rdfs:range s4agri:Communication ;
+	rdfs:comment "Relation use to indicate the communication in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
 	rdfs:label "role in communication"@en .
 # 
 # https://w3id.org/def/saref4agri#roleInNetwork
 
 s4agri:roleInNetwork a owl:ObjectProperty ;
+	rdfs:domain s4agri:CommunicationRole ;
+	rdfs:range s4agri:Network ;
+	rdfs:comment "Relation use to indicate the network in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
 	rdfs:label "role in network"@en .
 # 
 # https://w3id.org/def/saref4agri#toNode
 
 s4agri:toNode a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:topObjectProperty ;
+	rdfs:comment "Target node in directed communications."@en ;
 	rdfs:label "to node"@en .
 # 
 # https://w3id.org/saref#accomplishes
@@ -600,6 +624,7 @@ s4agri:Network a owl:Class ;
 
 s4agri:Node a owl:Class ;
 	rdfs:subClassOf saref:Device ;
+	rdfs:comment "Every system connected to at leas another one in a network."@en ;
 	rdfs:label "Node"@es .
 # 
 # https://w3id.org/def/saref4agri#Platform
@@ -617,7 +642,8 @@ _:genid9 a owl:Restriction ;
 	owl:onProperty s4agri:inDeployment ;
 	owl:someValuesFrom s4agri:Deployment .
 
-s4agri:Platform rdfs:label "Platform"@en .
+s4agri:Platform rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)"@en ;
+	rdfs:label "Platform"@en .
 # 
 # https://w3id.org/def/saref4agri#System
 
@@ -640,7 +666,8 @@ _:genid12 a owl:Restriction ;
 	owl:onProperty saref:consistsOf ;
 	owl:allValuesFrom s4agri:System .
 
-s4agri:System rdfs:label "System"@en .
+s4agri:System rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)"@en ;
+	rdfs:label "System"@en .
 # 
 # https://w3id.org/saref#Actuator
 
