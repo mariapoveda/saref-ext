@@ -144,18 +144,28 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  https://w3id.org/def/saref4agri#deployedOnPlatform
 :deployedOnPlatform rdf:type owl:ObjectProperty ;
                     owl:inverseOf :inDeployment ;
+                    rdfs:comment "Relation between a deployment and the platform(s) involved in the deployment."@en ;
                     rdfs:label "deployed on platform"@en .
 
 
 ###  https://w3id.org/def/saref4agri#deployedSystem
 :deployedSystem rdf:type owl:ObjectProperty ;
                 owl:inverseOf :hasDeployment ;
+                rdfs:comment "Relation between a deployment and the system deployed."@en ;
                 rdfs:label "deployed system"@en .
 
 
 ###  https://w3id.org/def/saref4agri#fromNode
 :fromNode rdf:type owl:ObjectProperty ;
+          rdfs:comment "Origin node in directed communications."@en ;
           rdfs:label "from node"@en .
+
+
+###  https://w3id.org/def/saref4agri#hasConstituent
+:hasConstituent rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isConstituentOf ;
+                rdfs:comment "Relation between a network and its constituents systems."@en ;
+                rdfs:label "has constituent"@en .
 
 
 ###  https://w3id.org/def/saref4agri#hasDeployment
@@ -163,73 +173,110 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:label "has deployment"@en .
 
 
+###  https://w3id.org/def/saref4agri#hasDeploymentPeriod
+:hasDeploymentPeriod rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Relation to indicate the temporal duration or period of a deployment."@en ,
+                                  "has deployment period"@en .
+
+
 ###  https://w3id.org/def/saref4agri#hasFeatureOfInterest
 :hasFeatureOfInterest rdf:type owl:ObjectProperty ;
                       owl:inverseOf :isFeatureOfInterestOf ;
+                      rdfs:comment "Relation between a measurement and the feature of interest being measured."@en ;
                       rdfs:label "has feature of interest"@en .
 
 
 ###  https://w3id.org/def/saref4agri#hasProperty
 :hasProperty rdf:type owl:ObjectProperty ;
              owl:inverseOf :isPropertyOf ;
+             rdfs:comment "Relation between a feature of interest and its properties."@en ;
              rdfs:label "has property"@en .
 
 
 ###  https://w3id.org/def/saref4agri#hasRole
 :hasRole rdf:type owl:ObjectProperty ;
+         rdfs:comment "A relation to indicate the role of a given node in a communication channel or network."@en ;
          rdfs:label "has role"@en .
 
 
 ###  https://w3id.org/def/saref4agri#hosts
 :hosts rdf:type owl:ObjectProperty ;
        owl:inverseOf :isHostedBy ;
+       rdfs:comment "Relation between a platform and the systems it hosts."@en ;
        rdfs:label "host"@en .
 
 
 ###  https://w3id.org/def/saref4agri#inDeployment
 :inDeployment rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relation between a platform and the deployment(s) that takes place in the platform."@en ;
               rdfs:label "in deployment"@en .
+
+
+###  https://w3id.org/def/saref4agri#isConstituentOf
+:isConstituentOf rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relation between a node and the network(s) it is part of."@en ;
+                 rdfs:label "is constituent of"@en .
+
+
+###  https://w3id.org/def/saref4agri#isDeployedAtSpace
+:isDeployedAtSpace rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Relation to indicate the geographical componet of a deployment."@en ,
+                                "is deployed at space"@en .
 
 
 ###  https://w3id.org/def/saref4agri#isFeatureOfInterestOf
 :isFeatureOfInterestOf rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Relation betwwen a feature of interest and the measurments that are about it."@en ;
                        rdfs:label "is feature of interest of"@en .
 
 
 ###  https://w3id.org/def/saref4agri#isHostedBy
 :isHostedBy rdf:type owl:ObjectProperty ;
+            rdfs:comment "Relation between a system and its hosting platform."@en ;
             rdfs:label "is hosted by"@en .
 
 
 ###  https://w3id.org/def/saref4agri#isPropertyOf
 :isPropertyOf rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relation between a property and a feature of interest in which such property appears."@en ;
               rdfs:label "is property of"@en .
 
 
 ###  https://w3id.org/def/saref4agri#measurementMadeBy
 :measurementMadeBy rdf:type owl:ObjectProperty ;
                    owl:inverseOf <https://w3id.org/saref#makesMeasurement> ;
+                   rdfs:comment "Relation between a measurement and the device that made it."@en ;
                    rdfs:label "measurement made by"@en .
 
 
 ###  https://w3id.org/def/saref4agri#playedByNode
 :playedByNode rdf:type owl:ObjectProperty ;
+              rdfs:domain :CommunicationRole ;
+              rdfs:range :Node ;
+              rdfs:comment "Relation use to indicate the node playing a given role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
               rdfs:label "played by node"@en .
 
 
 ###  https://w3id.org/def/saref4agri#roleInCommunication
 :roleInCommunication rdf:type owl:ObjectProperty ;
+                     rdfs:domain :CommunicationRole ;
+                     rdfs:range :Communication ;
+                     rdfs:comment "Relation use to indicate the communication in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
                      rdfs:label "role in communication"@en .
 
 
 ###  https://w3id.org/def/saref4agri#roleInNetwork
 :roleInNetwork rdf:type owl:ObjectProperty ;
+               rdfs:domain :CommunicationRole ;
+               rdfs:range :Network ;
+               rdfs:comment "Relation use to indicate the network in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
                rdfs:label "role in network"@en .
 
 
 ###  https://w3id.org/def/saref4agri#toNode
 :toNode rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:comment "Target node in directed communications."@en ;
         rdfs:label "to node"@en .
 
 
@@ -343,7 +390,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/saref4agri#hasProtocol
 :hasProtocol rdf:type owl:DatatypeProperty ;
-             rdfs:range rdfs:Literal .
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "The protocol used in a given communition between nodes."@en ;
+             rdfs:label "has protocol"@en .
 
 
 ###  https://w3id.org/saref#hasDescription
@@ -494,11 +543,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4agri#Communication
 :Communication rdf:type owl:Class ;
+               rdfs:comment "An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included."@en ;
                rdfs:label "Communication"@es .
 
 
 ###  https://w3id.org/def/saref4agri#CommunicationRole
 :CommunicationRole rdf:type owl:Class ;
+                   rdfs:comment "An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel."@en ;
                    rdfs:label "Communication role"@es .
 
 
@@ -512,6 +563,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                               owl:onProperty :deployedSystem ;
                               owl:someValuesFrom :System
                             ] ;
+            rdfs:comment "The scenario, including temporal and spatial information, in which the devices are installed."@en ;
             rdfs:label "Deployment"@en .
 
 
@@ -532,11 +584,14 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4agri#Network
 :Network rdf:type owl:Class ;
+         rdfs:comment "Collection of nodes connected."@en ;
          rdfs:label "Network"@es .
 
 
 ###  https://w3id.org/def/saref4agri#Node
 :Node rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/saref#Device> ;
+      rdfs:comment "Every system connected to at leas another one in a network."@en ;
       rdfs:label "Node"@es .
 
 
@@ -550,6 +605,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                             owl:onProperty :inDeployment ;
                             owl:someValuesFrom :Deployment
                           ] ;
+          rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)"@en ;
           rdfs:label "Platform"@en .
 
 
@@ -567,6 +623,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                           owl:onProperty <https://w3id.org/saref#consistsOf> ;
                           owl:allValuesFrom :System
                         ] ;
+        rdfs:comment "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)"@en ;
         rdfs:label "System"@en .
 
 
