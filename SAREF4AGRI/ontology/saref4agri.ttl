@@ -178,10 +178,21 @@ s4agri:deployedSystem a owl:ObjectProperty ;
 s4agri:fromNode a owl:ObjectProperty ;
 	rdfs:label "from node"@en .
 # 
+# https://w3id.org/def/saref4agri#hasConstituent
+
+s4agri:hasConstituent a owl:ObjectProperty ;
+	owl:inverseOf s4agri:isConstituentOf ;
+	rdfs:label "has constituent"@en .
+# 
 # https://w3id.org/def/saref4agri#hasDeployment
 
 s4agri:hasDeployment a owl:ObjectProperty ;
 	rdfs:label "has deployment"@en .
+# 
+# https://w3id.org/def/saref4agri#hasDeploymentPeriod
+
+s4agri:hasDeploymentPeriod a owl:ObjectProperty ;
+	rdfs:comment "has deployment period"@en .
 # 
 # https://w3id.org/def/saref4agri#hasFeatureOfInterest
 
@@ -210,6 +221,16 @@ s4agri:hosts a owl:ObjectProperty ;
 
 s4agri:inDeployment a owl:ObjectProperty ;
 	rdfs:label "in deployment"@en .
+# 
+# https://w3id.org/def/saref4agri#isConstituentOf
+
+s4agri:isConstituentOf a owl:ObjectProperty ;
+	rdfs:label "is constituent of"@en .
+# 
+# https://w3id.org/def/saref4agri#isDeployedAtSpace
+
+s4agri:isDeployedAtSpace a owl:ObjectProperty ;
+	rdfs:comment "is deployed at space"@en .
 # 
 # https://w3id.org/def/saref4agri#isFeatureOfInterestOf
 
@@ -369,7 +390,9 @@ saref:relatesToProperty a owl:ObjectProperty ;
 # https://w3id.org/def/saref4agri#hasProtocol
 
 s4agri:hasProtocol a owl:DatatypeProperty ;
-	rdfs:range rdfs:Literal .
+	rdfs:range rdfs:Literal ;
+	rdfs:comment "The protocol used in a given communition between nodes."@en ;
+	rdfs:label "has protocol"@en .
 # 
 # https://w3id.org/saref#hasDescription
 
@@ -521,11 +544,13 @@ time:TemporalEntity a owl:Class ;
 # https://w3id.org/def/saref4agri#Communication
 
 s4agri:Communication a owl:Class ;
+	rdfs:comment "An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included."@en ;
 	rdfs:label "Communication"@es .
 # 
 # https://w3id.org/def/saref4agri#CommunicationRole
 
 s4agri:CommunicationRole a owl:Class ;
+	rdfs:comment "An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel."@en ;
 	rdfs:label "Communication role"@es .
 # 
 # https://w3id.org/def/saref4agri#Deployment
@@ -543,7 +568,8 @@ _:genid5 a owl:Restriction ;
 	owl:onProperty s4agri:deployedSystem ;
 	owl:someValuesFrom s4agri:System .
 
-s4agri:Deployment rdfs:label "Deployment"@en .
+s4agri:Deployment rdfs:comment "The scenario, including temporal and spatial information, in which the devices are installed."@en ;
+	rdfs:label "Deployment"@en .
 # 
 # https://w3id.org/def/saref4agri#FeatureOfInterest
 
@@ -567,11 +593,13 @@ s4agri:FeatureOfInterest rdfs:comment """WARNING!
 # https://w3id.org/def/saref4agri#Network
 
 s4agri:Network a owl:Class ;
+	rdfs:comment "Collection of nodes connected."@en ;
 	rdfs:label "Network"@es .
 # 
 # https://w3id.org/def/saref4agri#Node
 
 s4agri:Node a owl:Class ;
+	rdfs:subClassOf saref:Device ;
 	rdfs:label "Node"@es .
 # 
 # https://w3id.org/def/saref4agri#Platform
