@@ -1733,16 +1733,6 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
-                                                       owl:disjointWith <https://w3id.org/saref#Measurement> ,
-                                                                        <https://w3id.org/saref#Property> ,
-                                                                        <https://w3id.org/saref#UnitOfMeasure> ;
-                                                       rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
-                                                       rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-                                                       rdfs:label "Spatial thing"@en .
-
-
 ###  https://w3id.org/def/saref4bldg#Actuator
 :Actuator rdf:type owl:Class ;
           rdfs:subClassOf :DistributionControlDevice ,
@@ -1896,12 +1886,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
 ###  https://w3id.org/def/saref4bldg#Building
 :Building rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
-                            owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
-                          ] ,
-                          [ rdf:type owl:Restriction ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :hasSpace ;
                             owl:allValuesFrom :BuildingSpace
                           ] ;
@@ -1928,8 +1913,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
 ###  https://w3id.org/def/saref4bldg#BuildingSpace
 :BuildingSpace rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
-                               [ rdf:type owl:Restriction ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :contains ;
                                  owl:allValuesFrom :PhysicalObject
                                ] ,
@@ -3056,12 +3040,7 @@ Power outlets are commonly connected within a junction box; data outlets may be 
 
 ###  https://w3id.org/def/saref4bldg#PhysicalObject
 :PhysicalObject rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
-                                  owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
-                                ] ,
-                                [ rdf:type owl:Restriction ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty :contains ;
                                   owl:allValuesFrom :PhysicalObject
                                 ] ,
