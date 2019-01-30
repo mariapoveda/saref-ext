@@ -119,48 +119,25 @@
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Feature> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#Geometry> .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/dc/elements/1.1/description> "A spatial representation for a given feature."@en .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial representation for a given feature."@en .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "hasGeometry"@en .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2004/02/skos/core#definition> "A spatial representation for a given feature."@en .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasGeometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfContains
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/description> "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#comment> "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*"@en .
-<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfWithin
 <http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> .
 <http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> .
-<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/description> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en .
 <http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#comment> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en .
 <http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#label> "within"@en .
-<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en .
-<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2004/02/skos/core#prefLabel> "within"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -362,32 +339,16 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
 _:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.opengis.net/ont/geosparql#Geometry> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/description> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature"@en .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/description> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#SpatialObject
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -399,17 +360,9 @@ _:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/o
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
 _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/description> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialObject"@en .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -418,7 +371,6 @@ _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/0
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84." .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
-<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "point" .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
