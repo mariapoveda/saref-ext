@@ -23,7 +23,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>s4city</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/saref4city#</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -234,20 +234,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
-        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
-        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-        <dc:contributor>Matthew Perry</dc:contributor>
-        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
-        <dc:description xml:lang="en">A spatial representation for a given feature.</dc:description>
         <rdfs:comment xml:lang="en">A spatial representation for a given feature.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:label xml:lang="en">has geometry</rdfs:label>
-        <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
-        <skos:definition xml:lang="en">A spatial representation for a given feature.</skos:definition>
-        <skos:prefLabel xml:lang="en">hasGeometry</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -256,19 +245,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
-        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-        <dc:contributor>Matthew Perry</dc:contributor>
-        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
-        <dc:description xml:lang="en">Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*</dc:description>
         <rdfs:comment xml:lang="en">Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:label xml:lang="en">contains</rdfs:label>
-        <skos:definition xml:lang="en">Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*</skos:definition>
-        <skos:prefLabel xml:lang="en">contains</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -277,18 +256,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
-        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-        <dc:contributor>Matthew Perry</dc:contributor>
-        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
-        <dc:description xml:lang="en">Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***</dc:description>
         <rdfs:comment xml:lang="en">Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:label xml:lang="en">within</rdfs:label>
-        <skos:definition xml:lang="en">Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***</skos:definition>
-        <skos:prefLabel xml:lang="en">within</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -689,24 +659,10 @@
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-        <dc:contributor>Matthew Perry</dc:contributor>
-        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
-        <dc:description xml:lang="en">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</dc:description>
         <rdfs:comment xml:lang="en">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/gml"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:label xml:lang="en">Feature</rdfs:label>
-        <skos:definition xml:lang="en">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</skos:definition>
-        <skos:prefLabel xml:lang="en">Feature</skos:prefLabel>
     </owl:Class>
     
 
@@ -716,17 +672,9 @@
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-        <dc:contributor>Matthew Perry</dc:contributor>
-        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
-        <dc:description xml:lang="en">The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.</dc:description>
         <rdfs:comment xml:lang="en">The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/gml"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
-        <skos:definition xml:lang="en">The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.</skos:definition>
-        <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
     </owl:Class>
     
 
@@ -735,29 +683,9 @@
 
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfContains"/>
-                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:contributor>Matthew Perry</dc:contributor>
-        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-16</dc:date>
-        <dc:description xml:lang="en">The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry.</dc:description>
         <rdfs:comment xml:lang="en">The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/gml"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
         <rdfs:label xml:lang="en">SpatialObject</rdfs:label>
-        <skos:definition xml:lang="en">The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry.</skos:definition>
-        <skos:prefLabel xml:lang="en">SpatialObject</skos:prefLabel>
     </owl:Class>
     
 
@@ -778,7 +706,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:comment>A point, typically described using a coordinate system relative to Earth, such as WGS84.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
         <rdfs:label xml:lang="en">Point</rdfs:label>
-        <rdfs:label>point</rdfs:label>
     </owl:Class>
     
 
@@ -842,18 +769,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/vocab/cpsv#provides"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#PublicService"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/vocab/cpsv#uses"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#PublicService"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
@@ -878,6 +793,29 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:comment xml:lang="en">An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)</rdfs:comment>
         <rdfs:label xml:lang="en">Administrative area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#Agent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#Agent">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/cpsv#provides"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#PublicService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/cpsv#uses"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#PublicService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An agent making an action in the context of a city. An agent could be a person, software, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
     
 
@@ -939,7 +877,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#isOrganizedBy"/>
-                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1060,7 +998,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#isAssessedBy"/>
-                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

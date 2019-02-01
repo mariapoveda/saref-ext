@@ -18,7 +18,7 @@
 <https://w3id.org/def/saref4city> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4city> ;
 	dc:title "SAREF extension for Smart City"@en ;
-	owl:versionInfo "0.4"^^xsd:decimal ;
+	owl:versionInfo "0.5"^^xsd:decimal ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	dcterms:creator <http://w3id.org/people/mpoveda> ;
@@ -155,48 +155,23 @@ cpsv:uses a owl:ObjectProperty ;
 # http://www.opengis.net/ont/geosparql#hasGeometry
 
 geosp:hasGeometry a owl:ObjectProperty ;
-	rdfs:domain geosp:Feature ;
-	rdfs:range geosp:Geometry ;
-	dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "A spatial representation for a given feature."@en ;
 	rdfs:comment "A spatial representation for a given feature."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/geosparql#> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "has geometry"@en , "hasGeometry"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "A spatial representation for a given feature."@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "hasGeometry"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+	rdfs:label "has geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfContains
 
 geosp:sfContains a owl:ObjectProperty ;
-	rdfs:domain geosp:SpatialObject ;
-	rdfs:range geosp:SpatialObject ;
-	dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
 	rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "contains"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> """Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*"""@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "contains"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfWithin
 
 geosp:sfWithin a owl:ObjectProperty ;
-	rdfs:domain geosp:SpatialObject ;
-	rdfs:range geosp:SpatialObject ;
-	dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
 	rdfs:comment "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "within"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "within"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "within"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 
@@ -432,61 +407,26 @@ cpsv:PublicService a owl:Class ;
 # http://www.opengis.net/ont/geosparql#Feature
 
 geosp:Feature a owl:Class ;
-	rdfs:subClassOf geosp:SpatialObject , _:genid1 .
-
-_:genid1 a owl:Restriction ;
-	owl:onProperty geosp:hasGeometry ;
-	owl:allValuesFrom geosp:Geometry .
-
-geosp:Feature owl:disjointWith geosp:Geometry ;
-	dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
+	rdfs:subClassOf geosp:SpatialObject ;
+	owl:disjointWith geosp:Geometry ;
 	rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "Feature"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "Feature"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
 
 geosp:Geometry a owl:Class ;
 	rdfs:subClassOf geosp:SpatialObject ;
-	dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
 	rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "Geometry"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "Geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#SpatialObject
 
 geosp:SpatialObject a owl:Class ;
-	rdfs:subClassOf _:genid2 .
-
-_:genid2 a owl:Restriction ;
-	owl:onProperty geosp:sfContains ;
-	owl:allValuesFrom geosp:SpatialObject .
-
-geosp:SpatialObject rdfs:subClassOf _:genid3 .
-
-_:genid3 a owl:Restriction ;
-	owl:onProperty geo:location ;
-	owl:allValuesFrom geo:Point .
-
-geosp:SpatialObject dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
 	rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "SpatialObject"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "SpatialObject"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
 
@@ -501,7 +441,7 @@ spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
 sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
   """ , "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
 	rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-	rdfs:label "Point"@en , "point" .
+	rdfs:label "Point"@en .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 
@@ -540,19 +480,7 @@ time:TemporalEntity a owl:Class ;
 # http://xmlns.com/foaf/0.1/Agent
 
 <http://xmlns.com/foaf/0.1/Agent> a owl:Class ;
-	rdfs:subClassOf _:genid4 .
-
-_:genid4 a owl:Restriction ;
-	owl:onProperty cpsv:provides ;
-	owl:allValuesFrom s4city:PublicService .
-
-<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf _:genid5 .
-
-_:genid5 a owl:Restriction ;
-	owl:onProperty cpsv:uses ;
-	owl:allValuesFrom s4city:PublicService .
-
-<http://xmlns.com/foaf/0.1/Agent> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+	rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
 	rdfs:label "Agent"@en .
 # 
 # http://xmlns.com/foaf/0.1/Person
@@ -568,6 +496,24 @@ s4city:AdministrativeArea a owl:Class ;
 	rdfs:subClassOf geosp:Feature ;
 	rdfs:comment "An administrative division, unit, entity, area or region, also referred to as a subnational entity, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. (https://en.wikipedia.org/wiki/Administrative_division)"@en ;
 	rdfs:label "Administrative area"@en .
+# 
+# https://w3id.org/def/saref4city#Agent
+
+s4city:Agent a owl:Class ;
+	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty cpsv:provides ;
+	owl:allValuesFrom s4city:PublicService .
+
+s4city:Agent rdfs:subClassOf _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty cpsv:uses ;
+	owl:allValuesFrom s4city:PublicService .
+
+s4city:Agent rdfs:comment "An agent making an action in the context of a city. An agent could be a person, software, etc."@en ;
+	rdfs:label "Agent"@en .
 # 
 # https://w3id.org/def/saref4city#City
 
@@ -600,39 +546,39 @@ s4city:District a owl:Class ;
 # https://w3id.org/def/saref4city#Event
 
 s4city:Event a owl:Class ;
-	rdfs:subClassOf _:genid6 .
+	rdfs:subClassOf _:genid3 .
 
-_:genid6 a owl:Restriction ;
+_:genid3 a owl:Restriction ;
 	owl:onProperty s4city:hasAccesibility ;
 	owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> .
+
+s4city:Event rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty s4city:isOrganizedBy ;
+	owl:allValuesFrom s4city:Agent .
+
+s4city:Event rdfs:subClassOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty s4city:isSubEventOf ;
+	owl:allValuesFrom s4city:Event .
+
+s4city:Event rdfs:subClassOf _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty s4city:takesPlaceAtFacility ;
+	owl:allValuesFrom s4city:Facility .
 
 s4city:Event rdfs:subClassOf _:genid7 .
 
 _:genid7 a owl:Restriction ;
-	owl:onProperty s4city:isOrganizedBy ;
-	owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
+	owl:onProperty s4city:takesPlaceAtTime ;
+	owl:allValuesFrom time:TemporalEntity .
 
 s4city:Event rdfs:subClassOf _:genid8 .
 
 _:genid8 a owl:Restriction ;
-	owl:onProperty s4city:isSubEventOf ;
-	owl:allValuesFrom s4city:Event .
-
-s4city:Event rdfs:subClassOf _:genid9 .
-
-_:genid9 a owl:Restriction ;
-	owl:onProperty s4city:takesPlaceAtFacility ;
-	owl:allValuesFrom s4city:Facility .
-
-s4city:Event rdfs:subClassOf _:genid10 .
-
-_:genid10 a owl:Restriction ;
-	owl:onProperty s4city:takesPlaceAtTime ;
-	owl:allValuesFrom time:TemporalEntity .
-
-s4city:Event rdfs:subClassOf _:genid11 .
-
-_:genid11 a owl:Restriction ;
 	owl:onProperty saref:hasName ;
 	owl:allValuesFrom rdfs:Literal .
 
@@ -650,21 +596,21 @@ s4city:Facility a owl:Class ;
 # https://w3id.org/def/saref4city#FeatureOfInterest
 
 s4city:FeatureOfInterest a owl:Class ;
-	rdfs:subClassOf _:genid12 .
+	rdfs:subClassOf _:genid9 .
 
-_:genid12 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty s4city:hasKPI ;
 	owl:allValuesFrom s4city:KeyPerformanceIndicator .
 
-s4city:FeatureOfInterest rdfs:subClassOf _:genid13 .
+s4city:FeatureOfInterest rdfs:subClassOf _:genid10 .
 
-_:genid13 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty s4city:hasProperty ;
 	owl:allValuesFrom saref:Property .
 
-s4city:FeatureOfInterest rdfs:subClassOf _:genid14 .
+s4city:FeatureOfInterest rdfs:subClassOf _:genid11 .
 
-_:genid14 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty s4city:isFeatureOfInterestOf ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -674,27 +620,27 @@ s4city:FeatureOfInterest rdfs:comment """WARNING!
 # https://w3id.org/def/saref4city#KeyPerformanceIndicator
 
 s4city:KeyPerformanceIndicator a owl:Class ;
-	rdfs:subClassOf _:genid15 .
+	rdfs:subClassOf _:genid12 .
 
-_:genid15 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty s4city:hasCalculationPeriod ;
 	owl:allValuesFrom time:TemporalEntity .
 
-s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid16 .
+s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid13 .
 
-_:genid16 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty s4city:isKPIOf ;
 	owl:allValuesFrom s4city:FeatureOfInterest .
 
-s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid17 .
+s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid14 .
 
-_:genid17 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:allValuesFrom rdfs:Literal .
 
-s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid18 .
+s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid15 .
 
-_:genid18 a owl:Restriction ;
+_:genid15 a owl:Restriction ;
 	owl:onProperty saref:hasName ;
 	owl:allValuesFrom rdfs:Literal .
 
@@ -705,75 +651,75 @@ s4city:KeyPerformanceIndicator rdfs:comment "A Key Performance Indicator (KPI) i
 # https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment
 
 s4city:KeyPerformanceIndicatorAssessment a owl:Class ;
-	rdfs:subClassOf _:genid19 .
+	rdfs:subClassOf _:genid16 .
 
-_:genid19 a owl:Restriction ;
+_:genid16 a owl:Restriction ;
 	owl:onProperty s4city:assesses ;
 	owl:allValuesFrom s4city:FeatureOfInterest .
+
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty s4city:isAssessedBy ;
+	owl:allValuesFrom s4city:Agent .
+
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid18 .
+
+_:genid18 a owl:Restriction ;
+	owl:onProperty s4city:isDerivedFrom ;
+	owl:allValuesFrom saref:Measurement .
+
+s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid19 .
+
+_:genid19 a owl:Restriction ;
+	owl:onProperty s4city:quantifiesKPI ;
+	owl:allValuesFrom s4city:KeyPerformanceIndicator .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid20 .
 
 _:genid20 a owl:Restriction ;
-	owl:onProperty s4city:isAssessedBy ;
-	owl:allValuesFrom <http://xmlns.com/foaf/0.1/Agent> .
+	owl:onProperty s4city:refersToTime ;
+	owl:allValuesFrom time:TemporalEntity .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid21 .
 
 _:genid21 a owl:Restriction ;
-	owl:onProperty s4city:isDerivedFrom ;
-	owl:allValuesFrom saref:Measurement .
+	owl:onProperty saref:isMeasuredIn ;
+	owl:allValuesFrom saref:UnitOfMeasure .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid22 .
 
 _:genid22 a owl:Restriction ;
-	owl:onProperty s4city:quantifiesKPI ;
-	owl:allValuesFrom s4city:KeyPerformanceIndicator .
+	owl:onProperty s4city:hasCreationDate ;
+	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid23 .
 
 _:genid23 a owl:Restriction ;
-	owl:onProperty s4city:refersToTime ;
-	owl:allValuesFrom time:TemporalEntity .
+	owl:onProperty s4city:hasExpirationDate ;
+	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid24 .
 
 _:genid24 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:allValuesFrom saref:UnitOfMeasure .
+	owl:onProperty s4city:hasLastUpdateDate ;
+	owl:allValuesFrom xsd:dateTime .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid25 .
 
 _:genid25 a owl:Restriction ;
-	owl:onProperty s4city:hasCreationDate ;
-	owl:allValuesFrom xsd:dateTime .
+	owl:onProperty saref:hasDescription ;
+	owl:allValuesFrom rdfs:Literal .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid26 .
 
 _:genid26 a owl:Restriction ;
-	owl:onProperty s4city:hasExpirationDate ;
-	owl:allValuesFrom xsd:dateTime .
+	owl:onProperty saref:hasName ;
+	owl:allValuesFrom rdfs:Literal .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid27 .
 
 _:genid27 a owl:Restriction ;
-	owl:onProperty s4city:hasLastUpdateDate ;
-	owl:allValuesFrom xsd:dateTime .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid28 .
-
-_:genid28 a owl:Restriction ;
-	owl:onProperty saref:hasDescription ;
-	owl:allValuesFrom rdfs:Literal .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid29 .
-
-_:genid29 a owl:Restriction ;
-	owl:onProperty saref:hasName ;
-	owl:allValuesFrom rdfs:Literal .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid30 .
-
-_:genid30 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
@@ -798,33 +744,33 @@ s4city:PublicAdministration a owl:Class ;
 # https://w3id.org/def/saref4city#PublicService
 
 s4city:PublicService a owl:Class ;
-	rdfs:subClassOf cpsv:PublicService , _:genid31 .
+	rdfs:subClassOf cpsv:PublicService , _:genid28 .
 
-_:genid31 a owl:Restriction ;
+_:genid28 a owl:Restriction ;
 	owl:onProperty cpsv:physicallyAvailableAt ;
 	owl:allValuesFrom s4city:AdministrativeArea .
+
+s4city:PublicService rdfs:subClassOf _:genid29 .
+
+_:genid29 a owl:Restriction ;
+	owl:onProperty s4city:involvesFacility ;
+	owl:allValuesFrom s4city:Facility .
+
+s4city:PublicService rdfs:subClassOf _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty s4city:isAvailableInLanguage ;
+	owl:allValuesFrom dcterms:LinguisticSystem .
+
+s4city:PublicService rdfs:subClassOf _:genid31 .
+
+_:genid31 a owl:Restriction ;
+	owl:onProperty saref:hasDescription ;
+	owl:allValuesFrom rdfs:Literal .
 
 s4city:PublicService rdfs:subClassOf _:genid32 .
 
 _:genid32 a owl:Restriction ;
-	owl:onProperty s4city:involvesFacility ;
-	owl:allValuesFrom s4city:Facility .
-
-s4city:PublicService rdfs:subClassOf _:genid33 .
-
-_:genid33 a owl:Restriction ;
-	owl:onProperty s4city:isAvailableInLanguage ;
-	owl:allValuesFrom dcterms:LinguisticSystem .
-
-s4city:PublicService rdfs:subClassOf _:genid34 .
-
-_:genid34 a owl:Restriction ;
-	owl:onProperty saref:hasDescription ;
-	owl:allValuesFrom rdfs:Literal .
-
-s4city:PublicService rdfs:subClassOf _:genid35 .
-
-_:genid35 a owl:Restriction ;
 	owl:onProperty saref:hasName ;
 	owl:allValuesFrom rdfs:Literal .
 
@@ -843,33 +789,33 @@ saref:Actuator a owl:Class ;
 # https://w3id.org/saref#Device
 
 saref:Device a owl:Class ;
-	rdfs:subClassOf geosp:Feature , _:genid36 .
+	rdfs:subClassOf geosp:Feature , _:genid33 .
 
-_:genid36 a owl:Restriction ;
+_:genid33 a owl:Restriction ;
 	owl:onProperty saref:consistsOf ;
 	owl:allValuesFrom saref:Device .
+
+saref:Device rdfs:subClassOf _:genid34 .
+
+_:genid34 a owl:Restriction ;
+	owl:onProperty saref:controlsProperty ;
+	owl:allValuesFrom saref:Property .
+
+saref:Device rdfs:subClassOf _:genid35 .
+
+_:genid35 a owl:Restriction ;
+	owl:onProperty saref:makesMeasurement ;
+	owl:allValuesFrom saref:Measurement .
+
+saref:Device rdfs:subClassOf _:genid36 .
+
+_:genid36 a owl:Restriction ;
+	owl:onProperty saref:measuresProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:Device rdfs:subClassOf _:genid37 .
 
 _:genid37 a owl:Restriction ;
-	owl:onProperty saref:controlsProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Device rdfs:subClassOf _:genid38 .
-
-_:genid38 a owl:Restriction ;
-	owl:onProperty saref:makesMeasurement ;
-	owl:allValuesFrom saref:Measurement .
-
-saref:Device rdfs:subClassOf _:genid39 .
-
-_:genid39 a owl:Restriction ;
-	owl:onProperty saref:measuresProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Device rdfs:subClassOf _:genid40 .
-
-_:genid40 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -879,53 +825,53 @@ saref:Device rdfs:comment "A tangible object designed to accomplish a particular
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid41 .
+	rdfs:subClassOf _:genid38 .
 
-_:genid41 a owl:Restriction ;
+_:genid38 a owl:Restriction ;
 	owl:onProperty s4city:hasFeatureOfInterest ;
 	owl:allValuesFrom s4city:FeatureOfInterest .
+
+saref:Measurement rdfs:subClassOf _:genid39 .
+
+_:genid39 a owl:Restriction ;
+	owl:onProperty s4city:measurementMadeBy ;
+	owl:allValuesFrom saref:Device .
+
+saref:Measurement rdfs:subClassOf _:genid40 .
+
+_:genid40 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:allValuesFrom saref:UnitOfMeasure .
+
+saref:Measurement rdfs:subClassOf _:genid41 .
+
+_:genid41 a owl:Restriction ;
+	owl:onProperty saref:relatesToProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:Measurement rdfs:subClassOf _:genid42 .
 
 _:genid42 a owl:Restriction ;
-	owl:onProperty s4city:measurementMadeBy ;
-	owl:allValuesFrom saref:Device .
-
-saref:Measurement rdfs:subClassOf _:genid43 .
-
-_:genid43 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:allValuesFrom saref:UnitOfMeasure .
-
-saref:Measurement rdfs:subClassOf _:genid44 .
-
-_:genid44 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Measurement rdfs:subClassOf _:genid45 .
-
-_:genid45 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid46 .
+saref:Measurement rdfs:subClassOf _:genid43 .
 
-_:genid46 a owl:Restriction ;
+_:genid43 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid47 .
+saref:Measurement rdfs:subClassOf _:genid44 .
 
-_:genid47 a owl:Restriction ;
+_:genid44 a owl:Restriction ;
 	owl:onProperty saref:hasTimestamp ;
 	owl:allValuesFrom xsd:dateTime .
 
-saref:Measurement rdfs:subClassOf _:genid48 .
+saref:Measurement rdfs:subClassOf _:genid45 .
 
-_:genid48 a owl:Restriction ;
+_:genid45 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
@@ -937,27 +883,27 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid49 .
+	rdfs:subClassOf _:genid46 .
 
-_:genid49 a owl:Restriction ;
+_:genid46 a owl:Restriction ;
 	owl:onProperty s4city:isPropertyOf ;
 	owl:allValuesFrom s4city:FeatureOfInterest .
 
-saref:Property rdfs:subClassOf _:genid50 .
+saref:Property rdfs:subClassOf _:genid47 .
 
-_:genid50 a owl:Restriction ;
+_:genid47 a owl:Restriction ;
 	owl:onProperty saref:isControlledByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid51 .
+saref:Property rdfs:subClassOf _:genid48 .
 
-_:genid51 a owl:Restriction ;
+_:genid48 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid52 .
+saref:Property rdfs:subClassOf _:genid49 .
 
-_:genid52 a owl:Restriction ;
+_:genid49 a owl:Restriction ;
 	owl:onProperty saref:relatesToMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
