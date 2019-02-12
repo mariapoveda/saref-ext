@@ -110,9 +110,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                                    rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
                                                    rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
                                                    rdfs:comment "A spatial representation for a given feature."@en ;
-                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
-                                                                    <http://www.opengis.net/ont/geosparql#> ,
-                                                                    <http://www.opengis.net/spec/geosparql/1.0> ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
                                                    rdfs:label "has geometry"@en .
 
 
@@ -459,33 +457,18 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                  owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
                                                                ] ;
                                                owl:disjointWith <http://www.opengis.net/ont/geosparql#Geometry> ;
-                                               <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
-                                               <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
-                                               <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                               <http://purl.org/dc/elements/1.1/description> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
                                                rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
-                                                                <http://www.opengis.net/ont/gml> ,
-                                                                <http://www.opengis.net/spec/geosparql/1.0> ;
-                                               rdfs:label "Feature"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
+                                                                <http://www.opengis.net/ont/gml> ;
+                                               rdfs:label "Feature"@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
                                                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
-                                                <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
-                                                <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
-                                                <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                                <http://purl.org/dc/elements/1.1/description> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
                                                 rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
-                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
-                                                                 <http://www.opengis.net/ont/gml> ,
-                                                                 <http://www.opengis.net/spec/geosparql/1.0> ;
-                                                rdfs:label "Geometry"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
-                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
+                                                rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+                                                rdfs:label "Geometry"@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#SpatialObject
@@ -498,17 +481,9 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                        owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
                                                                        owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#Point>
                                                                      ] ;
-                                                     <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" ;
-                                                     <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" ;
-                                                     <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^xsd:date ;
-                                                     <http://purl.org/dc/elements/1.1/description> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
                                                      rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
-                                                     rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
-                                                                      <http://www.opengis.net/ont/gml> ,
-                                                                      <http://www.opengis.net/spec/geosparql/1.0> ;
-                                                     rdfs:label "SpatialObject"@en ;
-                                                     <http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
-                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
+                                                     rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+                                                     rdfs:label "SpatialObject"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
