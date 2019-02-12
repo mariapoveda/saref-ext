@@ -23,7 +23,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>s4city</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/saref4city#</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -297,32 +297,12 @@
     
 
 
-    <!-- https://w3id.org/def/saref4city#hasFeatureOfInterest -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#hasFeatureOfInterest">
-        <owl:inverseOf rdf:resource="https://w3id.org/def/saref4city#isFeatureOfInterestOf"/>
-        <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/def/saref4city#hasKPI -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#hasKPI">
         <owl:inverseOf rdf:resource="https://w3id.org/def/saref4city#isKPIOf"/>
         <rdfs:label xml:lang="en">has key performance indicator</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/saref4city#hasProperty -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#hasProperty">
-        <owl:inverseOf rdf:resource="https://w3id.org/def/saref4city#isPropertyOf"/>
-        <rdfs:label xml:lang="en">has property</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -363,15 +343,6 @@
     
 
 
-    <!-- https://w3id.org/def/saref4city#isFeatureOfInterestOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#isFeatureOfInterestOf">
-        <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/def/saref4city#isKPIOf -->
 
 
@@ -390,29 +361,11 @@
     
 
 
-    <!-- https://w3id.org/def/saref4city#isPropertyOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#isPropertyOf">
-        <rdfs:label xml:lang="en">is property of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/def/saref4city#isSubEventOf -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#isSubEventOf">
         <rdfs:label xml:lang="en">is subevent of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/saref4city#measurementMadeBy -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#measurementMadeBy">
-        <owl:inverseOf rdf:resource="https://w3id.org/saref#makesMeasurement"/>
     </owl:ObjectProperty>
     
 
@@ -472,12 +425,41 @@
     
 
 
+    <!-- https://w3id.org/saref#hasFeatureOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#hasFeatureOfInterest">
+        <owl:inverseOf rdf:resource="https://w3id.org/saref#isFeatureOfInterestOf"/>
+        <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/saref#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#hasProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/saref#isPropertyOf"/>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/saref#isControlledByDevice -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#isControlledByDevice">
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
         <rdfs:label xml:lang="en">is controlled by device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/saref#isFeatureOfInterestOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#isFeatureOfInterestOf">
+        <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -502,13 +484,30 @@
     
 
 
+    <!-- https://w3id.org/saref#isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#isPropertyOf">
+        <rdfs:label xml:lang="en">is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/saref#makesMeasurement -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/saref#makesMeasurement">
+        <owl:inverseOf rdf:resource="https://w3id.org/saref#measurementMadeBy"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
         <rdfs:label xml:lang="en">makes measurement</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/saref#measurementMadeBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#measurementMadeBy"/>
     
 
 
@@ -922,34 +921,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     
 
 
-    <!-- https://w3id.org/def/saref4city#FeatureOfInterest -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/saref4city#FeatureOfInterest">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#hasKPI"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#KeyPerformanceIndicator"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#hasProperty"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#isFeatureOfInterestOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Measurement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">WARNING!
- This class might be moved to the SAREF ontology</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/saref4city#KeyPerformanceIndicator -->
 
 
@@ -963,7 +934,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#isKPIOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#FeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -992,7 +963,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#assesses"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#FeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1185,26 +1156,54 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     
 
 
+    <!-- https://w3id.org/saref#FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#hasKPI"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#KeyPerformanceIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#isFeatureOfInterestOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">WARNING!
+ This class might be moved to the SAREF ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/saref#Measurement -->
 
 
     <owl:Class rdf:about="https://w3id.org/saref#Measurement">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#hasFeatureOfInterest"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#measurementMadeBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Device"/>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#measurementMadeBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Device"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1254,12 +1253,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:Class rdf:about="https://w3id.org/saref#Property">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#isPropertyOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#isControlledByDevice"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Device"/>
             </owl:Restriction>
@@ -1268,6 +1261,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#isMeasuredByDevice"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
