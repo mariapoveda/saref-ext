@@ -31,7 +31,7 @@
 # #
 # #    Annotation properties
 # #
-# ################################################################# 
+# #################################################################
 # 
 # 
 # http://purl.org/dc/elements/1.1/contributor
@@ -136,7 +136,7 @@ geosp:hasGeometry a owl:ObjectProperty ;
 	rdfs:domain geosp:Feature ;
 	rdfs:range geosp:Geometry ;
 	rdfs:comment "A spatial representation for a given feature."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/geosparql#> , <http://www.opengis.net/spec/geosparql/1.0> ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
 	rdfs:label "has geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfContains
@@ -490,29 +490,17 @@ _:genid1 a owl:Restriction ;
 	owl:allValuesFrom geosp:Geometry .
 
 geosp:Feature owl:disjointWith geosp:Geometry ;
-	dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
 	rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "Feature"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> ;
+	rdfs:label "Feature"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
 
 geosp:Geometry a owl:Class ;
 	rdfs:subClassOf geosp:SpatialObject ;
-	dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
 	rdfs:comment "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "Geometry"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "Geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#SpatialObject
 
@@ -529,15 +517,9 @@ _:genid3 a owl:Restriction ;
 	owl:onProperty geo:location ;
 	owl:allValuesFrom geo:Point .
 
-geosp:SpatialObject dc:contributor "Matthew Perry" ;
-	dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-	dc:date "2011-06-16"^^xsd:date ;
-	dc:description "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
-	rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
-	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/gml> , <http://www.opengis.net/spec/geosparql/1.0> ;
-	rdfs:label "SpatialObject"@en ;
-	<http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
-	<http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
+geosp:SpatialObject rdfs:comment "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en ;
+	rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label "SpatialObject"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
 
