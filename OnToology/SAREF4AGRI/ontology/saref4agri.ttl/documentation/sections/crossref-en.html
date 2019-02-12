@@ -1,4 +1,4 @@
-<h2  id="crossreference" class="list">Cross reference for SAREF extension for Agriculture classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<html><h2 id="crossreference" class="list">Cross reference for SAREF extension for Agriculture classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by SAREF extension for Agriculture.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
@@ -29,8 +29,7 @@ This section provides details for each class and property defined by SAREF exten
          <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature Feature</a>
       </li>
       <li>
-         <a href="#FeatureOfInterest"
-            title="https://w3id.org/def/saref4agri#FeatureOfInterest">Feature of interest</a>
+         <a href="#https://w3id.org/saref#FeatureOfInterest" title="https://w3id.org/saref#FeatureOfInterest">Feature of interest</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#Function" title="https://w3id.org/saref#Function">Function</a>
@@ -324,29 +323,27 @@ This section provides details for each class and property defined by SAREF exten
          </dd>
       </dl>
    </div>
-   <div class="entity" id="FeatureOfInterest">
+   <div class="entity" id="https://w3id.org/saref#FeatureOfInterest">
       <h3>Feature of interest<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#FeatureOfInterest</p>
+         <strong>IRI:</strong> https://w3id.org/saref#FeatureOfInterest</p>
       <div class="comment">
-         <span class="markdown">WARNING!
- This class might be moved to the SAREF ontology</span>
+         <span class="markdown"/>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#hasProperty" title="https://w3id.org/def/saref4agri#hasProperty">has property</a>
+            <a href="#https://w3id.org/saref#hasProperty" title="https://w3id.org/saref#hasProperty">has property</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#isFeatureOfInterestOf"
-               title="https://w3id.org/def/saref4agri#isFeatureOfInterestOf">is feature of interest of</a>
+            <a href="#https://w3id.org/saref#isFeatureOfInterestOf" title="https://w3id.org/saref#isFeatureOfInterestOf">is feature of interest of</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
@@ -501,12 +498,10 @@ This section provides details for each class and property defined by SAREF exten
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#hasFeatureOfInterest"
-               title="https://w3id.org/def/saref4agri#hasFeatureOfInterest">has feature of interest</a>
+            <a href="#https://w3id.org/saref#hasFeatureOfInterest" title="https://w3id.org/saref#hasFeatureOfInterest">has feature of interest</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#FeatureOfInterest"
-               title="https://w3id.org/def/saref4agri#FeatureOfInterest">Feature of interest</a>
+            <a href="#https://w3id.org/saref#FeatureOfInterest" title="https://w3id.org/saref#FeatureOfInterest">Feature of interest</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -676,14 +671,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#isPropertyOf" title="https://w3id.org/def/saref4agri#isPropertyOf">is property of</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#FeatureOfInterest"
-               title="https://w3id.org/def/saref4agri#FeatureOfInterest">Feature of interest</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#https://w3id.org/saref#isControlledByDevice" title="https://w3id.org/saref#isControlledByDevice">is controlled by device</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
@@ -695,6 +682,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#isPropertyOf" title="https://w3id.org/saref#isPropertyOf">is property of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#https://w3id.org/saref#FeatureOfInterest" title="https://w3id.org/saref#FeatureOfInterest">Feature of interest</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -973,6 +967,19 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dd>
       </dl>
       <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://dbpedia.org/resource/DBM" title="http://dbpedia.org/resource/DBM">decibel-milliwatts</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius"
+               title="http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius">degree Celsius</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millibar"
+               title="http://www.ontology-of-units-of-measure.org/resource/om-2/millibar">millibar</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre"
+               title="http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre">millimetre</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt"
+               title="http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt">millivolt</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
@@ -1025,8 +1032,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </a>
       </li>
       <li>
-         <a href="#hasFeatureOfInterest"
-            title="https://w3id.org/def/saref4agri#hasFeatureOfInterest">has feature of interest</a>
+         <a href="#https://w3id.org/saref#hasFeatureOfInterest" title="https://w3id.org/saref#hasFeatureOfInterest">has feature of interest</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#hasFunction" title="https://w3id.org/saref#hasFunction">has function</a>
@@ -1035,7 +1041,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">has geometry</a>
       </li>
       <li>
-         <a href="#hasProperty" title="https://w3id.org/def/saref4agri#hasProperty">has property</a>
+         <a href="#https://w3id.org/saref#hasProperty" title="https://w3id.org/saref#hasProperty">has property</a>
       </li>
       <li>
          <a href="#hasRole" title="https://w3id.org/def/saref4agri#hasRole">has role</a>
@@ -1068,8 +1074,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </a>
       </li>
       <li>
-         <a href="#isFeatureOfInterestOf"
-            title="https://w3id.org/def/saref4agri#isFeatureOfInterestOf">is feature of interest of</a>
+         <a href="#https://w3id.org/saref#isFeatureOfInterestOf" title="https://w3id.org/saref#isFeatureOfInterestOf">is feature of interest of</a>
       </li>
       <li>
          <a href="#isHostedBy" title="https://w3id.org/def/saref4agri#isHostedBy">is hosted by</a>
@@ -1081,14 +1086,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
       </li>
       <li>
-         <a href="#isPropertyOf" title="https://w3id.org/def/saref4agri#isPropertyOf">is property of</a>
+         <a href="#https://w3id.org/saref#isPropertyOf" title="https://w3id.org/saref#isPropertyOf">is property of</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#makesMeasurement" title="https://w3id.org/saref#makesMeasurement">makes measurement</a>
       </li>
       <li>
-         <a href="#measurementMadeBy"
-            title="https://w3id.org/def/saref4agri#measurementMadeBy">measurement made by</a>
+         <a href="#https://w3id.org/saref#measurementMadeBy" title="https://w3id.org/saref#measurementMadeBy">measurement made by</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#measuresProperty" title="https://w3id.org/saref#measuresProperty">measures property</a>
@@ -1348,22 +1352,27 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <span class="markdown">Relation to indicate the temporal duration or period of a deployment.</span>
       </div>
    </div>
-   <div class="entity" id="hasFeatureOfInterest">
+   <div class="entity" id="https://w3id.org/saref#hasFeatureOfInterest">
       <h3>has feature of interest<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasFeatureOfInterest</p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasFeatureOfInterest</p>
       <div class="comment">
          <span class="markdown">Relation between a measurement and the feature of interest being measured.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isFeatureOfInterestOf"
-                  title="https://w3id.org/def/saref4agri#isFeatureOfInterestOf">is feature of interest of</a>
+               <a href="#https://w3id.org/saref#isFeatureOfInterestOf" title="https://w3id.org/saref#isFeatureOfInterestOf">is feature of interest of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1423,21 +1432,27 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasProperty">
+   <div class="entity" id="https://w3id.org/saref#hasProperty">
       <h3>has property<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasProperty</p>
+         <strong>IRI:</strong> https://w3id.org/saref#hasProperty</p>
       <div class="comment">
          <span class="markdown">Relation between a feature of interest and its properties.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isPropertyOf" title="https://w3id.org/def/saref4agri#isPropertyOf">is property of</a>
+               <a href="#https://w3id.org/saref#isPropertyOf" title="https://w3id.org/saref#isPropertyOf">is property of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1606,22 +1621,27 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <span class="markdown">Relation to indicate the geographical componet of a deployment.</span>
       </div>
    </div>
-   <div class="entity" id="isFeatureOfInterestOf">
+   <div class="entity" id="https://w3id.org/saref#isFeatureOfInterestOf">
       <h3>is feature of interest of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isFeatureOfInterestOf</p>
+         <strong>IRI:</strong> https://w3id.org/saref#isFeatureOfInterestOf</p>
       <div class="comment">
          <span class="markdown">Relation betwwen a feature of interest and the measurments that are about it.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasFeatureOfInterest"
-                  title="https://w3id.org/def/saref4agri#hasFeatureOfInterest">has feature of interest</a>
+               <a href="#https://w3id.org/saref#hasFeatureOfInterest" title="https://w3id.org/saref#hasFeatureOfInterest">has feature of interest</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1675,21 +1695,27 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dd>
       </dl>
    </div>
-   <div class="entity" id="isPropertyOf">
+   <div class="entity" id="https://w3id.org/saref#isPropertyOf">
       <h3>is property of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isPropertyOf</p>
+         <strong>IRI:</strong> https://w3id.org/saref#isPropertyOf</p>
       <div class="comment">
          <span class="markdown">Relation between a property and a feature of interest in which such property appears.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasProperty" title="https://w3id.org/def/saref4agri#hasProperty">has property</a>
+               <a href="#https://w3id.org/saref#hasProperty" title="https://w3id.org/saref#hasProperty">has property</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1712,23 +1738,28 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#measurementMadeBy"
-                  title="https://w3id.org/def/saref4agri#measurementMadeBy">measurement made by</a>
+               <a href="#https://w3id.org/saref#measurementMadeBy" title="https://w3id.org/saref#measurementMadeBy">measurement made by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="measurementMadeBy">
+   <div class="entity" id="https://w3id.org/saref#measurementMadeBy">
       <h3>measurement made by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#measurementMadeBy</p>
+         <strong>IRI:</strong> https://w3id.org/saref#measurementMadeBy</p>
       <div class="comment">
          <span class="markdown">Relation between a measurement and the device that made it.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -2075,6 +2106,104 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dd>
       </dl>
    </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://dbpedia.org/resource/DBM" title="http://dbpedia.org/resource/DBM">decibel-milliwatts</a>
+      </li>
+      <li>
+         <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius"
+            title="http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius">degree Celsius</a>
+      </li>
+      <li>
+         <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millibar"
+            title="http://www.ontology-of-units-of-measure.org/resource/om-2/millibar">millibar</a>
+      </li>
+      <li>
+         <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre"
+            title="http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre">millimetre</a>
+      </li>
+      <li>
+         <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt"
+            title="http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt">millivolt</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://dbpedia.org/resource/DBM">
+      <h3>decibel-milliwatts<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dbpedia.org/resource/DBM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius">
+      <h3>degree Celsius<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.ontology-of-units-of-measure.org/resource/om-2/millibar">
+      <h3>millibar<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ontology-of-units-of-measure.org/resource/om-2/millibar</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre">
+      <h3>millimetre<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt">
+      <h3>millivolt<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
@@ -2084,3 +2213,4 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
+</html>

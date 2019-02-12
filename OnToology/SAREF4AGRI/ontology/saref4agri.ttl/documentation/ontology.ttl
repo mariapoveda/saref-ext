@@ -11,10 +11,9 @@
                                    <http://purl.org/dc/elements/1.1/contributor> <http://w3id.org/people/mpoveda> ;
                                    <http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Agricultural domain."@en ;
                                    <http://purl.org/dc/elements/1.1/title> "SAREF extension for Agriculture"@en ;
-                                   <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4agri" ;
                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4agri#" ;
-                                   owl:versionInfo 0.1 .
+                                   owl:versionInfo 0.2 .
 
 #################################################################
 #    Annotation properties
@@ -179,20 +178,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                   "has deployment period"@en .
 
 
-###  https://w3id.org/def/saref4agri#hasFeatureOfInterest
-:hasFeatureOfInterest rdf:type owl:ObjectProperty ;
-                      owl:inverseOf :isFeatureOfInterestOf ;
-                      rdfs:comment "Relation between a measurement and the feature of interest being measured."@en ;
-                      rdfs:label "has feature of interest"@en .
-
-
-###  https://w3id.org/def/saref4agri#hasProperty
-:hasProperty rdf:type owl:ObjectProperty ;
-             owl:inverseOf :isPropertyOf ;
-             rdfs:comment "Relation between a feature of interest and its properties."@en ;
-             rdfs:label "has property"@en .
-
-
 ###  https://w3id.org/def/saref4agri#hasRole
 :hasRole rdf:type owl:ObjectProperty ;
          rdfs:comment "A relation to indicate the role of a given node in a communication channel or network."@en ;
@@ -224,29 +209,10 @@ xsd:duration rdf:type rdfs:Datatype .
                                 "is deployed at space"@en .
 
 
-###  https://w3id.org/def/saref4agri#isFeatureOfInterestOf
-:isFeatureOfInterestOf rdf:type owl:ObjectProperty ;
-                       rdfs:comment "Relation betwwen a feature of interest and the measurments that are about it."@en ;
-                       rdfs:label "is feature of interest of"@en .
-
-
 ###  https://w3id.org/def/saref4agri#isHostedBy
 :isHostedBy rdf:type owl:ObjectProperty ;
             rdfs:comment "Relation between a system and its hosting platform."@en ;
             rdfs:label "is hosted by"@en .
-
-
-###  https://w3id.org/def/saref4agri#isPropertyOf
-:isPropertyOf rdf:type owl:ObjectProperty ;
-              rdfs:comment "Relation between a property and a feature of interest in which such property appears."@en ;
-              rdfs:label "is property of"@en .
-
-
-###  https://w3id.org/def/saref4agri#measurementMadeBy
-:measurementMadeBy rdf:type owl:ObjectProperty ;
-                   owl:inverseOf <https://w3id.org/saref#makesMeasurement> ;
-                   rdfs:comment "Relation between a measurement and the device that made it."@en ;
-                   rdfs:label "measurement made by"@en .
 
 
 ###  https://w3id.org/def/saref4agri#playedByNode
@@ -315,11 +281,27 @@ xsd:duration rdf:type rdfs:Datatype .
                                     rdfs:label "has command" .
 
 
+###  https://w3id.org/saref#hasFeatureOfInterest
+<https://w3id.org/saref#hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/saref#isFeatureOfInterestOf> ;
+                                              rdfs:comment "Relation between a measurement and the feature of interest being measured."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                              rdfs:label "has feature of interest"@en .
+
+
 ###  https://w3id.org/saref#hasFunction
 <https://w3id.org/saref#hasFunction> rdf:type owl:ObjectProperty ;
                                      rdfs:comment "A relationship identifying the type of function of a device" ;
                                      rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                      rdfs:label "has function" .
+
+
+###  https://w3id.org/saref#hasProperty
+<https://w3id.org/saref#hasProperty> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <https://w3id.org/saref#isPropertyOf> ;
+                                     rdfs:comment "Relation between a feature of interest and its properties."@en ;
+                                     rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                     rdfs:label "has property"@en .
 
 
 ###  https://w3id.org/saref#hasState
@@ -348,6 +330,13 @@ xsd:duration rdf:type rdfs:Datatype .
                                               rdfs:label "is controlled by device"@en .
 
 
+###  https://w3id.org/saref#isFeatureOfInterestOf
+<https://w3id.org/saref#isFeatureOfInterestOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:comment "Relation betwwen a feature of interest and the measurments that are about it."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                               rdfs:label "is feature of interest of"@en .
+
+
 ###  https://w3id.org/saref#isMeasuredByDevice
 <https://w3id.org/saref#isMeasuredByDevice> rdf:type owl:ObjectProperty ;
                                             rdfs:isDefinedBy <https://w3id.org/saref#> ;
@@ -360,10 +349,25 @@ xsd:duration rdf:type rdfs:Datatype .
                                       rdfs:label "is measured in"@en .
 
 
+###  https://w3id.org/saref#isPropertyOf
+<https://w3id.org/saref#isPropertyOf> rdf:type owl:ObjectProperty ;
+                                      rdfs:comment "Relation between a property and a feature of interest in which such property appears."@en ;
+                                      rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                      rdfs:label "is property of"@en .
+
+
 ###  https://w3id.org/saref#makesMeasurement
 <https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf <https://w3id.org/saref#measurementMadeBy> ;
                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                           rdfs:label "makes measurement"@en .
+
+
+###  https://w3id.org/saref#measurementMadeBy
+<https://w3id.org/saref#measurementMadeBy> rdf:type owl:ObjectProperty ;
+                                           rdfs:comment "Relation between a measurement and the device that made it."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                           rdfs:label "measurement made by"@en .
 
 
 ###  https://w3id.org/saref#measuresProperty
@@ -567,21 +571,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             rdfs:label "Deployment"@en .
 
 
-###  https://w3id.org/def/saref4agri#FeatureOfInterest
-:FeatureOfInterest rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasProperty ;
-                                     owl:allValuesFrom <https://w3id.org/saref#Property>
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :isFeatureOfInterestOf ;
-                                     owl:allValuesFrom <https://w3id.org/saref#Measurement>
-                                   ] ;
-                   rdfs:comment """WARNING!
- This class might be moved to the SAREF ontology"""@en ;
-                   rdfs:label "Feature of interest"@en .
-
-
 ###  https://w3id.org/def/saref4agri#Network
 :Network rdf:type owl:Class ;
          rdfs:comment "Collection of nodes connected."@en ;
@@ -659,6 +648,20 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                 rdfs:label "Device"@en .
 
 
+###  https://w3id.org/saref#FeatureOfInterest
+<https://w3id.org/saref#FeatureOfInterest> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/saref#hasProperty> ;
+                                                             owl:allValuesFrom <https://w3id.org/saref#Property>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/saref#isFeatureOfInterestOf> ;
+                                                             owl:allValuesFrom <https://w3id.org/saref#Measurement>
+                                                           ] ;
+                                           rdfs:comment <https://w3id.org/saref#> ;
+                                           rdfs:label "Feature of interest"@en .
+
+
 ###  https://w3id.org/saref#Function
 <https://w3id.org/saref#Function> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -680,8 +683,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> rdf:type owl:Class ;
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :hasFeatureOfInterest ;
-                                                       owl:allValuesFrom :FeatureOfInterest
+                                                       owl:onProperty <https://w3id.org/saref#hasFeatureOfInterest> ;
+                                                       owl:allValuesFrom <https://w3id.org/saref#FeatureOfInterest>
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
@@ -724,16 +727,16 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :isPropertyOf ;
-                                                    owl:allValuesFrom :FeatureOfInterest
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isControlledByDevice> ;
                                                     owl:allValuesFrom <https://w3id.org/saref#Device>
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isMeasuredByDevice> ;
                                                     owl:allValuesFrom <https://w3id.org/saref#Device>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/saref#isPropertyOf> ;
+                                                    owl:allValuesFrom <https://w3id.org/saref#FeatureOfInterest>
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#relatesToMeasurement> ;
@@ -800,6 +803,40 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
 #################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/DBM
+<http://dbpedia.org/resource/DBM> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/saref#UnitOfMeasure> ;
+                                  rdfs:label "decibel-milliwatts"@en .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius
+<http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> rdf:type owl:NamedIndividual ,
+                                                                                   <https://w3id.org/saref#UnitOfMeasure> ;
+                                                                          rdfs:label "degree Celsius"@en .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/millibar
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millibar> rdf:type owl:NamedIndividual ,
+                                                                              <https://w3id.org/saref#UnitOfMeasure> ;
+                                                                     rdfs:label "millibar"@en .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre> rdf:type owl:NamedIndividual ,
+                                                                                <https://w3id.org/saref#UnitOfMeasure> ;
+                                                                       rdfs:label "millimetre"@en .
+
+
+###  http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt> rdf:type owl:NamedIndividual ,
+                                                                               <https://w3id.org/saref#UnitOfMeasure> ;
+                                                                      rdfs:label "millivolt"@en .
+
+
+#################################################################
 #    Annotations
 #################################################################
 
@@ -814,4 +851,4 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                                    rdfs:label "location"@en .
 
 
-###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
