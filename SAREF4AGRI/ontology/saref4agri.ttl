@@ -18,7 +18,7 @@
 
 <https://w3id.org/def/saref4agri> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4agri> ;
-	owl:versionInfo "0.1"^^xsd:decimal ;
+	owl:versionInfo "0.2"^^xsd:decimal ;
 	dc:contributor <http://w3id.org/people/mpoveda> ;
 	vann:preferredNamespaceUri "https://w3id.org/def/saref4agri#" ;
 	vann:preferredNamespacePrefix "s4agri" ;
@@ -198,20 +198,6 @@ s4agri:hasDeployment a owl:ObjectProperty ;
 s4agri:hasDeploymentPeriod a owl:ObjectProperty ;
 	rdfs:comment "Relation to indicate the temporal duration or period of a deployment."@en , "has deployment period"@en .
 # 
-# https://w3id.org/def/saref4agri#hasFeatureOfInterest
-
-s4agri:hasFeatureOfInterest a owl:ObjectProperty ;
-	owl:inverseOf s4agri:isFeatureOfInterestOf ;
-	rdfs:comment "Relation between a measurement and the feature of interest being measured."@en ;
-	rdfs:label "has feature of interest"@en .
-# 
-# https://w3id.org/def/saref4agri#hasProperty
-
-s4agri:hasProperty a owl:ObjectProperty ;
-	owl:inverseOf s4agri:isPropertyOf ;
-	rdfs:comment "Relation between a feature of interest and its properties."@en ;
-	rdfs:label "has property"@en .
-# 
 # https://w3id.org/def/saref4agri#hasRole
 
 s4agri:hasRole a owl:ObjectProperty ;
@@ -242,30 +228,11 @@ s4agri:isConstituentOf a owl:ObjectProperty ;
 s4agri:isDeployedAtSpace a owl:ObjectProperty ;
 	rdfs:comment "Relation to indicate the geographical componet of a deployment."@en , "is deployed at space"@en .
 # 
-# https://w3id.org/def/saref4agri#isFeatureOfInterestOf
-
-s4agri:isFeatureOfInterestOf a owl:ObjectProperty ;
-	rdfs:comment "Relation betwwen a feature of interest and the measurments that are about it."@en ;
-	rdfs:label "is feature of interest of"@en .
-# 
 # https://w3id.org/def/saref4agri#isHostedBy
 
 s4agri:isHostedBy a owl:ObjectProperty ;
 	rdfs:comment "Relation between a system and its hosting platform."@en ;
 	rdfs:label "is hosted by"@en .
-# 
-# https://w3id.org/def/saref4agri#isPropertyOf
-
-s4agri:isPropertyOf a owl:ObjectProperty ;
-	rdfs:comment "Relation between a property and a feature of interest in which such property appears."@en ;
-	rdfs:label "is property of"@en .
-# 
-# https://w3id.org/def/saref4agri#measurementMadeBy
-
-s4agri:measurementMadeBy a owl:ObjectProperty ;
-	owl:inverseOf saref:makesMeasurement ;
-	rdfs:comment "Relation between a measurement and the device that made it."@en ;
-	rdfs:label "measurement made by"@en .
 # 
 # https://w3id.org/def/saref4agri#playedByNode
 
@@ -333,12 +300,28 @@ saref:hasCommand a owl:ObjectProperty ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has command"^^xsd:string .
 # 
+# https://w3id.org/saref#hasFeatureOfInterest
+
+saref:hasFeatureOfInterest a owl:ObjectProperty ;
+	owl:inverseOf saref:isFeatureOfInterestOf ;
+	rdfs:comment "Relation between a measurement and the feature of interest being measured."@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "has feature of interest"@en .
+# 
 # https://w3id.org/saref#hasFunction
 
 saref:hasFunction a owl:ObjectProperty ;
 	rdfs:comment "A relationship identifying the type of function of a device"^^xsd:string ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "has function"^^xsd:string .
+# 
+# https://w3id.org/saref#hasProperty
+
+saref:hasProperty a owl:ObjectProperty ;
+	owl:inverseOf saref:isPropertyOf ;
+	rdfs:comment "Relation between a feature of interest and its properties."@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "has property"@en .
 # 
 # https://w3id.org/saref#hasState
 
@@ -366,6 +349,13 @@ saref:isControlledByDevice a owl:ObjectProperty ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is controlled by device"@en .
 # 
+# https://w3id.org/saref#isFeatureOfInterestOf
+
+saref:isFeatureOfInterestOf a owl:ObjectProperty ;
+	rdfs:comment "Relation betwwen a feature of interest and the measurments that are about it."@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "is feature of interest of"@en .
+# 
 # https://w3id.org/saref#isMeasuredByDevice
 
 saref:isMeasuredByDevice a owl:ObjectProperty ;
@@ -378,11 +368,26 @@ saref:isMeasuredIn a owl:ObjectProperty ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is measured in"@en .
 # 
+# https://w3id.org/saref#isPropertyOf
+
+saref:isPropertyOf a owl:ObjectProperty ;
+	rdfs:comment "Relation between a property and a feature of interest in which such property appears."@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "is property of"@en .
+# 
 # https://w3id.org/saref#makesMeasurement
 
 saref:makesMeasurement a owl:ObjectProperty ;
+	owl:inverseOf saref:measurementMadeBy ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "makes measurement"@en .
+# 
+# https://w3id.org/saref#measurementMadeBy
+
+saref:measurementMadeBy a owl:ObjectProperty ;
+	rdfs:comment "Relation between a measurement and the device that made it."@en ;
+	rdfs:isDefinedBy <https://w3id.org/saref#> ;
+	rdfs:label "measurement made by"@en .
 # 
 # https://w3id.org/saref#measuresProperty
 
@@ -595,25 +600,6 @@ _:genid5 a owl:Restriction ;
 s4agri:Deployment rdfs:comment "The scenario, including temporal and spatial information, in which the devices are installed."@en ;
 	rdfs:label "Deployment"@en .
 # 
-# https://w3id.org/def/saref4agri#FeatureOfInterest
-
-s4agri:FeatureOfInterest a owl:Class ;
-	rdfs:subClassOf _:genid6 .
-
-_:genid6 a owl:Restriction ;
-	owl:onProperty s4agri:hasProperty ;
-	owl:allValuesFrom saref:Property .
-
-s4agri:FeatureOfInterest rdfs:subClassOf _:genid7 .
-
-_:genid7 a owl:Restriction ;
-	owl:onProperty s4agri:isFeatureOfInterestOf ;
-	owl:allValuesFrom saref:Measurement .
-
-s4agri:FeatureOfInterest rdfs:comment """WARNING!
- This class might be moved to the SAREF ontology"""@en ;
-	rdfs:label "Feature of interest"@en .
-# 
 # https://w3id.org/def/saref4agri#Network
 
 s4agri:Network a owl:Class ;
@@ -630,15 +616,15 @@ s4agri:Node a owl:Class ;
 # https://w3id.org/def/saref4agri#Platform
 
 s4agri:Platform a owl:Class ;
-	rdfs:subClassOf _:genid8 .
+	rdfs:subClassOf _:genid6 .
 
-_:genid8 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty s4agri:hosts ;
 	owl:someValuesFrom s4agri:System .
 
-s4agri:Platform rdfs:subClassOf _:genid9 .
+s4agri:Platform rdfs:subClassOf _:genid7 .
 
-_:genid9 a owl:Restriction ;
+_:genid7 a owl:Restriction ;
 	owl:onProperty s4agri:inDeployment ;
 	owl:someValuesFrom s4agri:Deployment .
 
@@ -648,21 +634,21 @@ s4agri:Platform rdfs:comment "A Platform is an entity that hosts other entities,
 # https://w3id.org/def/saref4agri#System
 
 s4agri:System a owl:Class ;
-	rdfs:subClassOf _:genid10 .
+	rdfs:subClassOf _:genid8 .
 
-_:genid10 a owl:Restriction ;
+_:genid8 a owl:Restriction ;
 	owl:onProperty s4agri:hasDeployment ;
 	owl:someValuesFrom s4agri:Deployment .
 
-s4agri:System rdfs:subClassOf _:genid11 .
+s4agri:System rdfs:subClassOf _:genid9 .
 
-_:genid11 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty s4agri:isHostedBy ;
 	owl:someValuesFrom s4agri:Platform .
 
-s4agri:System rdfs:subClassOf _:genid12 .
+s4agri:System rdfs:subClassOf _:genid10 .
 
-_:genid12 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty saref:consistsOf ;
 	owl:allValuesFrom s4agri:System .
 
@@ -679,22 +665,22 @@ saref:Actuator a owl:Class ;
 # https://w3id.org/saref#Command
 
 saref:Command a owl:Class ;
-	rdfs:subClassOf _:genid13 .
+	rdfs:subClassOf _:genid11 .
 
-_:genid13 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty saref:actsUpon ;
 	owl:allValuesFrom saref:State .
 
-saref:Command rdfs:subClassOf _:genid14 .
+saref:Command rdfs:subClassOf _:genid12 .
 
-_:genid14 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty saref:isCommandOf ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Function .
 
-saref:Command rdfs:subClassOf _:genid15 .
+saref:Command rdfs:subClassOf _:genid13 .
 
-_:genid15 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -706,6 +692,24 @@ saref:Command rdfs:comment "A directive that a device must support to perform a 
 saref:Device a owl:Class ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Device"@en .
+# 
+# https://w3id.org/saref#FeatureOfInterest
+
+saref:FeatureOfInterest a owl:Class ;
+	rdfs:subClassOf _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty saref:hasProperty ;
+	owl:allValuesFrom saref:Property .
+
+saref:FeatureOfInterest rdfs:subClassOf _:genid15 .
+
+_:genid15 a owl:Restriction ;
+	owl:onProperty saref:isFeatureOfInterestOf ;
+	owl:allValuesFrom saref:Measurement .
+
+saref:FeatureOfInterest rdfs:comment <https://w3id.org/saref#> ;
+	rdfs:label "Feature of interest"@en .
 # 
 # https://w3id.org/saref#Function
 
@@ -733,8 +737,8 @@ saref:Measurement a owl:Class ;
 	rdfs:subClassOf _:genid17 .
 
 _:genid17 a owl:Restriction ;
-	owl:onProperty s4agri:hasFeatureOfInterest ;
-	owl:allValuesFrom s4agri:FeatureOfInterest .
+	owl:onProperty saref:hasFeatureOfInterest ;
+	owl:allValuesFrom saref:FeatureOfInterest .
 
 saref:Measurement rdfs:subClassOf _:genid18 .
 
@@ -792,20 +796,20 @@ saref:Property a owl:Class ;
 	rdfs:subClassOf _:genid25 .
 
 _:genid25 a owl:Restriction ;
-	owl:onProperty s4agri:isPropertyOf ;
-	owl:allValuesFrom s4agri:FeatureOfInterest .
+	owl:onProperty saref:isControlledByDevice ;
+	owl:allValuesFrom saref:Device .
 
 saref:Property rdfs:subClassOf _:genid26 .
 
 _:genid26 a owl:Restriction ;
-	owl:onProperty saref:isControlledByDevice ;
+	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
 saref:Property rdfs:subClassOf _:genid27 .
 
 _:genid27 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredByDevice ;
-	owl:allValuesFrom saref:Device .
+	owl:onProperty saref:isPropertyOf ;
+	owl:allValuesFrom saref:FeatureOfInterest .
 
 saref:Property rdfs:subClassOf _:genid28 .
 
@@ -869,6 +873,40 @@ saref:UnitOfMeasure a owl:Class ;
 	rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)."^^xsd:string , "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
 	rdfs:isDefinedBy <http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure> , <https://w3id.org/saref#> ;
 	rdfs:label "Unit of measure"@en , "Unit of measure"^^xsd:string .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/DBM
+
+<http://dbpedia.org/resource/DBM> a owl:NamedIndividual , saref:UnitOfMeasure ;
+	rdfs:label "decibel-milliwatts"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> a owl:NamedIndividual , saref:UnitOfMeasure ;
+	rdfs:label "degree Celsius"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/millibar
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millibar> a owl:NamedIndividual , saref:UnitOfMeasure ;
+	rdfs:label "millibar"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre> a owl:NamedIndividual , saref:UnitOfMeasure ;
+	rdfs:label "millimetre"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt> a owl:NamedIndividual , saref:UnitOfMeasure ;
+	rdfs:label "millivolt"@en .
 # 
 # 
 # 
