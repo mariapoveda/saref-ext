@@ -581,7 +581,25 @@ time:TemporalEntity a owl:Class ;
 # https://w3id.org/def/saref4agri#Communication
 
 s4agri:Communication a owl:Class ;
-	rdfs:comment "An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included."@en ;
+	rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty s4agri:fromNode ;
+	owl:someValuesFrom s4agri:Node .
+
+s4agri:Communication rdfs:subClassOf _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty s4agri:toNode ;
+	owl:someValuesFrom s4agri:Node .
+
+s4agri:Communication rdfs:subClassOf _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty s4agri:hasProtocol ;
+	owl:someValuesFrom rdfs:Literal .
+
+s4agri:Communication rdfs:comment "An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included."@en ;
 	rdfs:label "Communication"@es .
 # 
 # https://w3id.org/def/saref4agri#CommunicationRole
@@ -593,27 +611,27 @@ s4agri:CommunicationRole a owl:Class ;
 # https://w3id.org/def/saref4agri#Deployment
 
 s4agri:Deployment a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> , _:genid4 .
+	rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> , _:genid7 .
 
-_:genid4 a owl:Restriction ;
+_:genid7 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/deployedOnPlatform> ;
 	owl:someValuesFrom <http://www.w3.org/ns/sosa/Platform> .
 
-s4agri:Deployment rdfs:subClassOf _:genid5 .
+s4agri:Deployment rdfs:subClassOf _:genid8 .
 
-_:genid5 a owl:Restriction ;
+_:genid8 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/deployedSystem> ;
 	owl:someValuesFrom <http://www.w3.org/ns/ssn/System> .
 
-s4agri:Deployment rdfs:subClassOf _:genid6 .
+s4agri:Deployment rdfs:subClassOf _:genid9 .
 
-_:genid6 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty s4agri:hasDeploymentPeriod ;
 	owl:someValuesFrom time:TemporalEntity .
 
-s4agri:Deployment rdfs:subClassOf _:genid7 .
+s4agri:Deployment rdfs:subClassOf _:genid10 .
 
-_:genid7 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty s4agri:isDeployedAtSpace ;
 	owl:someValuesFrom geosp:SpatialObject .
 
@@ -622,15 +640,56 @@ s4agri:Deployment rdfs:comment "Deployment"@en , "The scenario, including tempor
 # https://w3id.org/def/saref4agri#Network
 
 s4agri:Network a owl:Class ;
-	rdfs:comment "Collection of nodes connected."@en ;
+	rdfs:subClassOf _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty s4agri:hasConstituent ;
+	owl:someValuesFrom s4agri:Node .
+
+s4agri:Network rdfs:comment "Collection of nodes connected."@en ;
 	rdfs:label "Network"@es .
 # 
 # https://w3id.org/def/saref4agri#Node
 
 s4agri:Node a owl:Class ;
-	rdfs:subClassOf saref:Device ;
-	rdfs:comment "Every system connected to at leas another one in a network."@en ;
+	rdfs:subClassOf saref:Device , _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty s4agri:isConstituentOf ;
+	owl:someValuesFrom s4agri:Network .
+
+s4agri:Node rdfs:subClassOf _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty saref:hasState ;
+	owl:someValuesFrom saref:State .
+
+s4agri:Node rdfs:comment "Every system connected to at leas another one in a network."@en ;
 	rdfs:label "Node"@es .
+# 
+# https://w3id.org/def/saref4agri#Pluviometer
+
+s4agri:Pluviometer a owl:Class ;
+	rdfs:subClassOf saref:Sensor ;
+	rdfs:label "A sensor that measures the rain fall."@en , "Pluviometer"@en .
+# 
+# https://w3id.org/def/saref4agri#SoilTensiometer
+
+s4agri:SoilTensiometer a owl:Class ;
+	rdfs:subClassOf saref:Sensor ;
+	rdfs:label "A sensor that measures the soil moisture."@en , "Soil tensiometer"@en .
+# 
+# https://w3id.org/def/saref4agri#WateringGun
+
+s4agri:WateringGun a owl:Class ;
+	rdfs:subClassOf saref:Actuator ;
+	rdfs:label "An actuator to irrigate an space."@en , "Watering gun"@en .
+# 
+# https://w3id.org/def/saref4agri#WeatherStation
+
+s4agri:WeatherStation a owl:Class ;
+	rdfs:subClassOf saref:Sensor ;
+	rdfs:label "A sensor o system that measure weather conditions."@en , "Weather station"@en .
 # 
 # https://w3id.org/saref#Actuator
 
@@ -642,22 +701,22 @@ saref:Actuator a owl:Class ;
 # https://w3id.org/saref#Command
 
 saref:Command a owl:Class ;
-	rdfs:subClassOf _:genid8 .
+	rdfs:subClassOf _:genid14 .
 
-_:genid8 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty saref:actsUpon ;
 	owl:allValuesFrom saref:State .
 
-saref:Command rdfs:subClassOf _:genid9 .
+saref:Command rdfs:subClassOf _:genid15 .
 
-_:genid9 a owl:Restriction ;
+_:genid15 a owl:Restriction ;
 	owl:onProperty saref:isCommandOf ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Function .
 
-saref:Command rdfs:subClassOf _:genid10 .
+saref:Command rdfs:subClassOf _:genid16 .
 
-_:genid10 a owl:Restriction ;
+_:genid16 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -667,21 +726,22 @@ saref:Command rdfs:comment "A directive that a device must support to perform a 
 # https://w3id.org/saref#Device
 
 saref:Device a owl:Class ;
+	rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "Device"@en .
 # 
 # https://w3id.org/saref#FeatureOfInterest
 
 saref:FeatureOfInterest a owl:Class ;
-	rdfs:subClassOf _:genid11 .
+	rdfs:subClassOf _:genid17 .
 
-_:genid11 a owl:Restriction ;
+_:genid17 a owl:Restriction ;
 	owl:onProperty saref:hasProperty ;
 	owl:allValuesFrom saref:Property .
 
-saref:FeatureOfInterest rdfs:subClassOf _:genid12 .
+saref:FeatureOfInterest rdfs:subClassOf _:genid18 .
 
-_:genid12 a owl:Restriction ;
+_:genid18 a owl:Restriction ;
 	owl:onProperty saref:isFeatureOfInterestOf ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -691,9 +751,9 @@ saref:FeatureOfInterest rdfs:comment <https://w3id.org/saref#> ;
 # https://w3id.org/saref#Function
 
 saref:Function a owl:Class ;
-	rdfs:subClassOf _:genid13 .
+	rdfs:subClassOf _:genid19 .
 
-_:genid13 a owl:Restriction ;
+_:genid19 a owl:Restriction ;
 	owl:onProperty saref:hasCommand ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Command .
@@ -711,53 +771,53 @@ saref:Humidity a owl:Class ;
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid14 .
-
-_:genid14 a owl:Restriction ;
-	owl:onProperty saref:hasFeatureOfInterest ;
-	owl:allValuesFrom saref:FeatureOfInterest .
-
-saref:Measurement rdfs:subClassOf _:genid15 .
-
-_:genid15 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:allValuesFrom saref:UnitOfMeasure .
-
-saref:Measurement rdfs:subClassOf _:genid16 .
-
-_:genid16 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Measurement rdfs:subClassOf _:genid17 .
-
-_:genid17 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:UnitOfMeasure .
-
-saref:Measurement rdfs:subClassOf _:genid18 .
-
-_:genid18 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:Property .
-
-saref:Measurement rdfs:subClassOf _:genid19 .
-
-_:genid19 a owl:Restriction ;
-	owl:onProperty saref:hasTimestamp ;
-	owl:allValuesFrom xsd:dateTime .
-
-saref:Measurement rdfs:subClassOf _:genid20 .
+	rdfs:subClassOf _:genid20 .
 
 _:genid20 a owl:Restriction ;
-	owl:onProperty saref:hasValue ;
-	owl:cardinality "1"^^xsd:nonNegativeInteger .
+	owl:onProperty saref:hasFeatureOfInterest ;
+	owl:allValuesFrom saref:FeatureOfInterest .
 
 saref:Measurement rdfs:subClassOf _:genid21 .
 
 _:genid21 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:allValuesFrom saref:UnitOfMeasure .
+
+saref:Measurement rdfs:subClassOf _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty saref:relatesToProperty ;
+	owl:allValuesFrom saref:Property .
+
+saref:Measurement rdfs:subClassOf _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:UnitOfMeasure .
+
+saref:Measurement rdfs:subClassOf _:genid24 .
+
+_:genid24 a owl:Restriction ;
+	owl:onProperty saref:relatesToProperty ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass saref:Property .
+
+saref:Measurement rdfs:subClassOf _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty saref:hasTimestamp ;
+	owl:allValuesFrom xsd:dateTime .
+
+saref:Measurement rdfs:subClassOf _:genid26 .
+
+_:genid26 a owl:Restriction ;
+	owl:onProperty saref:hasValue ;
+	owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+saref:Measurement rdfs:subClassOf _:genid27 .
+
+_:genid27 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:float .
@@ -770,27 +830,27 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid22 .
+	rdfs:subClassOf _:genid28 .
 
-_:genid22 a owl:Restriction ;
+_:genid28 a owl:Restriction ;
 	owl:onProperty saref:isControlledByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid23 .
+saref:Property rdfs:subClassOf _:genid29 .
 
-_:genid23 a owl:Restriction ;
+_:genid29 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid24 .
+saref:Property rdfs:subClassOf _:genid30 .
 
-_:genid24 a owl:Restriction ;
+_:genid30 a owl:Restriction ;
 	owl:onProperty saref:isPropertyOf ;
 	owl:allValuesFrom saref:FeatureOfInterest .
 
-saref:Property rdfs:subClassOf _:genid25 .
+saref:Property rdfs:subClassOf _:genid31 .
 
-_:genid25 a owl:Restriction ;
+_:genid31 a owl:Restriction ;
 	owl:onProperty saref:relatesToMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -815,9 +875,9 @@ saref:State a owl:Class ;
 # https://w3id.org/saref#Task
 
 saref:Task a owl:Class ;
-	rdfs:subClassOf _:genid26 .
+	rdfs:subClassOf _:genid32 .
 
-_:genid26 a owl:Restriction ;
+_:genid32 a owl:Restriction ;
 	owl:onProperty saref:isAccomplishedBy ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Device .
