@@ -4,10 +4,22 @@ This section provides details for each class and property defined by SAREF exten
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#WeatherStation" title="https://w3id.org/def/saref4agri#WeatherStation">A sensor o system that measure weather conditions.</a>
+      </li>
+      <li>
+         <a href="#Pluviometer" title="https://w3id.org/def/saref4agri#Pluviometer">A sensor that measures the rain fall.</a>
+      </li>
+      <li>
+         <a href="#SoilTensiometer" title="https://w3id.org/def/saref4agri#SoilTensiometer">A sensor that measures the soil moisture.</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">A temporal entity with an extent or duration</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#Actuator" title="https://w3id.org/saref#Actuator">Actuator</a>
+      </li>
+      <li>
+         <a href="#WateringGun" title="https://w3id.org/def/saref4agri#WateringGun">An actuator to irrigate an space.</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#Command" title="https://w3id.org/saref#Command">Command</a>
@@ -95,6 +107,51 @@ This section provides details for each class and property defined by SAREF exten
          <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
       </li>
    </ul>
+   <div class="entity" id="WeatherStation">
+      <h3>A sensor o system that measure weather conditions.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#WeatherStation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Pluviometer">
+      <h3>A sensor that measures the rain fall.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#Pluviometer</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoilTensiometer">
+      <h3>A sensor that measures the soil moisture.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#SoilTensiometer</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://www.w3.org/2006/time#Interval">
       <h3>A temporal entity with an extent or duration<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -133,6 +190,26 @@ This section provides details for each class and property defined by SAREF exten
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#WateringGun" title="https://w3id.org/def/saref4agri#WateringGun">An actuator to irrigate an space.</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WateringGun">
+      <h3>An actuator to irrigate an space.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4agri#WateringGun</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Actuator" title="https://w3id.org/saref#Actuator">Actuator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -179,6 +256,27 @@ This section provides details for each class and property defined by SAREF exten
          <span class="markdown">An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#fromNode" title="https://w3id.org/def/saref4agri#fromNode">from node</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#toNode" title="https://w3id.org/def/saref4agri#toNode">to node</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasProtocol" title="https://w3id.org/def/saref4agri#hasProtocol">has protocol</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#roleInCommunication"
@@ -292,6 +390,11 @@ This section provides details for each class and property defined by SAREF exten
          </dd>
       </dl>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/ssn/System" title="http://www.w3.org/ns/ssn/System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#https://w3id.org/saref#Actuator" title="https://w3id.org/saref#Actuator">Actuator</a>
@@ -560,6 +663,14 @@ This section provides details for each class and property defined by SAREF exten
          <span class="markdown">Collection of nodes connected.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasConstituent" title="https://w3id.org/def/saref4agri#hasConstituent">has constituent</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#roleInNetwork" title="https://w3id.org/def/saref4agri#roleInNetwork">role in network</a>
@@ -581,6 +692,20 @@ This section provides details for each class and property defined by SAREF exten
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isConstituentOf" title="https://w3id.org/def/saref4agri#isConstituentOf">is constituent of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Network" title="https://w3id.org/def/saref4agri#Network">Network</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://w3id.org/saref#hasState" title="https://w3id.org/saref#hasState">has state</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#https://w3id.org/saref#State" title="https://w3id.org/saref#State">State</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -718,6 +843,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#WeatherStation" title="https://w3id.org/def/saref4agri#WeatherStation">A sensor o system that measure weather conditions.</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Pluviometer" title="https://w3id.org/def/saref4agri#Pluviometer">A sensor that measures the rain fall.</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SoilTensiometer" title="https://w3id.org/def/saref4agri#SoilTensiometer">A sensor that measures the soil moisture.</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#SpatialObject">
@@ -798,6 +930,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <dt>Is defined by</dt>
          <dd>
             <a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>

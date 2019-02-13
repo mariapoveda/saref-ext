@@ -891,6 +891,24 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4agri#Communication">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#fromNode"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4agri#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#toNode"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4agri#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included.</rdfs:comment>
         <rdfs:label xml:lang="es">Communication</rdfs:label>
     </owl:Class>
@@ -946,6 +964,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4agri#Network">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4agri#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Collection of nodes connected.</rdfs:comment>
         <rdfs:label xml:lang="es">Network</rdfs:label>
     </owl:Class>
@@ -957,8 +981,64 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:Class rdf:about="https://w3id.org/def/saref4agri#Node">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#isConstituentOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4agri#Network"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#hasState"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Every system connected to at leas another one in a network.</rdfs:comment>
         <rdfs:label xml:lang="es">Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#Pluviometer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#Pluviometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">A sensor that measures the rain fall.</rdfs:label>
+        <rdfs:label xml:lang="en">Pluviometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#SoilTensiometer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#SoilTensiometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">A sensor that measures the soil moisture.</rdfs:label>
+        <rdfs:label xml:lang="en">Soil tensiometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#WateringGun -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#WateringGun">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Actuator"/>
+        <rdfs:label xml:lang="en">An actuator to irrigate an space.</rdfs:label>
+        <rdfs:label xml:lang="en">Watering gun</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#WeatherStation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#WeatherStation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">A sensor o system that measure weather conditions.</rdfs:label>
+        <rdfs:label xml:lang="en">Weather station</rdfs:label>
     </owl:Class>
     
 
@@ -1007,6 +1087,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="https://w3id.org/saref#Device">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
         <rdfs:label xml:lang="en">Device</rdfs:label>
     </owl:Class>
