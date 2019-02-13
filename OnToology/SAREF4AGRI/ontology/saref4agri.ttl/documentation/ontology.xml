@@ -298,6 +298,16 @@
     
 
 
+    <!-- http://www.w3.org/ns/ssn/hasSubSystem -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasSubSystem">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <rdfs:label xml:lang="en">has subsystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/ns/ssn/inDeployment -->
 
 
@@ -436,16 +446,6 @@
         <rdfs:comment>A relationship between a command and a state</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
         <rdfs:label>acts upon</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/saref#consistsOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/saref#consistsOf">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
-        <rdfs:label xml:lang="en">consists of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -859,18 +859,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/Platform">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/inDeployment"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:label xml:lang="en">Platform</rdfs:label>
@@ -882,19 +870,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedSystem"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The scenario, including temporal and spatial information, in which the devices are installed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:label xml:lang="en">Deployment</rdfs:label>
     </owl:Class>
@@ -905,24 +880,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasDeployment"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#consistsOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:label xml:lang="en">System</rdfs:label>
@@ -946,6 +903,41 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:Class rdf:about="https://w3id.org/def/saref4agri#CommunicationRole">
         <rdfs:comment xml:lang="en">An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel.</rdfs:comment>
         <rdfs:label xml:lang="es">Communication role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#Deployment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#Deployment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasDeploymentPeriod"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#isDeployedAtSpace"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Deployment</rdfs:comment>
+        <rdfs:comment xml:lang="en">The scenario, including temporal and spatial information, in which the systems and devices are installed.</rdfs:comment>
     </owl:Class>
     
 
@@ -1227,12 +1219,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:Class rdf:about="https://w3id.org/saref#Time">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#consistsOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>A saref:Property that allows to specify the time concept in terms of instants or intervals according to the imported W3C Time ontology.</rdfs:comment>
         <rdfs:label>Time</rdfs:label>
     </owl:Class>
