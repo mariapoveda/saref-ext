@@ -10,6 +10,64 @@
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#isDeployedAtSpace"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#hasConstituent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#Node"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#isConstituentOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#Network"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#hasState"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#State"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#State"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#actsUpon"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/saref#Function"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#isCommandOf"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -18,7 +76,7 @@
     "@id" : "https://w3id.org/saref#hasDescription"
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Property"
@@ -27,7 +85,7 @@
     "@id" : "https://w3id.org/saref#hasProperty"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Measurement"
@@ -36,7 +94,7 @@
     "@id" : "https://w3id.org/saref#isFeatureOfInterestOf"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -47,68 +105,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/saref#hasCommand"
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/saref#FeatureOfInterest"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#hasFeatureOfInterest"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/saref#UnitOfMeasure"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#isMeasuredIn"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/saref#Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#relatesToProperty"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/saref#UnitOfMeasure"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#isMeasuredIn"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/saref#Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#relatesToProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#hasTimestamp"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -122,6 +118,68 @@
 }, {
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#FeatureOfInterest"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#hasFeatureOfInterest"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#isMeasuredIn"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#relatesToProperty"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#isMeasuredIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#relatesToProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/saref#hasTimestamp"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -130,7 +188,7 @@
     "@id" : "https://w3id.org/saref#hasValue"
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -143,7 +201,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Device"
@@ -152,7 +210,7 @@
     "@id" : "https://w3id.org/saref#isControlledByDevice"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Device"
@@ -161,7 +219,16 @@
     "@id" : "https://w3id.org/saref#isMeasuredByDevice"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location"
+  } ]
+}, {
+  "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#FeatureOfInterest"
@@ -170,7 +237,7 @@
     "@id" : "https://w3id.org/saref#isPropertyOf"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/saref#Measurement"
@@ -179,7 +246,7 @@
     "@id" : "https://w3id.org/saref#relatesToMeasurement"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -192,16 +259,34 @@
     "@id" : "https://w3id.org/saref#isAccomplishedBy"
   } ]
 }, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location"
+    "@id" : "https://w3id.org/def/saref4agri#fromNode"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#Node"
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#toNode"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#Node"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#hasProtocol"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/ssn/deployedOnPlatform"
@@ -210,7 +295,7 @@
     "@id" : "http://www.w3.org/ns/sosa/Platform"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/ssn/deployedSystem"
@@ -219,44 +304,13 @@
     "@id" : "http://www.w3.org/ns/ssn/System"
   } ]
 }, {
-  "@id" : "_:genid6",
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/saref4agri#hasDeploymentPeriod"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/saref4agri#isDeployedAtSpace"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/saref#State"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#actsUpon"
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/saref#Function"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/saref#isCommandOf"
   } ]
 }, {
   "@id" : "http://dbpedia.org/resource/DBM",
@@ -737,6 +791,20 @@
     "@value" : "0.2"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/saref4agri#AirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Temperature" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Air temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#AmbientHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Humidity" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ambient huidity"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/saref4agri#Communication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -746,6 +814,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Communication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4agri#CommunicationRole",
@@ -771,13 +846,20 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/Deployment"
   }, {
-    "@id" : "_:genid4"
-  }, {
-    "@id" : "_:genid5"
-  }, {
-    "@id" : "_:genid6"
-  }, {
     "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#IrrigationWater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Irrigation water"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4agri#Network",
@@ -789,6 +871,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Network"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4agri#Node",
@@ -803,6 +888,90 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/saref#Device"
+  }, {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#PlantGrowthStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Plant growth stage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#Pluviometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A sensor that measures the rain fall."
+  }, {
+    "@language" : "en",
+    "@value" : "Pluviometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#Precipitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Precipitation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#SoilMoisture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Soil moisture"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#SoilTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Temperature" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Soil temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#SoilTensiometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A sensor that measures the soil moisture."
+  }, {
+    "@language" : "en",
+    "@value" : "Soil tensiometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#WateringGun",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "An actuator to irrigate an space."
+  }, {
+    "@language" : "en",
+    "@value" : "Watering gun"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Actuator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#WeatherStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A sensor o system that measure weather conditions."
+  }, {
+    "@language" : "en",
+    "@value" : "Weather station"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Sensor"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4agri#fromNode",
@@ -973,11 +1142,11 @@
     "@value" : "Command"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid8"
+    "@id" : "_:genid14"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "_:genid15"
   }, {
-    "@id" : "_:genid10"
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "https://w3id.org/saref#Device",
@@ -988,6 +1157,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/System"
   } ]
 }, {
   "@id" : "https://w3id.org/saref#FeatureOfInterest",
@@ -1000,9 +1172,9 @@
     "@value" : "Feature of interest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid11"
+    "@id" : "_:genid17"
   }, {
-    "@id" : "_:genid12"
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "https://w3id.org/saref#Function",
@@ -1014,7 +1186,7 @@
     "@value" : "Function"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid19"
   } ]
 }, {
   "@id" : "https://w3id.org/saref#Humidity",
@@ -1043,21 +1215,21 @@
     "@value" : "Measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid14"
-  }, {
-    "@id" : "_:genid15"
-  }, {
-    "@id" : "_:genid16"
-  }, {
-    "@id" : "_:genid17"
-  }, {
-    "@id" : "_:genid18"
-  }, {
-    "@id" : "_:genid19"
-  }, {
     "@id" : "_:genid20"
   }, {
     "@id" : "_:genid21"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/saref#Property"
@@ -1083,13 +1255,13 @@
     "@value" : "Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid22"
+    "@id" : "_:genid28"
   }, {
-    "@id" : "_:genid23"
+    "@id" : "_:genid29"
   }, {
-    "@id" : "_:genid24"
+    "@id" : "_:genid30"
   }, {
-    "@id" : "_:genid25"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/saref#UnitOfMeasure"
@@ -1126,7 +1298,7 @@
     "@value" : "Task"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid26"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://w3id.org/saref#Temperature",
