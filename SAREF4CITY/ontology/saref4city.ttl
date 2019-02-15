@@ -18,7 +18,7 @@
 <https://w3id.org/def/saref4city> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4city> ;
 	dc:title "SAREF extension for Smart City"@en ;
-	owl:versionInfo "0.6"^^xsd:decimal ;
+	owl:versionInfo "0.7"^^xsd:decimal ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	dcterms:creator <http://w3id.org/people/mpoveda> ;
@@ -226,6 +226,12 @@ s4city:isSubEventOf a owl:ObjectProperty ;
 s4city:quantifiesKPI a owl:ObjectProperty ;
 	rdfs:label "quantifies KPI"@en .
 # 
+# https://w3id.org/def/saref4city#refersToFeature
+
+s4city:refersToFeature a owl:ObjectProperty ;
+	rdfs:comment "Relation between a KPI assessment and the geographical feature it refers to"@en ;
+	rdfs:label "refers to feature"@en .
+# 
 # https://w3id.org/def/saref4city#refersToTime
 
 s4city:refersToTime a owl:ObjectProperty ;
@@ -240,12 +246,6 @@ s4city:takesPlaceAtFacility a owl:ObjectProperty ;
 
 s4city:takesPlaceAtTime a owl:ObjectProperty ;
 	rdfs:label "takes place at time"@en .
-# 
-# https://w3id.org/saref#consistsOf
-
-saref:consistsOf a owl:ObjectProperty ;
-	rdfs:isDefinedBy <https://w3id.org/saref#> ;
-	rdfs:label "consists of"@en .
 # 
 # https://w3id.org/saref#controlsProperty
 
@@ -756,30 +756,24 @@ saref:Device a owl:Class ;
 	rdfs:subClassOf geosp:Feature , _:genid30 .
 
 _:genid30 a owl:Restriction ;
-	owl:onProperty saref:consistsOf ;
-	owl:allValuesFrom saref:Device .
+	owl:onProperty saref:controlsProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:Device rdfs:subClassOf _:genid31 .
 
 _:genid31 a owl:Restriction ;
-	owl:onProperty saref:controlsProperty ;
-	owl:allValuesFrom saref:Property .
+	owl:onProperty saref:makesMeasurement ;
+	owl:allValuesFrom saref:Measurement .
 
 saref:Device rdfs:subClassOf _:genid32 .
 
 _:genid32 a owl:Restriction ;
-	owl:onProperty saref:makesMeasurement ;
-	owl:allValuesFrom saref:Measurement .
+	owl:onProperty saref:measuresProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:Device rdfs:subClassOf _:genid33 .
 
 _:genid33 a owl:Restriction ;
-	owl:onProperty saref:measuresProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Device rdfs:subClassOf _:genid34 .
-
-_:genid34 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -789,74 +783,74 @@ saref:Device rdfs:comment "A tangible object designed to accomplish a particular
 # https://w3id.org/saref#FeatureOfInterest
 
 saref:FeatureOfInterest a owl:Class ;
-	rdfs:subClassOf _:genid35 .
+	rdfs:subClassOf _:genid34 .
 
-_:genid35 a owl:Restriction ;
+_:genid34 a owl:Restriction ;
 	owl:onProperty s4city:hasKPI ;
 	owl:allValuesFrom s4city:KeyPerformanceIndicator .
+
+saref:FeatureOfInterest rdfs:subClassOf _:genid35 .
+
+_:genid35 a owl:Restriction ;
+	owl:onProperty saref:hasProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:FeatureOfInterest rdfs:subClassOf _:genid36 .
 
 _:genid36 a owl:Restriction ;
-	owl:onProperty saref:hasProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:FeatureOfInterest rdfs:subClassOf _:genid37 .
-
-_:genid37 a owl:Restriction ;
 	owl:onProperty saref:isFeatureOfInterestOf ;
 	owl:allValuesFrom saref:Measurement .
 # 
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid38 .
+	rdfs:subClassOf _:genid37 .
 
-_:genid38 a owl:Restriction ;
+_:genid37 a owl:Restriction ;
 	owl:onProperty saref:hasFeatureOfInterest ;
 	owl:allValuesFrom saref:FeatureOfInterest .
+
+saref:Measurement rdfs:subClassOf _:genid38 .
+
+_:genid38 a owl:Restriction ;
+	owl:onProperty saref:isMeasuredIn ;
+	owl:allValuesFrom saref:UnitOfMeasure .
 
 saref:Measurement rdfs:subClassOf _:genid39 .
 
 _:genid39 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:allValuesFrom saref:UnitOfMeasure .
+	owl:onProperty saref:measurementMadeBy ;
+	owl:allValuesFrom saref:Device .
 
 saref:Measurement rdfs:subClassOf _:genid40 .
 
 _:genid40 a owl:Restriction ;
-	owl:onProperty saref:measurementMadeBy ;
-	owl:allValuesFrom saref:Device .
+	owl:onProperty saref:relatesToProperty ;
+	owl:allValuesFrom saref:Property .
 
 saref:Measurement rdfs:subClassOf _:genid41 .
 
 _:genid41 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Measurement rdfs:subClassOf _:genid42 .
-
-_:genid42 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid43 .
+saref:Measurement rdfs:subClassOf _:genid42 .
 
-_:genid43 a owl:Restriction ;
+_:genid42 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid44 .
+saref:Measurement rdfs:subClassOf _:genid43 .
 
-_:genid44 a owl:Restriction ;
+_:genid43 a owl:Restriction ;
 	owl:onProperty saref:hasTimestamp ;
 	owl:allValuesFrom xsd:dateTime .
 
-saref:Measurement rdfs:subClassOf _:genid45 .
+saref:Measurement rdfs:subClassOf _:genid44 .
 
-_:genid45 a owl:Restriction ;
+_:genid44 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
@@ -868,27 +862,27 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid46 .
+	rdfs:subClassOf _:genid45 .
+
+_:genid45 a owl:Restriction ;
+	owl:onProperty saref:isControlledByDevice ;
+	owl:allValuesFrom saref:Device .
+
+saref:Property rdfs:subClassOf _:genid46 .
 
 _:genid46 a owl:Restriction ;
-	owl:onProperty saref:isControlledByDevice ;
+	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
 saref:Property rdfs:subClassOf _:genid47 .
 
 _:genid47 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredByDevice ;
-	owl:allValuesFrom saref:Device .
+	owl:onProperty saref:isPropertyOf ;
+	owl:allValuesFrom saref:FeatureOfInterest .
 
 saref:Property rdfs:subClassOf _:genid48 .
 
 _:genid48 a owl:Restriction ;
-	owl:onProperty saref:isPropertyOf ;
-	owl:allValuesFrom saref:FeatureOfInterest .
-
-saref:Property rdfs:subClassOf _:genid49 .
-
-_:genid49 a owl:Restriction ;
 	owl:onProperty saref:relatesToMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -932,3 +926,8 @@ geo:location rdfs:comment """The relation between something and the point,
  an accuracy appropriate for the size of the object and uses such as mapping .
  """ ;
 	rdfs:label "location"@en .
+<<<<<<< Updated upstream
+=======
+# 
+# Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
+>>>>>>> Stashed changes
