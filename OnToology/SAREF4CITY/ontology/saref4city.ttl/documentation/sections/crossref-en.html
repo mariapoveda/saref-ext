@@ -322,13 +322,6 @@ This section provides details for each class and property defined by SAREF exten
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#https://w3id.org/saref#controlsProperty" title="https://w3id.org/saref#controlsProperty">controls property</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
@@ -1149,9 +1142,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <a href="#assesses" title="https://w3id.org/def/saref4city#assesses">assesses</a>
       </li>
       <li>
-         <a href="#https://w3id.org/saref#consistsOf" title="https://w3id.org/saref#consistsOf">consists of</a>
-      </li>
-      <li>
          <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">contains</a>
       </li>
       <li>
@@ -1214,6 +1204,9 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
          <a href="#isSubEventOf" title="https://w3id.org/def/saref4city#isSubEventOf">is subevent of</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/saref#makesMeasurement" title="https://w3id.org/saref#makesMeasurement">makes measurement</a>
       </li>
       <li>
@@ -1227,6 +1220,9 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       </li>
       <li>
          <a href="#quantifiesKPI" title="https://w3id.org/def/saref4city#quantifiesKPI">quantifies KPI</a>
+      </li>
+      <li>
+         <a href="#refersToFeature" title="https://w3id.org/def/saref4city#refersToFeature">refers to feature</a>
       </li>
       <li>
          <a href="#refersToTime" title="https://w3id.org/def/saref4city#refersToTime">refers to time</a>
@@ -1258,20 +1254,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#assesses</p>
-   </div>
-   <div class="entity" id="https://w3id.org/saref#consistsOf">
-      <h3>consists of<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/saref#consistsOf</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#sfContains">
       <h3>contains<sup class="type-op" title="object property">op</sup>
@@ -1523,6 +1505,24 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#isSubEventOf</p>
    </div>
+   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+      <h3>location<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#location</p>
+      <div class="comment">
+         <span class="markdown">The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ </span>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/saref#makesMeasurement">
       <h3>makes measurement<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1601,6 +1601,17 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</s
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/saref4city#quantifiesKPI</p>
+   </div>
+   <div class="entity" id="refersToFeature">
+      <h3>refers to feature<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/saref4city#refersToFeature</p>
+      <div class="comment">
+         <span class="markdown">Relation between a KPI assessment and the geographical feature it refers to</span>
+      </div>
    </div>
    <div class="entity" id="refersToTime">
       <h3>refers to time<sup class="type-op" title="object property">op</sup>
