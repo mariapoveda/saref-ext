@@ -5,9 +5,10 @@
 <https://w3id.org/def/saref4city> <http://purl.org/dc/elements/1.1/title> "SAREF extension for Smart City"@en .
 <https://w3id.org/def/saref4city> <http://purl.org/dc/terms/creator> <http://w3id.org/people/mpoveda> .
 <https://w3id.org/def/saref4city> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
+<https://w3id.org/def/saref4city> <http://purl.org/dc/terms/creator> "Paola Espinoza Arias" .
 <https://w3id.org/def/saref4city> <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4city" .
 <https://w3id.org/def/saref4city> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4city#" .
-<https://w3id.org/def/saref4city> <http://www.w3.org/2002/07/owl#versionInfo> "0.6"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/def/saref4city> <http://www.w3.org/2002/07/owl#versionInfo> "0.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -22,9 +23,6 @@
 # 
 # http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -45,44 +43,22 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#alt
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#lat
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 latitude of a SpatialThing (decimal degrees)." .
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 # 
-# http://www.w3.org/2003/01/geo/wgs84_pos#location
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/based_near> .
-# 
 # http://www.w3.org/2003/01/geo/wgs84_pos#long
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 longitude of a SpatialThing (decimal degrees)." .
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
-# 
-# http://xmlns.com/foaf/0.1/based_near
-<http://xmlns.com/foaf/0.1/based_near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Datatypes
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/2001/XMLSchema#date
-<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-# 
-# http://www.w3.org/2001/XMLSchema#duration
-<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 # 
 # 
 # 
@@ -131,6 +107,8 @@
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n " .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
 # 
 # https://w3id.org/def/saref4city#assesses
 <https://w3id.org/def/saref4city#assesses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -181,6 +159,11 @@
 <https://w3id.org/def/saref4city#quantifiesKPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#quantifiesKPI> <http://www.w3.org/2000/01/rdf-schema#label> "quantifies KPI"@en .
 # 
+# https://w3id.org/def/saref4city#refersToFeature
+<https://w3id.org/def/saref4city#refersToFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4city#refersToFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a KPI assessment and the geographical feature it refers to"@en .
+<https://w3id.org/def/saref4city#refersToFeature> <http://www.w3.org/2000/01/rdf-schema#label> "refers to feature"@en .
+# 
 # https://w3id.org/def/saref4city#refersToTime
 <https://w3id.org/def/saref4city#refersToTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#refersToTime> <http://www.w3.org/2000/01/rdf-schema#label> "refers to time"@en .
@@ -192,11 +175,6 @@
 # https://w3id.org/def/saref4city#takesPlaceAtTime
 <https://w3id.org/def/saref4city#takesPlaceAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4city#takesPlaceAtTime> <http://www.w3.org/2000/01/rdf-schema#label> "takes place at time"@en .
-# 
-# https://w3id.org/saref#consistsOf
-<https://w3id.org/saref#consistsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#consistsOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
-<https://w3id.org/saref#consistsOf> <http://www.w3.org/2000/01/rdf-schema#label> "consists of"@en .
 # 
 # https://w3id.org/saref#controlsProperty
 <https://w3id.org/saref#controlsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -598,78 +576,74 @@ _:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#consistsOf> .
-_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#controlsProperty> .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#controlsProperty> .
-_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#makesMeasurement> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#makesMeasurement> .
-_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
-_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
-<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
-_:genid34 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid33 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
 # 
 # https://w3id.org/saref#FeatureOfInterest
 <https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPI> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#KeyPerformanceIndicator> .
 <https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4city#hasKPI> .
-_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4city#KeyPerformanceIndicator> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasProperty> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasProperty> .
-_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
-<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isFeatureOfInterestOf> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isFeatureOfInterestOf> .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 # 
 # https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasFeatureOfInterest> .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasFeatureOfInterest> .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
-_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measurementMadeBy> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measurementMadeBy> .
-_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
-_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid41 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
 _:genid42 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid42 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#UnitOfMeasure> .
+_:genid42 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
-_:genid43 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid43 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Property> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasTimestamp> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasTimestamp> .
-_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
-_:genid45 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid44 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en .
@@ -678,22 +652,22 @@ _:genid45 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/20
 # 
 # https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isControlledByDevice> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isControlledByDevice> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredByDevice> .
 _:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredByDevice> .
-_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isPropertyOf> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isPropertyOf> .
-_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToMeasurement> .
-_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToMeasurement> .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An aspect of an entity that can be observable by a sensor."@en .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended." .
@@ -712,17 +686,5 @@ _:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en .
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of measure"@en .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n " .
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
 # 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

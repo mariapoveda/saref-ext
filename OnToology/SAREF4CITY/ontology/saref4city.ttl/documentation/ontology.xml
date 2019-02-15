@@ -6,7 +6,6 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -18,9 +17,10 @@
         <dc:title xml:lang="en">SAREF extension for Smart City</dc:title>
         <terms:creator rdf:resource="http://w3id.org/people/mpoveda"/>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms:creator>Paola Espinoza Arias</terms:creator>
         <vann:preferredNamespacePrefix>s4city</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/saref4city#</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -48,13 +48,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -122,15 +115,6 @@
     
 
 
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/based_near"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
 
 
@@ -139,39 +123,6 @@
         <rdfs:label>longitude</rdfs:label>
         <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/based_near -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#duration -->
-
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
     
 
 
@@ -256,7 +207,17 @@
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:comment>The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ </rdfs:comment>
+        <rdfs:label xml:lang="en">location</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -369,6 +330,16 @@
     
 
 
+    <!-- https://w3id.org/def/saref4city#refersToFeature -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#refersToFeature">
+        <rdfs:comment xml:lang="en">Relation between a KPI assessment and the geographical feature it refers to</rdfs:comment>
+        <rdfs:label xml:lang="en">refers to feature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/saref4city#refersToTime -->
 
 
@@ -392,16 +363,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#takesPlaceAtTime">
         <rdfs:label xml:lang="en">takes place at time</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/saref#consistsOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/saref#consistsOf">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
-        <rdfs:label xml:lang="en">consists of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1112,12 +1073,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/saref#consistsOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Device"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/saref#controlsProperty"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
             </owl:Restriction>
@@ -1293,29 +1248,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref#"/>
         <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-        <rdfs:comment>The relation between something and the point, 
- or other geometrical thing in space, where it is.  For example, the realtionship between
- a radio tower and a Point with a given lat and long.
- Or a relationship between a park and its outline as a closed arc of points, or a road and
- its location as a arc (a sequence of points).
- Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
- an accuracy appropriate for the size of the object and uses such as mapping .
- </rdfs:comment>
-        <rdfs:label xml:lang="en">location</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 
