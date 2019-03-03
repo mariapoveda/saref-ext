@@ -13,7 +13,6 @@
                                    <http://purl.org/dc/elements/1.1/title> "SAREF extension for building devices"@en ;
                                    <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> ,
                                                                       <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                   <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4bldg" ;
                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4bldg#" ;
                                    owl:versionInfo "1.0" .
@@ -21,6 +20,18 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
@@ -755,10 +766,10 @@ xsd:duration rdf:type rdfs:Datatype .
                   rdfs:label "open pressure drop"@en .
 
 
-###  https://w3id.org/def/saref4bldg#operatingWight
-:operatingWight rdf:type owl:ObjectProperty ;
-                rdfs:comment "Operating weight of the tank including all of its contents. Usually measured in kilograms (kg) or grams (g)."@en ;
-                rdfs:label "operating wight"@en .
+###  https://w3id.org/def/saref4bldg#operatingWeight
+:operatingWeight rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Operating weight of the tank including all of its contents. Usually measured in kilograms (kg) or grams (g)."@en ;
+                 rdfs:label "operating wight"@en .
 
 
 ###  https://w3id.org/def/saref4bldg#operationTemperatureMax
@@ -1733,16 +1744,6 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
-                                                       owl:disjointWith <https://w3id.org/saref#Measurement> ,
-                                                                        <https://w3id.org/saref#Property> ,
-                                                                        <https://w3id.org/saref#UnitOfMeasure> ;
-                                                       rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes."@en ;
-                                                       rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-                                                       rdfs:label "Spatial thing"@en .
-
-
 ###  https://w3id.org/def/saref4bldg#Actuator
 :Actuator rdf:type owl:Class ;
           rdfs:subClassOf :DistributionControlDevice ,
@@ -1896,12 +1897,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
 ###  https://w3id.org/def/saref4bldg#Building
 :Building rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
-                            owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
-                          ] ,
-                          [ rdf:type owl:Restriction ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :hasSpace ;
                             owl:allValuesFrom :BuildingSpace
                           ] ;
@@ -1928,8 +1924,7 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
 ###  https://w3id.org/def/saref4bldg#BuildingSpace
 :BuildingSpace rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
-                               [ rdf:type owl:Restriction ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :contains ;
                                  owl:allValuesFrom :PhysicalObject
                                ] ,
@@ -3056,12 +3051,7 @@ Power outlets are commonly connected within a junction box; data outlets may be 
 
 ###  https://w3id.org/def/saref4bldg#PhysicalObject
 :PhysicalObject rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
-                                  owl:allValuesFrom <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
-                                ] ,
-                                [ rdf:type owl:Restriction ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty :contains ;
                                   owl:allValuesFrom :PhysicalObject
                                 ] ,
@@ -3346,7 +3336,7 @@ Switches include those used for electrical power, communications, audio-visual, 
                         owl:allValuesFrom <https://w3id.org/saref#Measurement>
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :operatingWight ;
+                        owl:onProperty :operatingWeight ;
                         owl:allValuesFrom <https://w3id.org/saref#Measurement>
                       ] ,
                       [ rdf:type owl:Restriction ;
@@ -3698,4 +3688,4 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
                                        rdfs:label "Unit of measure"@en .
 
 
-###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
