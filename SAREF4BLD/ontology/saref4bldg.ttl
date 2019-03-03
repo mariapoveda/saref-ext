@@ -770,9 +770,9 @@ xsd:duration a rdfs:Datatype .
 	rdfs:comment "Total pressure drop across damper. Usually measured in Pascals (Pa, N/m2)."@en ;
 	rdfs:label "open pressure drop"@en .
 # 
-# https://w3id.org/def/saref4bldg#operatingWight
+# https://w3id.org/def/saref4bldg#operatingWeight
 
-:operatingWight a owl:ObjectProperty ;
+:operatingWeight a owl:ObjectProperty ;
 	rdfs:comment "Operating weight of the tank including all of its contents. Usually measured in kilograms (kg) or grams (g)."@en ;
 	rdfs:label "operating wight"@en .
 # 
@@ -3787,7 +3787,7 @@ _:genid257 a owl:Restriction ;
 :Tank rdfs:subClassOf _:genid258 .
 
 _:genid258 a owl:Restriction ;
-	owl:onProperty :operatingWight ;
+	owl:onProperty :operatingWeight ;
 	owl:allValuesFrom saref:Measurement .
 
 :Tank rdfs:subClassOf _:genid259 .
