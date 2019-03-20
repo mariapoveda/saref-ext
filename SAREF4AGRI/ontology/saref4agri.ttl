@@ -18,7 +18,7 @@
 
 <https://w3id.org/def/saref4agri> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4agri> ;
-	owl:versionInfo "0.2"^^xsd:decimal ;
+	owl:versionInfo "0.3"^^xsd:decimal ;
 	dc:contributor <http://w3id.org/people/mpoveda> ;
 	vann:preferredNamespaceUri "https://w3id.org/def/saref4agri#" ;
 	vann:preferredNamespacePrefix "s4agri" ;
@@ -211,71 +211,15 @@ geo:location a owl:ObjectProperty .
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
 	rdfs:label "in deployment"@en .
 # 
-# https://w3id.org/def/saref4agri#fromNode
-
-s4agri:fromNode a owl:ObjectProperty ;
-	rdfs:comment "Origin node in directed communications."@en ;
-	rdfs:label "from node"@en .
-# 
-# https://w3id.org/def/saref4agri#hasConstituent
-
-s4agri:hasConstituent a owl:ObjectProperty ;
-	owl:inverseOf s4agri:isConstituentOf ;
-	rdfs:comment "Relation between a network and its constituents systems."@en ;
-	rdfs:label "has constituent"@en .
-# 
 # https://w3id.org/def/saref4agri#hasDeploymentPeriod
 
 s4agri:hasDeploymentPeriod a owl:ObjectProperty ;
 	rdfs:comment "Relation to indicate the temporal duration or period of a deployment."@en , "has deployment period"@en .
 # 
-# https://w3id.org/def/saref4agri#hasRole
-
-s4agri:hasRole a owl:ObjectProperty ;
-	rdfs:comment "A relation to indicate the role of a given node in a communication channel or network."@en ;
-	rdfs:label "has role"@en .
-# 
-# https://w3id.org/def/saref4agri#isConstituentOf
-
-s4agri:isConstituentOf a owl:ObjectProperty ;
-	rdfs:comment "Relation between a node and the network(s) it is part of."@en ;
-	rdfs:label "is constituent of"@en .
-# 
 # https://w3id.org/def/saref4agri#isDeployedAtSpace
 
 s4agri:isDeployedAtSpace a owl:ObjectProperty ;
 	rdfs:comment "Relation to indicate the geographical componet of a deployment."@en , "is deployed at space"@en .
-# 
-# https://w3id.org/def/saref4agri#playedByNode
-
-s4agri:playedByNode a owl:ObjectProperty ;
-	rdfs:domain s4agri:CommunicationRole ;
-	rdfs:range s4agri:Node ;
-	rdfs:comment "Relation use to indicate the node playing a given role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
-	rdfs:label "played by node"@en .
-# 
-# https://w3id.org/def/saref4agri#roleInCommunication
-
-s4agri:roleInCommunication a owl:ObjectProperty ;
-	rdfs:domain s4agri:CommunicationRole ;
-	rdfs:range s4agri:Communication ;
-	rdfs:comment "Relation use to indicate the communication in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
-	rdfs:label "role in communication"@en .
-# 
-# https://w3id.org/def/saref4agri#roleInNetwork
-
-s4agri:roleInNetwork a owl:ObjectProperty ;
-	rdfs:domain s4agri:CommunicationRole ;
-	rdfs:range s4agri:Network ;
-	rdfs:comment "Relation use to indicate the network in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en ;
-	rdfs:label "role in network"@en .
-# 
-# https://w3id.org/def/saref4agri#toNode
-
-s4agri:toNode a owl:ObjectProperty ;
-	rdfs:subPropertyOf owl:topObjectProperty ;
-	rdfs:comment "Target node in directed communications."@en ;
-	rdfs:label "to node"@en .
 # 
 # https://w3id.org/saref#accomplishes
 
@@ -421,13 +365,6 @@ saref:relatesToProperty a owl:ObjectProperty ;
 # #
 # #################################################################
 # 
-# 
-# https://w3id.org/def/saref4agri#hasProtocol
-
-s4agri:hasProtocol a owl:DatatypeProperty ;
-	rdfs:range rdfs:Literal ;
-	rdfs:comment "The protocol used in a given communition between nodes."@en ;
-	rdfs:label "has protocol"@en .
 # 
 # https://w3id.org/saref#hasDescription
 
@@ -578,94 +515,34 @@ time:TemporalEntity a owl:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/ssn/> ;
 	rdfs:label "System"@en .
 # 
-# https://w3id.org/def/saref4agri#Communication
-
-s4agri:Communication a owl:Class ;
-	rdfs:subClassOf _:genid4 .
-
-_:genid4 a owl:Restriction ;
-	owl:onProperty s4agri:fromNode ;
-	owl:someValuesFrom s4agri:Node .
-
-s4agri:Communication rdfs:subClassOf _:genid5 .
-
-_:genid5 a owl:Restriction ;
-	owl:onProperty s4agri:toNode ;
-	owl:someValuesFrom s4agri:Node .
-
-s4agri:Communication rdfs:subClassOf _:genid6 .
-
-_:genid6 a owl:Restriction ;
-	owl:onProperty s4agri:hasProtocol ;
-	owl:someValuesFrom rdfs:Literal .
-
-s4agri:Communication rdfs:comment "An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included."@en ;
-	rdfs:label "Communication"@es .
-# 
-# https://w3id.org/def/saref4agri#CommunicationRole
-
-s4agri:CommunicationRole a owl:Class ;
-	rdfs:comment "An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel."@en ;
-	rdfs:label "Communication role"@es .
-# 
 # https://w3id.org/def/saref4agri#Deployment
 
 s4agri:Deployment a owl:Class ;
-	rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> , _:genid7 .
+	rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> , _:genid4 .
 
-_:genid7 a owl:Restriction ;
+_:genid4 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/deployedOnPlatform> ;
 	owl:someValuesFrom <http://www.w3.org/ns/sosa/Platform> .
 
-s4agri:Deployment rdfs:subClassOf _:genid8 .
+s4agri:Deployment rdfs:subClassOf _:genid5 .
 
-_:genid8 a owl:Restriction ;
+_:genid5 a owl:Restriction ;
 	owl:onProperty <http://www.w3.org/ns/ssn/deployedSystem> ;
 	owl:someValuesFrom <http://www.w3.org/ns/ssn/System> .
 
-s4agri:Deployment rdfs:subClassOf _:genid9 .
+s4agri:Deployment rdfs:subClassOf _:genid6 .
 
-_:genid9 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty s4agri:hasDeploymentPeriod ;
 	owl:someValuesFrom time:TemporalEntity .
 
-s4agri:Deployment rdfs:subClassOf _:genid10 .
+s4agri:Deployment rdfs:subClassOf _:genid7 .
 
-_:genid10 a owl:Restriction ;
+_:genid7 a owl:Restriction ;
 	owl:onProperty s4agri:isDeployedAtSpace ;
 	owl:someValuesFrom geosp:SpatialObject .
 
 s4agri:Deployment rdfs:comment "Deployment"@en , "The scenario, including temporal and spatial information, in which the systems and devices are installed."@en .
-# 
-# https://w3id.org/def/saref4agri#Network
-
-s4agri:Network a owl:Class ;
-	rdfs:subClassOf _:genid11 .
-
-_:genid11 a owl:Restriction ;
-	owl:onProperty s4agri:hasConstituent ;
-	owl:someValuesFrom s4agri:Node .
-
-s4agri:Network rdfs:comment "Collection of nodes connected."@en ;
-	rdfs:label "Network"@es .
-# 
-# https://w3id.org/def/saref4agri#Node
-
-s4agri:Node a owl:Class ;
-	rdfs:subClassOf saref:Device , _:genid12 .
-
-_:genid12 a owl:Restriction ;
-	owl:onProperty s4agri:isConstituentOf ;
-	owl:someValuesFrom s4agri:Network .
-
-s4agri:Node rdfs:subClassOf _:genid13 .
-
-_:genid13 a owl:Restriction ;
-	owl:onProperty saref:hasState ;
-	owl:someValuesFrom saref:State .
-
-s4agri:Node rdfs:comment "Every system connected to at leas another one in a network."@en ;
-	rdfs:label "Node"@es .
 # 
 # https://w3id.org/def/saref4agri#Pluviometer
 
@@ -701,22 +578,22 @@ saref:Actuator a owl:Class ;
 # https://w3id.org/saref#Command
 
 saref:Command a owl:Class ;
-	rdfs:subClassOf _:genid14 .
+	rdfs:subClassOf _:genid8 .
 
-_:genid14 a owl:Restriction ;
+_:genid8 a owl:Restriction ;
 	owl:onProperty saref:actsUpon ;
 	owl:allValuesFrom saref:State .
 
-saref:Command rdfs:subClassOf _:genid15 .
+saref:Command rdfs:subClassOf _:genid9 .
 
-_:genid15 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty saref:isCommandOf ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Function .
 
-saref:Command rdfs:subClassOf _:genid16 .
+saref:Command rdfs:subClassOf _:genid10 .
 
-_:genid16 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty saref:hasDescription ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -733,15 +610,15 @@ saref:Device a owl:Class ;
 # https://w3id.org/saref#FeatureOfInterest
 
 saref:FeatureOfInterest a owl:Class ;
-	rdfs:subClassOf _:genid17 .
+	rdfs:subClassOf _:genid11 .
 
-_:genid17 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty saref:hasProperty ;
 	owl:allValuesFrom saref:Property .
 
-saref:FeatureOfInterest rdfs:subClassOf _:genid18 .
+saref:FeatureOfInterest rdfs:subClassOf _:genid12 .
 
-_:genid18 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty saref:isFeatureOfInterestOf ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -751,9 +628,9 @@ saref:FeatureOfInterest rdfs:comment <https://w3id.org/saref#> ;
 # https://w3id.org/saref#Function
 
 saref:Function a owl:Class ;
-	rdfs:subClassOf _:genid19 .
+	rdfs:subClassOf _:genid13 .
 
-_:genid19 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty saref:hasCommand ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Command .
@@ -771,53 +648,53 @@ saref:Humidity a owl:Class ;
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid20 .
+	rdfs:subClassOf _:genid14 .
 
-_:genid20 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty saref:hasFeatureOfInterest ;
 	owl:allValuesFrom saref:FeatureOfInterest .
 
-saref:Measurement rdfs:subClassOf _:genid21 .
+saref:Measurement rdfs:subClassOf _:genid15 .
 
-_:genid21 a owl:Restriction ;
+_:genid15 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:allValuesFrom saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid22 .
+saref:Measurement rdfs:subClassOf _:genid16 .
 
-_:genid22 a owl:Restriction ;
+_:genid16 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:allValuesFrom saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid23 .
+saref:Measurement rdfs:subClassOf _:genid17 .
 
-_:genid23 a owl:Restriction ;
+_:genid17 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredIn ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:UnitOfMeasure .
 
-saref:Measurement rdfs:subClassOf _:genid24 .
+saref:Measurement rdfs:subClassOf _:genid18 .
 
-_:genid24 a owl:Restriction ;
+_:genid18 a owl:Restriction ;
 	owl:onProperty saref:relatesToProperty ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Property .
 
-saref:Measurement rdfs:subClassOf _:genid25 .
+saref:Measurement rdfs:subClassOf _:genid19 .
 
-_:genid25 a owl:Restriction ;
+_:genid19 a owl:Restriction ;
 	owl:onProperty saref:hasTimestamp ;
 	owl:allValuesFrom xsd:dateTime .
 
-saref:Measurement rdfs:subClassOf _:genid26 .
+saref:Measurement rdfs:subClassOf _:genid20 .
 
-_:genid26 a owl:Restriction ;
+_:genid20 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-saref:Measurement rdfs:subClassOf _:genid27 .
+saref:Measurement rdfs:subClassOf _:genid21 .
 
-_:genid27 a owl:Restriction ;
+_:genid21 a owl:Restriction ;
 	owl:onProperty saref:hasValue ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:float .
@@ -830,27 +707,27 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid28 .
+	rdfs:subClassOf _:genid22 .
 
-_:genid28 a owl:Restriction ;
+_:genid22 a owl:Restriction ;
 	owl:onProperty saref:isControlledByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid29 .
+saref:Property rdfs:subClassOf _:genid23 .
 
-_:genid29 a owl:Restriction ;
+_:genid23 a owl:Restriction ;
 	owl:onProperty saref:isMeasuredByDevice ;
 	owl:allValuesFrom saref:Device .
 
-saref:Property rdfs:subClassOf _:genid30 .
+saref:Property rdfs:subClassOf _:genid24 .
 
-_:genid30 a owl:Restriction ;
+_:genid24 a owl:Restriction ;
 	owl:onProperty saref:isPropertyOf ;
 	owl:allValuesFrom saref:FeatureOfInterest .
 
-saref:Property rdfs:subClassOf _:genid31 .
+saref:Property rdfs:subClassOf _:genid25 .
 
-_:genid31 a owl:Restriction ;
+_:genid25 a owl:Restriction ;
 	owl:onProperty saref:relatesToMeasurement ;
 	owl:allValuesFrom saref:Measurement .
 
@@ -875,9 +752,9 @@ saref:State a owl:Class ;
 # https://w3id.org/saref#Task
 
 saref:Task a owl:Class ;
-	rdfs:subClassOf _:genid32 .
+	rdfs:subClassOf _:genid26 .
 
-_:genid32 a owl:Restriction ;
+_:genid26 a owl:Restriction ;
 	owl:onProperty saref:isAccomplishedBy ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass saref:Device .
