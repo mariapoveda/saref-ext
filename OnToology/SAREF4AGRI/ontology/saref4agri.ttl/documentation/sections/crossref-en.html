@@ -25,13 +25,6 @@ This section provides details for each class and property defined by SAREF exten
          <a href="#https://w3id.org/saref#Command" title="https://w3id.org/saref#Command">Command</a>
       </li>
       <li>
-         <a href="#Communication" title="https://w3id.org/def/saref4agri#Communication">Communication</a>
-      </li>
-      <li>
-         <a href="#CommunicationRole"
-            title="https://w3id.org/def/saref4agri#CommunicationRole">Communication role</a>
-      </li>
-      <li>
          <a href="#http://www.w3.org/ns/ssn/Deployment" title="http://www.w3.org/ns/ssn/Deployment">Deployment</a>
       </li>
       <li>
@@ -62,12 +55,6 @@ This section provides details for each class and property defined by SAREF exten
       </li>
       <li>
          <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">Measurement</a>
-      </li>
-      <li>
-         <a href="#Network" title="https://w3id.org/def/saref4agri#Network">Network</a>
-      </li>
-      <li>
-         <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/sosa/Platform" title="http://www.w3.org/ns/sosa/Platform">Platform</a>
@@ -245,67 +232,6 @@ This section provides details for each class and property defined by SAREF exten
             <span class="logic">max</span> 1</dd>
       </dl>
    </div>
-   <div class="entity" id="Communication">
-      <h3>Communication<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#Communication</p>
-      <div class="comment">
-         <span class="markdown">An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#fromNode" title="https://w3id.org/def/saref4agri#fromNode">from node</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#toNode" title="https://w3id.org/def/saref4agri#toNode">to node</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasProtocol" title="https://w3id.org/def/saref4agri#hasProtocol">has protocol</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#roleInCommunication"
-               title="https://w3id.org/def/saref4agri#roleInCommunication">role in communication</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="CommunicationRole">
-      <h3>Communication role<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#CommunicationRole</p>
-      <div class="comment">
-         <span class="markdown">An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel.</span>
-      </div>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#playedByNode" title="https://w3id.org/def/saref4agri#playedByNode">played by node</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#roleInCommunication"
-               title="https://w3id.org/def/saref4agri#roleInCommunication">role in communication</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#roleInNetwork" title="https://w3id.org/def/saref4agri#roleInNetwork">role in network</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://www.w3.org/ns/ssn/Deployment">
       <h3>Deployment<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -398,7 +324,6 @@ This section provides details for each class and property defined by SAREF exten
          <dt>has sub-classes</dt>
          <dd>
             <a href="#https://w3id.org/saref#Actuator" title="https://w3id.org/saref#Actuator">Actuator</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Sensor" title="https://w3id.org/saref#Sensor">Sensor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -654,69 +579,6 @@ This section provides details for each class and property defined by SAREF exten
             <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Network">
-      <h3>Network<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#Network</p>
-      <div class="comment">
-         <span class="markdown">Collection of nodes connected.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#hasConstituent" title="https://w3id.org/def/saref4agri#hasConstituent">has constituent</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#roleInNetwork" title="https://w3id.org/def/saref4agri#roleInNetwork">role in network</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Node">
-      <h3>Node<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#Node</p>
-      <div class="comment">
-         <span class="markdown">Every system connected to at leas another one in a network.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#isConstituentOf" title="https://w3id.org/def/saref4agri#isConstituentOf">is constituent of</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Network" title="https://w3id.org/def/saref4agri#Network">Network</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#https://w3id.org/saref#hasState" title="https://w3id.org/saref#hasState">has state</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/saref#State" title="https://w3id.org/saref#State">State</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#playedByNode" title="https://w3id.org/def/saref4agri#playedByNode">played by node</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1104,13 +966,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#http://www.w3.org/ns/ssn/deployedSystem" title="http://www.w3.org/ns/ssn/deployedSystem">deployed system</a>
       </li>
       <li>
-         <a href="#fromNode" title="https://w3id.org/def/saref4agri#fromNode">from node</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/saref#hasCommand" title="https://w3id.org/saref#hasCommand">has command</a>
-      </li>
-      <li>
-         <a href="#hasConstituent" title="https://w3id.org/def/saref4agri#hasConstituent">has constituent</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/ssn/hasDeployment" title="http://www.w3.org/ns/ssn/hasDeployment">has deployment</a>
@@ -1134,9 +990,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#https://w3id.org/saref#hasProperty" title="https://w3id.org/saref#hasProperty">has property</a>
       </li>
       <li>
-         <a href="#hasRole" title="https://w3id.org/def/saref4agri#hasRole">has role</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/saref#hasState" title="https://w3id.org/saref#hasState">has state</a>
       </li>
       <li>
@@ -1153,9 +1006,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </li>
       <li>
          <a href="#https://w3id.org/saref#isCommandOf" title="https://w3id.org/saref#isCommandOf">is command of</a>
-      </li>
-      <li>
-         <a href="#isConstituentOf" title="https://w3id.org/def/saref4agri#isConstituentOf">is constituent of</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#isControlledByDevice" title="https://w3id.org/saref#isControlledByDevice">is controlled by device</a>
@@ -1191,23 +1041,10 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          <a href="#https://w3id.org/saref#measuresProperty" title="https://w3id.org/saref#measuresProperty">measures property</a>
       </li>
       <li>
-         <a href="#playedByNode" title="https://w3id.org/def/saref4agri#playedByNode">played by node</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/saref#relatesToMeasurement" title="https://w3id.org/saref#relatesToMeasurement">relates to measurement</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#relatesToProperty" title="https://w3id.org/saref#relatesToProperty">relates to property</a>
-      </li>
-      <li>
-         <a href="#roleInCommunication"
-            title="https://w3id.org/def/saref4agri#roleInCommunication">role in communication</a>
-      </li>
-      <li>
-         <a href="#roleInNetwork" title="https://w3id.org/def/saref4agri#roleInNetwork">role in network</a>
-      </li>
-      <li>
-         <a href="#toNode" title="https://w3id.org/def/saref4agri#toNode">to node</a>
       </li>
       <li>
          <a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin">within</a>
@@ -1358,17 +1195,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dl>
       </div>
    </div>
-   <div class="entity" id="fromNode">
-      <h3>from node<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#fromNode</p>
-      <div class="comment">
-         <span class="markdown">Origin node in directed communications.</span>
-      </div>
-   </div>
    <div class="entity" id="https://w3id.org/saref#hasCommand">
       <h3>has command<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1390,26 +1216,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <dt>is inverse of</dt>
             <dd>
                <a href="#https://w3id.org/saref#isCommandOf" title="https://w3id.org/saref#isCommandOf">is command of</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasConstituent">
-      <h3>has constituent<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasConstituent</p>
-      <div class="comment">
-         <span class="markdown">Relation between a network and its constituents systems.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#isConstituentOf" title="https://w3id.org/def/saref4agri#isConstituentOf">is constituent of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1549,17 +1355,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasRole">
-      <h3>has role<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasRole</p>
-      <div class="comment">
-         <span class="markdown">A relation to indicate the role of a given node in a communication channel or network.</span>
-      </div>
-   </div>
    <div class="entity" id="https://w3id.org/saref#hasState">
       <h3>has state<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1687,26 +1482,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <dt>is inverse of</dt>
             <dd>
                <a href="#https://w3id.org/saref#hasCommand" title="https://w3id.org/saref#hasCommand">has command</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isConstituentOf">
-      <h3>is constituent of<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#isConstituentOf</p>
-      <div class="comment">
-         <span class="markdown">Relation between a node and the network(s) it is part of.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#hasConstituent" title="https://w3id.org/def/saref4agri#hasConstituent">has constituent</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1906,32 +1681,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
          </dd>
       </dl>
    </div>
-   <div class="entity" id="playedByNode">
-      <h3>played by node<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#playedByNode</p>
-      <div class="comment">
-         <span class="markdown">Relation use to indicate the node playing a given role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CommunicationRole"
-                  title="https://w3id.org/def/saref4agri#CommunicationRole">Communication role</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Node" title="https://w3id.org/def/saref4agri#Node">Node</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="https://w3id.org/saref#relatesToMeasurement">
       <h3>relates to measurement<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1959,77 +1708,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
          </dd>
       </dl>
-   </div>
-   <div class="entity" id="roleInCommunication">
-      <h3>role in communication<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#roleInCommunication</p>
-      <div class="comment">
-         <span class="markdown">Relation use to indicate the communication in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CommunicationRole"
-                  title="https://w3id.org/def/saref4agri#CommunicationRole">Communication role</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Communication" title="https://w3id.org/def/saref4agri#Communication">Communication</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="roleInNetwork">
-      <h3>role in network<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#roleInNetwork</p>
-      <div class="comment">
-         <span class="markdown">Relation use to indicate the network in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CommunicationRole"
-                  title="https://w3id.org/def/saref4agri#CommunicationRole">Communication role</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Network" title="https://w3id.org/def/saref4agri#Network">Network</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="toNode">
-      <h3>to node<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#toNode</p>
-      <div class="comment">
-         <span class="markdown">Target node in directed communications.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#sfWithin">
       <h3>within<sup class="type-op" title="object property">op</sup>
@@ -2081,9 +1759,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
       </li>
       <li>
          <a href="#https://w3id.org/saref#hasName" title="https://w3id.org/saref#hasName">has name</a>
-      </li>
-      <li>
-         <a href="#hasProtocol" title="https://w3id.org/def/saref4agri#hasProtocol">has protocol</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#hasTimestamp" title="https://w3id.org/saref#hasTimestamp">has timestamp</a>
@@ -2180,25 +1855,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
          </dd>
       </dl>
-   </div>
-   <div class="entity" id="hasProtocol">
-      <h3>has protocol<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/saref4agri#hasProtocol</p>
-      <div class="comment">
-         <span class="markdown">The protocol used in a given communition between nodes.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/saref#hasTimestamp">
       <h3>has timestamp<sup class="type-dp" title="data property">dp</sup>
