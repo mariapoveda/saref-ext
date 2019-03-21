@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/saref4agri/example1#"
+     xml:base="https://w3id.org/def/saref4agri/example1"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:saref="https://w3id.org/saref#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:saref4agri="https://w3id.org/def/saref4agri#">
+    <owl:Ontology rdf:about="https://w3id.org/def/saref4agri/example1">
+        <owl:versionIRI rdf:resource="https://w3id.org/def/v1/saref4agri/example1"/>
+        <dc:description xml:lang="en">SAREF4AGRI example for the Smar Irrigation use case.</dc:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasEnd"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTimeStamp -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTimeStamp"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hosts -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/hosts"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isHostedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/isHostedBy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/deployedOnPlatform -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/deployedSystem -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/ssn/deployedSystem"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasDeployment -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/ssn/hasDeployment"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasSubSystem -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/ssn/hasSubSystem"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/inDeployment -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/ssn/inDeployment"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#hasDeploymentPeriod -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4agri#hasDeploymentPeriod"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasValue -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#hasValue"/>
+    
+
+
+    <!-- https://w3id.org/saref#isMeasuredIn -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#isMeasuredIn"/>
+    
+
+
+    <!-- https://w3id.org/saref#makesMeasurement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#makesMeasurement"/>
+    
+
+
+    <!-- https://w3id.org/saref#relatesToProperty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#relatesToProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Platform -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Platform"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#Deployment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#Deployment"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#SoilTensiometer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#SoilTensiometer"/>
+    
+
+
+    <!-- https://w3id.org/saref#Measurement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Measurement"/>
+    
+
+
+    <!-- https://w3id.org/saref#Property -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Property"/>
+    
+
+
+    <!-- https://w3id.org/saref#UnitOfMeasure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#UnitOfMeasure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/millibar -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/millibar">
+        <rdf:type rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+        <rdfs:label xml:lang="en">millibar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#SoilMoisture -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri#SoilMoisture">
+        <rdf:type rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:label xml:lang="en">Soil moisture</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4agri#Deployment"/>
+        <ssn:deployedOnPlatform rdf:resource="https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07"/>
+        <ssn:deployedSystem rdf:resource="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01"/>
+        <saref4agri:hasDeploymentPeriod rdf:resource="https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <sosa:isHostedBy rdf:resource="https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07"/>
+        <ssn:hasDeployment rdf:resource="https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07"/>
+        <ssn:hasSubSystem rdf:resource="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01"/>
+        <ssn:hasSubSystem rdf:resource="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4agri#SoilTensiometer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4agri#SoilTensiometer"/>
+        <wgs84_pos:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.6</wgs84_pos:alt>
+        <saref:makesMeasurement rdf:resource="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200">
+        <rdf:type rdf:resource="https://w3id.org/saref#Measurement"/>
+        <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1490.0</saref:hasValue>
+        <saref:isMeasuredIn rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/millibar"/>
+        <saref:relatesToProperty rdf:resource="https://w3id.org/def/saref4agri#SoilMoisture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <sosa:hosts rdf:resource="https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01"/>
+        <ssn:inDeployment rdf:resource="https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959"/>
+        <time:hasEnd rdf:resource="https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-31T23:59:59</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+
