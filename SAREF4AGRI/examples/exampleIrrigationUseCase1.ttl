@@ -1,0 +1,84 @@
+@prefix : <https://w3id.org/def/saref4bldg#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix geosp: <http://www.opengis.net/ont/geosparql#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix s4agri: <https://w3id.org/def/saref4agri#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/def/saref4agri/example1> a owl:Ontology ;
+	owl:versionIRI <https://w3id.org/def/v1/saref4agri/example1> ;
+	dc:description "SAREF4AGRI example for the Smar Irrigation use case."@en .
+
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/millibar
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millibar> a owl:NamedIndividual , saref:UnitOfMeasure ;
+	rdfs:label "millibar"@en .
+
+s4agri:SoilMoisture a owl:NamedIndividual , saref:Property ;
+	rdfs:label "Soil moisture"@en .
+#
+# 
+# https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07
+
+<https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07> a owl:NamedIndividual , s4agri:Deployment ;
+	<http://www.w3.org/ns/ssn/deployedOnPlatform> <https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07> ;
+	<http://www.w3.org/ns/ssn/deployedSystem> <https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01> ;
+	s4agri:hasDeploymentPeriod <https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017> .
+# 
+# https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01
+
+<https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01> a owl:NamedIndividual , <http://www.w3.org/ns/ssn/System> ;
+	<http://www.w3.org/ns/sosa/isHostedBy> <https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07> ;
+	<http://www.w3.org/ns/ssn/hasDeployment> <https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07> ;
+	<http://www.w3.org/ns/ssn/hasSubSystem> <https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01> , <https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02> .
+# 
+# https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01
+
+<https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01> a owl:NamedIndividual , s4agri:SoilTensiometer .
+# 
+# https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02
+
+<https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02> a owl:NamedIndividual , s4agri:SoilTensiometer ;
+	saref:makesMeasurement <https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200> ;
+	geo:alt "-0.6"^^xsd:decimal .
+# 
+# https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200
+
+<https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200> a owl:NamedIndividual , saref:Measurement ;
+	saref:isMeasuredIn <http://www.ontology-of-units-of-measure.org/resource/om-2/millibar> ;
+	saref:relatesToProperty s4agri:SoilMoisture ;
+	saref:hasValue "1490.0"^^xsd:double .
+# 
+# https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07
+
+<https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07> a owl:NamedIndividual ;
+	<http://www.w3.org/ns/sosa/hosts> <https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01> ;
+	<http://www.w3.org/ns/ssn/inDeployment> <https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07> .
+# 
+# https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07
+
+<https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07> a owl:NamedIndividual , <http://www.w3.org/ns/sosa/Platform> .
+# 
+# https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017
+
+<https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017> a owl:NamedIndividual , time:Interval ;
+																 time:hasEnd <https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000> ;
+																 time:hasBeginning <https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959> . 
+																  
+																  
+																  
+<https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000> rdf:type owl:NamedIndividual ,
+                                                time:Instant ;
+                                       time:inXSDDateTimeStamp "2016-01-01T00:00:00"^^xsd:dateTime .
+                                       
+<https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959> rdf:type owl:NamedIndividual ,
+                                                time:Instant ;
+                                       time:inXSDDateTimeStamp "2017-12-31T23:59:59"^^xsd:dateTime .
