@@ -42,11 +42,13 @@ s4agri:SoilMoisture a owl:NamedIndividual , saref:Property ;
 # 
 # https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01
 
-<https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01> a owl:NamedIndividual , s4agri:SoilTensiometer .
+<https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01> a owl:NamedIndividual , s4agri:SoilTensiometer ;
+	saref:measuresProperty s4agri:SoilMoisture .
 # 
 # https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02
 
 <https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02> a owl:NamedIndividual , s4agri:SoilTensiometer ;
+	saref:measuresProperty s4agri:SoilMoisture ;
 	saref:makesMeasurement <https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200> ;
 	geo:alt "-0.6"^^xsd:decimal .
 # 
