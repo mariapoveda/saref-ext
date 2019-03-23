@@ -1,0 +1,193 @@
+[ {
+  "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/millibar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "millibar"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Interval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#hasBeginning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#hasEnd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#inXSDDateTimeStamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Platform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hosts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/isHostedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/System",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/deployedSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/hasDeployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/hasSubSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/inDeployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#Deployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#SoilMoisture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Soil moisture"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#SoilTensiometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri#hasDeploymentPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "SAREF4AGRI example for the Smar Irrigation use case."
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/def/v1/saref4agri/example1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4agri#Deployment" ],
+  "http://www.w3.org/ns/ssn/deployedOnPlatform" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07"
+  } ],
+  "http://www.w3.org/ns/ssn/deployedSystem" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01"
+  } ],
+  "https://w3id.org/def/saref4agri#hasDeploymentPeriod" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/System" ],
+  "http://www.w3.org/ns/sosa/isHostedBy" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07"
+  } ],
+  "http://www.w3.org/ns/ssn/hasDeployment" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07"
+  } ],
+  "http://www.w3.org/ns/ssn/hasSubSystem" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01"
+  }, {
+    "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4agri#SoilTensiometer" ],
+  "https://w3id.org/saref#measuresProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#SoilMoisture"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4agri#SoilTensiometer" ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#alt" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "-0.6"
+  } ],
+  "https://w3id.org/saref#makesMeasurement" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2016-06-14T000000_0200"
+  } ],
+  "https://w3id.org/saref#measuresProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#SoilMoisture"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2016-06-14T000000_0200",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "https://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#double",
+    "@value" : "1490.0"
+  } ],
+  "https://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/millibar"
+  } ],
+  "https://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4agri#SoilMoisture"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/sosa/Platform" ],
+  "http://www.w3.org/ns/sosa/hosts" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01"
+  } ],
+  "http://www.w3.org/ns/ssn/inDeployment" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Interval" ],
+  "http://www.w3.org/2006/time#hasBeginning" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959"
+  } ],
+  "http://www.w3.org/2006/time#hasEnd" : [ {
+    "@id" : "https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ],
+  "http://www.w3.org/2006/time#inXSDDateTimeStamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2016-01-01T00:00:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ],
+  "http://www.w3.org/2006/time#inXSDDateTimeStamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2017-12-31T23:59:59"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Measurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#UnitOfMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#isMeasuredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#makesMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#measuresProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#relatesToProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
