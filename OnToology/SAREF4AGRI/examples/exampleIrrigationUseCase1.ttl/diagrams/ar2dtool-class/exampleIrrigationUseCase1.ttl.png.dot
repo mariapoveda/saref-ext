@@ -1,0 +1,22 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200" -> "s4agri:SoilMoisture" [ label = "saref:relatesToProperty" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200" -> "http://www.ontology-of-units-of-measure.org/resource/om-2/millibar" [ label = "saref:isMeasuredIn" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02" -> "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2013-06-14T000000_0200" [ label = "saref:makesMeasurement" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02" -> "s4agri:SoilMoisture" [ label = "saref:measuresProperty" ];
+	"https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017" -> "https://w3id.org/def/saref4agri/example1#instant_2017-12-31T235959" [ label = "time:hasBeginning" ];
+	"https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017" -> "https://w3id.org/def/saref4agri/example1#instant_2016-01-01T000000" [ label = "time:hasEnd" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07" -> "https://w3id.org/def/saref4agri/example1#TimeInterval2016-2017" [ label = "s4agri:hasDeploymentPeriod" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07" -> "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01" [ label = ":deployedSystem" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07" -> "https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07" [ label = ":deployedOnPlatform" ];
+	"https://w3id.org/def/saref4agri/example1" -> "https://w3id.org/def/v1/saref4agri/example1" [ label = "owl:versionIRI" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01" -> "s4agri:SoilMoisture" [ label = "saref:measuresProperty" ];
+	"https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07" -> "https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07" [ label = ":inDeployment" ];
+	"https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07" -> "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01" [ label = ":hosts" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01" -> "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor02" [ label = ":hasSubSystem" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01" -> "https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01SoilSensor01" [ label = ":hasSubSystem" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01" -> "https://w3id.org/def/saref4agri/example1#ArvalisDeployment20162017Land07" [ label = ":hasDeployment" ];
+	"https://w3id.org/def/saref4agri/example1#ArvalisIrrinovStation01" -> "https://w3id.org/def/saref4agri/example1#PlatformArvalisLand07" [ label = ":isHostedBy" ];
+
+}
