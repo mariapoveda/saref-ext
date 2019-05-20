@@ -19,7 +19,7 @@
                                    <http://purl.org/dc/terms/description> "SAREF4AGRI is an extension of SAREF for the agriculture and food domain. SAREF4AGRI is specified and published by ETSI in the TS 103 410-6 associated to this ontology file. The list of use cases, standards and requirements that guided the creation of SAREF4AGRI are described in the associated ETSI TR 103 511. " ;
                                    <http://purl.org/dc/terms/issued> "2019-04-30"^^xsd:date ;
                                    <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                   <http://purl.org/dc/terms/modified> "2019-04-30"^^xsd:date ;
+                                   <http://purl.org/dc/terms/modified> "2019-05-20"^^xsd:date ;
                                    <http://purl.org/dc/terms/publisher> <http://oeg-upm.net/> ,
                                                                         <https://tno.nl/en/> ,
                                                                         <https://www.etsi.org/> ;
@@ -944,8 +944,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/def/saref4agri#Pluviometer
 :Pluviometer rdf:type owl:Class ;
              rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
-             rdfs:label "A sensor that measures the rain fall."@en ,
-                        "Pluviometer"@en .
+             rdfs:comment "A sensor that measures the rain fall."@en ;
+             rdfs:label "Pluviometer"@en .
 
 
 ###  https://w3id.org/def/saref4agri#Precipitation
@@ -973,8 +973,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/def/saref4agri#SoilTensiometer
 :SoilTensiometer rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
-                 rdfs:label "A sensor that measures the soil moisture."@en ,
-                            "Soil tensiometer"@en .
+                 rdfs:comment "A sensor that measures the soil moisture."@en ;
+                 rdfs:label "Soil tensiometer"@en .
 
 
 ###  https://w3id.org/def/saref4agri#Thermometer
