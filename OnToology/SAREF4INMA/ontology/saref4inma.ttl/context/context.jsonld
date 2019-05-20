@@ -1,174 +1,282 @@
 {
   "@context" : {
-    "needsMaterial" : {
-      "@id" : "https://w3id.org/saref4inma#needsMaterial",
+    "hasUUID" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasUUID",
       "@type" : "@id"
     },
-    "hasGTIN14" : {
-      "@id" : "https://w3id.org/saref4inma#hasGTIN14",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "GTIN14ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#GTIN14ID"
     },
-    "Unit" : {
-      "@id" : "https://w3id.org/saref4inma#Unit"
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
     },
-    "versionInfo" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    "belongsToCategory" : {
+      "@id" : "https://w3id.org/def/saref4inma#belongsToCategory",
+      "@type" : "@id"
     },
-    "ControlModule" : {
-      "@id" : "https://w3id.org/saref4inma#ControlModule"
-    },
-    "hasGTIN13" : {
-      "@id" : "https://w3id.org/saref4inma#hasGTIN13",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "ProductionEquipmentFunction" : {
+      "@id" : "https://w3id.org/def/saref4inma#ProductionEquipmentFunction"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
+    "hasGTIN14IDValue" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN14IDValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "WorkCenter" : {
-      "@id" : "https://w3id.org/saref4inma#WorkCenter"
+      "@id" : "https://w3id.org/def/saref4inma#WorkCenter"
     },
-    "EquipmentModule" : {
-      "@id" : "https://w3id.org/saref4inma#EquipmentModule"
+    "IRDI" : {
+      "@id" : "https://w3id.org/def/saref4inma#IRDI"
     },
-    "ProductionUnit" : {
-      "@id" : "https://w3id.org/saref4inma#ProductionUnit"
+    "MaterialBatch" : {
+      "@id" : "https://w3id.org/def/saref4inma#MaterialBatch"
     },
-    "Material" : {
-      "@id" : "https://w3id.org/saref4inma#Material"
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
     },
-    "Product" : {
-      "@id" : "https://w3id.org/saref4inma#Product"
+    "GTIN8ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#GTIN8ID"
     },
-    "brand" : {
-      "@id" : "https://w3id.org/saref4inma#brand",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "hasGTIN8IDValue" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN8IDValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasGTIN13IDValue" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN13IDValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "https://w3id.org/saref#FeatureOfInterest"
+    },
+    "ProductionEquipmentCategory" : {
+      "@id" : "https://w3id.org/def/saref4inma#ProductionEquipmentCategory"
+    },
+    "hasVersion" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasVersion"
+    },
+    "measuresProperty" : {
+      "@id" : "https://w3id.org/saref#measuresProperty",
+      "@type" : "@id"
+    },
+    "ItemBatch" : {
+      "@id" : "https://w3id.org/def/saref4inma#ItemBatch"
+    },
+    "hasCertificate" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasCertificate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
-    "contains" : {
-      "@id" : "https://w3id.org/saref4inma#contains",
+    "hasIdentifier" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasIdentifier",
+      "@type" : "@id"
+    },
+    "hasGTIN14ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN14ID",
       "@type" : "@id"
     },
     "hasUpdate" : {
-      "@id" : "https://w3id.org/saref4inma#hasUpdate",
+      "@id" : "https://w3id.org/def/saref4inma#hasUpdate",
       "@type" : "@id"
     },
-    "manufacturer" : {
-      "@id" : "https://w3id.org/saref4inma#manufacturer",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Measurement" : {
+      "@id" : "https://w3id.org/saref#Measurement"
     },
-    "ProcessCell" : {
-      "@id" : "https://w3id.org/saref4inma#ProcessCell"
+    "maxQualifiedCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#maxQualifiedCardinality"
     },
-    "hasCommand" : {
-      "@id" : "https://w3id.org/saref#hasCommand",
+    "hasGTIN12ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN12ID",
       "@type" : "@id"
+    },
+    "hasIRDIValue" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasIRDIValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "isCreatedIn" : {
-      "@id" : "https://w3id.org/saref4inma#isCreatedIn",
+      "@id" : "https://w3id.org/def/saref4inma#isCreatedIn",
       "@type" : "@id"
     },
-    "hasGTIN8" : {
-      "@id" : "https://w3id.org/saref4inma#hasGTIN8",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "makes" : {
-      "@id" : "https://w3id.org/saref4inma#makes",
-      "@type" : "@id"
+    "ExpectedMeasurement" : {
+      "@id" : "https://w3id.org/def/saref4inma#ExpectedMeasurement"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
     "Batch" : {
-      "@id" : "https://w3id.org/saref4inma#Batch"
+      "@id" : "https://w3id.org/def/saref4inma#Batch"
     },
-    "name" : {
-      "@id" : "https://w3id.org/saref4inma#name",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Building" : {
+      "@id" : "https://w3id.org/def/s4bldg#Building"
     },
-    "MouldingMachine" : {
-      "@id" : "https://w3id.org/saref4inma#MouldingMachine"
+    "hasUUIDValue" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasUUIDValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "preferredNamespacePrefix" : {
-      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    "creates" : {
+      "@id" : "https://w3id.org/def/saref4inma#creates",
+      "@type" : "@id"
     },
-    "hasCategory" : {
-      "@id" : "https://w3id.org/saref4inma#hasCategory",
+    "hasSize" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasSize",
+      "@type" : "@id"
+    },
+    "consistsOfItem" : {
+      "@id" : "https://w3id.org/def/saref4inma#consistsOfItem",
+      "@type" : "@id"
+    },
+    "ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#ID"
+    },
+    "ItemCategory" : {
+      "@id" : "https://w3id.org/def/saref4inma#ItemCategory"
+    },
+    "ProductionEquipment" : {
+      "@id" : "https://w3id.org/def/saref4inma#ProductionEquipment"
+    },
+    "Size" : {
+      "@id" : "https://w3id.org/def/saref4inma#Size"
+    },
+    "makesMeasurement" : {
+      "@id" : "https://w3id.org/saref#makesMeasurement",
+      "@type" : "@id"
+    },
+    "hasModelNumber" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasModelNumber"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "produces" : {
+      "@id" : "https://w3id.org/def/saref4inma#produces",
       "@type" : "@id"
     },
     "Property" : {
       "@id" : "https://w3id.org/saref#Property"
+    },
+    "MaterialCategory" : {
+      "@id" : "https://w3id.org/def/saref4inma#MaterialCategory"
     },
     "hasFunction" : {
       "@id" : "https://w3id.org/saref#hasFunction",
       "@type" : "@id"
     },
     "title" : {
-      "@id" : "http://purl.org/dc/elements/1.1/title"
+      "@id" : "http://purl.org/dc/terms/title"
     },
-    "Command" : {
-      "@id" : "https://w3id.org/saref#Command"
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
     },
-    "ProductCategory" : {
-      "@id" : "https://w3id.org/saref4inma#ProductCategory"
+    "hasGTIN8ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN8ID",
+      "@type" : "@id"
     },
     "publisher" : {
-      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "hasFeatureOfInterest" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasFeatureOfInterest",
+      "@type" : "@id"
+    },
+    "hasSerialNumber" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasSerialNumber"
     },
     "Site" : {
-      "@id" : "https://w3id.org/saref4inma#Site"
+      "@id" : "https://w3id.org/def/saref4inma#Site"
     },
-    "InjectionUnit" : {
-      "@id" : "https://w3id.org/saref4inma#InjectionUnit"
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "hasIDValue" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasIDValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasState" : {
       "@id" : "https://w3id.org/saref#hasState",
       "@type" : "@id"
     },
-    "supplier" : {
-      "@id" : "https://w3id.org/saref4inma#supplier",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "GTIN12ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#GTIN12ID"
     },
     "State" : {
       "@id" : "https://w3id.org/saref#State"
     },
-    "ProductEquipment" : {
-      "@id" : "https://w3id.org/saref4inma#ProductEquipment"
-    },
-    "size" : {
-      "@id" : "https://w3id.org/saref4inma#size",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
-    },
     "Function" : {
       "@id" : "https://w3id.org/saref#Function"
     },
+    "BuildingSpace" : {
+      "@id" : "https://w3id.org/def/s4bldg#BuildingSpace"
+    },
     "needsEquipment" : {
-      "@id" : "https://w3id.org/saref4inma#needsEquipment",
+      "@id" : "https://w3id.org/def/saref4inma#needsEquipment",
       "@type" : "@id"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
+    "isProducedBy" : {
+      "@id" : "https://w3id.org/def/saref4inma#isProducedBy",
+      "@type" : "@id"
+    },
+    "hasIRDI" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasIRDI",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "ActualMeasurement" : {
+      "@id" : "https://w3id.org/def/saref4inma#ActualMeasurement"
+    },
+    "hasGTIN12IDValue" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN12IDValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Factory" : {
-      "@id" : "https://w3id.org/saref4inma#Factory"
+      "@id" : "https://w3id.org/def/saref4inma#Factory"
     },
     "Device" : {
       "@id" : "https://w3id.org/saref#Device"
     },
-    "Area" : {
-      "@id" : "https://w3id.org/saref4inma#Area"
+    "consistsOfBatch" : {
+      "@id" : "https://w3id.org/def/saref4inma#consistsOfBatch",
+      "@type" : "@id"
     },
-    "hasGTIN12" : {
-      "@id" : "https://w3id.org/saref4inma#hasGTIN12",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Item" : {
+      "@id" : "https://w3id.org/def/saref4inma#Item"
+    },
+    "Area" : {
+      "@id" : "https://w3id.org/def/saref4inma#Area"
+    },
+    "GTIN13ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#GTIN13ID"
     },
     "description" : {
-      "@id" : "https://w3id.org/saref4inma#description",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@id" : "http://purl.org/dc/terms/description"
     },
-    "preferredNamespaceUri" : {
-      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    "PhysicalObject" : {
+      "@id" : "https://w3id.org/def/s4bldg#PhysicalObject"
+    },
+    "UUID" : {
+      "@id" : "https://w3id.org/def/saref4inma#UUID"
+    },
+    "isCategoryOf" : {
+      "@id" : "https://w3id.org/def/saref4inma#isCategoryOf",
+      "@type" : "@id"
+    },
+    "hasGTIN13ID" : {
+      "@id" : "https://w3id.org/def/saref4inma#hasGTIN13ID",
+      "@type" : "@id"
+    },
+    "isFeatureOfInterestOf" : {
+      "@id" : "https://w3id.org/def/saref4inma#isFeatureOfInterestOf",
+      "@type" : "@id"
     }
   }
 }

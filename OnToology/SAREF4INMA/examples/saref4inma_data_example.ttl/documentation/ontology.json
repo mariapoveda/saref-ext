@@ -1,0 +1,893 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#hasIdentifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ID"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#hasIDValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ID"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#hasSerialNumber"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#hasIDValue"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#hasIDValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#hasIDValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/def/saref4inma"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "Created with TopBraid Composer"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialBatch742",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#MaterialBatch" ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialCategory"
+  } ],
+  "https://w3id.org/def/saref4inma#hasCertificate" : [ {
+    "@language" : "en",
+    "@value" : "ABS High-precision quality max tolerance of 0.1mm"
+  } ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr71324352"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4inma/shaver#Plastic" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Site" ],
+  "https://w3id.org/def/saref4bldg#hasSpace" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_18"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_19"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Area" ],
+  "https://w3id.org/def/saref4bldg#contains" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Cutting_and_Milling_WorkCenter"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Area" ],
+  "https://w3id.org/def/saref4bldg#contains" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_B",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Site" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#CuttingFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipmentFunction"
+  }, {
+    "@id" : "https://w3id.org/saref#ActuatingFunction"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Cutting_and_Milling_WorkCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#WorkCenter" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Eindhoven_BIC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Factory" ],
+  "https://w3id.org/def/saref4bldg#hasSpace" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_B"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#End_Time_Batch392",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#FormingFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipmentFunction"
+  }, {
+    "@id" : "https://w3id.org/saref#ActuatingFunction"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#JIDFUHWEUF323",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#JSDFHKLSDF982374",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipmentFunction"
+  }, {
+    "@id" : "https://w3id.org/saref#ActuatingFunction"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#LaserCuttingMachine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipment"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4inma/shaver#LaserCuttingMachine" ],
+  "https://w3id.org/def/saref4bldg#isContainedIn" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter"
+  } ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory"
+  } ],
+  "https://w3id.org/saref#hasFunction" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#CuttingFunction"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ProductionEquipmentCategory" ],
+  "https://w3id.org/def/saref4inma#isCategoryOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#MillingMachine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipment"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#MouldingMachine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipment"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40-S50_Generic_Body_ItemBatch3290",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ItemBatch" ],
+  "https://w3id.org/def/saref4inma#consistsOfBatch" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialBatch742"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323"
+  } ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr55689876777421"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ItemBatch" ],
+  "http://www.w3.org/2006/time#hasBeginning" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Start_Time_Batch392"
+  } ],
+  "http://www.w3.org/2006/time#hasEnd" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#End_Time_Batch392"
+  } ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemCategory"
+  } ],
+  "https://w3id.org/def/saref4inma#creates" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"
+  } ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr34275874234908"
+  } ],
+  "https://w3id.org/def/saref4inma#isFeatureOfInterestOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG"
+  } ],
+  "https://w3id.org/def/saref4inma#needsEquipment" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1"
+  } ],
+  "https://w3id.org/saref#hasProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ItemCategory" ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr98647656"
+  } ],
+  "https://w3id.org/def/saref4inma#hasModelNumber" : [ {
+    "@value" : "nr98647656"
+  } ],
+  "https://w3id.org/def/saref4inma#isCategoryOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392"
+  } ],
+  "https://w3id.org/def/saref4inma#isProducedBy" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory"
+  } ],
+  "https://w3id.org/saref#hasManufacturer" : [ {
+    "@value" : "PhilBrau"
+  } ],
+  "https://w3id.org/saref#relatesToMeasurement" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Philips_screws_D2mm_L8mm_MaterialCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4inma/shaver#Screw" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Plastic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#MaterialCategory"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Screw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#MaterialCategory"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Item" ],
+  "https://w3id.org/def/saref4inma#consistsOfItem" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ShaverBody9440"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ShaverHead3002"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#StepMotor083"
+  } ],
+  "https://w3id.org/def/saref4inma#hasSerialNumber" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr7865654345676"
+  } ],
+  "https://w3id.org/def/saref4inma#isCreatedIn" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392"
+  } ],
+  "https://w3id.org/def/saref4inma#isFeatureOfInterestOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523"
+  } ],
+  "https://w3id.org/saref#hasProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ShaverBody9440",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Item" ],
+  "https://w3id.org/def/saref4inma#hasSerialNumber" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#UFHLEIJKFNESDKL323"
+  } ],
+  "https://w3id.org/def/saref4inma#isCreatedIn" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40-S50_Generic_Body_ItemBatch3290"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#ShaverHead3002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Item" ],
+  "https://w3id.org/def/saref4inma#consistsOfItem" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311"
+  } ],
+  "https://w3id.org/def/saref4inma#hasSerialNumber" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#JIDFUHWEUF323"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#StampingMachine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipment"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Start_Time_Batch392",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#SteelSheet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#MaterialCategory"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#MaterialBatch" ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialCategory"
+  } ],
+  "https://w3id.org/def/saref4inma#hasCertificate" : [ {
+    "@language" : "en",
+    "@value" : "Steel Certificate 3.1"
+  } ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr79009856"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4inma/shaver#SteelSheet" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#StepMotor083",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Item" ],
+  "https://w3id.org/def/saref4inma#hasSerialNumber" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#JSDFHKLSDF982374"
+  } ],
+  "https://w3id.org/def/saref4inma#isCreatedIn" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Step_Moters_Q88_Secure_ItemBatch423"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Step_Moters_Q88_Secure_ItemBatch423",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ItemBatch" ],
+  "https://w3id.org/def/saref4inma#consistsOfItem" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323"
+  } ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr34254657687978"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Step_Motors_Q88_Secure_ItemCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ItemCategory" ],
+  "https://w3id.org/def/saref4inma#hasModelNumber" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr83049304"
+  } ],
+  "https://w3id.org/def/saref4inma#isProducedBy" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#MaterialBatch" ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory"
+  } ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr74536275"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch324",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#MaterialBatch" ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory"
+  } ],
+  "https://w3id.org/def/saref4inma#hasIdentifier" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr76567876"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4inma/shaver#Screw" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#UFHLEIJKFNESDKL323",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ProductionEquipmentCategory" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#Measurement" ],
+  "https://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "228"
+  } ],
+  "https://w3id.org/saref#isMeasuredByDevice" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"
+  } ],
+  "https://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"
+  } ],
+  "https://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ProductionEquipment"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#TemperatureSensor" ],
+  "https://w3id.org/saref#makesMeasurement" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#TemperatureSensor" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Temperature" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine" ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory"
+  } ],
+  "https://w3id.org/saref#controlsProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ],
+  "https://w3id.org/saref#hasFunction" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine" ],
+  "https://w3id.org/def/saref4bldg#isContainedIn" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter"
+  } ],
+  "https://w3id.org/def/saref4inma#belongsToCategory" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory"
+  } ],
+  "https://w3id.org/saref#consistsOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"
+  } ],
+  "https://w3id.org/saref#controlsProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ],
+  "https://w3id.org/saref#hasFunction" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction"
+  } ],
+  "https://w3id.org/saref#makesMeasurement" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ActualMeasurement" ],
+  "https://w3id.org/def/saref4inma#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"
+  } ],
+  "https://w3id.org/saref#hasTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-01-28T12:11:10"
+  } ],
+  "https://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "223"
+  } ],
+  "https://w3id.org/saref#isMeasuredByDevice" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"
+  } ],
+  "https://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"
+  } ],
+  "https://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ActualMeasurement" ],
+  "https://w3id.org/def/saref4inma#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392"
+  } ],
+  "https://w3id.org/saref#hasTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-01-28T12:11:40"
+  } ],
+  "https://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "232"
+  } ],
+  "https://w3id.org/saref#isMeasuredByDevice" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"
+  } ],
+  "https://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"
+  } ],
+  "https://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ActualMeasurement" ],
+  "https://w3id.org/def/saref4inma#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"
+  } ],
+  "https://w3id.org/saref#hasTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-01-28T12:11:20"
+  } ],
+  "https://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "228"
+  } ],
+  "https://w3id.org/saref#isMeasuredByDevice" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"
+  } ],
+  "https://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"
+  } ],
+  "https://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ActualMeasurement" ],
+  "https://w3id.org/def/saref4inma#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"
+  } ],
+  "https://w3id.org/saref#hasTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-01-28T12:11:30"
+  } ],
+  "https://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "231"
+  } ],
+  "https://w3id.org/saref#isMeasuredByDevice" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"
+  } ],
+  "https://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"
+  } ],
+  "https://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#ActualMeasurement" ],
+  "https://w3id.org/def/saref4inma#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"
+  } ],
+  "https://w3id.org/saref#hasTimestamp" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-01-28T12:11:40"
+  } ],
+  "https://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "232"
+  } ],
+  "https://w3id.org/saref#isMeasuredByDevice" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"
+  } ],
+  "https://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"
+  } ],
+  "https://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#WorkCenter" ],
+  "https://w3id.org/saref#consistsOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_1"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#dateTimeStamp_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2001/XMLSchema#dateTimeStamp" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr34254657687978",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr34275874234908",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ],
+  "https://w3id.org/def/saref4inma#hasIDValue" : [ {
+    "@value" : "nr34275874234908"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr55689876777421",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr71324352",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN8ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr74536275",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN8ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr76567876",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN8ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr7865654345676",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ],
+  "https://w3id.org/def/saref4inma#hasIDValue" : [ {
+    "@value" : "nr7865654345676"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr79009856",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN8ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr82849583748573",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN14ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr83049304",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN8ID" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4inma/shaver#nr98647656",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/saref4inma#GTIN8ID" ],
+  "https://w3id.org/def/saref4inma#hasIDValue" : [ {
+    "@value" : "nr98647656"
+  } ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#maxQualifiedCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#hasBeginning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#hasEnd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#PhysicalObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#contains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#hasSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#isContainedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ActualMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes whether the measurement is actually measured during the production process. Disjoint with ExpectedMeasurement."
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#ExpectedMeasurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#Area",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#Batch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ExpectedMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes whether the measurement is expected (i.e., planned before the production process). Disjoint with ActualMeasurement."
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#Factory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#GTIN14ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#GTIN8ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#Item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ItemBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ItemCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://org.semanticweb.owlapi/error#Error1"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#MaterialBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#MaterialCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#Measurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ProductionEquipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ProductionEquipmentCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#ProductionEquipmentFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#WorkCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#belongsToCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#consistsOfBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#consistsOfItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#creates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relation between a production process (e.g., Batch) that creates one or more tangible objects (e.g., Items)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#hasCertificate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#hasIDValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#hasIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#hasModelNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#hasSerialNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#isCategoryOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#isCreatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/saref4inma#creates"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#isFeatureOfInterestOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#isProducedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/saref4inma#needsEquipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#ActuatingFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#PhysicalObject"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#TemperatureSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#consistsOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#controlsProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasManufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasTimestamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#isMeasuredByDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#isMeasuredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#makesMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#relatesToMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#relatesToProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

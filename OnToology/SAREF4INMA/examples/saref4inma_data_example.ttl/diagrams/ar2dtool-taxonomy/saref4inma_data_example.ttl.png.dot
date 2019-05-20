@@ -1,0 +1,21 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "ex:JoiningFunction" "ex:MouldingMachine" "ex:StampingMachine" "ex:WeldingMachine" "saref:Device" "ex:MillingMachine" "ex:LaserCuttingMachine" "ex:SteelSheet" "ex:FormingFunction" "s4inma:MaterialCategory" "ex:Screw" "ex:Plastic" "ex:CuttingFunction" ; /*classes style*/
+	"ex:SteelSheet" -> "s4inma:MaterialCategory" [ label = "rdfs:subClassOf" ];
+	"ex:FormingFunction" -> "saref:ActuatingFunction" [ label = "rdfs:subClassOf" ];
+	"ex:FormingFunction" -> "s4inma:ProductionEquipmentFunction" [ label = "rdfs:subClassOf" ];
+	"saref:Device" -> "s4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"ex:StampingMachine" -> "s4inma:ProductionEquipment" [ label = "rdfs:subClassOf" ];
+	"ex:Screw" -> "s4inma:MaterialCategory" [ label = "rdfs:subClassOf" ];
+	"ex:MillingMachine" -> "s4inma:ProductionEquipment" [ label = "rdfs:subClassOf" ];
+	"ex:MouldingMachine" -> "s4inma:ProductionEquipment" [ label = "rdfs:subClassOf" ];
+	"ex:JoiningFunction" -> "saref:ActuatingFunction" [ label = "rdfs:subClassOf" ];
+	"ex:JoiningFunction" -> "s4inma:ProductionEquipmentFunction" [ label = "rdfs:subClassOf" ];
+	"ex:LaserCuttingMachine" -> "s4inma:ProductionEquipment" [ label = "rdfs:subClassOf" ];
+	"ex:Plastic" -> "s4inma:MaterialCategory" [ label = "rdfs:subClassOf" ];
+	"ex:CuttingFunction" -> "saref:ActuatingFunction" [ label = "rdfs:subClassOf" ];
+	"ex:CuttingFunction" -> "s4inma:ProductionEquipmentFunction" [ label = "rdfs:subClassOf" ];
+	"ex:WeldingMachine" -> "s4inma:ProductionEquipment" [ label = "rdfs:subClassOf" ];
+
+}

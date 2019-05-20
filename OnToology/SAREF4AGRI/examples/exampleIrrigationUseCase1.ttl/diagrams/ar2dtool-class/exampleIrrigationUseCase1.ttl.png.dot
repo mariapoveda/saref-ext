@@ -1,0 +1,22 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"ex:ArvalisIrrinovStation01SoilSensor02" -> "s4agri:SoilMoisture" [ label = "saref:measuresProperty" ];
+	"ex:ArvalisIrrinovStation01SoilSensor02" -> "ex:ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2016-06-14T000000_0200" [ label = "saref:makesMeasurement" ];
+	"ex:TimeInterval2016-2017" -> "ex:instant_2016-01-01T000000" [ label = "time:hasEnd" ];
+	"ex:TimeInterval2016-2017" -> "ex:instant_2017-12-31T235959" [ label = "time:hasBeginning" ];
+	"ex:ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2016-06-14T000000_0200" -> "s4agri:SoilMoisture" [ label = "saref:relatesToProperty" ];
+	"ex:ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2016-06-14T000000_0200" -> "om:millibar" [ label = "saref:isMeasuredIn" ];
+	"ex:ArvalisDeployment20162017Land07" -> "ex:TimeInterval2016-2017" [ label = "s4agri:hasDeploymentPeriod" ];
+	"ex:ArvalisDeployment20162017Land07" -> "ex:ArvalisIrrinovStation01" [ label = "ssn:deployedSystem" ];
+	"ex:ArvalisDeployment20162017Land07" -> "ex:PlatformArvalisLand07" [ label = "ssn:deployedOnPlatform" ];
+	"https://w3id.org/def/saref4agri/example1" -> "https://w3id.org/def/v1/saref4agri/example1" [ label = "owl:versionIRI" ];
+	"ex:ArvalisIrrinovStation01SoilSensor01" -> "s4agri:SoilMoisture" [ label = "saref:measuresProperty" ];
+	"ex:PlatformArvalisLand07" -> "ex:ArvalisDeployment20162017Land07" [ label = "ssn:inDeployment" ];
+	"ex:PlatformArvalisLand07" -> "ex:ArvalisIrrinovStation01" [ label = "sosa:hosts" ];
+	"ex:ArvalisIrrinovStation01" -> "ex:ArvalisIrrinovStation01SoilSensor02" [ label = "ssn:hasSubSystem" ];
+	"ex:ArvalisIrrinovStation01" -> "ex:ArvalisIrrinovStation01SoilSensor01" [ label = "ssn:hasSubSystem" ];
+	"ex:ArvalisIrrinovStation01" -> "ex:ArvalisDeployment20162017Land07" [ label = "ssn:hasDeployment" ];
+	"ex:ArvalisIrrinovStation01" -> "ex:PlatformArvalisLand07" [ label = "sosa:isHostedBy" ];
+
+}

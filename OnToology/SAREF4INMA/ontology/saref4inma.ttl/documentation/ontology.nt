@@ -1,13 +1,20 @@
 <https://w3id.org/def/saref4inma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/def/saref4inma> <http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the industry and manufacturing domain. This extension is based on the Reference Architectural Model Industry 4.0 (RAMI)."@en .
-<https://w3id.org/def/saref4inma> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
-<https://w3id.org/def/saref4inma> <http://purl.org/dc/elements/1.1/title> "SAREF extension for industry and manufacturing domain"@en .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/contributor> <http://purl.org/net/mpoveda> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/contributor> "Matthijs Punter, TNO" .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/created> "2015-03-29"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
-<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/creator> "Alba Fernandez Izquierdo" .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/lauradaniele> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/mderoode> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/creator> "Alba Fernandez Izquierdo, UPM" .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/description> "SAREF4INMA is an extension of SAREF for the industry and manufacturing domain. SAREF4INMA focuses on extending SAREF for the industry and manufacturing domain to solve the lack of interoperability between various types of production equipment that produce items in a factory and, once outside the factory, between different organizations in the value chain to uniquely track back the produced items to the corresponding production equipment, batches, material and precise time in which they were manufactured. SAREF4INMA is specified and published by ETSI in the TS 103 410-5 associated to this ontology file. SAREF4INMA was created to be aligned with related initiatives in the smart industry and manufacturing domain in terms of modelling and standardization, such as the Reference Architecture Model for Industry 4.0 (RAMI), which combines several standards used by the various national initiatives in Europe that support digitalization in manufacturing. The full list of use cases, standards and requirements that guided the creation of SAREF4INMA are described in the associated ETSI TR 103 507. " .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/issued> "2019-04-30"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<https://w3id.org/def/saref4inma> <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4inma" .
-<https://w3id.org/def/saref4inma> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4inma#" .
-<https://w3id.org/def/saref4inma> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/modified> "2019-04-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/publisher> <http://oeg-upm.net> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/publisher> <https://tno.nl/en/> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/publisher> <https://www.etsi.org/> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/source> <https://www.etsi.org/deliver/etsi_ts/103400_103499/10341005/01.01.01_60/ts_10341005v010101p.pdf> .
+<https://w3id.org/def/saref4inma> <http://purl.org/dc/terms/title> "SAREF4INMA: an extension of SAREF for the industry and manufacturing domain" .
 # 
 # 
 # #################################################################
@@ -17,17 +24,38 @@
 # #################################################################
 # 
 # 
-# http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#maxQualifiedCardinality
+<http://www.w3.org/2002/07/owl#maxQualifiedCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -38,8 +66,113 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/saref#hasCommand
-<https://w3id.org/saref#hasCommand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# https://w3id.org/def/saref4inma#belongsToCategory
+<https://w3id.org/def/saref4inma#belongsToCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#belongsToCategory> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4inma#isCategoryOf> .
+<https://w3id.org/def/saref4inma#belongsToCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between an entity and its category" .
+<https://w3id.org/def/saref4inma#belongsToCategory> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to category" .
+# 
+# https://w3id.org/def/saref4inma#consistsOfBatch
+<https://w3id.org/def/saref4inma#consistsOfBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#consistsOfBatch> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express that a batch can recursively consists of other batches" .
+<https://w3id.org/def/saref4inma#consistsOfBatch> <http://www.w3.org/2000/01/rdf-schema#label> "consists of batch" .
+# 
+# https://w3id.org/def/saref4inma#consistsOfItem
+<https://w3id.org/def/saref4inma#consistsOfItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#consistsOfItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express that an item can recursively consists of other Items" .
+<https://w3id.org/def/saref4inma#consistsOfItem> <http://www.w3.org/2000/01/rdf-schema#label> "consists of item" .
+# 
+# https://w3id.org/def/saref4inma#creates
+<https://w3id.org/def/saref4inma#creates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#creates> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4inma#isCreatedIn> .
+<https://w3id.org/def/saref4inma#creates> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a production process (e.g., Batch) that creates one or more tangible objects (e.g., Items)" .
+<https://w3id.org/def/saref4inma#creates> <http://www.w3.org/2000/01/rdf-schema#label> "creates" .
+# 
+# https://w3id.org/def/saref4inma#hasFeatureOfInterest
+<https://w3id.org/def/saref4inma#hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4inma#isFeatureOfInterestOf> .
+<https://w3id.org/def/saref4inma#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest" .
+# 
+# https://w3id.org/def/saref4inma#hasGTIN12ID
+<https://w3id.org/def/saref4inma#hasGTIN12ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN12ID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIdentifier> .
+<https://w3id.org/def/saref4inma#hasGTIN12ID> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4inma#GTIN12ID> .
+<https://w3id.org/def/saref4inma#hasGTIN12ID> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN12ID " .
+# 
+# https://w3id.org/def/saref4inma#hasGTIN13ID
+<https://w3id.org/def/saref4inma#hasGTIN13ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN13ID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIdentifier> .
+<https://w3id.org/def/saref4inma#hasGTIN13ID> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4inma#GTIN13ID> .
+<https://w3id.org/def/saref4inma#hasGTIN13ID> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN13ID" .
+# 
+# https://w3id.org/def/saref4inma#hasGTIN14ID
+<https://w3id.org/def/saref4inma#hasGTIN14ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN14ID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIdentifier> .
+<https://w3id.org/def/saref4inma#hasGTIN14ID> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4inma#GTIN14ID> .
+<https://w3id.org/def/saref4inma#hasGTIN14ID> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN14ID" .
+# 
+# https://w3id.org/def/saref4inma#hasGTIN8ID
+<https://w3id.org/def/saref4inma#hasGTIN8ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN8ID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIdentifier> .
+<https://w3id.org/def/saref4inma#hasGTIN8ID> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4inma#GTIN8ID> .
+<https://w3id.org/def/saref4inma#hasGTIN8ID> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN8ID" .
+# 
+# https://w3id.org/def/saref4inma#hasIRDI
+<https://w3id.org/def/saref4inma#hasIRDI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasIRDI> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIdentifier> .
+<https://w3id.org/def/saref4inma#hasIRDI> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4inma#IRDI> .
+<https://w3id.org/def/saref4inma#hasIRDI> <http://www.w3.org/2000/01/rdf-schema#label> "has IRDI" .
+# 
+# https://w3id.org/def/saref4inma#hasIdentifier
+<https://w3id.org/def/saref4inma#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "link between an entity and its unique identifier" .
+<https://w3id.org/def/saref4inma#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier" .
+# 
+# https://w3id.org/def/saref4inma#hasSize
+<https://w3id.org/def/saref4inma#hasSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasSize> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship to count the amount of certain objects in a collection (e.g., size of a material batch)" .
+<https://w3id.org/def/saref4inma#hasSize> <http://www.w3.org/2000/01/rdf-schema#label> "has size" .
+# 
+# https://w3id.org/def/saref4inma#hasUUID
+<https://w3id.org/def/saref4inma#hasUUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasUUID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIdentifier> .
+<https://w3id.org/def/saref4inma#hasUUID> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4inma#UUID> .
+<https://w3id.org/def/saref4inma#hasUUID> <http://www.w3.org/2000/01/rdf-schema#label> "has UUID" .
+# 
+# https://w3id.org/def/saref4inma#hasUpdate
+<https://w3id.org/def/saref4inma#hasUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#hasUpdate> <http://www.w3.org/2000/01/rdf-schema#comment> "The newer version of a ItemCategory." .
+<https://w3id.org/def/saref4inma#hasUpdate> <http://www.w3.org/2000/01/rdf-schema#label> "has update" .
+# 
+# https://w3id.org/def/saref4inma#isCategoryOf
+<https://w3id.org/def/saref4inma#isCategoryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#isCategoryOf> <http://www.w3.org/2000/01/rdf-schema#label> "is category of" .
+# 
+# https://w3id.org/def/saref4inma#isCreatedIn
+<https://w3id.org/def/saref4inma#isCreatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#isCreatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An Item is created in an ItemBatch." .
+<https://w3id.org/def/saref4inma#isCreatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is created in" .
+# 
+# https://w3id.org/def/saref4inma#isFeatureOfInterestOf
+<https://w3id.org/def/saref4inma#isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of interest of" .
+# 
+# https://w3id.org/def/saref4inma#isProducedBy
+<https://w3id.org/def/saref4inma#isProducedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#isProducedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4inma#produces> .
+<https://w3id.org/def/saref4inma#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Items are produced using certain types of ProductionEquipmentCategories, for example: welding machines or laser cutting machines." .
+<https://w3id.org/def/saref4inma#isProducedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is produced by" .
+# 
+# https://w3id.org/def/saref4inma#needsEquipment
+<https://w3id.org/def/saref4inma#needsEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#needsEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating that an entity needs a particular equipment to be produced" .
+<https://w3id.org/def/saref4inma#needsEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "needs equipment" .
+# 
+# https://w3id.org/def/saref4inma#produces
+<https://w3id.org/def/saref4inma#produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4inma#produces> <http://www.w3.org/2000/01/rdf-schema#comment> "ProductionEquipmentCategory, such as welding machines or laser cutting machines, produce certain categories of items (inverse of s4inma:isProducedBy)" .
+<https://w3id.org/def/saref4inma#produces> <http://www.w3.org/2000/01/rdf-schema#label> "produces" .
 # 
 # https://w3id.org/saref#hasFunction
 <https://w3id.org/saref#hasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -48,40 +181,11 @@
 <https://w3id.org/saref#hasState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/saref#hasState> <http://www.w3.org/2000/01/rdf-schema#label> "has state" .
 # 
-# https://w3id.org/saref4inma#contains
-<https://w3id.org/saref4inma#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref4inma#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating that an  entity  consists of other entities" .
-<https://w3id.org/saref4inma#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
+# https://w3id.org/saref#makesMeasurement
+<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
-# https://w3id.org/saref4inma#hasCategory
-<https://w3id.org/saref4inma#hasCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref4inma#hasCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of product that can be produced in a factory" .
-<https://w3id.org/saref4inma#hasCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has category" .
-# 
-# https://w3id.org/saref4inma#hasUpdate
-<https://w3id.org/saref4inma#hasUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref4inma#hasUpdate> <http://www.w3.org/2000/01/rdf-schema#comment> "Updates of a product or equipment" .
-<https://w3id.org/saref4inma#hasUpdate> <http://www.w3.org/2000/01/rdf-schema#label> "has update" .
-# 
-# https://w3id.org/saref4inma#isCreatedIn
-<https://w3id.org/saref4inma#isCreatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref4inma#isCreatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating where an entity is producted" .
-<https://w3id.org/saref4inma#isCreatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is created in" .
-# 
-# https://w3id.org/saref4inma#makes
-<https://w3id.org/saref4inma#makes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref4inma#makes> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating that entity can produce other entities" .
-<https://w3id.org/saref4inma#makes> <http://www.w3.org/2000/01/rdf-schema#label> "makes" .
-# 
-# https://w3id.org/saref4inma#needsEquipment
-<https://w3id.org/saref4inma#needsEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref4inma#needsEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating that an entity needs particular equipment to produce" .
-<https://w3id.org/saref4inma#needsEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "needs equipment" .
-# 
-# https://w3id.org/saref4inma#needsMaterial
-<https://w3id.org/saref4inma#needsMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref4inma#needsMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating the material needed to produce an entity" .
-<https://w3id.org/saref4inma#needsMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "needs material" .
+# https://w3id.org/saref#measuresProperty
+<https://w3id.org/saref#measuresProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # 
 # 
@@ -92,65 +196,67 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/saref4inma#brand
-<https://w3id.org/saref4inma#brand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#brand> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#brand> <http://www.w3.org/2000/01/rdf-schema#comment> "Brand of a product" .
-<https://w3id.org/saref4inma#brand> <http://www.w3.org/2000/01/rdf-schema#label> "brand" .
+# https://w3id.org/def/saref4inma#hasCertificate
+<https://w3id.org/def/saref4inma#hasCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasCertificate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#hasCertificate> <http://www.w3.org/2000/01/rdf-schema#comment> "The MaterialBatch can contain material quality certificates, for example a NEN 10204:2004 3.1 steel certificate."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#hasCertificate> <http://www.w3.org/2000/01/rdf-schema#label> "has certificate" .
 # 
-# https://w3id.org/saref4inma#description
-<https://w3id.org/saref4inma#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a product equipment" .
-<https://w3id.org/saref4inma#description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+# https://w3id.org/def/saref4inma#hasGTIN12IDValue
+<https://w3id.org/def/saref4inma#hasGTIN12IDValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN12IDValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIDValue> .
+<https://w3id.org/def/saref4inma#hasGTIN12IDValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#hasGTIN12IDValue> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN12ID value" .
 # 
-# https://w3id.org/saref4inma#hasGTIN12
-<https://w3id.org/saref4inma#hasGTIN12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#hasGTIN12> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#hasGTIN12> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN identifier that consists of 12 digits" .
-<https://w3id.org/saref4inma#hasGTIN12> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN-12" .
+# https://w3id.org/def/saref4inma#hasGTIN13IDValue
+<https://w3id.org/def/saref4inma#hasGTIN13IDValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN13IDValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIDValue> .
+<https://w3id.org/def/saref4inma#hasGTIN13IDValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#hasGTIN13IDValue> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN13ID value" .
 # 
-# https://w3id.org/saref4inma#hasGTIN13
-<https://w3id.org/saref4inma#hasGTIN13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#hasGTIN13> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#hasGTIN13> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN identifier that consists of 13 digits" .
-<https://w3id.org/saref4inma#hasGTIN13> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN-13" .
+# https://w3id.org/def/saref4inma#hasGTIN14IDValue
+<https://w3id.org/def/saref4inma#hasGTIN14IDValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN14IDValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIDValue> .
+<https://w3id.org/def/saref4inma#hasGTIN14IDValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#hasGTIN14IDValue> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN14ID" .
 # 
-# https://w3id.org/saref4inma#hasGTIN14
-<https://w3id.org/saref4inma#hasGTIN14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#hasGTIN14> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#hasGTIN14> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN identifier that consists of 14 digits" .
-<https://w3id.org/saref4inma#hasGTIN14> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN-14" .
+# https://w3id.org/def/saref4inma#hasGTIN8IDValue
+<https://w3id.org/def/saref4inma#hasGTIN8IDValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasGTIN8IDValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIDValue> .
+<https://w3id.org/def/saref4inma#hasGTIN8IDValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
-# https://w3id.org/saref4inma#hasGTIN8
-<https://w3id.org/saref4inma#hasGTIN8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#hasGTIN8> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#hasGTIN8> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN identifier that consists of 8 digits" .
-<https://w3id.org/saref4inma#hasGTIN8> <http://www.w3.org/2000/01/rdf-schema#label> "has GTIN-8" .
+# https://w3id.org/def/saref4inma#hasIDValue
+<https://w3id.org/def/saref4inma#hasIDValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasIDValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#hasIDValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the value of an indentifier as a string (it can be used as alternative to or in combination with the s4inma:hasIdentifier object property " .
+<https://w3id.org/def/saref4inma#hasIDValue> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier value" .
 # 
-# https://w3id.org/saref4inma#manufacturer
-<https://w3id.org/saref4inma#manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#manufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturer of a product" .
-<https://w3id.org/saref4inma#manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturer" .
+# https://w3id.org/def/saref4inma#hasIRDIValue
+<https://w3id.org/def/saref4inma#hasIRDIValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasIRDIValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIDValue> .
+<https://w3id.org/def/saref4inma#hasIRDIValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#hasIRDIValue> <http://www.w3.org/2000/01/rdf-schema#label> "has IRDI" .
 # 
-# https://w3id.org/saref4inma#name
-<https://w3id.org/saref4inma#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a product equipment" .
-<https://w3id.org/saref4inma#name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# https://w3id.org/def/saref4inma#hasModelNumber
+<https://w3id.org/def/saref4inma#hasModelNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasModelNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the model number of a certain object (item, product, equipment, etc.) " .
+<https://w3id.org/def/saref4inma#hasModelNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has model number" .
 # 
-# https://w3id.org/saref4inma#size
-<https://w3id.org/saref4inma#size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/saref4inma#size> <http://www.w3.org/2000/01/rdf-schema#comment> "Size of a batch" .
-<https://w3id.org/saref4inma#size> <http://www.w3.org/2000/01/rdf-schema#label> "size" .
+# https://w3id.org/def/saref4inma#hasSerialNumber
+<https://w3id.org/def/saref4inma#hasSerialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasSerialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to describe the serial number of a certain Item, which is unique per Item." .
+<https://w3id.org/def/saref4inma#hasSerialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has serial number" .
 # 
-# https://w3id.org/saref4inma#supplier
-<https://w3id.org/saref4inma#supplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/saref4inma#supplier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#supplier> <http://www.w3.org/2000/01/rdf-schema#comment> "Supplier of a product" .
-<https://w3id.org/saref4inma#supplier> <http://www.w3.org/2000/01/rdf-schema#label> "supplier" .
+# https://w3id.org/def/saref4inma#hasUUIDValue
+<https://w3id.org/def/saref4inma#hasUUIDValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasUUIDValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/saref4inma#hasIDValue> .
+<https://w3id.org/def/saref4inma#hasUUIDValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#hasUUIDValue> <http://www.w3.org/2000/01/rdf-schema#label> "has UUID value" .
+# 
+# https://w3id.org/def/saref4inma#hasVersion
+<https://w3id.org/def/saref4inma#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4inma#hasVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "An item has a certain revision or version number, whereas a higher number indicates a newer version."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has version" .
 # 
 # 
 # 
@@ -161,15 +267,331 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/saref#Command
-<https://w3id.org/saref#Command> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/s4bldg#Building
+<https://w3id.org/def/s4bldg#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/s4bldg#BuildingSpace
+<https://w3id.org/def/s4bldg#BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/s4bldg#PhysicalObject
+<https://w3id.org/def/s4bldg#PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/saref4inma#ActualMeasurement
+<https://w3id.org/def/saref4inma#ActualMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ActualMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#Measurement> .
+<https://w3id.org/def/saref4inma#ActualMeasurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/saref4inma#ExpectedMeasurement> .
+<https://w3id.org/def/saref4inma#ActualMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes whether the measurement is actually measured during the production process. Disjoint with ExpectedMeasurement." .
+<https://w3id.org/def/saref4inma#ActualMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Actual measurement" .
+# 
+# https://w3id.org/def/saref4inma#Area
+<https://w3id.org/def/saref4inma#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#Area> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/s4bldg#BuildingSpace> .
+<https://w3id.org/def/saref4inma#Area> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of s4bldg:BuildingSpace used to define the physical spaces of the building. According to IEC 62264, areas are physical, geographical or logical groupings of resources determined by the site. A site can be divided in areas, whereas areas contain work centers.s." .
+<https://w3id.org/def/saref4inma#Area> <http://www.w3.org/2000/01/rdf-schema#label> "Area" .
+# 
+# https://w3id.org/def/saref4inma#Batch
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#consistsOfBatch> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#Batch> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIdentifier> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isFeatureOfInterestOf> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#Measurement> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#needsEquipment> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ProductionEquipment> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasSize> .
+_:genid5 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/saref4inma#Size> .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#comment> "A uniform collection of tangible objects or Lot. This can either be a collection of produced items (i.e. the outflow of products) or a collection of raw material or required material (i.e. the inflow of products). It is assumed that the objects in a batch are similar and thus have shared attributes. Note that this definition is broader than the definition in IEC 61512, which defines a batch as the material that is being produced (whereas in SAREF4INMA a batch can be items or materials). " .
+<https://w3id.org/def/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#label> "Batch" .
+# 
+# https://w3id.org/def/saref4inma#ExpectedMeasurement
+<https://w3id.org/def/saref4inma#ExpectedMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ExpectedMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#Measurement> .
+<https://w3id.org/def/saref4inma#ExpectedMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes whether the measurement is expected (i.e., planned before the production process). Disjoint with ActualMeasurement." .
+<https://w3id.org/def/saref4inma#ExpectedMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Expected measurement" .
+# 
+# https://w3id.org/def/saref4inma#Factory
+<https://w3id.org/def/saref4inma#Factory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#Factory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/s4bldg#Building> .
+<https://w3id.org/def/saref4inma#Factory> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of s4bldg:Building specialized for the purpose of SAREF4INMA, a factory represents one or more organizations sharing a definit mission, goals and objectives which provides an output such as a product (definition taken from IEC 62264). A factory can be divided in one or multiple sites. " .
+<https://w3id.org/def/saref4inma#Factory> <http://www.w3.org/2000/01/rdf-schema#label> "Factory" .
+# 
+# https://w3id.org/def/saref4inma#GTIN12ID
+<https://w3id.org/def/saref4inma#GTIN12ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#GTIN12ID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#GTIN12ID> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN-12 (UPC-A) is a 12-digit number used primarily in North America" .
+<https://w3id.org/def/saref4inma#GTIN12ID> <http://www.w3.org/2000/01/rdf-schema#label> "GTIN12ID" .
+# 
+# https://w3id.org/def/saref4inma#GTIN13ID
+<https://w3id.org/def/saref4inma#GTIN13ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#GTIN13ID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#GTIN13ID> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN-13 (EAN/UCC-13) is a 13-digit number used predominately outside of North America" .
+<https://w3id.org/def/saref4inma#GTIN13ID> <http://www.w3.org/2000/01/rdf-schema#label> "GTIN13ID" .
+# 
+# https://w3id.org/def/saref4inma#GTIN14ID
+<https://w3id.org/def/saref4inma#GTIN14ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#GTIN14ID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#GTIN14ID> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN-14 (EAN/UCC-14 or ITF-14 or also known as ITF Symbol, SCC-14, DUN-14, UPC Case Code, UPC Shipping Container Code, UCC Code 128, EAN Code 128) is a 14-digit number used to identify trade items at various packaging levels." .
+<https://w3id.org/def/saref4inma#GTIN14ID> <http://www.w3.org/2000/01/rdf-schema#label> "GTIN14ID" .
+# 
+# https://w3id.org/def/saref4inma#GTIN8ID
+<https://w3id.org/def/saref4inma#GTIN8ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#GTIN8ID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#GTIN8ID> <http://www.w3.org/2000/01/rdf-schema#comment> "GTIN-8 (EAN/UCC-8) is an 8-digit number used predominately outside of North America."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#GTIN8ID> <http://www.w3.org/2000/01/rdf-schema#label> "GTIN18ID" .
+# 
+# https://w3id.org/def/saref4inma#ID
+<https://w3id.org/def/saref4inma#ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/def/saref4inma#ID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIDValue> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#ID> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#ID> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier" .
+# 
+# https://w3id.org/def/saref4inma#IRDI
+<https://w3id.org/def/saref4inma#IRDI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#IRDI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#IRDI> <http://www.w3.org/2000/01/rdf-schema#comment> "International Registration Data Identifier (IRDI) is based on the international standards ISO/IEC 11179-6, ISO 29002 and ISO 6532 and used in eCl@ss and the Asset Administration Shell as unique identifier."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#IRDI> <http://www.w3.org/2000/01/rdf-schema#label> "IRDI" .
+# 
+# https://w3id.org/def/saref4inma#Item
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIdentifier> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#consistsOfItem> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#Item> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIdentifier> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isCreatedIn> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ItemBatch> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isFeatureOfInterestOf> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#Measurement> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isCreatedIn> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/saref4inma#ItemBatch> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIDValue> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasSerialNumber> .
+_:genid14 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "A tangible object which can be unique identified, for example, with a GTIN in the form of a barcode/QR/RFID tag. An item product can be the result of the organization's production process (i.e. outflow of objects/goods) or can be uniquely identifiable material (i.e. inflow of objects/supplies). Each item is part of exactly one ItemBatch, whereas each ItemBatch contains only Items which have similar properties. An item can consists of multiple Batches and other Items (i.e. subassemblies)."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#Item> <http://www.w3.org/2000/01/rdf-schema#label> "Item" .
+# 
+# https://w3id.org/def/saref4inma#ItemBatch
+<https://w3id.org/def/saref4inma#ItemBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ItemBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#Batch> .
+<https://w3id.org/def/saref4inma#ItemBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#belongsToCategory> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ItemCategory> .
+<https://w3id.org/def/saref4inma#ItemBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#creates> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#Item> .
+<https://w3id.org/def/saref4inma#ItemBatch> <http://www.w3.org/2000/01/rdf-schema#comment> "A uniform collection of tangible objects which are relevant for the prodcution process. The ItemBatch consists of a set of objects with similar properties (e.g. a certain type of sensors or metal sheets). The difference between ItemBatch and MaterialBatch is that individual items can be traced in a ItemBatch, whereas this is not possible in a MaterialBatch, meaning that, for example, it is possible to trace the individual metal sheet used in a ItemBatch. This implies that the objects in an ItemBatch have an unique identifier (e.g. a GTIN code in the form of a barcode/QR-code or RFID tag)."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#ItemBatch> <http://www.w3.org/2000/01/rdf-schema#label> "Item Batch" .
+# 
+# https://w3id.org/def/saref4inma#ItemCategory
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIdentifier> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIdentifier> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasUpdate> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ItemCategory> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isCategoryOf> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ItemBatch> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isProducedBy> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ProductionEquipmentCategory> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasModelNumber> .
+_:genid22 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasVersion> .
+_:genid23 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "An ItemCategory describes a single type of item in terms of its static properties. Each ItemCategory can have multiple related ItemBatches, which all contain individual Items. The essential properties of each Item in all ItemBatches are the same. However, each batch might use different MaterialBatches and/or different ProductionEquipment. Therefore, small deviations between batches might occur, while the essential properties of all Items related to an ItemCategory are similar." .
+<https://w3id.org/def/saref4inma#ItemCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Item category" .
+# 
+# https://w3id.org/def/saref4inma#MaterialBatch
+<https://w3id.org/def/saref4inma#MaterialBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#MaterialBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#Batch> .
+<https://w3id.org/def/saref4inma#MaterialBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#belongsToCategory> .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#MaterialCategory> .
+<https://w3id.org/def/saref4inma#MaterialBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasCertificate> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#MaterialBatch> <http://www.w3.org/2000/01/rdf-schema#comment> "A uniform collection of tangible raw material which are relevant for the prodcution process. The MaterialBatch can consists of a set of objects with similar properties (e.g. a certain type of screws) or a stock of homogeen material (e.g. oil, water). The difference between MaterialBatch and ItemBatch is that individual items cannot be traced in a MaterialBatch, whereas this is possible in an ItemBatch, meaning that, for example, it is not possible to trace the individual screw used in a MaterialBatch."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#MaterialBatch> <http://www.w3.org/2000/01/rdf-schema#label> "Material Batch" .
+# 
+# https://w3id.org/def/saref4inma#MaterialCategory
+<https://w3id.org/def/saref4inma#MaterialCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#MaterialCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isCategoryOf> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#MaterialBatch> .
+<https://w3id.org/def/saref4inma#MaterialCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "A MaterialCategory describes a category of material in terms of its static properties. Examples are: a certain category of steel or plastic. Each MaterialCategory can have multiple related MaterialBatches, which represent the physical material. The essential properties of the material in all MaterialBatches are the same. However, each batch might use different MaterialBatches and/or different ProductionEquipment. Therefore, small deviations between batches might occur, while the essential properties of the material related to an MaterialCategory are similar." .
+<https://w3id.org/def/saref4inma#MaterialCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Material category" .
+# 
+# https://w3id.org/def/saref4inma#Measurement
+<https://w3id.org/def/saref4inma#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/def/saref4inma#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasFeatureOfInterest> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/saref4inma#Batch> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/saref4inma#Item> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/def/saref4inma#Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of saref:Measurement that represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement. The saref4imna:Measurement can be linked to individual Batches or Items. Moreover, the Measurement can be an ExpectedMeasurement (i.e. the value which is planned) or the ActualMeasurement (i.e. the value measured during production), which enables to check for deviations between the planned and actual values." .
+<https://w3id.org/def/saref4inma#Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement" .
+# 
+# https://w3id.org/def/saref4inma#ProductionEquipment
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/s4bldg#PhysicalObject> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#belongsToCategory> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ProductionEquipmentCategory> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIdentifier> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasFunction> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ProductionEquipmentFunction> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasState> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#State> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#makesMeasurement> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#Measurement> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#measuresProperty> .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasIDValue> .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "A production equipment is a specialization of a saref:Device and s4bldg:PhysicalObject that can produce items in a manufacturing process. This class represents an individual production equipment device and includes their specification in terms of functions, states and services. Different types of machines can be defined under this class as needed, for example, LaserCuttingMachine (i.e., a type of production equipment to cut steel material), MillingMachine (i.e., to drill holes in steel material), MouldingMachine (i.e., to mold liquid material, such as iron or plastic, and let it harden in a certain shape), WeldingMachine (i.e., join parts of material, such as steel, together), etc." .
+<https://w3id.org/def/saref4inma#ProductionEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "ProductionEquipment" .
+# 
+# https://w3id.org/def/saref4inma#ProductionEquipmentCategory
+<https://w3id.org/def/saref4inma#ProductionEquipmentCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ProductionEquipmentCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#isCategoryOf> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4inma#ProductionEquipment> .
+<https://w3id.org/def/saref4inma#ProductionEquipmentCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4inma#hasModelNumber> .
+_:genid39 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4inma#ProductionEquipmentCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "A ProductionEquipmentCategory represents a certain type of production equipment, which is generally static over time. More concretely, the ProductionEquipmentCategory represents a certain model and brand of a production equipment. Each ProductionEquipmentCategory can have multiple related ProductionEquipment, which represent the actual individual machines. Moreover, each ItemCategory can be produced by multiple ProductionEquipmentCategories."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/saref4inma#ProductionEquipmentCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Production equipment category" .
+# 
+# https://w3id.org/def/saref4inma#ProductionEquipmentFunction
+<https://w3id.org/def/saref4inma#ProductionEquipmentFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#ProductionEquipmentFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/def/saref4inma#ProductionEquipmentFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Function> .
+<https://w3id.org/def/saref4inma#ProductionEquipmentFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Production equipment function" .
+# 
+# https://w3id.org/def/saref4inma#Site
+<https://w3id.org/def/saref4inma#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/s4bldg#BuildingSpace> .
+<https://w3id.org/def/saref4inma#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of s4bldg:BuildingSpace used to define the physical spaces of the building. According to IEC 62264, sites are identified physical, geographical, and/or logical component groupings of a manufacturing enterprise. A factory can be divided in sites, whereas sites can be divided areas" .
+<https://w3id.org/def/saref4inma#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
+# 
+# https://w3id.org/def/saref4inma#Size
+<https://w3id.org/def/saref4inma#Size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#Size> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4inma#Size> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of certain objects in a collection (e.g., size of a material batch)." .
+<https://w3id.org/def/saref4inma#Size> <http://www.w3.org/2000/01/rdf-schema#label> "Size" .
+# 
+# https://w3id.org/def/saref4inma#UUID
+<https://w3id.org/def/saref4inma#UUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#UUID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#ID> .
+<https://w3id.org/def/saref4inma#UUID> <http://www.w3.org/2000/01/rdf-schema#comment> "A universally unique identifier (UUID) is a 128-bit number used to identify items and is also known as: globally unique identifier (GUID). In its canonical textual representation, the sixteen octets of a UUID are represented as 32 hexadecimal (base 16) digits, displayed in five groups separated by hyphens, in the form 8-4-4-4-12 for a total of 36 characters (32 alphanumeric characters and four hyphens). UUID are documented in ISO/IEC 11578:1996 \"Information technology – Open Systems Interconnection – Remote Procedure Call (RPC)\" and in ITU-T Rec. X.667 | ISO/IEC 9834-8:2005." .
+<https://w3id.org/def/saref4inma#UUID> <http://www.w3.org/2000/01/rdf-schema#label> "UUID" .
+# 
+# https://w3id.org/def/saref4inma#WorkCenter
+<https://w3id.org/def/saref4inma#WorkCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4inma#WorkCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4inma#ProductionEquipment> .
+<https://w3id.org/def/saref4inma#WorkCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of s4inma:ProductionEquipment (and therefore of s4bld:PhysicalObject). It is an equipment element under an area in a role-based equipment hierarchy that performs production, storage or material movement (definition taken from IEC 62264). An Area contains work centers." .
+<https://w3id.org/def/saref4inma#WorkCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Work center" .
 # 
 # https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# https://w3id.org/saref#FeatureOfInterest
+<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/saref#Function
 <https://w3id.org/saref#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/saref#Measurement
+<https://w3id.org/saref#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -177,167 +599,25 @@
 # https://w3id.org/saref#State
 <https://w3id.org/saref#State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/saref4inma#Area
-<https://w3id.org/saref4inma#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#Area> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#contains> .
-_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref4inma#WorkCenter> .
-<https://w3id.org/saref4inma#Area> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical, geographical or logical grouping of resources determined by the site  (definition taken from IEC 62264)" .
-<https://w3id.org/saref4inma#Area> <http://www.w3.org/2000/01/rdf-schema#label> "Area" .
-# 
-# https://w3id.org/saref4inma#Batch
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#needsEquipment> .
-_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref4inma#ProductEquipment> .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#hasGTIN12> .
-_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#hasGTIN13> .
-_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#hasGTIN14> .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#hasGTIN8> .
-_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#size> .
-_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#comment> "The material that is being produced  (definition taken from IEC 61512)" .
-<https://w3id.org/saref4inma#Batch> <http://www.w3.org/2000/01/rdf-schema#label> "Batch" .
-# 
-# https://w3id.org/saref4inma#ControlModule
-<https://w3id.org/saref4inma#ControlModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#ControlModule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#ProductEquipment> .
-<https://w3id.org/saref4inma#ControlModule> <http://www.w3.org/2000/01/rdf-schema#comment> "The lowest level grouping of equipment in the physical model that can carry out basic control  (definition taken from IEC 61512)" .
-<https://w3id.org/saref4inma#ControlModule> <http://www.w3.org/2000/01/rdf-schema#label> "Control module" .
-# 
-# https://w3id.org/saref4inma#EquipmentModule
-<https://w3id.org/saref4inma#EquipmentModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#EquipmentModule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#ProductEquipment> .
-<https://w3id.org/saref4inma#EquipmentModule> <http://www.w3.org/2000/01/rdf-schema#comment> "A functional  group of equipment that can carry out a finit number of specific minor processing activities (definition taken from IEC 61512)" .
-<https://w3id.org/saref4inma#EquipmentModule> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment module" .
-# 
-# https://w3id.org/saref4inma#Factory
-<https://w3id.org/saref4inma#Factory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#Factory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#contains> .
-_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref4inma#Site> .
-<https://w3id.org/saref4inma#Factory> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more organizations sharing a definit mission, goals and objectives which provides an output such as a product  (definition taken from IEC 62264)" .
-<https://w3id.org/saref4inma#Factory> <http://www.w3.org/2000/01/rdf-schema#label> "Factory" .
-# 
-# https://w3id.org/saref4inma#InjectionUnit
-<https://w3id.org/saref4inma#InjectionUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#InjectionUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#EquipmentModule> .
-<https://w3id.org/saref4inma#InjectionUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Injection unit" .
-# 
-# https://w3id.org/saref4inma#Material
-<https://w3id.org/saref4inma#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Material needed for producing products" .
-<https://w3id.org/saref4inma#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
-# 
-# https://w3id.org/saref4inma#MouldingMachine
-<https://w3id.org/saref4inma#MouldingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#MouldingMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#EquipmentModule> .
-<https://w3id.org/saref4inma#MouldingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Moulding machine" .
-# 
-# https://w3id.org/saref4inma#ProcessCell
-<https://w3id.org/saref4inma#ProcessCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#ProcessCell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#WorkCenter> .
-<https://w3id.org/saref4inma#ProcessCell> <http://www.w3.org/2000/01/rdf-schema#comment> "A logical grouping of equipment that includes the equipment required for production of one or more batches  (definition taken from IEC 61512)" .
-<https://w3id.org/saref4inma#ProcessCell> <http://www.w3.org/2000/01/rdf-schema#label> "Process cell" .
-# 
-# https://w3id.org/saref4inma#Product
-<https://w3id.org/saref4inma#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#Product> <http://www.w3.org/2000/01/rdf-schema#comment> "Products built in a factory" .
-<https://w3id.org/saref4inma#Product> <http://www.w3.org/2000/01/rdf-schema#label> "Product" .
-# 
-# https://w3id.org/saref4inma#ProductCategory
-<https://w3id.org/saref4inma#ProductCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#ProductCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#brand> .
-_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#ProductCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#manufacturer> .
-_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#ProductCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#supplier> .
-_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#ProductCategory> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref4inma#ProductEquipment> .
-<https://w3id.org/saref4inma#ProductCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "It represents the  type of products that can be produced" .
-<https://w3id.org/saref4inma#ProductCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Product category" .
-# 
-# https://w3id.org/saref4inma#ProductEquipment
-<https://w3id.org/saref4inma#ProductEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#ProductEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
-<https://w3id.org/saref4inma#ProductEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#makes> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref4inma#ProductCategory> .
-<https://w3id.org/saref4inma#ProductEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#description> .
-_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#ProductEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#name> .
-_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/saref4inma#ProductEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment in a factory that is used to produce products" .
-<https://w3id.org/saref4inma#ProductEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Product equipment" .
-# 
-# https://w3id.org/saref4inma#ProductionUnit
-<https://w3id.org/saref4inma#ProductionUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#ProductionUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#WorkCenter> .
-<https://w3id.org/saref4inma#ProductionUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of equipment that converts, separates or reacts one or more feedstocks to produce intermediate or final products  (definition taken from IEC 62264)" .
-<https://w3id.org/saref4inma#ProductionUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Production unit" .
-# 
-# https://w3id.org/saref4inma#Site
-<https://w3id.org/saref4inma#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref4inma#contains> .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/saref4inma#Area> .
-<https://w3id.org/saref4inma#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "identified physical, geographical, and/or logical component grouping of a manufacturing enterprise (definition taken from IEC 62264)" .
-<https://w3id.org/saref4inma#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
-# 
-# https://w3id.org/saref4inma#Unit
-<https://w3id.org/saref4inma#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#ProductEquipment> .
-<https://w3id.org/saref4inma#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "Level of equipment composed by lower level elements, such as equipment modules, in which one or more processign activities can be conducted" .
-<https://w3id.org/saref4inma#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
-# 
-# https://w3id.org/saref4inma#WorkCenter
-<https://w3id.org/saref4inma#WorkCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref4inma#WorkCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref4inma#ProductEquipment> .
-<https://w3id.org/saref4inma#WorkCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment element under an area in a role-based equipment hierarchy that performs production, storage or material movement  (definition taken from IEC 62264)" .
-<https://w3id.org/saref4inma#WorkCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Work center" .
-# 
 # 
 # 
 # #################################################################
 # #
-# #    Individuals
+# #    General axioms
 # #
 # #################################################################
 # 
 # 
-# https://w3id.org/saref4inma#ScrewDiameter
-<https://w3id.org/saref4inma#ScrewDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid40 <http://www.w3.org/2002/07/owl#members> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/saref4inma#Area> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/saref4inma#Site> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/saref4inma#WorkCenter> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-# https://w3id.org/saref4inma#ScrewVolume
-<https://w3id.org/saref4inma#ScrewVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-# 
-# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
