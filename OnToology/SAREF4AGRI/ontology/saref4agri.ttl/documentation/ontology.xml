@@ -26,7 +26,7 @@
         <terms:description>SAREF4AGRI is an extension of SAREF for the agriculture and food domain. SAREF4AGRI is specified and published by ETSI in the TS 103 410-6 associated to this ontology file. The list of use cases, standards and requirements that guided the creation of SAREF4AGRI are described in the associated ETSI TR 103 511. </terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-30</terms:issued>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-30</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</terms:modified>
         <terms:publisher rdf:resource="http://oeg-upm.net/"/>
         <terms:publisher rdf:resource="https://tno.nl/en/"/>
         <terms:publisher rdf:resource="https://www.etsi.org/"/>
@@ -1514,7 +1514,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:Class rdf:about="https://w3id.org/def/saref4agri#Pluviometer">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
-        <rdfs:label xml:lang="en">A sensor that measures the rain fall.</rdfs:label>
+        <rdfs:comment xml:lang="en">A sensor that measures the rain fall.</rdfs:comment>
         <rdfs:label xml:lang="en">Pluviometer</rdfs:label>
     </owl:Class>
     
@@ -1563,7 +1563,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:Class rdf:about="https://w3id.org/def/saref4agri#SoilTensiometer">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
-        <rdfs:label xml:lang="en">A sensor that measures the soil moisture.</rdfs:label>
+        <rdfs:comment xml:lang="en">A sensor that measures the soil moisture.</rdfs:comment>
         <rdfs:label xml:lang="en">Soil tensiometer</rdfs:label>
     </owl:Class>
     
