@@ -1,0 +1,516 @@
+# baseURI: http://ontology.tno.nl/examples/saref4inma/shaver
+# imports: https://w3id.org/def/saref4inma
+
+@prefix ex: <http://ontology.tno.nl/examples/saref4inma/shaver#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s4bldg: <https://w3id.org/def/saref4bldg#> .
+@prefix s4inma: <https://w3id.org/def/saref4inma#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontology.tno.nl/examples/saref4inma/shaver>
+  rdf:type owl:Ontology ;
+  owl:imports <https://w3id.org/def/saref4inma> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+ex:ABS_Plastic_Role_8mm_MaterialBatch742
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:MaterialBatch ;
+  s4inma:belongsToCategory ex:ABS_Plastic_Role_8mm_MaterialCategory ;
+  s4inma:hasCertificate "ABS High-precision quality max tolerance of 0.1mm"@en ;
+  s4inma:hasIdentifier ex:nr71324352 ;
+.
+ex:ABS_Plastic_Role_8mm_MaterialCategory
+  rdf:type ex:Plastic ;
+  rdf:type owl:NamedIndividual ;
+.
+ex:BIC_Site_A
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Site ;
+  s4bldg:hasSpace ex:BIC_Site_A_Area_18 ;
+  s4bldg:hasSpace ex:BIC_Site_A_Area_19 ;
+.
+ex:BIC_Site_A_Area_18
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Area ;
+  s4bldg:contains ex:Cutting_and_Milling_WorkCenter ;
+.
+ex:BIC_Site_A_Area_19
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Area ;
+  s4bldg:contains ex:Welding_WorkCenter ;
+.
+ex:BIC_Site_B
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Site ;
+.
+ex:CuttingFunction
+  rdf:type owl:Class ;
+  rdfs:comment "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards."^^xsd:string ;
+  rdfs:subClassOf s4inma:ProductionEquipmentFunction ;
+  rdfs:subClassOf saref:ActuatingFunction ;
+.
+ex:Cutting_and_Milling_WorkCenter
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:WorkCenter ;
+.
+ex:Eindhoven_BIC
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Factory ;
+  s4bldg:hasSpace ex:BIC_Site_A ;
+  s4bldg:hasSpace ex:BIC_Site_B ;
+.
+ex:End_Time_Batch392
+  rdf:type time:Instant ;
+.
+ex:FormingFunction
+  rdf:type owl:Class ;
+  rdfs:comment "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards."^^xsd:string ;
+  rdfs:subClassOf s4inma:ProductionEquipmentFunction ;
+  rdfs:subClassOf saref:ActuatingFunction ;
+.
+ex:JIDFUHWEUF323
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+.
+ex:JSDFHKLSDF982374
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+.
+ex:JoiningFunction
+  rdf:type owl:Class ;
+  rdfs:comment "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards."^^xsd:string ;
+  rdfs:subClassOf s4inma:ProductionEquipmentFunction ;
+  rdfs:subClassOf saref:ActuatingFunction ;
+.
+ex:LaserCuttingMachine
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:ProductionEquipment ;
+.
+ex:Laser_Cutting_Machine_1
+  rdf:type ex:LaserCuttingMachine ;
+  rdf:type owl:NamedIndividual ;
+  s4bldg:isContainedIn ex:Welding_WorkCenter ;
+  s4inma:belongsToCategory ex:Lazor_Series_8030_ProdEquipCategory ;
+  saref:hasFunction ex:CuttingFunction ;
+.
+ex:Lazor_Series_8030_ProdEquipCategory
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ProductionEquipmentCategory ;
+  s4inma:isCategoryOf ex:Laser_Cutting_Machine_1 ;
+.
+ex:MillingMachine
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:ProductionEquipment ;
+.
+ex:MouldingMachine
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:ProductionEquipment ;
+.
+ex:PhilBrau_S40-S50_Generic_Body_ItemBatch3290
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ItemBatch ;
+  s4inma:consistsOfBatch ex:ABS_Plastic_Role_8mm_MaterialBatch742 ;
+  s4inma:consistsOfBatch ex:Torx_screws_D2mm_L8mm_MaterialBatch323 ;
+  s4inma:hasIdentifier ex:nr55689876777421 ;
+.
+ex:PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ItemBatch ;
+  time:hasBeginning ex:Start_Time_Batch392 ;
+  time:hasEnd ex:End_Time_Batch392 ;
+  s4inma:belongsToCategory ex:PhilBrau_S40_Premium_Gold_Shaver_ItemCategory ;
+  s4inma:creates ex:Shaver10023 ;
+  s4inma:hasIdentifier ex:nr34275874234908 ;
+  s4inma:isFeatureOfInterestOf ex:Welding_Machine_2_Measurement_W101520_AVG ;
+  s4inma:needsEquipment ex:Laser_Cutting_Machine_1 ;
+  saref:hasProperty ex:WeldingTemperature ;
+.
+ex:PhilBrau_S40_Premium_Gold_Shaver_ItemCategory
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ItemCategory ;
+  s4inma:hasIdentifier ex:nr98647656 ;
+  s4inma:hasModelNumber "nr98647656"^^xsd:string ;
+  s4inma:isCategoryOf ex:PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 ;
+  s4inma:isProducedBy ex:Lazor_Series_8030_ProdEquipCategory ;
+  saref:hasManufacturer "PhilBrau"^^xsd:string ;
+  saref:relatesToMeasurement ex:WeldMachineTempSensor1_Measurement_A10568 ;
+.
+ex:Philips_screws_D2mm_L8mm_MaterialCategory
+  rdf:type ex:Screw ;
+  rdf:type owl:NamedIndividual ;
+.
+ex:Plastic
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:MaterialCategory ;
+.
+ex:Screw
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:MaterialCategory ;
+.
+ex:Shaver10023
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Item ;
+  s4inma:consistsOfItem ex:ShaverBody9440 ;
+  s4inma:consistsOfItem ex:ShaverHead3002 ;
+  s4inma:consistsOfItem ex:StepMotor083 ;
+  s4inma:hasSerialNumber ex:nr7865654345676 ;
+  s4inma:isCreatedIn ex:PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 ;
+  s4inma:isFeatureOfInterestOf ex:Welding_Machine_2_Measurement_W101520 ;
+  s4inma:isFeatureOfInterestOf ex:Welding_Machine_2_Measurement_W101521 ;
+  s4inma:isFeatureOfInterestOf ex:Welding_Machine_2_Measurement_W101522 ;
+  s4inma:isFeatureOfInterestOf ex:Welding_Machine_2_Measurement_W101523 ;
+  saref:hasProperty ex:WeldingTemperature ;
+.
+ex:ShaverBody9440
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Item ;
+  s4inma:hasSerialNumber ex:UFHLEIJKFNESDKL323 ;
+  s4inma:isCreatedIn ex:PhilBrau_S40-S50_Generic_Body_ItemBatch3290 ;
+.
+ex:ShaverHead3002
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Item ;
+  s4inma:consistsOfItem ex:Steel_Sheets_RVS331_MaterialBatch311 ;
+  s4inma:hasSerialNumber ex:JIDFUHWEUF323 ;
+.
+ex:StampingMachine
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:ProductionEquipment ;
+.
+ex:Start_Time_Batch392
+  rdf:type time:Instant ;
+.
+ex:SteelSheet
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:MaterialCategory ;
+.
+ex:Steel_Sheets_RVS331_MaterialBatch311
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:MaterialBatch ;
+  s4inma:belongsToCategory ex:Steel_Sheets_RVS331_MaterialCategory ;
+  s4inma:hasCertificate "Steel Certificate 3.1"@en ;
+  s4inma:hasIdentifier ex:nr79009856 ;
+.
+ex:Steel_Sheets_RVS331_MaterialCategory
+  rdf:type ex:SteelSheet ;
+  rdf:type owl:NamedIndividual ;
+.
+ex:StepMotor083
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Item ;
+  s4inma:hasSerialNumber ex:JSDFHKLSDF982374 ;
+  s4inma:isCreatedIn ex:Step_Moters_Q88_Secure_ItemBatch423 ;
+.
+ex:Step_Moters_Q88_Secure_ItemBatch423
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ItemBatch ;
+  s4inma:consistsOfItem ex:Steel_Sheets_RVS331_MaterialBatch311 ;
+  s4inma:consistsOfItem ex:Torx_screws_D2mm_L8mm_MaterialBatch323 ;
+  s4inma:hasIdentifier ex:nr34254657687978 ;
+.
+ex:Step_Motors_Q88_Secure_ItemCategory
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ItemCategory ;
+  s4inma:hasModelNumber ex:nr83049304 ;
+  s4inma:isProducedBy ex:Lazor_Series_8030_ProdEquipCategory ;
+  s4inma:isProducedBy ex:WandI_Welding_Series_1000_ProdEquipCategory ;
+.
+ex:Torx_screws_D2mm_L8mm_MaterialBatch323
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:MaterialBatch ;
+  s4inma:belongsToCategory ex:Torx_screws_D2mm_L8mm_MaterialCategory ;
+  s4inma:hasIdentifier ex:nr74536275 ;
+.
+ex:Torx_screws_D2mm_L8mm_MaterialBatch324
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:MaterialBatch ;
+  s4inma:belongsToCategory ex:Torx_screws_D2mm_L8mm_MaterialCategory ;
+  s4inma:hasIdentifier ex:nr76567876 ;
+.
+ex:Torx_screws_D2mm_L8mm_MaterialCategory
+  rdf:type ex:Screw ;
+  rdf:type owl:NamedIndividual ;
+.
+ex:UFHLEIJKFNESDKL323
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+.
+ex:WandI_Welding_Series_1000_ProdEquipCategory
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ProductionEquipmentCategory ;
+.
+ex:WeldMachineTempSensor1_Measurement_A10568
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:Measurement ;
+  saref:hasValue 228 ;
+  saref:isMeasuredByDevice ex:WeldingMachineTemperatureSensor1 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+  saref:relatesToProperty ex:WeldingTemperature ;
+.
+ex:WeldingMachine
+  rdf:type owl:Class ;
+  rdfs:subClassOf s4inma:ProductionEquipment ;
+.
+ex:WeldingMachineTemperatureSensor1
+  rdf:type owl:NamedIndividual ;
+  rdf:type saref:TemperatureSensor ;
+  saref:makesMeasurement ex:WeldMachineTempSensor1_Measurement_A10568 ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101520 ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101520_AVG ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101521 ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101522 ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101523 ;
+.
+ex:WeldingMachineTemperatureSensor2
+  rdf:type owl:NamedIndividual ;
+  rdf:type saref:TemperatureSensor ;
+.
+ex:WeldingTemperature
+  rdf:type owl:NamedIndividual ;
+  rdf:type saref:Temperature ;
+.
+ex:Welding_Machine_1
+  rdf:type ex:WeldingMachine ;
+  rdf:type owl:NamedIndividual ;
+  s4inma:belongsToCategory ex:WandI_Welding_Series_1000_ProdEquipCategory ;
+  saref:controlsProperty ex:WeldingTemperature ;
+  saref:hasFunction ex:JoiningFunction ;
+.
+ex:Welding_Machine_2
+  rdf:type ex:WeldingMachine ;
+  rdf:type owl:NamedIndividual ;
+  s4bldg:isContainedIn ex:Welding_WorkCenter ;
+  s4inma:belongsToCategory ex:WandI_Welding_Series_1000_ProdEquipCategory ;
+  saref:consistsOf ex:WeldingMachineTemperatureSensor1 ;
+  saref:controlsProperty ex:WeldingTemperature ;
+  saref:hasFunction ex:JoiningFunction ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101520 ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101520_AVG ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101521 ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101522 ;
+  saref:makesMeasurement ex:Welding_Machine_2_Measurement_W101523 ;
+.
+ex:Welding_Machine_2_Measurement_W101520
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ActualMeasurement ;
+  s4inma:hasFeatureOfInterest ex:Shaver10023 ;
+  saref:hasTimestamp "2019-01-28T12:11:10"^^xsd:dateTime ;
+  saref:hasValue 223 ;
+  saref:isMeasuredByDevice ex:WeldingMachineTemperatureSensor1 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+  saref:relatesToProperty ex:WeldingTemperature ;
+.
+ex:Welding_Machine_2_Measurement_W101520_AVG
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ActualMeasurement ;
+  s4inma:hasFeatureOfInterest ex:PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 ;
+  saref:hasTimestamp "2019-01-28T12:11:40"^^xsd:dateTime ;
+  saref:hasValue 232 ;
+  saref:isMeasuredByDevice ex:WeldingMachineTemperatureSensor1 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+  saref:relatesToProperty ex:WeldingTemperature ;
+.
+ex:Welding_Machine_2_Measurement_W101521
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ActualMeasurement ;
+  s4inma:hasFeatureOfInterest ex:Shaver10023 ;
+  saref:hasTimestamp "2019-01-28T12:11:20"^^xsd:dateTime ;
+  saref:hasValue 228 ;
+  saref:isMeasuredByDevice ex:WeldingMachineTemperatureSensor1 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+  saref:relatesToProperty ex:WeldingTemperature ;
+.
+ex:Welding_Machine_2_Measurement_W101522
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ActualMeasurement ;
+  s4inma:hasFeatureOfInterest ex:Shaver10023 ;
+  saref:hasTimestamp "2019-01-28T12:11:30"^^xsd:dateTime ;
+  saref:hasValue 231 ;
+  saref:isMeasuredByDevice ex:WeldingMachineTemperatureSensor1 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+  saref:relatesToProperty ex:WeldingTemperature ;
+.
+ex:Welding_Machine_2_Measurement_W101523
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:ActualMeasurement ;
+  s4inma:hasFeatureOfInterest ex:Shaver10023 ;
+  saref:hasTimestamp "2019-01-28T12:11:40"^^xsd:dateTime ;
+  saref:hasValue 232 ;
+  saref:isMeasuredByDevice ex:WeldingMachineTemperatureSensor1 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+  saref:relatesToProperty ex:WeldingTemperature ;
+.
+ex:Welding_WorkCenter
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:WorkCenter ;
+  saref:consistsOf ex:Laser_Cutting_Machine_1 ;
+  saref:consistsOf ex:Welding_Machine_1 ;
+  saref:consistsOf ex:Welding_Machine_2 ;
+.
+ex:dateTimeStamp_1
+  rdf:type xsd:dateTimeStamp ;
+.
+ex:nr34254657687978
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+.
+ex:nr34275874234908
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+  s4inma:hasIDValue "nr34275874234908"^^xsd:string ;
+.
+ex:nr55689876777421
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+.
+ex:nr71324352
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN8ID ;
+.
+ex:nr74536275
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN8ID ;
+.
+ex:nr76567876
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN8ID ;
+.
+ex:nr7865654345676
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+  s4inma:hasIDValue "nr7865654345676"^^xsd:string ;
+.
+ex:nr79009856
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN8ID ;
+.
+ex:nr82849583748573
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN14ID ;
+.
+ex:nr83049304
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN8ID ;
+.
+ex:nr98647656
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4inma:GTIN8ID ;
+  s4inma:hasIDValue "nr98647656"^^xsd:string ;
+.
+owl:maxQualifiedCardinality
+  rdf:type owl:AnnotationProperty ;
+.
+s4inma:ActualMeasurement
+  rdfs:comment "Describes whether the measurement is actually measured during the production process. Disjoint with ExpectedMeasurement."^^xsd:string ;
+.
+s4inma:Area
+  rdf:type owl:Class ;
+.
+s4inma:Batch
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty s4inma:hasIDValue ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty s4inma:hasIdentifier ;
+      owl:someValuesFrom s4inma:ID ;
+    ] ;
+.
+s4inma:ExpectedMeasurement
+  rdfs:comment "Describes whether the measurement is expected (i.e., planned before the production process). Disjoint with ActualMeasurement."^^xsd:string ;
+  owl:disjointWith s4inma:ActualMeasurement ;
+.
+s4inma:Factory
+  rdf:type owl:Class ;
+.
+s4inma:GTIN14ID
+  rdf:type owl:Class ;
+.
+s4inma:GTIN8ID
+  rdf:type owl:Class ;
+.
+s4inma:Item
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty s4inma:hasIDValue ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom s4inma:ID ;
+      owl:onProperty s4inma:hasSerialNumber ;
+    ] ;
+.
+s4inma:ItemBatch
+  rdf:type owl:Class ;
+.
+s4inma:ItemCategory
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty saref:hasManufacturer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty s4inma:hasIDValue ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+.
+s4inma:MaterialBatch
+  rdf:type owl:Class ;
+.
+s4inma:MaterialCategory
+  rdf:type owl:Class ;
+.
+s4inma:Measurement
+  rdf:type owl:Class ;
+.
+s4inma:ProductionEquipment
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty s4inma:hasIDValue ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+.
+s4inma:ProductionEquipmentCategory
+  rdf:type owl:Class ;
+.
+s4inma:Site
+  rdf:type owl:Class ;
+.
+s4inma:WorkCenter
+  rdf:type owl:Class ;
+.
+s4inma:creates
+  rdfs:comment "A relation between a production process (e.g., Batch) that creates one or more tangible objects (e.g., Items)"^^xsd:string ;
+.
+s4inma:isCreatedIn
+  owl:inverseOf s4inma:creates ;
+.
+saref:Device
+  rdf:type owl:Class ;
+  rdfs:label "Device"^^xsd:string ;
+  rdfs:subClassOf s4bldg:PhysicalObject ;
+.
+saref:Temperature
+  rdf:type owl:Class ;
+.
+saref:TemperatureSensor
+  rdf:type owl:Class ;
+.
+[
+  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+].
+[
+  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+].

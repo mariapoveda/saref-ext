@@ -3,4 +3,4 @@ This repository contains the code and documentation generated for the SAREF exte
 
 
 Current version of the ontology model
-![Current version of the model](https://github.com/mariapoveda/saref-ext/blob/master/SAREF4INMA/diagrams/saref4inmaOverview.jpg "SAREF4INMA model")
+![Current version of the model](https://github.com/mariapoveda/saref-ext/blob/master/SAREF4INMA/diagrams/saref4inmaOverview.png "SAREF4INMA model")
