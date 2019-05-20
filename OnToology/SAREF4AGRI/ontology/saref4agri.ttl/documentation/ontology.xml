@@ -14,14 +14,27 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
     <owl:Ontology rdf:about="https://w3id.org/def/saref4agri">
-        <owl:versionIRI rdf:resource="https://w3id.org/def/v1/saref4agri"/>
         <dc:contributor rdf:resource="http://w3id.org/people/mpoveda"/>
         <dc:description xml:lang="en">This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Agricultural domain.</dc:description>
         <dc:title xml:lang="en">SAREF extension for Agriculture</dc:title>
+        <terms:contributor>Jack Verhoosel, TNO</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-15</terms:created>
+        <terms:creator rdf:resource="http://purl.org/net/mpoveda"/>
+        <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms:creator rdf:resource="https://www.linkedin.com/in/lauradaniele"/>
+        <terms:creator rdf:resource="https://www.linkedin.com/in/mderoode"/>
+        <terms:description>SAREF4AGRI is an extension of SAREF for the agriculture and food domain. SAREF4AGRI is specified and published by ETSI in the TS 103 410-6 associated to this ontology file. The list of use cases, standards and requirements that guided the creation of SAREF4AGRI are described in the associated ETSI TR 103 511. </terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-30</terms:issued>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-30</terms:modified>
+        <terms:publisher rdf:resource="http://oeg-upm.net/"/>
+        <terms:publisher rdf:resource="https://tno.nl/en/"/>
+        <terms:publisher rdf:resource="https://www.etsi.org/"/>
+        <terms:source rdf:resource="https://www.etsi.org/deliver/etsi_ts/103400_103499/10341006/01.01.01_60/ts_10341006v010101p.pdf"/>
+        <terms:title>SAREF4AGRI: an extension of SAREF for the for the agriculture and food domain</terms:title>
         <vann:preferredNamespacePrefix>s4agri</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/saref4agri#</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -45,20 +58,6 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
-
-
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
@@ -70,6 +69,76 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -195,6 +264,148 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/TAXRANK_1000000 -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/TAXRANK_1000000">
+        <rdfs:label xml:lang="en">has taxon rank</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#sfContains"/>
+        <owl:inverseOf rdf:resource="http://w3id.org/def/saref4agri#isContainedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#generates -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#generates">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/saref#hasProperty"/>
+        <rdfs:comment>A relation to represent the yield generated by a Crop.</rdfs:comment>
+        <rdfs:label xml:lang="en">generates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasDeploymentPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#hasDeploymentPeriod">
+        <rdfs:comment xml:lang="en">Relation to indicate the temporal duration or period of a deployment.</rdfs:comment>
+        <rdfs:label>has deployment period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasID -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#hasID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://w3id.org/def/saref4agri#ID"/>
+        <rdfs:comment>A relation to express the unique identifier of an animal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has id</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasMember -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#hasMember">
+        <owl:inverseOf rdf:resource="http://w3id.org/def/saref4agri#isMemberOf"/>
+        <rdfs:comment>A relation to represent  the members of an AnimalGroup.</rdfs:comment>
+        <rdfs:label>has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasReceived -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#hasReceived">
+        <owl:inverseOf rdf:resource="http://w3id.org/def/saref4agri#receives"/>
+        <rdfs:label>has received</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#isContainedIn">
+        <rdfs:label xml:lang="en">is contained in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#isDeployedAtSpace -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#isDeployedAtSpace">
+        <rdfs:comment xml:lang="en">Relation to indicate the geographical componet of a deployment.</rdfs:comment>
+        <rdfs:label>is deployed at space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#isLocatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#isLocatedIn">
+        <owl:inverseOf rdf:resource="http://w3id.org/def/saref4agri#isLocationOf"/>
+        <rdfs:comment>A relation to express the physical location of a saref4agri entity (e.g., an animal)</rdfs:comment>
+        <rdfs:label>is located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#isLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#isLocationOf">
+        <rdfs:label>is location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#isMemberOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#isMemberOf">
+        <rdfs:comment>A relation to express that an animal can be part of groups.</rdfs:comment>
+        <rdfs:label>is member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#managesFarm -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#managesFarm">
+        <rdfs:label xml:lang="en">manages farm</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#receives -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/def/saref4agri#receives">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/saref#hasProperty"/>
+        <rdfs:comment>A relation to represent the intake/consumption of certain substances in a Crop.</rdfs:comment>
+        <rdfs:label>receives</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
 
 
@@ -317,6 +528,15 @@
         <rdfs:comment xml:lang="en">Relation between a platform and the deployment(s) that takes place in the platform.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:label xml:lang="en">in deployment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/member">
+        <rdfs:label xml:lang="en">member</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -569,6 +789,63 @@
     
 
 
+    <!-- http://w3id.org/def/saref4agri#hasBirthDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/def/saref4agri#hasBirthDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>A relation to express the birth date of an animal.</rdfs:comment>
+        <rdfs:label>has birth date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasDeathDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/def/saref4agri#hasDeathDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>A relation to express the death date of an animal.</rdfs:comment>
+        <rdfs:label>has death date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasHarvestDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/def/saref4agri#hasHarvestDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>A relation to express the day the crop is harvested.</rdfs:comment>
+        <rdfs:label>has harvest date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/def/saref4agri#hasName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>A relation to express the name of an entity (e.g.,animal).</rdfs:label>
+        <rdfs:label>has name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#hasPlantDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/def/saref4agri#hasPlantDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>A relation to express the day the crop is planted.</rdfs:comment>
+        <rdfs:label>has plant date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/saref#hasDescription -->
 
 
@@ -647,6 +924,562 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/TAXRANK_0000000 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TAXRANK_0000000">
+        <rdfs:label xml:lang="en">Taxon rank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#AirTemperature -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#AirTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Temperature"/>
+        <rdfs:comment>The degree or intensity of heat present in the air.</rdfs:comment>
+        <rdfs:label xml:lang="en">Air temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#AmbientHumidity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#AmbientHumidity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Humidity"/>
+        <rdfs:comment>The amount of water vapour in the air.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ambient humidity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Animal -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Animal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_1000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_0000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#AnimalGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasID"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://w3id.org/def/saref4agri#ID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasBirthDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasDeathDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An individual and identifiable living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli.</rdfs:comment>
+        <rdfs:label>Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#AnimalGroup -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#AnimalGroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#generates"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Yield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#receives"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Intake"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A collection of one or multiple animals.</rdfs:comment>
+        <rdfs:label>Animal Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Building -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Building">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#contains"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#BuildingSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasName"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</rdfs:comment>
+        <rdfs:label>Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#BuildingSpace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#BuildingSpace">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:comment xml:lang="en">An entity used to define the physical spaces of the building. A building space contains devices or building objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Crop -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Crop">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_1000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_0000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#generates"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Yield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#receives"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Intake"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasHarvestDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasPlantDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A collection of cultivated plants that is grown on a large scale commercially, especially a cereal, fruit, or vegetable.</rdfs:comment>
+        <rdfs:label>Crop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Deployment -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Deployment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasDeploymentPeriod"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#isDeployedAtSpace"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The scenario, including temporal and spatial information, in which the systems and devices are installed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deployment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#EatingActivitySensor -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#EatingActivitySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">Eating activity sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Farm -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Farm">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#contains"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#contains"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Parcel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasName"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A plot of land used for the scope of farming which can contain buildings and parcels.</rdfs:comment>
+        <rdfs:label>Farm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#FarmHolding -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#FarmHolding">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#managesFarm"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Farm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A class to decsribe a saref4agri farm holding as subcass of an org:Organization</rdfs:comment>
+        <rdfs:label xml:lang="en">Farm holding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Farmer -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Farmer">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#managesFarm"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Farm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A class to decsribe a saref4agri farmer as subcass of a foaf:Person</rdfs:comment>
+        <rdfs:label xml:lang="en">Farmer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#ID -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#ID">
+        <rdfs:label>ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Intake -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Intake">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:isDefinedBy xml:lang="en">The amount of food or other substance taken into the body of an animal or into the soil.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Intake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#IrrigationWater -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#IrrigationWater">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment>The amount of water falling in the soil by irrigation methods.</rdfs:comment>
+        <rdfs:label xml:lang="en">Irrigation water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#MilkingSensor -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#MilkingSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">Milking sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#MovementActivitySensor -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#MovementActivitySensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">Movement activity sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Parcel -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Parcel">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#contains"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/def/saref4agri#Crop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/def/saref4agri#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An area of land, which might be used for grazing animals or planting crops. The parcel is defined as an undividable logical area of land which contains homogeneous items.</rdfs:comment>
+        <rdfs:label>Parcel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#PlantGrowthStage -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#PlantGrowthStage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment>The level or stage of growth of the plant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Plant growth stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Platform -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Platform">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:label>Platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Pluviometer -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Pluviometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">Pluviometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Precipitation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Precipitation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment>The amount of water falling in the soil by natural process (e.g. rain).</rdfs:comment>
+        <rdfs:label xml:lang="en">Precipitation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Soil -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Soil">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
+        <rdfs:comment>Upper layer of the earth in which plants grow.</rdfs:comment>
+        <rdfs:label>Soil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#SoilMoisture -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#SoilMoisture">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment>The amount of water or humidity contained in the soil.</rdfs:comment>
+        <rdfs:label xml:lang="en">Soil moisture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#SoilTemperature -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#SoilTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Temperature"/>
+        <rdfs:comment>The degree or intensity of heat present in the soil.</rdfs:comment>
+        <rdfs:label xml:lang="en">Soil temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#SoilTensiometer -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#SoilTensiometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">Soil tensiometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Thermometer -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Thermometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">Thermometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#WateringGun -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#WateringGun">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Actuator"/>
+        <rdfs:label xml:lang="en">Watering gun</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#WateringSystem -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#WateringSystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:label xml:lang="en">Watering system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#WateringValve -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#WateringValve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Actuator"/>
+        <rdfs:label xml:lang="en">Watering valve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#WeatherStation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#WeatherStation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:label xml:lang="en">Weather station</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#WeightSensor -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#WeightSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Sensor"/>
+        <rdfs:label xml:lang="en">Weight sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/def/saref4agri#Yield -->
+
+
+    <owl:Class rdf:about="http://w3id.org/def/saref4agri#Yield">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:isDefinedBy xml:lang="en">The produced amount of food for animals or of agricultural products.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Yield</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#Feature -->
 
 
@@ -685,7 +1518,19 @@
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfContains"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfWithin"/>
                 <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -786,6 +1631,40 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:comment xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
         <rdfs:label xml:lang="en">System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/member"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+
+    <owl:Class rdf:about="https://schema.org/Organization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
     </owl:Class>
     
 
@@ -965,6 +1844,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:Class rdf:about="https://w3id.org/saref#Humidity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
         <rdfs:comment>A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidiy</rdfs:label>
         <rdfs:label>Humidity</rdfs:label>
     </owl:Class>
     
@@ -1116,6 +1996,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:Class rdf:about="https://w3id.org/saref#Temperature">
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
         <rdfs:comment>A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
         <rdfs:label>Temperature</rdfs:label>
     </owl:Class>
     
@@ -1302,6 +2183,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 
 
-<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
 
 
