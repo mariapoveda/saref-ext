@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "ex:EatingActivitySensor" "ex:FarmHolding" "ex:LactatingCow" "ex:MeatYield" "ex:MilkingSensor" "ex:ConcentrateIntake" "ex:CompostIntake" "ex:Greenhouse" "ex:Farmer" "ex:MilkYield" "ex:EggYield" "ex:FarmingBuilding" "ex:CropIntake" "ex:MovementActivitySensor" "ex:CropYield" "https://w3id.org/def/saref4agri#WateringGun" "ssn:Deployment" "geosp:Feature" ":Property" "https://w3id.org/def/saref4agri#Pluviometer" ":Sensor" ":Device" "https://w3id.org/def/saref4agri#SoilTensiometer" "time:Interval" "geosp:SpatialObject" "geosp:Geometry" "time:TemporalEntity" "https://w3id.org/def/saref4agri#Deployment" ":Time" "https://w3id.org/def/saref4agri#WeatherStation" "ssn:System" "wgs84_pos:Point" ":Temperature" "time:Instant" ":Humidity" ":Actuator" ; /*classes style*/
+	":Sensor" -> ":Device" [ label = "rdfs:subClassOf" ];
+	"ex:Farmer" -> "foaf:Person" [ label = "rdfs:subClassOf" ];
+	"ex:FarmingBuilding" -> "s4agri:Building" [ label = "rdfs:subClassOf" ];
+	"ex:ConcentrateIntake" -> "s4agri:Intake" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/saref4agri#WeatherStation" -> ":Sensor" [ label = "rdfs:subClassOf" ];
+	"ex:MilkingSensor" -> ":Sensor" [ label = "rdfs:subClassOf" ];
+	"ex:EatingActivitySensor" -> ":Sensor" [ label = "rdfs:subClassOf" ];
+	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"ex:CropYield" -> "s4agri:Yield" [ label = "rdfs:subClassOf" ];
+	":Temperature" -> ":Property" [ label = "rdfs:subClassOf" ];
+	"ex:CompostIntake" -> "s4agri:Intake" [ label = "rdfs:subClassOf" ];
+	"ex:EggYield" -> "s4agri:Yield" [ label = "rdfs:subClassOf" ];
+	"ex:LactatingCow" -> "s4agri:Animal" [ label = "rdfs:subClassOf" ];
+	"wgs84_pos:Point" -> "geosp:Geometry" [ label = "rdfs:subClassOf" ];
+	"ex:Greenhouse" -> "s4agri:Building" [ label = "rdfs:subClassOf" ];
+	"geosp:Feature" -> "geosp:SpatialObject" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/saref4agri#Deployment" -> "ssn:Deployment" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/saref4agri#SoilTensiometer" -> ":Sensor" [ label = "rdfs:subClassOf" ];
+	":Humidity" -> ":Property" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/saref4agri#WateringGun" -> ":Actuator" [ label = "rdfs:subClassOf" ];
+	":Actuator" -> ":Device" [ label = "rdfs:subClassOf" ];
+	"ex:FarmHolding" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"ex:CropIntake" -> "s4agri:Intake" [ label = "rdfs:subClassOf" ];
+	"ex:MilkYield" -> "s4agri:Yield" [ label = "rdfs:subClassOf" ];
+	"geosp:Geometry" -> "geosp:SpatialObject" [ label = "rdfs:subClassOf" ];
+	"ex:MovementActivitySensor" -> ":Sensor" [ label = "rdfs:subClassOf" ];
+	":Time" -> ":Property" [ label = "rdfs:subClassOf" ];
+	"ex:MeatYield" -> "s4agri:Yield" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/saref4agri#Pluviometer" -> ":Sensor" [ label = "rdfs:subClassOf" ];
+	":Device" -> "ssn:System" [ label = "rdfs:subClassOf" ];
+
+}

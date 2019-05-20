@@ -1,0 +1,787 @@
+@prefix : <http://ontology.tno.nl/examples/saref4agri-ex1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ontology.tno.nl/examples/saref4agri-ex1> .
+
+<http://ontology.tno.nl/examples/saref4agri-ex1> rdf:type owl:Ontology ;
+                                                  owl:imports <http://w3id.org/def/saref4agri> ;
+                                                  owl:versionInfo "Created with TopBraid Composer" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/TAXRANK_1000000
+<http://purl.obolibrary.org/obo/TAXRANK_1000000> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#contains
+<http://w3id.org/def/saref4agri#contains> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#generates
+<http://w3id.org/def/saref4agri#generates> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#hasBirthDate
+<http://w3id.org/def/saref4agri#hasBirthDate> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#hasDeploymentPeriod
+<http://w3id.org/def/saref4agri#hasDeploymentPeriod> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#hasName
+<http://w3id.org/def/saref4agri#hasName> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#isContainedIn
+<http://w3id.org/def/saref4agri#isContainedIn> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#isDeployedAtSpace
+<http://w3id.org/def/saref4agri#isDeployedAtSpace> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/saref4agri#isMemberOf
+<http://w3id.org/def/saref4agri#isMemberOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/saref#hasValue
+<http://w3id.org/saref#hasValue> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/saref#isMeasuredIn
+<http://w3id.org/saref#isMeasuredIn> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/saref#measuresProperty
+<http://w3id.org/saref#measuresProperty> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/saref#relatesToProperty
+<http://w3id.org/saref#relatesToProperty> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/ssn/deployedOnPlatform
+<http://www.w3.org/ns/ssn/deployedOnPlatform> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/ssn/deployedSystem
+<http://www.w3.org/ns/ssn/deployedSystem> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#consistsOf
+<https://w3id.org/saref#consistsOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#makesMeasurement
+<https://w3id.org/saref#makesMeasurement> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/def/saref4agri#Location
+<http://w3id.org/def/saref4agri#Location> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/def/saref4agri#hasID
+<http://w3id.org/def/saref4agri#hasID> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/def/saref4agri#hasMember
+<http://w3id.org/def/saref4agri#hasMember> rdf:type owl:ObjectProperty ;
+                                           rdfs:label "has member" .
+
+
+###  http://w3id.org/def/saref4agri#hasPlantDate
+<http://w3id.org/def/saref4agri#hasPlantDate> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/def/saref4agri#hasSpace
+<http://w3id.org/def/saref4agri#hasSpace> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/def/saref4agri#isProducedBy
+<http://w3id.org/def/saref4agri#isProducedBy> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/def/saref4agri#managesFarm
+<http://w3id.org/def/saref4agri#managesFarm> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/def/saref4agri#receives
+<http://w3id.org/def/saref4agri#receives> rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/saref#hasFeatureOfInterest
+<http://w3id.org/saref#hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://w3id.org/saref#isFeatureOfInterestOf> .
+
+
+###  http://w3id.org/saref#isFeatureOfInterestOf
+<http://w3id.org/saref#isFeatureOfInterestOf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#CompostIntake
+:CompostIntake rdf:type owl:Class ;
+               rdfs:subClassOf <http://w3id.org/def/saref4agri#Intake> ;
+               rdfs:label "Fertilizer intake" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#ConcentrateIntake
+:ConcentrateIntake rdf:type owl:Class ;
+                   rdfs:subClassOf <http://w3id.org/def/saref4agri#Intake> ;
+                   rdfs:label "Concentrate intake" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#CropIntake
+:CropIntake rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/def/saref4agri#Intake> ;
+            rdfs:label "Crop intake" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#CropYield
+:CropYield rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/def/saref4agri#Yield> ;
+           rdfs:comment "Produced crops (i.e. cultivated plant)"@en ;
+           rdfs:label "Crop Yield" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#EatingActivitySensor
+:EatingActivitySensor rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/saref#Sensor> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#EggYield
+:EggYield rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/def/saref4agri#Yield> ;
+          rdfs:label "Egg Yield" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#FarmHolding
+:FarmHolding rdf:type owl:Class ;
+             rdfs:subClassOf <https://schema.org/Organization> ;
+             rdfs:comment "An organization specialized in farming." ;
+             rdfs:label "Farmer holding" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Farmer
+:Farmer rdf:type owl:Class ;
+        rdfs:subClassOf <http://xmlns.com/foaf/spec/#Person> ;
+        rdfs:comment "A Person which is a farmer as profession" ;
+        rdfs:label "Farmer" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#FarmingBuilding
+:FarmingBuilding rdf:type owl:Class ;
+                 rdfs:subClassOf <http://w3id.org/def/saref4agri#Building> ;
+                 rdfs:comment "A building specialized for farming purposes." ;
+                 rdfs:label "Farming building" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Greenhouse
+:Greenhouse rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/def/saref4agri#Building> ;
+            rdfs:comment "A glass building in which crops that need protection from cold weather are grown." ;
+            rdfs:label "Greenhouse" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#LactatingCow
+:LactatingCow rdf:type owl:Class ;
+              rdfs:subClassOf <http://w3id.org/def/saref4agri#Animal> ;
+              rdfs:comment "A domesticated cow specialized for the production of milk." ;
+              rdfs:label "Milk cow" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#MeatYield
+:MeatYield rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/def/saref4agri#Yield> ;
+           rdfs:label "Meat Yield" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield
+:MilkYield rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/def/saref4agri#Yield> ;
+           rdfs:label "Milk Yield" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#MilkingSensor
+:MilkingSensor rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/saref#Sensor> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#MovementActivitySensor
+:MovementActivitySensor rdf:type owl:Class ;
+                        rdfs:subClassOf <https://w3id.org/saref#Sensor> .
+
+
+###  http://purl.obolibrary.org/obo/TAXRANK_0000003
+<http://purl.obolibrary.org/obo/TAXRANK_0000003> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/TAXRANK_0000004
+<http://purl.obolibrary.org/obo/TAXRANK_0000004> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/TAXRANK_0000006
+<http://purl.obolibrary.org/obo/TAXRANK_0000006> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/TAXRANK_0000016
+<http://purl.obolibrary.org/obo/TAXRANK_0000016> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/TAXRANK_0000017
+<http://purl.obolibrary.org/obo/TAXRANK_0000017> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Animal
+<http://w3id.org/def/saref4agri#Animal> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#AnimalGroup
+<http://w3id.org/def/saref4agri#AnimalGroup> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Building
+<http://w3id.org/def/saref4agri#Building> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#BuildingSpace
+<http://w3id.org/def/saref4agri#BuildingSpace> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Crop
+<http://w3id.org/def/saref4agri#Crop> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Deployment
+<http://w3id.org/def/saref4agri#Deployment> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Intake
+<http://w3id.org/def/saref4agri#Intake> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Parcel
+<http://w3id.org/def/saref4agri#Parcel> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Platform
+<http://w3id.org/def/saref4agri#Platform> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Property
+<http://w3id.org/def/saref4agri#Property> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/saref4agri#Yield
+<http://w3id.org/def/saref4agri#Yield> rdf:type owl:Class .
+
+
+###  http://w3id.org/saref#Property
+<http://w3id.org/saref#Property> rdf:type owl:Class .
+
+
+###  http://w3id.org/saref#Time
+<http://w3id.org/saref#Time> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/spec/#Person
+<http://xmlns.com/foaf/spec/#Person> rdf:type owl:Class .
+
+
+###  https://schema.org/Organization
+<https://schema.org/Organization> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Device
+<https://w3id.org/saref#Device> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Measurement
+<https://w3id.org/saref#Measurement> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Property
+<https://w3id.org/saref#Property> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Sensor
+<https://w3id.org/saref#Sensor> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#UnitOfMeasure
+<https://w3id.org/saref#UnitOfMeasure> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Animalia
+:Animalia rdf:type owl:NamedIndividual ,
+                   <http://purl.obolibrary.org/obo/TAXRANK_0000017> ;
+          rdfs:label "Animalia" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#BioCompostIntake
+:BioCompostIntake rdf:type owl:NamedIndividual ,
+                           :CompostIntake .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Bos_Taurus
+:Bos_Taurus rdf:type owl:NamedIndividual ,
+                     <http://purl.obolibrary.org/obo/TAXRANK_0000006> ;
+            rdfs:label "Bos Taurus" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Bovidae
+:Bovidae rdf:type owl:NamedIndividual ,
+                  <http://purl.obolibrary.org/obo/TAXRANK_0000004> ;
+         rdfs:label "Bovidae" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Compartment_A
+:Compartment_A rdf:type owl:NamedIndividual ,
+                        <http://w3id.org/def/saref4agri#BuildingSpace> ;
+               <http://w3id.org/def/saref4agri#isContainedIn> :Milk_Cow_Barn .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Compartment_B
+:Compartment_B rdf:type owl:NamedIndividual ,
+                        <http://w3id.org/def/saref4agri#BuildingSpace> ;
+               <http://w3id.org/def/saref4agri#isContainedIn> :Milk_Cow_Barn .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Compost_2019-02-02
+:Compost_2019-02-02 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/saref#Measurement> ;
+                    <http://w3id.org/saref#hasValue> 370 ;
+                    <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                    <http://w3id.org/saref#relatesToProperty> :CompostIntake .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Compost_2019-02-16
+:Compost_2019-02-16 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/saref#Measurement> ;
+                    <http://w3id.org/saref#hasFeatureOfInterest> :Parcel_East ;
+                    <http://w3id.org/saref#hasValue> 240 ;
+                    <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                    <http://w3id.org/saref#relatesToProperty> :CompostIntake .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow1
+:Cow1 rdf:type owl:NamedIndividual ,
+               :LactatingCow ;
+      <http://purl.obolibrary.org/obo/TAXRANK_1000000> :Animalia ,
+                                                       :Bos_Taurus ,
+                                                       :Bovidae ;
+      <http://w3id.org/def/saref4agri#hasBirthDate> "2016-05-29" ;
+      <http://w3id.org/def/saref4agri#isMemberOf> :Cow_Group_A .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow2
+:Cow2 rdf:type owl:NamedIndividual ,
+               :LactatingCow ;
+      <http://purl.obolibrary.org/obo/TAXRANK_1000000> :Animalia ,
+                                                       :Bos_Taurus ,
+                                                       :Bovidae ;
+      <http://w3id.org/def/saref4agri#hasBirthDate> "2016-05-22" ;
+      <http://w3id.org/def/saref4agri#isMemberOf> :Cow_Group_A .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow3
+:Cow3 rdf:type owl:NamedIndividual ,
+               :LactatingCow ;
+      <http://purl.obolibrary.org/obo/TAXRANK_1000000> :Animalia ,
+                                                       :Bos_Taurus ,
+                                                       :Bovidae ;
+      <http://w3id.org/def/saref4agri#hasBirthDate> "2018-03-15" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_1_Birth
+:Cow_1_Birth rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2006/time#Instant> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_2_Birth
+:Cow_2_Birth rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2006/time#Instant> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_2_Death
+:Cow_2_Death rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2006/time#Instant> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_3_Birth
+:Cow_3_Birth rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2006/time#Instant> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Activity_2019_03_01-14_00
+:Cow_Activity_2019_03_01-14_00 rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/saref#Measurement> ;
+                               <http://w3id.org/saref#hasFeatureOfInterest> :Cow3 ;
+                               <http://w3id.org/saref#hasValue> "20" ;
+                               <http://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2006/time#minute> ;
+                               <http://w3id.org/saref#relatesToProperty> :Eating_Activity_in_minutes_per__hour .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Activity_2019_03_01-15_00
+:Cow_Activity_2019_03_01-15_00 rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/saref#Measurement> ;
+                               <http://w3id.org/saref#hasFeatureOfInterest> :Cow3 ;
+                               <http://w3id.org/saref#hasValue> "15" ;
+                               <http://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2006/time#minute> ;
+                               <http://w3id.org/saref#relatesToProperty> :Eating_Activity_in_minutes_per__hour .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Eating_Activity_Sensor_33
+:Cow_Eating_Activity_Sensor_33 rdf:type owl:NamedIndividual ,
+                                        :EatingActivitySensor ;
+                               <http://w3id.org/saref#relatesToProperty> :Eating_Activity_in_minutes_per__hour ;
+                               <https://w3id.org/saref#makesMeasurement> :Cow_Activity_2019_03_01-14_00 ,
+                                                                         :Cow_Activity_2019_03_01-15_00 .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A
+:Cow_Group_A rdf:type owl:NamedIndividual ,
+                      <http://w3id.org/def/saref4agri#AnimalGroup> ;
+             <http://w3id.org/def/saref4agri#generates> :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_B
+:Cow_Group_B rdf:type owl:NamedIndividual ,
+                      <http://w3id.org/def/saref4agri#AnimalGroup> ;
+             <http://w3id.org/def/saref4agri#contains> :Cow3 .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Cyperales
+:Cyperales rdf:type owl:NamedIndividual ,
+                    <http://purl.obolibrary.org/obo/TAXRANK_0000003> ;
+           rdfs:label "Cyperales" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Eating_Activity_in_minutes_per__hour
+:Eating_Activity_in_minutes_per__hour rdf:type owl:NamedIndividual ,
+                                               <http://w3id.org/def/saref4agri#Property> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Farm_Jansen_and_Sons_Eindhoven
+:Farm_Jansen_and_Sons_Eindhoven rdf:type owl:NamedIndividual ,
+                                         <http://www.opengis.net/ont/geosparql#Feature> ;
+                                <http://w3id.org/def/saref4agri#contains> :Heated_Glass_Greenhouse ,
+                                                                          :Milk_Cow_Barn ,
+                                                                          :Parcel_East ,
+                                                                          :Parcel_North ,
+                                                                          :Parcel_South ,
+                                                                          :Parcel_West .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#H._Jansen
+:H._Jansen rdf:type owl:NamedIndividual ,
+                    :Farmer ;
+           <http://w3id.org/def/saref4agri#hasName> "Hendricus Jansen"@en ;
+           <http://w3id.org/def/saref4agri#isMemberOf> :Jansen_and_Sons .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Heated_Glass_Greenhouse
+:Heated_Glass_Greenhouse rdf:type owl:NamedIndividual ,
+                                  :Greenhouse .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Humidity_Percentage
+:Humidity_Percentage rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Intake_Sugar_Corn
+:Intake_Sugar_Corn rdf:type owl:NamedIndividual ,
+                            :CropIntake .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#J._Jansen
+:J._Jansen rdf:type owl:NamedIndividual ,
+                    :Farmer ;
+           <http://w3id.org/def/saref4agri#hasName> "Johannes Jansen"@en ;
+           <http://w3id.org/def/saref4agri#isMemberOf> :Jansen_and_Sons .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Jansen_and_Sons
+:Jansen_and_Sons rdf:type owl:NamedIndividual ,
+                          :FarmHolding ;
+                 <http://w3id.org/def/saref4agri#managesFarm> :Farm_Jansen_and_Sons_Eindhoven .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Kilogram
+:Kilogram rdf:type owl:NamedIndividual ,
+                   <http://w3id.org/saref#Property> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk
+:Milk rdf:type owl:NamedIndividual ,
+               :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#MilkYieldSensor
+:MilkYieldSensor rdf:type owl:NamedIndividual ,
+                          :MilkingSensor ;
+                 <http://w3id.org/saref#measuresProperty> :MilkYield ;
+                 <https://w3id.org/saref#makesMeasurement> :Milk_Yield_2019-03-01_1 ,
+                                                           :Milk_Yield_2019-03-01_2 ,
+                                                           :Milk_Yield_2019-03-02_1 ,
+                                                           :Milk_Yield_2019-03-02_2 ,
+                                                           :Milk_Yield_2019-03-03_1 ,
+                                                           :Milk_Yield_2019-03-03_2 .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Cow_Barn
+:Milk_Cow_Barn rdf:type owl:NamedIndividual ,
+                        :FarmingBuilding .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Cow_Meat
+:Milk_Cow_Meat rdf:type owl:NamedIndividual ,
+                        :MeatYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-01_1
+:Milk_Yield_2019-03-01_1 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Cow_Group_A ;
+                         <http://w3id.org/saref#hasValue> "4,7"@en ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                         <http://w3id.org/saref#relatesToProperty> :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-01_2
+:Milk_Yield_2019-03-01_2 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Cow_Group_A ;
+                         <http://w3id.org/saref#hasValue> "3,9"@en ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                         <http://w3id.org/saref#relatesToProperty> :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-02_1
+:Milk_Yield_2019-03-02_1 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Cow_Group_A ;
+                         <http://w3id.org/saref#hasValue> "2,1"@en ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                         <http://w3id.org/saref#relatesToProperty> :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-02_2
+:Milk_Yield_2019-03-02_2 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Cow_Group_A ;
+                         <http://w3id.org/saref#hasValue> "2,7"@en ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                         <http://w3id.org/saref#relatesToProperty> :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-03_1
+:Milk_Yield_2019-03-03_1 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Cow_Group_B ;
+                         <http://w3id.org/saref#hasValue> "5,2"@en ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                         <http://w3id.org/saref#relatesToProperty> :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-03_2
+:Milk_Yield_2019-03-03_2 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Cow_Group_B ;
+                         <http://w3id.org/saref#hasValue> "3,7"@en ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+                         <http://w3id.org/saref#relatesToProperty> :MilkYield .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Milking_Machine
+:Milking_Machine rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/saref#Device> ;
+                 rdfs:label "Milking Machine" ;
+                 <https://w3id.org/saref#consistsOf> :MilkYieldSensor .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Minutes
+:Minutes rdf:type owl:NamedIndividual ,
+                  <http://w3id.org/saref#Time> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_East
+:Parcel_East rdf:type owl:NamedIndividual ,
+                      <http://w3id.org/def/saref4agri#Parcel> ;
+             <http://w3id.org/def/saref4agri#receives> :Compost_2019-02-16 ;
+             <http://w3id.org/def/saref4agri#contains> :Sugar_Snaps_1 ;
+             <http://w3id.org/def/saref4agri#hasName> "Field Frontyard" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_North
+:Parcel_North rdf:type owl:NamedIndividual ,
+                       <http://w3id.org/def/saref4agri#Parcel> ;
+              <http://w3id.org/def/saref4agri#contains> :Cow_Group_A ;
+              <http://w3id.org/def/saref4agri#hasName> "Grazing Plot" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_South
+:Parcel_South rdf:type owl:NamedIndividual ,
+                       <http://w3id.org/def/saref4agri#Parcel> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_West
+:Parcel_West rdf:type owl:NamedIndividual ,
+                      <http://w3id.org/def/saref4agri#Parcel> ;
+             <http://w3id.org/def/saref4agri#receives> :Compost_2019-02-02 ;
+             <http://w3id.org/def/saref4agri#contains> :Sweet_Corn_2 .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Pisum_sativum_var._macrocarpon_Ser.
+<http://ontology.tno.nl/examples/saref4agri-ex1#Pisum_sativum_var._macrocarpon_Ser.> rdf:type owl:NamedIndividual ,
+                                                                                              <http://purl.obolibrary.org/obo/TAXRANK_0000016> ;
+                                                                                     rdfs:label "Pisum sativum var. macrocarpon Ser." .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Plantae
+:Plantae rdf:type owl:NamedIndividual ,
+                  <http://purl.obolibrary.org/obo/TAXRANK_0000017> ;
+         rdfs:label "Plantae" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Rosanae_Fabales
+:Rosanae_Fabales rdf:type owl:NamedIndividual ,
+                          <http://purl.obolibrary.org/obo/TAXRANK_0000003> ;
+                 rdfs:label "Rosanae Fabales" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity
+:Soil_Acidity rdf:type owl:NamedIndividual ,
+                       <http://w3id.org/def/saref4agri#Property> ,
+                       <https://w3id.org/saref#Property> ;
+              rdfs:label "Acidity" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity_2019_03_04
+:Soil_Acidity_2019_03_04 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Parcel_East ;
+                         <http://w3id.org/saref#hasValue> "7.4" ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Acidity> ;
+                         <http://w3id.org/saref#relatesToProperty> :Soil_Acidity .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity_2019_03_05
+:Soil_Acidity_2019_03_05 rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/saref#Measurement> ;
+                         <http://w3id.org/saref#hasFeatureOfInterest> :Parcel_East ;
+                         <http://w3id.org/saref#hasValue> "7.5" ;
+                         <http://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/Acidity> ;
+                         <http://w3id.org/saref#relatesToProperty> :Soil_Acidity .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Measurement_Deployment
+:Soil_Measurement_Deployment rdf:type owl:NamedIndividual ,
+                                      <http://w3id.org/def/saref4agri#Deployment> ;
+                             <http://w3id.org/def/saref4agri#hasDeploymentPeriod> <http://www.w3.org/2006/time#unitYear> ;
+                             <http://w3id.org/def/saref4agri#isDeployedAtSpace> :Parcel_East ;
+                             rdfs:label "Soil Measurement Deployment" ;
+                             <http://www.w3.org/ns/ssn/deployedOnPlatform> :Soil_Platform ;
+                             <http://www.w3.org/ns/ssn/deployedSystem> :Soil_Sensor .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Platform
+:Soil_Platform rdf:type owl:NamedIndividual ,
+                        <http://w3id.org/def/saref4agri#Platform> ;
+               rdfs:label "Soil Platform" .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Sensor
+:Soil_Sensor rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/saref#Sensor> ;
+             <http://w3id.org/saref#measuresProperty> :Humidity_Percentage ,
+                                                      :Soil_Acidity ;
+             <https://w3id.org/saref#makesMeasurement> :Soil_Acidity_2019_03_04 ,
+                                                       :Soil_Acidity_2019_03_05 .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Storage_Barn
+:Storage_Barn rdf:type owl:NamedIndividual ,
+                       :FarmingBuilding .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Sugar_Corn_Yield
+:Sugar_Corn_Yield rdf:type owl:NamedIndividual ,
+                           <http://w3id.org/def/saref4agri#Yield> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Sugar_Snaps_1
+:Sugar_Snaps_1 rdf:type owl:NamedIndividual ,
+                        <http://w3id.org/def/saref4agri#Crop> ;
+               <http://purl.obolibrary.org/obo/TAXRANK_1000000> <http://ontology.tno.nl/examples/saref4agri-ex1#Pisum_sativum_var._macrocarpon_Ser.> ,
+                                                                :Plantae .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Sweet_Corn_1
+:Sweet_Corn_1 rdf:type owl:NamedIndividual ,
+                       <http://w3id.org/def/saref4agri#Crop> ;
+              <http://purl.obolibrary.org/obo/TAXRANK_1000000> :Plantae ,
+                                                               :Rosanae_Fabales ,
+                                                               <http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Sweet_Corn_2
+:Sweet_Corn_2 rdf:type owl:NamedIndividual ,
+                       <http://w3id.org/def/saref4agri#Crop> ;
+              <http://purl.obolibrary.org/obo/TAXRANK_1000000> :Plantae ,
+                                                               :Rosanae_Fabales ,
+                                                               <http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.> .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Vermicompost
+:Vermicompost rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.
+<http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.> rdf:type owl:NamedIndividual ,
+                                                                      <http://purl.obolibrary.org/obo/TAXRANK_0000006> ;
+                                                             rdfs:label "Zea mays L." .
+
+
+###  http://ontology.tno.nl/examples/saref4agri-ex1#5-5-5_crop_fertilizer
+<http://ontology.tno.nl/examples/saref4agri-ex1#5-5-5_crop_fertilizer> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wurvoc.org/vocabularies/om-1.8/Acidity
+<http://www.wurvoc.org/vocabularies/om-1.8/Acidity> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/saref#UnitOfMeasure> ;
+                                                    rdfs:comment "pH is a scale used to specify how acidic or basic a water-based solution is. Acidic solutions have a lower pH, basic solutions have a higher pH. At room temperature, pure water is neither acidic nor basic and has a pH of 7." ;
+                                                    rdfs:label "ph" .
+
+
+###  http://www.wurvoc.org/vocabularies/om-1.8/Liter
+<http://www.wurvoc.org/vocabularies/om-1.8/Liter> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/saref#UnitOfMeasure> .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
