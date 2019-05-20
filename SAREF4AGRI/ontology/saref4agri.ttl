@@ -8,7 +8,6 @@
 <https://w3id.org/def/saref4agri> a owl:Ontology ;
 	<http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> ;
 	<http://purl.org/dc/terms/title> "SAREF4AGRI: an extension of SAREF for the for the agriculture and food domain"^^xsd:string ;
-	<http://purl.org/dc/elements/1.1/creator> <http://w3id.org/people/mpoveda> ;
 	<http://purl.org/dc/terms/modified> "2019-04-30"^^xsd:date ;
 	<http://purl.org/dc/terms/issued> "2019-04-30"^^xsd:date ;
 	<http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4agri#" ;
@@ -25,6 +24,7 @@
 	<http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	<http://purl.org/dc/elements/1.1/title> "SAREF extension for Agriculture"@en ;
 	<http://purl.org/dc/terms/description> "SAREF4AGRI is an extension of SAREF for the agriculture and food domain. SAREF4AGRI is specified and published by ETSI in the TS 103 410-6 associated to this ontology file. The list of use cases, standards and requirements that guided the creation of SAREF4AGRI are described in the associated ETSI TR 103 511. "^^xsd:string ;
+	<http://purl.org/dc/elements/1.1/creator> <http://w3id.org/people/mpoveda> ;
 	<http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Agricultural domain."@en ;
 	<http://purl.org/dc/terms/created> "2019-04-15"^^xsd:date .
 # 
@@ -966,7 +966,8 @@ _:genid38 a owl:Restriction ;
 
 :Pluviometer a owl:Class ;
 	rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
-	rdfs:label "A sensor that measures the rain fall."@en , "Pluviometer"@en .
+	rdfs:comment "A sensor that measures the rain fall."@en ;
+	rdfs:label "Pluviometer"@en .
 # 
 # https://w3id.org/def/saref4agri#Precipitation
 
@@ -994,7 +995,8 @@ _:genid38 a owl:Restriction ;
 
 :SoilTensiometer a owl:Class ;
 	rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
-	rdfs:label "A sensor that measures the soil moisture."@en , "Soil tensiometer"@en .
+	rdfs:comment "A sensor that measures the soil moisture."@en ;
+	rdfs:label "Soil tensiometer"@en .
 # 
 # https://w3id.org/def/saref4agri#Thermometer
 
