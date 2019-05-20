@@ -18,10 +18,11 @@
 <https://w3id.org/def/saref4city> a owl:Ontology ;
 	owl:versionIRI <https://w3id.org/def/v1/saref4city> ;
 	dc:title "SAREF extension for Smart City"@en ;
-	owl:versionInfo "0.5"^^xsd:decimal ;
+	owl:versionInfo "0.8"^^xsd:decimal ;
 	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	dcterms:creator <http://w3id.org/people/mpoveda> ;
+	dcterms:creator <https://www.linkedin.com/in/paolaespinoza-arias/> ;
 	dc:publisher <http://www.oeg-upm.net/> ;
 	vann:preferredNamespacePrefix "s4city" ;
 	vann:preferredNamespaceUri "https://w3id.org/def/saref4city#" ;
@@ -43,9 +44,6 @@ dc:contributor a owl:AnnotationProperty .
 
 dc:creator a owl:AnnotationProperty .
 # 
-# http://purl.org/dc/elements/1.1/date
-
-dc:date a owl:AnnotationProperty .
 # 
 # http://purl.org/dc/elements/1.1/description
 
@@ -65,62 +63,29 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#alt
 
-geo:alt a owl:AnnotationProperty ;
+geo:alt a rdf:Property ;
 	rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
 	rdfs:label "altitude" ;
 	rdfs:domain geo:SpatialThing .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#lat
 
-geo:lat a owl:AnnotationProperty ;
+geo:lat a rdf:Property ;
 	rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
 	rdfs:label "latitude" ;
 	rdfs:domain geo:SpatialThing .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 
-geo:location a owl:AnnotationProperty ;
-	rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> .
+geo:location a rdf:Property .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#long
 
-geo:long a owl:AnnotationProperty ;
+geo:long a rdf:Property ;
 	rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
 	rdfs:label "longitude" ;
 	rdfs:domain geo:SpatialThing .
 # 
-# http://www.w3.org/2004/02/skos/core#definition
-
-<http://www.w3.org/2004/02/skos/core#definition> a owl:AnnotationProperty .
-# 
-# http://www.w3.org/2004/02/skos/core#prefLabel
-
-<http://www.w3.org/2004/02/skos/core#prefLabel> a owl:AnnotationProperty .
-# 
-# http://www.w3.org/ns/prov#hadPrimarySource
-
-prov:hadPrimarySource a owl:AnnotationProperty .
-# 
-# http://xmlns.com/foaf/0.1/based_near
-
-<http://xmlns.com/foaf/0.1/based_near> a owl:AnnotationProperty .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Datatypes
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/2001/XMLSchema#date
-
-xsd:date a rdfs:Datatype .
-# 
-# http://www.w3.org/2001/XMLSchema#duration
-
-xsd:duration a rdfs:Datatype .
 # 
 # 
 # 
@@ -192,23 +157,11 @@ s4city:hasAccesibility a owl:ObjectProperty ;
 s4city:hasCalculationPeriod a owl:ObjectProperty ;
 	rdfs:label "has calculation period"@en .
 # 
-# https://w3id.org/def/saref4city#hasFeatureOfInterest
-
-s4city:hasFeatureOfInterest a owl:ObjectProperty ;
-	owl:inverseOf s4city:isFeatureOfInterestOf ;
-	rdfs:label "has feature of interest"@en .
-# 
 # https://w3id.org/def/saref4city#hasKPI
 
 s4city:hasKPI a owl:ObjectProperty ;
 	owl:inverseOf s4city:isKPIOf ;
 	rdfs:label "has key performance indicator"@en .
-# 
-# https://w3id.org/def/saref4city#hasProperty
-
-s4city:hasProperty a owl:ObjectProperty ;
-	owl:inverseOf s4city:isPropertyOf ;
-	rdfs:label "has property"@en .
 # 
 # https://w3id.org/def/saref4city#involvesFacility
 
@@ -230,11 +183,6 @@ s4city:isAvailableInLanguage a owl:ObjectProperty ;
 s4city:isDerivedFrom a owl:ObjectProperty ;
 	rdfs:label "is derived from"@en .
 # 
-# https://w3id.org/def/saref4city#isFeatureOfInterestOf
-
-s4city:isFeatureOfInterestOf a owl:ObjectProperty ;
-	rdfs:label "is feature of interest of"@en .
-# 
 # https://w3id.org/def/saref4city#isKPIOf
 
 s4city:isKPIOf a owl:ObjectProperty ;
@@ -245,25 +193,21 @@ s4city:isKPIOf a owl:ObjectProperty ;
 s4city:isOrganizedBy a owl:ObjectProperty ;
 	rdfs:label "is organized by"@en .
 # 
-# https://w3id.org/def/saref4city#isPropertyOf
-
-s4city:isPropertyOf a owl:ObjectProperty ;
-	rdfs:label "is property of"@en .
-# 
 # https://w3id.org/def/saref4city#isSubEventOf
 
 s4city:isSubEventOf a owl:ObjectProperty ;
 	rdfs:label "is subevent of"@en .
 # 
-# https://w3id.org/def/saref4city#measurementMadeBy
-
-s4city:measurementMadeBy a owl:ObjectProperty ;
-	owl:inverseOf saref:makesMeasurement .
-# 
 # https://w3id.org/def/saref4city#quantifiesKPI
 
 s4city:quantifiesKPI a owl:ObjectProperty ;
 	rdfs:label "quantifies KPI"@en .
+# 
+# https://w3id.org/def/saref4city#refersToFeature
+
+s4city:refersToFeature a owl:ObjectProperty ;
+	rdfs:comment "Relation between a KPI assessment and the geographical feature it refers to"@en ;
+	rdfs:label "refers to feature"@en .
 # 
 # https://w3id.org/def/saref4city#refersToTime
 
@@ -280,22 +224,33 @@ s4city:takesPlaceAtFacility a owl:ObjectProperty ;
 s4city:takesPlaceAtTime a owl:ObjectProperty ;
 	rdfs:label "takes place at time"@en .
 # 
-# https://w3id.org/saref#consistsOf
-
-saref:consistsOf a owl:ObjectProperty ;
-	rdfs:isDefinedBy <https://w3id.org/saref#> ;
-	rdfs:label "consists of"@en .
-# 
 # https://w3id.org/saref#controlsProperty
 
 saref:controlsProperty a owl:ObjectProperty ;
 	rdfs:label "controls property"@en .
+# 
+# https://w3id.org/saref#hasFeatureOfInterest
+
+saref:hasFeatureOfInterest a owl:ObjectProperty ;
+	owl:inverseOf saref:isFeatureOfInterestOf ;
+	rdfs:label "has feature of interest"@en .
+# 
+# https://w3id.org/saref#hasProperty
+
+saref:hasProperty a owl:ObjectProperty ;
+	owl:inverseOf saref:isPropertyOf ;
+	rdfs:label "has property"@en .
 # 
 # https://w3id.org/saref#isControlledByDevice
 
 saref:isControlledByDevice a owl:ObjectProperty ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is controlled by device"@en .
+# 
+# https://w3id.org/saref#isFeatureOfInterestOf
+
+saref:isFeatureOfInterestOf a owl:ObjectProperty ;
+	rdfs:label "is feature of interest of"@en .
 # 
 # https://w3id.org/saref#isMeasuredByDevice
 
@@ -309,11 +264,21 @@ saref:isMeasuredIn a owl:ObjectProperty ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "is measured in"@en .
 # 
+# https://w3id.org/saref#isPropertyOf
+
+saref:isPropertyOf a owl:ObjectProperty ;
+	rdfs:label "is property of"@en .
+# 
 # https://w3id.org/saref#makesMeasurement
 
 saref:makesMeasurement a owl:ObjectProperty ;
+	owl:inverseOf saref:measurementMadeBy ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
 	rdfs:label "makes measurement"@en .
+# 
+# https://w3id.org/saref#measurementMadeBy
+
+saref:measurementMadeBy a owl:ObjectProperty .
 # 
 # https://w3id.org/saref#measuresProperty
 
@@ -500,17 +465,15 @@ s4city:AdministrativeArea a owl:Class ;
 # https://w3id.org/def/saref4city#Agent
 
 s4city:Agent a owl:Class ;
-	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> , _:genid1 .
-
-_:genid1 a owl:Restriction ;
-	owl:onProperty cpsv:provides ;
-	owl:allValuesFrom s4city:PublicService .
-
-s4city:Agent rdfs:subClassOf _:genid2 .
-
-_:genid2 a owl:Restriction ;
-	owl:onProperty cpsv:uses ;
-	owl:allValuesFrom s4city:PublicService .
+	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> , 
+		[	a owl:Restriction ;
+			owl:onProperty cpsv:provides ;
+			owl:allValuesFrom s4city:PublicService 
+		] ,
+		
+		[	a owl:Restriction ;
+			owl:onProperty cpsv:uses ;
+			owl:allValuesFrom s4city:PublicService ] .
 
 s4city:Agent rdfs:comment "An agent making an action in the context of a city. An agent could be a person, software, etc."@en ;
 	rdfs:label "Agent"@en .
@@ -546,41 +509,29 @@ s4city:District a owl:Class ;
 # https://w3id.org/def/saref4city#Event
 
 s4city:Event a owl:Class ;
-	rdfs:subClassOf _:genid3 .
+	rdfs:subClassOf [	a owl:Restriction ;
+						owl:onProperty s4city:hasAccesibility ;
+						owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> ] ,
 
-_:genid3 a owl:Restriction ;
-	owl:onProperty s4city:hasAccesibility ;
-	owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept> .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:isOrganizedBy ;
+						owl:allValuesFrom s4city:Agent ] ,
 
-s4city:Event rdfs:subClassOf _:genid4 .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:isSubEventOf ;
+						owl:allValuesFrom s4city:Event ] ,
 
-_:genid4 a owl:Restriction ;
-	owl:onProperty s4city:isOrganizedBy ;
-	owl:allValuesFrom s4city:Agent .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:takesPlaceAtFacility ;
+						owl:allValuesFrom s4city:Facility ] ,
 
-s4city:Event rdfs:subClassOf _:genid5 .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:takesPlaceAtTime ;
+						owl:allValuesFrom time:TemporalEntity ] ,
 
-_:genid5 a owl:Restriction ;
-	owl:onProperty s4city:isSubEventOf ;
-	owl:allValuesFrom s4city:Event .
-
-s4city:Event rdfs:subClassOf _:genid6 .
-
-_:genid6 a owl:Restriction ;
-	owl:onProperty s4city:takesPlaceAtFacility ;
-	owl:allValuesFrom s4city:Facility .
-
-s4city:Event rdfs:subClassOf _:genid7 .
-
-_:genid7 a owl:Restriction ;
-	owl:onProperty s4city:takesPlaceAtTime ;
-	owl:allValuesFrom time:TemporalEntity .
-
-s4city:Event rdfs:subClassOf _:genid8 .
-
-_:genid8 a owl:Restriction ;
-	owl:onProperty saref:hasName ;
-	owl:allValuesFrom rdfs:Literal .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasName ;
+						owl:allValuesFrom rdfs:Literal ].
 
 s4city:Event rdfs:comment "Temporary and scheduled event, like a festival or competition. (Definition taken from Wikidata)"@en ;
 	rdfs:label "Event"@en ;
@@ -593,56 +544,24 @@ s4city:Facility a owl:Class ;
 	rdfs:comment "A place, amenity, or piece of equipment provided for a particular purpose. (Definition taken from https://en.oxforddictionaries.com/definition/facility)"@en ;
 	rdfs:label "Facility"@en .
 # 
-# https://w3id.org/def/saref4city#FeatureOfInterest
-
-s4city:FeatureOfInterest a owl:Class ;
-	rdfs:subClassOf _:genid9 .
-
-_:genid9 a owl:Restriction ;
-	owl:onProperty s4city:hasKPI ;
-	owl:allValuesFrom s4city:KeyPerformanceIndicator .
-
-s4city:FeatureOfInterest rdfs:subClassOf _:genid10 .
-
-_:genid10 a owl:Restriction ;
-	owl:onProperty s4city:hasProperty ;
-	owl:allValuesFrom saref:Property .
-
-s4city:FeatureOfInterest rdfs:subClassOf _:genid11 .
-
-_:genid11 a owl:Restriction ;
-	owl:onProperty s4city:isFeatureOfInterestOf ;
-	owl:allValuesFrom saref:Measurement .
-
-s4city:FeatureOfInterest rdfs:comment """WARNING!
- This class might be moved to the SAREF ontology"""@en .
-# 
 # https://w3id.org/def/saref4city#KeyPerformanceIndicator
 
 s4city:KeyPerformanceIndicator a owl:Class ;
-	rdfs:subClassOf _:genid12 .
+	rdfs:subClassOf [	a owl:Restriction ;
+						owl:onProperty s4city:hasCalculationPeriod ;
+						owl:allValuesFrom time:TemporalEntity ] ,
 
-_:genid12 a owl:Restriction ;
-	owl:onProperty s4city:hasCalculationPeriod ;
-	owl:allValuesFrom time:TemporalEntity .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:isKPIOf ;
+						owl:allValuesFrom saref:FeatureOfInterest ] ,
 
-s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid13 .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasDescription ;
+						owl:allValuesFrom rdfs:Literal ] ,
 
-_:genid13 a owl:Restriction ;
-	owl:onProperty s4city:isKPIOf ;
-	owl:allValuesFrom s4city:FeatureOfInterest .
-
-s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid14 .
-
-_:genid14 a owl:Restriction ;
-	owl:onProperty saref:hasDescription ;
-	owl:allValuesFrom rdfs:Literal .
-
-s4city:KeyPerformanceIndicator rdfs:subClassOf _:genid15 .
-
-_:genid15 a owl:Restriction ;
-	owl:onProperty saref:hasName ;
-	owl:allValuesFrom rdfs:Literal .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasName ;
+						owl:allValuesFrom rdfs:Literal ] .
 
 s4city:KeyPerformanceIndicator rdfs:comment "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en ;
 	rdfs:label "Key Performance Indicator"@en ;
@@ -651,77 +570,53 @@ s4city:KeyPerformanceIndicator rdfs:comment "A Key Performance Indicator (KPI) i
 # https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment
 
 s4city:KeyPerformanceIndicatorAssessment a owl:Class ;
-	rdfs:subClassOf _:genid16 .
+	rdfs:subClassOf [	a owl:Restriction ;
+						owl:onProperty s4city:assesses ;
+						owl:allValuesFrom saref:FeatureOfInterest ] ,
 
-_:genid16 a owl:Restriction ;
-	owl:onProperty s4city:assesses ;
-	owl:allValuesFrom s4city:FeatureOfInterest .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:isAssessedBy ;
+						owl:allValuesFrom s4city:Agent ] ,
 
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid17 .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:isDerivedFrom ;
+						owl:allValuesFrom saref:Measurement ] ,
 
-_:genid17 a owl:Restriction ;
-	owl:onProperty s4city:isAssessedBy ;
-	owl:allValuesFrom s4city:Agent .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:quantifiesKPI ;
+						owl:allValuesFrom s4city:KeyPerformanceIndicator ] ,
 
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid18 .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:refersToTime ;
+						owl:allValuesFrom time:TemporalEntity ] ,
 
-_:genid18 a owl:Restriction ;
-	owl:onProperty s4city:isDerivedFrom ;
-	owl:allValuesFrom saref:Measurement .
+					[	a owl:Restriction ;
+						owl:onProperty saref:isMeasuredIn ;
+						owl:allValuesFrom saref:UnitOfMeasure ] ,
 
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid19 .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:hasCreationDate ;
+						owl:allValuesFrom xsd:dateTime ] ,
 
-_:genid19 a owl:Restriction ;
-	owl:onProperty s4city:quantifiesKPI ;
-	owl:allValuesFrom s4city:KeyPerformanceIndicator .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:hasExpirationDate ;
+						owl:allValuesFrom xsd:dateTime ] ,
 
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid20 .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:hasLastUpdateDate ;
+						owl:allValuesFrom xsd:dateTime ] ,
 
-_:genid20 a owl:Restriction ;
-	owl:onProperty s4city:refersToTime ;
-	owl:allValuesFrom time:TemporalEntity .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasDescription ;
+						owl:allValuesFrom rdfs:Literal ] ,
 
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid21 .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasName ;
+						owl:allValuesFrom rdfs:Literal ] ,
 
-_:genid21 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:allValuesFrom saref:UnitOfMeasure .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid22 .
-
-_:genid22 a owl:Restriction ;
-	owl:onProperty s4city:hasCreationDate ;
-	owl:allValuesFrom xsd:dateTime .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid23 .
-
-_:genid23 a owl:Restriction ;
-	owl:onProperty s4city:hasExpirationDate ;
-	owl:allValuesFrom xsd:dateTime .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid24 .
-
-_:genid24 a owl:Restriction ;
-	owl:onProperty s4city:hasLastUpdateDate ;
-	owl:allValuesFrom xsd:dateTime .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid25 .
-
-_:genid25 a owl:Restriction ;
-	owl:onProperty saref:hasDescription ;
-	owl:allValuesFrom rdfs:Literal .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid26 .
-
-_:genid26 a owl:Restriction ;
-	owl:onProperty saref:hasName ;
-	owl:allValuesFrom rdfs:Literal .
-
-s4city:KeyPerformanceIndicatorAssessment rdfs:subClassOf _:genid27 .
-
-_:genid27 a owl:Restriction ;
-	owl:onProperty saref:hasValue ;
-	owl:cardinality "1"^^xsd:nonNegativeInteger .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasValue ;
+						owl:cardinality "1"^^xsd:nonNegativeInteger ] .
 
 s4city:KeyPerformanceIndicatorAssessment rdfs:comment "A Key Performance Indicator assessment represents the assessment of a KPI calculated by a given agent in a given time."@en ;
 	rdfs:label "Key performance indicator assessment"@en .
@@ -744,35 +639,26 @@ s4city:PublicAdministration a owl:Class ;
 # https://w3id.org/def/saref4city#PublicService
 
 s4city:PublicService a owl:Class ;
-	rdfs:subClassOf cpsv:PublicService , _:genid28 .
+	rdfs:subClassOf cpsv:PublicService , 
+					[ 	a owl:Restriction ;
+						owl:onProperty cpsv:physicallyAvailableAt ;
+						owl:allValuesFrom s4city:AdministrativeArea ] ,
 
-_:genid28 a owl:Restriction ;
-	owl:onProperty cpsv:physicallyAvailableAt ;
-	owl:allValuesFrom s4city:AdministrativeArea .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:involvesFacility ;
+						owl:allValuesFrom s4city:Facility ] ,
 
-s4city:PublicService rdfs:subClassOf _:genid29 .
+					[	a owl:Restriction ;
+						owl:onProperty s4city:isAvailableInLanguage ;
+						owl:allValuesFrom dcterms:LinguisticSystem ] ,
 
-_:genid29 a owl:Restriction ;
-	owl:onProperty s4city:involvesFacility ;
-	owl:allValuesFrom s4city:Facility .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasDescription ;
+						owl:allValuesFrom rdfs:Literal ] ,
 
-s4city:PublicService rdfs:subClassOf _:genid30 .
-
-_:genid30 a owl:Restriction ;
-	owl:onProperty s4city:isAvailableInLanguage ;
-	owl:allValuesFrom dcterms:LinguisticSystem .
-
-s4city:PublicService rdfs:subClassOf _:genid31 .
-
-_:genid31 a owl:Restriction ;
-	owl:onProperty saref:hasDescription ;
-	owl:allValuesFrom rdfs:Literal .
-
-s4city:PublicService rdfs:subClassOf _:genid32 .
-
-_:genid32 a owl:Restriction ;
-	owl:onProperty saref:hasName ;
-	owl:allValuesFrom rdfs:Literal .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasName ;
+						owl:allValuesFrom rdfs:Literal ] .
 
 s4city:PublicService rdfs:comment "Public service is a service which is provided by government either directly (through the public sector) or by financing provision of services. (Definition taken from Wikipedia)"@en ;
 	rdfs:label "Public service"@en ;
@@ -789,92 +675,78 @@ saref:Actuator a owl:Class ;
 # https://w3id.org/saref#Device
 
 saref:Device a owl:Class ;
-	rdfs:subClassOf geosp:Feature , _:genid33 .
+	rdfs:subClassOf geosp:Feature , 
+					[	a owl:Restriction ;
+						owl:onProperty saref:controlsProperty ;
+						owl:allValuesFrom saref:Property ] ,
 
-_:genid33 a owl:Restriction ;
-	owl:onProperty saref:consistsOf ;
-	owl:allValuesFrom saref:Device .
+					[	a owl:Restriction ;
+						owl:onProperty saref:makesMeasurement ;
+						owl:allValuesFrom saref:Measurement ] ,
 
-saref:Device rdfs:subClassOf _:genid34 .
+					[	a owl:Restriction ;
+						owl:onProperty saref:measuresProperty ;
+						owl:allValuesFrom saref:Property ] ,
 
-_:genid34 a owl:Restriction ;
-	owl:onProperty saref:controlsProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Device rdfs:subClassOf _:genid35 .
-
-_:genid35 a owl:Restriction ;
-	owl:onProperty saref:makesMeasurement ;
-	owl:allValuesFrom saref:Measurement .
-
-saref:Device rdfs:subClassOf _:genid36 .
-
-_:genid36 a owl:Restriction ;
-	owl:onProperty saref:measuresProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Device rdfs:subClassOf _:genid37 .
-
-_:genid37 a owl:Restriction ;
-	owl:onProperty saref:hasDescription ;
-	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasDescription ;
+						owl:maxCardinality "1"^^xsd:nonNegativeInteger ] .
 
 saref:Device rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
 	rdfs:label "Device"^^xsd:string .
 # 
+# https://w3id.org/saref#FeatureOfInterest
+
+saref:FeatureOfInterest a owl:Class ;
+	rdfs:subClassOf [	a owl:Restriction ;
+						owl:onProperty s4city:hasKPI ;
+						owl:allValuesFrom s4city:KeyPerformanceIndicator ] ,
+
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasProperty ;
+						owl:allValuesFrom saref:Property ] ,
+
+					[	a owl:Restriction ;
+						owl:onProperty saref:isFeatureOfInterestOf ;
+						owl:allValuesFrom saref:Measurement ] .
+# 
 # https://w3id.org/saref#Measurement
 
 saref:Measurement a owl:Class ;
-	rdfs:subClassOf _:genid38 .
+	rdfs:subClassOf [	a owl:Restriction ;
+						owl:onProperty saref:hasFeatureOfInterest ;
+						owl:allValuesFrom saref:FeatureOfInterest ] ,
 
-_:genid38 a owl:Restriction ;
-	owl:onProperty s4city:hasFeatureOfInterest ;
-	owl:allValuesFrom s4city:FeatureOfInterest .
+					[	a owl:Restriction ;
+						owl:onProperty saref:isMeasuredIn ;
+						owl:allValuesFrom saref:UnitOfMeasure ] ,
 
-saref:Measurement rdfs:subClassOf _:genid39 .
+					[	a owl:Restriction ;
+						owl:onProperty saref:measurementMadeBy ;
+						owl:allValuesFrom saref:Device ] ,
 
-_:genid39 a owl:Restriction ;
-	owl:onProperty s4city:measurementMadeBy ;
-	owl:allValuesFrom saref:Device .
+					[	a owl:Restriction ;
+						owl:onProperty saref:relatesToProperty ;
+						owl:allValuesFrom saref:Property ] ,
 
-saref:Measurement rdfs:subClassOf _:genid40 .
+					[	a owl:Restriction ;
+						owl:onProperty saref:isMeasuredIn ;
+						owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+						owl:onClass saref:UnitOfMeasure ] ,
 
-_:genid40 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:allValuesFrom saref:UnitOfMeasure .
+					[	a owl:Restriction ;
+						owl:onProperty saref:relatesToProperty ;
+						owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+						owl:onClass saref:Property ] ,
 
-saref:Measurement rdfs:subClassOf _:genid41 .
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasTimestamp ;
+						owl:allValuesFrom xsd:dateTime ] ,
 
-_:genid41 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:allValuesFrom saref:Property .
-
-saref:Measurement rdfs:subClassOf _:genid42 .
-
-_:genid42 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredIn ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:UnitOfMeasure .
-
-saref:Measurement rdfs:subClassOf _:genid43 .
-
-_:genid43 a owl:Restriction ;
-	owl:onProperty saref:relatesToProperty ;
-	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-	owl:onClass saref:Property .
-
-saref:Measurement rdfs:subClassOf _:genid44 .
-
-_:genid44 a owl:Restriction ;
-	owl:onProperty saref:hasTimestamp ;
-	owl:allValuesFrom xsd:dateTime .
-
-saref:Measurement rdfs:subClassOf _:genid45 .
-
-_:genid45 a owl:Restriction ;
-	owl:onProperty saref:hasValue ;
-	owl:cardinality "1"^^xsd:nonNegativeInteger .
-
+					[	a owl:Restriction ;
+						owl:onProperty saref:hasValue ;
+						owl:cardinality "1"^^xsd:nonNegativeInteger ] .
+# 
 saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 	rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
 	rdfs:isDefinedBy <https://w3id.org/saref#> ;
@@ -883,29 +755,21 @@ saref:Measurement owl:disjointWith saref:Property , saref:UnitOfMeasure ;
 # https://w3id.org/saref#Property
 
 saref:Property a owl:Class ;
-	rdfs:subClassOf _:genid46 .
+	rdfs:subClassOf [	a owl:Restriction ;
+						owl:onProperty saref:isControlledByDevice ;
+						owl:allValuesFrom saref:Device ] ,
 
-_:genid46 a owl:Restriction ;
-	owl:onProperty s4city:isPropertyOf ;
-	owl:allValuesFrom s4city:FeatureOfInterest .
+					[	a owl:Restriction ;
+						owl:onProperty saref:isMeasuredByDevice ;
+						owl:allValuesFrom saref:Device ] ,
 
-saref:Property rdfs:subClassOf _:genid47 .
+					[	a owl:Restriction ;
+						owl:onProperty saref:isPropertyOf ;
+						owl:allValuesFrom saref:FeatureOfInterest ] ,
 
-_:genid47 a owl:Restriction ;
-	owl:onProperty saref:isControlledByDevice ;
-	owl:allValuesFrom saref:Device .
-
-saref:Property rdfs:subClassOf _:genid48 .
-
-_:genid48 a owl:Restriction ;
-	owl:onProperty saref:isMeasuredByDevice ;
-	owl:allValuesFrom saref:Device .
-
-saref:Property rdfs:subClassOf _:genid49 .
-
-_:genid49 a owl:Restriction ;
-	owl:onProperty saref:relatesToMeasurement ;
-	owl:allValuesFrom saref:Measurement .
+					[	a owl:Restriction ;
+						owl:onProperty saref:relatesToMeasurement ;
+						owl:allValuesFrom saref:Measurement ] .
 
 saref:Property owl:disjointWith saref:UnitOfMeasure ;
 	rdfs:comment "An aspect of an entity that can be observable by a sensor."@en , "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
@@ -947,5 +811,4 @@ geo:location rdfs:comment """The relation between something and the point,
  an accuracy appropriate for the size of the object and uses such as mapping .
  """ ;
 	rdfs:label "location"@en .
-# 
-# Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
+

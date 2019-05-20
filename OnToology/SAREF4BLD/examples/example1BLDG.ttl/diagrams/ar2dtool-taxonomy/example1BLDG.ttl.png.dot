@@ -1,8 +1,0 @@
-digraph ar2dtool_diagram { 
-rankdir=LR;
-size="1000"
-node [shape = rectangle, color="black"]; "base:Building" ":SpatialThing" "base:BuildingSpace" ; /*classes style*/
-	"base:Building" -> ":SpatialThing" [ label = "rdfs:subClassOf" ];
-	"base:BuildingSpace" -> ":SpatialThing" [ label = "rdfs:subClassOf" ];
-
-}

@@ -17,7 +17,6 @@
         <dc:title xml:lang="en">SAREF extension for building devices</dc:title>
         <terms:creator rdf:resource="http://purl.org/net/mpoveda"/>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
-        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>s4bldg</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/saref4bldg#</vann:preferredNamespaceUri>
         <owl:versionInfo>1.0</owl:versionInfo>
@@ -34,6 +33,27 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -1267,12 +1287,12 @@
     
 
 
-    <!-- https://w3id.org/def/saref4bldg#operatingWight -->
+    <!-- https://w3id.org/def/saref4bldg#operatingWeight -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#operatingWight">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4bldg#operatingWeight">
         <rdfs:comment xml:lang="en">Operating weight of the tank including all of its contents. Usually measured in kilograms (kg) or grams (g).</rdfs:comment>
-        <rdfs:label xml:lang="en">operating wight</rdfs:label>
+        <rdfs:label xml:lang="en">operating weight</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2849,20 +2869,6 @@
     
 
 
-    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
-        <owl:disjointWith rdf:resource="https://w3id.org/saref#Measurement"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/saref#Property"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
-        <rdfs:comment xml:lang="en">Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-        <rdfs:label xml:lang="en">Spatial thing</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/saref4bldg#Actuator -->
 
 
@@ -3086,13 +3092,6 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4bldg#Building">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#hasSpace"/>
@@ -3134,7 +3133,6 @@ Audio-visual appliances may be fixed in place or may be able to be moved from on
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4bldg#BuildingSpace">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#contains"/>
@@ -4789,13 +4787,6 @@ Power outlets are commonly connected within a junction box; data outlets may be 
 
 
     <owl:Class rdf:about="https://w3id.org/def/saref4bldg#PhysicalObject">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#contains"/>
@@ -5213,7 +5204,7 @@ Switches include those used for electrical power, communications, audio-visual, 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#operatingWight"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4bldg#operatingWeight"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5731,6 +5722,6 @@ A device that has category saref:Sensor and performs a saref:SensingFunction.</r
 
 
 
-<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
 
 

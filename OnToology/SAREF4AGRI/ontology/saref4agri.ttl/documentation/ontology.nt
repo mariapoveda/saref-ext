@@ -1,12 +1,25 @@
 <https://w3id.org/def/saref4agri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/def/saref4agri> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/v1/saref4agri> .
-<https://w3id.org/def/saref4agri> <http://purl.org/dc/elements/1.1/contributor> <http://w3id.org/people/mpoveda> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/elements/1.1/creator> <http://w3id.org/people/mpoveda> .
 <https://w3id.org/def/saref4agri> <http://purl.org/dc/elements/1.1/description> "This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Agricultural domain."@en .
 <https://w3id.org/def/saref4agri> <http://purl.org/dc/elements/1.1/title> "SAREF extension for Agriculture"@en .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/contributor> "Jack Verhoosel, TNO" .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/created> "2019-04-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/lauradaniele> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/mderoode> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/description> "SAREF4AGRI is an extension of SAREF for the agriculture and food domain. SAREF4AGRI is specified and published by ETSI in the TS 103 410-6 associated to this ontology file. The list of use cases, standards and requirements that guided the creation of SAREF4AGRI are described in the associated ETSI TR 103 511. " .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/issued> "2019-04-30"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/modified> "2019-05-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/publisher> <http://oeg-upm.net/> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/publisher> <https://tno.nl/en/> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/publisher> <https://www.etsi.org/> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/source> <https://www.etsi.org/deliver/etsi_ts/103400_103499/10341006/01.01.01_60/ts_10341006v010101p.pdf> .
+<https://w3id.org/def/saref4agri> <http://purl.org/dc/terms/title> "SAREF4AGRI: an extension of SAREF for the for the agriculture and food domain" .
 <https://w3id.org/def/saref4agri> <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4agri" .
 <https://w3id.org/def/saref4agri> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4agri#" .
-<https://w3id.org/def/saref4agri> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/def/saref4agri> <http://www.w3.org/2002/07/owl#versionInfo> "0.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -16,20 +29,44 @@
 # #################################################################
 # 
 # 
-# http://purl.org/dc/elements/1.1/contributor
-<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -95,14 +132,16 @@
 # #################################################################
 # 
 # 
+# http://purl.obolibrary.org/obo/TAXRANK_1000000
+<http://purl.obolibrary.org/obo/TAXRANK_1000000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.obolibrary.org/obo/TAXRANK_1000000> <http://www.w3.org/2000/01/rdf-schema#label> "has taxon rank"@en .
+# 
 # http://www.opengis.net/ont/geosparql#hasGeometry
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Feature> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial representation for a given feature."@en .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#sfContains
@@ -126,123 +165,122 @@
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
-# https://w3id.org/def/saref4agri#deployedOnPlatform
-<https://w3id.org/def/saref4agri#deployedOnPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#deployedOnPlatform> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#inDeployment> .
-<https://w3id.org/def/saref4agri#deployedOnPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a deployment and the platform(s) involved in the deployment."@en .
-<https://w3id.org/def/saref4agri#deployedOnPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "deployed on platform"@en .
+# http://www.w3.org/ns/sosa/hosts
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isHostedBy> .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a platform and the systems it hosts."@en .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hosts> <http://www.w3.org/2000/01/rdf-schema#label> "host"@en .
 # 
-# https://w3id.org/def/saref4agri#deployedSystem
-<https://w3id.org/def/saref4agri#deployedSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#deployedSystem> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#hasDeployment> .
-<https://w3id.org/def/saref4agri#deployedSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a deployment and the system deployed."@en .
-<https://w3id.org/def/saref4agri#deployedSystem> <http://www.w3.org/2000/01/rdf-schema#label> "deployed system"@en .
+# http://www.w3.org/ns/sosa/isHostedBy
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a system and its hosting platform."@en .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by"@en .
 # 
-# https://w3id.org/def/saref4agri#fromNode
-<https://w3id.org/def/saref4agri#fromNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#fromNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Origin node in directed communications."@en .
-<https://w3id.org/def/saref4agri#fromNode> <http://www.w3.org/2000/01/rdf-schema#label> "from node"@en .
+# http://www.w3.org/ns/ssn/deployedOnPlatform
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/inDeployment> .
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a deployment and the platform(s) involved in the deployment."@en .
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/deployedOnPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "deployed on platform"@en .
 # 
-# https://w3id.org/def/saref4agri#hasConstituent
-<https://w3id.org/def/saref4agri#hasConstituent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#hasConstituent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#isConstituentOf> .
-<https://w3id.org/def/saref4agri#hasConstituent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a network and its constituents systems."@en .
-<https://w3id.org/def/saref4agri#hasConstituent> <http://www.w3.org/2000/01/rdf-schema#label> "has constituent"@en .
+# http://www.w3.org/ns/ssn/deployedSystem
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/hasDeployment> .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a deployment and the system deployed."@en .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/deployedSystem> <http://www.w3.org/2000/01/rdf-schema#label> "deployed system"@en .
 # 
-# https://w3id.org/def/saref4agri#hasDeployment
-<https://w3id.org/def/saref4agri#hasDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#hasDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "has deployment"@en .
+# http://www.w3.org/ns/ssn/hasDeployment
+<http://www.w3.org/ns/ssn/hasDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/hasDeployment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/hasDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "has deployment"@en .
+# 
+# http://www.w3.org/ns/ssn/hasSubSystem
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has subsystem"@en .
+# 
+# http://www.w3.org/ns/ssn/inDeployment
+<http://www.w3.org/ns/ssn/inDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/inDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a platform and the deployment(s) that takes place in the platform."@en .
+<http://www.w3.org/ns/ssn/inDeployment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/inDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "in deployment"@en .
+# 
+# http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#label> "member"@en .
+# 
+# https://w3id.org/def/saref4agri#contains
+<https://w3id.org/def/saref4agri#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.opengis.net/ont/geosparql#sfContains> .
+<https://w3id.org/def/saref4agri#contains> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#isContainedIn> .
+# 
+# https://w3id.org/def/saref4agri#generates
+<https://w3id.org/def/saref4agri#generates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#generates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/saref#hasProperty> .
+<https://w3id.org/def/saref4agri#generates> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to represent the yield generated by a Crop." .
+<https://w3id.org/def/saref4agri#generates> <http://www.w3.org/2000/01/rdf-schema#label> "generates"@en .
 # 
 # https://w3id.org/def/saref4agri#hasDeploymentPeriod
 <https://w3id.org/def/saref4agri#hasDeploymentPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4agri#hasDeploymentPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to indicate the temporal duration or period of a deployment."@en .
 <https://w3id.org/def/saref4agri#hasDeploymentPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "has deployment period"@en .
+<https://w3id.org/def/saref4agri#hasDeploymentPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "has deployment period" .
 # 
-# https://w3id.org/def/saref4agri#hasFeatureOfInterest
-<https://w3id.org/def/saref4agri#hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#isFeatureOfInterestOf> .
-<https://w3id.org/def/saref4agri#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a measurement and the feature of interest being measured."@en .
-<https://w3id.org/def/saref4agri#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en .
+# https://w3id.org/def/saref4agri#hasID
+<https://w3id.org/def/saref4agri#hasID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#hasID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/saref4agri#hasID> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4agri#ID> .
+<https://w3id.org/def/saref4agri#hasID> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the unique identifier of an animal." .
+<https://w3id.org/def/saref4agri#hasID> <http://www.w3.org/2000/01/rdf-schema#label> "has id"@en .
 # 
-# https://w3id.org/def/saref4agri#hasProperty
-<https://w3id.org/def/saref4agri#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#isPropertyOf> .
-<https://w3id.org/def/saref4agri#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a feature of interest and its properties."@en .
-<https://w3id.org/def/saref4agri#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
+# https://w3id.org/def/saref4agri#hasMember
+<https://w3id.org/def/saref4agri#hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#hasMember> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#isMemberOf> .
+<https://w3id.org/def/saref4agri#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to represent  the members of an AnimalGroup." .
+<https://w3id.org/def/saref4agri#hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "has member" .
 # 
-# https://w3id.org/def/saref4agri#hasRole
-<https://w3id.org/def/saref4agri#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to indicate the role of a given node in a communication channel or network."@en .
-<https://w3id.org/def/saref4agri#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
+# https://w3id.org/def/saref4agri#hasReceived
+<https://w3id.org/def/saref4agri#hasReceived> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#hasReceived> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#receives> .
+<https://w3id.org/def/saref4agri#hasReceived> <http://www.w3.org/2000/01/rdf-schema#label> "has received" .
 # 
-# https://w3id.org/def/saref4agri#hosts
-<https://w3id.org/def/saref4agri#hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#hosts> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#isHostedBy> .
-<https://w3id.org/def/saref4agri#hosts> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a platform and the systems it hosts."@en .
-<https://w3id.org/def/saref4agri#hosts> <http://www.w3.org/2000/01/rdf-schema#label> "host"@en .
-# 
-# https://w3id.org/def/saref4agri#inDeployment
-<https://w3id.org/def/saref4agri#inDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#inDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a platform and the deployment(s) that takes place in the platform."@en .
-<https://w3id.org/def/saref4agri#inDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "in deployment"@en .
-# 
-# https://w3id.org/def/saref4agri#isConstituentOf
-<https://w3id.org/def/saref4agri#isConstituentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#isConstituentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a node and the network(s) it is part of."@en .
-<https://w3id.org/def/saref4agri#isConstituentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is constituent of"@en .
+# https://w3id.org/def/saref4agri#isContainedIn
+<https://w3id.org/def/saref4agri#isContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in"@en .
 # 
 # https://w3id.org/def/saref4agri#isDeployedAtSpace
 <https://w3id.org/def/saref4agri#isDeployedAtSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/saref4agri#isDeployedAtSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to indicate the geographical componet of a deployment."@en .
 <https://w3id.org/def/saref4agri#isDeployedAtSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "is deployed at space"@en .
+<https://w3id.org/def/saref4agri#isDeployedAtSpace> <http://www.w3.org/2000/01/rdf-schema#label> "is deployed at space" .
 # 
-# https://w3id.org/def/saref4agri#isFeatureOfInterestOf
-<https://w3id.org/def/saref4agri#isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation betwwen a feature of interest and the measurments that are about it."@en .
-<https://w3id.org/def/saref4agri#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of interest of"@en .
+# https://w3id.org/def/saref4agri#isLocatedIn
+<https://w3id.org/def/saref4agri#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#isLocatedIn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/saref4agri#isLocationOf> .
+<https://w3id.org/def/saref4agri#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the physical location of a saref4agri entity (e.g., an animal)" .
+<https://w3id.org/def/saref4agri#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is located in" .
 # 
-# https://w3id.org/def/saref4agri#isHostedBy
-<https://w3id.org/def/saref4agri#isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a system and its hosting platform."@en .
-<https://w3id.org/def/saref4agri#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by"@en .
+# https://w3id.org/def/saref4agri#isLocationOf
+<https://w3id.org/def/saref4agri#isLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is location of" .
 # 
-# https://w3id.org/def/saref4agri#isPropertyOf
-<https://w3id.org/def/saref4agri#isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a property and a feature of interest in which such property appears."@en .
-<https://w3id.org/def/saref4agri#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property of"@en .
+# https://w3id.org/def/saref4agri#isMemberOf
+<https://w3id.org/def/saref4agri#isMemberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express that an animal can be part of groups." .
+<https://w3id.org/def/saref4agri#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is member of" .
 # 
-# https://w3id.org/def/saref4agri#measurementMadeBy
-<https://w3id.org/def/saref4agri#measurementMadeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#measurementMadeBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/saref#makesMeasurement> .
-<https://w3id.org/def/saref4agri#measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a measurement and the device that made it."@en .
-<https://w3id.org/def/saref4agri#measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#label> "measurement made by"@en .
+# https://w3id.org/def/saref4agri#managesFarm
+<https://w3id.org/def/saref4agri#managesFarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#managesFarm> <http://www.w3.org/2000/01/rdf-schema#label> "manages farm"@en .
 # 
-# https://w3id.org/def/saref4agri#playedByNode
-<https://w3id.org/def/saref4agri#playedByNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#playedByNode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/saref4agri#CommunicationRole> .
-<https://w3id.org/def/saref4agri#playedByNode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4agri#Node> .
-<https://w3id.org/def/saref4agri#playedByNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation use to indicate the node playing a given role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en .
-<https://w3id.org/def/saref4agri#playedByNode> <http://www.w3.org/2000/01/rdf-schema#label> "played by node"@en .
-# 
-# https://w3id.org/def/saref4agri#roleInCommunication
-<https://w3id.org/def/saref4agri#roleInCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#roleInCommunication> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/saref4agri#CommunicationRole> .
-<https://w3id.org/def/saref4agri#roleInCommunication> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4agri#Communication> .
-<https://w3id.org/def/saref4agri#roleInCommunication> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation use to indicate the communication in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en .
-<https://w3id.org/def/saref4agri#roleInCommunication> <http://www.w3.org/2000/01/rdf-schema#label> "role in communication"@en .
-# 
-# https://w3id.org/def/saref4agri#roleInNetwork
-<https://w3id.org/def/saref4agri#roleInNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#roleInNetwork> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/saref4agri#CommunicationRole> .
-<https://w3id.org/def/saref4agri#roleInNetwork> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/saref4agri#Network> .
-<https://w3id.org/def/saref4agri#roleInNetwork> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation use to indicate the network in which a node plays a role. This relation has as subject an individual of the n-ary class s4agri:CommunicationRole"@en .
-<https://w3id.org/def/saref4agri#roleInNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "role in network"@en .
-# 
-# https://w3id.org/def/saref4agri#toNode
-<https://w3id.org/def/saref4agri#toNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/saref4agri#toNode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<https://w3id.org/def/saref4agri#toNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Target node in directed communications."@en .
-<https://w3id.org/def/saref4agri#toNode> <http://www.w3.org/2000/01/rdf-schema#label> "to node"@en .
+# https://w3id.org/def/saref4agri#receives
+<https://w3id.org/def/saref4agri#receives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/saref4agri#receives> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/saref#hasProperty> .
+<https://w3id.org/def/saref4agri#receives> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to represent the intake/consumption of certain substances in a Crop." .
+<https://w3id.org/def/saref4agri#receives> <http://www.w3.org/2000/01/rdf-schema#label> "receives" .
 # 
 # https://w3id.org/saref#accomplishes
 <https://w3id.org/saref#accomplishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -257,11 +295,6 @@
 <https://w3id.org/saref#actsUpon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#actsUpon> <http://www.w3.org/2000/01/rdf-schema#label> "acts upon" .
 # 
-# https://w3id.org/saref#consistsOf
-<https://w3id.org/saref#consistsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/saref#consistsOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
-<https://w3id.org/saref#consistsOf> <http://www.w3.org/2000/01/rdf-schema#label> "consists of"@en .
-# 
 # https://w3id.org/saref#controlsProperty
 <https://w3id.org/saref#controlsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/saref#controlsProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
@@ -274,11 +307,25 @@
 <https://w3id.org/saref#hasCommand> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#hasCommand> <http://www.w3.org/2000/01/rdf-schema#label> "has command" .
 # 
+# https://w3id.org/saref#hasFeatureOfInterest
+<https://w3id.org/saref#hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/saref#isFeatureOfInterestOf> .
+<https://w3id.org/saref#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a measurement and the feature of interest being measured."@en .
+<https://w3id.org/saref#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en .
+# 
 # https://w3id.org/saref#hasFunction
 <https://w3id.org/saref#hasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/saref#hasFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship identifying the type of function of a device" .
 <https://w3id.org/saref#hasFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#hasFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has function" .
+# 
+# https://w3id.org/saref#hasProperty
+<https://w3id.org/saref#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/saref#isPropertyOf> .
+<https://w3id.org/saref#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a feature of interest and its properties."@en .
+<https://w3id.org/saref#hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
 # 
 # https://w3id.org/saref#hasState
 <https://w3id.org/saref#hasState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -302,6 +349,12 @@
 <https://w3id.org/saref#isControlledByDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#isControlledByDevice> <http://www.w3.org/2000/01/rdf-schema#label> "is controlled by device"@en .
 # 
+# https://w3id.org/saref#isFeatureOfInterestOf
+<https://w3id.org/saref#isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation betwwen a feature of interest and the measurments that are about it."@en .
+<https://w3id.org/saref#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of interest of"@en .
+# 
 # https://w3id.org/saref#isMeasuredByDevice
 <https://w3id.org/saref#isMeasuredByDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/saref#isMeasuredByDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
@@ -312,10 +365,23 @@
 <https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#label> "is measured in"@en .
 # 
+# https://w3id.org/saref#isPropertyOf
+<https://w3id.org/saref#isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a property and a feature of interest in which such property appears."@en .
+<https://w3id.org/saref#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property of"@en .
+# 
 # https://w3id.org/saref#makesMeasurement
 <https://w3id.org/saref#makesMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/saref#measurementMadeBy> .
 <https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "makes measurement"@en .
+# 
+# https://w3id.org/saref#measurementMadeBy
+<https://w3id.org/saref#measurementMadeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a measurement and the device that made it."@en .
+<https://w3id.org/saref#measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
+<https://w3id.org/saref#measurementMadeBy> <http://www.w3.org/2000/01/rdf-schema#label> "measurement made by"@en .
 # 
 # https://w3id.org/saref#measuresProperty
 <https://w3id.org/saref#measuresProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -341,11 +407,37 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/def/saref4agri#hasProtocol
-<https://w3id.org/def/saref4agri#hasProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/saref4agri#hasProtocol> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/def/saref4agri#hasProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "The protocol used in a given communition between nodes."@en .
-<https://w3id.org/def/saref4agri#hasProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "has protocol"@en .
+# https://w3id.org/def/saref4agri#hasBirthDate
+<https://w3id.org/def/saref4agri#hasBirthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4agri#hasBirthDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#hasBirthDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the birth date of an animal." .
+<https://w3id.org/def/saref4agri#hasBirthDate> <http://www.w3.org/2000/01/rdf-schema#label> "has birth date" .
+# 
+# https://w3id.org/def/saref4agri#hasDeathDate
+<https://w3id.org/def/saref4agri#hasDeathDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4agri#hasDeathDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#hasDeathDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the death date of an animal." .
+<https://w3id.org/def/saref4agri#hasDeathDate> <http://www.w3.org/2000/01/rdf-schema#label> "has death date" .
+# 
+# https://w3id.org/def/saref4agri#hasHarvestDate
+<https://w3id.org/def/saref4agri#hasHarvestDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4agri#hasHarvestDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/def/saref4agri#hasHarvestDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#hasHarvestDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the day the crop is harvested." .
+<https://w3id.org/def/saref4agri#hasHarvestDate> <http://www.w3.org/2000/01/rdf-schema#label> "has harvest date" .
+# 
+# https://w3id.org/def/saref4agri#hasName
+<https://w3id.org/def/saref4agri#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4agri#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4agri#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "A relation to express the name of an entity (e.g.,animal)." .
+<https://w3id.org/def/saref4agri#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name" .
+# 
+# https://w3id.org/def/saref4agri#hasPlantDate
+<https://w3id.org/def/saref4agri#hasPlantDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/saref4agri#hasPlantDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/def/saref4agri#hasPlantDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#hasPlantDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to express the day the crop is planted." .
+<https://w3id.org/def/saref4agri#hasPlantDate> <http://www.w3.org/2000/01/rdf-schema#label> "has plant date" .
 # 
 # https://w3id.org/saref#hasDescription
 <https://w3id.org/saref#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -392,6 +484,10 @@
 # #################################################################
 # 
 # 
+# http://purl.obolibrary.org/obo/TAXRANK_0000000
+<http://purl.obolibrary.org/obo/TAXRANK_0000000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/TAXRANK_0000000> <http://www.w3.org/2000/01/rdf-schema#label> "Taxon rank"@en .
+# 
 # http://www.opengis.net/ont/geosparql#Feature
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
@@ -400,54 +496,39 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
 _:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.opengis.net/ont/geosparql#Geometry> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://purl.org/dc/elements/1.1/description> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature"@en .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2004/02/skos/core#definition> "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."@en .
-<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://purl.org/dc/elements/1.1/description> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2004/02/skos/core#definition> "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."@en .
-<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geometry"@en .
 # 
 # http://www.opengis.net/ont/geosparql#SpatialObject
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#sfContains> .
-_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
-_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://purl.org/dc/elements/1.1/description> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#sfContains> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#sfWithin> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/gml> .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> .
 <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialObject"@en .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2004/02/skos/core#definition> "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry."@en .
-<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2004/02/skos/core#prefLabel> "SpatialObject"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#Point
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -456,7 +537,6 @@ _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/0
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84." .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
-<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "point" .
 # 
 # http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -468,8 +548,8 @@ _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/0
 # http://www.w3.org/2006/time#Interval
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity with an extent or duration"@en .
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
-<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "A temporal entity with an extent or duration"@en .
 <http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "Time interval"@en .
 # 
 # http://www.w3.org/2006/time#TemporalEntity
@@ -478,82 +558,350 @@ _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/0
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time#> .
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal entity"@en .
 # 
-# https://w3id.org/def/saref4agri#Communication
-<https://w3id.org/def/saref4agri#Communication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#Communication> <http://www.w3.org/2000/01/rdf-schema#comment> "An n-ary pattern used to link to nodes involved in a communication channel. The protocol used in such communication could be included."@en .
-<https://w3id.org/def/saref4agri#Communication> <http://www.w3.org/2000/01/rdf-schema#label> "Communication"@es .
+# http://www.w3.org/ns/sosa/Platform
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)"@en .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en .
 # 
-# https://w3id.org/def/saref4agri#CommunicationRole
-<https://w3id.org/def/saref4agri#CommunicationRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#CommunicationRole> <http://www.w3.org/2000/01/rdf-schema#comment> "An n-ary pattern used to link a given node to its role and a) the networked in which the role is played or b) the two-nodes communication channel."@en .
-<https://w3id.org/def/saref4agri#CommunicationRole> <http://www.w3.org/2000/01/rdf-schema#label> "Communication role"@es .
+# http://www.w3.org/ns/ssn/Deployment
+<http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#label> "Deployment"@en .
+# 
+# http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)"@en .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://xmlns.com/foaf/0.1/member> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# https://schema.org/Organization
+<https://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<https://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# https://w3id.org/def/saref4agri#AirTemperature
+<https://w3id.org/def/saref4agri#AirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Temperature> .
+# 
+# https://w3id.org/def/saref4agri#AmbientHumidity
+<https://w3id.org/def/saref4agri#AmbientHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#AmbientHumidity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Humidity> .
+# 
+# https://w3id.org/def/saref4agri#Animal
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/TAXRANK_1000000> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.obolibrary.org/obo/TAXRANK_0000000> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#isLocatedIn> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#isMemberOf> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#AnimalGroup> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasID> .
+_:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/saref4agri#ID> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasBirthDate> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasDeathDate> .
+_:genid12 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasName> .
+_:genid13 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual and identifiable living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli."@en .
+<https://w3id.org/def/saref4agri#Animal> <http://www.w3.org/2000/01/rdf-schema#label> "Animal" .
+# 
+# https://w3id.org/def/saref4agri#AnimalGroup
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#generates> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Yield> .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasMember> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Animal> .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#isLocatedIn> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#receives> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Intake> .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasName> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of one or multiple animals."@en .
+<https://w3id.org/def/saref4agri#AnimalGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Animal Group" .
+# 
+# https://w3id.org/def/saref4agri#Building
+<https://w3id.org/def/saref4agri#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://w3id.org/def/saref4agri#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#contains> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#BuildingSpace> .
+<https://w3id.org/def/saref4agri#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasName> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/saref4agri#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en .
+<https://w3id.org/def/saref4agri#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
+# 
+# https://w3id.org/def/saref4agri#BuildingSpace
+<https://w3id.org/def/saref4agri#BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://w3id.org/def/saref4agri#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en .
+<https://w3id.org/def/saref4agri#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Building space"@en .
+# 
+# https://w3id.org/def/saref4agri#Crop
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/TAXRANK_1000000> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.obolibrary.org/obo/TAXRANK_0000000> .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#generates> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Yield> .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#receives> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Intake> .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasHarvestDate> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasPlantDate> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of cultivated plants that is grown on a large scale commercially, especially a cereal, fruit, or vegetable."@en .
+<https://w3id.org/def/saref4agri#Crop> <http://www.w3.org/2000/01/rdf-schema#label> "Crop" .
 # 
 # https://w3id.org/def/saref4agri#Deployment
 <https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#deployedOnPlatform> .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Platform> .
-<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#deployedSystem> .
-_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#System> .
-<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#comment> "The scenario, including temporal and spatial information, in which the devices are installed."@en .
+<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Deployment> .
+<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/deployedOnPlatform> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/sosa/Platform> .
+<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/deployedSystem> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/ssn/System> .
+<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasDeploymentPeriod> .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
+<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#isDeployedAtSpace> .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Deployment"@en .
+<https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#comment> "The scenario, including temporal and spatial information, in which the systems and devices are installed."@en .
 <https://w3id.org/def/saref4agri#Deployment> <http://www.w3.org/2000/01/rdf-schema#label> "Deployment"@en .
 # 
-# https://w3id.org/def/saref4agri#FeatureOfInterest
-<https://w3id.org/def/saref4agri#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasProperty> .
-_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
-<https://w3id.org/def/saref4agri#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#isFeatureOfInterestOf> .
-_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
-<https://w3id.org/def/saref4agri#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "WARNING!\n This class might be moved to the SAREF ontology"@en .
-<https://w3id.org/def/saref4agri#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature of interest"@en .
+# https://w3id.org/def/saref4agri#EatingActivitySensor
+<https://w3id.org/def/saref4agri#EatingActivitySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#EatingActivitySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#EatingActivitySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Eating activity sensor"@en .
 # 
-# https://w3id.org/def/saref4agri#Network
-<https://w3id.org/def/saref4agri#Network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#Network> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of nodes connected."@en .
-<https://w3id.org/def/saref4agri#Network> <http://www.w3.org/2000/01/rdf-schema#label> "Network"@es .
+# https://w3id.org/def/saref4agri#Farm
+<https://w3id.org/def/saref4agri#Farm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Farm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://w3id.org/def/saref4agri#Farm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#contains> .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Building> .
+<https://w3id.org/def/saref4agri#Farm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#contains> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Parcel> .
+<https://w3id.org/def/saref4agri#Farm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasName> .
+_:genid32 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/saref4agri#Farm> <http://www.w3.org/2000/01/rdf-schema#comment> "A plot of land used for the scope of farming which can contain buildings and parcels."@en .
+<https://w3id.org/def/saref4agri#Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farm" .
 # 
-# https://w3id.org/def/saref4agri#Node
-<https://w3id.org/def/saref4agri#Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
-<https://w3id.org/def/saref4agri#Node> <http://www.w3.org/2000/01/rdf-schema#comment> "Every system connected to at leas another one in a network."@en .
-<https://w3id.org/def/saref4agri#Node> <http://www.w3.org/2000/01/rdf-schema#label> "Node"@es .
+# https://w3id.org/def/saref4agri#FarmHolding
+<https://w3id.org/def/saref4agri#FarmHolding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#FarmHolding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Organization> .
+<https://w3id.org/def/saref4agri#FarmHolding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#managesFarm> .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Farm> .
+<https://w3id.org/def/saref4agri#FarmHolding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasName> .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4agri#FarmHolding> <http://www.w3.org/2000/01/rdf-schema#comment> "A class to decsribe a saref4agri farm holding as subcass of an org:Organization" .
+<https://w3id.org/def/saref4agri#FarmHolding> <http://www.w3.org/2000/01/rdf-schema#label> "Farm holding"@en .
+# 
+# https://w3id.org/def/saref4agri#Farmer
+<https://w3id.org/def/saref4agri#Farmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Farmer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/def/saref4agri#Farmer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#managesFarm> .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Farm> .
+<https://w3id.org/def/saref4agri#Farmer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasName> .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4agri#Farmer> <http://www.w3.org/2000/01/rdf-schema#comment> "A class to decsribe a saref4agri farmer as subcass of a foaf:Person" .
+<https://w3id.org/def/saref4agri#Farmer> <http://www.w3.org/2000/01/rdf-schema#label> "Farmer"@en .
+# 
+# https://w3id.org/def/saref4agri#ID
+<https://w3id.org/def/saref4agri#ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#ID> <http://www.w3.org/2000/01/rdf-schema#label> "ID" .
+# 
+# https://w3id.org/def/saref4agri#Intake
+<https://w3id.org/def/saref4agri#Intake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Intake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4agri#Intake> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The amount of food or other substance taken into the body of an animal or into the soil."@en .
+<https://w3id.org/def/saref4agri#Intake> <http://www.w3.org/2000/01/rdf-schema#label> "Intake"@en .
+# 
+# https://w3id.org/def/saref4agri#IrrigationWater
+<https://w3id.org/def/saref4agri#IrrigationWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#IrrigationWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+# 
+# https://w3id.org/def/saref4agri#MilkingSensor
+<https://w3id.org/def/saref4agri#MilkingSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#MilkingSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#MilkingSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Milking sensor"@en .
+# 
+# https://w3id.org/def/saref4agri#MovementActivitySensor
+<https://w3id.org/def/saref4agri#MovementActivitySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#MovementActivitySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#MovementActivitySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Movement activity sensor"@en .
+# 
+# https://w3id.org/def/saref4agri#Parcel
+<https://w3id.org/def/saref4agri#Parcel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Parcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<https://w3id.org/def/saref4agri#Parcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#contains> .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Crop> .
+<https://w3id.org/def/saref4agri#Parcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasName> .
+_:genid38 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid38 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/saref4agri#Parcel> <http://www.w3.org/2000/01/rdf-schema#comment> "An area of land, which might be used for grazing animals or planting crops. The parcel is defined as an undividable logical area of land which contains homogeneous items."@en .
+<https://w3id.org/def/saref4agri#Parcel> <http://www.w3.org/2000/01/rdf-schema#label> "Parcel" .
+# 
+# https://w3id.org/def/saref4agri#PlantGrowthStage
+<https://w3id.org/def/saref4agri#PlantGrowthStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#PlantGrowthStage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
 # 
 # https://w3id.org/def/saref4agri#Platform
 <https://w3id.org/def/saref4agri#Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#Platform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hosts> .
-_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#System> .
-<https://w3id.org/def/saref4agri#Platform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#inDeployment> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Deployment> .
-<https://w3id.org/def/saref4agri#Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)"@en .
-<https://w3id.org/def/saref4agri#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en .
+<https://w3id.org/def/saref4agri#Platform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Platform> .
+<https://w3id.org/def/saref4agri#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform" .
 # 
-# https://w3id.org/def/saref4agri#System
-<https://w3id.org/def/saref4agri#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4agri#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasDeployment> .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Deployment> .
-<https://w3id.org/def/saref4agri#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#isHostedBy> .
-_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4agri#Platform> .
-<https://w3id.org/def/saref4agri#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#consistsOf> .
-_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4agri#System> .
-<https://w3id.org/def/saref4agri#System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)"@en .
-<https://w3id.org/def/saref4agri#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+# https://w3id.org/def/saref4agri#Pluviometer
+<https://w3id.org/def/saref4agri#Pluviometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Pluviometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#Pluviometer> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor that measures the rain fall."@en .
+<https://w3id.org/def/saref4agri#Pluviometer> <http://www.w3.org/2000/01/rdf-schema#label> "Pluviometer"@en .
+# 
+# https://w3id.org/def/saref4agri#Precipitation
+<https://w3id.org/def/saref4agri#Precipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Precipitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+# 
+# https://w3id.org/def/saref4agri#Soil
+<https://w3id.org/def/saref4agri#Soil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Soil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/def/saref4agri#Soil> <http://www.w3.org/2000/01/rdf-schema#comment> "Upper layer of the earth in which plants grow." .
+<https://w3id.org/def/saref4agri#Soil> <http://www.w3.org/2000/01/rdf-schema#label> "Soil" .
+# 
+# https://w3id.org/def/saref4agri#SoilMoisture
+<https://w3id.org/def/saref4agri#SoilMoisture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#SoilMoisture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+# 
+# https://w3id.org/def/saref4agri#SoilTemperature
+<https://w3id.org/def/saref4agri#SoilTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#SoilTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Temperature> .
+# 
+# https://w3id.org/def/saref4agri#SoilTensiometer
+<https://w3id.org/def/saref4agri#SoilTensiometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#SoilTensiometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#SoilTensiometer> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor that measures the soil moisture."@en .
+<https://w3id.org/def/saref4agri#SoilTensiometer> <http://www.w3.org/2000/01/rdf-schema#label> "Soil tensiometer"@en .
+# 
+# https://w3id.org/def/saref4agri#Thermometer
+<https://w3id.org/def/saref4agri#Thermometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Thermometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#Thermometer> <http://www.w3.org/2000/01/rdf-schema#label> "Thermometer"@en .
+# 
+# https://w3id.org/def/saref4agri#WateringGun
+<https://w3id.org/def/saref4agri#WateringGun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#WateringGun> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Actuator> .
+<https://w3id.org/def/saref4agri#WateringGun> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuator to irrigate an space."@en .
+<https://w3id.org/def/saref4agri#WateringGun> <http://www.w3.org/2000/01/rdf-schema#label> "Watering gun"@en .
+# 
+# https://w3id.org/def/saref4agri#WateringSystem
+<https://w3id.org/def/saref4agri#WateringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#WateringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<https://w3id.org/def/saref4agri#WateringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Watering system"@en .
+# 
+# https://w3id.org/def/saref4agri#WateringValve
+<https://w3id.org/def/saref4agri#WateringValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#WateringValve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Actuator> .
+<https://w3id.org/def/saref4agri#WateringValve> <http://www.w3.org/2000/01/rdf-schema#label> "Watering valve"@en .
+# 
+# https://w3id.org/def/saref4agri#WeatherStation
+<https://w3id.org/def/saref4agri#WeatherStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<https://w3id.org/def/saref4agri#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor o system that measure weather conditions."@en .
+<https://w3id.org/def/saref4agri#WeatherStation> <http://www.w3.org/2000/01/rdf-schema#label> "Weather station"@en .
+# 
+# https://w3id.org/def/saref4agri#WeightSensor
+<https://w3id.org/def/saref4agri#WeightSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#WeightSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Sensor> .
+<https://w3id.org/def/saref4agri#WeightSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Weight sensor"@en .
+# 
+# https://w3id.org/def/saref4agri#Yield
+<https://w3id.org/def/saref4agri#Yield> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4agri#Yield> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/saref4agri#Yield> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "The produced amount of food for animals or of agricultural products."@en .
+<https://w3id.org/def/saref4agri#Yield> <http://www.w3.org/2000/01/rdf-schema#label> "Yield"@en .
 # 
 # https://w3id.org/saref#Actuator
 <https://w3id.org/saref#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -563,34 +911,48 @@ _:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/sa
 # 
 # https://w3id.org/saref#Command
 <https://w3id.org/saref#Command> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#actsUpon> .
-_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#State> .
-<https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isCommandOf> .
-_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Function> .
-<https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
-_:genid15 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#actsUpon> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#State> .
+<https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isCommandOf> .
+_:genid40 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Function> .
+<https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasDescription> .
+_:genid41 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#comment> "A directive that a device must support to perform a certain function. A command may act upon a state, but does not necessarily act upon a state. For example, the ON command acts upon the ON/OFF state, but the GET command does not act upon any state, it simply gives a directive to retrieve a certain value. We propose here a list of commands that are relevant for the purpose of SAREF, but this list can be extended." .
 <https://w3id.org/saref#Command> <http://www.w3.org/2000/01/rdf-schema#label> "Command" .
 # 
 # https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
 # 
+# https://w3id.org/saref#FeatureOfInterest
+<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasProperty> .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isFeatureOfInterestOf> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> <https://w3id.org/saref#> .
+<https://w3id.org/saref#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature of interest"@en .
+# 
 # https://w3id.org/saref#Function
 <https://w3id.org/saref#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasCommand> .
-_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid16 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Command> .
+<https://w3id.org/saref#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasCommand> .
+_:genid44 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Command> .
 <https://w3id.org/saref#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "The functionality necessary to accomplish the task for which a Device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. " .
 <https://w3id.org/saref#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function" .
 # 
@@ -598,45 +960,46 @@ _:genid16 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Comman
 <https://w3id.org/saref#Humidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/saref#Humidity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Humidity> <http://www.w3.org/2000/01/rdf-schema#comment> "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit" .
+<https://w3id.org/saref#Humidity> <http://www.w3.org/2000/01/rdf-schema#label> "Humidiy"@en .
 <https://w3id.org/saref#Humidity> <http://www.w3.org/2000/01/rdf-schema#label> "Humidity" .
 # 
 # https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#hasFeatureOfInterest> .
-_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4agri#FeatureOfInterest> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
-_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
-_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
-_:genid20 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid20 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#UnitOfMeasure> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
-_:genid21 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid21 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Property> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasTimestamp> .
-_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
-_:genid23 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
-_:genid24 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid24 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasFeatureOfInterest> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredIn> .
+_:genid48 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid48 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#UnitOfMeasure> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToProperty> .
+_:genid49 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid49 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Property> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasTimestamp> .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid51 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#hasValue> .
+_:genid52 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en .
@@ -645,22 +1008,22 @@ _:genid24 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4agri#isPropertyOf> .
-_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/saref4agri#FeatureOfInterest> .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isControlledByDevice> .
-_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredByDevice> .
-_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
-<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToMeasurement> .
-_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isControlledByDevice> .
+_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isMeasuredByDevice> .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Device> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isPropertyOf> .
+_:genid55 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#FeatureOfInterest> .
+<https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#relatesToMeasurement> .
+_:genid56 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Measurement> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/saref#UnitOfMeasure> .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An aspect of an entity that can be observable by a sensor."@en .
 <https://w3id.org/saref#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended." .
@@ -681,11 +1044,11 @@ _:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 # 
 # https://w3id.org/saref#Task
 <https://w3id.org/saref#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/saref#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isAccomplishedBy> .
-_:genid29 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid29 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Device> .
+<https://w3id.org/saref#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#isAccomplishedBy> .
+_:genid57 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid57 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Device> .
 <https://w3id.org/saref#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "The goal for which a device is designed (from a user perspective). For example, a washing machine is designed for the task of washing. We propose here a list of tasks that are relevant for the purpose of SAREF, but this list can be extended." .
 <https://w3id.org/saref#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task" .
 # 
@@ -693,15 +1056,12 @@ _:genid29 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/saref#Device
 <https://w3id.org/saref#Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/saref#Temperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
 <https://w3id.org/saref#Temperature> <http://www.w3.org/2000/01/rdf-schema#comment> "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)" .
+<https://w3id.org/saref#Temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature"@en .
 <https://w3id.org/saref#Temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature" .
 # 
 # https://w3id.org/saref#Time
 <https://w3id.org/saref#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/saref#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
-<https://w3id.org/saref#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/saref#consistsOf> .
-_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
 <https://w3id.org/saref#Time> <http://www.w3.org/2000/01/rdf-schema#comment> "A saref:Property that allows to specify the time concept in terms of instants or intervals according to the imported W3C Time ontology." .
 <https://w3id.org/saref#Time> <http://www.w3.org/2000/01/rdf-schema#label> "Time" .
 # 
@@ -712,7 +1072,68 @@ _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure> .
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref#> .
 <https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of measure"@en .
-<https://w3id.org/saref#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of measure" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/DBM
+<http://dbpedia.org/resource/DBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/DBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#UnitOfMeasure> .
+<http://dbpedia.org/resource/DBM> <http://www.w3.org/2000/01/rdf-schema#label> "decibel-milliwatts"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius
+<http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#UnitOfMeasure> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> <http://www.w3.org/2000/01/rdf-schema#label> "degree Celsius"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/millibar
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millibar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millibar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#UnitOfMeasure> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millibar> <http://www.w3.org/2000/01/rdf-schema#label> "millibar"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#UnitOfMeasure> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre> <http://www.w3.org/2000/01/rdf-schema#label> "millimetre"@en .
+# 
+# http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#UnitOfMeasure> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/millivolt> <http://www.w3.org/2000/01/rdf-schema#label> "millivolt"@en .
+# 
+# https://w3id.org/def/saref4agri#AirTemperature
+<https://w3id.org/def/saref4agri#AirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4agri#AirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Temperature> .
+# 
+# https://w3id.org/def/saref4agri#AmbientHumidity
+<https://w3id.org/def/saref4agri#AmbientHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4agri#AmbientHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Humidity> .
+# 
+# https://w3id.org/def/saref4agri#IrrigationWater
+<https://w3id.org/def/saref4agri#IrrigationWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4agri#IrrigationWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Property> .
+# 
+# https://w3id.org/def/saref4agri#PlantGrowthStage
+<https://w3id.org/def/saref4agri#PlantGrowthStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4agri#PlantGrowthStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Property> .
+# 
+# https://w3id.org/def/saref4agri#Precipitation
+<https://w3id.org/def/saref4agri#Precipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4agri#Precipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Property> .
+# 
+# https://w3id.org/def/saref4agri#SoilMoisture
+<https://w3id.org/def/saref4agri#SoilMoisture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4agri#SoilMoisture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Property> .
+# 
+# https://w3id.org/def/saref4agri#SoilTemperature
+<https://w3id.org/def/saref4agri#SoilTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/saref4agri#SoilTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Temperature> .
 # 
 # 
 # 
@@ -726,4 +1147,26 @@ _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n " .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
 # 
-# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+<https://w3id.org/def/saref4agri#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree or intensity of heat present in the air." .
+<https://w3id.org/def/saref4agri#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Air temperature"@en .
+# 
+<https://w3id.org/def/saref4agri#AmbientHumidity> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of water vapour in the air." .
+<https://w3id.org/def/saref4agri#AmbientHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient huidity"@en .
+<https://w3id.org/def/saref4agri#AmbientHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient humidity"@en .
+# 
+<https://w3id.org/def/saref4agri#IrrigationWater> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of water falling in the soil by irrigation methods." .
+<https://w3id.org/def/saref4agri#IrrigationWater> <http://www.w3.org/2000/01/rdf-schema#label> "Irrigation water"@en .
+# 
+<https://w3id.org/def/saref4agri#PlantGrowthStage> <http://www.w3.org/2000/01/rdf-schema#comment> "The level or stage of growth of the plant." .
+<https://w3id.org/def/saref4agri#PlantGrowthStage> <http://www.w3.org/2000/01/rdf-schema#label> "Plant growth stage"@en .
+# 
+<https://w3id.org/def/saref4agri#Precipitation> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of water falling in the soil by natural process (e.g. rain)." .
+<https://w3id.org/def/saref4agri#Precipitation> <http://www.w3.org/2000/01/rdf-schema#label> "Precipitation"@en .
+# 
+<https://w3id.org/def/saref4agri#SoilMoisture> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of water or humidity contained in the soil." .
+<https://w3id.org/def/saref4agri#SoilMoisture> <http://www.w3.org/2000/01/rdf-schema#label> "Soil moisture"@en .
+# 
+<https://w3id.org/def/saref4agri#SoilTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree or intensity of heat present in the soil." .
+<https://w3id.org/def/saref4agri#SoilTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Soil temperature"@en .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

@@ -12,11 +12,11 @@
                                    <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> ;
                                    <http://purl.org/dc/elements/1.1/title> "SAREF extension for Smart City"@en ;
                                    <http://purl.org/dc/terms/creator> <http://w3id.org/people/mpoveda> ,
-                                                                      <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                   <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                                      <http://www.garcia-castro.com/foaf.rdf#me> ,
+                                                                      <https://www.linkedin.com/in/paolaespinoza-arias/> ;
                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "s4city" ;
                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/saref4city#" ;
-                                   owl:versionInfo 0.5 .
+                                   owl:versionInfo 0.8 .
 
 #################################################################
 #    Annotation properties
@@ -30,16 +30,20 @@
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -51,57 +55,24 @@
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:AnnotationProperty ;
-                                              rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
                                               rdfs:label "altitude" ;
+                                              rdf:type owl:AnnotationProperty ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:AnnotationProperty ;
-                                              rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
                                               rdfs:label "latitude" ;
+                                              rdf:type owl:AnnotationProperty ;
                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#location
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:AnnotationProperty ;
-                                                   rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> .
-
-
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:AnnotationProperty ;
-                                               rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
                                                rdfs:label "longitude" ;
+                                               rdf:type owl:AnnotationProperty ;
                                                rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
-
-
-###  http://www.w3.org/2004/02/skos/core#definition
-<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/prov#hadPrimarySource
-<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/based_near
-<http://xmlns.com/foaf/0.1/based_near> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#duration
-xsd:duration rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -151,7 +122,16 @@ xsd:duration rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
+                                                   rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """ ;
+                                                   rdfs:label "location"@en .
 
 
 ###  https://w3id.org/def/saref4city#assesses
@@ -169,22 +149,10 @@ xsd:duration rdf:type rdfs:Datatype .
                       rdfs:label "has calculation period"@en .
 
 
-###  https://w3id.org/def/saref4city#hasFeatureOfInterest
-:hasFeatureOfInterest rdf:type owl:ObjectProperty ;
-                      owl:inverseOf :isFeatureOfInterestOf ;
-                      rdfs:label "has feature of interest"@en .
-
-
 ###  https://w3id.org/def/saref4city#hasKPI
 :hasKPI rdf:type owl:ObjectProperty ;
         owl:inverseOf :isKPIOf ;
         rdfs:label "has key performance indicator"@en .
-
-
-###  https://w3id.org/def/saref4city#hasProperty
-:hasProperty rdf:type owl:ObjectProperty ;
-             owl:inverseOf :isPropertyOf ;
-             rdfs:label "has property"@en .
 
 
 ###  https://w3id.org/def/saref4city#involvesFacility
@@ -207,11 +175,6 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:label "is derived from"@en .
 
 
-###  https://w3id.org/def/saref4city#isFeatureOfInterestOf
-:isFeatureOfInterestOf rdf:type owl:ObjectProperty ;
-                       rdfs:label "is feature of interest of"@en .
-
-
 ###  https://w3id.org/def/saref4city#isKPIOf
 :isKPIOf rdf:type owl:ObjectProperty ;
          rdfs:label "is key performance indicator of"@en .
@@ -222,24 +185,20 @@ xsd:duration rdf:type rdfs:Datatype .
                rdfs:label "is organized by"@en .
 
 
-###  https://w3id.org/def/saref4city#isPropertyOf
-:isPropertyOf rdf:type owl:ObjectProperty ;
-              rdfs:label "is property of"@en .
-
-
 ###  https://w3id.org/def/saref4city#isSubEventOf
 :isSubEventOf rdf:type owl:ObjectProperty ;
               rdfs:label "is subevent of"@en .
 
 
-###  https://w3id.org/def/saref4city#measurementMadeBy
-:measurementMadeBy rdf:type owl:ObjectProperty ;
-                   owl:inverseOf <https://w3id.org/saref#makesMeasurement> .
-
-
 ###  https://w3id.org/def/saref4city#quantifiesKPI
 :quantifiesKPI rdf:type owl:ObjectProperty ;
                rdfs:label "quantifies KPI"@en .
+
+
+###  https://w3id.org/def/saref4city#refersToFeature
+:refersToFeature rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relation between a KPI assessment and the geographical feature it refers to"@en ;
+                 rdfs:label "refers to feature"@en .
 
 
 ###  https://w3id.org/def/saref4city#refersToTime
@@ -257,21 +216,32 @@ xsd:duration rdf:type rdfs:Datatype .
                   rdfs:label "takes place at time"@en .
 
 
-###  https://w3id.org/saref#consistsOf
-<https://w3id.org/saref#consistsOf> rdf:type owl:ObjectProperty ;
-                                    rdfs:isDefinedBy <https://w3id.org/saref#> ;
-                                    rdfs:label "consists of"@en .
-
-
 ###  https://w3id.org/saref#controlsProperty
 <https://w3id.org/saref#controlsProperty> rdf:type owl:ObjectProperty ;
                                           rdfs:label "controls property"@en .
+
+
+###  https://w3id.org/saref#hasFeatureOfInterest
+<https://w3id.org/saref#hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/saref#isFeatureOfInterestOf> ;
+                                              rdfs:label "has feature of interest"@en .
+
+
+###  https://w3id.org/saref#hasProperty
+<https://w3id.org/saref#hasProperty> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <https://w3id.org/saref#isPropertyOf> ;
+                                     rdfs:label "has property"@en .
 
 
 ###  https://w3id.org/saref#isControlledByDevice
 <https://w3id.org/saref#isControlledByDevice> rdf:type owl:ObjectProperty ;
                                               rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                               rdfs:label "is controlled by device"@en .
+
+
+###  https://w3id.org/saref#isFeatureOfInterestOf
+<https://w3id.org/saref#isFeatureOfInterestOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:label "is feature of interest of"@en .
 
 
 ###  https://w3id.org/saref#isMeasuredByDevice
@@ -286,10 +256,20 @@ xsd:duration rdf:type rdfs:Datatype .
                                       rdfs:label "is measured in"@en .
 
 
+###  https://w3id.org/saref#isPropertyOf
+<https://w3id.org/saref#isPropertyOf> rdf:type owl:ObjectProperty ;
+                                      rdfs:label "is property of"@en .
+
+
 ###  https://w3id.org/saref#makesMeasurement
 <https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf <https://w3id.org/saref#measurementMadeBy> ;
                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                           rdfs:label "makes measurement"@en .
+
+
+###  https://w3id.org/saref#measurementMadeBy
+<https://w3id.org/saref#measurementMadeBy> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/saref#measuresProperty
@@ -547,24 +527,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
           rdfs:label "Facility"@en .
 
 
-###  https://w3id.org/def/saref4city#FeatureOfInterest
-:FeatureOfInterest rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasKPI ;
-                                     owl:allValuesFrom :KeyPerformanceIndicator
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasProperty ;
-                                     owl:allValuesFrom <https://w3id.org/saref#Property>
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :isFeatureOfInterestOf ;
-                                     owl:allValuesFrom <https://w3id.org/saref#Measurement>
-                                   ] ;
-                   rdfs:comment """WARNING!
- This class might be moved to the SAREF ontology"""@en .
-
-
 ###  https://w3id.org/def/saref4city#KeyPerformanceIndicator
 :KeyPerformanceIndicator rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -573,7 +535,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :isKPIOf ;
-                                           owl:allValuesFrom :FeatureOfInterest
+                                           owl:allValuesFrom <https://w3id.org/saref#FeatureOfInterest>
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty <https://w3id.org/saref#hasDescription> ;
@@ -592,7 +554,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :KeyPerformanceIndicatorAssessment rdf:type owl:Class ;
                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                      owl:onProperty :assesses ;
-                                                     owl:allValuesFrom :FeatureOfInterest
+                                                     owl:allValuesFrom <https://w3id.org/saref#FeatureOfInterest>
                                                    ] ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :isAssessedBy ;
@@ -697,10 +659,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 <https://w3id.org/saref#Device> rdf:type owl:Class ;
                                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
                                                 [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <https://w3id.org/saref#consistsOf> ;
-                                                  owl:allValuesFrom <https://w3id.org/saref#Device>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
                                                   owl:onProperty <https://w3id.org/saref#controlsProperty> ;
                                                   owl:allValuesFrom <https://w3id.org/saref#Property>
                                                 ] ,
@@ -720,19 +678,35 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                 rdfs:label "Device" .
 
 
+###  https://w3id.org/saref#FeatureOfInterest
+<https://w3id.org/saref#FeatureOfInterest> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasKPI ;
+                                                             owl:allValuesFrom :KeyPerformanceIndicator
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/saref#hasProperty> ;
+                                                             owl:allValuesFrom <https://w3id.org/saref#Property>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://w3id.org/saref#isFeatureOfInterestOf> ;
+                                                             owl:allValuesFrom <https://w3id.org/saref#Measurement>
+                                                           ] .
+
+
 ###  https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> rdf:type owl:Class ;
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :hasFeatureOfInterest ;
-                                                       owl:allValuesFrom :FeatureOfInterest
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :measurementMadeBy ;
-                                                       owl:allValuesFrom <https://w3id.org/saref#Device>
+                                                       owl:onProperty <https://w3id.org/saref#hasFeatureOfInterest> ;
+                                                       owl:allValuesFrom <https://w3id.org/saref#FeatureOfInterest>
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
                                                        owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#measurementMadeBy> ;
+                                                       owl:allValuesFrom <https://w3id.org/saref#Device>
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#relatesToProperty> ;
@@ -766,16 +740,16 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 ###  https://w3id.org/saref#Property
 <https://w3id.org/saref#Property> rdf:type owl:Class ;
                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :isPropertyOf ;
-                                                    owl:allValuesFrom :FeatureOfInterest
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isControlledByDevice> ;
                                                     owl:allValuesFrom <https://w3id.org/saref#Device>
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#isMeasuredByDevice> ;
                                                     owl:allValuesFrom <https://w3id.org/saref#Device>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/saref#isPropertyOf> ;
+                                                    owl:allValuesFrom <https://w3id.org/saref#FeatureOfInterest>
                                                   ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/saref#relatesToMeasurement> ;
@@ -804,19 +778,4 @@ A device that has category saref:Sensor and performs a saref:SensingFunction."""
                                        rdfs:label "Unit of measure"@en .
 
 
-#################################################################
-#    Annotations
-#################################################################
-
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdfs:comment """The relation between something and the point, 
- or other geometrical thing in space, where it is.  For example, the realtionship between
- a radio tower and a Point with a given lat and long.
- Or a relationship between a park and its outline as a closed arc of points, or a road and
- its location as a arc (a sequence of points).
- Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
- an accuracy appropriate for the size of the object and uses such as mapping .
- """ ;
-                                                   rdfs:label "location"@en .
-
-
-###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

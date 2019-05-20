@@ -1,0 +1,90 @@
+# baseURI: https://w3id.org/def/saref4agri/example1
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://w3id.org/def/saref4agri/example1#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geosp: <http://www.opengis.net/ont/geosparql#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s4agri: <https://w3id.org/def/saref4agri#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+om:millibar
+  rdf:type owl:NamedIndividual ;
+  rdf:type saref:UnitOfMeasure ;
+  rdfs:label "millibar"@en ;
+.
+s4agri:SoilMoisture
+  rdf:type owl:NamedIndividual ;
+  rdf:type saref:Property ;
+  rdfs:label "Soil moisture"@en ;
+.
+<https://w3id.org/def/saref4agri/example1>
+  rdf:type owl:Ontology ;
+  dc:description "SAREF4AGRI example for the Smar Irrigation use case."@en ;
+  owl:versionIRI <https://w3id.org/def/v1/saref4agri/example1> ;
+.
+ex:ArvalisDeployment20162017Land07
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4agri:Deployment ;
+  ssn:deployedOnPlatform ex:PlatformArvalisLand07 ;
+  ssn:deployedSystem ex:ArvalisIrrinovStation01 ;
+  s4agri:hasDeploymentPeriod ex:TimeInterval2016-2017 ;
+.
+ex:ArvalisIrrinovStation01
+  rdf:type owl:NamedIndividual ;
+  rdf:type ssn:System ;
+  sosa:isHostedBy ex:PlatformArvalisLand07 ;
+  ssn:hasDeployment ex:ArvalisDeployment20162017Land07 ;
+  ssn:hasSubSystem ex:ArvalisIrrinovStation01SoilSensor01 ;
+  ssn:hasSubSystem ex:ArvalisIrrinovStation01SoilSensor02 ;
+.
+ex:ArvalisIrrinovStation01SoilSensor01
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4agri:SoilTensiometer ;
+  saref:measuresProperty s4agri:SoilMoisture ;
+.
+ex:ArvalisIrrinovStation01SoilSensor02
+  rdf:type owl:NamedIndividual ;
+  rdf:type s4agri:SoilTensiometer ;
+  geo:alt -0.6 ;
+  saref:makesMeasurement ex:ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2016-06-14T000000_0200 ;
+  saref:measuresProperty s4agri:SoilMoisture ;
+.
+ex:ArvalisIrrinovStation01SoilSensor02ObservationAtPT24H2016-06-14T000000_0200
+  rdf:type owl:NamedIndividual ;
+  rdf:type saref:Measurement ;
+  saref:hasValue "1490.0"^^xsd:double ;
+  saref:isMeasuredIn om:millibar ;
+  saref:relatesToProperty s4agri:SoilMoisture ;
+.
+ex:PlatformArvalisLand07
+  rdf:type owl:NamedIndividual ;
+  rdf:type sosa:Platform ;
+  sosa:hosts ex:ArvalisIrrinovStation01 ;
+  ssn:inDeployment ex:ArvalisDeployment20162017Land07 ;
+.
+ex:TimeInterval2016-2017
+  rdf:type owl:NamedIndividual ;
+  rdf:type time:Interval ;
+  time:hasBeginning ex:instant_2017-12-31T235959 ;
+  time:hasEnd ex:instant_2016-01-01T000000 ;
+.
+ex:instant_2016-01-01T000000
+  rdf:type owl:NamedIndividual ;
+  rdf:type time:Instant ;
+  time:inXSDDateTimeStamp "2016-01-01T00:00:00"^^xsd:dateTime ;
+.
+ex:instant_2017-12-31T235959
+  rdf:type owl:NamedIndividual ;
+  rdf:type time:Instant ;
+  time:inXSDDateTimeStamp "2017-12-31T23:59:59"^^xsd:dateTime ;
+.
