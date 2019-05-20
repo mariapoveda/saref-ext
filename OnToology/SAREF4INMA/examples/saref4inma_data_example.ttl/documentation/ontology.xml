@@ -1,0 +1,1269 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.tno.nl/examples/saref4inma/shaver#"
+     xml:base="http://ontology.tno.nl/examples/saref4inma/shaver"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:saref="https://w3id.org/saref#"
+     xmlns:saref4bldg="https://w3id.org/def/saref4bldg#"
+     xmlns:saref4inma="https://w3id.org/def/saref4inma#">
+    <owl:Ontology rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver">
+        <owl:imports rdf:resource="https://w3id.org/def/saref4inma"/>
+        <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxQualifiedCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxQualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasEnd"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4bldg#contains -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4bldg#contains"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4bldg#hasSpace -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4bldg#hasSpace"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4bldg#isContainedIn -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4bldg#isContainedIn"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#belongsToCategory -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#belongsToCategory"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#consistsOfBatch -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#consistsOfBatch"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#consistsOfItem -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#consistsOfItem"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#hasCertificate -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#hasCertificate"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#hasFeatureOfInterest -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#hasFeatureOfInterest"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#hasModelNumber -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#hasModelNumber"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#isCategoryOf -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#isCategoryOf"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#isFeatureOfInterestOf -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#isFeatureOfInterestOf"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#isProducedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#isProducedBy"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#needsEquipment -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/saref4inma#needsEquipment"/>
+    
+
+
+    <!-- https://w3id.org/saref#consistsOf -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#consistsOf"/>
+    
+
+
+    <!-- https://w3id.org/saref#controlsProperty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#controlsProperty"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasFunction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#hasFunction"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasManufacturer -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#hasManufacturer"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasProperty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#hasProperty"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasTimestamp -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#hasTimestamp"/>
+    
+
+
+    <!-- https://w3id.org/saref#hasValue -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#hasValue"/>
+    
+
+
+    <!-- https://w3id.org/saref#isMeasuredByDevice -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#isMeasuredByDevice"/>
+    
+
+
+    <!-- https://w3id.org/saref#isMeasuredIn -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#isMeasuredIn"/>
+    
+
+
+    <!-- https://w3id.org/saref#makesMeasurement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#makesMeasurement"/>
+    
+
+
+    <!-- https://w3id.org/saref#relatesToMeasurement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#relatesToMeasurement"/>
+    
+
+
+    <!-- https://w3id.org/saref#relatesToProperty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/saref#relatesToProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#creates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4inma#creates">
+        <rdfs:comment>A relation between a production process (e.g., Batch) that creates one or more tangible objects (e.g., Items)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#isCreatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4inma#isCreatedIn">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/saref4inma#creates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#hasIDValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4inma#hasIDValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#CuttingFunction -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#CuttingFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipmentFunction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#ActuatingFunction"/>
+        <rdfs:comment>Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#FormingFunction -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#FormingFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipmentFunction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#ActuatingFunction"/>
+        <rdfs:comment>Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipmentFunction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#ActuatingFunction"/>
+        <rdfs:comment>Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#LaserCuttingMachine -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#LaserCuttingMachine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#MillingMachine -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#MillingMachine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#MouldingMachine -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#MouldingMachine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Plastic -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Plastic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#MaterialCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Screw -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Screw">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#MaterialCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#StampingMachine -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#StampingMachine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#SteelSheet -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#SteelSheet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#MaterialCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine -->
+
+
+    <owl:Class rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTimeStamp -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4bldg#PhysicalObject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4bldg#PhysicalObject"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ActualMeasurement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ActualMeasurement">
+        <owl:disjointWith rdf:resource="https://w3id.org/def/saref4inma#ExpectedMeasurement"/>
+        <rdfs:comment>Describes whether the measurement is actually measured during the production process. Disjoint with ExpectedMeasurement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Area -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Area"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Batch -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Batch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4inma#ID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#hasIDValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ExpectedMeasurement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ExpectedMeasurement">
+        <rdfs:comment>Describes whether the measurement is expected (i.e., planned before the production process). Disjoint with ActualMeasurement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Factory -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Factory"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#GTIN14ID -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#GTIN14ID"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#GTIN8ID -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#GTIN8ID"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ID -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ID"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Item -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Item">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#hasSerialNumber"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4inma#ID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#hasIDValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ItemBatch -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ItemBatch"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ItemCategory -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ItemCategory">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#hasIDValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#MaterialBatch -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#MaterialBatch"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#MaterialCategory -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#MaterialCategory"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Measurement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Measurement"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ProductionEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ProductionEquipment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#hasIDValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ProductionEquipmentCategory -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ProductionEquipmentCategory"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ProductionEquipmentFunction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ProductionEquipmentFunction"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Site -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Site"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#WorkCenter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#WorkCenter"/>
+    
+
+
+    <!-- https://w3id.org/saref#ActuatingFunction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#ActuatingFunction"/>
+    
+
+
+    <!-- https://w3id.org/saref#Device -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Device">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#PhysicalObject"/>
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/saref#Temperature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#Temperature"/>
+    
+
+
+    <!-- https://w3id.org/saref#TemperatureSensor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/saref#TemperatureSensor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialBatch742 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialBatch742">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#MaterialBatch"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialCategory"/>
+        <saref4inma:hasCertificate xml:lang="en">ABS High-precision quality max tolerance of 0.1mm</saref4inma:hasCertificate>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr71324352"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialCategory">
+        <rdf:type rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Plastic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Site"/>
+        <saref4bldg:hasSpace rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_18"/>
+        <saref4bldg:hasSpace rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_18 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_18">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Area"/>
+        <saref4bldg:contains rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Cutting_and_Milling_WorkCenter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_19 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_19">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Area"/>
+        <saref4bldg:contains rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_B -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_B">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Cutting_and_Milling_WorkCenter -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Cutting_and_Milling_WorkCenter">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#WorkCenter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Eindhoven_BIC -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Eindhoven_BIC">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Factory"/>
+        <saref4bldg:hasSpace rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A"/>
+        <saref4bldg:hasSpace rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_B"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#End_Time_Batch392 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#End_Time_Batch392">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#JIDFUHWEUF323 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#JIDFUHWEUF323">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#JSDFHKLSDF982374 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#JSDFHKLSDF982374">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1">
+        <rdf:type rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#LaserCuttingMachine"/>
+        <saref4bldg:isContainedIn rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory"/>
+        <saref:hasFunction rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#CuttingFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipmentCategory"/>
+        <saref4inma:isCategoryOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40-S50_Generic_Body_ItemBatch3290 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40-S50_Generic_Body_ItemBatch3290">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ItemBatch"/>
+        <saref4inma:consistsOfBatch rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialBatch742"/>
+        <saref4inma:consistsOfBatch rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323"/>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr55689876777421"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ItemBatch"/>
+        <saref4inma:creates rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"/>
+        <time:hasBeginning rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Start_Time_Batch392"/>
+        <time:hasEnd rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#End_Time_Batch392"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemCategory"/>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr34275874234908"/>
+        <saref4inma:isFeatureOfInterestOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG"/>
+        <saref4inma:needsEquipment rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1"/>
+        <saref:hasProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemCategory">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ItemCategory"/>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr98647656"/>
+        <saref4inma:hasModelNumber>nr98647656</saref4inma:hasModelNumber>
+        <saref4inma:isCategoryOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392"/>
+        <saref4inma:isProducedBy rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory"/>
+        <saref:hasManufacturer>PhilBrau</saref:hasManufacturer>
+        <saref:relatesToMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Philips_screws_D2mm_L8mm_MaterialCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Philips_screws_D2mm_L8mm_MaterialCategory">
+        <rdf:type rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Screw"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Item"/>
+        <saref4inma:isCreatedIn rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392"/>
+        <saref4inma:consistsOfItem rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#ShaverBody9440"/>
+        <saref4inma:consistsOfItem rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#ShaverHead3002"/>
+        <saref4inma:consistsOfItem rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#StepMotor083"/>
+        <saref4inma:hasSerialNumber rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr7865654345676"/>
+        <saref4inma:isFeatureOfInterestOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520"/>
+        <saref4inma:isFeatureOfInterestOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521"/>
+        <saref4inma:isFeatureOfInterestOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522"/>
+        <saref4inma:isFeatureOfInterestOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523"/>
+        <saref:hasProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#ShaverBody9440 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#ShaverBody9440">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Item"/>
+        <saref4inma:isCreatedIn rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40-S50_Generic_Body_ItemBatch3290"/>
+        <saref4inma:hasSerialNumber rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#UFHLEIJKFNESDKL323"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#ShaverHead3002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#ShaverHead3002">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Item"/>
+        <saref4inma:consistsOfItem rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311"/>
+        <saref4inma:hasSerialNumber rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#JIDFUHWEUF323"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Start_Time_Batch392 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Start_Time_Batch392">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#MaterialBatch"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialCategory"/>
+        <saref4inma:hasCertificate xml:lang="en">Steel Certificate 3.1</saref4inma:hasCertificate>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr79009856"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialCategory">
+        <rdf:type rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#SteelSheet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#StepMotor083 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#StepMotor083">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Item"/>
+        <saref4inma:isCreatedIn rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Step_Moters_Q88_Secure_ItemBatch423"/>
+        <saref4inma:hasSerialNumber rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#JSDFHKLSDF982374"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Step_Moters_Q88_Secure_ItemBatch423 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Step_Moters_Q88_Secure_ItemBatch423">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ItemBatch"/>
+        <saref4inma:consistsOfItem rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311"/>
+        <saref4inma:consistsOfItem rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323"/>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr34254657687978"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Step_Motors_Q88_Secure_ItemCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Step_Motors_Q88_Secure_ItemCategory">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ItemCategory"/>
+        <saref4inma:hasModelNumber rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr83049304"/>
+        <saref4inma:isProducedBy rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory"/>
+        <saref4inma:isProducedBy rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#MaterialBatch"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory"/>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr74536275"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch324 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch324">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#MaterialBatch"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory"/>
+        <saref4inma:hasIdentifier rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#nr76567876"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory">
+        <rdf:type rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Screw"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#UFHLEIJKFNESDKL323 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#UFHLEIJKFNESDKL323">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipmentCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#Measurement"/>
+        <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</saref:hasValue>
+        <saref:isMeasuredByDevice rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"/>
+        <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"/>
+        <saref:relatesToProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1">
+        <rdf:type rdf:resource="https://w3id.org/saref#TemperatureSensor"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor2">
+        <rdf:type rdf:resource="https://w3id.org/saref#TemperatureSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature">
+        <rdf:type rdf:resource="https://w3id.org/saref#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_1">
+        <rdf:type rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory"/>
+        <saref:controlsProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+        <saref:hasFunction rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2">
+        <rdf:type rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine"/>
+        <saref4bldg:isContainedIn rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter"/>
+        <saref4inma:belongsToCategory rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory"/>
+        <saref:consistsOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"/>
+        <saref:controlsProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+        <saref:hasFunction rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522"/>
+        <saref:makesMeasurement rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ActualMeasurement"/>
+        <saref4inma:hasFeatureOfInterest rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"/>
+        <saref:hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-28T12:11:10</saref:hasTimestamp>
+        <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">223</saref:hasValue>
+        <saref:isMeasuredByDevice rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"/>
+        <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"/>
+        <saref:relatesToProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ActualMeasurement"/>
+        <saref4inma:hasFeatureOfInterest rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392"/>
+        <saref:hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-28T12:11:40</saref:hasTimestamp>
+        <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">232</saref:hasValue>
+        <saref:isMeasuredByDevice rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"/>
+        <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"/>
+        <saref:relatesToProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ActualMeasurement"/>
+        <saref4inma:hasFeatureOfInterest rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"/>
+        <saref:hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-28T12:11:20</saref:hasTimestamp>
+        <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</saref:hasValue>
+        <saref:isMeasuredByDevice rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"/>
+        <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"/>
+        <saref:relatesToProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ActualMeasurement"/>
+        <saref4inma:hasFeatureOfInterest rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"/>
+        <saref:hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-28T12:11:30</saref:hasTimestamp>
+        <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">231</saref:hasValue>
+        <saref:isMeasuredByDevice rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"/>
+        <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"/>
+        <saref:relatesToProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#ActualMeasurement"/>
+        <saref4inma:hasFeatureOfInterest rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023"/>
+        <saref:hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-28T12:11:40</saref:hasTimestamp>
+        <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">232</saref:hasValue>
+        <saref:isMeasuredByDevice rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1"/>
+        <saref:isMeasuredIn rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius"/>
+        <saref:relatesToProperty rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#WorkCenter"/>
+        <saref:consistsOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1"/>
+        <saref:consistsOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_1"/>
+        <saref:consistsOf rdf:resource="http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#dateTimeStamp_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#dateTimeStamp_1">
+        <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr34254657687978 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr34254657687978">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr34275874234908 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr34275874234908">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+        <saref4inma:hasIDValue>nr34275874234908</saref4inma:hasIDValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr55689876777421 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr55689876777421">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr71324352 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr71324352">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN8ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr74536275 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr74536275">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN8ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr76567876 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr76567876">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN8ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr7865654345676 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr7865654345676">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+        <saref4inma:hasIDValue>nr7865654345676</saref4inma:hasIDValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr79009856 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr79009856">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN8ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr82849583748573 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr82849583748573">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN14ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr83049304 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr83049304">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN8ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.tno.nl/examples/saref4inma/shaver#nr98647656 -->
+
+
+    <owl:NamedIndividual rdf:about="http://ontology.tno.nl/examples/saref4inma/shaver#nr98647656">
+        <rdf:type rdf:resource="https://w3id.org/def/saref4inma#GTIN8ID"/>
+        <saref4inma:hasIDValue>nr98647656</saref4inma:hasIDValue>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

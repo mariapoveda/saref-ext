@@ -1,0 +1,876 @@
+[ {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://w3id.org/def/saref4agri"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "Created with TopBraid Composer"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#5-5-5_crop_fertilizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Animalia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000017" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Animalia"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#BioCompostIntake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#CompostIntake" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bos_Taurus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000006" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bos Taurus"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bovidae",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000004" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bovidae"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Compartment_A",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#BuildingSpace" ],
+  "http://w3id.org/def/saref4agri#isContainedIn" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Cow_Barn"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Compartment_B",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#BuildingSpace" ],
+  "http://w3id.org/def/saref4agri#isContainedIn" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Cow_Barn"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#CompostIntake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fertilizer intake"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Intake"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Compost_2019-02-02",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "370"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#CompostIntake"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Compost_2019-02-16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_East"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "240"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#CompostIntake"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#ConcentrateIntake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Concentrate intake"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Intake"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#LactatingCow" ],
+  "http://purl.obolibrary.org/obo/TAXRANK_1000000" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Animalia"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bos_Taurus"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bovidae"
+  } ],
+  "http://w3id.org/def/saref4agri#hasBirthDate" : [ {
+    "@value" : "2016-05-29"
+  } ],
+  "http://w3id.org/def/saref4agri#isMemberOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#LactatingCow" ],
+  "http://purl.obolibrary.org/obo/TAXRANK_1000000" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Animalia"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bos_Taurus"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bovidae"
+  } ],
+  "http://w3id.org/def/saref4agri#hasBirthDate" : [ {
+    "@value" : "2016-05-22"
+  } ],
+  "http://w3id.org/def/saref4agri#isMemberOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#LactatingCow" ],
+  "http://purl.obolibrary.org/obo/TAXRANK_1000000" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Animalia"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bos_Taurus"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Bovidae"
+  } ],
+  "http://w3id.org/def/saref4agri#hasBirthDate" : [ {
+    "@value" : "2018-03-15"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_1_Birth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_2_Birth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_2_Death",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_3_Birth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#Instant" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Activity_2019_03_01-14_00",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow3"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@value" : "20"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.w3.org/2006/time#minute"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Eating_Activity_in_minutes_per__hour"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Activity_2019_03_01-15_00",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow3"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@value" : "15"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.w3.org/2006/time#minute"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Eating_Activity_in_minutes_per__hour"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Eating_Activity_Sensor_33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#EatingActivitySensor" ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Eating_Activity_in_minutes_per__hour"
+  } ],
+  "https://w3id.org/saref#makesMeasurement" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Activity_2019_03_01-14_00"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Activity_2019_03_01-15_00"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#AnimalGroup" ],
+  "http://w3id.org/def/saref4agri#generates" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_B",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#AnimalGroup" ],
+  "http://w3id.org/def/saref4agri#contains" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow3"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#CropIntake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Crop intake"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Intake"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#CropYield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Produced crops (i.e. cultivated plant)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Crop Yield"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Yield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cyperales",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000003" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cyperales"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#EatingActivitySensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Sensor"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Eating_Activity_in_minutes_per__hour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Property" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#EggYield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Egg Yield"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Yield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#FarmHolding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An organization specialized in farming."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Farmer holding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://schema.org/Organization"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Farm_Jansen_and_Sons_Eindhoven",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.opengis.net/ont/geosparql#Feature" ],
+  "http://w3id.org/def/saref4agri#contains" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Heated_Glass_Greenhouse"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Cow_Barn"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_East"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_North"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_South"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_West"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Farmer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Person which is a farmer as profession"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Farmer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/spec/#Person"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#FarmingBuilding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A building specialized for farming purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Farming building"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Building"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Greenhouse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A glass building in which crops that need protection from cold weather are grown."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Greenhouse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Building"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#H._Jansen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#Farmer" ],
+  "http://w3id.org/def/saref4agri#hasName" : [ {
+    "@language" : "en",
+    "@value" : "Hendricus Jansen"
+  } ],
+  "http://w3id.org/def/saref4agri#isMemberOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Jansen_and_Sons"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Heated_Glass_Greenhouse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#Greenhouse" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Humidity_Percentage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Intake_Sugar_Corn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#CropIntake" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#J._Jansen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#Farmer" ],
+  "http://w3id.org/def/saref4agri#hasName" : [ {
+    "@language" : "en",
+    "@value" : "Johannes Jansen"
+  } ],
+  "http://w3id.org/def/saref4agri#isMemberOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Jansen_and_Sons"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Jansen_and_Sons",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#FarmHolding" ],
+  "http://w3id.org/def/saref4agri#managesFarm" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Farm_Jansen_and_Sons_Eindhoven"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Kilogram",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/saref#Property" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#LactatingCow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A domesticated cow specialized for the production of milk."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Milk cow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Animal"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MeatYield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Meat Yield"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Yield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Milk Yield"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/def/saref4agri#Yield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYieldSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#MilkingSensor" ],
+  "http://w3id.org/saref#measuresProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ],
+  "https://w3id.org/saref#makesMeasurement" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-01_1"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-01_2"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-02_1"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-02_2"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-03_1"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-03_2"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Cow_Barn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#FarmingBuilding" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Cow_Meat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#MeatYield" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-01_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "4,7"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-01_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "3,9"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-02_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "2,1"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-02_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "2,7"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-03_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_B"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "5,2"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milk_Yield_2019-03-03_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_B"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "3,7"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYield"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkingSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Sensor"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Milking_Machine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Device" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Milking Machine"
+  } ],
+  "https://w3id.org/saref#consistsOf" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MilkYieldSensor"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Minutes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/saref#Time" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#MovementActivitySensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Sensor"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_East",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Parcel" ],
+  "http://w3id.org/def/saref4agri#contains" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Sugar_Snaps_1"
+  } ],
+  "http://w3id.org/def/saref4agri#hasName" : [ {
+    "@value" : "Field Frontyard"
+  } ],
+  "http://w3id.org/def/saref4agri#receives" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Compost_2019-02-16"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_North",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Parcel" ],
+  "http://w3id.org/def/saref4agri#contains" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Cow_Group_A"
+  } ],
+  "http://w3id.org/def/saref4agri#hasName" : [ {
+    "@value" : "Grazing Plot"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_South",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Parcel" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_West",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Parcel" ],
+  "http://w3id.org/def/saref4agri#contains" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Sweet_Corn_2"
+  } ],
+  "http://w3id.org/def/saref4agri#receives" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Compost_2019-02-02"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Pisum_sativum_var._macrocarpon_Ser.",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000016" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pisum sativum var. macrocarpon Ser."
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Plantae",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000017" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Plantae"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Rosanae_Fabales",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000003" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rosanae Fabales"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Property", "https://w3id.org/saref#Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Acidity"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity_2019_03_04",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_East"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@value" : "7.4"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Acidity"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity_2019_03_05",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Measurement" ],
+  "http://w3id.org/saref#hasFeatureOfInterest" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_East"
+  } ],
+  "http://w3id.org/saref#hasValue" : [ {
+    "@value" : "7.5"
+  } ],
+  "http://w3id.org/saref#isMeasuredIn" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Acidity"
+  } ],
+  "http://w3id.org/saref#relatesToProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Measurement_Deployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Deployment" ],
+  "http://w3id.org/def/saref4agri#hasDeploymentPeriod" : [ {
+    "@id" : "http://www.w3.org/2006/time#unitYear"
+  } ],
+  "http://w3id.org/def/saref4agri#isDeployedAtSpace" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Parcel_East"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Soil Measurement Deployment"
+  } ],
+  "http://www.w3.org/ns/ssn/deployedOnPlatform" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Platform"
+  } ],
+  "http://www.w3.org/ns/ssn/deployedSystem" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Sensor"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Platform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Platform" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Soil Platform"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Sensor" ],
+  "http://w3id.org/saref#measuresProperty" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Humidity_Percentage"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity"
+  } ],
+  "https://w3id.org/saref#makesMeasurement" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity_2019_03_04"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Soil_Acidity_2019_03_05"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Storage_Barn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://ontology.tno.nl/examples/saref4agri-ex1#FarmingBuilding" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Sugar_Corn_Yield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Yield" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Sugar_Snaps_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Crop" ],
+  "http://purl.obolibrary.org/obo/TAXRANK_1000000" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Pisum_sativum_var._macrocarpon_Ser."
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Plantae"
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Sweet_Corn_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Crop" ],
+  "http://purl.obolibrary.org/obo/TAXRANK_1000000" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Plantae"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Rosanae_Fabales"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L."
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Sweet_Corn_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/saref4agri#Crop" ],
+  "http://purl.obolibrary.org/obo/TAXRANK_1000000" : [ {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Plantae"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Rosanae_Fabales"
+  }, {
+    "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L."
+  } ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Vermicompost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.obolibrary.org/obo/TAXRANK_0000006" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Zea mays L."
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/TAXRANK_0000003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/TAXRANK_0000004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/TAXRANK_0000006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/TAXRANK_0000016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/TAXRANK_0000017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/TAXRANK_1000000",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Animal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#AnimalGroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Building",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#BuildingSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Crop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Deployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Intake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Parcel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Platform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#Yield",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#contains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#generates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#hasBirthDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#hasDeploymentPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#hasID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#hasMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has member"
+  } ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#hasName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#hasPlantDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#hasSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#isContainedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#isDeployedAtSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#isMemberOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#isProducedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#managesFarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/saref4agri#receives",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/saref#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/saref#Time",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/saref#hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://w3id.org/saref#isFeatureOfInterestOf"
+  } ]
+}, {
+  "@id" : "http://w3id.org/saref#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/saref#isFeatureOfInterestOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/saref#isMeasuredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/saref#measuresProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/saref#relatesToProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/deployedSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Acidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "pH is a scale used to specify how acidic or basic a water-based solution is. Acidic solutions have a lower pH, basic solutions have a higher pH. At room temperature, pure water is neither acidic nor basic and has a pH of 7."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ph"
+  } ]
+}, {
+  "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Liter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#UnitOfMeasure" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/spec/#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Measurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#UnitOfMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#consistsOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/saref#makesMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

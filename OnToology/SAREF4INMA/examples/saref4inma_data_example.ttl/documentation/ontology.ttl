@@ -1,0 +1,760 @@
+@prefix : <http://ontology.tno.nl/examples/saref4inma/shaver#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ontology.tno.nl/examples/saref4inma/shaver> .
+
+<http://ontology.tno.nl/examples/saref4inma/shaver> rdf:type owl:Ontology ;
+                                                     owl:imports <https://w3id.org/def/saref4inma> ;
+                                                     owl:versionInfo "Created with TopBraid Composer" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
+owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4bldg#contains
+<https://w3id.org/def/saref4bldg#contains> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4bldg#hasSpace
+<https://w3id.org/def/saref4bldg#hasSpace> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4bldg#isContainedIn
+<https://w3id.org/def/saref4bldg#isContainedIn> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#belongsToCategory
+<https://w3id.org/def/saref4inma#belongsToCategory> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#consistsOfBatch
+<https://w3id.org/def/saref4inma#consistsOfBatch> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#consistsOfItem
+<https://w3id.org/def/saref4inma#consistsOfItem> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#hasCertificate
+<https://w3id.org/def/saref4inma#hasCertificate> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#hasFeatureOfInterest
+<https://w3id.org/def/saref4inma#hasFeatureOfInterest> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#hasModelNumber
+<https://w3id.org/def/saref4inma#hasModelNumber> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#isCategoryOf
+<https://w3id.org/def/saref4inma#isCategoryOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#isFeatureOfInterestOf
+<https://w3id.org/def/saref4inma#isFeatureOfInterestOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#isProducedBy
+<https://w3id.org/def/saref4inma#isProducedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/saref4inma#needsEquipment
+<https://w3id.org/def/saref4inma#needsEquipment> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#consistsOf
+<https://w3id.org/saref#consistsOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#controlsProperty
+<https://w3id.org/saref#controlsProperty> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#hasFunction
+<https://w3id.org/saref#hasFunction> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#hasManufacturer
+<https://w3id.org/saref#hasManufacturer> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#hasProperty
+<https://w3id.org/saref#hasProperty> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#hasTimestamp
+<https://w3id.org/saref#hasTimestamp> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#hasValue
+<https://w3id.org/saref#hasValue> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#isMeasuredByDevice
+<https://w3id.org/saref#isMeasuredByDevice> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#isMeasuredIn
+<https://w3id.org/saref#isMeasuredIn> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#makesMeasurement
+<https://w3id.org/saref#makesMeasurement> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#relatesToMeasurement
+<https://w3id.org/saref#relatesToMeasurement> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/saref#relatesToProperty
+<https://w3id.org/saref#relatesToProperty> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/def/saref4inma#creates
+<https://w3id.org/def/saref4inma#creates> rdf:type owl:ObjectProperty ;
+                                          rdfs:comment "A relation between a production process (e.g., Batch) that creates one or more tangible objects (e.g., Items)" .
+
+
+###  https://w3id.org/def/saref4inma#isCreatedIn
+<https://w3id.org/def/saref4inma#isCreatedIn> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/def/saref4inma#creates> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/def/saref4inma#hasIDValue
+<https://w3id.org/def/saref4inma#hasIDValue> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#CuttingFunction
+:CuttingFunction rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipmentFunction> ,
+                                 <https://w3id.org/saref#ActuatingFunction> ;
+                 rdfs:comment "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards." .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#FormingFunction
+:FormingFunction rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipmentFunction> ,
+                                 <https://w3id.org/saref#ActuatingFunction> ;
+                 rdfs:comment "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards." .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#JoiningFunction
+:JoiningFunction rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipmentFunction> ,
+                                 <https://w3id.org/saref#ActuatingFunction> ;
+                 rdfs:comment "Example of actuating function used in SAREF4INMA. More functions can be defined if needed. It is also possible to link here function code lists from existing standards." .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#LaserCuttingMachine
+:LaserCuttingMachine rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipment> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#MillingMachine
+:MillingMachine rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipment> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#MouldingMachine
+:MouldingMachine rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipment> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Plastic
+:Plastic rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/def/saref4inma#MaterialCategory> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Screw
+:Screw rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/def/saref4inma#MaterialCategory> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#StampingMachine
+:StampingMachine rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipment> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#SteelSheet
+:SteelSheet rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/def/saref4inma#MaterialCategory> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachine
+:WeldingMachine rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/def/saref4inma#ProductionEquipment> .
+
+
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2001/XMLSchema#dateTimeStamp
+xsd:dateTimeStamp rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4bldg#PhysicalObject
+<https://w3id.org/def/saref4bldg#PhysicalObject> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#ActualMeasurement
+<https://w3id.org/def/saref4inma#ActualMeasurement> rdf:type owl:Class ;
+                                                    owl:disjointWith <https://w3id.org/def/saref4inma#ExpectedMeasurement> ;
+                                                    rdfs:comment "Describes whether the measurement is actually measured during the production process. Disjoint with ExpectedMeasurement." .
+
+
+###  https://w3id.org/def/saref4inma#Area
+<https://w3id.org/def/saref4inma#Area> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#Batch
+<https://w3id.org/def/saref4inma#Batch> rdf:type owl:Class ;
+                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/def/saref4inma#hasIdentifier> ;
+                                                          owl:someValuesFrom <https://w3id.org/def/saref4inma#ID>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/def/saref4inma#hasIDValue> ;
+                                                          owl:someValuesFrom xsd:string
+                                                        ] .
+
+
+###  https://w3id.org/def/saref4inma#ExpectedMeasurement
+<https://w3id.org/def/saref4inma#ExpectedMeasurement> rdf:type owl:Class ;
+                                                      rdfs:comment "Describes whether the measurement is expected (i.e., planned before the production process). Disjoint with ActualMeasurement." .
+
+
+###  https://w3id.org/def/saref4inma#Factory
+<https://w3id.org/def/saref4inma#Factory> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#GTIN14ID
+<https://w3id.org/def/saref4inma#GTIN14ID> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#GTIN8ID
+<https://w3id.org/def/saref4inma#GTIN8ID> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#ID
+<https://w3id.org/def/saref4inma#ID> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#Item
+<https://w3id.org/def/saref4inma#Item> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/def/saref4inma#hasSerialNumber> ;
+                                                         owl:allValuesFrom <https://w3id.org/def/saref4inma#ID>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/def/saref4inma#hasIDValue> ;
+                                                         owl:allValuesFrom xsd:string
+                                                       ] .
+
+
+###  https://w3id.org/def/saref4inma#ItemBatch
+<https://w3id.org/def/saref4inma#ItemBatch> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#ItemCategory
+<https://w3id.org/def/saref4inma#ItemCategory> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://w3id.org/def/saref4inma#hasIDValue> ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] .
+
+
+###  https://w3id.org/def/saref4inma#MaterialBatch
+<https://w3id.org/def/saref4inma#MaterialBatch> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#MaterialCategory
+<https://w3id.org/def/saref4inma#MaterialCategory> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#Measurement
+<https://w3id.org/def/saref4inma#Measurement> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#ProductionEquipment
+<https://w3id.org/def/saref4inma#ProductionEquipment> rdf:type owl:Class ;
+                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://w3id.org/def/saref4inma#hasIDValue> ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] .
+
+
+###  https://w3id.org/def/saref4inma#ProductionEquipmentCategory
+<https://w3id.org/def/saref4inma#ProductionEquipmentCategory> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#ProductionEquipmentFunction
+<https://w3id.org/def/saref4inma#ProductionEquipmentFunction> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#Site
+<https://w3id.org/def/saref4inma#Site> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/saref4inma#WorkCenter
+<https://w3id.org/def/saref4inma#WorkCenter> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#ActuatingFunction
+<https://w3id.org/saref#ActuatingFunction> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Device
+<https://w3id.org/saref#Device> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/def/saref4bldg#PhysicalObject> ;
+                                rdfs:label "Device" .
+
+
+###  https://w3id.org/saref#Temperature
+<https://w3id.org/saref#Temperature> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#TemperatureSensor
+<https://w3id.org/saref#TemperatureSensor> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialBatch742
+:ABS_Plastic_Role_8mm_MaterialBatch742 rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/def/saref4inma#MaterialBatch> ;
+                                       <https://w3id.org/def/saref4inma#belongsToCategory> :ABS_Plastic_Role_8mm_MaterialCategory ;
+                                       <https://w3id.org/def/saref4inma#hasCertificate> "ABS High-precision quality max tolerance of 0.1mm"@en ;
+                                       <https://w3id.org/def/saref4inma#hasIdentifier> :nr71324352 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#ABS_Plastic_Role_8mm_MaterialCategory
+:ABS_Plastic_Role_8mm_MaterialCategory rdf:type owl:NamedIndividual ,
+                                                :Plastic .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A
+:BIC_Site_A rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#Site> ;
+            <https://w3id.org/def/saref4bldg#hasSpace> :BIC_Site_A_Area_18 ,
+                                                       :BIC_Site_A_Area_19 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_18
+:BIC_Site_A_Area_18 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/def/saref4inma#Area> ;
+                    <https://w3id.org/def/saref4bldg#contains> :Cutting_and_Milling_WorkCenter .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_A_Area_19
+:BIC_Site_A_Area_19 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/def/saref4inma#Area> ;
+                    <https://w3id.org/def/saref4bldg#contains> :Welding_WorkCenter .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#BIC_Site_B
+:BIC_Site_B rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#Site> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Cutting_and_Milling_WorkCenter
+:Cutting_and_Milling_WorkCenter rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/def/saref4inma#WorkCenter> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Eindhoven_BIC
+:Eindhoven_BIC rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/def/saref4inma#Factory> ;
+               <https://w3id.org/def/saref4bldg#hasSpace> :BIC_Site_A ,
+                                                          :BIC_Site_B .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#End_Time_Batch392
+:End_Time_Batch392 rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2006/time#Instant> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#JIDFUHWEUF323
+:JIDFUHWEUF323 rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/def/saref4inma#GTIN14ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#JSDFHKLSDF982374
+:JSDFHKLSDF982374 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/def/saref4inma#GTIN14ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Laser_Cutting_Machine_1
+:Laser_Cutting_Machine_1 rdf:type owl:NamedIndividual ,
+                                  :LaserCuttingMachine ;
+                         <https://w3id.org/def/saref4bldg#isContainedIn> :Welding_WorkCenter ;
+                         <https://w3id.org/def/saref4inma#belongsToCategory> :Lazor_Series_8030_ProdEquipCategory ;
+                         <https://w3id.org/saref#hasFunction> :CuttingFunction .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Lazor_Series_8030_ProdEquipCategory
+:Lazor_Series_8030_ProdEquipCategory rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/def/saref4inma#ProductionEquipmentCategory> ;
+                                     <https://w3id.org/def/saref4inma#isCategoryOf> :Laser_Cutting_Machine_1 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40-S50_Generic_Body_ItemBatch3290
+:PhilBrau_S40-S50_Generic_Body_ItemBatch3290 rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/def/saref4inma#ItemBatch> ;
+                                             <https://w3id.org/def/saref4inma#consistsOfBatch> :ABS_Plastic_Role_8mm_MaterialBatch742 ,
+                                                                                               :Torx_screws_D2mm_L8mm_MaterialBatch323 ;
+                                             <https://w3id.org/def/saref4inma#hasIdentifier> :nr55689876777421 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392
+:PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/def/saref4inma#ItemBatch> ;
+                                               <https://w3id.org/def/saref4inma#creates> :Shaver10023 ;
+                                               <http://www.w3.org/2006/time#hasBeginning> :Start_Time_Batch392 ;
+                                               <http://www.w3.org/2006/time#hasEnd> :End_Time_Batch392 ;
+                                               <https://w3id.org/def/saref4inma#belongsToCategory> :PhilBrau_S40_Premium_Gold_Shaver_ItemCategory ;
+                                               <https://w3id.org/def/saref4inma#hasIdentifier> :nr34275874234908 ;
+                                               <https://w3id.org/def/saref4inma#isFeatureOfInterestOf> :Welding_Machine_2_Measurement_W101520_AVG ;
+                                               <https://w3id.org/def/saref4inma#needsEquipment> :Laser_Cutting_Machine_1 ;
+                                               <https://w3id.org/saref#hasProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#PhilBrau_S40_Premium_Gold_Shaver_ItemCategory
+:PhilBrau_S40_Premium_Gold_Shaver_ItemCategory rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/def/saref4inma#ItemCategory> ;
+                                               <https://w3id.org/def/saref4inma#hasIdentifier> :nr98647656 ;
+                                               <https://w3id.org/def/saref4inma#hasModelNumber> "nr98647656" ;
+                                               <https://w3id.org/def/saref4inma#isCategoryOf> :PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 ;
+                                               <https://w3id.org/def/saref4inma#isProducedBy> :Lazor_Series_8030_ProdEquipCategory ;
+                                               <https://w3id.org/saref#hasManufacturer> "PhilBrau" ;
+                                               <https://w3id.org/saref#relatesToMeasurement> :WeldMachineTempSensor1_Measurement_A10568 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Philips_screws_D2mm_L8mm_MaterialCategory
+:Philips_screws_D2mm_L8mm_MaterialCategory rdf:type owl:NamedIndividual ,
+                                                    :Screw .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Shaver10023
+:Shaver10023 rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/def/saref4inma#Item> ;
+             <https://w3id.org/def/saref4inma#isCreatedIn> :PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 ;
+             <https://w3id.org/def/saref4inma#consistsOfItem> :ShaverBody9440 ,
+                                                              :ShaverHead3002 ,
+                                                              :StepMotor083 ;
+             <https://w3id.org/def/saref4inma#hasSerialNumber> :nr7865654345676 ;
+             <https://w3id.org/def/saref4inma#isFeatureOfInterestOf> :Welding_Machine_2_Measurement_W101520 ,
+                                                                     :Welding_Machine_2_Measurement_W101521 ,
+                                                                     :Welding_Machine_2_Measurement_W101522 ,
+                                                                     :Welding_Machine_2_Measurement_W101523 ;
+             <https://w3id.org/saref#hasProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#ShaverBody9440
+:ShaverBody9440 rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/def/saref4inma#Item> ;
+                <https://w3id.org/def/saref4inma#isCreatedIn> :PhilBrau_S40-S50_Generic_Body_ItemBatch3290 ;
+                <https://w3id.org/def/saref4inma#hasSerialNumber> :UFHLEIJKFNESDKL323 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#ShaverHead3002
+:ShaverHead3002 rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/def/saref4inma#Item> ;
+                <https://w3id.org/def/saref4inma#consistsOfItem> :Steel_Sheets_RVS331_MaterialBatch311 ;
+                <https://w3id.org/def/saref4inma#hasSerialNumber> :JIDFUHWEUF323 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Start_Time_Batch392
+:Start_Time_Batch392 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#Instant> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialBatch311
+:Steel_Sheets_RVS331_MaterialBatch311 rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/def/saref4inma#MaterialBatch> ;
+                                      <https://w3id.org/def/saref4inma#belongsToCategory> :Steel_Sheets_RVS331_MaterialCategory ;
+                                      <https://w3id.org/def/saref4inma#hasCertificate> "Steel Certificate 3.1"@en ;
+                                      <https://w3id.org/def/saref4inma#hasIdentifier> :nr79009856 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Steel_Sheets_RVS331_MaterialCategory
+:Steel_Sheets_RVS331_MaterialCategory rdf:type owl:NamedIndividual ,
+                                               :SteelSheet .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#StepMotor083
+:StepMotor083 rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/def/saref4inma#Item> ;
+              <https://w3id.org/def/saref4inma#isCreatedIn> :Step_Moters_Q88_Secure_ItemBatch423 ;
+              <https://w3id.org/def/saref4inma#hasSerialNumber> :JSDFHKLSDF982374 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Step_Moters_Q88_Secure_ItemBatch423
+:Step_Moters_Q88_Secure_ItemBatch423 rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/def/saref4inma#ItemBatch> ;
+                                     <https://w3id.org/def/saref4inma#consistsOfItem> :Steel_Sheets_RVS331_MaterialBatch311 ,
+                                                                                      :Torx_screws_D2mm_L8mm_MaterialBatch323 ;
+                                     <https://w3id.org/def/saref4inma#hasIdentifier> :nr34254657687978 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Step_Motors_Q88_Secure_ItemCategory
+:Step_Motors_Q88_Secure_ItemCategory rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/def/saref4inma#ItemCategory> ;
+                                     <https://w3id.org/def/saref4inma#hasModelNumber> :nr83049304 ;
+                                     <https://w3id.org/def/saref4inma#isProducedBy> :Lazor_Series_8030_ProdEquipCategory ,
+                                                                                    :WandI_Welding_Series_1000_ProdEquipCategory .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch323
+:Torx_screws_D2mm_L8mm_MaterialBatch323 rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/def/saref4inma#MaterialBatch> ;
+                                        <https://w3id.org/def/saref4inma#belongsToCategory> :Torx_screws_D2mm_L8mm_MaterialCategory ;
+                                        <https://w3id.org/def/saref4inma#hasIdentifier> :nr74536275 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialBatch324
+:Torx_screws_D2mm_L8mm_MaterialBatch324 rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/def/saref4inma#MaterialBatch> ;
+                                        <https://w3id.org/def/saref4inma#belongsToCategory> :Torx_screws_D2mm_L8mm_MaterialCategory ;
+                                        <https://w3id.org/def/saref4inma#hasIdentifier> :nr76567876 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Torx_screws_D2mm_L8mm_MaterialCategory
+:Torx_screws_D2mm_L8mm_MaterialCategory rdf:type owl:NamedIndividual ,
+                                                 :Screw .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#UFHLEIJKFNESDKL323
+:UFHLEIJKFNESDKL323 rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/def/saref4inma#GTIN14ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#WandI_Welding_Series_1000_ProdEquipCategory
+:WandI_Welding_Series_1000_ProdEquipCategory rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/def/saref4inma#ProductionEquipmentCategory> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#WeldMachineTempSensor1_Measurement_A10568
+:WeldMachineTempSensor1_Measurement_A10568 rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/def/saref4inma#Measurement> ;
+                                           <https://w3id.org/saref#hasValue> 228 ;
+                                           <https://w3id.org/saref#isMeasuredByDevice> :WeldingMachineTemperatureSensor1 ;
+                                           <https://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+                                           <https://w3id.org/saref#relatesToProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor1
+:WeldingMachineTemperatureSensor1 rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/saref#TemperatureSensor> ;
+                                  <https://w3id.org/saref#makesMeasurement> :WeldMachineTempSensor1_Measurement_A10568 ,
+                                                                            :Welding_Machine_2_Measurement_W101520 ,
+                                                                            :Welding_Machine_2_Measurement_W101520_AVG ,
+                                                                            :Welding_Machine_2_Measurement_W101521 ,
+                                                                            :Welding_Machine_2_Measurement_W101522 ,
+                                                                            :Welding_Machine_2_Measurement_W101523 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#WeldingMachineTemperatureSensor2
+:WeldingMachineTemperatureSensor2 rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/saref#TemperatureSensor> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#WeldingTemperature
+:WeldingTemperature rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/saref#Temperature> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_1
+:Welding_Machine_1 rdf:type owl:NamedIndividual ,
+                            :WeldingMachine ;
+                   <https://w3id.org/def/saref4inma#belongsToCategory> :WandI_Welding_Series_1000_ProdEquipCategory ;
+                   <https://w3id.org/saref#controlsProperty> :WeldingTemperature ;
+                   <https://w3id.org/saref#hasFunction> :JoiningFunction .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2
+:Welding_Machine_2 rdf:type owl:NamedIndividual ,
+                            :WeldingMachine ;
+                   <https://w3id.org/def/saref4bldg#isContainedIn> :Welding_WorkCenter ;
+                   <https://w3id.org/def/saref4inma#belongsToCategory> :WandI_Welding_Series_1000_ProdEquipCategory ;
+                   <https://w3id.org/saref#consistsOf> :WeldingMachineTemperatureSensor1 ;
+                   <https://w3id.org/saref#controlsProperty> :WeldingTemperature ;
+                   <https://w3id.org/saref#hasFunction> :JoiningFunction ;
+                   <https://w3id.org/saref#makesMeasurement> :Welding_Machine_2_Measurement_W101520 ,
+                                                             :Welding_Machine_2_Measurement_W101520_AVG ,
+                                                             :Welding_Machine_2_Measurement_W101521 ,
+                                                             :Welding_Machine_2_Measurement_W101522 ,
+                                                             :Welding_Machine_2_Measurement_W101523 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520
+:Welding_Machine_2_Measurement_W101520 rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/def/saref4inma#ActualMeasurement> ;
+                                       <https://w3id.org/def/saref4inma#hasFeatureOfInterest> :Shaver10023 ;
+                                       <https://w3id.org/saref#hasTimestamp> "2019-01-28T12:11:10"^^xsd:dateTime ;
+                                       <https://w3id.org/saref#hasValue> 223 ;
+                                       <https://w3id.org/saref#isMeasuredByDevice> :WeldingMachineTemperatureSensor1 ;
+                                       <https://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+                                       <https://w3id.org/saref#relatesToProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101520_AVG
+:Welding_Machine_2_Measurement_W101520_AVG rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/def/saref4inma#ActualMeasurement> ;
+                                           <https://w3id.org/def/saref4inma#hasFeatureOfInterest> :PhilBrau_S40_Premium_Gold_Shaver_ItemBatch392 ;
+                                           <https://w3id.org/saref#hasTimestamp> "2019-01-28T12:11:40"^^xsd:dateTime ;
+                                           <https://w3id.org/saref#hasValue> 232 ;
+                                           <https://w3id.org/saref#isMeasuredByDevice> :WeldingMachineTemperatureSensor1 ;
+                                           <https://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+                                           <https://w3id.org/saref#relatesToProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101521
+:Welding_Machine_2_Measurement_W101521 rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/def/saref4inma#ActualMeasurement> ;
+                                       <https://w3id.org/def/saref4inma#hasFeatureOfInterest> :Shaver10023 ;
+                                       <https://w3id.org/saref#hasTimestamp> "2019-01-28T12:11:20"^^xsd:dateTime ;
+                                       <https://w3id.org/saref#hasValue> 228 ;
+                                       <https://w3id.org/saref#isMeasuredByDevice> :WeldingMachineTemperatureSensor1 ;
+                                       <https://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+                                       <https://w3id.org/saref#relatesToProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101522
+:Welding_Machine_2_Measurement_W101522 rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/def/saref4inma#ActualMeasurement> ;
+                                       <https://w3id.org/def/saref4inma#hasFeatureOfInterest> :Shaver10023 ;
+                                       <https://w3id.org/saref#hasTimestamp> "2019-01-28T12:11:30"^^xsd:dateTime ;
+                                       <https://w3id.org/saref#hasValue> 231 ;
+                                       <https://w3id.org/saref#isMeasuredByDevice> :WeldingMachineTemperatureSensor1 ;
+                                       <https://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+                                       <https://w3id.org/saref#relatesToProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_Machine_2_Measurement_W101523
+:Welding_Machine_2_Measurement_W101523 rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/def/saref4inma#ActualMeasurement> ;
+                                       <https://w3id.org/def/saref4inma#hasFeatureOfInterest> :Shaver10023 ;
+                                       <https://w3id.org/saref#hasTimestamp> "2019-01-28T12:11:40"^^xsd:dateTime ;
+                                       <https://w3id.org/saref#hasValue> 232 ;
+                                       <https://w3id.org/saref#isMeasuredByDevice> :WeldingMachineTemperatureSensor1 ;
+                                       <https://w3id.org/saref#isMeasuredIn> <http://www.wurvoc.org/vocabularies/om-1.8/degree_Celsius> ;
+                                       <https://w3id.org/saref#relatesToProperty> :WeldingTemperature .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#Welding_WorkCenter
+:Welding_WorkCenter rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/def/saref4inma#WorkCenter> ;
+                    <https://w3id.org/saref#consistsOf> :Laser_Cutting_Machine_1 ,
+                                                        :Welding_Machine_1 ,
+                                                        :Welding_Machine_2 .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#dateTimeStamp_1
+:dateTimeStamp_1 rdf:type owl:NamedIndividual ,
+                          xsd:dateTimeStamp .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr34254657687978
+:nr34254657687978 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/def/saref4inma#GTIN14ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr34275874234908
+:nr34275874234908 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/def/saref4inma#GTIN14ID> ;
+                  <https://w3id.org/def/saref4inma#hasIDValue> "nr34275874234908" .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr55689876777421
+:nr55689876777421 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/def/saref4inma#GTIN14ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr71324352
+:nr71324352 rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#GTIN8ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr74536275
+:nr74536275 rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#GTIN8ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr76567876
+:nr76567876 rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#GTIN8ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr7865654345676
+:nr7865654345676 rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/def/saref4inma#GTIN14ID> ;
+                 <https://w3id.org/def/saref4inma#hasIDValue> "nr7865654345676" .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr79009856
+:nr79009856 rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#GTIN8ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr82849583748573
+:nr82849583748573 rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/def/saref4inma#GTIN14ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr83049304
+:nr83049304 rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#GTIN8ID> .
+
+
+###  http://ontology.tno.nl/examples/saref4inma/shaver#nr98647656
+:nr98647656 rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/saref4inma#GTIN8ID> ;
+            <https://w3id.org/def/saref4inma#hasIDValue> "nr98647656" .
+
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
