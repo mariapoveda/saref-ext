@@ -1,0 +1,469 @@
+# baseURI: http://ontology.tno.nl/examples/saref4agri-ex1
+# imports: http://w3id.org/def/saref4agri
+
+@prefix ex: <http://ontology.tno.nl/examples/saref4agri-ex1#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#> .
+@prefix geosp: <http://www.opengis.net/ont/geosparql#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix org: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s4agri: <http://w3id.org/def/saref4agri#> .
+@prefix saref: <http://w3id.org/saref#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontology.tno.nl/examples/saref4agri-ex1>
+  rdf:type owl:Ontology ;
+  owl:imports <http://w3id.org/def/saref4agri> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+<http://ontology.tno.nl/examples/saref4agri-ex1#5-5-5_crop_fertilizer>
+  rdf:type owl:NamedIndividual ;
+.
+ex:Animalia
+  rdf:type obo:TAXRANK_0000017 ;
+  rdfs:label "Animalia"^^xsd:string ;
+.
+ex:BioCompostIntake
+  rdf:type ex:CompostIntake ;
+.
+ex:Bos_Taurus
+  rdf:type obo:TAXRANK_0000006 ;
+  rdfs:label "Bos Taurus"^^xsd:string ;
+.
+ex:Bovidae
+  rdf:type obo:TAXRANK_0000004 ;
+  rdfs:label "Bovidae"^^xsd:string ;
+.
+ex:Compartment_A
+  rdf:type s4agri:BuildingSpace ;
+  rdf:type owl:NamedIndividual ;
+  s4agri:isContainedIn ex:Milk_Cow_Barn ;
+.
+ex:Compartment_B
+  rdf:type s4agri:BuildingSpace ;
+  rdf:type owl:NamedIndividual ;
+  s4agri:isContainedIn ex:Milk_Cow_Barn ;
+.
+ex:CompostIntake
+  rdf:type owl:Class ;
+  rdfs:label "Fertilizer intake"^^xsd:string ;
+  rdfs:subClassOf s4agri:Intake ;
+.
+ex:Compost_2019-02-02
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasValue 370 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:CompostIntake ;
+.
+ex:Compost_2019-02-16
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Parcel_East ;
+  saref:hasValue 240 ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:CompostIntake ;
+.
+ex:ConcentrateIntake
+  rdf:type owl:Class ;
+  rdfs:label "Concentrate intake"^^xsd:string ;
+  rdfs:subClassOf s4agri:Intake ;
+.
+ex:Cow1
+  rdf:type ex:LactatingCow ;
+  obo:TAXRANK_1000000 ex:Animalia ;
+  obo:TAXRANK_1000000 ex:Bos_Taurus ;
+  obo:TAXRANK_1000000 ex:Bovidae ;
+  s4agri:hasBirthDate "2016-05-29"^^xsd:string ;
+  s4agri:isMemberOf ex:Cow_Group_A ;
+.
+ex:Cow2
+  rdf:type ex:LactatingCow ;
+  obo:TAXRANK_1000000 ex:Animalia ;
+  obo:TAXRANK_1000000 ex:Bos_Taurus ;
+  obo:TAXRANK_1000000 ex:Bovidae ;
+  s4agri:hasBirthDate "2016-05-22"^^xsd:string ;
+  s4agri:isMemberOf ex:Cow_Group_A ;
+.
+ex:Cow3
+  rdf:type ex:LactatingCow ;
+  obo:TAXRANK_1000000 ex:Animalia ;
+  obo:TAXRANK_1000000 ex:Bos_Taurus ;
+  obo:TAXRANK_1000000 ex:Bovidae ;
+  s4agri:hasBirthDate "2018-03-15"^^xsd:string ;
+.
+ex:Cow_1_Birth
+  rdf:type owl:NamedIndividual ;
+  rdf:type time:Instant ;
+.
+ex:Cow_2_Birth
+  rdf:type owl:NamedIndividual ;
+  rdf:type time:Instant ;
+.
+ex:Cow_2_Death
+  rdf:type owl:NamedIndividual ;
+  rdf:type time:Instant ;
+.
+ex:Cow_3_Birth
+  rdf:type owl:NamedIndividual ;
+  rdf:type time:Instant ;
+.
+ex:Cow_Activity_2019_03_01-14_00
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow3 ;
+  saref:hasValue "20"^^xsd:string ;
+  saref:isMeasuredIn time:minute ;
+  saref:relatesToProperty ex:Eating_Activity_in_minutes_per__hour ;
+.
+ex:Cow_Activity_2019_03_01-15_00
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow3 ;
+  saref:hasValue "15"^^xsd:string ;
+  saref:isMeasuredIn time:minute ;
+  saref:relatesToProperty ex:Eating_Activity_in_minutes_per__hour ;
+.
+ex:Cow_Eating_Activity_Sensor_33
+  rdf:type ex:EatingActivitySensor ;
+  rdf:type owl:NamedIndividual ;
+  saref:relatesToProperty ex:Eating_Activity_in_minutes_per__hour ;
+  <https://w3id.org/saref#makesMeasurement> ex:Cow_Activity_2019_03_01-14_00 ;
+  <https://w3id.org/saref#makesMeasurement> ex:Cow_Activity_2019_03_01-15_00 ;
+.
+ex:Cow_Group_A
+  rdf:type s4agri:AnimalGroup ;
+  s4agri:generates ex:MilkYield ;
+.
+ex:Cow_Group_B
+  rdf:type s4agri:AnimalGroup ;
+  s4agri:contains ex:Cow3 ;
+.
+ex:CropIntake
+  rdf:type owl:Class ;
+  rdfs:label "Crop intake"^^xsd:string ;
+  rdfs:subClassOf s4agri:Intake ;
+.
+ex:CropYield
+  rdf:type owl:Class ;
+  rdfs:comment "Produced crops (i.e. cultivated plant)"@en ;
+  rdfs:label "Crop Yield"^^xsd:string ;
+  rdfs:subClassOf s4agri:Yield ;
+  ;
+.
+
+ex:Cyperales
+  rdf:type obo:TAXRANK_0000003 ;
+  rdfs:label "Cyperales"^^xsd:string ;
+.
+ex:EatingActivitySensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
+.
+ex:Eating_Activity_in_minutes_per__hour
+  rdf:type s4agri:Property ;
+.
+ex:EggYield
+  rdf:type owl:Class ;
+  rdfs:label "Egg Yield"^^xsd:string ;
+  rdfs:subClassOf s4agri:Yield ;
+.
+ex:FarmHolding
+  rdf:type owl:Class ;
+  rdfs:comment "An organization specialized in farming."^^xsd:string ;
+  rdfs:label "Farmer holding"^^xsd:string ;
+  rdfs:subClassOf org:Organization ;
+.
+ex:Farm_Jansen_and_Sons_Eindhoven
+  rdf:type geosp:Feature ;
+  rdf:type owl:NamedIndividual ;
+  s4agri:contains ex:Heated_Glass_Greenhouse ;
+  s4agri:contains ex:Milk_Cow_Barn ;
+  s4agri:contains ex:Parcel_East ;
+  s4agri:contains ex:Parcel_North ;
+  s4agri:contains ex:Parcel_South ;
+  s4agri:contains ex:Parcel_West ;
+.
+ex:Farmer
+  rdf:type owl:Class ;
+  rdfs:comment "A Person which is a farmer as profession"^^xsd:string ;
+  rdfs:label "Farmer"^^xsd:string ;
+  rdfs:subClassOf foaf:Person ;
+.
+ex:FarmingBuilding
+  rdf:type owl:Class ;
+  rdfs:comment "A building specialized for farming purposes."^^xsd:string ;
+  rdfs:label "Farming building"^^xsd:string ;
+  rdfs:subClassOf s4agri:Building ;
+.
+ex:Greenhouse
+  rdf:type owl:Class ;
+  rdfs:comment "A glass building in which crops that need protection from cold weather are grown."^^xsd:string ;
+  rdfs:label "Greenhouse"^^xsd:string ;
+  rdfs:subClassOf s4agri:Building ;
+.
+<http://ontology.tno.nl/examples/saref4agri-ex1#H._Jansen>
+  rdf:type ex:Farmer ;
+  s4agri:isMemberOf ex:Jansen_and_Sons ;
+  s4agri:hasName "Hendricus Jansen"@en ;
+.
+ex:Heated_Glass_Greenhouse
+  rdf:type ex:Greenhouse ;
+.
+ex:Humidity_Percentage
+  rdf:type owl:NamedIndividual ;
+.
+ex:Intake_Sugar_Corn
+  rdf:type ex:CropIntake ;
+.
+<http://ontology.tno.nl/examples/saref4agri-ex1#J._Jansen>
+  rdf:type ex:Farmer ;
+  s4agri:isMemberOf ex:Jansen_and_Sons ;
+  s4agri:hasName "Johannes Jansen"@en ;
+.
+ex:Jansen_and_Sons
+  rdf:type ex:FarmHolding ;
+  s4agri:managesFarm ex:Farm_Jansen_and_Sons_Eindhoven ;
+.
+ex:Kilogram
+  rdf:type saref:Property ;
+  rdf:type owl:NamedIndividual ;
+.
+ex:LactatingCow
+  rdf:type owl:Class ;
+  rdfs:comment "A domesticated cow specialized for the production of milk."^^xsd:string ;
+  rdfs:label "Milk cow"^^xsd:string ;
+  rdfs:subClassOf s4agri:Animal ;
+.
+
+
+ex:MeatYield
+  rdf:type owl:Class ;
+  rdfs:label "Meat Yield"^^xsd:string ;
+  rdfs:subClassOf s4agri:Yield ;
+  ;
+.
+
+
+ex:Milk
+  rdf:type ex:MilkYield ;
+  rdf:type owl:NamedIndividual ;
+.
+ex:MilkYield
+  rdf:type owl:Class ;
+  rdfs:label "Milk Yield"^^xsd:string ;
+  rdfs:subClassOf s4agri:Yield ;
+.
+ex:MilkYieldSensor
+  rdf:type ex:MilkingSensor ;
+  saref:measuresProperty ex:MilkYield ;
+  <https://w3id.org/saref#makesMeasurement> ex:Milk_Yield_2019-03-01_1 ;
+  <https://w3id.org/saref#makesMeasurement> ex:Milk_Yield_2019-03-01_2 ;
+  <https://w3id.org/saref#makesMeasurement> ex:Milk_Yield_2019-03-02_1 ;
+  <https://w3id.org/saref#makesMeasurement> ex:Milk_Yield_2019-03-02_2 ;
+  <https://w3id.org/saref#makesMeasurement> ex:Milk_Yield_2019-03-03_1 ;
+  <https://w3id.org/saref#makesMeasurement> ex:Milk_Yield_2019-03-03_2 ;
+.
+ex:Milk_Cow_Barn
+  rdf:type ex:FarmingBuilding ;
+.
+ex:Milk_Cow_Meat
+  rdf:type ex:MeatYield ;
+.
+ex:Milk_Yield_2019-03-01_1
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow_Group_A ;
+  saref:hasValue "4,7"@en ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:MilkYield ;
+.
+ex:Milk_Yield_2019-03-01_2
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow_Group_A ;
+  saref:hasValue "3,9"@en ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:MilkYield ;
+.
+ex:Milk_Yield_2019-03-02_1
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow_Group_A ;
+  saref:hasValue "2,1"@en ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:MilkYield ;
+.
+ex:Milk_Yield_2019-03-02_2
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow_Group_A ;
+  saref:hasValue "2,7"@en ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:MilkYield ;
+.
+ex:Milk_Yield_2019-03-03_1
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow_Group_B ;
+  saref:hasValue "5,2"@en ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:MilkYield ;
+.
+ex:Milk_Yield_2019-03-03_2
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Cow_Group_B ;
+  saref:hasValue "3,7"@en ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Liter> ;
+  saref:relatesToProperty ex:MilkYield ;
+.
+ex:MilkingSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
+.
+ex:Milking_Machine
+  rdf:type <https://w3id.org/saref#Device> ;
+  rdfs:label "Milking Machine"^^xsd:string ;
+  <https://w3id.org/saref#consistsOf> ex:MilkYieldSensor ;
+.
+ex:Minutes
+  rdf:type saref:Time ;
+  rdf:type owl:NamedIndividual ;
+.
+ex:MovementActivitySensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
+.
+ex:Parcel_East
+  rdf:type s4agri:Parcel ;
+  s4agri:contains ex:Sugar_Snaps_1 ;
+  s4agri:hasName "Field Frontyard"^^xsd:string ;
+  s4agri:receives ex:Compost_2019-02-16 ;
+.
+ex:Parcel_North
+  rdf:type s4agri:Parcel ;
+  s4agri:contains ex:Cow_Group_A ;
+  s4agri:hasName "Grazing Plot"^^xsd:string ;
+.
+ex:Parcel_South
+  rdf:type s4agri:Parcel ;
+.
+ex:Parcel_West
+  rdf:type s4agri:Parcel ;
+  s4agri:contains ex:Sweet_Corn_2 ;
+  s4agri:receives ex:Compost_2019-02-02 ;
+.
+<http://ontology.tno.nl/examples/saref4agri-ex1#Pisum_sativum_var._macrocarpon_Ser.>
+  rdf:type obo:TAXRANK_0000016 ;
+  rdfs:label "Pisum sativum var. macrocarpon Ser."^^xsd:string ;
+.
+ex:Plantae
+  rdf:type obo:TAXRANK_0000017 ;
+  rdfs:label "Plantae"^^xsd:string ;
+.
+ex:Rosanae_Fabales
+  rdf:type obo:TAXRANK_0000003 ;
+  rdfs:label "Rosanae Fabales"^^xsd:string ;
+.
+ex:Soil_Acidity
+  rdf:type s4agri:Property ;
+  rdf:type <https://w3id.org/saref#Property> ;
+  rdfs:label "Acidity"^^xsd:string ;
+.
+ex:Soil_Acidity_2019_03_04
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Parcel_East ;
+  saref:hasValue "7.4"^^xsd:string ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Acidity> ;
+  saref:relatesToProperty ex:Soil_Acidity ;
+.
+ex:Soil_Acidity_2019_03_05
+  rdf:type <https://w3id.org/saref#Measurement> ;
+  saref:hasFeatureOfInterest ex:Parcel_East ;
+  saref:hasValue "7.5"^^xsd:string ;
+  saref:isMeasuredIn <http://www.wurvoc.org/vocabularies/om-1.8/Acidity> ;
+  saref:relatesToProperty ex:Soil_Acidity ;
+.
+ex:Soil_Measurement_Deployment
+  rdf:type s4agri:Deployment ;
+  s4agri:hasDeploymentPeriod time:unitYear ;
+  s4agri:isDeployedAtSpace ex:Parcel_East ;
+  rdfs:label "Soil Measurement Deployment"^^xsd:string ;
+  ssn:deployedOnPlatform ex:Soil_Platform ;
+  ssn:deployedSystem ex:Soil_Sensor ;
+.
+ex:Soil_Platform
+  rdf:type s4agri:Platform ;
+  rdfs:label "Soil Platform"^^xsd:string ;
+.
+ex:Soil_Sensor
+  rdf:type <https://w3id.org/saref#Sensor> ;
+  saref:measuresProperty ex:Humidity_Percentage ;
+  saref:measuresProperty ex:Soil_Acidity ;
+  <https://w3id.org/saref#makesMeasurement> ex:Soil_Acidity_2019_03_04 ;
+  <https://w3id.org/saref#makesMeasurement> ex:Soil_Acidity_2019_03_05 ;
+.
+ex:Storage_Barn
+  rdf:type ex:FarmingBuilding ;
+.
+ex:Sugar_Corn_Yield
+  rdf:type s4agri:Yield ;
+.
+ex:Sugar_Snaps_1
+  rdf:type s4agri:Crop ;
+  obo:TAXRANK_1000000 <http://ontology.tno.nl/examples/saref4agri-ex1#Pisum_sativum_var._macrocarpon_Ser.> ;
+  obo:TAXRANK_1000000 ex:Plantae ;
+.
+ex:Sweet_Corn_1
+  rdf:type s4agri:Crop ;
+  obo:TAXRANK_1000000 ex:Plantae ;
+  obo:TAXRANK_1000000 ex:Rosanae_Fabales ;
+  obo:TAXRANK_1000000 <http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.> ;
+.
+ex:Sweet_Corn_2
+  rdf:type s4agri:Crop ;
+  obo:TAXRANK_1000000 ex:Plantae ;
+  obo:TAXRANK_1000000 ex:Rosanae_Fabales ;
+  obo:TAXRANK_1000000 <http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.> ;
+.
+ex:Vermicompost
+  rdf:type owl:NamedIndividual ;
+.
+<http://ontology.tno.nl/examples/saref4agri-ex1#Zea_mays_L.>
+  rdf:type obo:TAXRANK_0000006 ;
+  rdfs:label "Zea mays L."^^xsd:string ;
+.
+s4agri:Location
+  rdf:type owl:ObjectProperty ;
+.
+s4agri:hasID
+  rdf:type owl:ObjectProperty ;
+.
+s4agri:hasMember
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "has member"^^xsd:string ;
+.
+s4agri:hasPlantDate
+  rdf:type owl:ObjectProperty ;
+.
+s4agri:hasSpace
+  rdf:type owl:ObjectProperty ;
+.
+s4agri:isProducedBy
+  rdf:type owl:ObjectProperty ;
+.
+
+s4agri:managesFarm
+  rdf:type owl:ObjectProperty ;
+
+.
+s4agri:receives
+  rdf:type owl:ObjectProperty ;
+.
+saref:hasFeatureOfInterest
+  owl:inverseOf saref:isFeatureOfInterestOf ;
+.
+<http://www.wurvoc.org/vocabularies/om-1.8/Acidity>
+  rdf:type <https://w3id.org/saref#UnitOfMeasure> ;
+  rdfs:comment "pH is a scale used to specify how acidic or basic a water-based solution is. Acidic solutions have a lower pH, basic solutions have a higher pH. At room temperature, pure water is neither acidic nor basic and has a pH of 7."^^xsd:string ;
+  rdfs:label "ph"^^xsd:string ;
+.
+<http://www.wurvoc.org/vocabularies/om-1.8/Liter>
+  rdf:type <https://w3id.org/saref#UnitOfMeasure> ;
+.
