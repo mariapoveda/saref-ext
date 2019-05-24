@@ -14,13 +14,15 @@
         <owl:versionIRI rdf:resource="https://w3id.org/def/v1/saref4city"/>
         <dc:description xml:lang="en">This ontology extends the SAREF ontology for the Smart City domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart City domain.</dc:description>
         <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
+        <dc:publisher rdf:resource="https://www.etsi.org/"/>
         <dc:title xml:lang="en">SAREF extension for Smart City</dc:title>
         <terms:creator rdf:resource="http://w3id.org/people/mpoveda"/>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <terms:creator rdf:resource="https://www.linkedin.com/in/paolaespinoza-arias/"/>
+        <terms:source rdf:resource="https://www.etsi.org/deliver/etsi_ts/103400_103499/10341004/01.01.01_60/ts_10341004v010101p.pdf"/>
         <vann:preferredNamespacePrefix>s4city</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/saref4city#</vann:preferredNamespaceUri>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -76,6 +78,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
     
 
 
