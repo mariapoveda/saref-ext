@@ -680,16 +680,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                   rdfs:label "Organization"@en .
 
 
-###  https://w3id.org/def/saref4agri#AirTemperature
-:AirTemperature rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/saref#Temperature> .
-
-
-###  https://w3id.org/def/saref4agri#AmbientHumidity
-:AmbientHumidity rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/saref#Humidity> .
-
-
 ###  https://w3id.org/def/saref4agri#Animal
 :Animal rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/saref#FeatureOfInterest> ,
@@ -733,20 +723,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :AnimalGroup rdf:type owl:Class ;
              rdfs:subClassOf <https://w3id.org/saref#FeatureOfInterest> ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :generates ;
-                               owl:someValuesFrom :Yield
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasMember ;
                                owl:someValuesFrom :Animal
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :isLocatedIn ;
                                owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Feature>
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :receives ;
-                               owl:someValuesFrom :Intake
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasName ;
@@ -785,14 +767,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                       [ rdf:type owl:Restriction ;
                         owl:onProperty <http://purl.obolibrary.org/obo/TAXRANK_1000000> ;
                         owl:someValuesFrom <http://purl.obolibrary.org/obo/TAXRANK_0000000>
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :generates ;
-                        owl:someValuesFrom :Yield
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :receives ;
-                        owl:someValuesFrom :Intake
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasHarvestDate ;
@@ -890,18 +864,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     rdfs:label "ID" .
 
 
-###  https://w3id.org/def/saref4agri#Intake
-:Intake rdf:type owl:Class ;
-        rdfs:subClassOf <https://w3id.org/saref#Property> ;
-        rdfs:isDefinedBy "The amount of food or other substance taken into the body of an animal or into the soil."@en ;
-        rdfs:label "Intake"@en .
-
-
-###  https://w3id.org/def/saref4agri#IrrigationWater
-:IrrigationWater rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/saref#Property> .
-
-
 ###  https://w3id.org/def/saref4agri#MilkingSensor
 :MilkingSensor rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
@@ -930,11 +892,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         rdfs:label "Parcel" .
 
 
-###  https://w3id.org/def/saref4agri#PlantGrowthStage
-:PlantGrowthStage rdf:type owl:Class ;
-                  rdfs:subClassOf <https://w3id.org/saref#Property> .
-
-
 ###  https://w3id.org/def/saref4agri#Platform
 :Platform rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
@@ -948,26 +905,11 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
              rdfs:label "Pluviometer"@en .
 
 
-###  https://w3id.org/def/saref4agri#Precipitation
-:Precipitation rdf:type owl:Class ;
-               rdfs:subClassOf <https://w3id.org/saref#Property> .
-
-
 ###  https://w3id.org/def/saref4agri#Soil
 :Soil rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/saref#FeatureOfInterest> ;
       rdfs:comment "Upper layer of the earth in which plants grow." ;
       rdfs:label "Soil" .
-
-
-###  https://w3id.org/def/saref4agri#SoilMoisture
-:SoilMoisture rdf:type owl:Class ;
-              rdfs:subClassOf <https://w3id.org/saref#Property> .
-
-
-###  https://w3id.org/def/saref4agri#SoilTemperature
-:SoilTemperature rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/saref#Temperature> .
 
 
 ###  https://w3id.org/def/saref4agri#SoilTensiometer
@@ -1014,13 +956,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 :WeightSensor rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/saref#Sensor> ;
               rdfs:label "Weight sensor"@en .
-
-
-###  https://w3id.org/def/saref4agri#Yield
-:Yield rdf:type owl:Class ;
-       rdfs:subClassOf <https://w3id.org/saref#Property> ;
-       rdfs:isDefinedBy "The produced amount of food for animals or of agricultural products."@en ;
-       rdfs:label "Yield"@en .
 
 
 ###  https://w3id.org/saref#Actuator
@@ -1243,37 +1178,52 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
 ###  https://w3id.org/def/saref4agri#AirTemperature
 :AirTemperature rdf:type owl:NamedIndividual ,
-                         <https://w3id.org/saref#Temperature> .
+                         <https://w3id.org/saref#Temperature> ;
+                rdfs:comment "The degree or intensity of heat present in the air." ;
+                rdfs:label "Air temperature"@en .
 
 
 ###  https://w3id.org/def/saref4agri#AmbientHumidity
 :AmbientHumidity rdf:type owl:NamedIndividual ,
-                          <https://w3id.org/saref#Humidity> .
+                          <https://w3id.org/saref#Humidity> ;
+                 rdfs:comment "The amount of water vapour in the air." ;
+                 rdfs:label "Ambient huidity"@en ,
+                            "Ambient humidity"@en .
 
 
 ###  https://w3id.org/def/saref4agri#IrrigationWater
 :IrrigationWater rdf:type owl:NamedIndividual ,
-                          <https://w3id.org/saref#Property> .
+                          <https://w3id.org/saref#Property> ;
+                 rdfs:comment "The amount of water falling in the soil by irrigation methods." ;
+                 rdfs:label "Irrigation water"@en .
 
 
 ###  https://w3id.org/def/saref4agri#PlantGrowthStage
 :PlantGrowthStage rdf:type owl:NamedIndividual ,
-                           <https://w3id.org/saref#Property> .
+                           <https://w3id.org/saref#Property> ;
+                  rdfs:comment "The level or stage of growth of the plant." ;
+                  rdfs:label "Plant growth stage"@en .
 
 
 ###  https://w3id.org/def/saref4agri#Precipitation
 :Precipitation rdf:type owl:NamedIndividual ,
-                        <https://w3id.org/saref#Property> .
+                        <https://w3id.org/saref#Property> ;
+               rdfs:comment "The amount of water falling in the soil by natural process (e.g. rain)." ;
+               rdfs:label "Precipitation"@en .
 
 
 ###  https://w3id.org/def/saref4agri#SoilMoisture
 :SoilMoisture rdf:type owl:NamedIndividual ,
-                       <https://w3id.org/saref#Property> .
+                       <https://w3id.org/saref#Property> ;
+              rdfs:comment "The amount of water or humidity contained in the soil." ;
+              rdfs:label "Soil moisture"@en .
 
 
 ###  https://w3id.org/def/saref4agri#SoilTemperature
 :SoilTemperature rdf:type owl:NamedIndividual ,
-                          <https://w3id.org/saref#Temperature> .
+                          <https://w3id.org/saref#Temperature> ;
+                 rdfs:comment "The degree or intensity of heat present in the soil." ;
+                 rdfs:label "Soil temperature"@en .
 
 
 #################################################################
@@ -1291,33 +1241,12 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                                                    rdfs:label "location"@en .
 
 
-:AirTemperature rdfs:comment "The degree or intensity of heat present in the air." ;
-                rdfs:label "Air temperature"@en .
+:Intake rdfs:comment "The amount of food or other substance taken into the body of an animal or into the soil."@en ;
+        rdfs:label "Intake"@en .
 
 
-:AmbientHumidity rdfs:comment "The amount of water vapour in the air." ;
-                 rdfs:label "Ambient huidity"@en ,
-                            "Ambient humidity"@en .
-
-
-:IrrigationWater rdfs:comment "The amount of water falling in the soil by irrigation methods." ;
-                 rdfs:label "Irrigation water"@en .
-
-
-:PlantGrowthStage rdfs:comment "The level or stage of growth of the plant." ;
-                  rdfs:label "Plant growth stage"@en .
-
-
-:Precipitation rdfs:comment "The amount of water falling in the soil by natural process (e.g. rain)." ;
-               rdfs:label "Precipitation"@en .
-
-
-:SoilMoisture rdfs:comment "The amount of water or humidity contained in the soil." ;
-              rdfs:label "Soil moisture"@en .
-
-
-:SoilTemperature rdfs:comment "The degree or intensity of heat present in the soil." ;
-                 rdfs:label "Soil temperature"@en .
+:Yield rdfs:comment "The produced amount of food for animals or of agricultural products."@en ;
+       rdfs:label "Yield"@en .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
