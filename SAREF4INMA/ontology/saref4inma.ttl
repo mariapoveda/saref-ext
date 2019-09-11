@@ -77,11 +77,27 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  https://w3id.org/def/saref4bldg#contains
-<https://w3id.org/def/saref4bldg#contains> rdf:type owl:ObjectProperty .
+<https://w3id.org/def/saref4bldg#contains> rdf:type owl:ObjectProperty ;
+                                           rdfs:comment "A relation between a physical space and the objects located in such space" ;
+                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                           rdfs:label "contains" .
 
 
 ###  https://w3id.org/def/saref4bldg#hasSpace
-<https://w3id.org/def/saref4bldg#hasSpace> rdf:type owl:ObjectProperty .
+<https://w3id.org/def/saref4bldg#hasSpace> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <https://w3id.org/def/saref4bldg#isSpaceOf> ;
+                                           rdf:type owl:TransitiveProperty ;
+                                           rdfs:comment "Relation between a building or a building space and the spaces it can be divided into" ;
+                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                           rdfs:label "has space" .
+
+
+###  https://w3id.org/def/saref4bldg#isSpaceOf
+<https://w3id.org/def/saref4bldg#isSpaceOf> rdf:type owl:ObjectProperty ,
+                                                     owl:TransitiveProperty ;
+                                            rdfs:comment "Relation between a building space and the building or building space it belongs to" ;
+                                            rdfs:isDefinedBy "https://w3id.org/def/saref4bldg#" ;
+                                            rdfs:label "isSpaceOf" .
 
 
 ###  https://w3id.org/def/saref4inma#belongsToCategory
@@ -213,24 +229,38 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/saref#consistsOf
-<https://w3id.org/saref#consistsOf> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#consistsOf> rdf:type owl:ObjectProperty ;
+                                    rdfs:comment "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
+                                    rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                    rdfs:label "consists of" .
 
 
 ###  https://w3id.org/saref#hasFunction
-<https://w3id.org/saref#hasFunction> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#hasFunction> rdf:type owl:ObjectProperty ;
+                                     rdfs:comment "A relationship identifying the type of function of a device" ;
+                                     rdfs:isDefinedBy <https://w3id.org/saref> ;
+                                     rdfs:label "has Function" .
 
 
 ###  https://w3id.org/saref#hasState
 <https://w3id.org/saref#hasState> rdf:type owl:ObjectProperty ;
+                                  rdfs:comment "A relationship identifying the type of state of a device" ;
+                                  rdfs:isDefinedBy <https://w3id.org/saref#> ;
                                   rdfs:label "has state" .
 
 
 ###  https://w3id.org/saref#makesMeasurement
-<https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#makesMeasurement> rdf:type owl:ObjectProperty ;
+                                          rdfs:comment "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates." ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref> ;
+                                          rdfs:label "makes measurement" .
 
 
 ###  https://w3id.org/saref#measuresProperty
-<https://w3id.org/saref#measuresProperty> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#measuresProperty> rdf:type owl:ObjectProperty ;
+                                          rdfs:comment "A relationship specifying the Property that can be measured by a certain Device" ;
+                                          rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                          rdfs:label "measures property" .
 
 
 #################################################################
@@ -364,8 +394,7 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/saref4inma#Batch
 :Batch rdf:type owl:Class ;
-       rdfs:subClassOf owl:Thing ,
-                       <https://w3id.org/saref#FeatureOfInterest> ,
+       rdfs:subClassOf <https://w3id.org/saref#FeatureOfInterest> ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :consistsOfBatch ;
                          owl:allValuesFrom :Batch
@@ -461,10 +490,6 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :consistsOfItem ;
                         owl:allValuesFrom :Item
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasIdentifier ;
-                        owl:allValuesFrom :ID
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :isCreatedIn ;
@@ -585,8 +610,7 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/saref4inma#ProductionEquipment
 :ProductionEquipment rdf:type owl:Class ;
-                     rdfs:subClassOf <https://w3id.org/def/s4bldg#PhysicalObject> ,
-                                     <https://w3id.org/saref#Device> ,
+                     rdfs:subClassOf <https://w3id.org/saref#Device> ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty :belongsToCategory ;
                                        owl:allValuesFrom :ProductionEquipmentCategory
@@ -679,6 +703,16 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/def/s4bldg#PhysicalObject> ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <https://w3id.org/saref#makesMeasurement> ;
+                                                  owl:allValuesFrom <https://w3id.org/saref#Measurement>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <https://w3id.org/saref#hasFunction> ;
+                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass <https://w3id.org/saref#Function>
+                                                ] ;
                                 rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended" ;
                                 rdfs:isDefinedBy <https://w3id.org/saref> ;
                                 rdfs:label "Device" .
@@ -697,6 +731,10 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/saref#Measurement
 <https://w3id.org/saref#Measurement> rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasFeatureOfInterest ;
+                                                       owl:allValuesFrom <https://w3id.org/saref#FeatureOfInterest>
+                                                     ] ;
                                      rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement." ;
                                      rdfs:isDefinedBy <https://w3id.org/saref> ;
                                      rdfs:label "Measurement" .
