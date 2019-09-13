@@ -63,7 +63,7 @@ vtc:TestSuite rdf:type owl:Class .
 
 ###  http://vicinity.iot.linkeddata.es/vicinity/testing/testsuite-saref.ttl#Test66
 :Test66 rdf:type owl:NamedIndividual ;
-        vtc:desiredBehaviour "tampingMachine subclassOf hasFunction only Function"^^xsd:string ;
+        vtc:desiredBehaviour "StampingMachine subclassOf hasFunction only Function"^^xsd:string ;
         <http://purl.org/dc/elements/1.1/description> "What are the capabilities of the Schäfer ABS1200 stamping machine?" ;
         dcterms:subject "Machine" ;
         vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
@@ -146,14 +146,6 @@ vtc:TestSuite rdf:type owl:Class .
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test15
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test15> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf belongsToCategory only ItemCategory"^^xsd:string ,
-                                                                                                                  "ItemCategory subClassOf isProducedBy only ProductionEquipmentCategory"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which machines were involved in manufacturing the product?" ;
-                                                                                             dcterms:subject "Machine" ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test16
@@ -177,7 +169,8 @@ vtc:TestSuite rdf:type owl:Class .
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test19
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test19> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Item subClassOf isCreatedIn only Batch"^^xsd:string ;
+                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf belongsToCategory only ItemCategory"^^xsd:string ,
+                                                                                                                  "ItemCategory subClassOf isProducedBy only ProductionEquipmentCategory"^^xsd:string ;
                                                                                              <http://purl.org/dc/elements/1.1/description> "Which machines were involved in manufacturing the product?" ;
                                                                                              dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
@@ -190,16 +183,6 @@ vtc:TestSuite rdf:type owl:Class .
                                                                                             <http://purl.org/dc/elements/1.1/description> "Which parts does the product consists of?" ;
                                                                                             dcterms:subject "Product" ;
                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test20
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test20> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "MaterialBatch type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What types of batches are in a factory?" ;
-                                                                                             dcterms:subject "Machine" ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test21
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test21> rdf:type owl:NamedIndividual ,
@@ -224,27 +207,12 @@ vtc:TestSuite rdf:type owl:Class .
                                                                                                       vtc:TestCaseDesign ;
                                                                                              vtc:desiredBehaviour "Batch subclassOf hasSize max 1 Size"^^xsd:string ,
                                                                                                                   "Batch subclassOf needsEquipment only ProductionEquipment"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What attributes has a production batch?" ;
-                                                                                             dcterms:subject "Machine" ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test24
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test24> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Batch subclassOf hasIdentifier only ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production batch is identified by a GTIN" ;
-                                                                                             dcterms:subject "Machine" ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test25
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test25> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
                                                                                              vtc:desiredBehaviour "Batch subclassOf hasIdentifier only ID"^^xsd:string ;
                                                                                              <http://purl.org/dc/elements/1.1/description> "What attributes has a production batch?" ;
                                                                                              dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test26
@@ -538,6 +506,7 @@ vtc:TestSuite rdf:type owl:Class .
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test56
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test56> rdf:type owl:NamedIndividual ;
                                                                                              vtc:desiredBehaviour "Material subclassOf hasBatch only Batch"^^xsd:string ;
+                                                                                             vtc:desiredBehaviour "Material subclassOf hasValue only Value"^^xsd:string ;
                                                                                              <http://purl.org/dc/elements/1.1/description> "When can data be attributed to incoming material?" ;
                                                                                              dcterms:subject "Material" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
@@ -552,12 +521,6 @@ vtc:TestSuite rdf:type owl:Class .
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test58
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test58> rdf:type owl:NamedIndividual ;
-                                                                                             vtc:desiredBehaviour "Material subclassOf hasValue only Value"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "When can data be attributed to incoming material?" ;
-                                                                                             dcterms:subject "Material" ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test59
