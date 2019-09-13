@@ -374,7 +374,7 @@ vtc:TestSuite rdf:type owl:Class .
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test42
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test42> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf isCreatedIn some Batch"^^xsd:string ;
+                                                                                             vtc:desiredBehaviour "Batch subClassOf needsEquipment only ProductionEquipment"^^xsd:string ;
                                                                                              <http://purl.org/dc/elements/1.1/description> "What production batch is the machine working on?" ;
                                                                                              dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
