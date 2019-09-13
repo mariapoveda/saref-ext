@@ -27,6 +27,9 @@ dcterms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
+dcterms:subject rdf:type owl:AnnotationProperty .
+
+###  http://purl.org/dc/terms/source
 dcterms:source rdf:type owl:AnnotationProperty .
 
 
@@ -58,82 +61,36 @@ vtc:TestSuite rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test56
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test56> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "MouldingMachine subclassOf hasState only State"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "Which machine states exist for the Schäfer ABS1200 stamping machine?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+###  http://vicinity.iot.linkeddata.es/vicinity/testing/testsuite-saref.ttl#Test66
+:Test66 rdf:type owl:NamedIndividual ;
+        vtc:desiredBehaviour "tampingMachine subclassOf hasFunction only Function"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "What are the capabilities of the Schäfer ABS1200 stamping machine?" ;
+        dcterms:subject "Machine" ;
+        vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test57
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test57> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "StampingMachine subclassOf hasState only State"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "What is the actual value of the operationalmachine state of the Schäfer ABS1200?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+###  http://vicinity.iot.linkeddata.es/vicinity/testing/testsuite-saref.ttl#Test67
+:Test67 rdf:type owl:NamedIndividual ;
+        vtc:desiredBehaviour "ProductionEquipment subclassOf consistsOf some Variable"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Every production equipment can be composed of variables" ;
+        dcterms:subject "Product" ;
+        vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test58
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test58> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "Variable subclassOf hasValue only Value"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "Which are the attributes of a variable?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+###  http://vicinity.iot.linkeddata.es/vicinity/testing/testsuite-saref.ttl#Test68
+:Test68 rdf:type owl:NamedIndividual ;
+        vtc:desiredBehaviour "Shaver type Product"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "A shaver is a type of product." ;
+        dcterms:subject "Product" ;
+        vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test59
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test59> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "Material subclassOf hasBatch only Batch"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "When can data be attributed to incoming material?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test60
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test60> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "Material subclassOf hasValue only Value"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "When can data be attributed to incoming material?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test61
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test61> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "Material subclassOf isRelatedTo some Batch"^^xsd:string ,
-                                                                       "Material subclassOf isRelatedTo some Item"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "Does the data relate to the material as whole?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test62
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test62> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "ItemBatch subclassOf belongsTo only ItemCategory"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "Products can be distinguished in categories" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test63
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test63> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "Shaver subClassOf hasManufacturer only string"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "What attributes has a shaver?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test64
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test64> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "Shaver subClassOf hasSupplier only string"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "What attributes has a shaver?" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test65
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test65> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "ID  type Class"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "A GTIN may be encoded in EAN/UPC, ITF-14, GS1-128, GS1 DataBar, and GS1 DataMatrix symbols or EPCs." ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test68
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test68> rdf:type owl:NamedIndividual ;
-                                                  vtc:desiredBehaviour "Factory subclassOf hasSpace only Site"^^xsd:string ;
-                                                  <http://purl.org/dc/elements/1.1/description> "A site is located in a factory" ;
-                                                  vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+###  http://vicinity.iot.linkeddata.es/vicinity/testing/testsuite-saref.ttl#Test69
+:Test69 rdf:type owl:NamedIndividual ;
+        vtc:desiredBehaviour "WorkCenter subclassOf consistsOf only ProductionEquipment"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Each process cell can contain units" ;
+        dcterms:subject "Factory" ;
+        vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test1
@@ -141,448 +98,536 @@ vtc:TestSuite rdf:type owl:Class .
                                                                                                      vtc:TestCaseDesign ;
                                                                                             vtc:desiredBehaviour "ControlModules type Class"^^xsd:string ;
                                                                                             <http://purl.org/dc/elements/1.1/description> "Control modules are equipment in the physical model that can carry out basic control" ;
+                                                                                            dcterms:subject "Factory" ;
                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test10
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test10> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipmentCategory subClassOf hasVersion max 1 string"^^xsd:string ;
+                                                                                             vtc:desiredBehaviour "ItemCategory subClassOf hasVersion max 1 string"^^xsd:string ,
+                                                                                                                  "ProductionEquipmentCategory subClassOf hasVersion max 1 string"^^xsd:string ;
                                                                                              <http://purl.org/dc/elements/1.1/description> "Each product and machine has its correspondents updates and upgrades." ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test11
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test11> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ItemCategory subClassOf hasVersion max 1 string"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Each product and machine has its correspondents updates and upgrades." ;
+                                                                                             dcterms:subject "Product" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test12
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test12> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "GTIN14ID subClassOf ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "GTINs can be 8, 12, 13, or 14 digits in length" ,
-                                                                                                                                           "How is GTIN constructed?" ;
+                                                                                             vtc:desiredBehaviour "GTIN12ID subClassOf ID"^^xsd:string ,
+                                                                                                                  "GTIN13ID subClassOf ID"^^xsd:string ,
+                                                                                                                  "GTIN14ID subClassOf ID"^^xsd:string ,
+                                                                                                                  "GTIN8ID subClassOf ID"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "GTINs can be 8, 12, 13, or 14 digits in length" ;
+                                                                                             dcterms:subject "Product" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test13
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test13> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "GTIN8ID subClassOf ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "GTINs can be 8, 12, 13, or 14 digits in length" ,
-                                                                                                                                           "How is GTIN constructed?" ;
+                                                                                             vtc:desiredBehaviour "GTIN12ID subClassOf ID"^^xsd:string ,
+                                                                                                                  "GTIN13ID subClassOf ID"^^xsd:string ,
+                                                                                                                  "GTIN14ID subClassOf ID"^^xsd:string ,
+                                                                                                                  "GTIN8ID subClassOf ID"^^xsd:string ,
+                                                                                                                  "Shaver type Item"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "How is GTIN constructed?" ;
+                                                                                             dcterms:subject "Product" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test14
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test14> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "GTIN13ID subClassOf ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "GTINs can be 8, 12, 13, or 14 digits in length" ,
-                                                                                                                                           "How is GTIN constructed?" ;
+                                                                                             vtc:desiredBehaviour "Item subClassOf hasIdentifier only ID"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Any new product requires the assignment of a new GTIN." ;
+                                                                                             dcterms:subject "Product" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test15
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test15> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "GTIN12ID subClassOf ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "GTINs can be 8, 12, 13, or 14 digits in length" ,
-                                                                                                                                           "How is GTIN constructed?" ;
+                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf belongsToCategory only ItemCategory"^^xsd:string ,
+                                                                                                                  "ItemCategory subClassOf isProducedBy only ProductionEquipmentCategory"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Which machines were involved in manufacturing the product?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test16
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test16> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Shaver type Item"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "A shaver is a type of product." ;
+                                                                                             vtc:desiredBehaviour "Item subClassOf hasIdentifier only ID"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A product shall have an identifier" ;
+                                                                                             dcterms:subject "Product" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test17
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test17> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Item subClassOf hasIdentifier only ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "A product shall have an identifier" ,
-                                                                                                                                           "Any new product requires the assignment of a new GTIN." ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test18
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test18> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ItemCategory subClassOf isProducedBy only ProductionEquipmentCategory"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which machines were involved in manufacturing the product?" ;
+                                                                                             vtc:desiredBehaviour "EquipmentModule type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Equipment modules can contain control modules" ;
+                                                                                             dcterms:subject "Factory" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test19
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test19> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf belongsToCategory only ItemCategory"^^xsd:string ;
+                                                                                             vtc:desiredBehaviour "Item subClassOf isCreatedIn only Batch"^^xsd:string ;
                                                                                              <http://purl.org/dc/elements/1.1/description> "Which machines were involved in manufacturing the product?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test2
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test2> rdf:type owl:NamedIndividual ,
                                                                                                      vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "EquipmentModule type Class"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "Equipment modules can contain control modules" ;
+                                                                                            vtc:desiredBehaviour "Item subClassOf consistsOfItem only Item"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/description> "Which parts does the product consists of?" ;
+                                                                                            dcterms:subject "Product" ;
                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test20
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test20> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Item subClassOf isCreatedIn only Batch"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which machines were involved in manufacturing the product?" ;
+                                                                                             vtc:desiredBehaviour "MaterialBatch type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What types of batches are in a factory?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test21
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test21> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Item subClassOf consistsOfItem only Item"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which parts does the product consists of?" ;
+                                                                                             vtc:desiredBehaviour "MAterial type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What kind of incoming material is used in the machine?" ;
+                                                                                             dcterms:subject "Material" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test22
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test22> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "MaterialBatch type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What types of batches are in a factory?" ;
+                                                                                             vtc:desiredBehaviour "Batch subclassOf hasMaterial only Material"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Is the incoming material considered to be a batch?" ;
+                                                                                             dcterms:subject "Material" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test23
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test23> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "MAterial type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What kind of incoming material is used in the machine?" ;
+                                                                                             vtc:desiredBehaviour "Batch subclassOf hasSize max 1 Size"^^xsd:string ,
+                                                                                                                  "Batch subclassOf needsEquipment only ProductionEquipment"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What attributes has a production batch?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test24
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test24> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Batch subclassOf hasMaterial only Material"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Is the incoming material considered to be a batch?" ;
+                                                                                             vtc:desiredBehaviour "Batch subclassOf hasIdentifier only ID"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production batch is identified by a GTIN" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test25
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test25> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Batch subclassOf needsEquipment only ProductionEquipment"^^xsd:string ;
+                                                                                             vtc:desiredBehaviour "Batch subclassOf hasIdentifier only ID"^^xsd:string ;
                                                                                              <http://purl.org/dc/elements/1.1/description> "What attributes has a production batch?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test26
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test26> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Batch subclassOf hasSize max 1 Size"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What attributes has a production batch?" ;
-                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
-
-
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test27
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test27> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Batch subclassOf hasIdentifier only ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production batch is identified by a GTIN" ,
-                                                                                                                                           "What attributes has a production batch?" ;
+                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf Batch"^^xsd:string ,
+                                                                                                                  "MaterialBatch subClassOf Batch"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What types of batches are in a factory?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test28
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test28> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf Batch"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What types of batches are in a factory?" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf PhysicalObject"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Production equipment are located in the equipment modules" ;
+                                                                                             dcterms:subject "Factory" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test29
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test29> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "MaterialBatch subClassOf Batch"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What types of batches are in a factory?" ;
+                                                                                             vtc:desiredBehaviour "Batch type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What is a batch?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test3
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test3> rdf:type owl:NamedIndividual ,
                                                                                                      vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "ProductionEquipment subClassOf PhysicalObject"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "Production equipment are located in the equipment modules" ;
+                                                                                            vtc:desiredBehaviour "InjectionUnit subClassOf hasManufacturer only string"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/description> "What attributes has an injection system?" ;
+                                                                                            dcterms:subject "Machine" ;
                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test30
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test30> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Batch type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What is a batch?" ;
+                                                                                             vtc:desiredBehaviour "MouldingMachine subClassOf hasManufacturer only string"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What attributes has a moulding machine?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test31
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test31> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "InjectionUnit subClassOf hasManufacturer only string"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What attributes has an injection system?" ;
+                                                                                             vtc:desiredBehaviour "Batch subclassOf hasIdentifier only ID"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production batch is identified by a GTIN" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test32
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test32> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "MouldingMachine subClassOf hasManufacturer only string"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What attributes has a moulding machine?" ;
+                                                                                             vtc:desiredBehaviour "InjectionUnit subclassOf hasState only State"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Which are the statuses of the injection units?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test33
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test33> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Batch subclassOf hasIdentifier only ID"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production batch is identified by a GTIN" ;
+                                                                                             vtc:desiredBehaviour "MouldingMachine subclassOf consistsOf some InjectionUnit"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A moulding machine has injection units" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test34
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test34> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "InjectionUnit subclassOf hasState only State"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which are the statuses of the injection units?" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf consistsOf some ProductionEquipment"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A production equipment can contain other production equipment" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test35
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test35> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "MouldingMachine subclassOf consistsOf some InjectionUnit"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "A moulding machine has injection units" ;
+                                                                                             vtc:desiredBehaviour "Variables subclassOf isDefinedBy some Property"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Variables can be defined using properties" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test36
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test36> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf consistsOf some ProductionEquipment"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "A production equipment can contain other production equipment" ;
+                                                                                             vtc:desiredBehaviour "AnalogItemType type Variable"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "AnalogItemType is a type of variable" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test37
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test37> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Variables subclassOf isDefinedBy some Property"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Variables can be defined using properties" ;
+                                                                                             vtc:desiredBehaviour "Variable type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A variable is a component of the production equipment representing the data of objects, e.g. measurement" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test38
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test38> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "AnalogItemType type Variable"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "AnalogItemType is a type of variable" ;
+                                                                                             vtc:desiredBehaviour "Unit subclassOf contains some ProductionEquipment"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Each unit contains equipment module" ;
+                                                                                             dcterms:subject "Factory" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test39
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test39> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Variable type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "A variable is a component of the production equipment representing the data of objects, e.g. measurement" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf hasIDValue only string"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Every production equipment needs to be uniquely identifiable" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test4
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test4> rdf:type owl:NamedIndividual ,
                                                                                                      vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "Unit subclassOf contains some ProductionEquipment"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "Each unit contains equipment module" ;
+                                                                                            vtc:desiredBehaviour "ProductionEquipment subClassOf belongsToCategory only ProductionEquipmentCategory"^^xsd:string ,
+                                                                                                                 "ProductionEquipment subClassOf hasIDValue only string"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/description> "What are the attributes of the production equipment?" ;
+                                                                                            dcterms:subject "Machine" ;
                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test40
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test40> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf hasIDValue only string"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Every production equipment needs to be uniquely identifiable" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf hasFunction only ProductionEquipmentFunction"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production equipment can have a method to execute an action" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test41
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test41> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf belongsToCategory only ProductionEquipmentCategory"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What are the attributes of the production equipment?" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf consistsOf some Actuator"^^xsd:string ,
+                                                                                                                  "ProductionEquipment subClassOf consistsOf some Sensor"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A production equipment can be composed by sensors and actuators" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test42
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test42> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf hasIDValue only string"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What are the attributes of the production equipment?" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf isCreatedIn some Batch"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What production batch is the machine working on?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test43
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test43> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf hasFunction only ProductionEquipmentFunction"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production equipment can have a method to execute an action" ;
+                                                                                             vtc:desiredBehaviour "MachineState subClassOf hasTime some timestamp"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What is a machine state composed of?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test44
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test44> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf consistsOf some Actuator"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "A production equipment can be composed by sensors and actuators" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf hasState only State"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production equipment has a machine information, configuration parameters and status" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test45
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test45> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf consistsOf some Sensor"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "A production equipment can be composed by sensors and actuators" ;
+                                                                                             vtc:desiredBehaviour "Actuator type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Which actuators are used in the production process?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test46
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test46> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf isCreatedIn some Batch"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What production batch is the machine working on?" ;
+                                                                                             vtc:desiredBehaviour "Factory subClassOf hasSpace some Site"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A process cell is located in a certain area of a factory" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test47
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test47> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "MachineState subClassOf hasTime some timestamp"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What is a machine state composed of?" ;
+                                                                                             vtc:desiredBehaviour "Sensor type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Which sensors are used in the production process?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test48
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test48> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment subClassOf hasState only State"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Each production equipment has a machine information, configuration parameters and status" ;
+                                                                                             vtc:desiredBehaviour "Sensor type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What type of sensors exist?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test49
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test49> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Actuator type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which actuators are used in the production process?" ;
+                                                                                             vtc:desiredBehaviour "StampingMachine subClassOf hasConfigurationParameters some UnitOfMEasurement"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Which units of measure exist for the pressure parameter of the stamping machine?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test5
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test5> rdf:type owl:NamedIndividual ,
                                                                                                      vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "Factory subClassOf hasSpace some Site"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "A process cell is located in a certain area of a factory" ;
+                                                                                            vtc:desiredBehaviour "ConfigurationParameters type Class"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/description> "Which configuration parameters does the Schäfer ABS1200 have?" ;
+                                                                                            dcterms:subject "Machine" ;
                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test50
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test50> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "Sensor type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What type of sensors exist?" ,
-                                                                                                                                           "Which sensors are used in the production process?" ;
+                                                                                             vtc:desiredBehaviour "StampingMachine subclassOf hasFunction some Function"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What type of capabilities exist for stamping machines?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test51
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test51> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "StampingMachine subClassOf hasConfigurationParameters some UnitOfMEasurement"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which units of measure exist for the pressure parameter of the stamping machine?" ;
+                                                                                             vtc:desiredBehaviour "StampingMachine type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What type of stamping machine is used in the factory?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test52
 <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test52> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ConfigurationParameters type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "Which configuration parameters does the Schäfer ABS1200 have?" ;
+                                                                                             vtc:desiredBehaviour "ProductionEquipment type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What sort of production equipment is used in the factory?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test53
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test53> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "StampingMachine subclassOf hasFunction some Function"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What type of capabilities exist for stamping machines?" ,
-                                                                                                                                           "What type of stamping machine is used in the  factory?" ;
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test53> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "MouldingMachine subclassOf hasState only State"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Which machine states exist for the Schäfer ABS1200 stamping machine?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test54
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test54> rdf:type owl:NamedIndividual ,
-                                                                                                      vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "StampingMachine type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What type of stamping machine is used in the factory?" ;
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test54> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "StampingMachine subclassOf hasState only State"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What is the actual value of the operationalmachine state of the Schäfer ABS1200?" ;
+                                                                                             dcterms:subject "Machine" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test55
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test55> rdf:type owl:NamedIndividual ,
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test55> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "Variable subclassOf hasValue only Value"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Which are the attributes of a variable?" ;
+                                                                                             dcterms:subject "Machine" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test56
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test56> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "Material subclassOf hasBatch only Batch"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "When can data be attributed to incoming material?" ;
+                                                                                             dcterms:subject "Material" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test57
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test57> rdf:type owl:NamedIndividual ,
                                                                                                       vtc:TestCaseDesign ;
-                                                                                             vtc:desiredBehaviour "ProductionEquipment type Class"^^xsd:string ;
-                                                                                             <http://purl.org/dc/elements/1.1/description> "What sort of production equipment is used in the factory?" ;
+                                                                                             vtc:desiredBehaviour "Area subclassOf hasSpace only Site"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Each area belongs to a site" ;
+                                                                                             dcterms:subject "Factory" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test58
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test58> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "Material subclassOf hasValue only Value"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "When can data be attributed to incoming material?" ;
+                                                                                             dcterms:subject "Material" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test59
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test59> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "Material subclassOf isRelatedTo some Batch"^^xsd:string ,
+                                                                                                                  "Material subclassOf isRelatedTo some Item"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Does the data relate to the material as whole?" ;
+                                                                                             dcterms:subject "Material" ;
                                                                                              vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test6
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test6> rdf:type owl:NamedIndividual ,
-                                                                                                     vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "Area subclassOf belongsTo some Site"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "Each area belongs to a site" ;
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test6> rdf:type owl:NamedIndividual ;
+                                                                                            vtc:desiredBehaviour "ItemBatch subclassOf belongsTo only ItemCategory"^^xsd:string ;
+                                                                                            <http://purl.org/dc/elements/1.1/description> "Products can be distinguished in categories" ;
+                                                                                            dcterms:subject "Product" ;
                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test7
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test7> rdf:type owl:NamedIndividual ,
-                                                                                                     vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "Area subClassOf contains some ProductionEquipment"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "Each area contains process cells" ;
-                                                                                            vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test60
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test60> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "Shaver subClassOf hasManufacturer only string"^^xsd:string ,
+                                                                                                                  "Shaver subClassOf hasSupplier only string"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "What attributes has a shaver?" ;
+                                                                                             dcterms:subject "Product" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test8
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test8> rdf:type owl:NamedIndividual ,
-                                                                                                     vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "ItemBatch subClassOf creates only Item"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "A product is divided into the type and the instance." ,
-                                                                                                                                          "When was the product manufactured?" ;
-                                                                                            vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test61
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test61> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "ID  type Class"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A GTIN may be encoded in EAN/UPC, ITF-14, GS1-128, GS1 DataBar, and GS1 DataMatrix symbols or EPCs." ;
+                                                                                             dcterms:subject "Product" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
-###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test9
-<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test9> rdf:type owl:NamedIndividual ,
-                                                                                                     vtc:TestCaseDesign ;
-                                                                                            vtc:desiredBehaviour "ItemBatch subClassOf belongsToCategory only ItemCategory"^^xsd:string ;
-                                                                                            <http://purl.org/dc/elements/1.1/description> "A product is divided into the type and the instance." ;
-                                                                                            vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test62
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test62> rdf:type owl:NamedIndividual ;
+                                                                                             vtc:desiredBehaviour "Factory subclassOf hasSpace only Site"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A site is located in a factory" ;
+                                                                                             dcterms:subject "Factory" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test63
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test63> rdf:type owl:NamedIndividual ,
+                                                                                                      vtc:TestCaseDesign ;
+                                                                                             vtc:desiredBehaviour "Area subClassOf contains only WorkCenter"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "Each area contains process cells" ;
+                                                                                             dcterms:subject "Factory" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test64
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test64> rdf:type owl:NamedIndividual ,
+                                                                                                      vtc:TestCaseDesign ;
+                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf creates only Item"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "When was the product manufactured?" ;
+                                                                                             dcterms:subject "Product" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
+
+
+###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test65
+<https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#Test65> rdf:type owl:NamedIndividual ,
+                                                                                                      vtc:TestCaseDesign ;
+                                                                                             vtc:desiredBehaviour "ItemBatch subClassOf belongsToCategory only ItemCategory"^^xsd:string ,
+                                                                                                                  "ItemBatch subClassOf creates only Item"^^xsd:string ;
+                                                                                             <http://purl.org/dc/elements/1.1/description> "A product is divided into the type and the instance." ;
+                                                                                             dcterms:subject "Product" ;
+                                                                                             vtc:belongsTo <https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA> .
 
 
 ###  https://github.com/mariapoveda/saref-ext/tree/master/SAREF4INMA/tests/testsuite.ttl#TestsuiteSAREF4INMA

@@ -79,7 +79,7 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/saref4bldg#contains
 <https://w3id.org/def/saref4bldg#contains> rdf:type owl:ObjectProperty ;
                                            rdfs:comment "A relation between a physical space and the objects located in such space" ;
-                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                           rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
                                            rdfs:label "contains" .
 
 
@@ -88,7 +88,7 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
                                            owl:inverseOf <https://w3id.org/def/saref4bldg#isSpaceOf> ;
                                            rdf:type owl:TransitiveProperty ;
                                            rdfs:comment "Relation between a building or a building space and the spaces it can be divided into" ;
-                                           rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                           rdfs:isDefinedBy <https://w3id.org/def/saref4bldg#> ;
                                            rdfs:label "has space" .
 
 
@@ -224,7 +224,7 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/saref4inma#produces
 :produces rdf:type owl:ObjectProperty ;
-          rdfs:comment "ProductionEquipmentCategory, such as welding machines or laser cutting machines, produce certain categories of items (inverse of s4inma:isProducedBy)" ;
+          rdfs:comment "ProductionEquipmentCategory, such as welding machines or laser cutting machines, produce certain categories of items (inverse of saref4inma:isProducedBy)" ;
           rdfs:label "produces" .
 
 
@@ -304,7 +304,7 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/saref4inma#hasIDValue
 :hasIDValue rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string ;
-            rdfs:comment "A relation to express the value of an indentifier as a string (it can be used as alternative to or in combination with the s4inma:hasIdentifier object property " ;
+            rdfs:comment "A relation to express the value of an indentifier as a string (it can be used as alternative to or in combination with the saref4inma:hasIdentifier object property " ;
             rdfs:label "has identifier value" .
 
 
@@ -689,7 +689,7 @@ owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/saref4inma#WorkCenter
 :WorkCenter rdf:type owl:Class ;
             rdfs:subClassOf :ProductionEquipment ;
-            rdfs:comment "A subclass of s4inma:ProductionEquipment (and therefore of s4bld:PhysicalObject). It is an equipment element under an area in a role-based equipment hierarchy that performs production, storage or material movement (definition taken from IEC 62264). An Area contains work centers." ;
+            rdfs:comment "A subclass of saref4inma:ProductionEquipment (and therefore of s4bld:PhysicalObject). It is an equipment element under an area in a role-based equipment hierarchy that performs production, storage or material movement (definition taken from IEC 62264). An Area contains work centers." ;
             rdfs:label "Work center" .
 
 
