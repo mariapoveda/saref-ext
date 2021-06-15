@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>saref-ext</title>
+    <link rel="stylesheet" href="vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+    <script src="vocab/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="vocab/js/bootstrap.js"></script>
+    <script type="text/javascript" id="js">
+	    $(document).ready(function() 
+		    { 
+		    	$("#tablesorter-demo").tablesorter(); 
+		    	$("#tablesorter-demo").stickyTableHeaders(); 
+		    	$('[data-toggle="tooltip"]').tooltip(); 
+		    } 
+	    ); 
+    </script>
+
+    <!-- Le styles -->
+    <link href="vocab/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="vocab/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+  </head>
+
+  <body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Vocabularies</a></li>
+        <li><a href="report.html">Vocabulary report</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+ </div>
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>saref-ext landing page</h1>
+        <p class="lead">Here you can find the list of vocabularies that have been found on saref-ext.</p>
+      </div>
+      <hr>
+<div class="row"> 
+</div>
+<br>
+<table id="tablesorter-demo" class="tablesorter table table-hover table-responsive">
+<thead>
+<tr>
+<th class="col-md-2">Ontology</th>
+<th class="col-md-1">Serialization</th>
+<th class="col-md-2">License</th>
+<th class="col-md-1">Language</th>
+<th class="col-md-6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr id="tr1">
+<td><a href = "https://w3id.org/def/saref4agri#" target="_blank">SAREF extension for Agriculture</a> </td><td>
+<a href="ontologies/saref4agri.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+<p id="collapse1" data-toggle="collapse" >
+This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), ... <a class="more1">See more</a>
+</p>
+<script>
+$('#collapse1').click(function () {
+if($('a').hasClass('more1'))
+{
+$('#collapse1').html('This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Agricultural domain.  <a class="less1">See less<a>'); 
+}
+else
+{      
+$('#collapse1').html('This ontology extends the SAREF ontology for the Agricultural domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), ...  <a  class="more1">See more</a>'); 
+}
+}); 
+</script>
+</td>
+</tr><tr id="tr2">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4AGRI/examples/saref4agri-ex1.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/saref4agri-ex1.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><span class="label label-default">Undefined</span></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr><tr id="tr3">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4AGRI/examples/exampleIrrigationUseCase1.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/exampleIrrigationUseCase1.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><span class="label label-default">Undefined</span></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+SAREF4AGRI example for the Smar Irrigation use case.</td>
+</tr><tr id="tr4">
+<td><a href = "https://w3id.org/def/saref4bldg#" target="_blank">SAREF extension for building devices</a> </td><td>
+<a href="ontologies/saref4bldg.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+<p id="collapse4" data-toggle="collapse" >
+This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension ... <a class="more4">See more</a>
+</p>
+<script>
+$('#collapse4').click(function () {
+if($('a').hasClass('more4'))
+{
+$('#collapse4').html('This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension is based on the ISO 16739:2013 Industry Foundation Classes (IFC) standard for data sharing in the construction and facility management industries. The descriptions of the classes and properties extracted from IFC have been taken from the IFC documentation.  <a class="less4">See less<a>'); 
+}
+else
+{      
+$('#collapse4').html('This ontology extends the SAREF ontology for the building domain by defining building devices and how they are located in a building. This extension ...  <a  class="more4">See more</a>'); 
+}
+}); 
+</script>
+</td>
+</tr><tr id="tr5">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4BLD/examples/example1BLDG.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/example1BLDG.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr><tr id="tr6">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4BLD/examples/example1BLDGpolished.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/example1BLDGpolished.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr><tr id="tr7">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4BLD/RawRDF/IFC-device-Raw copy.rdf" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/IFC-device-Raw copy.rdf"><span class="label label-primary">RDF/XML</span></a>
+</td>
+<td><span class="label label-default">Undefined</span></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr><tr id="tr8">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4BLD/RawRDF/fromProtege.owl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/fromProtege.owl"><span class="label label-primary">RDF/XML</span></a>
+</td>
+<td><span class="label label-default">Undefined</span></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr><tr id="tr9">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4INMA/ontology/saref4inma.ttl" target="_blank">SAREF4INMA: an extension of SAREF for the industry and manufacturing domain</a> </td><td>
+<a href="ontologies/saref4inma.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td></td>
+<td>
+<p id="collapse9" data-toggle="collapse" >
+SAREF4INMA is an extension of SAREF for the industry and manufacturing domain. SAREF4INMA focuses on extending SAREF for the industry and manufacturing ... <a class="more9">See more</a>
+</p>
+<script>
+$('#collapse9').click(function () {
+if($('a').hasClass('more9'))
+{
+$('#collapse9').html('SAREF4INMA is an extension of SAREF for the industry and manufacturing domain. SAREF4INMA focuses on extending SAREF for the industry and manufacturing domain to solve the lack of interoperability between various types of production equipment that produce items in a factory and, once outside the factory, between different organizations in the value chain to uniquely track back the produced items to the corresponding production equipment, batches, material and precise time in which they were manufactured. SAREF4INMA is specified and published by ETSI in the TS 103 410-5 associated to this ontology file. SAREF4INMA was created to be aligned with related initiatives in the smart industry and manufacturing domain in terms of modelling and standardization, such as the Reference Architecture Model for Industry 4.0 (RAMI), which combines several standards used by the various national initiatives in Europe that support digitalization in manufacturing. The full list of use cases, standards and requirements that guided the creation of SAREF4INMA are described in the associated ETSI TR 103 507.   <a class="less9">See less<a>'); 
+}
+else
+{      
+$('#collapse9').html('SAREF4INMA is an extension of SAREF for the industry and manufacturing domain. SAREF4INMA focuses on extending SAREF for the industry and manufacturing ...  <a  class="more9">See more</a>'); 
+}
+}); 
+</script>
+</td>
+</tr><tr id="tr10">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4INMA/examples/saref4inma_data_example.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/saref4inma_data_example.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><span class="label label-default">Undefined</span></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr><tr id="tr11">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4INMA/tests/testsuite.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/testsuite.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><span class="label label-default">Undefined</span></td>
+<td></td>
+<td>
+</td>
+</tr><tr id="tr12">
+<td><a href = "https://w3id.org/def/saref4city#" target="_blank">SAREF extension for Smart City</a> </td><td>
+<a href="ontologies/saref4city.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+<p id="collapse12" data-toggle="collapse" >
+This ontology extends the SAREF ontology for the Smart City domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), ... <a class="more12">See more</a>
+</p>
+<script>
+$('#collapse12').click(function () {
+if($('a').hasClass('more12'))
+{
+$('#collapse12').html('This ontology extends the SAREF ontology for the Smart City domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), which was established with the goal to create three SAREF extensions, one of them for the Smart City domain.  <a class="less12">See less<a>'); 
+}
+else
+{      
+$('#collapse12').html('This ontology extends the SAREF ontology for the Smart City domain. This work has been developed in the context of the STF 534 (https://portal.etsi.org/STF/STFs/STFHomePages/STF534.aspx), ...  <a  class="more12">See more</a>'); 
+}
+}); 
+</script>
+</td>
+</tr><tr id="tr13">
+<td><a href = "https://w3id.org/def/saref4envi#" target="_blank">SAREF extension for environment</a> </td><td>
+<a href="ontologies/saref4envi.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+<p id="collapse13" data-toggle="collapse" >
+This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, ... <a class="more13">See more</a>
+</p>
+<script>
+$('#collapse13').click(function () {
+if($('a').hasClass('more13'))
+{
+$('#collapse13').html('This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, light, etc.  <a class="less13">See less<a>'); 
+}
+else
+{      
+$('#collapse13').html('This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, ...  <a  class="more13">See more</a>'); 
+}
+}); 
+</script>
+</td>
+</tr><tr id="tr14">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4ENV/examples/example1ENVI-polished.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/example1ENVI-polished.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr><tr id="tr15">
+<td><a href = "/home/ahmad/repos/prevclone-EI7u/SAREF4ENV/examples/example1ENVI.ttl" target="_blank">Undefined</a> </td><td>
+<a href="ontologies/example1ENVI.ttl"><span class="label label-primary">TURTLE</span></a>
+</td>
+<td><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"> <span class="label label-success">http://purl.org/NET/rdflicens...</span> </a></td>
+<td><a href="http://lexvo.org/id/iso639-3/eng" target="_blank"> <span class="label label-primary">en</span></a> </td>
+<td>
+</td>
+</tr></tbody></table>
+<hr>
+      <footer class="footer">
+           <footer class="footer">
+            <div class="row">
+    	<div class="col-md-10">
+    		Page created with  <a href = "https://github.com/dgarijo/vocabLite" target="_blank">VocabLite</a> (<a href="http://oeg-upm.net/">Ontology Engineering Group</a>)
+	        <br>
+    	Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+ 	        <br>
+	        Latest revision June, 2021
+        </div>
+		<div class="col-md-2">
+			<a href="https://github.com/dgarijo/vocabLite"><img width="140px"src="vocab/logoLite.png"></img></a>
+		</div>
+      </footer>      </div>
+      </footer>
+    </div> <!-- /container -->
